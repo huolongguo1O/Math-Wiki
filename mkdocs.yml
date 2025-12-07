@@ -17,7 +17,7 @@ nav:
   - 简介: index.md
   - 不等式:
     - 最最最基本的不等关系: ineq/index.md
-    - Styling your docs: styling-your-docs.md
+    - AM-GM不等式: styling-your-docs.md
   - About:
     - License: license.md
     - Release Notes: release-notes.md
