@@ -1,0 +1,21 @@
+site_name: Math-wiki
+# site_url: https://mydomain.org/mysite
+theme:
+  name: material
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - 简介: index.md
+  - 不等式:
+    - 最最最基本的不等关系: ineq/index.md
+    - Styling your docs: styling-your-docs.md
+  - About:
+    - License: license.md
+    - Release Notes: release-notes.md
