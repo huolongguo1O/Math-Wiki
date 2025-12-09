@@ -1,0 +1,1495 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Ir1d, HeRaNO, Chrogeek, abc1763613206, mxdyzmx">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Coordinate - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Coordinate
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../number-theory/basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        角的定义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        弧度制
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        平面直角坐标系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="平面直角坐标系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        平面直角坐标系下位置的描述
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        平面极坐标系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="平面极坐标系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        极坐标系下位置的描述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        平面直角坐标系与极坐标系的相互转换
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        空间直角坐标系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="空间直角坐标系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        空间直角坐标系下位置的描述
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        空间柱坐标系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="空间柱坐标系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        柱坐标系与空间直角坐标系的相互转换
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        空间球坐标系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="空间球坐标系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        柱坐标系与球坐标系的相互转换
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        空间直角坐标系与球坐标系的相互转换
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Coordinate</h1>
+
+<h2 id="_1">角的定义</h2>
+<p>在小学或初中已经学习过角的 <strong>静态定义</strong>：具有公共端点的两条射线组成的图形叫做角。</p>
+<p>但是该定义将角度限制在了 <span class="arithmatex">\([0, 360^\circ]\)</span>，这给深入研究带来了一定的困难，还有其他的问题无法解释清，比如：旋转 <span class="arithmatex">\(720^\circ\)</span> 是什么意思？</p>
+<p>在高中数学，讲了角的 <strong>动态定义</strong>：平面内一条射线绕其端点从一个位置旋转到另一个位置形成的图形叫做角。</p>
+<p>开始的位置称为 <strong>始边</strong>，结束的位置称为 <strong>终边</strong>。并规定：</p>
+<ul>
+<li>按 <strong>逆时针</strong> 方向旋转形成的角叫做 <strong>正角</strong>，其角度为正；</li>
+<li>按 <strong>顺时针</strong> 方向旋转形成的角叫做 <strong>负角</strong>，其角度为负；</li>
+<li>终边相对于始边没有做任何旋转的角叫做 <strong>零角</strong>，其角度为 <span class="arithmatex">\(0^\circ\)</span>。</li>
+</ul>
+<p>这样就把角的概念推向了 <strong>任意角</strong>。</p>
+<p>???+ note "注意"
+    零角始边和终边重合，但始边和终边重合的角并不都是零角，如以 <span class="arithmatex">\(360^\circ\)</span> 为倍数的角。</p>
+<h2 id="_2">弧度制</h2>
+<p>实际应用中经常有角度到各种参数的转换，而使用弧度制描述角可以减少系数的使用。所以接下来，介绍 <strong>弧度制</strong>：</p>
+<p>把长度等于半径长的弧所对的圆心角称为 <span class="arithmatex">\(1\)</span> 弧度的角，用符号 <span class="arithmatex">\(\text{rad}\)</span> 表示，读作：弧度。</p>
+<p>根据前面的规定，正角的弧度为正，负角的弧度为负，零角的弧度为 <span class="arithmatex">\(0\)</span>，如果半径为 <span class="arithmatex">\(r\)</span> 的圆的圆心角 <span class="arithmatex">\(\alpha\)</span> 所对弧长为 <span class="arithmatex">\(l\)</span>，则：</p>
+<div class="arithmatex">\[
+|\alpha|=\dfrac{l}{r}
+\]</div>
+<p>利用这个公式还可以写出弧长和扇形面积公式，在此略过。</p>
+<p>于是，<span class="arithmatex">\(360^\circ\)</span> 角的弧度为 <span class="arithmatex">\(2\pi\)</span>，这样有了对应关系之后就可以进行角度值和弧度制的转化了：</p>
+<div class="arithmatex">\[
+k \operatorname{rad} = \frac{\pi}{180^\circ} n^\circ
+\]</div>
+<p>考虑一个角，将其终边再旋转一周，甚至多周，始边位置不动，那么终边位置永远是相同的，称这些角为终边位置相同的角。</p>
+<p>与角 <span class="arithmatex">\(\alpha\)</span> 终边位置相同的角的集合很容易得出，为 <span class="arithmatex">\(\{\varphi \mid \varphi = \alpha + 2k\pi, k \in \mathbf{Z}\}\)</span>。</p>
+<p>可以理解为：给这个角的边不停加转一圈，终边位置不变。</p>
+<p>???+ note "<span class="arithmatex">\(\pi\)</span> 和 <span class="arithmatex">\(\tau\)</span> 两个数学常数"
+    目前西方数学界有一些观点认为，「真正的圆周率」应为 <span class="arithmatex">\(2\pi\)</span>，将这个值记为希腊字母 <span class="arithmatex">\(\tau\)</span>。新圆周率的支持者们选择在 6 月 28 日庆祝「真正的」圆周率日。</p>
+<pre><code>比如，在弧度制下，一个周角是 $2\pi$，直接对 $2\pi$ 进行等分可以得到周角的等分。又例如，在复变函数中频繁出现 $2\pi$ 的组合，等等。
+
+为了迎合中国各地区约定俗成的习惯，在 **OI Wiki**，采用参数 $\pi$ 表示圆周率。
+</code></pre>
+<p>???+ note "编程中圆周率的习惯写法"
+    在 C/C++ 语言中，一般取 <span class="arithmatex">\(\pi\)</span> 为 <code>acos(-1)</code>，只有这个值是最接近 <span class="arithmatex">\(\pi\)</span> 的浮点数。使用 <code>acos(-1)</code> 或者 <code>4 * atan(1)</code> 写出来的 <span class="arithmatex">\(\pi\)</span> 是 <span class="arithmatex">\(3.14159265358979310000\)</span>。</p>
+<pre><code>采用其他值，例如 `acos(-1.0/2.0)`，`acos(1.0/2.0)`，`asin(1.0/2.0)` 等等，写出来的 $\pi$ 是 $3.14159265358979360000$，这就不是最接近 $\pi$ 的浮点数了。
+
+如果你背得下来，也可以直接写 $3.1415926535897932$。
+</code></pre>
+<h2 id="_3">平面直角坐标系</h2>
+<p>在同一个平面上互相垂直且有公共原点的两条数轴构成平面直角坐标系（Rectangular Coordinates）。</p>
+<p>通常，两条数轴分别置于水平位置与垂直位置，取向右与向上的方向分别为两条数轴的正方向。水平的数轴叫做 <span class="arithmatex">\(x\)</span> 轴（x-axis）或横轴，垂直的数轴叫做 <span class="arithmatex">\(y\)</span> 轴（y-axis）或纵轴，<span class="arithmatex">\(x\)</span> 轴 <span class="arithmatex">\(y\)</span> 轴统称为坐标轴，它们的公共原点 <span class="arithmatex">\(O\)</span> 称为平面直角坐标系的原点（origin），以点 <span class="arithmatex">\(O\)</span> 为原点的平面直角坐标系记作平面直角坐标系 <span class="arithmatex">\(xOy\)</span>。</p>
+<p><span class="arithmatex">\(x\)</span> 轴 <span class="arithmatex">\(y\)</span> 轴将坐标平面分成了四个象限（quadrant），右上方的部分叫做第一象限，其他三个部分按逆时针方向依次叫做第二象限、第三象限和第四象限。象限以数轴为界，横轴、纵轴上的点及原点不在任何一个象限内。一般情况下，<span class="arithmatex">\(x\)</span> 轴 <span class="arithmatex">\(y\)</span> 轴取相同的单位长度，但在特殊的情况下，也可以取不同的单位长度。</p>
+<h3 id="_4">平面直角坐标系下位置的描述</h3>
+<p>在平面直角坐标系中，对于平面上的任意一点，都有唯一的一个有序数对（即点的坐标（coordinates））与它对应；反过来，对于任意一个有序数对，都有平面上唯一的一点与它对应。</p>
+<p>对于平面内任意一点 <span class="arithmatex">\(C\)</span>，过点 <span class="arithmatex">\(C\)</span> 分别向 <span class="arithmatex">\(x\)</span> 轴、<span class="arithmatex">\(y\)</span> 轴作垂线，垂足在 <span class="arithmatex">\(x\)</span> 轴、<span class="arithmatex">\(y\)</span> 轴上的对应点 <span class="arithmatex">\(a, b\)</span> 分别叫做点 <span class="arithmatex">\(C\)</span> 的横坐标、纵坐标，有序数对（ordered pair）<span class="arithmatex">\((a, b)\)</span> 叫做点 <span class="arithmatex">\(C\)</span> 的直角坐标。一个点在不同的象限或坐标轴上，其坐标都不一样。</p>
+<h2 id="_5">平面极坐标系</h2>
+<p>考虑实际情况，比如航海，说「点 <span class="arithmatex">\(B\)</span> 在点 <span class="arithmatex">\(A\)</span> 的北偏东 <span class="arithmatex">\(30^\circ\)</span> 方向上，距离为 <span class="arithmatex">\(100\)</span> 米」，而不是「以 <span class="arithmatex">\(A\)</span> 为原点建立平面直角坐标系，<span class="arithmatex">\(B(50,50\sqrt 3)\)</span>」。</p>
+<p>这样：</p>
+<ol>
+<li>在平面上选一定点 <span class="arithmatex">\(O\)</span>，称为 <strong>极点</strong>；</li>
+<li>自极点引出一条射线 <span class="arithmatex">\(Ox\)</span>，称为 <strong>极轴</strong>；</li>
+<li>选择一个单位长度（在数学问题中通常为 <span class="arithmatex">\(1\)</span>），一个角度单位（通常为弧度）及其正方向（通常为逆时针方向）；</li>
+</ol>
+<p>就建立了 <strong>极坐标系</strong>。</p>
+<h3 id="_6">极坐标系下位置的描述</h3>
+<p>设 <span class="arithmatex">\(A\)</span> 为平面上一点。</p>
+<ul>
+<li>极点 <span class="arithmatex">\(O\)</span> 与 <span class="arithmatex">\(A\)</span> 之间的距离 <span class="arithmatex">\(|OA|\)</span> 称为 <strong>极径</strong>，记为 <span class="arithmatex">\(\rho\)</span>；</li>
+<li>以极轴为始边，<span class="arithmatex">\(OA\)</span> 为终边的角 <span class="arithmatex">\(\angle xOA\)</span> 称为 <strong>极角</strong>，记为 <span class="arithmatex">\(\varphi\)</span>；</li>
+</ul>
+<p>那么有序数对 <span class="arithmatex">\((\rho,\varphi)\)</span> 即为 <span class="arithmatex">\(A\)</span> 的 <strong>极坐标</strong>。</p>
+<p>由终边相同的角的定义可知，<span class="arithmatex">\((\rho,\varphi)\)</span> 与 <span class="arithmatex">\((\rho,\varphi + 2k\pi)\ (k\in \mathbf{Z})\)</span> 其实表示的是一样的点。特别地，极点的极坐标为 <span class="arithmatex">\((0,\varphi)\ (\varphi \in \mathbf{R})\)</span>，于是平面内的点的极坐标表示有无数多种。</p>
+<p>如果规定 <span class="arithmatex">\(\rho \ge 0,0 \le \varphi &lt; 2\pi\)</span>，那么除极点外，其他平面内的点可以用唯一有序数对 <span class="arithmatex">\((\rho,\varphi)\)</span> 表示，而极坐标 <span class="arithmatex">\((\rho,\varphi)\)</span> 表示的点是唯一确定的。</p>
+<h3 id="_7">平面直角坐标系与极坐标系的相互转换</h3>
+<p>当然，有时候研究极坐标系下的图形有些不方便。要想转到直角坐标系下研究，有互化公式。点 <span class="arithmatex">\(A(\rho,\varphi)\)</span> 的直角坐标 <span class="arithmatex">\((x,y)\)</span> 可以如下表示：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+x &amp;= \rho \cos \varphi \\
+y &amp;= \rho \sin \varphi
+\end{aligned}
+\]</div>
+<p>进而可知：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\rho^2 &amp;= x^2 + y^2\\
+\tan \varphi &amp;= \frac{y}{x}\ \ \ \ (x\not =0)
+\end{aligned}
+\]</div>
+<p>于是有 <span class="arithmatex">\(\rho = \sqrt{x^2+y^2}\)</span>。</p>
+<p>但具有相同 <span class="arithmatex">\(\dfrac{y}{x}\)</span> 的 <span class="arithmatex">\(\tan\varphi\)</span> 有两个可能的 <span class="arithmatex">\(\varphi\)</span> 的值，此时还需要根据 <span class="arithmatex">\(x, y\)</span> 的值来确定方向。具体地，定义函数：</p>
+<div class="arithmatex">\[
+\operatorname{atan2}(y, x) = \begin{cases}
+\arctan(\frac{y}{x}) &amp; \text{if } x &gt; 0 \\
+\arctan(\frac{y}{x}) + \pi &amp; \text{if } y \ge 0, x &lt; 0 \\
+\arctan(\frac{y}{x}) - \pi &amp; \text{if } y &lt; 0, x &lt; 0 \\
+\pi/2 &amp; \text{if } y &gt; 0, x = 0 \\
+-\pi/2 &amp; \text{if } y &lt; 0, x = 0 \\
+\text{any} &amp; \text{if } y = 0, x = 0
+\end{cases}
+\]</div>
+<p>则 <span class="arithmatex">\(\varphi = \operatorname{atan2}(y, x)\)</span>。注意上述函数的值域为 <span class="arithmatex">\((-\pi, \pi]\)</span>。</p>
+<p>在 C/C++ 语言的 <code>&lt;math.h&gt;</code> 或 <code>&lt;cmath&gt;</code> 库里定义了 <a href="https://zh.cppreference.com/w/cpp/numeric/math/atan2">该函数</a>，调用 <code>atan2(y, x)</code> 即可。</p>
+<h2 id="_8">空间直角坐标系</h2>
+<p>使用如下方法建立空间直角坐标系：</p>
+<ol>
+<li>在空间内选定一点 <span class="arithmatex">\(O\)</span>；</li>
+<li>过点 <span class="arithmatex">\(O\)</span> 作三条互相垂直的数轴 <span class="arithmatex">\(\overrightarrow{Ox}, \overrightarrow{Oy}, \overrightarrow{Oz}\)</span>，分别称作 <span class="arithmatex">\(x\)</span> 轴（横轴），<span class="arithmatex">\(y\)</span> 轴（纵轴），<span class="arithmatex">\(z\)</span> 轴（竖轴），统称为坐标轴；它们的正方向符合右手规则，即以右手握住 <span class="arithmatex">\(z\)</span> 轴，当右手的四个手指 <span class="arithmatex">\(x\)</span> 轴的正向以角度转向 <span class="arithmatex">\(y\)</span> 轴正向时，大拇指的指向就是 <span class="arithmatex">\(z\)</span> 轴的正向；</li>
+<li>设定各轴上的长度单位，通常都设为 <span class="arithmatex">\(1\)</span>。</li>
+</ol>
+<p>这样就构成了一个空间直角坐标系，称为空间直角坐标系 <span class="arithmatex">\(O-xyz\)</span>。定点 <span class="arithmatex">\(O\)</span> 称为该坐标系的原点。</p>
+<p>任意两条坐标轴确定一个平面，这样可确定三个互相垂直的平面，统称为坐标面。其中 <span class="arithmatex">\(x\)</span> 轴与 <span class="arithmatex">\(y\)</span> 轴所确定的坐标面称为 <span class="arithmatex">\(xOy\)</span> 面，类似地有 <span class="arithmatex">\(yOz\)</span> 面和 <span class="arithmatex">\(zOx\)</span> 面。三个坐标面把空间分成八个部分，每一部分称为一个卦限。</p>
+<h3 id="_9">空间直角坐标系下位置的描述</h3>
+<p>取定空间直角坐标系 <span class="arithmatex">\(O-xyz\)</span> 后，就可以建立空间的点与三元组之间的一一对应关系。</p>
+<p>设点 <span class="arithmatex">\(M\)</span> 为空间的一点，过点 <span class="arithmatex">\(M\)</span> 分别作垂直于 <span class="arithmatex">\(x\)</span> 轴、<span class="arithmatex">\(y\)</span> 轴和 <span class="arithmatex">\(z\)</span> 轴的平面。设三个平面与 <span class="arithmatex">\(x\)</span> 轴、<span class="arithmatex">\(y\)</span> 轴和 <span class="arithmatex">\(z\)</span> 轴的交点依次为 <span class="arithmatex">\(P, Q, R\)</span>，点 <span class="arithmatex">\(P, Q, R\)</span> 分别称为点 <span class="arithmatex">\(M\)</span> 在 <span class="arithmatex">\(x\)</span> 轴、<span class="arithmatex">\(y\)</span> 轴和 <span class="arithmatex">\(z\)</span> 轴上的投影。又设点 <span class="arithmatex">\(P, Q, R\)</span> 在 <span class="arithmatex">\(x\)</span> 轴、<span class="arithmatex">\(y\)</span> 轴和 <span class="arithmatex">\(z\)</span> 轴上的坐标依次为 <span class="arithmatex">\(x, y, z\)</span>，于是点 <span class="arithmatex">\(M\)</span> 确定了一个三元组 <span class="arithmatex">\((x, y, z)\)</span>。</p>
+<p>反之，如果给定一个三元组 <span class="arithmatex">\((x, y, z)\)</span>，可以在 <span class="arithmatex">\(x\)</span> 轴上取坐标为 <span class="arithmatex">\(x\)</span> 的点 <span class="arithmatex">\(P\)</span>，在 <span class="arithmatex">\(y\)</span> 轴上取坐标为 <span class="arithmatex">\(y\)</span> 的点 <span class="arithmatex">\(Q\)</span>，在 <span class="arithmatex">\(z\)</span> 轴上取坐标为 <span class="arithmatex">\(z\)</span> 的点 <span class="arithmatex">\(R\)</span>，然后点 <span class="arithmatex">\(P, Q, R\)</span> 分别作垂直于 <span class="arithmatex">\(x\)</span> 轴、<span class="arithmatex">\(y\)</span> 轴和 <span class="arithmatex">\(z\)</span> 轴的三个平面，它们相交于空间的一点 <span class="arithmatex">\(M\)</span>，点 <span class="arithmatex">\(M\)</span> 就是由三元组 <span class="arithmatex">\((x, y, z)\)</span> 所确定的点。</p>
+<p>这样一来，空间的点 <span class="arithmatex">\(M\)</span> 与三元组 <span class="arithmatex">\((x, y, z)\)</span> 之间就建立了一一对应的关系。把三元组 <span class="arithmatex">\((x, y, z)\)</span> 称为点 <span class="arithmatex">\(M\)</span> 的坐标，记作 <span class="arithmatex">\(M(x, y, z)\)</span>，其中 <span class="arithmatex">\(x\)</span> 称为横坐标、<span class="arithmatex">\(y\)</span> 称为纵坐标、<span class="arithmatex">\(z\)</span> 称为竖坐标。</p>
+<h2 id="_10">空间柱坐标系</h2>
+<p>空间柱坐标系，将极坐标扩展为三维的方式：从应用于平面工作中的极坐标系开始，然后过极点 <span class="arithmatex">\(O\)</span> 添加垂直于该平面的 <span class="arithmatex">\(z\)</span> 轴，方向朝上。</p>
+<p>为了找到由柱坐标 <span class="arithmatex">\((\rho, \varphi, z)\)</span> 所描述的点，可以首先在极坐标系下处理 <span class="arithmatex">\(\rho\)</span> 和 <span class="arithmatex">\(\varphi\)</span>，然后根据 <span class="arithmatex">\(z\)</span> 坐标沿着 <span class="arithmatex">\(z\)</span> 轴「向上」或「向下」移动。</p>
+<h3 id="_11">柱坐标系与空间直角坐标系的相互转换</h3>
+<p>两坐标系下 <span class="arithmatex">\(z\)</span> 的值是相同的。</p>
+<p><span class="arithmatex">\((x,y)\)</span> 与 <span class="arithmatex">\((\rho, \varphi)\)</span> 的相互转换参见上文 <a href="#平面直角坐标系与极坐标系的相互转换">平面直角坐标系与极坐标系的相互转换</a>。</p>
+<h2 id="_12">空间球坐标系</h2>
+<p>球坐标可以通过以下方法确定：</p>
+<ol>
+<li>站在原点，面向水平极轴的方向；垂直轴的指向是从脚指向头部；</li>
+<li>手臂向上，指向垂直极轴方向；</li>
+<li>逆时针旋转角度 <span class="arithmatex">\(\varphi\)</span>；</li>
+<li>将手臂向下旋转角度 <span class="arithmatex">\(\vartheta\)</span>，手臂指向 <span class="arithmatex">\(\varphi\)</span> 和 <span class="arithmatex">\(\vartheta\)</span> 指定的方向；</li>
+<li>沿着该方向从原点移位距离 <span class="arithmatex">\(r\)</span>。</li>
+</ol>
+<p>这样即可到达球坐标 <span class="arithmatex">\((r,\vartheta,\varphi)\)</span> 所描述的点。其中 <span class="arithmatex">\(\vartheta\)</span> 称为 <strong>天顶角</strong>，<span class="arithmatex">\(\varphi\)</span> 称为 <strong>方位角</strong>。</p>
+<p>???+ warning "Warning"
+    由于诸多原因，有的地方使用 <span class="arithmatex">\(\phi\)</span> 表示天顶角，用 <span class="arithmatex">\(\theta\)</span> 表示方位角。阅读文章遇到球坐标系时请务必注意这一点。</p>
+<pre><code>同时，在写文章时，如果用到了球坐标系，建议提前声明清楚使用什么符号表示天顶角和方位角。
+</code></pre>
+<h3 id="_13">柱坐标系与球坐标系的相互转换</h3>
+<p>两坐标系下 <span class="arithmatex">\(\varphi\)</span> 的值是相同的。</p>
+<p>从柱坐标系到球坐标系：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+r &amp;= \sqrt{\rho^2 + z^2} \\
+\vartheta &amp;= \begin{cases}
+\arctan\left(\frac{\rho}{z}\right) &amp; \text{if }z &gt; 0 \\
+\pi/2 &amp; \text{if }z = 0, \rho \not= 0 \\
+\arctan\left(\frac{\rho}{z}\right) + \pi &amp; \text{if }z &lt; 0 \\
+\end{cases}
+\end{aligned}
+\]</div>
+<p>注意对于柱坐标系下的点 <span class="arithmatex">\((0,0,0)\)</span>，其球坐标的 <span class="arithmatex">\(\vartheta\)</span> 不明确。</p>
+<p>从球坐标系到柱坐标系：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\rho &amp;= r \sin \vartheta \\
+z &amp;= r \cos \vartheta
+\end{aligned}
+\]</div>
+<h3 id="_14">空间直角坐标系与球坐标系的相互转换</h3>
+<p>可以结合上文 <a href="#平面直角坐标系与极坐标系的相互转换">平面直角坐标系与极坐标系的相互转换</a> 和上文 <a href="#柱坐标系与球坐标系的相互转换">柱坐标系与球坐标系的相互转换</a> 一起使用，或直接使用下面的公式：</p>
+<p>从空间直角坐标系到球坐标系：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+r &amp;= \sqrt{x^2 + y^2 + z^2} \\
+\vartheta &amp;= \arccos\left(\frac{z}{\sqrt{x^2 + y^2 + z^2}}\right) \\
+\varphi &amp;= \operatorname{atan2}(y, x)
+\end{aligned}
+\]</div>
+<p>其中 <span class="arithmatex">\(\operatorname{atan2}\)</span> 的定义见 <a href="#平面直角坐标系与极坐标系的相互转换">平面直角坐标系与极坐标系的相互转换</a>。</p>
+<p>注意对于空间直角坐标系下的点 <span class="arithmatex">\((0,0,0)\)</span>，其球坐标的 <span class="arithmatex">\(\vartheta\)</span> 和 <span class="arithmatex">\(\varphi\)</span> 取值不明确。</p>
+<p>从球坐标系到空间直角坐标系：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+x &amp;= r \sin \vartheta \cos \varphi \\
+y &amp;= r \sin \vartheta \sin \varphi \\
+z &amp;= r \cos \vartheta
+\end{aligned}
+\]</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

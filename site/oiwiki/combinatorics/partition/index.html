@@ -1,0 +1,1807 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Partition - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#k" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Partition
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../number-theory/basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#k" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        k 部分拆数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="k 部分拆数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        生成函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ferrers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ferrers 图
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        互异分拆数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="互异分拆数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        奇分拆数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五边形数定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五边形数定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Partition</h1>
+
+<p>分拆：将自然数 <span class="arithmatex">\(n\)</span> 写成递降正整数和的表示。</p>
+<div class="arithmatex">\[
+n=r_1+r_2+\ldots+r_k \quad r_1 \ge r_2 \ge \ldots \ge r_k \ge 1
+\]</div>
+<p>和式中每个正整数称为一个部分。</p>
+<p>分拆数：<span class="arithmatex">\(p_n\)</span>。自然数 <span class="arithmatex">\(n\)</span> 的分拆方法数。</p>
+<p>自 <span class="arithmatex">\(0\)</span> 开始的分拆数：</p>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(p_n\)</span></td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>11</td>
+<td>15</td>
+<td>22</td>
+</tr>
+</tbody>
+</table>
+<h2 id="k">k 部分拆数</h2>
+<p>将 <span class="arithmatex">\(n\)</span> 分成恰有 <span class="arithmatex">\(k\)</span> 个部分的分拆，称为 <span class="arithmatex">\(k\)</span> 部分拆数，记作 <span class="arithmatex">\(p(n,k)\)</span>。</p>
+<p>显然，<span class="arithmatex">\(k\)</span> 部分拆数 <span class="arithmatex">\(p(n,k)\)</span> 同时也是下面方程的解数：</p>
+<div class="arithmatex">\[
+n-k=y_1+y_2+\ldots+y_k\quad y_1\ge y_2\ge\ldots\ge y_k\ge 0
+\]</div>
+<p>如果这个方程里面恰有 <span class="arithmatex">\(j\)</span> 个部分非 0，则恰有 <span class="arithmatex">\(p(n-k,j)\)</span> 个解。因此有和式：</p>
+<div class="arithmatex">\[
+p(n,k)=\sum_{j=0}^k p(n-k,j)
+\]</div>
+<p>相邻两个和式作差，得：</p>
+<div class="arithmatex">\[
+p(n,k)=p(n-1,k-1)+p(n-k,k)
+\]</div>
+<p>如果列出表格，每个格里的数，等于左上方的数，加上该格向上方数，所在列数个格子中的数。</p>
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(p(0,k)\)</span></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(p(1,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(p(2,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(p(3,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(p(4,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(p(5,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(p(6,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(p(7,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(p(8,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_1">例题</h3>
+<p>???+ note "计算 k 部分拆数"
+    计算 <span class="arithmatex">\(k\)</span> 部分拆数 <span class="arithmatex">\(p(n,k)\)</span>。多组输入，其中 <span class="arithmatex">\(n\)</span> 上界为 <span class="arithmatex">\(10000\)</span>，<span class="arithmatex">\(k\)</span> 上界为 <span class="arithmatex">\(1000\)</span>，对 <span class="arithmatex">\(1000007\)</span> 取模。</p>
+<pre><code>观察表格与递推式，按列更新对于存储更有利。不难写出程序：
+
+```cpp
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+
+int p[10005][1005]; /*将自然数n分拆为k个部分的方法数*/
+
+int main() {
+  int n, k;
+  while (~scanf("%d%d", &amp;n, &amp;k)) {
+    memset(p, 0, sizeof(p));
+    p[0][0] = 1;
+    int i;
+    for (i = 1; i &lt;= n; ++i) {
+      int j;
+      for (j = 1; j &lt;= k; ++j) {
+        if (i - j &gt;= 0) /*p[i-j][j]所有部分大于1*/
+        {
+          p[i][j] = (p[i - j][j] + p[i - 1][j - 1]) %
+                    1000007; /*p[i-1][j-1]至少有一个部分为1。*/
+        }
+      }
+    }
+    printf("%d\n", p[n][k]);
+  }
+}
+```
+</code></pre>
+<h3 id="_2">生成函数</h3>
+<p>由等比数列求和公式，有：</p>
+<div class="arithmatex">\[
+\frac{1}{1-x^k}=1+x^k+x^{2k}+x^{3k}+\ldots
+\]</div>
+<div class="arithmatex">\[
+1+p_1 x+p_2 x^2+p_3 x^3+\ldots=\frac{1}{1-x}  \frac{1}{1-x^2}  \frac{1}{1-x^3}\ldots
+\]</div>
+<p>对于 <span class="arithmatex">\(k\)</span> 部分拆数，生成函数稍微复杂。具体写出如下：</p>
+<div class="arithmatex">\[
+\sum_{n,k=0}^\infty {p(n,k) x^n y^k }=\frac{1}{1-xy}  \frac{1}{1-x^2 y}  \frac{1}{1-x^3 y}\ldots
+\]</div>
+<h3 id="ferrers">Ferrers 图</h3>
+<p>Ferrers 图：将分拆的每个部分用点组成的行表示。每行点的个数为这个部分的大小。</p>
+<p>根据分拆的定义，Ferrers 图中不同的行按照递减的次序排放。最长行在最上面。</p>
+<p>例如：分拆 <span class="arithmatex">\(12=5+4+2+1\)</span> 的 Ferrers 图。</p>
+<p><img alt="" src="../images/ferrers.jpg" /></p>
+<p>将一个 Ferrers 图沿着对角线翻转，得到的新 Ferrers 图称为原图的共轭，新分拆称为原分拆的共轭。显然，共轭是对称的关系。</p>
+<p>例如上述分拆 <span class="arithmatex">\(12=5+4+2+1\)</span> 的共轭是分拆 <span class="arithmatex">\(12=4+3+2+2+1\)</span>。</p>
+<p>最大 <span class="arithmatex">\(k\)</span> 分拆数：自然数 <span class="arithmatex">\(n\)</span> 的最大部分为 <span class="arithmatex">\(k\)</span> 的分拆个数。</p>
+<p>根据共轭的定义，有显然结论：</p>
+<p>最大 <span class="arithmatex">\(k\)</span> 分拆数与 <span class="arithmatex">\(k\)</span> 部分拆数相同，均为 <span class="arithmatex">\(p(n,k)\)</span>。</p>
+<h2 id="_3">互异分拆数</h2>
+<p>互异分拆数：<span class="arithmatex">\(pd_n\)</span>。自然数 <span class="arithmatex">\(n\)</span> 的各部分互不相同的分拆方法数。（Different）</p>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(pd_n\)</span></td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>同样地，定义互异 <span class="arithmatex">\(k\)</span> 部分拆数 <span class="arithmatex">\(pd(n,k)\)</span>，表示最大拆出 <span class="arithmatex">\(k\)</span> 个部分的互异分拆，是这个方程的解数：</p>
+<div class="arithmatex">\[
+n=r_1+r_2+\ldots+r_k\quad r_1&gt;r_2&gt;\ldots&gt;r_k\ge 1
+\]</div>
+<p>完全同上，也是这个方程的解数：</p>
+<div class="arithmatex">\[
+n-k=y_1+y_2+\ldots+y_k\quad y_1&gt;y_2&gt;\ldots&gt;y_k\ge 0
+\]</div>
+<p>这里与上面不同的是，由于互异，新方程中至多只有一个部分为零。有不变的结论：恰有 <span class="arithmatex">\(j\)</span> 个部分非 <span class="arithmatex">\(0\)</span>，则恰有 <span class="arithmatex">\(pd(n-k,j)\)</span> 个解，这里 <span class="arithmatex">\(j\)</span> 只取 <span class="arithmatex">\(k\)</span> 或 <span class="arithmatex">\(k-1\)</span>。因此直接得到递推：</p>
+<div class="arithmatex">\[
+pd(n,k)=pd(n-k,k-1)+pd(n-k,k)
+\]</div>
+<p>同样像组合数一样列出表格，每个格里的数，等于该格前一列上数，所在列数个格子中的数，加上该格向上方数，所在列数个格子中的数。</p>
+<table>
+<thead>
+<tr>
+<th>k</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(pd(0,k)\)</span></td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(pd(1,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(pd(2,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(pd(3,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(pd(4,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(pd(5,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(pd(6,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(pd(7,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(pd(8,k)\)</span></td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_4">例题</h3>
+<p>???+ note "计算互异分拆数"
+    计算互异分拆数 <span class="arithmatex">\(pd_n\)</span>。多组输入，其中 <span class="arithmatex">\(n\)</span> 上界为 <span class="arithmatex">\(50000\)</span>，对 <span class="arithmatex">\(1000007\)</span> 取模。</p>
+<pre><code>观察表格与递推式，按列更新对于存储更有利。代码中将后一位缩减了空间，仅保留相邻两项。
+
+```cpp
+#include &lt;cstdio&gt;
+#include &lt;cstring&gt;
+
+int pd[50005][2]; /*将自然数n分拆为k个部分的互异方法数*/
+
+int main() {
+  int n;
+  while (~scanf("%d", &amp;n)) {
+    memset(pd, 0, sizeof(pd));
+    pd[0][0] = 1;
+    int ans = 0;
+    int j;
+    for (j = 1; j &lt; 350; ++j) {
+      int i;
+      for (i = 0; i &lt; 350; ++i) {
+        pd[i][j &amp; 1] = 0; /*pd[i][j]只与pd[][j]和pd[][j-1]有关*/
+      }
+      for (i = 0; i &lt;= n; ++i) {
+        if (i - j &gt;= 0) /*pd[i-j][j]所有部分大于1*/
+        {
+          pd[i][j &amp; 1] = (pd[i - j][j &amp; 1] + pd[i - j][(j - 1) &amp; 1]) %
+                         1000007; /*pd[i-j][j-1]至少有一个部分为1。*/
+        }
+      }
+      ans = (ans + pd[n][j &amp; 1]) % 1000007;
+    }
+    printf("%d\n", ans);
+  }
+}
+```
+</code></pre>
+<h3 id="_5">奇分拆数</h3>
+<p>奇分拆数：<span class="arithmatex">\(po_n\)</span>。自然数 <span class="arithmatex">\(n\)</span> 的各部分都是奇数的分拆方法数。（Odd）</p>
+<p>有一个显然的等式：</p>
+<div class="arithmatex">\[
+\prod_{i=1}^\infty (1+x^i ) =\frac{\prod_{i=1}^\infty (1-x^{2i} ) }{\prod_{i=1}^\infty (1-x^i ) }=\prod_{i=1}^\infty \frac{1}{1-x^{2i-1} }
+\]</div>
+<p>最左边是互异分拆数的生成函数，最右边是奇分拆数的生成函数。两者对应系数相同，因此，奇分拆数和互异分拆数相同：</p>
+<div class="arithmatex">\[
+po_n=pd_n
+\]</div>
+<p>但显然 <span class="arithmatex">\(k\)</span> 部奇分拆数和互异 <span class="arithmatex">\(k\)</span> 部分拆数不是一个概念，这里就不列出了。</p>
+<p>再引入两个概念：</p>
+<p>互异偶分拆数：<span class="arithmatex">\(pde_n\)</span>。自然数 <span class="arithmatex">\(n\)</span> 的部分数为偶数的互异分拆方法数。（Even）</p>
+<p>互异奇分拆数：<span class="arithmatex">\(pdo_n\)</span>。自然数 <span class="arithmatex">\(n\)</span> 的部分数为奇数的互异分拆方法数。（Odd）</p>
+<p>因此有：</p>
+<div class="arithmatex">\[
+pd_n=pde_n+pdo_n
+\]</div>
+<p>同样也有相应的 <span class="arithmatex">\(k\)</span> 部概念。由于过于复杂，不再列出。</p>
+<h2 id="_6">五边形数定理</h2>
+<p>单独观察分拆数的生成函数的分母部分：</p>
+<div class="arithmatex">\[
+\prod_{i=1}^\infty (1-x^i ) 
+\]</div>
+<p>将这部分展开，可以想到互异分拆，与互异分拆拆出的部分数奇偶性有关。</p>
+<p>具体地，互异偶部分拆在展开式中被正向计数，互异奇部分拆在展开式中被负向计数。因此展开式中各项系数为两方法数之差。即：</p>
+<div class="arithmatex">\[
+\sum_{i=0}^\infty ({pde}_n-{pdo}_n ) x^n =\prod_{i=1}^\infty (1-x^i ) 
+\]</div>
+<p>接下来说明，多数情况下，上述两方法数相等，在展开式中系数为 <span class="arithmatex">\(0\)</span>；仅在少数位置，两方法数相差 <span class="arithmatex">\(1\)</span> 或 <span class="arithmatex">\(-1\)</span>。</p>
+<p>这里可以借助构造对应的办法。</p>
+<p>画出每个互异分拆的 Ferrers 图。最后一行称为这个图的底，底上点的个数记为 <span class="arithmatex">\(b\)</span>（Bottom）；连接最上面一行的最后一个点与图中某点的最长 <span class="arithmatex">\(45\)</span> 度角线段，称为这个图的坡，坡上点的个数记为 <span class="arithmatex">\(s\)</span>（Slide）。</p>
+<p><img alt="" src="../images/bottom_slide.jpg" /></p>
+<p>要想在互异偶部分拆与互异奇部分拆之间构造对应，就要定义变换，在保证互异条件不变的前提下，使得行数改变 <span class="arithmatex">\(1\)</span>：</p>
+<p>变换 A：当 <span class="arithmatex">\(b\)</span> 小于等于 <span class="arithmatex">\(s\)</span> 的时候，就将底移到右边，成为一个新坡。</p>
+<p>变换 B：当 <span class="arithmatex">\(b\)</span> 大于 <span class="arithmatex">\(s\)</span> 的时候，就将坡移到下边，成为一个新底。</p>
+<p>这两个变换对于大多数 <span class="arithmatex">\(n\)</span> 的任意互异分拆，恰有一个变换可以进行，就在互异偶部分拆与互异奇部分拆之间构造了一个一一对应。已经构造了一一对应的两部分分拆个数相等，因此这时展开式中第 <span class="arithmatex">\(n\)</span> 项系数为 <span class="arithmatex">\(0\)</span>。</p>
+<p>但是对于某些 <span class="arithmatex">\(n\)</span>，其存在恰一个互异分拆无法进行上述变换。</p>
+<ul>
+<li>情况一：<span class="arithmatex">\(b=s\)</span> 且底与坡有一个公共点时，变换 A 不能进行。此时</li>
+</ul>
+<div class="arithmatex">\[
+n=s+(s+1)+\ldots+(s+s-1)=\frac{s(3s-1)}{2}
+\]</div>
+<p>展开式的第 <span class="arithmatex">\(n\)</span> 项与分拆部分数的奇偶性有关，为 <span class="arithmatex">\((-1)^s x^n\)</span>。</p>
+<ul>
+<li>情况二：<span class="arithmatex">\(b=s+1\)</span> 且底与坡有一个公共点时，变换 B 不能进行。此时</li>
+</ul>
+<div class="arithmatex">\[
+n=(s+1)+(s+2)+\ldots+(s+s)=\frac{s(3s+1)}{2}
+\]</div>
+<p>展开式的第 <span class="arithmatex">\(n\)</span> 项为 <span class="arithmatex">\((-1)^s x^n\)</span>。</p>
+<p>用 <span class="arithmatex">\(-s\)</span> 替换上式的 <span class="arithmatex">\(s\)</span>，得到 <span class="arithmatex">\(n=\frac{s(3s-1)}{2}\)</span>，其中 <span class="arithmatex">\(s\)</span> 为负整数，展开式的第 <span class="arithmatex">\(n\)</span> 项仍为 <span class="arithmatex">\((-1)^s x^n\)</span>。。</p>
+<p>由于两种情况不会在同一个 <span class="arithmatex">\(n\)</span> 同时出现，我们可以把两个条件合起来，得到 <span class="arithmatex">\(n\)</span> 需要满足的条件是</p>
+<div class="arithmatex">\[
+\exists k\in\mathbb{Z},n=\frac{k(3k-1)}{2}
+\]</div>
+<p>至此，我们就证明了：</p>
+<div class="arithmatex">\[
+(1-x)(1-x^2 )(1-x^3 )\ldots=\sum_{k=-\infty}^{+\infty} (-1)^k x^{\frac{k(3k-1)}{2}} =\ldots+x^{26}-x^{15}+x^7-x^2+1-x+x^5-x^{12}+x^{22}-\ldots
+\]</div>
+<p>回忆一下：这个式子是分拆数的生成函数的倒数，因此其与分拆数的生成函数相乘的结果是 <span class="arithmatex">\(1\)</span>。整理并对比两边各项系数，就得到分拆数数列的递推式。</p>
+<div class="arithmatex">\[
+(1+p_1 x+p_2 x^2+p_3 x^3+\ldots)(1-x-x^2+x^5+x^7-x^{12}-x^{15}+x^{22}+x^{26}-\ldots)=1
+\]</div>
+<div class="arithmatex">\[
+p_n=p_{n-1}+p_{n-2}-p_{n-5}-p_{n-7}+\ldots
+\]</div>
+<p>这个递推式有无限项，但是如果规定负数的分拆数是 <span class="arithmatex">\(0\)</span>（<span class="arithmatex">\(0\)</span> 的分拆数已经定义为 <span class="arithmatex">\(1\)</span>），那么就简化为了有限项。</p>
+<h3 id="_7">例题</h3>
+<p>???+ note "计算分拆数"
+    计算分拆数 <span class="arithmatex">\(p_n\)</span>。多组输入，其中 <span class="arithmatex">\(n\)</span> 上界为 <span class="arithmatex">\(50000\)</span>，对 <span class="arithmatex">\(1000007\)</span> 取模。</p>
+<pre><code>采用五边形数定理的方法。有代码：
+
+```cpp
+#include &lt;cstdio&gt;
+
+long long a[100010];
+long long p[50005];
+
+int main() {
+  p[0] = 1;
+  p[1] = 1;
+  p[2] = 2;
+  int i;
+  for (i = 1; i &lt; 50005;
+       i++) /*递推式系数1,2,5,7,12,15,22,26...i*(3*i-1)/2,i*(3*i+1)/2*/
+  {
+    a[2 * i] = i * (i * 3 - 1) / 2; /*五边形数为1,5,12,22...i*(3*i-1)/2*/
+    a[2 * i + 1] = i * (i * 3 + 1) / 2;
+  }
+  for (
+      i = 3; i &lt; 50005;
+      i++) /*p[n]=p[n-1]+p[n-2]-p[n-5]-p[n-7]+p[12]+p[15]-...+p[n-i*[3i-1]/2]+p[n-i*[3i+1]/2]*/
+  {
+    p[i] = 0;
+    int j;
+    for (j = 2; a[j] &lt;= i; j++) /*有可能为负数,式中加1000007*/
+    {
+      if (j &amp; 2) {
+        p[i] = (p[i] + p[i - a[j]] + 1000007) % 1000007;
+      } else {
+        p[i] = (p[i] - p[i - a[j]] + 1000007) % 1000007;
+      }
+    }
+  }
+  int n;
+  while (~scanf("%d", &amp;n)) {
+    printf("%lld\n", p[n]);
+  }
+}
+```
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

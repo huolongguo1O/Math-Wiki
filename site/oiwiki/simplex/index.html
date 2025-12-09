@@ -1,0 +1,1913 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Simplex - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Simplex
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../number-theory/basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        引入
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本概念
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="基本概念">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一个例子
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本可行解
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        转轴
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        终止条件
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单纯形表
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几何背景
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实现细节
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="实现细节">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        松弛形式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        初始基本可行解
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        转轴规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考实现
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Simplex</h1>
+
+<p>前置知识：<a href="../linear-programming/">线性规划基础</a></p>
+<h2 id="_1">引入</h2>
+<p>算法竞赛中，经常使用单纯形法解决线性规划问题。但是，由于算法竞赛中遇到的线性规划问题大多有着更特殊的结构，常常可以转化为网络流问题，因此，单纯形法并不常用，效率也不如专门为网络流问题设计的算法。</p>
+<h2 id="_2">基本概念</h2>
+<p>假设要求解如下一个有 <span class="arithmatex">\(n\)</span> 个决策变量和 <span class="arithmatex">\(m+n\)</span> 个约束的 <a href="../linear-programming/#标准形式">标准形式</a> 线性规划问题：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\min_{x}\; &amp; z = c^Tx \\
+\text{subject to }&amp; Ax = b, \\
+&amp; x \ge 0.
+\end{aligned}
+\]</div>
+<p>不妨假设这 <span class="arithmatex">\(m\)</span> 个等式约束确定的线性方程组有解，且 <span class="arithmatex">\(A\)</span> 满秩，则 <span class="arithmatex">\(\operatorname{rank}A = m \le n\)</span>。</p>
+<h3 id="_3">一个例子</h3>
+<p>在严格叙述单纯形法的步骤之前，本节首先考察一个具体的例子，以方便理解。</p>
+<p>???+ example "例子"
+    考虑线性规划问题</p>
+<pre><code>$$
+\begin{aligned}
+\max\; &amp; 10 x_1 + 12 x_2 + 12 x_3 \\
+\text{subject to } &amp; x_1 + 2 x_2 + 2x_3 \le 20, \\
+&amp; 2x_1 + x_2 + 2x_3 \le 20, \\
+&amp; 2x_1 + 2x_2 + x_3 \le 20,\\
+&amp; x_1,x_2,x_3 \ge 0.
+\end{aligned}
+$$
+
+通过添加松弛变量，就得到它的标准形式：
+
+$$
+\begin{aligned}
+\min\; &amp; -10 x_1 - 12 x_2 - 12 x_3 \\
+\text{subject to } &amp; x_1 + 2 x_2 + 2x_3 + x_4 = 20, \\
+&amp; 2x_1 + x_2 + 2x_3 + x_5 = 20, \\
+&amp; 2x_1 + 2x_2 + x_3 + x_6 = 20,\\
+&amp; x_1,x_2,x_3,x_4,x_5,x_6 \ge 0.
+\end{aligned}
+$$
+
+观察该问题的等式约束，它们其实相当于将变量 $x_4,x_5,x_6$ 由变量 $x_1,x_2,x_3$ 表示。将原问题稍微整理一下，就有
+
+$$
+\begin{array}{rrrrrr}
+\min_{x_i\ge 0}  &amp;  z  = &amp;  0 &amp;  -10x_1 &amp;  -12x_2 &amp;  -12x_3\;\\
+\text{subject to}&amp; x_4 = &amp; 20 &amp;    -x_1 &amp;   -2x_2 &amp;   -2x_3, \\
+            &amp; x_5 = &amp; 20 &amp;   -2x_1 &amp;    -x_2 &amp;   -2x_3, \\
+            &amp; x_6 = &amp; 20 &amp;   -2x_1 &amp;   -2x_2 &amp;    -x_3. \\
+\end{array}
+$$
+
+从这个形式中，可以清楚地看到，如果令 $x_1=x_2=x_3=0$，就可以得到原问题的一组可行解
+
+$$
+x = (0,0,0,20,20,20)^T.
+$$
+
+且它对应的价值为 $z=0$。为方便叙述，称那些设为零的变量 $x_1,x_2,x_3$ 为非基变量，剩下的变量 $x_4,x_5,x_6$ 为基变量。
+
+这组可行解显然不是最优解。只要适当地增加 $x_1,x_2,x_3$ 的值，使得 $x_4,x_5,x_6$ 仍然是非负数，就可以保持解仍然可行。而且，因为目标函数中，$x_1,x_2,x_3$ 的系数都是严格的负数，所以，增加它们的值一定会降低目标函数的值。比如说，可以选择增加 $x_1$ 的值。为了尽可能多地降低目标函数的值，需要尽可能多地增加 $x_1$ 的值。但是，为了保证解仍然是可行的，就需要保证 $x_4,x_5,x_6\ge 0$。因此，$x_1$ 最多可以增加到
+
+$$
+\min\left\{\dfrac{20}{1},\dfrac{20}{2},\dfrac{20}{2}\right\} = 10.
+$$
+
+此时，可行解变为
+
+$$
+x = (10,0,0,10,0,0)^T.
+$$
+
+因为 $x_1$ 成为了基变量，为了回到最初的情形（即三个基变量由三个非基变量表示），需要选择一个新的非基变量。因为 $x_5,x_6$ 都是零，所以，可以选择它们其中的任何一个作为非基变量，设为零。不妨选择 $x_5$ 作为非基变量。而且，将
+
+$$
+x_1 = 10 - 0.5x_5 - 0.5x_2 - x_3
+$$
+
+代入到原来的问题中，就可以将原问题改写作
+
+$$
+\begin{array}{rrrrrr}
+\min_{x_i\ge 0}  &amp;   z = &amp;-100&amp;   +5x_5 &amp;   -7x_2 &amp;   -2x_3\;\\
+\text{subject to}&amp; x_4 = &amp; 10 &amp; +0.5x_5 &amp; -1.5x_2 &amp;    -x_3, \\
+            &amp; x_1 = &amp; 10 &amp; -0.5x_5 &amp; -0.5x_2 &amp;    -x_3, \\
+            &amp; x_6 = &amp;  0 &amp;    +x_5 &amp;    -x_2 &amp;    +x_3. \\
+\end{array}
+$$
+
+这就回到了初始的情形。
+
+继续观察当前的目标函数。非基变量 $x_3$ 的系数仍然是负数。可以考虑增加 $x_3$ 的值。为了保证 $x_4,x_1,x_6\ge 0$，变量 $x_3$ 最多只能增加到
+
+$$
+\min\left\{\dfrac{10}{1},\dfrac{10}{1}\right\} = 10.
+$$
+
+注意到，因为 $x_6$ 的表达式中，$x_3$ 的系数是正数，所以，无论怎么增加 $x_3$ 的值，都不会使得 $x_6$ 变为负数。这就是这次大括号中只有两项的原因。因为 $x_3$ 增加到 $10$ 的时候，$x_1,x_4$ 都变为零，所以，可以任选其中一个作为新的非基变量。不妨选择 $x_4$。就可以将
+
+$$
+x_3 = 10 + 0.5x_5 - 1.5x_2 - x_4
+$$
+
+代入上述问题中，问题变形为
+
+$$
+\begin{array}{rrrrrr}
+\min_{x_i\ge 0}  &amp;   z = &amp;-120&amp;   +4x_5 &amp;   -4x_2 &amp;   +2x_4\;\\
+\text{subject to}&amp; x_3 = &amp; 10 &amp; +0.5x_5 &amp; -1.5x_2 &amp;    -x_4, \\
+            &amp; x_1 = &amp;  0 &amp;    -x_5 &amp;    +x_2 &amp;    +x_4, \\
+            &amp; x_6 = &amp; 10 &amp; +1.5x_5 &amp; -2.5x_2 &amp;    -x_4. \\
+\end{array}
+$$
+
+只需要代入 $x_5=x_2=x_4=0$，就能从这个形式中读出当前的可行解是
+
+$$
+x = (0,0,10,0,0,10)^T,
+$$
+
+以及它对应的价值为 $z=-120$。
+
+重复之前的操作。因为 $x_2$ 的系数是负数，可以增加它的值；但为了保持 $x_3,x_6$ 仍然是非负数，只能增加到
+
+$$
+\min\left\{\dfrac{10}{1.5},\dfrac{10}{2.5}\right\} = 4.
+$$
+
+因为大括号中的最小值出现在变量 $x_6$ 的表达式中，所以，它将在 $x_2=4$ 时变为零。将表达式
+
+$$
+x_2 = 4 + 0.6x_5 - 0.4x_6 - 0.4x_4
+$$
+
+代入上述问题，就可以将原问题改写为
+
+$$
+\begin{array}{rrrrrr}
+\min_{x_i\ge 0}  &amp;   z = &amp;-136&amp; +1.6x_5 &amp; +1.6x_6 &amp; +3.6x_4\;\\
+\text{subject to}&amp; x_3 = &amp;  4 &amp; -0.4x_5 &amp; +0.6x_6 &amp; -0.4x_4, \\
+            &amp; x_1 = &amp;  4 &amp; -0.4x_5 &amp; -0.4x_6 &amp; +0.6x_4, \\
+            &amp; x_2 = &amp;  4 &amp; +1.5x_5 &amp; -2.5x_6 &amp;    -x_4. \\
+\end{array}
+$$
+
+仍然令非基变量 $x_5,x_6,x_4$ 为零，就可以得到当前的可行解为
+
+$$
+x = (4,4,4,0,0,0)^T.
+$$
+
+对应的价值为 $z=-136$。
+
+因为目标函数中所有非基变量的系数都是正数，无法继续前文所述过程以改进目标函数，所以，当前的可行解就是最优解。算法终止。
+</code></pre>
+<p>这个例子中，算法从一组可行解出发，不断地改进目标函数，直到无法继续改进。这就是单纯形法的基本思想。</p>
+<h3 id="_4">基本可行解</h3>
+<p>由于 <span class="arithmatex">\(A\)</span> 是满秩的，所以，总是可以选取大小为 <span class="arithmatex">\(m\)</span> 的子集 <span class="arithmatex">\(B\subseteq\{1,2,\cdots,n\}\)</span> 使得 <span class="arithmatex">\(A_B\)</span> 是可逆方阵。由此，可以将 <span class="arithmatex">\(x_B\)</span> 由剩下的变量 <span class="arithmatex">\(x_N\)</span> 表示：</p>
+<div class="arithmatex">\[
+x_B = A_B^{-1}b - A_B^{-1}A_Nx_N.
+\]</div>
+<p>其中，<span class="arithmatex">\(N=\{1,2,\cdots,n\}\setminus B\)</span>，矩阵 <span class="arithmatex">\(A_B,A_N\)</span> 分别为矩阵 <span class="arithmatex">\(A\)</span> 中标号 <span class="arithmatex">\(i\in B\)</span> 和标号 <span class="arithmatex">\(i\in N\)</span> 的列组成的子矩阵，向量 <span class="arithmatex">\(x_B,x_N\)</span> 分别为向量 <span class="arithmatex">\(x\)</span> 中标号 <span class="arithmatex">\(i\in B\)</span> 和标号 <span class="arithmatex">\(i\in N\)</span> 的分量组成的子向量。如果 <span class="arithmatex">\(i\in B\)</span>，那么，称 <span class="arithmatex">\(x_i\)</span> 为 <strong>基变量</strong>（basic variable）；否则，称 <span class="arithmatex">\(x_i\)</span> 为 <strong>非基变量</strong>（non-basic variable）。基变量的全体称为一组 <strong>基</strong>（basis），本文用对应的标号集合 <span class="arithmatex">\(B\)</span> 表示一组基。</p>
+<p>???+ tip "「基」"
+    「基」这个名称，可以从线性代数的角度理解。设 <span class="arithmatex">\(A\)</span> 的全体列向量张成的线性空间为 <span class="arithmatex">\(V\)</span>。那么，基 <span class="arithmatex">\(B\)</span> 对应的列向量就是空间 <span class="arithmatex">\(V\)</span> 的一组基。</p>
+<p>在基变量 <span class="arithmatex">\(x_B\)</span> 的表达式中，令 <span class="arithmatex">\(x_N=0\)</span>，就得到全体等式约束的一组解[^notation]</p>
+<div class="arithmatex">\[
+x = (x_B,x_N) = (A_B^{-1}b,0).
+\]</div>
+<p>这样得到的解称为线性规划问题的一个 <strong>基本解</strong>（basic solution）。如果它还满足所有非负约束，即 <span class="arithmatex">\(x\ge 0\)</span>，那么，它也是原问题的一个可行解，也称为 <strong>基本可行解</strong>（basic feasible solution, BFS）。在单纯形法的迭代过程中，需要始终保持当前的解为一组基本可行解。</p>
+<h3 id="_5">转轴</h3>
+<p>单纯形法的每次迭代就称为一次 <strong>转轴</strong>（pivoting）。从结果上看，每次转轴总是移除一个旧的基变量，再添加一个新的基变量，进而改进目标函数的值。</p>
+<p>???+ tip "「转轴」"
+    「转轴」这个名称，同样可以从线性代数的角度理解。如上文所述，基 <span class="arithmatex">\(B\)</span> 对应的列向量是空间 <span class="arithmatex">\(V\)</span> 的一组基，它们也就对应着对应基的表示下空间 <span class="arithmatex">\(V\)</span> 的一组坐标轴。因此，转轴的过程，就是将某条坐标轴旋转到新的位置的过程。</p>
+<p>为了确定需要添加的基变量，可以将目标函数利用非基变量表示为</p>
+<div class="arithmatex">\[
+\begin{aligned}
+c^Tx &amp;= c^T_Bx_B + c^T_Nx_N \\
+&amp;= c_B^TA_B^{-1}b + (c_N^T - c_B^TA_B^{-1}A_N)x_N.
+\end{aligned}
+\]</div>
+<p>令 <span class="arithmatex">\(x_N=0\)</span>，就得到目标函数在当前基本可行解处的价值 <span class="arithmatex">\(z=c_B^TA_B^{-1}b\)</span>。表达式中的第二项的系数则表示 <span class="arithmatex">\(x_N\)</span> 改变时，目标函数的改变为</p>
+<div class="arithmatex">\[
+\tilde c_N = \dfrac{\partial z}{\partial x_N} = c_N - A_N^T(A_B^{-1})^Tc_B.
+\]</div>
+<p>注意到 <span class="arithmatex">\(c_B - A_B^T(A_B^{-1})^Tc_B = 0\)</span>，所以，可以记向量</p>
+<div class="arithmatex">\[
+\tilde c = (\tilde c_B^T,\tilde c_N^T)^T = c - A^T(A_B^{-1})^Tc_B
+\]</div>
+<p>为线性规划问题在可行基本解 <span class="arithmatex">\(x\)</span> 处的 <strong>约化成本</strong>（reduced cost）。分量 <span class="arithmatex">\(\tilde c_i&lt;0\)</span> 说明增加变量 <span class="arithmatex">\(x_i\)</span> 的值可以改进原问题的目标函数。这样的变量只能是一个非基变量，它称为本次转轴的 <strong>入基变量</strong>（entering variable）。因为在转轴后，<span class="arithmatex">\(x_i\)</span> 将变为基变量，不再恒设为零（但依然有可能等于零）。</p>
+<p>选择完入基变量后，还需要选择需要移除的旧的基变量。为此，只需要确定，在增加 <span class="arithmatex">\(x_i\)</span> 的过程中，哪个现有的基变量最先变为零。将 <span class="arithmatex">\(x_N=(x_i,x_{N\setminus\{i\}})=(x_i,0)\)</span> 代入 <span class="arithmatex">\(x_B\)</span> 的表达式，就有</p>
+<div class="arithmatex">\[
+x_B = A_B^{-1}b - A_B^{-1}A_ix_i.
+\]</div>
+<p>因此，<span class="arithmatex">\(x_i\)</span> 可以增加的最大量就等于</p>
+<div class="arithmatex">\[
+\theta = \min\left\{\dfrac{(A_B^{-1}b)_j}{(A_B^{-1}A_i)_j}:(A_B^{-1}A_i)_j&gt;0\right\}.
+\]</div>
+<p>最先变为零的变量就是使得该表达式取得最小值的下标 <span class="arithmatex">\(j\)</span> 对应的基变量 <span class="arithmatex">\(x_{B_j}\)</span>。它也是增加 <span class="arithmatex">\(x_i\)</span> 的过程中的「瓶颈」——继续增加 <span class="arithmatex">\(x_i\)</span> 将使得 <span class="arithmatex">\(x_{B_j}\)</span> 成为负值。这一变量就是本次转轴的 <strong>出基变量</strong>（leaving variable）。确定出基变量的方法称为 <strong>最小比值检验</strong>（minimum ratio test）。</p>
+<p>设入基变量为 <span class="arithmatex">\(x_i\)</span>，出基变量为 <span class="arithmatex">\(x_{i'}\)</span>。转轴之后，基变量就是 <span class="arithmatex">\(x_{B\setminus\{i\}\cup\{i'\}}\)</span>，非基变量就是 <span class="arithmatex">\(x_{N\setminus\{i'\}\cup\{i\}}\)</span>。</p>
+<h3 id="_6">终止条件</h3>
+<p>单纯形法，就是从一组基本可行解出发，不断进行转轴的过程。上一节对转轴的讨论并不是完整的，它忽略了一些特殊的情形。有些特殊情形对应着算法的终止，有些则需要额外的处理。</p>
+<p>首先，入基变量未必存在，即 <span class="arithmatex">\(\tilde c\ge 0\)</span>。此时，没有进一步改进最优价值的方法，这说明当前基本可行解就是最优解，算法终止。要严格地证明这一点，需要用到 <a href="../linear-programming/#互补松弛条件">互补松弛条件</a>。令 <span class="arithmatex">\(y=(A_B^{-1})^Tc_B\)</span>。注意到，在算法的整个过程中，始终保持 <span class="arithmatex">\(x\)</span> 是可行解，且互补松弛条件成立，即</p>
+<div class="arithmatex">\[
+x^T(c-A^Ty) = \tilde c^Tx = \tilde c_B^Tx_B + \tilde c_N^Tx_N = 0.
+\]</div>
+<p>因此，只需要 <span class="arithmatex">\(y\)</span> 是对偶问题的可行解，即 <span class="arithmatex">\(A^Ty\le c\)</span>，就能得到 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 分别是原问题和对偶问题的最优解这一结论。这个条件就是 <span class="arithmatex">\(\tilde c\ge 0\)</span>，即不存在入基变量。</p>
+<p>???+ tip "「影子价格」"
+    向量 <span class="arithmatex">\(y=(A_B^{-1})^Tc_B\)</span> 常称为 <strong>对偶向量</strong>（dual vector）。当 <span class="arithmatex">\(B\)</span> 对应的基本可行解是原问题的最优解时，向量 <span class="arithmatex">\(y\)</span> 是对偶问题的最优解。因此，利用单纯形法求解原问题的最优解时，也会获得对偶问题的最优解。因为向量 <span class="arithmatex">\(y\)</span> 是当前价值关于约束常量的偏导数，即</p>
+<pre><code>$$
+\dfrac{\partial(c^Tx)}{\partial b} = (A_B^{-1})^Tc_B = y,
+$$
+
+它也称为 **影子价格**（shadow price）。
+</code></pre>
+<p>其次，出基变量未必存在，即 <span class="arithmatex">\(A_B^{-1}A_i\le 0\)</span>。此时，转轴的过程不存在任何「瓶颈」，也就是说，可以不断地通过增加 <span class="arithmatex">\(x_i\)</span> 的值来改进目标函数，直到它等于 <span class="arithmatex">\(-\infty\)</span>。这说明给定的线性规划问题是无界的，算法终止。</p>
+<p>最后，入基变量和出基变量的选择可能并非是唯一的。不恰当的选择方式可能会导致过多地转轴，甚至使得算法陷入循环，无法正常终止。这类情形的处理稍微复杂，需要应用一些 <a href="#转轴规则">转轴规则</a> 以防止陷入循环并减少转轴次数。</p>
+<h3 id="_7">单纯形表</h3>
+<p>具体实现转轴过程时，只需要维护每次转轴之后，线性规划问题的系数矩阵：</p>
+<div class="arithmatex">\[
+\tilde T_B = 
+\begin{pmatrix}
+-z_B &amp; \tilde c^T_N \\
+x &amp; A_B^{-1}A_N
+\end{pmatrix}
+=
+\begin{pmatrix}
+-c_B^TA_B^{-1}b &amp; c^T - c_B^TA_B^{-1}A_N \\
+A_B^{-1}b &amp; A_B^{-1}A_N 
+\end{pmatrix}.
+\]</div>
+<p>它对应着线性规划问题：</p>
+<div class="arithmatex">\[
+\begin{array}{rrrr}
+\min_{x\ge 0}    &amp;       &amp; c_B^TA_B^{-1}b &amp; + \tilde c_N^Tx_N\; \\
+\text{subject to}&amp; x_B = &amp; A_B^{-1}b      &amp; - A_B^{-1}A_Nx_N.
+\end{array}
+\]</div>
+<p>矩阵 <span class="arithmatex">\(\tilde T_B\)</span> 称为该线性规划问题相对于基 <span class="arithmatex">\(B\)</span> 的 <strong>压缩单纯形表</strong>（condensed simplex tableau）。表的左上角 <span class="arithmatex">\((\tilde T_B)_{00}\)</span> 为当前解的价值（的相反数），第 <span class="arithmatex">\(0\)</span> 行、第 <span class="arithmatex">\(i\)</span> 列的量 <span class="arithmatex">\((\tilde T_B)_{0i}\)</span> 为第 <span class="arithmatex">\(i\)</span> 个非基变量 <span class="arithmatex">\(x_{N_i}\)</span> 的约化成本，第 <span class="arithmatex">\(j\)</span> 行、第 <span class="arithmatex">\(i\)</span> 列的量 <span class="arithmatex">\((\tilde T_B)_{j0}\)</span> 为第 <span class="arithmatex">\(j\)</span> 个基变量 <span class="arithmatex">\(x_{B_j}\)</span> 的值，而 <span class="arithmatex">\(A_B^{-1}A_N\)</span> 就是用非基变量 <span class="arithmatex">\(x_N\)</span> 表示基变量 <span class="arithmatex">\(x_B\)</span> 得到的表达式中的系数。</p>
+<p>容易看出，转轴需要的所有信息都可以从压缩单纯形表中直接获得。具体地，利用压缩单纯形表，单次转轴包括如下操作：</p>
+<ol>
+<li>选取列 <span class="arithmatex">\(i=1,\cdots,n-m\)</span>，使得 <span class="arithmatex">\((\tilde T_B)_{0i}&lt;0\)</span>。如果不存在这样的 <span class="arithmatex">\(i\)</span>，那么当前解就是最优解，量 <span class="arithmatex">\(-(\tilde T_B)_{00}\)</span> 就是最优价值。</li>
+<li>选取行 <span class="arithmatex">\(j=1,\cdots,m\)</span>，使得 <span class="arithmatex">\((\tilde T_B)_{ji}&gt;0\)</span> 且 <span class="arithmatex">\((\tilde T_B)_{j0}/(\tilde T_B)_{ji}\)</span> 最小。如果不存在这样的 <span class="arithmatex">\(j\)</span>，那么原问题无界。</li>
+<li>令变量 <span class="arithmatex">\(x_{N_i}\)</span> 入基，变量 <span class="arithmatex">\(x_{B_j}\)</span> 出基，并更新单纯形表。</li>
+</ol>
+<p>现在，具体地讨论一下如何更新单纯形表。在更新单纯形表之前，第 <span class="arithmatex">\(j\)</span> 行表示等式</p>
+<div class="arithmatex">\[
+x_{B_j} = (\tilde T_B)_{j0} - \sum_{i=1}^{n-m}(\tilde T_B)_{ji}x_{N_i}.
+\]</div>
+<p>为了更新单纯形表，需要用 <span class="arithmatex">\(x_{N\setminus\{N_i\}\cup\{B_j\}}\)</span> 表示 <span class="arithmatex">\(x_{N_i}\)</span>，也就是：</p>
+<div class="arithmatex">\[
+x_{N_i} = \dfrac{(\tilde T_B)_{j0}}{(\tilde T_B)_{ji}} - \dfrac{1}{(\tilde T_B)_{ji}}x_{B_j} - \sum_{i'\neq i}\dfrac{(\tilde T_B)_{ji'}}{(\tilde T_B)_{ji}}x_{N_{i'}}.
+\]</div>
+<p>将它代入其余的式子中，就得到</p>
+<div class="arithmatex">\[
+x_{B_{j'}} = \left((\tilde T_B)_{j'0} - (\tilde T_B)_{j'i}\dfrac{(\tilde T_B)_{j0}}{(\tilde T_B)_{ji}}\right) + \dfrac{(\tilde T_B)_{j'i}}{(\tilde T_B)_{ji}}x_{B_j} - \sum_{i'\neq i}\left((\tilde T_B)_{j'i'}-(\tilde T_B)_{j'i}\dfrac{(\tilde T_B)_{ji'}}{(\tilde T_B)_{ji}}\right)x_{N_i}.
+\]</div>
+<p>第 <span class="arithmatex">\(0\)</span> 行类似，只是等式左侧变为 <span class="arithmatex">\(-z\)</span>。虽然式子看起来复杂，但是实现时，只需要分两步：</p>
+<ol>
+<li>更新第 <span class="arithmatex">\(j\)</span> 行，即令 <span class="arithmatex">\(\alpha=(\tilde T_B)_{ji}\)</span>，再令第 <span class="arithmatex">\(i\)</span> 列数字为 <span class="arithmatex">\(1\)</span>，然后将整行所有数字同除以 <span class="arithmatex">\(\alpha\)</span>；</li>
+<li>更新第 <span class="arithmatex">\(j'\neq j\)</span> 行，即令 <span class="arithmatex">\(\beta=(\tilde T_B)_{j'i}\)</span>，再令第 <span class="arithmatex">\(j\)</span> 列数字为 <span class="arithmatex">\(0\)</span>，然后将整行数字同时减去 <span class="arithmatex">\(\beta\)</span> 倍的第 <span class="arithmatex">\(j\)</span> 行数字。</li>
+</ol>
+<p>???+ tip "「单纯形表」"
+    <strong>单纯形表</strong>（simplex tableau）指矩阵</p>
+<pre><code>$$
+T_B = 
+\begin{pmatrix}
+-z &amp; \tilde c^T \\
+x &amp; A_B^{-1}A 
+\end{pmatrix}
+=
+\begin{pmatrix}
+-c_B^TA_B^{-1}b &amp; c^T - c_B^TA_B^{-1}A \\
+A_B^{-1}b &amp; A_B^{-1}A 
+\end{pmatrix}.
+$$
+
+相较于压缩单纯形表，它多了 $m$ 列，分别对应 $m$ 个基变量；而且，对应着第 $j$ 个基变量的列一定是 $e_j$，即该向量只在第 $j$ 行处取值为 $1$，其余行均为 $0$。因为这些列并没有提供多余的信息，所以在实现单纯形法时，常常省略这些列，这就得到了压缩单纯形表。
+
+利用单纯形表可以更方便地理解更新单纯形表的步骤。因为所有的单纯形表 $T_B$ 都可以由同一个矩阵 $T_0$ 左乘一个与基有关的可逆矩阵 $L_B$ 得到，即
+
+$$
+T_B=
+\begin{pmatrix}
+-c_B^TA_B^{-1}b &amp; c^T - c_B^TA_B^{-1}A \\
+A_B^{-1}b &amp; A_B^{-1}A 
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 &amp; -c_B^TA_B^{-1} \\
+O &amp; A_B^{-1}
+\end{pmatrix}
+\begin{pmatrix}
+0 &amp; c^T \\
+b &amp; A 
+\end{pmatrix}=L_BT_0,
+$$
+
+所以，这些单纯形表和 $T_0$ 之间可以通过若干次 [初等行变换](./linear-algebra/elementary-operations.md) 相互转化。因此，在更新单纯形表时，只需要施行初等行变换，使得入基变量对应列变为 $e_j$ 即可。由此，所需要的操作迁移到压缩单纯形表上，就是上文给出的步骤。
+</code></pre>
+<p>更新压缩单纯形表的参考实现如下：</p>
+<p>???+ example "参考实现"
+    <code>cpp
+    --8&lt;-- "docs/math/code/simplex/simplex_0.cpp:pivot"</code></p>
+<p>由该实现可知，单次更新单纯形表的时间复杂度为 <span class="arithmatex">\(O(mn)\)</span> 的。稍后讨论 <a href="#转轴规则">转轴规则</a> 时会说明，确定出基变量和入基变量的复杂度同样不会超过 <span class="arithmatex">\(O(mn)\)</span>，因此，单次转轴的时间复杂度就是 <span class="arithmatex">\(O(mn)\)</span> 的。</p>
+<p>为方便理解，此处列出前文所示例子中，利用压缩单纯形表计算的详细步骤。</p>
+<p>???+ example "例子（续）"
+    初始时，压缩单纯形表如下所示：</p>
+<pre><code>$$
+\begin{array}{|l|c|ccc|}
+\hline
+    &amp;    &amp; x_1 &amp; x_2 &amp; x_3 \\
+\hline
+    &amp; 0  &amp; -10 &amp; -12 &amp; -12 \\
+\hline
+x_4= &amp; 20 &amp;   1 &amp; 2   &amp;   2 \\
+x_5= &amp; 20 &amp;   2 &amp; 1   &amp;   2 \\
+x_6= &amp; 20 &amp;   2 &amp; 2   &amp;   1 \\
+\hline
+\end{array}
+$$
+
+根据第 $0$ 行的约化成本，可以选择 $x_1,x_2,x_3$ 入基。令 $x_1$ 入基。再根据根据最小比值检验，可以选择 $x_5,x_6$ 出基。令 $x_5$ 出基。相应地，更新压缩单纯形表如下：
+
+$$
+\begin{array}{|l|c|ccc|}
+\hline
+    &amp;    &amp; x_5 &amp; x_2 &amp; x_3 \\
+\hline
+    &amp;100 &amp; 5   &amp; -7  &amp; -2  \\
+\hline
+x_4= &amp; 10 &amp;-0.5 &amp; 1.5 &amp;   1 \\
+x_1= &amp; 10 &amp; 0.5 &amp; 0.5 &amp;   1 \\
+x_6= &amp;  0 &amp; -1  &amp; 1   &amp;  -1 \\
+\hline
+\end{array}
+$$
+
+根据第 $0$ 行的约化成本，可以选择 $x_2,x_3$ 入基。令 $x_3$ 入基。再根据根据最小比值检验，可以选择 $x_4,x_1$ 出基。令 $x_4$ 出基。相应地，更新压缩单纯形表如下：
+
+$$
+\begin{array}{|l|c|ccc|}
+\hline
+    &amp;    &amp; x_5 &amp; x_2 &amp; x_4 \\
+\hline
+    &amp;120 &amp; 4   &amp; -4  &amp; 2   \\
+\hline
+x_3= &amp; 10 &amp;-0.5 &amp; 1.5 &amp;  1  \\
+x_1= &amp;  0 &amp;  1  &amp; -1  &amp; -1  \\
+x_6= &amp; 10 &amp; -1.5&amp; 2.5 &amp;  1  \\
+\hline
+\end{array}
+$$
+
+根据第 $0$ 行的约化成本，只能选择 $x_2$ 入基。令 $x_2$ 入基。再根据根据最小比值检验，只能选择 $x_6$ 出基。令 $x_6$ 出基。利用前述初等行变换更新单纯形表如下：
+
+$$
+\begin{array}{|l|c|ccc|}
+\hline
+    &amp;    &amp; x_5 &amp; x_4  &amp; x_6 \\
+\hline
+    &amp;136 &amp; 1.6 &amp; 3.6 &amp; 1.6 \\
+\hline
+x_3= &amp; 4  &amp; 0.4 &amp; 0.4 &amp;-0.6 \\
+x_1= &amp;  4 &amp; 0.4 &amp; -0.6&amp; 0.4 \\
+x_2= &amp;  4 &amp; -0.6&amp; 0.4 &amp; 0.4 \\
+\hline
+\end{array}
+$$
+
+根据第 $0$ 行的约化成本，不存在入基变量。因此，当前解
+
+$$
+x=(4,4,4,0,0,0)^T
+$$
+
+就是最优解，（最小化问题的）最优价值为 $-136$。
+</code></pre>
+<p>除了利用单纯形表实现单纯形法之外，还可以使用修正单纯形法（revised simplex method），它进一步改进了算法的时空复杂度，将单次更新的复杂度进一步降低到了 <span class="arithmatex">\(O(m^2)\)</span>，在 <span class="arithmatex">\(m\ll n\)</span> 或 <span class="arithmatex">\(A\)</span> 是稀疏矩阵的情形下尤为高效。</p>
+<h2 id="_8">几何背景</h2>
+<p>本节介绍单纯形法的几何背景。</p>
+<p>对线性规划问题的可行域</p>
+<div class="arithmatex">\[
+\mathcal D = \{x\in\mathbf R^n : Ax = b,~ x\ge 0\}
+\]</div>
+<p>的 <a href="../linear-programming/#可行域与问题的解">分析</a> 指出：</p>
+<ul>
+<li>线性规划问题的最优解（如果存在）必然可以选取为可行域 <span class="arithmatex">\(\mathcal D\)</span> 的顶点。求解线性规划问题，就转化于在所有顶点解里找到价值函数最优的那个。</li>
+<li>每一个顶点的坐标，都可以通过 <span class="arithmatex">\(n\)</span> 个紧约束联立得到的方程组求解得到。对于标准形式的约束，所有 <span class="arithmatex">\(m\)</span> 个等式约束一定是紧的，剩下的 <span class="arithmatex">\(n-m\)</span> 个约束只能从非负约束中选取。选取这些非负约束作为紧约束，就相当于将相应的决策变量 <span class="arithmatex">\(x_N\)</span> 设为 <span class="arithmatex">\(0\)</span>；相应地，方程组 <span class="arithmatex">\(Ax = b\)</span> 退化为关于剩余 <span class="arithmatex">\(m\)</span> 个决策变量 <span class="arithmatex">\(x_B\)</span> 的线性方程组 <span class="arithmatex">\(A_Bx_B = b\)</span>。只要 <span class="arithmatex">\(A_B\)</span> 可逆，就可以解得 <span class="arithmatex">\(x_B = A_B^{-1}b\)</span>。这就得到了一个解 <span class="arithmatex">\((x_B,x_N)=(A_B^{-1}b,0)\)</span>；如果 <span class="arithmatex">\(x_B\ge 0\)</span>，这就是 <span class="arithmatex">\(\mathcal D\)</span> 的一个顶点坐标。</li>
+</ul>
+<p>容易看出，顶点解的概念，和前文定义的基本可行解是一致的。因此，只要在所有基本可行解内找到最优的那个，就能获得原问题的最优解。虽然这大幅简化了问题，但是，可行域的顶点的个数是指数级的，穷举并不现实。</p>
+<p>为了解决这一困难，可以考虑沿着可行域的 <a href="../linear-programming/#可行域与问题的解">边</a> 移动，从一个顶点移动到与之相邻的顶点。因为相邻的顶点必定位于同一条边上，所以，它们至少满足 <span class="arithmatex">\(n-1\)</span> 条相同的紧约束。也就是说，相邻的顶点对应的紧约束能且仅能相差一个。因此，对于一个基本可行解 <span class="arithmatex">\(x\)</span>，只要将它的一个基变量换成一个非基变量，就能得到一个 <strong>相邻的</strong>（adjacent）的基本可行解 <span class="arithmatex">\(x'\)</span>。这正是转轴操作。</p>
+<p>因此，单纯形法从一个基本可行解出发，不断进行转轴，改进目标函数的过程，其实就是在相应的可行域上，从一个顶点出发，不断向相邻顶点移动，进而改进目标函数的过程。</p>
+<p>???+ example "例子（续）"
+    本文讨论的例子中，可行域是一个有五个顶点的三维多面体，如下图所示：</p>
+<pre><code>![](./images/simplex-geo.svg)
+
+前述求解过程，从几何直观上看，就对应着多面体的顶点间的如下路径：
+
+$$
+(0,0,0) \rightarrow (0,0,10) \rightarrow (10,0,0) \rightarrow (4,4,4).
+$$
+</code></pre>
+<h2 id="_9">实现细节</h2>
+<p>利用单纯形表，已经能够求解许多线性规划问题。然而，对于最一般的情形，单纯形法中仍有许多细节值得深入探讨。</p>
+<h3 id="_10">松弛形式</h3>
+<p>将一般形式的线性规划问题转化为标准形式的 <a href="../linear-programming/#标准形式">方法</a> 已经讨论过了。但是，为了方便利用单纯形法求解，还需要保证系数矩阵 <span class="arithmatex">\(A\)</span> 满秩。虽然先转换为标准形式再消去线性相关的约束的方法是可行的，但是为了求解简便，通常采用如下策略：</p>
+<ol>
+<li>将线性规划问题转化为 <strong>不等式形式</strong>（inequality form），即 <span class="arithmatex">\(\min\{c^Tx : Ax \le b,~ x \ge 0\}\)</span> 的形式；</li>
+<li>通过添加松弛变量 <span class="arithmatex">\(s\)</span>，将问题转化为标准形式：<span class="arithmatex">\(\min\{c^Tx : Ax + s = b,~ x\ge 0,~ s \ge 0\}\)</span>。</li>
+</ol>
+<p>这样做的好处是，最终得到的标准形式的系数矩阵 <span class="arithmatex">\((A,I)\)</span> 总是满秩的，且总是存在（未必可行的）基本解 <span class="arithmatex">\((x,s)=(0,b)\)</span>。这种特殊的标准形式也称为 <strong>松弛形式</strong>（slack form）。</p>
+<h3 id="_11">初始基本可行解</h3>
+<p>前文描述的单纯形法总是假定已知一组基本可行解。有些时候，很容易找到一组基本可行解。例如，如果上述松弛形式中 <span class="arithmatex">\(b\ge 0\)</span>，那么，<span class="arithmatex">\((x,s)=(0,b)\)</span> 就是一组基本可行解。这就是前文的数值例子里遇到的情形。</p>
+<p>对于一般的情形，可以采用 <strong>两阶段法</strong>（two-phase method）。两阶段法中，需要做两次单纯形法。第一阶段求解一个可行性线性规划问题，获得原问题的一个基本可行解。第二阶段从这个基本可行解出发，应用单纯形法求解原问题。</p>
+<p>假设有标准形式的问题 <span class="arithmatex">\(\min\{c^Tx : Ax = b \ge 0,~ x\ge 0\}\)</span>。在第一阶段中，需要求解问题</p>
+<div class="arithmatex">\[
+\min\{1^Tx_a : Ax + x_a = b,~ x\ge 0,~ s\ge 0\}.
+\]</div>
+<p>这本质是可行性线性规划问题，其中，新添加的变量 <span class="arithmatex">\(x_a\)</span> 也称为 <strong>人工变量</strong>（artificial variable）。它一定有基本可行解 <span class="arithmatex">\((x,x_a)=(0,b)\)</span>，所以可以直接用单纯形法求解。如果该问题的最优价值严格大于 <span class="arithmatex">\(0\)</span>，那么，就不存在 <span class="arithmatex">\(x\ge 0\)</span> 使得 <span class="arithmatex">\(Ax=b\)</span>，也就是说，原问题不可行。如果该问题的最优价值等于 <span class="arithmatex">\(0\)</span>，那么，它的最优解中人工变量只能是零。如果仍有一些人工变量是基变量，可以通过若干次转轴将它们出基。最后，当所有人工变量都是非基变量时，第一阶段得到的基本解就可以用作第二阶段的初始基本可行解。</p>
+<p>???+ note "不显式引入人工变量的第一阶段实现"
+    实现第一阶段时，没有必要显式地引入人工变量。对于任意选取的初始基 <span class="arithmatex">\(B\)</span>，有</p>
+<pre><code>$$
+x_B + A_B^{-1}A_Nx_N = A_B^{-1}b.
+$$
+
+如果 $(A_B^{-1}b)_j\ge 0$，那么无需引入人工变量；否则，需要额外引入人工变量 $x^{-}_{B_j}$，即
+
+$$
+x_{B_j} - x^-_{B_j} + (A_B^{-1}A_N)_{(j)}x_N = (A_B^{-1}b)_j.
+$$
+
+记下标集合 $L:=\{j:(A_B^{-1}b)_j&lt;0\}$，那么一阶段的单纯形表都是如下单纯形表经过若干初等行变换得到的：
+
+$$
+\begin{array}{|r|c|cccc|}
+\hline
+                &amp;                       &amp; x_N                      &amp; x_{B_{\sim L}} &amp; x_{B_L}  &amp;x_{B_{L}}^- \\  
+\hline
+                &amp; 0                     &amp; 0^T                      &amp; 0^T            &amp; 0^T      &amp; 1^T        \\
+\hline
+x_{B_{\sim L}}=  &amp; (A_B^{-1}b)_{\sim L}  &amp; (A_B^{-1}A_N)_{(\sim L)} &amp; I              &amp;  O       &amp;  O         \\
+x_{B_{L}}^-=     &amp; (A_B^{-1}b)_L         &amp; (A_B^{-1}A_N)_{(L)}      &amp; O              &amp;  I       &amp; -I         \\
+\hline
+\end{array}
+$$
+
+类似于将单纯形表简化为压缩单纯形表，可以将其适当地简化：（将 $x_{B_{L}}^-$ 行左乘以 $1^T$ 然后加到第 $0$ 行上，然后略去后三列）
+
+$$
+\begin{array}{|r|c|cccc|}
+\hline
+                &amp;                      &amp; x_N                      \\  
+\hline
+                &amp; 1^Tb_L               &amp; 1^T(A_B^{-1}A_N)_L       \\
+\hline
+x_{B_{\sim L}}= &amp; (A_B^{-1}b)_{\sim L} &amp; (A_B^{-1}A_N)_{(\sim L)} \\
+-x_{B_{L}}=     &amp; (A_B^{-1}b)_L        &amp; (A_B^{-1}A_N)_L          \\
+\hline
+\end{array}
+$$
+
+这与正常的压缩单纯形表大体一致，只是最后一行的变量上标记了负号，表示该行仍然含有人工变量，即原来的松弛变量仍然不可行。利用该表，转轴过程如下：
+
+1.  如果 $L=\varnothing$，算法终止。
+2.  否则，根据第 $0$ 行的约化成本为负这一条件选取入基变量 $x_{N_i}$。如果不存在，则原问题不可行，算法终止。
+3.  再根据第 $i$ 列选取出基变量 $x_{B_j}$。仍然利用最小比值检验，但是要求同时保证当前的可行变量可行和当前的不可行变量不可行，即选取
+
+    $$
+    \arg\min_{j}\left\{\dfrac{(\tilde T_B)_{j0}}{(\tilde T_B)_{ji}}:(j\notin L\land(\tilde T_B)_{ji}&gt;0)\lor(j\in L\land(\tilde T_B)_{ji}&lt;0)\right\}
+    $$
+
+    作为出基变量所在行。如果存在多个这样的出基变量，优先选取不可行的出基变量。
+4.  令 $x_{N_i}$ 入基，$x_{B_j}$ 出基，并更新单纯形表。
+5.  如果 $j\in L$，那么将 $j$ 移出 $L$（即取消该行的负号标记），并且将 $(\tilde T_B)_{0i}$ 加一。
+
+之所以可以略去人工变量所在列，是因为如果它们仍然是基变量，那么它们对应的列就是 $e_j$，无需记录，而如果它们不再是基变量，那么它们就不会再次入基，也无需记录。人工变量出基时，需要替换成相应的非人工变量，这正是上述过程中最后一步的目的。
+
+参考实现如下：
+
+??? example "参考实现"
+    ```cpp
+    --8&lt;-- "docs/math/code/simplex/simplex_0.cpp:initialize"
+    ```
+
+在一阶段开始前，额外添加一行用于记录一阶段的目标函数。转轴时，对整个表进行转轴，包括第二阶段的目标函数。这样，在第一阶段完成时，第二阶段的目标函数也一并相应地更新，可以直接开始二阶段的单纯形法。
+</code></pre>
+<p>两阶段法也可以通过一次单纯形法实现。只需要取充分大的正数 <span class="arithmatex">\(M\)</span>，就可以通过直接求解问题</p>
+<div class="arithmatex">\[
+\min\{c^Tx + M1^Tx_a : Ax + x_a = b,~ x\ge 0,~ s\ge 0\}
+\]</div>
+<p>得到原问题的最优解。实现时，并不会赋予 <span class="arithmatex">\(M\)</span> 具体的数值，而是将它视为一个未知的充分大的正数进行运算。这种方法称为 <strong>大 <span class="arithmatex">\(M\)</span> 法</strong>（big <span class="arithmatex">\(M\)</span> method）。</p>
+<p>???+ warning "朴素算法的实际效率是指数级的"
+    因为松弛形式总是存在初始基本解，只是未必是可行的，所以，一种简单的寻找初始基本可行解的想法是，从一个不可行的基本解出发，反复利用转轴操作，将不可行的基变量出基，并选择对应行中同样为负的数字对应列的非基变量入基，直到所有基变量都是非负数为止。参考实现如下：</p>
+<pre><code>??? example "参考实现"
+    ```cpp
+    --8&lt;-- "docs/math/code/simplex/simplex_2.cpp:initialize"
+    ```
+
+这样做虽然简单，但是相较于二阶段法，它没有一个描述当前基的不可行程度的目标函数，所以缺乏明确的改进方向。实际测试可以发现，相较于通常只需要 $O(m)$ 的转轴次数的二阶段法或大 $M$ 法，这一朴素算法通常需要 $O(2^m)$ 的转轴次数，且当 $n,m$ 较大时容易陷入循环。虽然朴素算法的转轴次数中的常数很小，但是仅仅适用于 $n,m&lt;50$ 的情形。
+</code></pre>
+<h3 id="_12">转轴规则</h3>
+<p>转轴时，如果出现多个可选的入基变量或出基变量，就需要用到 <strong>转轴规则</strong>（pivot rule）来决定选择哪个变量入基或出基。利用单纯形表，本节讨论的所有规则都能够在 <span class="arithmatex">\(O(mn)\)</span> 时间内找到入基和出基变量，因此，单次转轴的时间复杂度仍然是 <span class="arithmatex">\(O(mn)\)</span> 的。</p>
+<p>入基变量的选择往往决定了算法终止前转轴的次数。常见的规则如下：</p>
+<ul>
+<li>选择最先找到的入基变量；</li>
+<li>选择标号最小的入基变量；（Bland 规则的一部分）</li>
+<li>选择约化成本绝对值（即 <span class="arithmatex">\(|c_i|\)</span>）最大的入基变量；（Dantzig 规则）</li>
+<li>选择单次转轴价值函数改进（即 <span class="arithmatex">\(|c_i|\theta_i\)</span>）最大的入基变量；</li>
+<li>选择对应着最陡的边的入基变量，即沿着边移动单位长度引起的价值函数改进（即 <span class="arithmatex">\(|c_i|/\|A_B^{-1}A_i\|\)</span>）最大；</li>
+<li>随机选择一个入基变量。</li>
+</ul>
+<p>实践中，最陡边规则的效率最高[^steepest-edge]。通常认为，适当的转轴规则可以在大致 <span class="arithmatex">\(2m\)</span> 次转轴内得到大多数问题的最优解。但是，对于目前所有已知的转轴规则，都存在特殊构造的例子[^klee-minty]，能够将转轴次数卡到指数级。这也正是单纯形法实践中运行效率相当优秀，但是理论最差复杂度是指数级的原因。</p>
+<p>出基变量的选择往往决定了算法是否会陷入循环。如果存在多个最优价值相同的基本可行解，那么，算法就有可能一直在这些基本可行解之间循环。这些情形并不常见，因此很多单纯形法的实现并不会指定出基变量的选择规则。常见的避免循环的规则有两种：</p>
+<ul>
+<li>Bland 规则：总是选择标号最小的入基变量和出基变量。</li>
+<li>
+<p>字典序规则：总是选择 <span class="arithmatex">\((A_B^{-1}A_i)_j&gt;0\)</span> 且</p>
+<div class="arithmatex">\[
+\left(\dfrac{(A_B^{-1}b)_j}{(A_B^{-1}A_i)_j},\dfrac{(A_B^{-1})_{j1}}{(A_B^{-1}A_i)_j},\cdots,\dfrac{(A_B^{-1})_{jm}}{(A_B^{-1}A_i)_j}\right)
+\]</div>
+<p>字典序最小的行号 <span class="arithmatex">\(j\)</span> 对应的出基变量 <span class="arithmatex">\(x_{B_j}\)</span>。入基变量的选择不重要。</p>
+<p>注意，如果线性规划问题是松弛形式的，那么这些量都可以从前文所述形式的单纯形表 <span class="arithmatex">\(T_B\)</span> 中直接找到；否则，可以在找到一组初始基本解（未必可行）后，利用这些初始基中的基变量对应列（顺序保持固定）的系数作为 <span class="arithmatex">\(A_B^{-1}\)</span> 的系数。</p>
+</li>
+</ul>
+<p>Bland 规则效率很低，因为规则本身对入基和出基变量的选择方法是一样的，这很容易造成同一个变量反复入基再出基。相对来说，字典序规则更为实用。字典序规则相当于对线性规划问题中的参数进行微扰[^lexico]，使得不存在最优价值相同的基本可行解，也就不存在循环的可能性。</p>
+<h2 id="_13">参考实现</h2>
+<p>本节提供一个基于压缩单纯形表的二阶段单纯形法的参考实现。</p>
+<p>??? example "<a href="https://www.luogu.com.cn/problem/P13337">Luogu P13337【模板】线性规划</a>"
+    <code>cpp
+    --8&lt;-- "docs/math/code/simplex/simplex_0.cpp:full-text"</code></p>
+<h2 id="_14">例题</h2>
+<p>???+ example "<a href="https://www.luogu.com.cn/problem/P3980">「NOI2008」志愿者招募</a>"
+    总共 <span class="arithmatex">\(n\)</span> 天活动需要招募志愿者，其中，第 <span class="arithmatex">\(i\)</span> 天至少需要 <span class="arithmatex">\(b_i\)</span> 位志愿者。总有 <span class="arithmatex">\(m\)</span> 类志愿者，其中，第 <span class="arithmatex">\(j\)</span> 类志愿者可以服务的日期为连续区间 <span class="arithmatex">\([l_j,r_j]\)</span>，且单位招募成本为 <span class="arithmatex">\(c_i\)</span>。求最优的招募方案，使得招募志愿者的成本最低。</p>
+<p>??? note "解答"
+    设第 <span class="arithmatex">\(j\)</span> 类志愿者招募 <span class="arithmatex">\(x_j\)</span> 位。那么，可以列出线性规划问题为</p>
+<pre><code>$$
+\begin{align*}
+\max_{x}\; &amp; \sum_{j=1}^mc_jx_j \\
+\text{subject to }&amp; \sum_{i=1}^n a_{ij}x_j \ge b_i,~i=1,\cdots,n,\\
+&amp; x_j\ge 0,~j=1,\cdots,m.
+\end{align*}
+$$
+
+其中，系数
+
+$$
+a_{ij} = 
+\begin{cases}
+1,&amp; l_j\le i\le r_j,\\
+0,&amp; \text{otherwise.}
+\end{cases}
+$$
+
+原问题没有显然的初始可行解。因此，不妨考虑其 [对偶问题](./linear-programming.md#对偶问题)：
+
+$$
+\begin{align*}
+\min_{y}\; &amp; \sum_{i=1}^n b_iy_i \\
+\text{subject to } &amp; \sum_{j=1}^na_{ij}y_i \le c_j,~j=1,\cdots,m,\\
+&amp; y_i\ge 0,~i=1,\cdots,n.
+\end{align*}
+$$
+
+通过添加松弛变量，容易得到一组初始可行解，可以直接略过一阶段，通过单纯形法求解。根据对偶原理，得到的解就是原问题的解。
+
+```cpp
+--8&lt;-- "docs/math/code/simplex/simplex_1.cpp"
+```
+</code></pre>
+<h2 id="_15">习题</h2>
+<ul>
+<li><a href="https://www.luogu.com.cn/problem/P13337">Luogu P13337【模板】线性规划</a></li>
+<li><a href="https://uoj.ac/problem/179">UOJ#179. 线性规划</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P4232">Luogu P4232 无意识之外的捉迷藏</a></li>
+<li><a href="https://codeforces.com/problemset/problem/1430/G">Codeforces 1430 G. Yet Another DAG Problem</a></li>
+<li><a href="https://atcoder.jp/contests/abc231/tasks/abc231_h">AtCoder Beginner Contest 231 H - Minimum Coloring</a></li>
+</ul>
+<h2 id="_16">参考资料</h2>
+<ul>
+<li><a href="https://www.cnblogs.com/ECJTUACM-873284962/p/7097864.html">线性规划之单纯形法【超详解 + 图解】</a></li>
+<li><a href="https://github.com/OI-wiki/libs/blob/master/%E9%9B%86%E8%AE%AD%E9%98%9F%E5%8E%86%E5%B9%B4%E8%AE%BA%E6%96%87/%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9F2016%E8%AE%BA%E6%96%87%E9%9B%86.pdf">2016 国家集训队论文</a></li>
+<li>算法导论</li>
+<li>Matoušek, Jiří, and Bernd Gärtner. Understanding and using linear programming. Vol. 1. Berlin: Springer, 2007.</li>
+<li>Inayatullah, Syed, Nasir Touheed, and Muhammad Imtiaz. "A streamlined artificial variable free version of simplex method." PloS one 10, no. 3 (2015): e0116156.</li>
+<li>Floudas, Christodoulos A., and Panos M. Pardalos, eds. Encyclopedia of optimization. Springer Science &amp; Business Media, 2008.</li>
+</ul>
+<p>[^notation]: 原则上，因为所有向量默认为列向量，<span class="arithmatex">\((x_B,x_N)\)</span> 应该写作 <span class="arithmatex">\((x_B^T,x_N^T)^T\)</span>。但是为了简化记号，本文所有类似的情形都直接写作 <span class="arithmatex">\((x_B,x_N)\)</span>，而省略转置符号。</p>
+<p>[^steepest-edge]: 测试结果参见 Forrest, John J., and Donald Goldfarb. "Steepest-edge simplex algorithms for linear programming." Mathematical programming 57, no. 1 (1992): 341-374。</p>
+<p>[^klee-minty]: 一个经典的反例可以参见 Klee, Victor, and George J. Minty. "How good is the simplex algorithm." Inequalities 3, no. 3 (1972): 159-175。</p>
+<p>[^lexico]: 详细的解释可以看 <a href="https://facultyweb.kennesaw.edu/mlavrov/courses/lp/lecture8.pdf">这份讲义</a>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

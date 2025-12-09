@@ -18,6 +18,24 @@ nav:
   - 不等式:
     - 最最最基本的不等关系: ineq/index.md
     - 均值不等式: am-gm.md
-  - About:
-    - License: license.md
-    - Release Notes: release-notes.md
+  - 数论:
+    - 基础知识: oiwiki/number-theory/basic.md
+    - 模运算: oiwiki/number-theory/mod-arithmetic.md
+    - 质数: oiwiki/number-theory/prime.md
+    - 最大公约数: oiwiki/number-theory/gcd.md
+    - Bezout定理: oiwiki/number-theory/bezouts.md
+    - 逆元: oiwiki/number-theory/inverse.md
+    - 中国剩余定理（CRT）: oiwiki/number-theory/crt.md
+    - 欧拉函数: oiwiki/number-theory/euler-function.md
+    - 费马小定理与欧拉定理: oiwiki/number-theory/fermat.md
+    - 阶与原根: oiwiki/number-theory/primitive-root.md
+    - 同余方程: oiwiki/number-theory/congruence-equation.md
+    - 线性同余方程: oiwiki/number-theory/linear-congruence-equation.md
+    - 二次剩余: oiwiki/number-theory/quadratic-residue.md
+    - pell方程: oiwiki/number-theory/pell-equation.md
+    - 莫比乌斯反演: oiwiki/number-theory/mobius.md
+    - LTE引理: oiwiki/number-theory/lifting-the-exponent.md
+    - 二次域: oiwiki/number-theory/quadratic.md
+  - 杂项:
+    - 复数: oiwiki/complex.md
+  

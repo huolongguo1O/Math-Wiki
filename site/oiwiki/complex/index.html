@@ -1,0 +1,1830 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../number-theory/quadratic/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>复数 - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              复数
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../number-theory/basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="复数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        引入
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性质与运算
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="性质与运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几何意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        加法与减法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        乘法、除法与共轭
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        辐角和辐角主值
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        欧拉公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        指数函数与三角函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复数的三种形式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单位根
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单位根">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        本原单位根
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        编程语言中的复数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="编程语言中的复数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C 中的复数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C++ 中的复数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料与链接
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="复数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        引入
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性质与运算
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="性质与运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几何意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        加法与减法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        乘法、除法与共轭
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        辐角和辐角主值
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        欧拉公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        指数函数与三角函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复数的三种形式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单位根
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="单位根">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        本原单位根
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        编程语言中的复数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="编程语言中的复数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C 中的复数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        C++ 中的复数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料与链接
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>复数</h1>
+
+<p>如果您已经学习过复数相关知识，请跳过本页面。</p>
+<p>学习复数知识需要一部分向量基础，如果并未学习过向量知识请移步 <a href="../linear-algebra/vector/">向量页面</a>。</p>
+<h2 id="_1">复数</h2>
+<h3 id="_2">引入</h3>
+<p>???+ note "注"
+    下面的引入方法来自人教版高中数学 A 版必修二。</p>
+<p>从方程的角度看，负实数能不能开平方，就是方程 <span class="arithmatex">\(x^2+a=0 (a&gt;0)\)</span> 有没有解，进而可以归结为方程 <span class="arithmatex">\(x^2+1=0\)</span> 有没有解。</p>
+<p>回顾已有的数集扩充过程，可以看到，每次扩充都与实际需求密切相关。例如，为了解决正方形对角线的度量，以及 <span class="arithmatex">\(x^2-2=0\)</span> 这样的方程在有理数集中无解的问题，人们把有理数集扩充到了实数集。数集扩充后，在实数集中规定的加法运算、乘法运算，与原来在有理数集中规定的加法运算、乘法运算协调一致，并且加法和乘法都满足交换律和结合律，乘法对加法满足分配律。</p>
+<p>依照这种思想，为了解决 <span class="arithmatex">\(x^2+1=0\)</span> 这样的方程在实数系中无解的问题，我们设想引入一个新数 <span class="arithmatex">\(\mathrm{i}\)</span>，使得 <span class="arithmatex">\(x=\mathrm{i}\)</span> 是方程 <span class="arithmatex">\(x^2+1=0\)</span> 的解，即使得 <span class="arithmatex">\(\mathrm{i}^2=-1\)</span>。</p>
+<p>思考：把新引进的数 <span class="arithmatex">\(\mathrm{i}\)</span> 添加到实数集中，我们希望数 <span class="arithmatex">\(\mathrm{i}\)</span> 和实数之间仍然能像实数那样进行加法和乘法运算，并希望加法和乘法都满足交换律、结合律，以及乘法对加法满足分配律。那么，实数系经过扩充后，得到的新数系由哪些数组成呢？</p>
+<p>依照以上设想，把实数 <span class="arithmatex">\(b\)</span> 与 <span class="arithmatex">\(\mathrm{i}\)</span> 相乘，结果记作 <span class="arithmatex">\(b\mathrm{i}\)</span>；把实数 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(b\mathrm{i}\)</span> 相加，结果记作 <span class="arithmatex">\(a+b\mathrm{i}\)</span>。注意到所有实数以及 <span class="arithmatex">\(\mathrm{i}\)</span> 都可以写成 <span class="arithmatex">\(a+b\mathrm{i}(a,b\in \mathbf{R})\)</span> 的形式，从而这些数都在扩充后的新数集中。</p>
+<h3 id="_3">定义</h3>
+<p>我们定义形如 <span class="arithmatex">\(a+b\mathrm{i}\)</span>，其中 <span class="arithmatex">\(a,b\in \mathbf{R}\)</span> 的数叫做 <strong>复数</strong>，其中 <span class="arithmatex">\(\mathrm{i}\)</span> 被称为 <strong>虚数单位</strong>，全体复数的集合叫做 <strong>复数集</strong>，记作 <span class="arithmatex">\(\mathbf{C}\)</span>。</p>
+<p>复数通常用 <span class="arithmatex">\(z\)</span> 表示，即 <span class="arithmatex">\(z=a+b\mathrm{i}\)</span>。这种形式被称为 <strong>复数的代数形式</strong>。其中 <span class="arithmatex">\(a\)</span> 称为复数 <span class="arithmatex">\(z\)</span> 的 <strong>实部</strong>，记作 <span class="arithmatex">\(\operatorname{Re}(z)\)</span>，<span class="arithmatex">\(b\)</span> 称为复数 <span class="arithmatex">\(z\)</span> 的 <strong>虚部</strong>，记作 <span class="arithmatex">\(\operatorname{Im}(z)\)</span>。如无特殊说明，都有 <span class="arithmatex">\(a,b\in \mathbf{R}\)</span>。</p>
+<p>对于一个复数 <span class="arithmatex">\(z\)</span>，当且仅当 <span class="arithmatex">\(b=0\)</span> 时，它是实数，当 <span class="arithmatex">\(b\not = 0\)</span> 时，它是虚数，当 <span class="arithmatex">\(a=0\)</span> 且 <span class="arithmatex">\(b\not = 0\)</span> 时，它是纯虚数。</p>
+<p>纯虚数，虚数，实数，复数的关系如下图所示。</p>
+<p><img alt="" src="../images/complex-relation.svg" /></p>
+<h2 id="_4">性质与运算</h2>
+<h3 id="_5">几何意义</h3>
+<p>我们知道了 <span class="arithmatex">\(a+b\mathrm{i}\)</span> 这样类似的形式的数被称为复数，并且给出了定义和分类，我们还可以挖掘一下更深层的性质。</p>
+<p>我们把所有实数都放在了数轴上，并且发现数轴上的点与实数一一对应。我们考虑对复数也这样处理。</p>
+<p>首先我们定义 <strong>复数相等</strong>：两个复数 <span class="arithmatex">\(z_1=a+b\mathrm{i},z_2=c+d\mathrm{i}\)</span> 是相等的，当且仅当 <span class="arithmatex">\(a=c\)</span> 且 <span class="arithmatex">\(b=d\)</span>。</p>
+<p>这么定义是十分自然的，在此不做过多解释。</p>
+<p>也就是说，我们可以用唯一的有序实数对 <span class="arithmatex">\((a,b)\)</span> 表示一个复数 <span class="arithmatex">\(z=a+b\mathrm{i}\)</span>。这样，联想到平面直角坐标系，我们可以发现 <strong>复数集与平面直角坐标系中的点集一一对应</strong>。好了，我们找到了复数的一种几何意义。</p>
+<p>那么这个平面直角坐标系就不再一般，因为平面直角坐标系中的点具有了特殊意义——表示一个复数，所以我们把这样的平面直角坐标系称为 <strong>复平面</strong>，<span class="arithmatex">\(x\)</span> 轴称为 <strong>实轴</strong>，<span class="arithmatex">\(y\)</span> 轴称为 <strong>虚轴</strong>。我们进一步地说：<strong>复数集与复平面内所有的点所构成的集合是一一对应的</strong>。</p>
+<p>我们考虑到学过的平面向量的知识，发现向量的坐标表示也是一个有序实数对 <span class="arithmatex">\((a,b)\)</span>，显然，复数 <span class="arithmatex">\(z=a+b\mathrm{i}\)</span> 对应复平面内的点 <span class="arithmatex">\(Z(a,b)\)</span>，那么它还对应平面向量 <span class="arithmatex">\(\overrightarrow{OZ}=(a,b)\)</span>，于是我们又找到了复数的另一种几何意义：<strong>复数集与复平面内的向量所构成的集合是一一对应的（实数 <span class="arithmatex">\(0\)</span> 与零向量对应）</strong>。</p>
+<p>于是，我们由向量的知识迁移到复数上来，定义 <strong>复数的模</strong> 就是复数所对应的向量的模。复数 <span class="arithmatex">\(z=a+b\mathrm{i}\)</span> 的模 <span class="arithmatex">\(|z|=\sqrt{a^2+b^2}\)</span>。</p>
+<p>于是为了方便，我们常把复数 <span class="arithmatex">\(z=a+b\mathrm{i}\)</span> 称为点 <span class="arithmatex">\(Z\)</span> 或向量 <span class="arithmatex">\(\overrightarrow {OZ}\)</span>，并规定相等的向量表示同一个复数。</p>
+<p>并且由向量的知识我们发现，虚数不可以比较大小（但是实数是可以的）。</p>
+<h3 id="_6">加法与减法</h3>
+<p>对复数 <span class="arithmatex">\(z_1=a+b\mathrm{i},z_2=c+d\mathrm{i}\)</span>，定义加法规则如下：</p>
+<div class="arithmatex">\[
+z_1+z_2=(a+c)+(b+d)\mathrm{i}
+\]</div>
+<p>很明显，两个复数的和仍为复数。</p>
+<p>考虑到向量的加法运算，我们发现复数的加法运算符合向量的加法运算法则，这同样证明了复数的几何意义的正确性。</p>
+<p>同样可以验证，复数的加法满足 <strong>交换律</strong> 和 <strong>结合律</strong>。即：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+z_1+z_2&amp;=z_2+z_1\\
+(z_1+z_2)+z_3&amp;=z_1+(z_2+z_3)
+\end{aligned}
+\]</div>
+<p>减法作为加法的逆运算，我们可以通过加法法则与复数相等的定义来推导出减法法则：</p>
+<div class="arithmatex">\[
+z_1-z_2=(a-c)+(b-d)\mathrm{i}
+\]</div>
+<p>这同样符合向量的减法运算。</p>
+<h3 id="_7">乘法、除法与共轭</h3>
+<p>对复数 <span class="arithmatex">\(z_1=a+b\mathrm{i},z_2=c+d\mathrm{i}\)</span>，定义乘法规则如下：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+z_1z_2&amp;=(a+b\mathrm{i})(c+d\mathrm{i})\\
+&amp;=ac+bc\mathrm{i}+ad\mathrm{i}+bd\mathrm{i}^2\\
+&amp;=(ac-bd)+(bc+ad)\mathrm{i}
+\end{aligned}
+\]</div>
+<p>可以看出，两个复数相乘类似于两个多项式相乘，只需要把 <span class="arithmatex">\(\mathrm{i}^2\)</span> 换成 <span class="arithmatex">\(-1\)</span>，并将实部与虚部分别合并即可。</p>
+<p>复数的乘法与向量的向量积形式类似。</p>
+<p>易得复数乘法满足 <strong>交换律</strong>，<strong>结合律</strong> 和 <strong>对加法的分配律</strong>，即：</p>
+<ul>
+<li><span class="arithmatex">\(z_1z_2=z_2z_1\)</span></li>
+<li><span class="arithmatex">\((z_1z_2)z_3=z_1(z_2z_3)\)</span></li>
+<li><span class="arithmatex">\(z_1(z_2+z_3)=z_1z_2+z_1z_3\)</span></li>
+</ul>
+<p>由于满足运算律，我们可以发现实数域中的 <strong>乘法公式在复数域中同样适用</strong>。</p>
+<p>除法运算是乘法运算的逆运算，我们可以推导一下：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\frac{a+b\mathrm{i}}{c+d\mathrm{i}}&amp;=\frac{(a+b\mathrm{i})(c-d\mathrm{i})}{(c+d\mathrm{i})(c-d\mathrm{i})}\\
+&amp;=\frac{ac+bd}{c^2+d^2}+\frac{bc-ad}{c^2+d^2}\mathrm{i} &amp;(c+d\mathrm{i}\not =0)
+\end{aligned}
+\]</div>
+<p>由于向量没有除法，这里不讨论与向量的关系。</p>
+<p>为了分母实数化，我们乘了一个 <span class="arithmatex">\(c-d\mathrm{i}\)</span>，这个式子很有意义。</p>
+<p>对复数 <span class="arithmatex">\(z=a+b\mathrm{i}\)</span>，称 <span class="arithmatex">\(a-b\mathrm{i}\)</span> 为 <span class="arithmatex">\(z\)</span> 的 <strong>共轭复数</strong>，通常记为 <span class="arithmatex">\(\bar z\)</span>。我们可以发现，若两个复数互为共轭复数，那么它们 <strong>关于实轴对称</strong>。</p>
+<p>对复数 <span class="arithmatex">\(z,w\)</span>，复数共轭有如下性质</p>
+<ul>
+<li><span class="arithmatex">\(z\cdot\bar{z}=|z|^2\)</span></li>
+<li><span class="arithmatex">\(\overline{\overline{z}}=z\)</span></li>
+<li><span class="arithmatex">\(\operatorname{Re}(z)=\dfrac{z+\bar{z}}{2}\)</span>，<span class="arithmatex">\(\operatorname{Im}(z)=\dfrac{z-\bar{z}}{2}\)</span></li>
+<li><span class="arithmatex">\(\overline{z\pm w}=\bar{z}\pm\bar{w}\)</span></li>
+<li><span class="arithmatex">\(\overline{zw}=\bar{z}\bar{w}\)</span></li>
+<li><span class="arithmatex">\(\overline{z/w}=\bar{z}/\bar{w}\)</span></li>
+</ul>
+<h3 id="_8">辐角和辐角主值</h3>
+<p>如果设定实数单位 <span class="arithmatex">\(1\)</span> 作为水平正方向，虚数单位 <span class="arithmatex">\(\mathrm{i}\)</span> 作为竖直正方向，得到的就是直角坐标视角下的复平面。</p>
+<p>表示复数 <span class="arithmatex">\(z\)</span> 的位置，也可以借助于极坐标 <span class="arithmatex">\((r, \theta)\)</span> 确定。前文已经提到了 <span class="arithmatex">\(r\)</span> 为复数 <span class="arithmatex">\(z\)</span> 的模。</p>
+<p>从实轴正向到 <strong>非零</strong> 复数 <span class="arithmatex">\(z=x+\mathrm{i}y\)</span> 对应向量的夹角 <span class="arithmatex">\(\theta\)</span> 满足关系：</p>
+<div class="arithmatex">\[
+\tan \theta=\frac{y}{x}
+\]</div>
+<p>称为复数 <span class="arithmatex">\(z\)</span> 的 <strong>辐角</strong>，记为：</p>
+<div class="arithmatex">\[
+\theta= \arg z
+\]</div>
+<p>任一个 <strong>非零</strong> 复数 <span class="arithmatex">\(z\)</span> 有无穷多个辐角，故 <span class="arithmatex">\(\arg z\)</span> 事实上是一个集合。借助开头大写的 <span class="arithmatex">\(\operatorname{Arg} z\)</span> 表示 <strong>其中一个特定值</strong>，满足条件：</p>
+<div class="arithmatex">\[
+-\pi&lt;\operatorname{Arg} z \le \pi
+\]</div>
+<p>称 <span class="arithmatex">\(\operatorname{Arg} z\)</span> 为 <strong>辐角主值</strong> 或 <strong>主辐角</strong>。辐角就是辐角主值基础上加若干整数个（可以为零或负整数）<span class="arithmatex">\(2k\pi\)</span>，即 <span class="arithmatex">\(\arg z = \{\operatorname{Arg} z + 2k\pi \mid k\in \mathbf Z\}\)</span>。</p>
+<p>需要注意的是两个辐角主值相加后不一定还是辐角主值，而两个辐角相加一定还是合法的辐角。</p>
+<p>称模小于 <span class="arithmatex">\(1\)</span> 的复数，在复平面上构成的图形为 <strong>单位圆</strong>。称模等于 <span class="arithmatex">\(1\)</span> 的复数为 <strong>单位复数</strong>，全体单位复数在复平面上构成的图形为 <strong>单位圆周</strong>。在不引起混淆的情况下，有时单位圆周也简称单位圆。</p>
+<p>在极坐标的视角下，复数的乘除法变得很简单。复数乘法，模相乘，辐角相加。复数除法，模相除，辐角相减。</p>
+<h3 id="_9">欧拉公式</h3>
+<p>???+ note "欧拉公式（Euler's formula）[^ref1]"
+    对任意实数 <span class="arithmatex">\(x\)</span>，有</p>
+<pre><code>$$
+\mathrm{e}^{\mathrm{i}x}=\cos x+\mathrm{i}\sin x
+$$
+
+在补充 [复指数函数与复三角函数](#指数函数与三角函数) 的定义后，该公式可推广至全体复数。
+</code></pre>
+<h3 id="_10">指数函数与三角函数</h3>
+<p>对于复数 <span class="arithmatex">\(z=x+\mathrm{i}y\)</span>，函数 <span class="arithmatex">\(f(z)=\mathrm{e}^x(\cos y+\mathrm{i}\sin y)\)</span> 满足 <span class="arithmatex">\(f(z_1+z_2)=f(z_1)f(z_2)\)</span>。由此给出 <strong>复指数函数</strong> 的定义：</p>
+<div class="arithmatex">\[
+\exp z=\mathrm{e}^x(\cos y+\mathrm{i}\sin y)
+\]</div>
+<p>复指数函数在实数集上与实指数函数的定义完全一致。在复平面上拥有性质：</p>
+<ul>
+<li>模恒正：<span class="arithmatex">\(|\exp z|=\exp x&gt;0\)</span>。</li>
+<li>辐角：<span class="arithmatex">\(\arg(\exp z)=\{y + 2k\pi \mid k\in\mathbf Z\}\)</span>。</li>
+<li>加法定理：<span class="arithmatex">\(\exp (z_1+z_2)=\exp (z_1)\exp (z_2)\)</span>。</li>
+<li>周期性：<span class="arithmatex">\(\exp z\)</span> 是以 <span class="arithmatex">\(2\pi \mathrm{i}\)</span> 为基本周期的周期函数。如果一个函数 <span class="arithmatex">\(f(z)\)</span> 的周期是某一周期的整倍数，称该周期为 <strong>基本周期</strong>。</li>
+</ul>
+<p><strong>复三角函数</strong>（也简称 <strong>三角函数</strong>）的定义如下：</p>
+<div class="arithmatex">\[
+\cos z=\frac{\exp (\mathrm{i}z)+\exp (-\mathrm{i}z)}{2}
+\]</div>
+<div class="arithmatex">\[
+\sin z=\frac{\exp (\mathrm{i}z)-\exp (-\mathrm{i}z)}{2\mathrm{i}}
+\]</div>
+<p>若取 <span class="arithmatex">\(z\in\mathbf{R}\)</span>，则由 <a href="#欧拉公式">欧拉公式</a> 有：</p>
+<div class="arithmatex">\[
+\cos z=\operatorname{Re}\left(\mathrm{e}^{\mathrm{i}z}\right)
+\]</div>
+<div class="arithmatex">\[
+\sin z=\operatorname{Im}\left(\mathrm{e}^{\mathrm{i}z}\right)
+\]</div>
+<p>复三角函数在实数集上与实三角函数的定义完全一致。在复平面上拥有性质：</p>
+<ul>
+<li>奇偶性：正弦函数是奇函数，余弦函数是偶函数。</li>
+<li>三角恒等式：通常的三角恒等式都成立，例如平方和为 <span class="arithmatex">\(1\)</span>，或者角的和差公式等。</li>
+<li>周期性：正弦与余弦函数以 <span class="arithmatex">\(2\pi\)</span> 为基本周期。</li>
+<li>零点：实正弦与实余弦函数的全体零点，构成了复正弦与复余弦函数的全体零点。这个推广没有引进新的零点。</li>
+<li>模的无界性：复正弦与复余弦函数，模长可以大于任意给定的正数，不再像实正弦与实余弦函数一样被限制在 <span class="arithmatex">\(1\)</span> 的范围内。</li>
+</ul>
+<h2 id="_11">复数的三种形式</h2>
+<p>借助直角坐标系的视角以及极坐标系的视角，可以写出复数的三种形式。</p>
+<p>复数的 <strong>代数形式</strong> 用于表示任意复数。</p>
+<div class="arithmatex">\[
+z=x+y\mathrm{i}
+\]</div>
+<p>代数形式用于计算复数的加减乘除四个运算比较方便。</p>
+<p>复数的 <strong>三角形式</strong> 和 <strong>指数形式</strong>，用于表示非零复数。</p>
+<div class="arithmatex">\[
+z=r(\cos \theta +\mathrm{i}\sin \theta)=r \exp (\mathrm{i}\theta)
+\]</div>
+<p>这两种形式用于计算复数的乘除两个运算以及后面的运算较为方便。如果只用高中见过的函数，可以使用三角形式。如果引入了复指数函数，写成等价的指数形式会更加方便。</p>
+<h2 id="_12">单位根</h2>
+<p>考察方程 <span class="arithmatex">\(x^n=1\)</span> 在复数意义下的解。显然，这样的解有 <span class="arithmatex">\(n\)</span> 个，称这 <span class="arithmatex">\(n\)</span> 个解都是 <strong><span class="arithmatex">\(n\)</span> 次单位（复）根</strong>（<span class="arithmatex">\(n\)</span>-th root of unity）。根据复平面的知识，<span class="arithmatex">\(n\)</span> 次单位根把单位圆 <span class="arithmatex">\(n\)</span> 等分。</p>
+<p>设 <span class="arithmatex">\(\omega_n=\exp\dfrac{2\pi \mathrm{i}}{n}\)</span>（即幅角为 <span class="arithmatex">\(2\pi/n\)</span> 的单位复数），则 <span class="arithmatex">\(x^n=1\)</span> 的解集表示为 <span class="arithmatex">\(\{\omega_n^k\mid k=0,1\cdots,n-1\}\)</span>，其中，</p>
+<div class="arithmatex">\[
+w_n^k = \exp\dfrac{2\pi k \mathrm{i}}{n} = \cos\dfrac{2\pi k}{n} + \mathrm{i}\sin\dfrac{2\pi k}{n}.
+\]</div>
+<p>如果不加说明，一般叙述中的 <span class="arithmatex">\(n\)</span> 次单位根，是指从 <span class="arithmatex">\(1\)</span> 开始逆时针方向的第一个解，即上述 <span class="arithmatex">\(\omega_n\)</span>，其它解均可以用 <span class="arithmatex">\(\omega_n\)</span> 的幂表示。</p>
+<p>???+ tip "为什么通常提到 <span class="arithmatex">\(n\)</span> 次单位根，总是特指第一个？"
+    主要是为了应用时方便。所有 <span class="arithmatex">\(n\)</span> 次单位根都可以表示为第一个 <span class="arithmatex">\(n\)</span> 次单位根 <span class="arithmatex">\(\omega_n\)</span> 的幂次；而且，对于任意 <span class="arithmatex">\(k &lt; n\)</span>，复数 <span class="arithmatex">\(\omega_n\)</span> 都不是 <span class="arithmatex">\(k\)</span> 次单位根。</p>
+<h3 id="_13">本原单位根</h3>
+<p>事实上，<span class="arithmatex">\(n\)</span> 次单位根中满足类似性质的不止 <span class="arithmatex">\(\omega_n\)</span> 一个。称集合</p>
+<div class="arithmatex">\[
+\{\omega_n^k\mid 0\le k&lt;n,~\gcd(n,k)=1\}
+\]</div>
+<p>中的元素为 <strong><span class="arithmatex">\(n\)</span> 次本原单位根</strong>（<span class="arithmatex">\(n\)</span>-th primitive root of unity）。根据上述表达式可知，全体 <span class="arithmatex">\(n\)</span> 次本原单位根共有 <span class="arithmatex">\(\varphi(n)\)</span> 个，其中，<span class="arithmatex">\(\varphi(n)\)</span> 为 <a href="../number-theory/euler-totient/">欧拉函数</a>。</p>
+<p>任意一个本原单位根 <span class="arithmatex">\(\omega\)</span>，都与上述 <span class="arithmatex">\(\omega_n\)</span> 具有相同的性质：对于任意的 <span class="arithmatex">\(0&lt;k&lt;n\)</span>，<span class="arithmatex">\(\omega\)</span> 的 <span class="arithmatex">\(k\)</span> 次幂不为 <span class="arithmatex">\(1\)</span>，也就是说，<span class="arithmatex">\(\omega\)</span> 不是 <span class="arithmatex">\(k\)</span> 次单位根。因此，借助任意一个本原单位根，都可以生成全体单位根。</p>
+<p>为了理解 <span class="arithmatex">\(n\)</span> 次本原单位根的结构，需要考虑单位根的如下性质：</p>
+<p>???+ note "性质"
+    对于整数 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(k\)</span>，设 <span class="arithmatex">\(d=\gcd(n,k)\)</span>，有 <span class="arithmatex">\(\omega_n^k = \omega_{n/d}^{k/d}\)</span>。</p>
+<p>??? note "证明"
+    直接计算可知</p>
+<pre><code>$$
+w_n^k = \exp\dfrac{2\pi k\mathrm{i}}{n} = \exp\dfrac{2\pi (k/d)\mathrm{i}}{n/d} = \omega_{n/d}^{k/d}.
+$$
+</code></pre>
+<p>这说明，只要 <span class="arithmatex">\(\gcd(n,k)\neq 1\)</span>，那么，<span class="arithmatex">\(\omega_n^k\)</span> 就一定是 <span class="arithmatex">\(\dfrac{n}{\gcd(n,k)}\)</span> 次（本原）单位根。因此，满足前述性质的单位根 <span class="arithmatex">\(\omega_n^k\)</span> 一定是满足 <span class="arithmatex">\(\gcd(n,k)=1\)</span>。这正是本原单位根具有上述定义的原因。</p>
+<p>另外，作为这些分析的简单推论，有：</p>
+<p>???+ note "定理"
+    当 <span class="arithmatex">\(k\)</span> 遍历 <span class="arithmatex">\(n\)</span> 的因数，所有 <span class="arithmatex">\(k\)</span> 次本原单位根恰构成 <span class="arithmatex">\(n\)</span> 次单位根的一个划分。而且，对于 <span class="arithmatex">\(\ell\perp n\)</span>，映射 <span class="arithmatex">\(x\mapsto x^\ell\)</span> 给出 <span class="arithmatex">\(n\)</span> 次单位根之间的双射，且保持上述划分不变：它将 <span class="arithmatex">\(k\mid n\)</span> 次本原单位根仍然映射到 <span class="arithmatex">\(k\)</span> 次本原单位根。</p>
+<p>尽管本原单位根有很多选择，但是由于第一个根 <span class="arithmatex">\(\omega_n\)</span> 形式最为简单，算法竞赛中还是 <span class="arithmatex">\(\omega_n\)</span> 最为常用。对于部分场景，为提高计算效率，还可以考虑用某一模数下的 <a href="../number-theory/residue/#单位根">本原单位根</a> 代替复数域中的 <span class="arithmatex">\(\omega_n\)</span>。</p>
+<h2 id="_14">编程语言中的复数</h2>
+<h3 id="c">C 中的复数</h3>
+<p>在 C99 标准中，有 <code>&lt;complex.h&gt;</code> 头文件。</p>
+<p>在 <code>&lt;complex.h&gt;</code> 头文件中，提供了 <code>double complex</code>、<code>float complex</code> 和 <code>long double complex</code> 三种类型。</p>
+<p>算术运算符'+'、'-'、'*'和'/'，可以用于浮点数和复数的任意混合。当表达式两端有一个为复数时，计算结果为复数。</p>
+<p>头文件 <code>&lt;complex.h&gt;</code> 提供了虚数单位 <code>I</code>，引入此头文件时，大写字母 <code>I</code> 不可以作为变量名使用。</p>
+<p>对于单个复数，<code>&lt;complex.h&gt;</code> 提供了若干操作：<code>creal</code> 函数用于提取实部，<code>cimag</code> 函数用于提取虚部，<code>cabs</code> 函数用于计算模，<code>carg</code> 函数用于计算辐角主值。</p>
+<p>所有的函数根据类型不同，都有三个。例如 <code>creal</code> 函数有 <code>creal</code>、<code>crealf</code>、<code>creall</code> 三个，用于处理对应的 <code>double</code>、<code>float</code> 和 <code>long double</code> 三种类型。末尾什么都不带的默认处理 <code>double</code> 类型。以下所有函数均遵从此规律，不再特别说明。</p>
+<p>这些函数返回值都是一般的浮点数。可以将普通浮点数直接赋值给复数，但是不可以将复数直接赋值给浮点数，而是需要使用上述提取操作。</p>
+<p>函数 <code>conj</code> 用于计算共轭复数，返回值是复数。</p>
+<p>函数 <code>cexp</code> 计算复指数，<code>clog</code> 计算对数主值，<code>csin</code> 计算正弦，<code>ccos</code> 计算余弦，<code>ctan</code> 计算正切。</p>
+<p>函数 <code>cpow</code> 计算幂函数，<code>csqrt</code> 计算平方根，<code>casin</code> 计算反正弦，<code>cacos</code> 计算反余弦，<code>catan</code> 计算反正切。这部分函数计算的全部都是多值函数的主值。</p>
+<h3 id="c_1">C++ 中的复数</h3>
+<p>在 C 里面的 <code>&lt;ctype.h&gt;</code>，到 C++ 会变成 <code>&lt;cctype&gt;</code>，几乎所有的头文件遵从这个命名规律。</p>
+<p>但是，<code>&lt;complex.h&gt;</code> 不遵守，C++ 没有 <code>&lt;ccomplex&gt;</code> 头文件。C++ 的复数直接是 <code>&lt;complex&gt;</code>，并且装的东西和 C 完全不一样。</p>
+<p>很有趣。这是因为，在 C++ 的第一个版本 C++98，即已经有了 <code>&lt;complex&gt;</code>，而 C 语言在 C99 才添加。</p>
+<p>在 C++ 中，复数类型定义使用 <code>complex&lt;float&gt;</code>、<code>complex&lt;double&gt;</code> 和 <code>complex&lt;long double&gt;</code>。由于面向对象的多态性，下面函数的名字都是唯一的，无需 f 或 l 的后缀。</p>
+<p>一个复数对象拥有成员函数 <code>real</code> 和 <code>imag</code>，可以访问实部和虚部。</p>
+<p>一个复数对象拥有非成员函数 <code>real</code>、<code>imag</code>、<code>abs</code>、<code>arg</code>，返回实部、虚部、模和辐角。</p>
+<p>一个复数对象还拥有非成员函数：<code>norm</code> 为模的平方，<code>conj</code> 为共轭复数。</p>
+<p>一个复数对象还拥有非成员函数 <code>exp</code>、<code>log</code>（底为 <span class="arithmatex">\(\mathrm{e}\)</span> 的对数主值）、<code>log10</code>（底为 10 的对数主值，C 中没有）、<code>pow</code>、<code>sqrt</code>、<code>sin</code>、<code>cos</code>、<code>tan</code>，含义与 C 中的含义相同。</p>
+<p>在 C++14 及以后的版本中，定义了 <a href="https://zh.cppreference.com/w/cpp/numeric/complex/operator%2522%2522i.html">字面量运算符 <code>std::literals::complex_literals::""if, ""i, ""il</code></a>。例如输入 <code>100if</code>、<code>100i</code> 和 <code>100il</code>，三者将分别返回 <code>std::complex&lt;float&gt;{0.0f, 100.0f}</code>、<code>std::complex&lt;double&gt;{0.0, 100.0}</code> 以及 <code>std::complex&lt;long double&gt;{0.0l, 100.0l}</code>。这使得我们可以方便地书写形如 <code>auto z = 4.0 + 3i</code> 的复数声明。</p>
+<h2 id="_15">参考资料与链接</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Complex_number">Complex number - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Euler's_formula">Euler's formula - Wikipedia</a></li>
+<li><a href="https://en.cppreference.com/w/c/numeric/complex">Complex number arithmetic - cppreference.com</a></li>
+<li><a href="https://en.cppreference.com/w/cpp/numeric/complex">std::complex - cppreference.com</a></li>
+</ul>
+<p>[^ref1]: 有关欧拉公式的更多介绍，可以参考两个视频：<a href="https://www.bilibili.com/video/BV1fx41187tZ">欧拉公式与初等群论</a>、<a href="https://www.bilibili.com/video/BV1G4411D7kZ">微分方程概论 - 第五章：在 3.14 分钟内理解 <span class="arithmatex">\(\mathrm{e}^{\mathrm{i}\pi}\)</span></a>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

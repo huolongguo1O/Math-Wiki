@@ -1,0 +1,1410 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="AntiLeaf">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Berlekamp massey - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Berlekamp massey
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../number-theory/basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        做法
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        求向量列或矩阵列的最短递推式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        优化矩阵快速幂
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        求矩阵的最小多项式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        求稀疏矩阵行列式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        求稀疏矩阵的秩
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        解稀疏方程组
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Berlekamp massey</h1>
+
+<p>Berlekamp–Massey 算法是一种用于求数列的最短递推式的算法。给定一个长为 <span class="arithmatex">\(n\)</span> 的数列，如果它的最短递推式的阶数为 <span class="arithmatex">\(m\)</span>，则 Berlekamp–Massey 算法能够在 <span class="arithmatex">\(O(nm)\)</span> 时间内求出数列的每个前缀的最短递推式。最坏情况下 <span class="arithmatex">\(m = O(n)\)</span>，因此算法的最坏复杂度为 <span class="arithmatex">\(O(n^2)\)</span>。</p>
+<h3 id="_1">定义</h3>
+<p>定义一个数列 <span class="arithmatex">\(\{a_0 \dots a_{n - 1} \}\)</span> 的递推式为满足下式的序列 <span class="arithmatex">\(\{r_0\dots r_m\}\)</span>：</p>
+<p><span class="arithmatex">\(\sum_{j = 0} ^ m r_j a_{i - j} = 0, \forall i \ge m\)</span></p>
+<p>其中 <span class="arithmatex">\(r_0 = 1\)</span>。<span class="arithmatex">\(m\)</span> 称为该递推式的 <strong>阶数</strong>。</p>
+<p>数列 <span class="arithmatex">\(\{a_i\}\)</span> 的最短递推式即为阶数最小的递推式。</p>
+<h3 id="_2">做法</h3>
+<p>与上面定义的稍有不同，这里定义一个新的递推系数 <span class="arithmatex">\(\{f_0 \dots f_{m - 1}\}\)</span>，满足：</p>
+<p><span class="arithmatex">\(a_i = \sum_{j = 0} ^ {m - 1} f_j a_{i - j - 1}, \forall i \ge m\)</span></p>
+<p>容易看出 <span class="arithmatex">\(f_i = -r_{i + 1}\)</span>，并且阶数 <span class="arithmatex">\(m\)</span> 与之前的定义是相同的。</p>
+<p>我们可以增量地求递推式，按顺序考虑 <span class="arithmatex">\(\{a_i\}\)</span> 的每一位，并在递推结果出现错误时对递推系数 <span class="arithmatex">\(\{f_i\}\)</span> 进行调整。方便起见，以下将前 <span class="arithmatex">\(i\)</span> 位的最短递推式记为 <span class="arithmatex">\(F_i = \{f_{i, j}\}\)</span>。</p>
+<p>显然初始时有 <span class="arithmatex">\(F_0 = \{\}\)</span>。假设递推系数 <span class="arithmatex">\(F_{i - 1}\)</span> 对数列 <span class="arithmatex">\(\{a_i\}\)</span> 的前 <span class="arithmatex">\(i - 1\)</span> 项均成立，这时对第 <span class="arithmatex">\(i\)</span> 项就有两种情况：</p>
+<ol>
+<li>递推系数对 <span class="arithmatex">\(a_i\)</span> 也成立，这时不需要进行任何调整，直接令 <span class="arithmatex">\(F_i = F_{i - 1}\)</span> 即可。</li>
+<li>递推系数对 <span class="arithmatex">\(a_i\)</span> 不成立，这时需要对 <span class="arithmatex">\(F_{i - 1}\)</span> 进行调整，得到新的 <span class="arithmatex">\(F_i\)</span>。</li>
+</ol>
+<p>设 <span class="arithmatex">\(\Delta_i = a_i - \sum_{j = 0} ^ m f_{i - 1, j} a_{i - j - 1}\)</span>，即 <span class="arithmatex">\(a_i\)</span> 与 <span class="arithmatex">\(F_{i - 1}\)</span> 的递推结果的差值。</p>
+<p>如果这是第一次对递推系数进行修改，则说明 <span class="arithmatex">\(a_i\)</span> 是序列中的第一个非零项。这时直接令 <span class="arithmatex">\(F_i\)</span> 为 <span class="arithmatex">\(i\)</span> 个 <span class="arithmatex">\(0\)</span> 即可，显然这是一个合法的最短递推式。</p>
+<p>否则设上一次对递推系数进行修改时，已考虑的 <span class="arithmatex">\(\{a_i\}\)</span> 的项数为 <span class="arithmatex">\(k\)</span>。如果存在一个序列 <span class="arithmatex">\(G = \{g_0 \dots g_{m' - 1}\}\)</span>，满足：</p>
+<p><span class="arithmatex">\(\sum_{j = 0} ^ {m' - 1} g_j a_{i' - j - 1} = 0, \forall i' \in [m', i)\)</span></p>
+<p>并且 <span class="arithmatex">\(\sum_{j = 0} ^ {m' - 1} g_j a_{i - j - 1} = \Delta_i\)</span>，那么不难发现将 <span class="arithmatex">\(F_k\)</span> 与 <span class="arithmatex">\(G\)</span> 按位分别相加之后即可得到一个合法的递推系数 <span class="arithmatex">\(F_i\)</span>。</p>
+<p>考虑如何构造 <span class="arithmatex">\(G\)</span>。一种可行的构造方案是令</p>
+<p><span class="arithmatex">\(G = \{0, 0, \dots, 0, \frac{\Delta_i}{\Delta_k}, -\frac{\Delta_i}{\Delta_k}F_{k-1}\}\)</span></p>
+<p>其中前面一共有 <span class="arithmatex">\(i - k - 1\)</span> 个 <span class="arithmatex">\(0\)</span>，且最后的 <span class="arithmatex">\(-\frac{\Delta_i}{\Delta_k} F_{k-1}\)</span> 表示将 <span class="arithmatex">\(F_{k-1}\)</span> 每项乘以 <span class="arithmatex">\(-\frac{\Delta_i}{\Delta_k}\)</span> 后接在序列后面。</p>
+<p>不难验证此时 <span class="arithmatex">\(\sum_{j = 0} ^ {m' - 1} g_j a_{i - j - 1} = \Delta_k \frac{\Delta_i}{\Delta_k} = \Delta_i\)</span>，因此这样构造出的是一个合法的 <span class="arithmatex">\(G\)</span>。将 <span class="arithmatex">\(F_i\)</span> 赋值为 <span class="arithmatex">\(F_k\)</span> 与 <span class="arithmatex">\(G\)</span> 逐项相加后的结果即可。</p>
+<p>如果要求的是符合最开始定义的递推式 <span class="arithmatex">\(\{r_i\}\)</span>，则将 <span class="arithmatex">\(\{f_j\}\)</span> 全部取相反数后在最开始插入 <span class="arithmatex">\(r_0 = 1\)</span> 即可。</p>
+<p>从上述算法流程中可以看出，如果数列的最短递推式的阶数为 <span class="arithmatex">\(m\)</span>，则算法的复杂度为 <span class="arithmatex">\(O(nm)\)</span>。最坏情况下 <span class="arithmatex">\(m = O(n)\)</span>，因此算法的最坏复杂度为 <span class="arithmatex">\(O(n^2)\)</span>。</p>
+<p>在实现算法时，由于每次调整递推系数时都只需要用到上次调整时的递推系数 <span class="arithmatex">\(F_k\)</span>，因此如果只需要求整个数列的最短递推式，可以只存储当前递推系数和上次调整时的递推系数，空间复杂度为 <span class="arithmatex">\(O(n)\)</span>。</p>
+<p>??? note "参考实现"
+    ```cpp
+    vector<int> berlekamp_massey(const vector<int> &amp;a) {
+      vector<int> v, last;  // v is the answer, 0-based, p is the module
+      int k = -1, delta = 0;</p>
+<pre><code>  for (int i = 0; i &lt; (int)a.size(); i++) {
+    int tmp = 0;
+    for (int j = 0; j &lt; (int)v.size(); j++)
+      tmp = (tmp + (long long)a[i - j - 1] * v[j]) % p;
+
+    if (a[i] == tmp) continue;
+
+    if (k &lt; 0) {
+      k = i;
+      delta = (a[i] - tmp + p) % p;
+      v = vector&lt;int&gt;(i + 1);
+
+      continue;
+    }
+
+    vector&lt;int&gt; u = v;
+    int val = (long long)(a[i] - tmp + p) * power(delta, p - 2) % p;
+
+    if (v.size() &lt; last.size() + i - k) v.resize(last.size() + i - k);
+
+    (v[i - k - 1] += val) %= p;
+
+    for (int j = 0; j &lt; (int)last.size(); j++) {
+      v[i - k + j] = (v[i - k + j] - (long long)val * last[j]) % p;
+      if (v[i - k + j] &lt; 0) v[i - k + j] += p;
+    }
+
+    if ((int)u.size() - i &lt; (int)last.size() - k) {
+      last = u;
+      k = i;
+      delta = a[i] - tmp;
+      if (delta &lt; 0) delta += p;
+    }
+  }
+
+  for (auto &amp;x : v) x = (p - x) % p;
+  v.insert(v.begin(), 1);
+
+  return v;  // $\forall i, \sum_{j = 0} ^ m a_{i - j} v_j = 0$
+}
+```
+</code></pre>
+<p>朴素的 Berlekamp–Massey 算法求解的是有限项数列的最短递推式。如果待求递推式的序列有无限项，但已知最短递推式的阶数上界，则只需取出序列的前 <span class="arithmatex">\(2m\)</span> 项即可求出整个序列的最短递推式。（证明略）</p>
+<h3 id="_3">应用</h3>
+<p>由于 Berlekamp–Massey 算法的数值稳定性比较差，在处理实数问题时一般很少使用。为了叙述方便，以下均假定在某个质数 <span class="arithmatex">\(p\)</span> 的剩余系下进行运算。</p>
+<h4 id="_4">求向量列或矩阵列的最短递推式</h4>
+<p>如果要求向量列 <span class="arithmatex">\(\boldsymbol{v}_i\)</span> 的最短递推式，设向量的维数为 <span class="arithmatex">\(n\)</span>，我们可以随机一个 <span class="arithmatex">\(n\)</span> 维行向量 <span class="arithmatex">\(\mathbf u^T\)</span>，并计算标量序列 <span class="arithmatex">\(\{\boldsymbol{u}^T\boldsymbol{v}_i\}\)</span> 的最短递推式。由 Schwartz–Zippel 引理，二者的最短递推式有至少 <span class="arithmatex">\(1 - \frac n p\)</span> 的概率相同。</p>
+<p>求矩阵列 <span class="arithmatex">\(\{A_i\}\)</span> 的最短递推式也是类似的，设矩阵的大小为 <span class="arithmatex">\(n \times m\)</span>，则只需随机一个 <span class="arithmatex">\(1 \times n\)</span> 的行向量 <span class="arithmatex">\(\mathbf u^T\)</span> 和一个 <span class="arithmatex">\(m \times 1\)</span> 的列向量 <span class="arithmatex">\(\boldsymbol{v}\)</span>，并计算标量序列 <span class="arithmatex">\(\{\boldsymbol{u}^T A_i \boldsymbol{v}\}\)</span> 的最短递推式即可。由 Schwartz–Zippel 引理可以类似地得到二者相同的概率至少为 <span class="arithmatex">\(1 - \frac{n + m} p\)</span>。</p>
+<h4 id="_5">优化矩阵快速幂</h4>
+<p>设 <span class="arithmatex">\(\boldsymbol{f}_i\)</span> 是一个 <span class="arithmatex">\(n\)</span> 维列向量，并且转移满足 <span class="arithmatex">\(\boldsymbol{f}_i = A \boldsymbol{f}_{i - 1}\)</span>，则可以发现 <span class="arithmatex">\(\{\boldsymbol{f}_i\}\)</span> 是一个不超过 <span class="arithmatex">\(n\)</span> 阶的线性递推向量列。（证明略）</p>
+<p>我们可以直接暴力求出 <span class="arithmatex">\(\boldsymbol{f}_0 \dots \boldsymbol{f}_{2n - 1}\)</span>，然后用前面提到的做法求出 <span class="arithmatex">\(\{\boldsymbol{f}_i\}\)</span> 的最短递推式，再调用 <a href="../poly/linear-recurrence/">常系数齐次线性递推</a> 即可。</p>
+<p>如果要求的向量是 <span class="arithmatex">\(\boldsymbol{f}_m\)</span>，则算法的复杂度是 <span class="arithmatex">\(O(n^3 + n\log n \log m)\)</span>。如果 <span class="arithmatex">\(A\)</span> 是一个只有 <span class="arithmatex">\(k\)</span> 个非零项的稀疏矩阵，则复杂度可以降为 <span class="arithmatex">\(O(nk + n\log n \log m)\)</span>。但由于算法至少需要 <span class="arithmatex">\(O(nk)\)</span> 的时间预处理，因此在压力不大的情况下也可以使用 <span class="arithmatex">\(O(n^2 \log m)\)</span> 的线性递推算法，复杂度同样是可以接受的。</p>
+<h4 id="_6">求矩阵的最小多项式</h4>
+<p>方阵 <span class="arithmatex">\(A\)</span> 的最小多项式是次数最小的并且满足 <span class="arithmatex">\(f(A) = 0\)</span> 的多项式 <span class="arithmatex">\(f\)</span>。</p>
+<p>实际上最小多项式就是 <span class="arithmatex">\(\{A^i\}\)</span> 的最小递推式，所以直接调用 Berlekamp–Massey 算法就可以了。如果 <span class="arithmatex">\(A\)</span> 是一个 <span class="arithmatex">\(n\)</span> 阶方阵，则显然最小多项式的次数不超过 <span class="arithmatex">\(n\)</span>。</p>
+<p>瓶颈在于求出 <span class="arithmatex">\(A^i\)</span>，因为如果直接每次做矩阵乘法的话复杂度会达到 <span class="arithmatex">\(O(n^4)\)</span>。但考虑到求矩阵列的最短递推式时实际上求的是 <span class="arithmatex">\(\{\boldsymbol{u}^T A^i \boldsymbol{v}\}\)</span> 的最短递推式，因此我们只要求出 <span class="arithmatex">\(A^i \boldsymbol{v}\)</span> 就行了。</p>
+<p>假设 <span class="arithmatex">\(A\)</span> 有 <span class="arithmatex">\(k\)</span> 个非零项，则复杂度为 <span class="arithmatex">\(O(kn + n^2)\)</span>。</p>
+<h4 id="_7">求稀疏矩阵行列式</h4>
+<p>如果能求出方阵 <span class="arithmatex">\(A\)</span> 的特征多项式，则常数项乘上 <span class="arithmatex">\((-1)^n\)</span> 就是行列式。但是最小多项式不一定就是特征多项式。</p>
+<p>实际上如果把 <span class="arithmatex">\(A\)</span> 乘上一个随机对角阵 <span class="arithmatex">\(B\)</span>，则 <span class="arithmatex">\(AB\)</span> 的最小多项式有至少 <span class="arithmatex">\(1 - \frac {2n^2 - n} p\)</span> 的概率就是特征多项式。最后再除掉 <span class="arithmatex">\(\text{det}\;B\)</span> 就行了。</p>
+<p>设 <span class="arithmatex">\(A\)</span> 为 <span class="arithmatex">\(n\)</span> 阶方阵，且有 <span class="arithmatex">\(k\)</span> 个非零项，则复杂度为 <span class="arithmatex">\(O(kn + n ^ 2)\)</span>。</p>
+<h4 id="_8">求稀疏矩阵的秩</h4>
+<p>设 <span class="arithmatex">\(A\)</span> 是一个 <span class="arithmatex">\(n\times m\)</span> 的矩阵，首先随机一个 <span class="arithmatex">\(n\times n\)</span> 的对角阵 <span class="arithmatex">\(P\)</span> 和一个 <span class="arithmatex">\(m\times m\)</span> 的对角阵 <span class="arithmatex">\(Q\)</span>, 然后计算 <span class="arithmatex">\(Q A P A^T Q\)</span> 的最小多项式即可。</p>
+<p>实际上不用调用矩阵乘法，因为求最小多项式时要用 <span class="arithmatex">\(Q A P A^T Q\)</span> 乘一个向量，所以我们依次把这几个矩阵乘到向量里就行了。答案就是最小多项式除掉所有 <span class="arithmatex">\(x\)</span> 因子后剩下的次数。</p>
+<p>设 <span class="arithmatex">\(A\)</span> 有 <span class="arithmatex">\(k\)</span> 个非零项，且 <span class="arithmatex">\(n \le m\)</span>，则复杂度为 <span class="arithmatex">\(O(kn + n ^ 2)\)</span>。</p>
+<h4 id="_9">解稀疏方程组</h4>
+<p><strong>问题</strong>：已知 <span class="arithmatex">\(A \mathbf x = \mathbf b\)</span>, 其中 <span class="arithmatex">\(A\)</span> 是一个 <span class="arithmatex">\(n \times n\)</span> 的 <strong>满秩</strong> 稀疏矩阵，<span class="arithmatex">\(\mathbf b\)</span> 和 <span class="arithmatex">\(\mathbf x\)</span> 是 <span class="arithmatex">\(1\times n\)</span> 的列向量。<span class="arithmatex">\(A, \mathbf b\)</span> 已知，需要在低于 <span class="arithmatex">\(n^\omega\)</span> 的复杂度内解出 <span class="arithmatex">\(x\)</span>。</p>
+<p><strong>做法</strong>：显然 <span class="arithmatex">\(\mathbf x = A^{-1} \mathbf b\)</span>。如果我们能求出 <span class="arithmatex">\(\{A^i \mathbf b\}\)</span>(<span class="arithmatex">\(i \ge 0\)</span>) 的最小递推式 <span class="arithmatex">\(\{r_0 \dots r_{m - 1}\}\)</span>(<span class="arithmatex">\(m \le n\)</span>), 那么就有结论</p>
+<p><span class="arithmatex">\(A^{-1} \mathbf b = -\frac 1 {r_{m - 1}} \sum_{i = 0} ^ {m - 2} A^i \mathbf b r_{m - 2 - i}\)</span></p>
+<p>（证明略）</p>
+<p>因为 <span class="arithmatex">\(A\)</span> 是稀疏矩阵，直接按定义递推出 <span class="arithmatex">\(\mathbf b \dots A^{2n - 1} \mathbf b\)</span> 即可。</p>
+<p>同样地，设 <span class="arithmatex">\(A\)</span> 中有 <span class="arithmatex">\(k\)</span> 个非零项，则复杂度为 <span class="arithmatex">\(O(kn + n^2)\)</span>。</p>
+<p>??? note "参考实现"
+    ```cpp
+    vector<int> solve_sparse_equations(const vector<tuple\<int, int, int>> &amp;A,
+                                       const vector<int> &amp;b) {
+      int n = (int)b.size();  // 0-based</p>
+<pre><code>  vector&lt;vector&lt;int&gt;&gt; f({b});
+
+  for (int i = 1; i &lt; 2 * n; i++) {
+    vector&lt;int&gt; v(n);
+    auto &amp;u = f.back();
+
+    for (auto [x, y, z] : A)  // [x, y, value]
+      v[x] = (v[x] + (long long)u[y] * z) % p;
+
+    f.push_back(v);
+  }
+
+  vector&lt;int&gt; w(n);
+  mt19937 gen;
+  for (auto &amp;x : w) x = uniform_int_distribution&lt;int&gt;(1, p - 1)(gen);
+
+  vector&lt;int&gt; a(2 * n);
+  for (int i = 0; i &lt; 2 * n; i++)
+    for (int j = 0; j &lt; n; j++) a[i] = (a[i] + (long long)f[i][j] * w[j]) % p;
+
+  auto c = berlekamp_massey(a);
+  int m = (int)c.size();
+
+  vector&lt;int&gt; ans(n);
+
+  for (int i = 0; i &lt; m - 1; i++)
+    for (int j = 0; j &lt; n; j++)
+      ans[j] = (ans[j] + (long long)c[m - 2 - i] * f[i][j]) % p;
+
+  int inv = power(p - c[m - 1], p - 2);
+
+  for (int i = 0; i &lt; n; i++) ans[i] = (long long)ans[i] * inv % p;
+
+  return ans;
+}
+```
+</code></pre>
+<h3 id="_10">例题</h3>
+<ol>
+<li><a href="https://loj.ac/p/163">LibreOJ #163. 高斯消元 2</a></li>
+<li><a href="https://codeforces.com/gym/103443/problem/E">ICPC2021 台北 Gym103443E. Composition with Large Red Plane, Yellow, Black, Gray, and Blue</a></li>
+</ol>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
