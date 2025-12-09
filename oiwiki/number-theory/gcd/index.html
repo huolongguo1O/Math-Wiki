@@ -1,0 +1,2133 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../prime/">
+      
+      
+        <link rel="next" href="../bezouts/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>最大公约数 - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              最大公约数
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        欧几里得算法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="欧几里得算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        更相减损术
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="更相减损术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stein" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stein 算法的优化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多个数的最大公约数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最小公倍数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最小公倍数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两个数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多个数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        扩展欧几里得算法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="扩展欧几里得算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        值域分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        迭代法编写扩展欧几里得算法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="迭代法编写扩展欧几里得算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵的解释
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料与链接
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        欧几里得算法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="欧几里得算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性质
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        更相减损术
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="更相减损术">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stein" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stein 算法的优化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多个数的最大公约数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最小公倍数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="最小公倍数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两个数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多个数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        扩展欧几里得算法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="扩展欧几里得算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        值域分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        迭代法编写扩展欧几里得算法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="迭代法编写扩展欧几里得算法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵的解释
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料与链接
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>最大公约数</h1>
+
+<h2 id="_1">定义</h2>
+<p>最大公约数即为 Greatest Common Divisor，常缩写为 gcd。</p>
+<p>一组整数的公约数，是指同时是这组数中每一个数的约数的数。<span class="arithmatex">\(\pm 1\)</span> 是任意一组整数的公约数。</p>
+<p>一组整数的最大公约数，是指所有公约数里面最大的一个。</p>
+<p>对不全为 <span class="arithmatex">\(0\)</span> 的整数 <span class="arithmatex">\(a,b\)</span>，将其最大公约数记为 <span class="arithmatex">\(\gcd(a,b)\)</span>，不引起歧义时可简写为 <span class="arithmatex">\((a,b)\)</span>。</p>
+<p>对不全为 <span class="arithmatex">\(0\)</span> 的整数 <span class="arithmatex">\(a_1,\dots,a_n\)</span>，将其最大公约数记为 <span class="arithmatex">\(\gcd(a_1,\dots,a_n)\)</span>，不引起歧义时可简写为 <span class="arithmatex">\((a_1,\dots,a_n)\)</span>。</p>
+<p>最大公约数与最小公倍数的性质见 <a href="../basic/#最大公约数与最小公倍数">数论基础</a>。</p>
+<p>那么如何求最大公约数呢？我们先考虑两个数的情况。</p>
+<h3 id="_2">欧几里得算法</h3>
+<h4 id="_3">过程</h4>
+<p>如果我们已知两个数 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span>，如何求出二者的最大公约数呢？</p>
+<p>不妨设 <span class="arithmatex">\(a &gt; b\)</span>。</p>
+<p>我们发现如果 <span class="arithmatex">\(b\)</span> 是 <span class="arithmatex">\(a\)</span> 的约数，那么 <span class="arithmatex">\(b\)</span> 就是二者的最大公约数。
+下面讨论不能整除的情况，即 <span class="arithmatex">\(a = b \times q + r\)</span>，其中 <span class="arithmatex">\(r &lt; b\)</span>。</p>
+<p>我们通过证明可以得到 <span class="arithmatex">\(\gcd(a,b)=\gcd(b,a \bmod b)\)</span>，过程如下：</p>
+<p>???+ note "证明"
+    设 <span class="arithmatex">\(a=bk+c\)</span>，显然有 <span class="arithmatex">\(c=a \bmod b\)</span>。设 <span class="arithmatex">\(d \mid a,~d \mid b\)</span>，则 <span class="arithmatex">\(c=a-bk, \frac{c}{d}=\frac{a}{d}-\frac{b}{d}k\)</span>。</p>
+<pre><code>由右边的式子可知 $\frac{c}{d}$ 为整数，即 $d \mid c$，所以对于 $a,b$ 的公约数，它也会是 $b,a \bmod b$ 的公约数。
+
+反过来也需要证明：
+
+设 $d \mid b,~d\mid (a \bmod b)$，我们还是可以像之前一样得到以下式子 $\frac{a\bmod b}{d}=\frac{a}{d}-\frac{b}{d}k,~\frac{a\bmod b}{d}+\frac{b}{d}k=\frac{a}{d}$。
+
+因为左边式子显然为整数，所以 $\frac{a}{d}$ 也为整数，即 $d \mid a$，所以 $b,a\bmod b$ 的公约数也是 $a,b$ 的公约数。
+
+既然两式公约数都是相同的，那么最大公约数也会相同。
+
+所以得到式子 $\gcd(a,b)=\gcd(b,a\bmod b)$
+</code></pre>
+<p>既然得到了 <span class="arithmatex">\(\gcd(a, b) = \gcd(b, r)\)</span>，这里两个数的大小是不会增大的，那么我们也就得到了关于两个数的最大公约数的一个递归求法。</p>
+<h4 id="_4">实现</h4>
+<p>=== "C++"
+    ```cpp
+    // Version 1
+    int gcd(int a, int b) {
+      if (b == 0) return a;
+      return gcd(b, a % b);
+    }</p>
+<pre><code>// Version 2
+int gcd(int a, int b) { return b == 0 ? a : gcd(b, a % b); }
+```
+</code></pre>
+<p>=== "Java"
+    ```java
+    // Version 1
+    public int gcd(int a, int b) {
+        if (b == 0) return a;
+        return gcd(b, a % b);
+    }</p>
+<pre><code>// Version 2
+public int gcd(int a, int b) {
+    return b == 0 ? a : gcd(b, a % b);
+}
+```
+</code></pre>
+<p>=== "Python"
+    <code>python
+    def gcd(a, b):
+        if b == 0:
+            return a
+        return gcd(b, a % b)</code></p>
+<p>递归至 <code>b == 0</code>（即上一步的 <code>a % b == 0</code>）的情况再返回值即可。</p>
+<p>根据上述递归求法，我们也可以写出一个迭代求法：</p>
+<p>=== "C++"
+    <code>cpp
+    int gcd(int a, int b) {
+      while (b != 0) {
+        int tmp = a;
+        a = b;
+        b = tmp % b;
+      }
+      return a;
+    }</code></p>
+<p>=== "Java"
+    <code>java
+    public int gcd(int a, int b) {
+        while(b != 0) {
+            int tmp = a;
+            a = b;
+            b = tmp % b;
+        }
+        return a;
+    }</code></p>
+<p>=== "Python"
+    <code>python
+    def gcd(a, b):
+        while b != 0:
+            a, b = b, a % b
+        return a</code></p>
+<p>上述算法都可被称作欧几里得算法（Euclidean algorithm）。</p>
+<p>另外，对于 C++17，我们可以使用 <a href="https://en.cppreference.com/w/cpp/header/numeric"><code>&lt;numeric&gt;</code></a> 头中的 <a href="https://en.cppreference.com/w/cpp/numeric/gcd"><code>std::gcd</code></a> 与 <a href="https://en.cppreference.com/w/cpp/numeric/lcm"><code>std::lcm</code></a> 来求最大公约数和最小公倍数。</p>
+<p>???+ warning "注意"
+    在部分编译器中，C++14 中可以用 <code>std::__gcd(a,b)</code> 函数来求最大公约数，但是其仅作为 <code>std::rotate</code> 的私有辅助函数。[^1]使用该函数可能会导致预期之外的问题，故一般情况下不推荐使用。</p>
+<p>如果两个数 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 满足 <span class="arithmatex">\(\gcd(a, b) = 1\)</span>，我们称 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 互质。</p>
+<h4 id="_5">性质</h4>
+<p>欧几里得算法的时间效率如何呢？下面我们证明，在输入为两个长为 <span class="arithmatex">\(n\)</span> 的二进制整数时，欧几里得算法的时间复杂度为 <span class="arithmatex">\(O(n)\)</span>。（换句话说，在默认 <span class="arithmatex">\(a, b\)</span> 同阶的情况下，时间复杂度为 <span class="arithmatex">\(O(\log\max(a, b))\)</span>。）</p>
+<p>???+ note "证明"
+    当我们求 <span class="arithmatex">\(\gcd(a,b)\)</span> 的时候，会遇到两种情况：</p>
+<pre><code>-   $a &lt; b$，这时候 $\gcd(a,b)=\gcd(b,a)$；
+-   $a \geq b$，这时候 $\gcd(a,b)=\gcd(b,a \bmod b)$，而对 $a$ 取模会让 $a$ 至少折半。这意味着这一过程最多发生 $O(\log a) = O(n)$ 次。
+
+第一种情况发生后一定会发生第二种情况，因此第一种情况的发生次数一定 **不多于** 第二种情况的发生次数。
+
+从而我们最多递归 $O(n)$ 次就可以得出结果。
+</code></pre>
+<p>事实上，假如我们试着用欧几里得算法去求 <a href="../../combinatorics/fibonacci/">斐波那契数列</a> 相邻两项的最大公约数，会让该算法达到最坏复杂度。</p>
+<h3 id="_6">更相减损术</h3>
+<p>大整数取模的时间复杂度较高，而加减法时间复杂度较低。针对大整数，我们可以用加减代替乘除求出最大公约数。</p>
+<h4 id="_7">过程</h4>
+<p>已知两数 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span>，求 <span class="arithmatex">\(\gcd(a,b)\)</span>。</p>
+<p>不妨设 <span class="arithmatex">\(a \ge b\)</span>，若 <span class="arithmatex">\(a = b\)</span>，则 <span class="arithmatex">\(\gcd(a,b)=a=b\)</span>。
+否则，<span class="arithmatex">\(\forall d\mid a, d\mid b\)</span>，可以证明 <span class="arithmatex">\(d\mid a-b\)</span>。</p>
+<p>因此，<span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 的 <strong>所有</strong> 公因数都是 <span class="arithmatex">\(a-b\)</span> 和 <span class="arithmatex">\(b\)</span> 的公因数，<span class="arithmatex">\(\gcd(a,b) = \gcd(a-b, b)\)</span>。</p>
+<h4 id="stein">Stein 算法的优化</h4>
+<p>如果 <span class="arithmatex">\(a\gg b\)</span>，更相减损术的 <span class="arithmatex">\(O(n)\)</span> 复杂度将会达到最坏情况。</p>
+<p>考虑一个优化，若 <span class="arithmatex">\(2\mid a,2\mid b\)</span>，<span class="arithmatex">\(\gcd(a,b) = 2\gcd\left(\dfrac a2, \dfrac b2\right)\)</span>。</p>
+<p>否则，若 <span class="arithmatex">\(2\mid a\)</span>（<span class="arithmatex">\(2\mid b\)</span> 同理），因为 <span class="arithmatex">\(2\mid b\)</span> 的情况已经讨论过了，所以 <span class="arithmatex">\(2 \nmid b\)</span>。因此 <span class="arithmatex">\(\gcd(a,b)=\gcd\left(\dfrac a2,b\right)\)</span>。</p>
+<p>优化后的算法（即 Stein 算法）时间复杂度是 <span class="arithmatex">\(O(\log n)\)</span>。</p>
+<p>???+ note "证明"
+    若 <span class="arithmatex">\(2\mid a\)</span> 或 <span class="arithmatex">\(2\mid b\)</span>，每次递归至少会将 <span class="arithmatex">\(a,b\)</span> 之一减半。</p>
+<pre><code>否则，$2\mid a-b$，回到了上一种情况。
+
+算法最多递归 $O(\log n)$ 次。
+</code></pre>
+<h4 id="_8">实现</h4>
+<p>高精度模板见 <a href="../../bignum/">高精度计算</a>。</p>
+<p>高精度运算需实现：减法、大小比较、左移、右移（可用低精乘除代替）、二进制末位 0 的个数（可以通过判断奇偶暴力计算）。</p>
+<p>??? note "C++"
+    <code>cpp
+    Big gcd(Big a, Big b) {
+      if (a == 0) return b;
+      if (b == 0) return a;
+      // 记录a和b的公因数2出现次数，countr_zero表示二进制末位0的个数
+      int atimes = countr_zero(a);
+      int btimes = countr_zero(b);
+      int mintimes = min(atimes, btimes);
+      a &gt;&gt;= atimes;
+      for (;;) {
+        // a和b公因数中的2已经计算过了，后面不可能出现a为偶数的情况
+        b &gt;&gt;= btimes;
+        // 确保 a&lt;=b
+        if (a &gt; b) swap(a, b);
+        b -= a;
+        if (b == 0) break;
+        btimes = countr_zero(b);
+      }
+      return a &lt;&lt; mintimes;
+    }</code></p>
+<p>上述代码参考了 <a href="https://github.com/gcc-mirror/gcc/blob/1667962ae755db27965778b8c8c684c6c0c4da21/libstdc%2B%2B-v3/include/std/numeric#L173">libstdc++</a> 和 <a href="https://github.com/microsoft/STL/blob/9aca22477df4eed3222b4974746ee79129eb44e7/stl/inc/numeric#L591">MSVC</a> 对 C++17 <code>std::gcd</code> 的实现。在 <code>unsigned int</code> 和 <code>unsigned long long</code> 的数据范围下，如果可以以极快的速度计算 <code>countr_zero</code>，则 Stein 算法比欧几里得算法来得快，但反之则可能比欧几里得算法慢。</p>
+<p>???+ note "关于 countr_zero"
+    1.  gcc 有 <a href="../../bit/#内建函数">内建函数</a> <code>__builtin_ctz</code>（32 位）或 <code>__builtin_ctzll</code>（64 位）可替换上述代码的 <code>countr_zero</code>；
+    2.  从 C++20 开始，头文件 <code>&lt;bit&gt;</code> 包含了 <a href="https://en.cppreference.com/w/cpp/numeric/countr_zero"><code>std::countr_zero</code></a>；
+    3.  如果不使用不在标准库的函数，又无法使用 C++20 标准，下面的代码是一种在 Word-RAM with multiplication 模型下经过预处理后 <span class="arithmatex">\(O(1)\)</span> 的实现：</p>
+<pre><code>```cpp
+constexpr int loghash[64] = {0,  32, 48, 56, 60, 62, 63, 31, 47, 55, 59, 61, 30,
+                             15, 39, 51, 57, 28, 46, 23, 43, 53, 58, 29, 14, 7,
+                             35, 49, 24, 44, 54, 27, 45, 22, 11, 37, 50, 25, 12,
+                             38, 19, 41, 52, 26, 13, 6,  3,  33, 16, 40, 20, 42,
+                             21, 10, 5,  34, 17, 8,  36, 18, 9,  4,  2,  1};
+
+int countr_zero(unsigned long long x) {
+  return loghash[(x &amp; -x) * 0x9150D32D8EB9EFC0Ui64 &gt;&gt; 58];
+}
+```
+
+而对于高精度运算，如果实现方法类似 `bitset`，则搭配上述对 `countr_zero` 的实现可以在 `O(n / w)` 的时间复杂度下完成。但如果不便按二进制位拆分，则只能暴力判断最大的 $2$ 的幂因子，时间复杂度取决于实现。比如：
+
+```cpp
+// 以小端序实现的二进制 Big，要求能枚举每一个元素
+int countr_zero(Big a) {
+  int ans = 0;
+  for (auto x : a) {
+    if (x != 0) {
+      ans += 32;  // 每一位数据类型的位长
+    } else {
+      return ans + countr_zero(x);
+    }
+  }
+  return ans;
+}
+
+// 暴力计算，如需使用建议直接写进 gcd 加快常数
+int countr_zero(Big a) {
+  int ans = 0;
+  while ((a &amp; 1) == 0) {
+    a &gt;&gt;= 1;
+    ++ans;
+  }
+  return ans;
+}
+```
+</code></pre>
+<p>更多关于 <code>gcd</code> 实现上快慢的讨论可阅读 <a href="https://lemire.me/blog/2013/12/26/fastest-way-to-compute-the-greatest-common-divisor/">Fastest way to compute the greatest common divisor</a>。</p>
+<h3 id="_9">多个数的最大公约数</h3>
+<p>那怎么求多个数的最大公约数呢？显然答案一定是每个数的约数，那么也一定是每相邻两个数的约数。我们采用归纳法，可以证明，每次取出两个数求出答案后再放回去，不会对所需要的答案造成影响。</p>
+<h2 id="_10">最小公倍数</h2>
+<p>接下来我们介绍如何求解最小公倍数（Least Common Multiple, LCM）。</p>
+<h3 id="_11">定义</h3>
+<p>一组整数的公倍数，是指同时是这组数中每一个数的倍数的数。0 是任意一组整数的公倍数。</p>
+<p>一组整数的最小公倍数，是指所有正的公倍数里面，最小的一个数。</p>
+<p>对整数 <span class="arithmatex">\(a,b\)</span>，将其最小公倍数记为 <span class="arithmatex">\(\operatorname{lcm}(a,b)\)</span>，不引起歧义时可简写为 <span class="arithmatex">\([a,b]\)</span>。</p>
+<p>对整数 <span class="arithmatex">\(a_1,\dots,a_n\)</span>，将其最小公倍数记为 <span class="arithmatex">\(\operatorname{lcm}(a_1,\dots,a_n)\)</span>，不引起歧义时可简写为 <span class="arithmatex">\([a_1,\dots,a_n]\)</span>。</p>
+<h3 id="_12">两个数</h3>
+<p>设 <span class="arithmatex">\(a = p_1^{k_{a_1}}p_2^{k_{a_2}} \cdots p_s^{k_{a_s}}\)</span>，<span class="arithmatex">\(b = p_1^{k_{b_1}}p_2^{k_{b_2}} \cdots p_s^{k_{b_s}}\)</span></p>
+<p>我们发现，对于 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 的情况，二者的最大公约数等于</p>
+<p><span class="arithmatex">\(p_1^{\min(k_{a_1}, k_{b_1})}p_2^{\min(k_{a_2}, k_{b_2})} \cdots p_s^{\min(k_{a_s}, k_{b_s})}\)</span></p>
+<p>最小公倍数等于</p>
+<p><span class="arithmatex">\(p_1^{\max(k_{a_1}, k_{b_1})}p_2^{\max(k_{a_2}, k_{b_2})} \cdots p_s^{\max(k_{a_s}, k_{b_s})}\)</span></p>
+<p>由于 <span class="arithmatex">\(k_a + k_b = \max(k_a, k_b) + \min(k_a, k_b)\)</span></p>
+<p>所以得到结论是 <span class="arithmatex">\(\gcd(a, b) \times \operatorname{lcm}(a, b) = a \times b\)</span></p>
+<p>要求两个数的最小公倍数，先求出最大公约数即可。</p>
+<h3 id="_13">多个数</h3>
+<p>可以发现，当我们求出两个数的 <span class="arithmatex">\(\gcd\)</span> 时，求最小公倍数是 <span class="arithmatex">\(O(1)\)</span> 的复杂度。那么对于多个数，我们其实没有必要求一个共同的最大公约数再去处理，最直接的方法就是，当我们算出两个数的 <span class="arithmatex">\(\gcd\)</span>，或许在求多个数的 <span class="arithmatex">\(\gcd\)</span> 时候，我们将它放入序列对后面的数继续求解，那么，我们转换一下，直接将最小公倍数放入序列即可。</p>
+<h2 id="_14">扩展欧几里得算法</h2>
+<p>扩展欧几里得算法（Extended Euclidean algorithm, EXGCD），常用于求 <span class="arithmatex">\(ax+by=\gcd(a,b)\)</span> 的一组可行解。</p>
+<h3 id="_15">过程</h3>
+<p>设</p>
+<p><span class="arithmatex">\(ax_1+by_1=\gcd(a,b)\)</span></p>
+<p><span class="arithmatex">\(bx_2+(a\bmod b)y_2=\gcd(b,a\bmod b)\)</span></p>
+<p>由欧几里得定理可知：<span class="arithmatex">\(\gcd(a,b)=\gcd(b,a\bmod b)\)</span></p>
+<p>所以 <span class="arithmatex">\(ax_1+by_1=bx_2+(a\bmod b)y_2\)</span></p>
+<p>又因为 <span class="arithmatex">\(a\bmod b=a-(\lfloor\frac{a}{b}\rfloor\times b)\)</span></p>
+<p>所以 <span class="arithmatex">\(ax_1+by_1=bx_2+(a-(\lfloor\frac{a}{b}\rfloor\times b))y_2\)</span></p>
+<p><span class="arithmatex">\(ax_1+by_1=ay_2+bx_2-\lfloor\frac{a}{b}\rfloor\times by_2=ay_2+b(x_2-\lfloor\frac{a}{b}\rfloor y_2)\)</span></p>
+<p>因为 <span class="arithmatex">\(a=a,b=b\)</span>，所以 <span class="arithmatex">\(x_1=y_2,y_1=x_2-\lfloor\frac{a}{b}\rfloor y_2\)</span></p>
+<p>将 <span class="arithmatex">\(x_2,y_2\)</span> 不断代入递归求解直至 <span class="arithmatex">\(\gcd\)</span>（最大公约数，下同）为 <span class="arithmatex">\(0\)</span> 递归 <span class="arithmatex">\(x=1,y=0\)</span> 回去求解。</p>
+<h3 id="_16">实现</h3>
+<p>=== "C++"
+    <code>cpp
+    int Exgcd(int a, int b, int &amp;x, int &amp;y) {
+      if (!b) {
+        x = 1;
+        y = 0;
+        return a;
+      }
+      int d = Exgcd(b, a % b, x, y);
+      int t = x;
+      x = y;
+      y = t - (a / b) * y;
+      return d;
+    }</code></p>
+<p>=== "Python"
+    <code>python
+    def Exgcd(a, b):
+        if b == 0:
+            return a, 1, 0
+        d, x, y = Exgcd(b, a % b)
+        return d, y, x - (a // b) * y</code></p>
+<p>函数返回的值为 <span class="arithmatex">\(\gcd\)</span>，在这个过程中计算 <span class="arithmatex">\(x,y\)</span> 即可。</p>
+<h3 id="_17">值域分析</h3>
+<p><span class="arithmatex">\(ax+by=\gcd(a,b)\)</span> 的解有无数个，显然其中有的解会爆 long long。<br />
+万幸的是，若 <span class="arithmatex">\(b\not= 0\)</span>，扩展欧几里得算法求出的可行解必有 <span class="arithmatex">\(|x|\le b,|y|\le a\)</span>。<br />
+下面给出这一性质的证明。</p>
+<p>??? note "证明"
+    -   <span class="arithmatex">\(\gcd(a,b)=b\)</span> 时，<span class="arithmatex">\(a\bmod b=0\)</span>，必在下一层终止递归。<br />
+        得到 <span class="arithmatex">\(x_1=0,y_1=1\)</span>，显然 <span class="arithmatex">\(a,b\ge 1\ge |x_1|,|y_1|\)</span>。
+    -   <span class="arithmatex">\(\gcd(a,b)\not= b\)</span> 时，设 <span class="arithmatex">\(|x_2|\le (a\bmod b),|y_2|\le b\)</span>。<br />
+        因为 <span class="arithmatex">\(x_1=y_2,y_1=x_2-{\left\lfloor\dfrac{a}{b}\right\rfloor}y_2\)</span> <br />
+        所以 <span class="arithmatex">\(|x_1|=|y_2|\le b,|y_1|\le|x_2|+|{\left\lfloor\dfrac{a}{b}\right\rfloor}y_2|\le (a\bmod b)+{\left\lfloor\dfrac{a}{b}\right\rfloor}|y_2|\)</span><br />
+<span class="arithmatex">\(\le a-{\left\lfloor\dfrac{a}{b}\right\rfloor}b+{\left\lfloor\dfrac{a}{b}\right\rfloor}|y_2|\le a-{\left\lfloor\dfrac{a}{b}\right\rfloor}(b-|y_2|)\)</span> <br />
+<span class="arithmatex">\(a\bmod b=a-{\left\lfloor\dfrac{a}{b}\right\rfloor}b\le a-{\left\lfloor\dfrac{a}{b}\right\rfloor}(b-|y_2|)\le a\)</span> <br />
+        因此 <span class="arithmatex">\(|x_1|\le b,|y_1|\le a\)</span> 成立。</p>
+<h3 id="_18">迭代法编写扩展欧几里得算法</h3>
+<p>首先，当 <span class="arithmatex">\(x = 1\)</span>，<span class="arithmatex">\(y = 0\)</span>，<span class="arithmatex">\(x_1 = 0\)</span>，<span class="arithmatex">\(y_1 = 1\)</span> 时，显然有：</p>
+<div class="arithmatex">\[
+\begin{cases}
+    ax + by     &amp; = a \\
+    ax_1 + by_1 &amp; = b
+\end{cases}
+\]</div>
+<p>成立。</p>
+<p>已知 <span class="arithmatex">\(a\bmod b = a - (\lfloor \frac{a}{b} \rfloor \times b)\)</span>，下面令 <span class="arithmatex">\(q = \lfloor \frac{a}{b} \rfloor\)</span>。参考迭代法求 gcd，每一轮的迭代过程可以表示为：</p>
+<div class="arithmatex">\[
+(a, b) \rightarrow (b, a - qb)
+\]</div>
+<p>将迭代过程中的 <span class="arithmatex">\(a\)</span> 替换为 <span class="arithmatex">\(ax + by = a\)</span>，<span class="arithmatex">\(b\)</span> 替换为 <span class="arithmatex">\(ax_1 + by_1 = b\)</span>，可以得到：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+                &amp; \begin{cases}
+                      ax + by     &amp; = a \\
+                      ax_1 + by_1 &amp; = b
+                  \end{cases}                    \\
+    \rightarrow &amp; \begin{cases}
+                      ax_1 + by_1               &amp; = b      \\
+                      a(x - qx_1) + b(y - qy_1) &amp; = a - qb
+                  \end{cases}
+\end{aligned}
+\]</div>
+<p>据此就可以得到迭代法求 exgcd。</p>
+<p>因为迭代的方法避免了递归，所以代码运行速度将比递归代码快一点。</p>
+<pre><code class="language-cpp">int gcd(int a, int b, int&amp; x, int&amp; y) {
+  x = 1, y = 0;
+  int x1 = 0, y1 = 1, a1 = a, b1 = b;
+  while (b1) {
+    int q = a1 / b1;
+    tie(x, x1) = make_tuple(x1, x - q * x1);
+    tie(y, y1) = make_tuple(y1, y - q * y1);
+    tie(a1, b1) = make_tuple(b1, a1 - q * b1);
+  }
+  return a1;
+}
+</code></pre>
+<p>如果你仔细观察 <span class="arithmatex">\(a_1\)</span> 和 <span class="arithmatex">\(b_1\)</span>，你会发现，他们在迭代版本的欧几里德算法中取值完全相同，并且以下公式无论何时（在 while 循环之前和每次迭代结束时）都是成立的：<span class="arithmatex">\(x \cdot a +y \cdot b =a_1\)</span> 和 <span class="arithmatex">\(x_1 \cdot a +y_1 \cdot b= b_1\)</span>。因此，该算法肯定能正确计算出 <span class="arithmatex">\(\gcd\)</span>。</p>
+<p>最后我们知道 <span class="arithmatex">\(a_1\)</span> 就是要求的 <span class="arithmatex">\(\gcd\)</span>，有 <span class="arithmatex">\(x \cdot a +y \cdot b = g\)</span>。</p>
+<h4 id="_19">矩阵的解释</h4>
+<p>对于正整数 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 的一次辗转相除即 <span class="arithmatex">\(\gcd(a,b)=\gcd(b,a\bmod b)\)</span> 使用矩阵表示如</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+b\\a\bmod b
+\end{bmatrix}
+=
+\begin{bmatrix}
+0&amp;1\\1&amp;-\lfloor a/b\rfloor
+\end{bmatrix}
+\begin{bmatrix}
+a\\b
+\end{bmatrix}
+\]</div>
+<p>其中向下取整符号 <span class="arithmatex">\(\lfloor c\rfloor\)</span> 表示不大于 <span class="arithmatex">\(c\)</span> 的最大整数。我们定义变换 <span class="arithmatex">\(\begin{bmatrix}a\\b\end{bmatrix}\mapsto \begin{bmatrix}0&amp;1\\1&amp;-\lfloor a/b\rfloor\end{bmatrix}\begin{bmatrix}a\\b\end{bmatrix}\)</span>。</p>
+<p>易发现欧几里得算法即不停应用该变换，有</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+\gcd(a,b)\\0
+\end{bmatrix}
+=
+\left(
+\cdots 
+\begin{bmatrix}
+0&amp;1\\1&amp;-\lfloor a/b\rfloor
+\end{bmatrix}
+\begin{bmatrix}
+1&amp;0\\0&amp;1
+\end{bmatrix}
+\right)
+\begin{bmatrix}
+a\\b
+\end{bmatrix}
+\]</div>
+<p>令</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+x_1&amp;x_2\\x_3&amp;x_4
+\end{bmatrix}
+=
+\cdots 
+\begin{bmatrix}
+0&amp;1\\1&amp;-\lfloor a/b\rfloor
+\end{bmatrix}
+\begin{bmatrix}
+1&amp;0\\0&amp;1
+\end{bmatrix}
+\]</div>
+<p>那么</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+\gcd(a,b)\\0
+\end{bmatrix}
+=
+\begin{bmatrix}
+x_1&amp;x_2\\x_3&amp;x_4
+\end{bmatrix}
+\begin{bmatrix}
+a\\b
+\end{bmatrix}
+\]</div>
+<p>满足 <span class="arithmatex">\(a\cdot x_1+b\cdot x_2=\gcd(a,b)\)</span> 即扩展欧几里得算法，注意在最后乘了一个单位矩阵不会影响结果，提示我们可以在开始时维护一个 <span class="arithmatex">\(2\times 2\)</span> 的单位矩阵编写更简洁的迭代方法如</p>
+<pre><code class="language-cpp">int exgcd(int a, int b, int &amp;x, int &amp;y) {
+  int x1 = 1, x2 = 0, x3 = 0, x4 = 1;
+  while (b != 0) {
+    int c = a / b;
+    std::tie(x1, x2, x3, x4, a, b) =
+        std::make_tuple(x3, x4, x1 - x3 * c, x2 - x4 * c, b, a - b * c);
+  }
+  x = x1, y = x2;
+  return a;
+}
+</code></pre>
+<p>这种表述相较于递归更简单。</p>
+<h2 id="_20">应用</h2>
+<ul>
+<li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1045">10104 - Euclid Problem</a></li>
+<li><a href="http://codeforces.com/gym/100963">GYM - (J) once upon a time</a></li>
+<li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=4628">UVa - 12775 - Gift Dilemma</a></li>
+</ul>
+<h2 id="_21">参考资料与链接</h2>
+<p>[^1]: <a href="https://gcc.gnu.org/onlinedocs/libstdc++/libstdc++-html-USERS-4.4/a00978.html#a2686a128df5a576cb53a1ed5f674607">libstdc++: std Namespace Reference</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

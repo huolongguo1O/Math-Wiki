@@ -1,0 +1,1562 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="PeterlitsZo, Tiphereth-A">
+      
+      
+      
+        <link rel="prev" href="../crt/">
+      
+      
+        <link rel="next" href="../primitive-root/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>费马小定理与欧拉定理 - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              费马小定理与欧拉定理
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        费马小定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        欧拉定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        扩展欧拉定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="扩展欧拉定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直观理解
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        严格证明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料与注释
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        费马小定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        欧拉定理
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        扩展欧拉定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="扩展欧拉定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直观理解
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        严格证明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料与注释
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>费马小定理与欧拉定理</h1>
+
+<p>本文讨论费马小定理、欧拉定理及其扩展。这些定理解决了任意模数下任意大指数的幂的计算问题。</p>
+<h2 id="_1">费马小定理</h2>
+<p><strong>费马小定理</strong>（Fermat's little theorem）是数论中最基础的定理之一。它也是 <a href="../prime/#fermat-素性测试">Fermat 素性测试</a> 的理论基础。</p>
+<p>???+ note "费马小定理"
+    设 <span class="arithmatex">\(p\)</span> 是素数。对于任意整数 <span class="arithmatex">\(a\)</span> 且 <span class="arithmatex">\(p\nmid a\)</span>，都成立 <span class="arithmatex">\(a^{p-1}\equiv 1\pmod p\)</span>.</p>
+<p>???+ note "定理"
+    设 <span class="arithmatex">\(p\)</span> 是素数。对于任意整数 <span class="arithmatex">\(a\)</span>，都成立 <span class="arithmatex">\(a^{p}\equiv a\pmod p\)</span>.</p>
+<p>这两个同余关系在 <span class="arithmatex">\(p\nmid a\)</span> 时是等价的；而在 <span class="arithmatex">\(p\mid a\)</span> 时，<span class="arithmatex">\(a^p\equiv 0\equiv a\pmod p\)</span> 平凡地成立。因此，这两个命题是等价的。这两个命题常常都称作费马小定理。</p>
+<p>??? note "证明一"
+    设 <span class="arithmatex">\(p\)</span> 是素数，且 <span class="arithmatex">\(p\nmid a\)</span>。首先证明：对于 <span class="arithmatex">\(i=1,2,\cdots,p-1\)</span>，余数 <span class="arithmatex">\(ia \bmod p\)</span> 各不相同。反证法。如果有 <span class="arithmatex">\(1\le i &lt; j &lt; p\)</span> 使得</p>
+<pre><code>$$
+ia \bmod p = ja \bmod p. \iff (j-i)a\equiv 0.\pmod p
+$$
+
+但是，$(j-i)$ 和 $a$ 都不是 $p$ 的倍数，这显然矛盾。
+
+换句话说，这些余数是 $\{1,2,\cdots,p-1\}$ 的一个排列。因此，有
+
+$$
+\prod_{i=1}^{p-1}i = \prod_{i=1}^{p-1}(ia\bmod p) \equiv \prod_{i=1}^{p-1}ia = a^{p-1}\prod_{i=1}^{p-1}i.\pmod p
+$$
+
+这说明
+
+$$
+(a^{p-1}-1)\prod_{i=1}^{p-1}i \equiv 0. \pmod{p}
+$$
+
+也就是说，等式左侧是 $p$ 的倍数，但是 $i=1,2,\cdots, p-1$ 都不是 $p$ 的倍数，所以，只能有 $p\mid (a^{p-1}-1)$，亦即费马小定理成立。
+</code></pre>
+<p>??? note "证明二"
+    注意到费马小定理的第二种表述对于所有 <span class="arithmatex">\(a\in\mathbf N\)</span> 都成立，因此，可以考虑使用数学归纳法。负整数的情形容易转化为非负整数的情形。</p>
+<pre><code>归纳起点为 $0^p\equiv 0\pmod p$，显然成立。假设它对于 $a\in\mathbf N$ 成立，需要证明的是，它对于 $a+1$ 也成立。由二项式定理可知
+
+$$
+(a+1)^p=a^p+\binom{p}{1}a^{p-1}+\binom{p}{2}a^{p-2}+\cdots +\binom{p}{p-1}a+1.
+$$
+
+除了首尾两项，组合数的表达式 $\dbinom{p}{k} = \dfrac{p!}{k!(p-k)!}$ 中，$p$ 都能整除分子，而不能整除分母，因此，这些系数对于 $k\neq 0,p$ 都是 $p$ 的倍数。因此，有
+
+$$
+(a+1)^p \equiv a^p + 1\equiv a + 1. \pmod{p}
+$$
+
+其中，第二步应用了归纳假设。因此，利用数学归纳法可知，费马小定理成立。
+</code></pre>
+<p>费马小定理的逆命题并不成立。即使对于所有与 <span class="arithmatex">\(n\)</span> 互素的 <span class="arithmatex">\(a\)</span>，都有 <span class="arithmatex">\(a^{n-1}\equiv 1\pmod n\)</span>，那么，<span class="arithmatex">\(n\)</span> 也未必是素数。相关讨论详见 <a href="../prime/#fermat-素性测试">Fermat 素性测试</a> 一节。</p>
+<h2 id="_2">欧拉定理</h2>
+<p><strong>欧拉定理</strong>（Euler's theorem）将费马小定理推广到了一般模数的情形，但仍然要求底数与指数互素。</p>
+<p>???+ note "欧拉定理"
+    对于整数 <span class="arithmatex">\(m&gt;0\)</span> 和整数 <span class="arithmatex">\(a\)</span>，且 <span class="arithmatex">\(\gcd(a,m)=1\)</span>，有 <span class="arithmatex">\(a^{\varphi(m)}\equiv 1\pmod{m}\)</span>，其中，<span class="arithmatex">\(\varphi(\cdot)\)</span> 为 <a href="../euler-totient/">欧拉函数</a>。</p>
+<p>??? note "证明"
+    与费马小定理的证明一类似，仍然是取一个与 <span class="arithmatex">\(m\)</span> 互质的数列，再进行操作。考虑集合</p>
+<pre><code>$$
+R = \{r\in\mathbf N : 0 &lt; r &lt; m,~\gcd(r,m)=1\}.
+$$
+
+这是模 $m$ 的 [既约剩余系](./basic.md#同余类与剩余系)。根据欧拉函数的定义可知，$|R|=\varphi(m)$。类似上文，将它们乘以 $a$ 相当于对该集合重新排列：
+
+$$
+R = \{ar\bmod m: r\in R\}.
+$$
+
+这是因为，容易验证 $\gcd(ar,m)=1$ 且不同的 $r_1,r_2\in R$ 对应的 $ar_1\bmod m$ 和 $ar_2\bmod m$ 也一定不同。因此，有
+
+$$
+\prod_{r\in R}r \equiv \prod_{r\in R}ar = a^{\varphi(m)}\prod_{r\in R}r. \pmod{m}
+$$
+
+再次重复之前的论证，消去 $\prod_{r\in R}r$，就得到 $a^{\varphi(m)}\equiv 1\pmod m$。
+</code></pre>
+<p>对于素数 <span class="arithmatex">\(p\)</span>，有 <span class="arithmatex">\(\varphi(p)=p-1\)</span>，因此，费马小定理是欧拉定理的一个特例。另外，欧拉定理中的指数 <span class="arithmatex">\(\varphi(m)\)</span> 在一般情形下并非使得该式成立的最小指数。它可以改进到 <span class="arithmatex">\(\lambda(m)\)</span>，其中，<span class="arithmatex">\(\lambda(\cdot)\)</span> 是 <a href="../primitive-root/#carmichael-函数">Carmichael 函数</a>。关于相关结论的代数背景，可以参考 <a href="../../algebra/ring-theory/#应用整数同余类的乘法群">整数同余类的乘法群</a> 一节。</p>
+<h2 id="_3">扩展欧拉定理</h2>
+<p>扩展欧拉定理<a href="这一名字主要出现在算法竞赛圈中，而并非该结论的通用名称。">^ex-euler</a>进一步将结论推广到了底数与指数不互素的情形。由此，它彻底解决了任意模数下任意底数的幂次计算问题，将它们转化为指数小于 <span class="arithmatex">\(2\varphi(m)\)</span> 的情形，从而可以通过 <a href="../../binary-exponentiation/">快速幂</a> 在 <span class="arithmatex">\(O(\log\varphi(m))\)</span> 时间内计算。</p>
+<p>???+ note "扩展欧拉定理"
+    对于任意正整数 <span class="arithmatex">\(m\)</span>、整数 <span class="arithmatex">\(a\)</span> 和非负整数 <span class="arithmatex">\(k\)</span>，有</p>
+<pre><code>$$
+a^k \equiv \begin{cases}
+a^{k \bmod \varphi(m)},                &amp;\gcd(a,m) =  1,                   \\
+a^k,                                   &amp;\gcd(a,m)\ne 1, k &lt;   \varphi(m), \\
+a^{(k \bmod \varphi(m)) + \varphi(m)}, &amp;\gcd(a,m)\ne 1, k \ge \varphi(m).
+\end{cases} \pmod m
+$$
+</code></pre>
+<p>第二种情形是在说，如果 <span class="arithmatex">\(k &lt; \varphi(m)\)</span>，那么，就无需继续降幂，直接应用快速幂即可；而第三种和第一种情形的最大区别是，通过取余降幂之后，是否需要加上一项 <span class="arithmatex">\(\varphi(m)\)</span>。当然，将第一种情形合并进入第二、三种情形也是正确的。</p>
+<h3 id="_4">直观理解</h3>
+<p>在严格证明定理之前，可以首先直观理解定理的含义。</p>
+<p><img alt="fermat1" src="../images/fermat.svg" /></p>
+<p>考虑余数 <span class="arithmatex">\(a^k\bmod m\)</span> 随着 <span class="arithmatex">\(b\)</span> 增大而变化的情况。由于余数的取值一定在区间 <span class="arithmatex">\([0,m)\)</span> 内，而 <span class="arithmatex">\(k\)</span> 有无限多个。将 <span class="arithmatex">\(a^k\bmod m \mapsto a^{k+1}\bmod m\)</span> 看作这些余数结点之间的有向边。那么，一定可以构成如图所示的循环。</p>
+<p>扩展欧拉定理说明，这些循环可能是纯循环（第一种情形）或者混循环（第二、三种情形）。纯循环中，没有结点存在两个前驱，而混循环中就会出现这样的情形。因此，对于一般的情况，只需要能够求出循环节的长度和进入循环节之前的长度，就可以利用这个性质进行降幂。</p>
+<h3 id="_5">严格证明</h3>
+<p>本节给出扩展欧拉定理的严格证明。</p>
+<p>??? note "证明"
+    首先说明，存在 <span class="arithmatex">\(k_0\in\mathbf N\)</span>，使得整数 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(m':=\dfrac{m}{\gcd(a^{k_0},m)}\)</span> 互素。为此，设 <span class="arithmatex">\(\nu_p(n)\)</span> 是整数 <span class="arithmatex">\(n\)</span> 的质因数分解中素数 <span class="arithmatex">\(p\)</span> 的幂次，那么，不妨取</p>
+<pre><code>$$
+k_0 = \max\left\{\left\lceil\dfrac{\nu_p(m)}{\nu_p(a)}\right\rceil : \nu_p(a)&gt;0\right\}.
+$$
+
+因为 $m$ 中所有和 $a$ 的公共素因子的幂次都已经包含在 $a^{k_0}$ 中，所以，$a$ 就与 $m$ 中剩下的因子 $m'=\dfrac{m}{\gcd(a^{k_0},m)}$ 互素。
+
+进而，对 $k\ge k_0$ 考察同余关系
+
+$$
+b\equiv a^k. \pmod m
+$$
+
+由于 $\gcd(a^{k_0},m)=\gcd(a^k,m)\mid b$，所以，将等式两侧（包括模数）同时除以 $\gcd(a^{k_0},m)$，就有
+
+$$
+\dfrac{b}{\gcd(a^{k_0},m)} = \dfrac{a^{k_0}}{\gcd(a^{k_0},m)}\cdot a^{k-k_0}. \pmod{m'}
+$$
+
+此时，因为 $a$ 与模数 $m'$ 互素，可以直接应用欧拉定理，得到
+
+$$
+\dfrac{b}{\gcd(a^{k_0},m)} \equiv \dfrac{a^{k_0}}{\gcd(a^{k_0},m)}\cdot a^{(k-k_0)\bmod\varphi(m')}. \pmod{m'}
+$$
+
+因此，再将因子 $\gcd(a^{k_0},m)$ 乘回去，就得到
+
+$$
+b \equiv a^{k_0}\cdot a^{(k-k_0)\bmod\varphi(m')} = a^{k_0 + (k-k_0)\bmod\varphi(m')}. \pmod{m}
+$$
+
+这就得到了扩展欧拉定理的形式。式子说明，循环节的长度是 $\varphi(m')$，而进入循环节之前的长度为 $k_0$。
+
+此处得到的参数比扩展欧拉定理中的更紧，但是相对来说，这些参数的计算并不容易。可以说明，这些参数可以放宽到扩展欧拉定理中的情形。首先，利用 [欧拉函数的表达式](./euler-totient.md) 可知，因为 $m'\mid m$，所以 $\varphi(m')\mid\varphi(m)$。也就是说，$\varphi(m)$ 也是它的循环节。其次，$k_0$ 也可以放宽到 $\varphi(m)$。这是因为对于所有 $m\in\mathbf N_+$ 和任意 $p\mid m$，都有
+
+$$
+\begin{aligned}
+\varphi(m) &amp;\ge \varphi(p^{\nu_p(m)}) = (p-1)p^{\nu_p(m)-1} \ge p^{\nu_p(m)-1} \\
+&amp;= (1+(p-1))^{\nu_p(m)-1} \ge 1 + (p-1)(\nu_p(m)-1) \\
+&amp;\ge 1 + (\nu_p(m)-1) = \nu_p(m).
+\end{aligned}
+$$
+
+其中，第二行的不等式利用了二项式展开，并只保留常数项和一次项。因此，有
+
+$$
+k_0 \le \max\{\nu_p(m):p\in\mathbf P\}\le \varphi(m).
+$$
+
+这就完全证明了所述结论。
+</code></pre>
+<h2 id="_6">例题</h2>
+<p>本节通过一道例题展示扩展欧拉定理的一个经典应用——计算任意模数下的幂塔。<strong>幂塔</strong>（power tower）指形如 <span class="arithmatex">\(A\uparrow(B\uparrow(C\uparrow(D\uparrow\cdots)))\)</span> 的式子，其中，<span class="arithmatex">\(\uparrow\)</span> 是 Knuth 箭头记号，而 <span class="arithmatex">\(A,B,C,D,\cdots\)</span> 是一系列非负整数。</p>
+<p>???+ example "<a href="https://judge.yosupo.jp/problem/tetration_mod">Library Checker - Tetration Mod</a>"
+    <span class="arithmatex">\(T\)</span> 组测试。每组测试中，给定 <span class="arithmatex">\(A,B,M\)</span>，求 <span class="arithmatex">\((A\uparrow\uparrow B)\bmod M\)</span>。其中，<span class="arithmatex">\(A\uparrow\uparrow B\)</span> 表示由 <span class="arithmatex">\(B\)</span> 个 <span class="arithmatex">\(A\)</span> 组成的幂塔。或者，形式化地，定义</p>
+<pre><code>$$
+A \uparrow\uparrow B =
+\begin{cases}
+1 , &amp; B = 0,\\
+A\uparrow(A\uparrow\uparrow(B-1)), &amp; B &gt; 0.
+\end{cases}
+$$
+
+规定 $0^0=1$。
+</code></pre>
+<p>??? note "解答"
+    利用 <span class="arithmatex">\(A\uparrow\uparrow B\)</span> 的定义，递归计算即可。要计算 <span class="arithmatex">\((A\uparrow\uparrow B)\bmod M\)</span>，只需要应用扩展欧拉定理，计算 <span class="arithmatex">\((A\uparrow\uparrow(B-1))\bmod\varphi(M)\)</span>。由于 <span class="arithmatex">\(\varphi(\varphi(n)) \le n/2\)</span> 对所有 <span class="arithmatex">\(n\ge 2\)</span> 都成立，所以，递归过程一定在 <span class="arithmatex">\(O(\log M)\)</span> 步内完成。由于需要应用扩展欧拉定理，所以需要区分当前的计算结果是否严格小于当前模数。为此，只需要在取余的时候多判断一步即可。另外，需要注意边界情况的处理。</p>
+<p>??? note "参考代码"
+    <code>cpp
+    --8&lt;-- "docs/math/code/fermat/tetration.cpp"</code></p>
+<h2 id="_7">习题</h2>
+<ul>
+<li><a href="https://www.luogu.com.cn/problem/P5091">Luogu P5091【模板】扩展欧拉定理</a></li>
+<li><a href="https://codeforces.com/problemset/problem/906/D">Codeforces 906 D. Power Tower</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P3747">Luogu P3747 [六省联考 2017] 相逢是问候</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P4139">Luogu P4139 上帝与集合的正确用法</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P3934">Luogu P3934 [Ynoi Easy Round 2016] 炸脖龙 I</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P6736">Luogu P6736「Wdsr-2」白泽教育</a></li>
+</ul>
+<h2 id="_8">参考资料与注释</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Fermat%27s_little_theorem">Fermat's little theorem - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Euler%27s_theorem">Euler's theorem - Wikipedia</a></li>
+<li>Hardy, Godfrey Harold, and Edward Maitland Wright. An introduction to the theory of numbers. Oxford university press, 1979.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

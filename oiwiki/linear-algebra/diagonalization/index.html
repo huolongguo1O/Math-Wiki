@@ -1,0 +1,1412 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Diagonalization - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Diagonalization
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../number-theory/basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特征子空间
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不变子空间
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        准素分解
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        可对角化矩阵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        幂零矩阵
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="幂零矩阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        循环子空间
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jordan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        幂零 Jordan 块
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一些定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Diagonalization</h1>
+
+<h2 id="_1">特征子空间</h2>
+<p>矩阵 <span class="arithmatex">\(A\)</span> 的属于 <span class="arithmatex">\(\lambda_0\)</span> 的全部特征向量，再添上零向量，构成一个线性空间，称为矩阵 <span class="arithmatex">\(A\)</span> 的一个特征子空间，记为 <span class="arithmatex">\(E(\lambda_0)\)</span>。它是齐次线性方程组：</p>
+<div class="arithmatex">\[
+(\lambda_0 I-A)X=0
+\]</div>
+<p>的解空间。</p>
+<p>对于特征子空间 <span class="arithmatex">\(E(\lambda_i)=N(\lambda_i I-A)\)</span>，由亏加秩定理有：</p>
+<div class="arithmatex">\[
+r(\lambda_i I-A)+\operatorname{dim} N(\lambda_i I-A)=n
+\]</div>
+<p>因此，特征子空间 <span class="arithmatex">\(E(\lambda_i)\)</span> 的维数为：</p>
+<div class="arithmatex">\[
+\operatorname{dim} E(\lambda_i)=n-r(\lambda_i I-A)
+\]</div>
+<p>也称为 <span class="arithmatex">\(\lambda_i\)</span> 的 <strong>几何重数</strong>。</p>
+<h2 id="_2">不变子空间</h2>
+<p>在研究线性变换 <span class="arithmatex">\(T\)</span> 的时候，常常希望选取空间 <span class="arithmatex">\(V\)</span> 的一个基，使得线性变换 <span class="arithmatex">\(T\)</span> 对于这个基的矩阵具有尽可能简单的形状。</p>
+<p>设 <span class="arithmatex">\(V\)</span> 是数域 <span class="arithmatex">\(F\)</span> 上的线性空间，<span class="arithmatex">\(W\)</span> 是 <span class="arithmatex">\(V\)</span> 的一个子空间，<span class="arithmatex">\(T\)</span> 是 <span class="arithmatex">\(V\)</span> 上的一个线性变换。如果对于 <span class="arithmatex">\(W\)</span> 中任意的向量 <span class="arithmatex">\(x\)</span>，都有 <span class="arithmatex">\(T(x)\)</span> 也在 <span class="arithmatex">\(W\)</span> 中（也称为空间在变换下不变或稳定），称 <span class="arithmatex">\(W\)</span> 是 <span class="arithmatex">\(T\)</span> 的一个不变子空间。</p>
+<p>空间在变换下不变，并不是说坐标在变换下真的「不变」，有可能是进行了一个拉伸等变形，只是变形后还落在空间里。</p>
+<ul>
+<li>线性空间 <span class="arithmatex">\(V\)</span> 的任意一个子空间都是数乘变换的不变子空间。</li>
+<li>对于 <span class="arithmatex">\(V\)</span> 中任意的线性变换 <span class="arithmatex">\(T\)</span>，空间 <span class="arithmatex">\(V\)</span> 和零子空间都是 <span class="arithmatex">\(T\)</span> 的不变子空间，称为平凡不变子空间。</li>
+<li>不变子空间的交与和也是不变子空间。</li>
+</ul>
+<p>设 <span class="arithmatex">\(W\)</span> 是线性变换 <span class="arithmatex">\(T\)</span> 的一个不变子空间。只考虑 <span class="arithmatex">\(T\)</span> 在不变子空间 <span class="arithmatex">\(W\)</span> 上的作用，就得到子空间 <span class="arithmatex">\(W\)</span> 本身的线性变换，称为 <span class="arithmatex">\(T\)</span> 在子空间 <span class="arithmatex">\(W\)</span> 上的限制，记作 <span class="arithmatex">\({T|}_W\)</span>。</p>
+<p>对于 <span class="arithmatex">\(V\)</span> 中任意的线性变换 <span class="arithmatex">\(T\)</span>，像空间 <span class="arithmatex">\(R(T)\)</span> 与核空间 <span class="arithmatex">\(N(T)\)</span> 是 <span class="arithmatex">\(T\)</span> 的不变子空间。这两种情况的含义是，空间 <span class="arithmatex">\(V\)</span> 在变换前后，完成了自身的压缩（像空间），或者压缩到 <span class="arithmatex">\(0\)</span>（核空间）。</p>
+<p>对于 <span class="arithmatex">\(V\)</span> 中任意的线性变换 <span class="arithmatex">\(T\)</span>，<span class="arithmatex">\(T\)</span> 的特征子空间是 <span class="arithmatex">\(T\)</span> 的不变子空间。</p>
+<h2 id="_3">准素分解</h2>
+<p>根据代数基本定理，最小多项式可以分解为：</p>
+<div class="arithmatex">\[
+m_A(\lambda)={(\lambda-\lambda_1)}^{r_1}\cdots{(\lambda-\lambda_S)}^{r_S}
+\]</div>
+<p>考虑最小多项式代入变元 <span class="arithmatex">\(\lambda\)</span> 为矩阵 <span class="arithmatex">\(A\)</span> 后，各个因式的核空间，构成矩阵 <span class="arithmatex">\(A\)</span> 的一系列不变子空间：</p>
+<div class="arithmatex">\[
+W_i=N({(\lambda_i I-A)}^{r_i})
+\]</div>
+<p>定理：该不变子空间 <span class="arithmatex">\(W_i\)</span> 的维数，恰好为特征值 <span class="arithmatex">\(\lambda_i\)</span> 的代数重数。</p>
+<p>回顾一下，代数重数是指特征多项式各个因式的次数，几何重数是指特征子空间 <span class="arithmatex">\(E(\lambda_i)=N(\lambda_i I-A)\)</span> 的维数。这个不变子空间 <span class="arithmatex">\(W_i\)</span> 与特征子空间 <span class="arithmatex">\(E(\lambda_i)\)</span>，两者都是矩阵的核空间，并且两个矩阵构成最小多项式 <span class="arithmatex">\(r_i\)</span> 次幂的关系。也就是说，特征子空间的维数是几何重数，「特征子空间」经过最小多项式 <span class="arithmatex">\(r_i\)</span> 次幂后到达一个「不变子空间」，不变子空间的维数到达了特征多项式的代数重数。</p>
+<p>该定理其实是下面准素分解定理的推论。</p>
+<p>记矩阵 <span class="arithmatex">\(A\)</span> 对应的线性变换 <span class="arithmatex">\(T\)</span>，在每个子空间 <span class="arithmatex">\(W_i\)</span> 上的限制 <span class="arithmatex">\(T_i={T|}_{W_i}\)</span>。于是 <span class="arithmatex">\(T_i\)</span> 的最小多项式是 <span class="arithmatex">\((x-\lambda_i)^{r_i}\)</span>。</p>
+<p>定理：设 <span class="arithmatex">\(V\)</span> 是域 <span class="arithmatex">\(F\)</span> 上的线性空间，<span class="arithmatex">\(T\)</span> 是 <span class="arithmatex">\(V\)</span> 上的一个线性变换。那么空间 <span class="arithmatex">\(V\)</span> 可以关于线性变换 <span class="arithmatex">\(T\)</span> 进行准素分解，拆成若干不变子空间 <span class="arithmatex">\(W_i\)</span> 的直和。</p>
+<div class="arithmatex">\[
+V=W_1\oplus W_2\oplus\cdots\oplus W_S
+\]</div>
+<p>这意味着，<span class="arithmatex">\(T\)</span> 在某组基下的矩阵是准对角阵：</p>
+<div class="arithmatex">\[
+\operatorname{diag}\{A_1,A_2,\cdots,A_S\}
+\]</div>
+<p>其中，<span class="arithmatex">\(A_i\)</span> 是 <span class="arithmatex">\(T_i\)</span> 在对应基下的矩阵。</p>
+<p>该定理表明，可以使用不变子空间简化线性变换的矩阵。</p>
+<h2 id="_4">可对角化矩阵</h2>
+<p>对于 <span class="arithmatex">\(n\)</span> 阶方阵 <span class="arithmatex">\(A\)</span>，如果相似于一个对角阵，则称 <span class="arithmatex">\(A\)</span> 为可对角化矩阵，或称单纯矩阵。</p>
+<ul>
+<li>对角阵的和、积、逆，如果存在，仍然是对角阵，其对角线上的元素就是它的特征值。</li>
+<li>线性变换 <span class="arithmatex">\(T\)</span> 的矩阵为可对角化矩阵，等价于 <span class="arithmatex">\(T\)</span> 在某组基下的矩阵为对角阵。</li>
+</ul>
+<p>定理：设矩阵 <span class="arithmatex">\(A\)</span> 的全部互异特征根为 <span class="arithmatex">\(\lambda_1,\cdots,\lambda_m\)</span>，则以下命题等价：</p>
+<ul>
+<li>矩阵 <span class="arithmatex">\(A\)</span> 可对角化。</li>
+<li>矩阵 <span class="arithmatex">\(A\)</span> 有 <span class="arithmatex">\(n\)</span> 个线性无关的特征向量。</li>
+<li>以下公式成立：</li>
+</ul>
+<div class="arithmatex">\[
+\operatorname{dim} E(\lambda_1)+\cdots+\operatorname{dim} E(\lambda_m)=n
+\]</div>
+<p>前文已经指出，特征多项式的分解式中特征值的次数称为代数重数，特征子空间的维数称为几何重数。这个定理也表明，矩阵 <span class="arithmatex">\(A\)</span> 可对角化，等价于 <span class="arithmatex">\(A\)</span> 的每个特征值 <span class="arithmatex">\(\lambda\)</span> 的代数重数都等于它的几何重数。</p>
+<p>推论：如果 <span class="arithmatex">\(n\)</span> 阶方阵 <span class="arithmatex">\(A\)</span> 恰有 <span class="arithmatex">\(n\)</span> 个互异特征值，则它必可对角化。反之则不一定。</p>
+<p>定理：矩阵 <span class="arithmatex">\(A\)</span> 可对角化当且仅当 <span class="arithmatex">\(A\)</span> 的最小多项式没有重根。</p>
+<p>矩阵的相似也会保持特征向量之间的线性相关关系不变。</p>
+<p>特征向量完全可能不是实数，也完全可能找不到 <span class="arithmatex">\(n\)</span> 个线性无关的特征向量。</p>
+<p>对于重特征值而言，特征向量张成空间。为了描述这个空间，需要从其中选择代表。一般会选择线性无关的代表，代表的个数就是空间的维数。</p>
+<p>选取代表时，常常将它们正交化与单位化。最终得到的就是一套单位正交的代表。</p>
+<p>特征向量不一定正交，不同特征值的特征向量，可能无法正交。因此正交化只能对于重特征值的特征向量进行。但是单位化可以对任意特征向量进行。</p>
+<h2 id="_5">幂零矩阵</h2>
+<p>设 <span class="arithmatex">\(T\)</span> 是空间 <span class="arithmatex">\(V\)</span> 的一个线性变换。如果存在一个正整数 <span class="arithmatex">\(r\)</span>，使得 <span class="arithmatex">\(T^r\)</span> 为零变换，称 <span class="arithmatex">\(T\)</span> 是空间 <span class="arithmatex">\(V\)</span> 的一个幂零变换。</p>
+<p>对于某一个正整数 <span class="arithmatex">\(r\)</span>，满足条件 <span class="arithmatex">\(N^r=0\)</span> 的矩阵称为幂零矩阵。</p>
+<p>一般可以进一步假定 <span class="arithmatex">\(r\)</span> 是使 <span class="arithmatex">\(T^r\)</span> 为零变换的最小正整数，于是 <span class="arithmatex">\(T\)</span> 的最小多项式是 <span class="arithmatex">\(x^r\)</span>。于是存在一个向量 <span class="arithmatex">\(\xi_0\)</span>，使得：</p>
+<ul>
+<li>
+<div class="arithmatex">\[
+    T^r(\xi_0)=0
+    \]</div>
+</li>
+<li>
+<div class="arithmatex">\[
+    T^{r-1}(\xi_0)\neq 0
+    \]</div>
+</li>
+</ul>
+<h3 id="_6">循环子空间</h3>
+<p>定理：设 <span class="arithmatex">\(T\)</span> 是空间 <span class="arithmatex">\(V\)</span> 的一个线性变换，<span class="arithmatex">\(\xi\)</span> 是空间 <span class="arithmatex">\(V\)</span> 的一个向量。如果存在一个正整数 <span class="arithmatex">\(s\)</span>，使得：</p>
+<ul>
+<li>
+<div class="arithmatex">\[
+    T^s(\xi)=0
+    \]</div>
+</li>
+<li>
+<div class="arithmatex">\[
+    T^{s-1}(\xi)\neq 0
+    \]</div>
+</li>
+</ul>
+<p>那么向量 <span class="arithmatex">\(\xi,T(\xi),\cdots,T^{s-1}(\xi)\)</span> 线性无关。</p>
+<p>由这个定理可以给出一个定义：</p>
+<p>设 <span class="arithmatex">\(T\)</span> 是空间 <span class="arithmatex">\(V\)</span> 的一个线性变换，<span class="arithmatex">\(W\)</span> 是 <span class="arithmatex">\(V\)</span> 的一个子空间。如果存在一个向量 <span class="arithmatex">\(\xi_0\)</span> 和一个正整数 <span class="arithmatex">\(r\)</span>，使得：</p>
+<ul>
+<li>向量 <span class="arithmatex">\(\xi_0,T(\xi_0),\cdots,T^{r-1}(\xi_0)\)</span> 构成 <span class="arithmatex">\(W\)</span> 的一个基。</li>
+<li>
+<p>如下等式成立：</p>
+<div class="arithmatex">\[
+T^r(\xi_0)=0
+\]</div>
+</li>
+</ul>
+<p>那么子空间 <span class="arithmatex">\(W\)</span> 称为关于 <span class="arithmatex">\(T\)</span> 的一个循环子空间，简称 <span class="arithmatex">\(T\)</span> 循环子空间。此时 <span class="arithmatex">\(\xi_0\)</span> 称为循环子空间 <span class="arithmatex">\(W\)</span> 的一个生成向量，向量 <span class="arithmatex">\(\xi_0,T(\xi_0),\cdots,T^{r-1}(\xi_0)\)</span> 称为 <span class="arithmatex">\(W\)</span> 的一个循环基。</p>
+<p>显然，一个 <span class="arithmatex">\(T\)</span> 循环子空间 <span class="arithmatex">\(W\)</span> 在 <span class="arithmatex">\(T\)</span> 作用下不变，并且对于循环子空间 <span class="arithmatex">\(W\)</span> 中的任意向量 <span class="arithmatex">\(\xi\)</span>，均有 <span class="arithmatex">\(T^r(\xi)=0\)</span>，这里 <span class="arithmatex">\(r\)</span> 为循环子空间的维数。</p>
+<h3 id="jordan">幂零 Jordan 块</h3>
+<p>如果空间 <span class="arithmatex">\(W\)</span> 是变换 <span class="arithmatex">\(T\)</span> 的循环子空间，那么 <span class="arithmatex">\(T\)</span> 在 <span class="arithmatex">\(W\)</span> 上的限制 <span class="arithmatex">\({T|}_W\)</span> 是 <span class="arithmatex">\(W\)</span> 的一个幂零变换，并且 <span class="arithmatex">\({T|}_W\)</span> 关于 <span class="arithmatex">\(W\)</span> 的倒序排列的循环基 <span class="arithmatex">\(T^{r-1}(\xi_0),T^{r-2}(\xi_0),\cdots,\xi_0\)</span> 的矩阵是如下形状的 <span class="arithmatex">\(r\)</span> 阶上三角矩阵：</p>
+<div class="arithmatex">\[
+N_r=\begin{pmatrix}
+0 &amp; 1 &amp; 0 &amp; \cdots &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; \cdots &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0\\
+\vdots &amp; \vdots &amp; \vdots &amp;   &amp; \vdots&amp; \vdots\\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0 &amp; 0\\
+\end{pmatrix}
+\]</div>
+<p>矩阵 <span class="arithmatex">\(N_r\)</span> 称为一个 <span class="arithmatex">\(r\)</span> 阶幂零 Jordan 矩阵，或者 <span class="arithmatex">\(r\)</span> 阶幂零 Jordan 块。</p>
+<p>设 <span class="arithmatex">\(T\)</span> 是 <span class="arithmatex">\(n\)</span> 维空间 <span class="arithmatex">\(V\)</span> 的一个幂零变换，把出现在 <span class="arithmatex">\(V\)</span> 关于 <span class="arithmatex">\(T\)</span> 的循环子空间的分解中，唯一确定的一组正整数 <span class="arithmatex">\(r_1\geq\cdots\geq r_S\)</span> 叫做 <span class="arithmatex">\(T\)</span> 的不变指数。</p>
+<p>对于 <span class="arithmatex">\(n\)</span> 阶幂零矩阵 <span class="arithmatex">\(A\)</span>，<span class="arithmatex">\(A\)</span> 与一个上述形状的矩阵 <span class="arithmatex">\(N\)</span> 相似，也唯一确定一个正整数序列 <span class="arithmatex">\(r_1\geq\cdots\geq r_S\)</span>，称为矩阵 <span class="arithmatex">\(A\)</span> 的不变指数。</p>
+<p>幂零阵虽然不能和对角阵相似，但是可以相似于这样的标准形式。在 Jordan 标准型，将相似对角化与幂零阵的标准形式，二者结合起来，给出一般的矩阵通过相似变换可以达到的标准形式。</p>
+<h3 id="_7">一些定理</h3>
+<ol>
+<li>
+<p>设 <span class="arithmatex">\(T\)</span> 是空间 <span class="arithmatex">\(V\)</span> 的一个幂零变换，而</p>
+<div class="arithmatex">\[
+h(x)=a_0+a_1x+\cdots+a_mx^m
+\]</div>
+<p>是一个多项式，那么当且仅当 <span class="arithmatex">\(a_0\neq 0\)</span> 时，线性变换 <span class="arithmatex">\(h(T)\)</span> 有逆变换。当 <span class="arithmatex">\(h(T)\)</span> 可逆时，<span class="arithmatex">\(h(T)\)</span> 的逆变换也是 <span class="arithmatex">\(T\)</span> 的一个多项式。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(T\)</span> 是空间 <span class="arithmatex">\(V\)</span> 的一个幂零变换，<span class="arithmatex">\(W\)</span> 是一个 <span class="arithmatex">\(r\)</span> 维 <span class="arithmatex">\(T\)</span> 循环子空间，<span class="arithmatex">\(\xi\)</span> 是 <span class="arithmatex">\(W\)</span> 中的向量。如果存在一个整数 <span class="arithmatex">\(k\)</span>，使得</p>
+<div class="arithmatex">\[
+T^{r-k}(\xi)=0
+\]</div>
+<p>那么存在 <span class="arithmatex">\(W\)</span> 中的向量 <span class="arithmatex">\(\eta\)</span>，使得</p>
+<div class="arithmatex">\[
+\xi=T^k(\eta)
+\]</div>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(T\)</span> 是 <span class="arithmatex">\(n\)</span> 维空间 <span class="arithmatex">\(V\)</span> 的一个幂零变换，<span class="arithmatex">\(x^r\)</span> 是 <span class="arithmatex">\(T\)</span> 的最小多项式，令 <span class="arithmatex">\(W_1\)</span> 是一个 <span class="arithmatex">\(r\)</span> 维 <span class="arithmatex">\(T\)</span> 循环子空间，那么存在 <span class="arithmatex">\(W_1\)</span> 的一个余子空间 <span class="arithmatex">\(W_2\)</span>，使得：</p>
+<div class="arithmatex">\[
+V=W_1\oplus W_2
+\]</div>
+<p>并且 <span class="arithmatex">\(W_2\)</span> 也在 <span class="arithmatex">\(T\)</span> 作用下不变。</p>
+</li>
+<li>
+<p>设 <span class="arithmatex">\(T\)</span> 是 <span class="arithmatex">\(n\)</span> 维空间 <span class="arithmatex">\(V\)</span> 的一个幂零变换，那么 <span class="arithmatex">\(V\)</span> 可以分解为 <span class="arithmatex">\(T\)</span> 循环子空间的直和：</p>
+<div class="arithmatex">\[
+V=W_1\oplus W_2\oplus\cdots\oplus W_S
+\]</div>
+</li>
+<li>
+<p>每一个 <span class="arithmatex">\(n\)</span> 阶幂零矩阵都与一个形如：</p>
+<div class="arithmatex">\[
+N=\begin{pmatrix}
+N_{r_1} &amp;   &amp;   &amp; 0\\
+  &amp; N_{r_2} &amp;   &amp;  \\
+  &amp;   &amp; \cdots &amp;  \\
+0 &amp;   &amp;   &amp; N_{r_S}\\
+\end{pmatrix}
+\]</div>
+<p>的矩阵相似，这里的每一个 <span class="arithmatex">\(N_{r_i}\)</span> 是一个 <span class="arithmatex">\(r_i\)</span> 阶幂零 Jordan 块。</p>
+</li>
+<li>
+<p>如果规定 <span class="arithmatex">\(T\)</span> 循环子空间 <span class="arithmatex">\(W_i\)</span> 按照维数 <span class="arithmatex">\(r_i\)</span> 降序排列 <span class="arithmatex">\(r_1\geq\cdots\geq r_S\)</span>，那么将 <span class="arithmatex">\(V\)</span> 分解为 <span class="arithmatex">\(T\)</span> 循环子空间的方法是由 <span class="arithmatex">\(T\)</span> 唯一确定的。</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

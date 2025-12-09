@@ -1,0 +1,1753 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Matroid - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Matroid
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../number-theory/basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../number-theory/quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        引言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        拟阵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        圈
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        秩
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        典型示例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="典型示例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-uniform-matroid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 均匀拟阵（Uniform Matroid）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-graphical-matroid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 图拟阵（Graphical Matroid）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-linear-matroid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 线性拟阵（Linear Matroid）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-partition-matroid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 划分拟阵（Partition Matroid）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-colored-matroid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 有色拟阵（Colored Matroid）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        构造和运算
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="构造和运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对偶
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        删除和收缩
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        拟阵和贪心
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="拟阵和贪心">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        拟阵交
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="拟阵交">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        问题描述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料与注释
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Matroid</h1>
+
+<h2 id="_1">引言</h2>
+<p><strong>拟阵（Matroid）</strong> 是哈斯勒·惠特尼（Hassler Whitney）于 1935 年提出的一种抽象代数结构，旨在统一和推广关于独立性的概念，例如线性代数中的线性无关性和图论中的无环性。</p>
+<p>拟阵为处理与独立性相关的优化问题提供了强大的理论工具，广泛应用于组合数学、图论、算法设计等领域，尤其在为贪心算法等优化方法提供数学理论支持方面发挥了重要作用。</p>
+<h2 id="_2">定义</h2>
+<h3 id="_3">拟阵</h3>
+<p>一个 <strong>拟阵（Matroid）</strong> 可以表示为 <span class="arithmatex">\(M = (E, \mathcal{I})\)</span>，其中：</p>
+<ul>
+<li><span class="arithmatex">\(E\)</span> 是一个有限集，称为 <strong>基础集（Ground Set）</strong>。</li>
+<li>
+<p><span class="arithmatex">\(\mathcal{I}\)</span> 是 <span class="arithmatex">\(E\)</span> 的子集族，称为 <strong>独立集族（Family of Independent Sets）</strong>，其中的集合称为 <strong>独立集（Independent Set）</strong>。有以下三个性质：</p>
+<ul>
+<li>
+<p><strong>非空性</strong>：空集是独立的，即 <span class="arithmatex">\(\emptyset \in \mathcal{I}\)</span>。</p>
+</li>
+<li>
+<p><strong>遗传性</strong>：独立集的任意子集也是独立集。若 <span class="arithmatex">\(I \in \mathcal{I}\)</span>，则对于任意 <span class="arithmatex">\(I' \subseteq I\)</span>，都有 <span class="arithmatex">\(I' \in \mathcal{I}\)</span>。</p>
+</li>
+<li>
+<p><strong>扩张性</strong>：若 <span class="arithmatex">\(I, J \in \mathcal{I}\)</span> 且 <span class="arithmatex">\(|I| &lt; |J|\)</span>，则存在 <span class="arithmatex">\(j \in J \setminus I\)</span>，使得 <span class="arithmatex">\(I \cup \{j\} \in \mathcal{I}\)</span>。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>如果一个形如 <span class="arithmatex">\((E, \mathcal{I})\)</span> 的结构满足上述三个性质，则称其为一个拟阵。</p>
+<h3 id="_4">基</h3>
+<p><strong>基（Basis）</strong> 是拟阵中极大的独立集，即无法再添加元素而保持独立性的独立集。所有基的集合称为 <strong>基集族</strong>，记为 <span class="arithmatex">\(\mathcal{B}\)</span>。</p>
+<p><strong>性质</strong>：</p>
+<ol>
+<li>
+<p><strong>等基数性</strong>：所有基的大小都相同，称为拟阵的 <strong>秩（Rank）</strong>。</p>
+</li>
+<li>
+<p><strong>扩张性</strong>：任何独立集通过添加基中的元素都可以扩张为一个基。</p>
+</li>
+</ol>
+<h3 id="_5">圈</h3>
+<p><strong>圈（Circuit）</strong> 是拟阵中最小的依赖集，即其所有真子集都是独立的，但自身不是独立集，任意两个圈之间不存在包含关系。</p>
+<h3 id="_6">秩</h3>
+<p><strong>秩函数（Rank Function）</strong> <span class="arithmatex">\(r: 2^E \rightarrow \mathbb{Z}_{\geq 0}\)</span> 将基础集 <span class="arithmatex">\(E\)</span> 的子集映射到非负整数。对于任意 <span class="arithmatex">\(S \subseteq E\)</span>，<span class="arithmatex">\(r(S)\)</span> 定义为 <span class="arithmatex">\(S\)</span> 中最大独立集的大小，即</p>
+<div class="arithmatex">\[
+r(S) = \max \{ |I| \mid I \subseteq S \wedge I \in \mathcal{I} \}.
+\]</div>
+<p><strong>性质</strong>：</p>
+<ol>
+<li>
+<p><strong>非负性</strong>：对于任意 <span class="arithmatex">\(S \subseteq E\)</span>，有 <span class="arithmatex">\(0 \leq r(S) \leq |S|\)</span>。</p>
+</li>
+<li>
+<p><strong>单调性</strong>：若 <span class="arithmatex">\(A \subseteq B \subseteq E\)</span>，则 <span class="arithmatex">\(r(A) \leq r(B)\)</span>。</p>
+</li>
+<li>
+<p><strong>次模性</strong>：对于任意 <span class="arithmatex">\(A, B \subseteq E\)</span>，有 <span class="arithmatex">\(r(A \cup B) + r(A \cap B) \leq r(A) + r(B)\)</span>。</p>
+</li>
+</ol>
+<h2 id="_7">典型示例</h2>
+<h3 id="1-uniform-matroid">1. 均匀拟阵（Uniform Matroid）</h3>
+<p><strong>定义</strong>：给定基础集 <span class="arithmatex">\(E\)</span> 和非负整数 <span class="arithmatex">\(k\)</span>，均匀拟阵 <span class="arithmatex">\(U_{k,E}\)</span> 的独立集族是所有大小不超过 <span class="arithmatex">\(k\)</span> 的子集，表示为：</p>
+<div class="arithmatex">\[
+\mathcal{I} = \{ I \subseteq E \mid |I| \leq k \}。
+\]</div>
+<ul>
+<li>
+<p><strong>基（Bases）</strong>：所有大小为 <span class="arithmatex">\(k\)</span> 的子集。</p>
+</li>
+<li>
+<p><strong>圈（Circuits）</strong>：所有大小为 <span class="arithmatex">\(k + 1\)</span> 的子集。</p>
+</li>
+<li>
+<p><strong>秩（Rank）</strong>：<span class="arithmatex">\(r(E) = \min(k, |E|)\)</span>，即独立集中最多能有 <span class="arithmatex">\(k\)</span> 个元素。</p>
+</li>
+</ul>
+<h3 id="2-graphical-matroid">2. 图拟阵（Graphical Matroid）</h3>
+<p><strong>定义</strong>：给定一个无向图 <span class="arithmatex">\(G = (V, E)\)</span>，图拟阵 <span class="arithmatex">\(M(G)\)</span> 的基础集是边集 <span class="arithmatex">\(E\)</span>，其独立集族是所有不包含环的边集，即所有的森林。</p>
+<ul>
+<li>
+<p><strong>基</strong>：图中的生成树（在连通图的情况下）。生成树是极大的独立集，无法再增加边而不形成环。</p>
+</li>
+<li>
+<p><strong>圈</strong>：图中的简单环，去掉环中的任意一条边，剩余部分都为独立集。</p>
+</li>
+<li>
+<p><strong>秩</strong>：<span class="arithmatex">\(r(E) = |V|  - c\)</span>，其中 <span class="arithmatex">\(c\)</span> 是图的连通分支数。对于一个连通的无向图，其秩等于顶点数减一，即 <span class="arithmatex">\(|V|  - 1\)</span>。</p>
+</li>
+</ul>
+<h3 id="3-linear-matroid">3. 线性拟阵（Linear Matroid）</h3>
+<p><strong>定义</strong>：线性拟阵基于向量空间。给定向量空间 <span class="arithmatex">\(V\)</span>，基础集 <span class="arithmatex">\(E\)</span> 是 <span class="arithmatex">\(V\)</span> 中的一组有限向量，其独立集族是 <span class="arithmatex">\(E\)</span> 中所有线性无关的向量子集。</p>
+<ul>
+<li>
+<p><strong>基</strong>：极大的线性无关向量集，其大小等于向量空间的维数。</p>
+</li>
+<li>
+<p><strong>圈</strong>：最小的线性相关向量集合，其任意真子集都是独立的，而自身是线性相关的。</p>
+</li>
+<li>
+<p><strong>秩</strong>：线性拟阵的秩 <span class="arithmatex">\(r(E) = \dim(V)\)</span>，即向量空间的维数。独立集的大小不能超过向量空间的维数。</p>
+</li>
+</ul>
+<h3 id="4-partition-matroid">4. 划分拟阵（Partition Matroid）</h3>
+<p><strong>定义</strong>：将基础集 <span class="arithmatex">\(E\)</span> 划分为不相交的子集 <span class="arithmatex">\(E_1, E_2, \dots, E_m\)</span>，并为每个子集 <span class="arithmatex">\(E_i\)</span> 指定一个非负整数 <span class="arithmatex">\(k_i\)</span>。划分拟阵的独立集族由满足每个部分选取元素数量不超过 <span class="arithmatex">\(k_i\)</span> 的子集组成，表示为：</p>
+<div class="arithmatex">\[
+\mathcal{I} = \left\{ I \subseteq E \mid \forall i,\, |I \cap E_i|  \leq k_i \right\}。
+\]</div>
+<ul>
+<li>
+<p><strong>基</strong>：满足 <span class="arithmatex">\(|I \cap E_i| = k_i\)</span> 的独立集是划分拟阵的基。每个基在每个子集中选取了恰好 <span class="arithmatex">\(k_i\)</span> 个元素。</p>
+</li>
+<li>
+<p><strong>圈</strong>：划分拟阵的圈是最小的依赖集，即包含至少一个元素数量超过 <span class="arithmatex">\(k_i\)</span> 的子集。</p>
+</li>
+<li>
+<p><strong>秩</strong>：划分拟阵的秩为 <span class="arithmatex">\(r(E) = \sum_{i=1}^m k_i\)</span>，即最大独立集的大小等于每个子集中允许选取的最大元素数的总和。</p>
+</li>
+</ul>
+<h3 id="5-colored-matroid">5. 有色拟阵（Colored Matroid）</h3>
+<p><strong>定义</strong>：有色拟阵是划分拟阵的一种特殊形式，其中每个元素都赋予了颜色。给定基础集 <span class="arithmatex">\(E\)</span> 和颜色集 <span class="arithmatex">\(C\)</span>，每个元素 <span class="arithmatex">\(e \in E\)</span> 都与某个颜色 <span class="arithmatex">\(c \in C\)</span> 相关联。有色拟阵的独立集不仅需要满足普通拟阵的独立性条件，还必须遵守颜色上指定的限制，例如同一种颜色的元素在独立集中最多选取一定数量。</p>
+<ul>
+<li>
+<p><strong>基</strong>：有色拟阵的基是符合颜色限制和独立性条件的极大独立集。</p>
+</li>
+<li>
+<p><strong>圈</strong>：圈是最小的依赖集，包含至少一个违反独立性或颜色限制的元素集合。</p>
+</li>
+<li>
+<p><strong>秩</strong>：有色拟阵的秩是满足颜色限制条件下的最大独立集大小。它既依赖于拟阵的结构，也依赖于颜色限制的具体规定。</p>
+</li>
+</ul>
+<h2 id="_8">构造和运算</h2>
+<h3 id="_9">对偶</h3>
+<p>给定拟阵 <span class="arithmatex">\(M = (E, \mathcal{I})\)</span>，其 <strong>对偶拟阵</strong>  <span class="arithmatex">\(M^* = (E, \mathcal{I}^*)\)</span> 定义为：</p>
+<div class="arithmatex">\[
+\mathcal{I}^* = \{ I^* \subseteq E \mid \exists B \in \mathcal{I}, |B| = r(E), B \subseteq E \setminus I^* \}。
+\]</div>
+<p><strong>性质</strong>：</p>
+<ul>
+<li>
+<p><strong>基</strong>：对偶拟阵 <span class="arithmatex">\(M^*\)</span> 的基是 <span class="arithmatex">\(M\)</span> 的基在基础集 <span class="arithmatex">\(E\)</span> 中的补集。换句话说，如果 <span class="arithmatex">\(B\)</span> 是 <span class="arithmatex">\(M\)</span> 的基，那么 <span class="arithmatex">\(E \setminus B\)</span> 就是 <span class="arithmatex">\(M^*\)</span> 的基。</p>
+</li>
+<li>
+<p><strong>秩函数</strong>：对偶拟阵的秩函数为 <span class="arithmatex">\(r^*(S) = |S| - r(E) + r(E \setminus S)\)</span>，其中 <span class="arithmatex">\(S\)</span> 是 <span class="arithmatex">\(E\)</span> 的子集。这意味着对偶拟阵的秩可以通过基础集的大小、原拟阵的秩以及从基础集中移除 <span class="arithmatex">\(S\)</span> 后的秩来计算。</p>
+</li>
+<li>
+<p><strong>自反性</strong>：对偶拟阵的对偶仍是原拟阵，即 <span class="arithmatex">\((M^*)^* = M\)</span>。</p>
+</li>
+</ul>
+<p><strong>示例</strong>：</p>
+<p>对于一个无向图 <span class="arithmatex">\(G = (V, E)\)</span>，图拟阵 <span class="arithmatex">\(M(G)\)</span> 的对偶 <span class="arithmatex">\(M(G)^*\)</span> 是由图的割集组成的拟阵。图拟阵 <span class="arithmatex">\(M(G)\)</span> 的基是图中的生成树，而其对偶 <span class="arithmatex">\(M(G)^*\)</span> 的基是这些生成树的补集，对偶 <span class="arithmatex">\(M(G)^*\)</span> 的圈则是图的最小割集，即将图分成两个不连通部分的最小边集。</p>
+<p>例如，考虑一个简单的三角形图 <span class="arithmatex">\(G\)</span>，其边集为 <span class="arithmatex">\(E = \{e_1, e_2, e_3\}\)</span>。图拟阵 <span class="arithmatex">\(M(G)\)</span> 的基是两条边的集合（如 <span class="arithmatex">\(\{e_1, e_2\}\)</span>），而对偶拟阵 <span class="arithmatex">\(M(G)^*\)</span> 的基是单条边的集合（如 <span class="arithmatex">\(\{e_3\}\)</span>），<span class="arithmatex">\(M(G)^*\)</span> 的圈是两条边的集合（即最小割集，如 <span class="arithmatex">\(\{e_2,e_3\}\)</span>），因为移除其中的一条边就会将图分割为两个连通分支。</p>
+<h3 id="_10">删除和收缩</h3>
+<p><strong>删除（Deletion）</strong>：</p>
+<p>对于 <span class="arithmatex">\(A \subseteq E\)</span>，拟阵 <span class="arithmatex">\(M\)</span> 删除 <span class="arithmatex">\(A\)</span> 后得到新的拟阵 <span class="arithmatex">\(M \setminus A\)</span>，其独立集族 <span class="arithmatex">\(\mathcal{I}'\)</span> 定义为：</p>
+<div class="arithmatex">\[
+\mathcal{I}' = \{ I \subseteq E \setminus A \mid I \in \mathcal{I} \}。
+\]</div>
+<p>可以看出，删除操作就是从拟阵中移除某些元素，并保留剩余元素形成的独立集，其保持原独立集不变，只是移除了元素。</p>
+<p><strong>收缩（Contraction）</strong>：</p>
+<p>对于 <span class="arithmatex">\(A \subseteq E\)</span>，拟阵 <span class="arithmatex">\(M\)</span> 收缩 <span class="arithmatex">\(A\)</span> 后得到拟阵 <span class="arithmatex">\(M / A\)</span>，其独立集族 <span class="arithmatex">\(\mathcal{I}''\)</span> 定义为：</p>
+<div class="arithmatex">\[
+\mathcal{I}'' = \left\{ I \subseteq E \setminus A \,\bigg|\, \exists B \subseteq A,\, B \in \mathcal{I},\, r(B) = r(A),\, I \cup B \in \mathcal{I} \right\}
+\]</div>
+<p>收缩操作可以理解为将集合 <span class="arithmatex">\(A\)</span> 中的元素缩约，并考虑剩下的元素与 <span class="arithmatex">\(A\)</span> 的基一起形成的独立集。收缩的结果依赖于集合 <span class="arithmatex">\(A\)</span> 的基，缩约后的独立集实际上是对原拟阵中更高秩的子集进行约简后得到的独立集。</p>
+<p><strong>示例 - 图拟阵</strong>：</p>
+<ul>
+<li>
+<p><strong>删除</strong>：在图拟阵中，删除操作即从图中删除一些边。一个图 <span class="arithmatex">\(G\)</span> 删除某条边后，考虑的是剩余边所形成的独立集，即那些不包含环的边集。例如，如果从一个三角形图中删除一条边，剩下的两个边仍然是一个森林。</p>
+</li>
+<li>
+<p><strong>收缩</strong>：收缩操作则是将某条边收缩为一个顶点。对于图拟阵，收缩一条边相当于将这条边的两个顶点合并成一个顶点，并删除该边，合并顶点后，图中的其他边仍然可以形成独立集。例如，在一个三角形图中，收缩任意一条边将把两个顶点合并成一个，剩下的两条边将构成一个新的拟阵。</p>
+</li>
+</ul>
+<h2 id="_11">拟阵和贪心</h2>
+<p><strong>问题描述</strong>：</p>
+<p>拟阵的应用之一是解决贪心算法中的最优化问题。具体而言，给定一个拟阵 <span class="arithmatex">\(M = (S, \mathcal{I})\)</span>，其中 <span class="arithmatex">\(S\)</span> 是基础集，<span class="arithmatex">\(\mathcal{I}\)</span> 是独立集族。对于每个元素 <span class="arithmatex">\(x \in S\)</span>，赋予一个正整数权值 <span class="arithmatex">\(w(x)\)</span>，目标是找到权值最大的独立集，形式化为：</p>
+<div class="arithmatex">\[
+\max_{A \in \mathcal{I}} w(A) = \max_{A \in \mathcal{I}} \sum_{x \in A} w(x)
+\]</div>
+<p>显然，权值最大独立集必须是极大独立集。如果一个独立集 <span class="arithmatex">\(A\)</span> 不是极大独立集，则存在一个可以加入 <span class="arithmatex">\(A\)</span> 的元素 <span class="arithmatex">\(x\)</span>，且由于 <span class="arithmatex">\(w(x) &gt; 0\)</span>，加入该元素后权值会增加，说明 <span class="arithmatex">\(A\)</span> 不是权值最大的独立集。</p>
+<h3 id="_12">步骤</h3>
+<p>贪心算法求解权值最大独立集的步骤如下：</p>
+<ol>
+<li><strong>元素排序</strong>：将基础集 <span class="arithmatex">\(S\)</span> 按照权值从大到小排序，记为序列 <span class="arithmatex">\(e_1, e_2, \dots, e_n\)</span>。</li>
+<li><strong>初始化</strong>：设独立集 <span class="arithmatex">\(A = \emptyset\)</span>。</li>
+<li><strong>构建独立集</strong>：依次考虑排序后的元素 <span class="arithmatex">\(e_i\)</span>，如果 <span class="arithmatex">\(A \cup \{ e_i \} \in \mathcal{I}\)</span>，则更新 <span class="arithmatex">\(A = A \cup \{ e_i \}\)</span>。</li>
+<li><strong>输出结果</strong>：最终的集合 <span class="arithmatex">\(A\)</span> 即为权值最大的独立集。</li>
+</ol>
+<p><strong>复杂度分析</strong>：</p>
+<p>设 <span class="arithmatex">\(n = |S|\)</span> 为基础集的大小，<span class="arithmatex">\(f(n)\)</span> 表示判断一个集合是否为独立集的复杂度。贪心算法的时间复杂度为：</p>
+<div class="arithmatex">\[
+O(n \log n + n f(n))
+\]</div>
+<p>其中，<span class="arithmatex">\(O(n \log n)\)</span> 是排序的复杂度，<span class="arithmatex">\(O(n f(n))\)</span> 是逐一判断独立性的复杂度。</p>
+<p>???+ note "备注"
+    -   在图拟阵中，可以使用 <a href="../ds/dsu.md">并查集</a> 来高效检测是否形成环，从而使 <span class="arithmatex">\(f(n)\)</span> 接近常数时间。
+    -   在线性拟阵中，独立性检测通常涉及矩阵运算，其复杂度依赖于具体实现方式。</p>
+<p><strong>正确性证明</strong>：</p>
+<p>设 <span class="arithmatex">\(M = (S, \mathcal{I})\)</span> 是一个拟阵，<span class="arithmatex">\(A \in \mathcal{I}\)</span> 是一个独立集，且 <span class="arithmatex">\(A\)</span> 是某个权值最大独立集 <span class="arithmatex">\(T\)</span> 的子集。定义集合 <span class="arithmatex">\(P = \{ x \in S \setminus A \mid A \cup \{x\} \in \mathcal{I} \}\)</span>，即所有加入 <span class="arithmatex">\(A\)</span> 后，仍然使 <span class="arithmatex">\(A\)</span> 保持独立性的元素所构成的集合。</p>
+<p>设 <span class="arithmatex">\(y\)</span> 为 <span class="arithmatex">\(P\)</span> 中权值最大的元素，则 <span class="arithmatex">\(A' = A \cup \{ y \}\)</span> 也是某个权值最大独立集的子集，证明如下：</p>
+<p>假设 <span class="arithmatex">\(A' = A \cup \{ y \}\)</span> 不是任何权值最大独立集的子集，则存在一个权值最大的独立集 <span class="arithmatex">\(T\)</span>，且 <span class="arithmatex">\(|A'| &lt; |T|\)</span>。</p>
+<p>由于 <span class="arithmatex">\(|A'|&lt; |T|\)</span>，根据拟阵的 <strong>扩张性</strong>，存在 <span class="arithmatex">\(x \in T \setminus A'\)</span> 使得 <span class="arithmatex">\(A' \cup \{ x \} \in \mathcal{I}\)</span>。</p>
+<p>利用 <strong>扩张性</strong>，不断将 <span class="arithmatex">\(x\)</span> 加入 <span class="arithmatex">\(A'\)</span>，最终构造出一个新的独立集 <span class="arithmatex">\(A''\)</span>，使得 <span class="arithmatex">\(|A''| = |T|\)</span>。</p>
+<p>设 <span class="arithmatex">\(K = A'' \cap T\)</span>，此时有 <span class="arithmatex">\(x = T \setminus K\)</span>，<span class="arithmatex">\(y = A'' \setminus K\)</span>。由于 <span class="arithmatex">\(y\)</span> 为 <span class="arithmatex">\(P\)</span> 中权值最大的元素，有 <span class="arithmatex">\(w(x) \leq w(y)\)</span>。</p>
+<p>因此，<span class="arithmatex">\(w(A'') = w(K) + w(y) \geq w(K) + w(x) = w(T)\)</span>，此时：</p>
+<ul>
+<li>若 <span class="arithmatex">\(w(A'') &gt; w(T)\)</span>，则 <span class="arithmatex">\(T\)</span> 不是权值最大独立集，与假设矛盾。</li>
+<li>若 <span class="arithmatex">\(w(A'') = w(T)\)</span>，则 <span class="arithmatex">\(A''\)</span> 为权值最大独立集，且 <span class="arithmatex">\(A'\)</span> 为其子集，与假设 <span class="arithmatex">\(A'\)</span> 不是任何权值最大独立集的子集矛盾。</li>
+</ul>
+<p>综上，假设不成立，即 <span class="arithmatex">\(A' = A \cup \{ y \}\)</span> 必须是某个权值最大独立集的子集，因此通过不断使用贪心策略，最终可以找到权值最大的独立集。</p>
+<h3 id="_13">示例</h3>
+<p><strong>最小生成树</strong>：</p>
+<p>给定一个连通无向图 <span class="arithmatex">\(G = (V, E)\)</span>，每条边 <span class="arithmatex">\(e \in E\)</span> 都具有权值 <span class="arithmatex">\(w(e)\)</span>。目标为找到一棵生成树，使其包含所有顶点且总权值最小。</p>
+<p><strong>拟阵的构建</strong>：</p>
+<p>为了将最小生成树问题形式化为拟阵问题，可以构建图拟阵 <span class="arithmatex">\(M(G)\)</span>：</p>
+<ul>
+<li><strong>基础集</strong>：<span class="arithmatex">\(S = E\)</span>，即图中的所有边。</li>
+<li><strong>独立集族</strong>：<span class="arithmatex">\(\mathcal{I}\)</span> 为所有不包含环的边集（即所有森林）。</li>
+</ul>
+<p><strong>贪心算法</strong>：</p>
+<p>在图拟阵的框架下，<a href="../graph/mst.md#kruskal-算法">Kruskal 算法</a> 是一个典型的基于拟阵理论的贪心算法，可以用于构建最小生成树。虽然 <a href="../graph/mst.md#prim-算法">Prim 算法</a> 也是一种有效的贪心算法，同样能够找到最小生成树，但它并不严格依赖于拟阵的贪心。因此，在拟阵理论的讨论中，Kruskal 算法是主要的贪心算法实例。</p>
+<ul>
+<li>
+<p><strong>Kruskal 算法</strong>：</p>
+<ol>
+<li><strong>边排序</strong>：将所有边按权值从小到大排序。</li>
+<li><strong>逐步选择</strong>：依次选择权值最小的边，若加入后不形成环，则将其加入生成树。</li>
+<li><strong>终止条件</strong>：重复上述过程，直到生成树包含 <span class="arithmatex">\(|V| - 1\)</span> 条边。</li>
+</ol>
+</li>
+<li>
+<p><strong>Prim 算法</strong>：</p>
+<ul>
+<li><strong>原理</strong>：Prim 算法通过从一个起始顶点开始，逐步扩展生成树，每次选择连接树内与树外的最小权值边。</li>
+<li>虽然 Prim 算法也是贪心的，但其选择策略不同于其他基于拟阵扩张性质的贪心算法。因此，在拟阵理论的严格意义下，Prim 算法不被视为典型的拟阵贪心算法。</li>
+</ul>
+</li>
+</ul>
+<h2 id="_14">拟阵交</h2>
+<p>对于定义在同一基础集 <span class="arithmatex">\(S\)</span> 上的两个拟阵 <span class="arithmatex">\(M_1 = (S, \mathcal{I}_1)\)</span> 和 <span class="arithmatex">\(M_2 = (S, \mathcal{I}_2)\)</span>，若 <span class="arithmatex">\(\mathcal{I} = \mathcal{I}_1 \cap \mathcal{I}_2\)</span> 满足拟阵独立集族的三条性质，则称 <span class="arithmatex">\(M = (S, \mathcal{I})\)</span> 为 <span class="arithmatex">\(M_1\)</span> 和 <span class="arithmatex">\(M_2\)</span> 的 <strong>交</strong>。</p>
+<p><strong>注意</strong>：并非任意两个拟阵的交都是一个拟阵，只有当其独立集族的交集满足拟阵独立集族定义中的三条性质时，其交才构成一个拟阵。</p>
+<h3 id="_15">问题描述</h3>
+<ol>
+<li><strong>最大独立集</strong>：在 <span class="arithmatex">\(\mathcal{I}_1 \cap \mathcal{I}_2\)</span> 中找到最大的独立集（即具有最大基数的独立集）。</li>
+<li><strong>加权最大独立集</strong>：给定权值函数 <span class="arithmatex">\(w: S \to \mathbb{R}\)</span>，在 <span class="arithmatex">\(\mathcal{I}_1 \cap \mathcal{I}_2\)</span> 中找到权值和最大的独立集。</li>
+</ol>
+<h3 id="_16">算法</h3>
+<p><strong>无权版本</strong>：</p>
+<ol>
+<li><strong>初始化</strong>：选择一个初始独立集 <span class="arithmatex">\(I \in \mathcal{I}_1 \cap \mathcal{I}_2\)</span>，通常设定 <span class="arithmatex">\(I = \emptyset\)</span>。</li>
+<li><strong>迭代</strong>：<ul>
+<li><strong>构建交换图</strong>：根据当前独立集 <span class="arithmatex">\(I\)</span> 构建交换图 <span class="arithmatex">\(D_{M_1, M_2}(I)\)</span>。</li>
+<li><strong>路径选择</strong>：在交换图中，寻找从源点 <span class="arithmatex">\(s\)</span> 到汇点 <span class="arithmatex">\(t\)</span> 的增广路径 <span class="arithmatex">\(P\)</span>。</li>
+<li><strong>增广</strong>：沿路径 <span class="arithmatex">\(P\)</span> 从 <span class="arithmatex">\(s\)</span> 到 <span class="arithmatex">\(t\)</span> 遍历每一个节点：<ul>
+<li>如果节点属于左部顶点（即 <span class="arithmatex">\(I\)</span> 中的元素），则将该元素从 <span class="arithmatex">\(I\)</span> 中移除。</li>
+<li>如果节点属于右部顶点（即 <span class="arithmatex">\(S \setminus I\)</span> 中的元素），则将该元素加入 <span class="arithmatex">\(I\)</span> 中。</li>
+</ul>
+</li>
+<li><strong>重复</strong>：更新独立集 <span class="arithmatex">\(I\)</span> 后，重复上述步骤，直到无法找到新的增广路径为止。</li>
+</ul>
+</li>
+<li><strong>结果</strong>：最终得到的独立集 <span class="arithmatex">\(I\)</span> 即为拟阵交 <span class="arithmatex">\(M = M_1 \cap M_2\)</span> 中的一个最大独立集。</li>
+</ol>
+<p><strong>加权版本</strong>：</p>
+<p>为了找到权值和最大的独立集，算法需要在增广路径的选择上进行优化。</p>
+<ol>
+<li><strong>权值设置</strong>：对于每个元素 <span class="arithmatex">\(e \in S\)</span>，定义其在交换图中的权值 <span class="arithmatex">\(w'(e)\)</span>：<ul>
+<li><strong>左部顶点</strong>（<span class="arithmatex">\(I\)</span> 中的元素）：<span class="arithmatex">\(w'(e) = -w(e)\)</span>。</li>
+<li><strong>右部顶点</strong>（<span class="arithmatex">\(S \setminus I\)</span> 中的元素）：<span class="arithmatex">\(w'(e) = w(e)\)</span>。</li>
+</ul>
+</li>
+<li><strong>路径选择</strong>：在交换图 <span class="arithmatex">\(D_{M_1, M_2}(I)\)</span> 中，寻找一条从源点 <span class="arithmatex">\(s\)</span> 到汇点 <span class="arithmatex">\(t\)</span> 的 <strong>增广路径</strong>  <span class="arithmatex">\(P\)</span>，使得沿路径进行增广操作后，独立集 <span class="arithmatex">\(I\)</span> 的总权值增加最大。<ul>
+<li><strong>增广条件</strong>：路径 <span class="arithmatex">\(P\)</span> 上加入的元素的权值总和大于移除的元素的权值总和，即 <span class="arithmatex">\(\sum_{y \in \text{加入的元素}} w(y) &gt; \sum_{x \in \text{移除的元素}} w(x)\)</span></li>
+</ul>
+</li>
+<li><strong>增广操作</strong>：沿路径 <span class="arithmatex">\(P\)</span> 从 <span class="arithmatex">\(s\)</span> 到 <span class="arithmatex">\(t\)</span> 遍历每一个节点：<ul>
+<li>如果节点属于左部顶点（即 <span class="arithmatex">\(I\)</span> 中的元素），则将该元素从 <span class="arithmatex">\(I\)</span> 中移除。</li>
+<li>如果节点属于右部顶点（即 <span class="arithmatex">\(S \setminus I\)</span> 中的元素），则将该元素加入 <span class="arithmatex">\(I\)</span> 中。</li>
+</ul>
+</li>
+<li><strong>迭代</strong>：重复步骤 1 至 3，不断构建交换图并寻找增广路径，逐步优化独立集 <span class="arithmatex">\(I\)</span> 的总权值。</li>
+<li><strong>终止条件</strong>：当无法在交换图中找到满足增广条件的路径时，算法终止。</li>
+<li><strong>结果</strong>：最终得到的独立集 <span class="arithmatex">\(I\)</span> 即为拟阵交 <span class="arithmatex">\(M = M_1 \cap M_2\)</span> 中的一个 <strong>权值最大独立集</strong>。</li>
+</ol>
+<p><strong>复杂度</strong>：</p>
+<ul>
+<li>
+<p><strong>增广次数</strong>：设两个拟阵的最大秩分别为 <span class="arithmatex">\(r_1\)</span> 和 <span class="arithmatex">\(r_2\)</span>，则最大增广次数为 <span class="arithmatex">\(\min(r_1, r_2)\)</span>。</p>
+</li>
+<li>
+<p><strong>每次增广的复杂度</strong>：</p>
+<ul>
+<li>构建交换图的复杂度为 <span class="arithmatex">\(O(n^2)\)</span>，其中 <span class="arithmatex">\(n = |S|\)</span>。</li>
+<li>寻找增广路径的复杂度取决于路径搜索策略，通常为 <span class="arithmatex">\(O(n^2)\)</span>，例如使用广度优先搜索。</li>
+</ul>
+</li>
+<li>
+<p><strong>总时间复杂度</strong>：总体的时间复杂度为 <span class="arithmatex">\(O(r \cdot n^2)\)</span>，其中 <span class="arithmatex">\(r = \min(r_1, r_2)\)</span>。</p>
+</li>
+</ul>
+<h2 id="_17">例题</h2>
+<p><strong>最小生成树</strong>：</p>
+<p>给定一个无向图 <span class="arithmatex">\(G = (V, E)\)</span>，每条边 <span class="arithmatex">\(e \in E\)</span> 都有一个权值 <span class="arithmatex">\(w(e)\)</span>。寻找一棵生成树，使其包含所有顶点且总权值最小。</p>
+<ul>
+<li>详细介绍：<a href="../graph/mst.md">最小生成树</a>。</li>
+<li>题目模板：<a href="https://www.luogu.com.cn/problem/P3366">洛谷 P3366【模板】最小生成树</a>。</li>
+</ul>
+<p>??? note "解题思路"
+    使用 Kruskal 算法，将所有边按权值从小到大排序，然后逐步选择边，若加入后不形成环，则将其加入生成树，最终得到的生成树即为最小生成树。</p>
+<p><strong>Colorful Graph</strong>：</p>
+<p>给定一张带有多种颜色的无向图 <span class="arithmatex">\(G = (V, E)\)</span>，每条边有一个颜色属性。寻找一个最大的边集，使得：</p>
+<ol>
+<li>所选边不形成任何环。</li>
+<li>每种颜色的边数不超过 <span class="arithmatex">\(k\)</span> 条（<span class="arithmatex">\(k\)</span> 为给定的正整数）。</li>
+</ol>
+<p>??? note "解题思路"
+    1.  <strong>拟阵建模</strong>：</p>
+<pre><code>    -   **图拟阵 ($M_1$)**：定义为所有不形成环的边集，即独立集族 $\mathcal{I}_1$ 包含所有不构成环的边集合。
+    -   **颜色拟阵 ($M_2$)**：定义为每种颜色的边数不超过 $k$ 的边集，即独立集族 $\mathcal{I}_2$ 包含所有满足每种颜色边数 $\leq k$ 的边集合。
+2.  **求解拟阵交**：通过求解 $M = M_1 \cap M_2$，找到既不形成环又满足每种颜色边数不超过 $k$ 的最大边集。
+</code></pre>
+<p><strong>约束的资源分配问题</strong>:</p>
+<p>在一个资源分配问题中，有一组资源 <span class="arithmatex">\(R = \{r_1, r_2, \dots, r_n\}\)</span> 和一组项目 <span class="arithmatex">\(P = \{p_1, p_2, \dots, p_m\}\)</span>。每个项目 <span class="arithmatex">\(p_i\)</span> 需要分配一定数量的资源，且每种资源的总分配量不能超过其供应量。</p>
+<p><strong>目标</strong>：寻找一个资源分配方案，使其满足所有项目需求且不超过资源供应量。</p>
+<p>??? note "解题思路"
+    1.  <strong>拟阵建模</strong>：</p>
+<pre><code>    -   **需求拟阵 ($M_1$)**：定义为满足各项目资源需求的分配方案，即独立集族 $\mathcal{I}_1$ 包含所有满足项目需求的资源分配集合。
+    -   **供应拟阵 ($M_2$)**：定义为不超过每种资源供应量的分配方案，即独立集族 $\mathcal{I}_2$ 包含所有满足资源供应限制的资源分配集合。
+2.  **求解拟阵交**：通过求解 $M = M_1 \cap M_2$，找到既满足所有项目需求又不超过资源供应量的资源分配方案。
+</code></pre>
+<h2 id="_18">参考资料与注释</h2>
+<ol>
+<li><a href="https://en.wikipedia.org/wiki/Matroid">Wikipedia - Matroid</a></li>
+<li><a href="https://baike.baidu.com/item/%E6%8B%9F%E9%98%B5">百度百科 - 拟阵</a></li>
+<li><a href="https://www.luogu.com.cn/article/87d02q9f">洛谷 - 拟阵与最优化问题</a></li>
+<li><a href="https://www.luogu.com.cn/article/fuj3x886">洛谷 - 从拟阵基础到 Shannon 开关游戏</a></li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

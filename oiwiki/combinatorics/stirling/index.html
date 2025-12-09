@@ -1,0 +1,2090 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Stirling - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stirling-number" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Stirling
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../number-theory/basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stirling-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二类斯特林数（Stirling Number）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二类斯特林数（Stirling Number）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        递推式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        通项公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        同一行第二类斯特林数的计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        同一列第二类斯特林数的计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stirling-number_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一类斯特林数（Stirling Number）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一类斯特林数（Stirling Number）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        递推式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        通项公式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        同一行第一类斯特林数的计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        同一列第一类斯特林数的计算
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        上升幂与普通幂的相互转化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        下降幂与普通幂的相互转化
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多项式下降阶乘幂表示与多项式点值表示的关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料与注释
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Stirling</h1>
+
+<h2 id="stirling-number">第二类斯特林数（Stirling Number）</h2>
+<p>??? note "为什么先介绍第二类斯特林数"
+    虽然被称作「第二类」，第二类斯特林数却在斯特林的相关著作和具体数学中被首先描述，同时也比第一类斯特林数常用得多。</p>
+<p><strong>第二类斯特林数</strong>（斯特林子集数）<span class="arithmatex">\(\begin{Bmatrix}n\\ k\end{Bmatrix}\)</span>，也可记做 <span class="arithmatex">\(S(n,k)\)</span>，表示将 <span class="arithmatex">\(n\)</span> 个两两不同的元素，划分为 <span class="arithmatex">\(k\)</span> 个互不区分的非空子集的方案数。</p>
+<h3 id="_1">递推式</h3>
+<div class="arithmatex">\[
+\begin{Bmatrix}n\\ k\end{Bmatrix}=\begin{Bmatrix}n-1\\ k-1\end{Bmatrix}+k\begin{Bmatrix}n-1\\ k\end{Bmatrix}
+\]</div>
+<p>边界是 <span class="arithmatex">\(\begin{Bmatrix}n\\ 0\end{Bmatrix}=[n=0]\)</span>。</p>
+<p>考虑用组合意义来证明。</p>
+<p>我们插入一个新元素时，有两种方案：</p>
+<ul>
+<li>将新元素单独放入一个子集，有 <span class="arithmatex">\(\begin{Bmatrix}n-1\\ k-1\end{Bmatrix}\)</span> 种方案；</li>
+<li>将新元素放入一个现有的非空子集，有 <span class="arithmatex">\(k\begin{Bmatrix}n-1\\ k\end{Bmatrix}\)</span> 种方案。</li>
+</ul>
+<p>根据加法原理，将两式相加即可得到递推式。</p>
+<h3 id="_2">通项公式</h3>
+<div class="arithmatex">\[
+\begin{Bmatrix}n\\m\end{Bmatrix}=\sum\limits_{i=0}^m\dfrac{(-1)^{m-i}i^n}{i!(m-i)!}
+\]</div>
+<p>使用容斥原理证明该公式。设将 <span class="arithmatex">\(n\)</span> 个两两不同的元素，划分到 <span class="arithmatex">\(i\)</span> 个两两不同的集合（允许空集）的方案数为 <span class="arithmatex">\(G_i\)</span>，将 <span class="arithmatex">\(n\)</span> 个两两不同的元素，划分到 <span class="arithmatex">\(i\)</span> 个两两不同的非空集合（不允许空集）的方案数为 <span class="arithmatex">\(F_i\)</span>。</p>
+<p>显然</p>
+<div class="arithmatex">\[
+\begin{aligned}
+G_i&amp;=i^n\\
+G_i&amp;=\sum\limits_{j=0}^i\binom{i}{j}F_j
+\end{aligned}
+\]</div>
+<p>根据二项式反演</p>
+<div class="arithmatex">\[
+\begin{aligned}
+F_i&amp;=\sum\limits_{j=0}^{i}(-1)^{i-j}\binom{i}{j}G_j\\
+&amp;=\sum\limits_{j=0}^{i}(-1)^{i-j}\binom{i}{j}j^n\\
+&amp;=\sum\limits_{j=0}^{i}\dfrac{i!(-1)^{i-j}j^n}{j!(i-j)!}
+\end{aligned}
+\]</div>
+<p>考虑 <span class="arithmatex">\(F_i\)</span> 与 <span class="arithmatex">\(\begin{Bmatrix}n\\i\end{Bmatrix}\)</span> 的关系。第二类斯特林数要求集合之间互不区分，因此 <span class="arithmatex">\(F_i\)</span> 正好就是 <span class="arithmatex">\(\begin{Bmatrix}n\\i\end{Bmatrix}\)</span> 的 <span class="arithmatex">\(i!\)</span> 倍。于是</p>
+<div class="arithmatex">\[
+\begin{Bmatrix}n\\m\end{Bmatrix}=\dfrac{F_m}{m!}=\sum\limits_{i=0}^m\dfrac{(-1)^{m-i}i^n}{i!(m-i)!}
+\]</div>
+<h3 id="_3">同一行第二类斯特林数的计算</h3>
+<p>「同一行」的第二类斯特林数指的是，有着不同的 <span class="arithmatex">\(i\)</span>，相同的 <span class="arithmatex">\(n\)</span> 的一系列 <span class="arithmatex">\(\begin{Bmatrix}n\\i\end{Bmatrix}\)</span>。求出同一行的所有第二类斯特林数，就是对 <span class="arithmatex">\(i=0..n\)</span> 求出了将 <span class="arithmatex">\(n\)</span> 个不同元素划分为 <span class="arithmatex">\(i\)</span> 个非空集的方案数。</p>
+<p>根据上面给出的通项公式，卷积计算即可。该做法的时间复杂度为 <span class="arithmatex">\(O(n \log n)\)</span>。</p>
+<p>下面的代码使用了名为 <code>poly</code> 的多项式类，仅供参考。</p>
+<p>??? note "实现"
+    ```cpp
+    #ifndef <em>FEISTDLIB_POLY</em>
+    #define <em>FEISTDLIB_POLY</em></p>
+<pre><code>/*
+ * This file is part of the fstdlib project.
+ * Version: Build v0.0.2
+ * You can check for details at https://github.com/FNatsuka/fstdlib
+ */
+
+#include &lt;algorithm&gt;
+#include &lt;cmath&gt;
+#include &lt;cstdio&gt;
+#include &lt;vector&gt;
+
+namespace fstdlib {
+
+using ll = long long;
+int mod = 998244353, grt = 3;
+
+class poly {
+ private:
+  std::vector&lt;int&gt; data;
+
+  void out(void) {
+    for (int i = 0; i &lt; (int)data.size(); ++i) printf("%d ", data[i]);
+    puts("");
+  }
+
+ public:
+  poly(std::size_t len = std::size_t(0)) { data = std::vector&lt;int&gt;(len); }
+
+  poly(const std::vector&lt;int&gt; &amp;b) { data = b; }
+
+  poly(const poly &amp;b) { data = b.data; }
+
+  void resize(std::size_t len, int val = 0) { data.resize(len, val); }
+
+  std::size_t size(void) const { return data.size(); }
+
+  void clear(void) { data.clear(); }
+#if __cplusplus &gt;= 201103L
+  void shrink_to_fit(void) { data.shrink_to_fit(); }
+#endif
+  int &amp;operator[](std::size_t b) { return data[b]; }
+
+  const int &amp;operator[](std::size_t b) const { return data[b]; }
+
+  poly operator*(const poly &amp;h) const;
+  poly operator*=(const poly &amp;h);
+  poly operator*(const int &amp;h) const;
+  poly operator*=(const int &amp;h);
+  poly operator+(const poly &amp;h) const;
+  poly operator+=(const poly &amp;h);
+  poly operator-(const poly &amp;h) const;
+  poly operator-=(const poly &amp;h);
+  poly operator&lt;&lt;(const std::size_t &amp;b) const;
+  poly operator&lt;&lt;=(const std::size_t &amp;b);
+  poly operator&gt;&gt;(const std::size_t &amp;b) const;
+  poly operator&gt;&gt;=(const std::size_t &amp;b);
+  poly operator/(const int &amp;h) const;
+  poly operator/=(const int &amp;h);
+  poly operator==(const poly &amp;h) const;
+  poly operator!=(const poly &amp;h) const;
+  poly operator+(const int &amp;h) const;
+  poly operator+=(const int &amp;h);
+  poly inv(void) const;
+  poly inv(const int &amp;h) const;
+  friend poly sqrt(const poly &amp;h);
+  friend poly log(const poly &amp;h);
+  friend poly exp(const poly &amp;h);
+};
+
+int qpow(int a, int b, int p = mod) {
+  int res = 1;
+  while (b) {
+    if (b &amp; 1) res = (ll)res * a % p;
+    a = (ll)a * a % p, b &gt;&gt;= 1;
+  }
+  return res;
+}
+
+std::vector&lt;int&gt; rev;
+
+void dft_for_module(std::vector&lt;int&gt; &amp;f, int n, int b) {
+  static std::vector&lt;int&gt; w;
+  w.resize(n);
+  for (int i = 0; i &lt; n; ++i)
+    if (i &lt; rev[i]) std::swap(f[i], f[rev[i]]);
+  for (int i = 2; i &lt;= n; i &lt;&lt;= 1) {
+    w[0] = 1, w[1] = qpow(grt, (mod - 1) / i);
+    if (b == -1) w[1] = qpow(w[1], mod - 2);
+    for (int j = 2; j &lt; i / 2; ++j) w[j] = (ll)w[j - 1] * w[1] % mod;
+    for (int j = 0; j &lt; n; j += i)
+      for (int k = 0; k &lt; i / 2; ++k) {
+        int p = f[j + k], q = (ll)f[j + k + i / 2] * w[k] % mod;
+        f[j + k] = (p + q) % mod, f[j + k + i / 2] = (p - q + mod) % mod;
+      }
+  }
+}
+
+poly poly::operator*(const poly &amp;h) const {
+  int N = 1;
+  while (N &lt; (int)(size() + h.size() - 1)) N &lt;&lt;= 1;
+  std::vector&lt;int&gt; f(this-&gt;data), g(h.data);
+  f.resize(N), g.resize(N);
+  rev.resize(N);
+  for (int i = 0; i &lt; N; ++i)
+    rev[i] = (rev[i &gt;&gt; 1] &gt;&gt; 1) | (i &amp; 1 ? N &gt;&gt; 1 : 0);
+  dft_for_module(f, N, 1), dft_for_module(g, N, 1);
+  for (int i = 0; i &lt; N; ++i) f[i] = (ll)f[i] * g[i] % mod;
+  dft_for_module(f, N, -1), f.resize(size() + h.size() - 1);
+  for (int i = 0, inv = qpow(N, mod - 2); i &lt; (int)f.size(); ++i)
+    f[i] = (ll)f[i] * inv % mod;
+  return f;
+}
+
+poly poly::operator*=(const poly &amp;h) { return *this = *this * h; }
+
+poly poly::operator*(const int &amp;h) const {
+  std::vector&lt;int&gt; f(this-&gt;data);
+  for (int i = 0; i &lt; (int)f.size(); ++i) f[i] = (ll)f[i] * h % mod;
+  return f;
+}
+
+poly poly::operator*=(const int &amp;h) {
+  for (int i = 0; i &lt; (int)size(); ++i) data[i] = (ll)data[i] * h % mod;
+  return *this;
+}
+
+poly poly::operator+(const poly &amp;h) const {
+  std::vector&lt;int&gt; f(this-&gt;data);
+  if (f.size() &lt; h.size()) f.resize(h.size());
+  for (int i = 0; i &lt; (int)h.size(); ++i) f[i] = (f[i] + h[i]) % mod;
+  return f;
+}
+
+poly poly::operator+=(const poly &amp;h) {
+  std::vector&lt;int&gt; &amp;f = this-&gt;data;
+  if (f.size() &lt; h.size()) f.resize(h.size());
+  for (int i = 0; i &lt; (int)h.size(); ++i) f[i] = (f[i] + h[i]) % mod;
+  return f;
+}
+
+poly poly::operator-(const poly &amp;h) const {
+  std::vector&lt;int&gt; f(this-&gt;data);
+  if (f.size() &lt; h.size()) f.resize(h.size());
+  for (int i = 0; i &lt; (int)h.size(); ++i) f[i] = (f[i] - h[i] + mod) % mod;
+  return f;
+}
+
+poly poly::operator-=(const poly &amp;h) {
+  std::vector&lt;int&gt; &amp;f = this-&gt;data;
+  if (f.size() &lt; h.size()) f.resize(h.size());
+  for (int i = 0; i &lt; (int)h.size(); ++i) f[i] = (f[i] - h[i] + mod) % mod;
+  return f;
+}
+
+poly poly::operator&lt;&lt;(const std::size_t &amp;b) const {
+  std::vector&lt;int&gt; f(size() + b);
+  for (int i = 0; i &lt; (int)size(); ++i) f[i + b] = data[i];
+  return f;
+}
+
+poly poly::operator&lt;&lt;=(const std::size_t &amp;b) { return *this = (*this) &lt;&lt; b; }
+
+poly poly::operator&gt;&gt;(const std::size_t &amp;b) const {
+  std::vector&lt;int&gt; f(size() - b);
+  for (int i = 0; i &lt; (int)f.size(); ++i) f[i] = data[i + b];
+  return f;
+}
+
+poly poly::operator&gt;&gt;=(const std::size_t &amp;b) { return *this = (*this) &gt;&gt; b; }
+
+poly poly::operator/(const int &amp;h) const {
+  std::vector&lt;int&gt; f(this-&gt;data);
+  int inv = qpow(h, mod - 2);
+  for (int i = 0; i &lt; (int)f.size(); ++i) f[i] = (ll)f[i] * inv % mod;
+  return f;
+}
+
+poly poly::operator/=(const int &amp;h) {
+  int inv = qpow(h, mod - 2);
+  for (int i = 0; i &lt; (int)data.size(); ++i) data[i] = (ll)data[i] * inv % mod;
+  return *this;
+}
+
+poly poly::inv(void) const {
+  int N = 1;
+  while (N &lt; (int)(size() + size() - 1)) N &lt;&lt;= 1;
+  std::vector&lt;int&gt; f(N), g(N), d(this-&gt;data);
+  d.resize(N), f[0] = qpow(d[0], mod - 2);
+  for (int w = 2; w &lt; N; w &lt;&lt;= 1) {
+    for (int i = 0; i &lt; w; ++i) g[i] = d[i];
+    rev.resize(w &lt;&lt; 1);
+    for (int i = 0; i &lt; w * 2; ++i)
+      rev[i] = (rev[i &gt;&gt; 1] &gt;&gt; 1) | (i &amp; 1 ? w : 0);
+    dft_for_module(f, w &lt;&lt; 1, 1), dft_for_module(g, w &lt;&lt; 1, 1);
+    for (int i = 0; i &lt; w * 2; ++i)
+      f[i] = (ll)f[i] * (2 + mod - (ll)f[i] * g[i] % mod) % mod;
+    dft_for_module(f, w &lt;&lt; 1, -1);
+    for (int i = 0, inv = qpow(w &lt;&lt; 1, mod - 2); i &lt; w; ++i)
+      f[i] = (ll)f[i] * inv % mod;
+    for (int i = w; i &lt; w * 2; ++i) f[i] = 0;
+  }
+  f.resize(size());
+  return f;
+}
+
+poly poly::operator==(const poly &amp;h) const {
+  if (size() != h.size()) return 0;
+  for (int i = 0; i &lt; (int)size(); ++i)
+    if (data[i] != h[i]) return 0;
+  return 1;
+}
+
+poly poly::operator!=(const poly &amp;h) const {
+  if (size() != h.size()) return 1;
+  for (int i = 0; i &lt; (int)size(); ++i)
+    if (data[i] != h[i]) return 1;
+  return 0;
+}
+
+poly poly::operator+(const int &amp;h) const {
+  poly f(this-&gt;data);
+  f[0] = (f[0] + h) % mod;
+  return f;
+}
+
+poly poly::operator+=(const int &amp;h) { return *this = (*this) + h; }
+
+poly poly::inv(const int &amp;h) const {
+  poly f(*this);
+  f.resize(h);
+  return f.inv();
+}
+
+int modsqrt(int h, int p = mod) { return 1; }
+
+poly sqrt(const poly &amp;h) {
+  int N = 1;
+  while (N &lt; (int)(h.size() + h.size() - 1)) N &lt;&lt;= 1;
+  poly f(N), g(N), d(h);
+  d.resize(N), f[0] = modsqrt(d[0]);
+  for (int w = 2; w &lt; N; w &lt;&lt;= 1) {
+    g.resize(w);
+    for (int i = 0; i &lt; w; ++i) g[i] = d[i];
+    f = (f + f.inv(w) * g) / 2;
+    f.resize(w);
+  }
+  f.resize(h.size());
+  return f;
+}
+
+poly log(const poly &amp;h) {
+  poly f(h);
+  for (int i = 1; i &lt; (int)f.size(); ++i) f[i - 1] = (ll)f[i] * i % mod;
+  f[f.size() - 1] = 0, f = f * h.inv(), f.resize(h.size());
+  for (int i = (int)f.size() - 1; i &gt; 0; --i)
+    f[i] = (ll)f[i - 1] * qpow(i, mod - 2) % mod;
+  f[0] = 0;
+  return f;
+}
+
+poly exp(const poly &amp;h) {
+  int N = 1;
+  while (N &lt; (int)(h.size() + h.size() - 1)) N &lt;&lt;= 1;
+  poly f(N), g(N), d(h);
+  f[0] = 1, d.resize(N);
+  for (int w = 2; w &lt; N; w &lt;&lt;= 1) {
+    f.resize(w), g.resize(w);
+    for (int i = 0; i &lt; w; ++i) g[i] = d[i];
+    f = f * (g + 1 - log(f));
+    f.resize(w);
+  }
+  f.resize(h.size());
+  return f;
+}
+
+struct comp {
+  long double x, y;
+
+  comp(long double _x = 0, long double _y = 0) : x(_x), y(_y) {}
+
+  comp operator*(const comp &amp;b) const {
+    return comp(x * b.x - y * b.y, x * b.y + y * b.x);
+  }
+
+  comp operator+(const comp &amp;b) const { return comp(x + b.x, y + b.y); }
+
+  comp operator-(const comp &amp;b) const { return comp(x - b.x, y - b.y); }
+
+  comp conj(void) { return comp(x, -y); }
+};
+
+const int EPS = 1e-9;
+
+template &lt;typename FLOAT_T&gt;
+FLOAT_T fabs(const FLOAT_T &amp;x) {
+  return x &gt; 0 ? x : -x;
+}
+
+template &lt;typename FLOAT_T&gt;
+FLOAT_T sin(const FLOAT_T &amp;x, const long double &amp;EPS = fstdlib::EPS) {
+  FLOAT_T res = 0, delt = x;
+  int d = 0;
+  while (fabs(delt) &gt; EPS) {
+    res += delt, ++d;
+    delt *= -x * x / ((2 * d) * (2 * d + 1));
+  }
+  return res;
+}
+
+template &lt;typename FLOAT_T&gt;
+FLOAT_T cos(const FLOAT_T &amp;x, const long double &amp;EPS = fstdlib::EPS) {
+  FLOAT_T res = 0, delt = 1;
+  int d = 0;
+  while (fabs(delt) &gt; EPS) {
+    res += delt, ++d;
+    delt *= -x * x / ((2 * d) * (2 * d - 1));
+  }
+  return res;
+}
+
+const long double PI = std::acos((long double)(-1));
+
+void dft_for_complex(std::vector&lt;comp&gt; &amp;f, int n, int b) {
+  static std::vector&lt;comp&gt; w;
+  w.resize(n);
+  for (int i = 0; i &lt; n; ++i)
+    if (i &lt; rev[i]) std::swap(f[i], f[rev[i]]);
+  for (int i = 2; i &lt;= n; i &lt;&lt;= 1) {
+    w[0] = comp(1, 0), w[1] = comp(cos(2 * PI / i), b * sin(2 * PI / i));
+    for (int j = 2; j &lt; i / 2; ++j) w[j] = w[j - 1] * w[1];
+    for (int j = 0; j &lt; n; j += i)
+      for (int k = 0; k &lt; i / 2; ++k) {
+        comp p = f[j + k], q = f[j + k + i / 2] * w[k];
+        f[j + k] = p + q, f[j + k + i / 2] = p - q;
+      }
+  }
+}
+
+class arbitrary_module_poly {
+ private:
+  std::vector&lt;int&gt; data;
+
+  int construct_element(int D, ll x, ll y, ll z) const {
+    x %= mod, y %= mod, z %= mod;
+    return ((ll)D * D * x % mod + (ll)D * y % mod + z) % mod;
+  }
+
+ public:
+  int mod;
+
+  arbitrary_module_poly(std::size_t len = std::size_t(0),
+                        int module_value = 1e9 + 7) {
+    mod = module_value;
+    data = std::vector&lt;int&gt;(len);
+  }
+
+  arbitrary_module_poly(const std::vector&lt;int&gt; &amp;b, int module_value = 1e9 + 7) {
+    mod = module_value;
+    data = b;
+  }
+
+  arbitrary_module_poly(const arbitrary_module_poly &amp;b) {
+    mod = b.mod;
+    data = b.data;
+  }
+
+  void resize(std::size_t len, const int &amp;val = 0) { data.resize(len, val); }
+
+  std::size_t size(void) const { return data.size(); }
+
+  void clear(void) { data.clear(); }
+#if __cplusplus &gt;= 201103L
+  void shrink_to_fit(void) { data.shrink_to_fit(); }
+#endif
+  int &amp;operator[](std::size_t b) { return data[b]; }
+
+  const int &amp;operator[](std::size_t b) const { return data[b]; }
+
+  arbitrary_module_poly operator*(const arbitrary_module_poly &amp;h) const;
+  arbitrary_module_poly operator*=(const arbitrary_module_poly &amp;h);
+  arbitrary_module_poly operator*(const int &amp;h) const;
+  arbitrary_module_poly operator*=(const int &amp;h);
+  arbitrary_module_poly operator+(const arbitrary_module_poly &amp;h) const;
+  arbitrary_module_poly operator+=(const arbitrary_module_poly &amp;h);
+  arbitrary_module_poly operator-(const arbitrary_module_poly &amp;h) const;
+  arbitrary_module_poly operator-=(const arbitrary_module_poly &amp;h);
+  arbitrary_module_poly operator&lt;&lt;(const std::size_t &amp;b) const;
+  arbitrary_module_poly operator&lt;&lt;=(const std::size_t &amp;b);
+  arbitrary_module_poly operator&gt;&gt;(const std::size_t &amp;b) const;
+  arbitrary_module_poly operator&gt;&gt;=(const std::size_t &amp;b);
+  arbitrary_module_poly operator/(const int &amp;h) const;
+  arbitrary_module_poly operator/=(const int &amp;h);
+  arbitrary_module_poly operator==(const arbitrary_module_poly &amp;h) const;
+  arbitrary_module_poly operator!=(const arbitrary_module_poly &amp;h) const;
+  arbitrary_module_poly inv(void) const;
+  arbitrary_module_poly inv(const int &amp;h) const;
+  friend arbitrary_module_poly sqrt(const arbitrary_module_poly &amp;h);
+  friend arbitrary_module_poly log(const arbitrary_module_poly &amp;h);
+};
+
+arbitrary_module_poly arbitrary_module_poly::operator*(
+    const arbitrary_module_poly &amp;h) const {
+  int N = 1;
+  while (N &lt; (int)(size() + h.size() - 1)) N &lt;&lt;= 1;
+  std::vector&lt;comp&gt; f(N), g(N), p(N), q(N);
+  const int D = std::sqrt(mod);
+  for (int i = 0; i &lt; (int)size(); ++i)
+    f[i].x = data[i] / D, f[i].y = data[i] % D;
+  for (int i = 0; i &lt; (int)h.size(); ++i) g[i].x = h[i] / D, g[i].y = h[i] % D;
+  rev.resize(N);
+  for (int i = 0; i &lt; N; ++i)
+    rev[i] = (rev[i &gt;&gt; 1] &gt;&gt; 1) | (i &amp; 1 ? N &gt;&gt; 1 : 0);
+  dft_for_complex(f, N, 1), dft_for_complex(g, N, 1);
+  for (int i = 0; i &lt; N; ++i) {
+    p[i] = (f[i] + f[(N - i) % N].conj()) * comp(0.50, 0) * g[i];
+    q[i] = (f[i] - f[(N - i) % N].conj()) * comp(0, -0.5) * g[i];
+  }
+  dft_for_complex(p, N, -1), dft_for_complex(q, N, -1);
+  std::vector&lt;int&gt; r(size() + h.size() - 1);
+  for (int i = 0; i &lt; (int)r.size(); ++i)
+    r[i] = construct_element(D, p[i].x / N + 0.5, (p[i].y + q[i].x) / N + 0.5,
+                             q[i].y / N + 0.5);
+  return arbitrary_module_poly(r, mod);
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator*=(
+    const arbitrary_module_poly &amp;h) {
+  return *this = *this * h;
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator*(const int &amp;h) const {
+  std::vector&lt;int&gt; f(this-&gt;data);
+  for (int i = 0; i &lt; (int)f.size(); ++i) f[i] = (ll)f[i] * h % mod;
+  return arbitrary_module_poly(f, mod);
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator*=(const int &amp;h) {
+  for (int i = 0; i &lt; (int)size(); ++i) data[i] = (ll)data[i] * h % mod;
+  return *this;
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator+(
+    const arbitrary_module_poly &amp;h) const {
+  std::vector&lt;int&gt; f(this-&gt;data);
+  if (f.size() &lt; h.size()) f.resize(h.size());
+  for (int i = 0; i &lt; (int)h.size(); ++i) f[i] = (f[i] + h[i]) % mod;
+  return arbitrary_module_poly(f, mod);
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator+=(
+    const arbitrary_module_poly &amp;h) {
+  if (size() &lt; h.size()) resize(h.size());
+  for (int i = 0; i &lt; (int)h.size(); ++i) data[i] = (data[i] + h[i]) % mod;
+  return *this;
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator-(
+    const arbitrary_module_poly &amp;h) const {
+  std::vector&lt;int&gt; f(this-&gt;data);
+  if (f.size() &lt; h.size()) f.resize(h.size());
+  for (int i = 0; i &lt; (int)h.size(); ++i) f[i] = (f[i] + mod - h[i]) % mod;
+  return arbitrary_module_poly(f, mod);
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator-=(
+    const arbitrary_module_poly &amp;h) {
+  if (size() &lt; h.size()) resize(h.size());
+  for (int i = 0; i &lt; (int)h.size(); ++i)
+    data[i] = (data[i] + mod - h[i]) % mod;
+  return *this;
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator&lt;&lt;(
+    const std::size_t &amp;b) const {
+  std::vector&lt;int&gt; f(size() + b);
+  for (int i = 0; i &lt; (int)size(); ++i) f[i + b] = data[i];
+  return arbitrary_module_poly(f, mod);
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator&lt;&lt;=(const std::size_t &amp;b) {
+  return *this = (*this) &lt;&lt; b;
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator&gt;&gt;(
+    const std::size_t &amp;b) const {
+  std::vector&lt;int&gt; f(size() - b);
+  for (int i = 0; i &lt; (int)f.size(); ++i) f[i] = data[i + b];
+  return arbitrary_module_poly(f, mod);
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator&gt;&gt;=(const std::size_t &amp;b) {
+  return *this = (*this) &gt;&gt; b;
+}
+
+arbitrary_module_poly arbitrary_module_poly::inv(void) const {
+  int N = 1;
+  while (N &lt; (int)(size() + size() - 1)) N &lt;&lt;= 1;
+  arbitrary_module_poly f(1, mod), g(N, mod), h(*this), f2(1, mod);
+  f[0] = qpow(data[0], mod - 2, mod), h.resize(N), f2[0] = 2;
+  for (int w = 2; w &lt; N; w &lt;&lt;= 1) {
+    g.resize(w);
+    for (int i = 0; i &lt; w; ++i) g[i] = h[i];
+    f = f * (f * g - f2) * (mod - 1);
+    f.resize(w);
+  }
+  f.resize(size());
+  return f;
+}
+
+arbitrary_module_poly arbitrary_module_poly::inv(const int &amp;h) const {
+  arbitrary_module_poly f(*this);
+  f.resize(h);
+  return f.inv();
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator/(const int &amp;h) const {
+  int inv = qpow(h, mod - 2, mod);
+  std::vector&lt;int&gt; f(this-&gt;data);
+  for (int i = 0; i &lt; (int)f.size(); ++i) f[i] = (ll)f[i] * inv % mod;
+  return arbitrary_module_poly(f, mod);
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator/=(const int &amp;h) {
+  int inv = qpow(h, mod - 2, mod);
+  for (int i = 0; i &lt; (int)size(); ++i) data[i] = (ll)data[i] * inv % mod;
+  return *this;
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator==(
+    const arbitrary_module_poly &amp;h) const {
+  if (size() != h.size() || mod != h.mod) return 0;
+  for (int i = 0; i &lt; (int)size(); ++i)
+    if (data[i] != h[i]) return 0;
+  return 1;
+}
+
+arbitrary_module_poly arbitrary_module_poly::operator!=(
+    const arbitrary_module_poly &amp;h) const {
+  if (size() != h.size() || mod != h.mod) return 1;
+  for (int i = 0; i &lt; (int)size(); ++i)
+    if (data[i] != h[i]) return 1;
+  return 0;
+}
+
+arbitrary_module_poly sqrt(const arbitrary_module_poly &amp;h) {
+  int N = 1;
+  while (N &lt; (int)(h.size() + h.size() - 1)) N &lt;&lt;= 1;
+  arbitrary_module_poly f(1, mod), g(N, mod), d(h);
+  f[0] = modsqrt(h[0], mod), d.resize(N);
+  for (int w = 2; w &lt; N; w &lt;&lt;= 1) {
+    g.resize(w);
+    for (int i = 0; i &lt; w; ++i) g[i] = d[i];
+    f = (f + f.inv(w) * g) / 2;
+    f.resize(w);
+  }
+  f.resize(h.size());
+  return f;
+}
+
+arbitrary_module_poly log(const arbitrary_module_poly &amp;h) {
+  arbitrary_module_poly f(h);
+  for (int i = 1; i &lt; (int)f.size(); ++i) f[i - 1] = (ll)f[i] * i % f.mod;
+  f[f.size() - 1] = 0, f = f * h.inv(), f.resize(h.size());
+  for (int i = (int)f.size() - 1; i &gt; 0; --i)
+    f[i] = (ll)f[i - 1] * qpow(i, f.mod - 2, f.mod) % f.mod;
+  f[0] = 0;
+  return f;
+}
+
+using m_poly = arbitrary_module_poly;
+}  // namespace fstdlib
+
+#endif
+```
+</code></pre>
+<p>???+ note "实现"
+    <code>cpp
+    int main() {
+      scanf("%d", &amp;n);
+      fact[0] = 1;
+      for (int i = 1; i &lt;= n; ++i) fact[i] = (ll)fact[i - 1] * i % mod;
+      exgcd(fact[n], mod, ifact[n], ifact[0]),
+          ifact[n] = (ifact[n] % mod + mod) % mod;
+      for (int i = n - 1; i &gt;= 0; --i) ifact[i] = (ll)ifact[i + 1] * (i + 1) % mod;
+      poly f(n + 1), g(n + 1);
+      for (int i = 0; i &lt;= n; ++i)
+        g[i] = (i &amp; 1 ? mod - 1ll : 1ll) * ifact[i] % mod,
+        f[i] = (ll)qpow(i, n) * ifact[i] % mod;
+      f *= g, f.resize(n + 1);
+      for (int i = 0; i &lt;= n; ++i) printf("%d ", f[i]);
+      return 0;
+    }</code></p>
+<h3 id="_4">同一列第二类斯特林数的计算</h3>
+<p>「同一列」的第二类斯特林数指的是，有着不同的 <span class="arithmatex">\(i\)</span>，相同的 <span class="arithmatex">\(k\)</span> 的一系列 <span class="arithmatex">\(\begin{Bmatrix}i\\k\end{Bmatrix}\)</span>。求出同一列的所有第二类斯特林数，就是对 <span class="arithmatex">\(i=0..n\)</span> 求出了将 <span class="arithmatex">\(i\)</span> 个不同元素划分为 <span class="arithmatex">\(k\)</span> 个非空集的方案数。</p>
+<p>利用指数型生成函数计算。</p>
+<p>一个盒子装 <span class="arithmatex">\(i\)</span> 个物品且盒子非空的方案数是 <span class="arithmatex">\([i&gt;0]\)</span>。我们可以写出它的指数型生成函数为 <span class="arithmatex">\(F(x)=\sum\limits_{i=1}^{+\infty}\dfrac{x^i}{i!} = \mathrm{e}^x-1\)</span>。经过之前的学习，我们明白 <span class="arithmatex">\(F^k(x)\)</span> 就是 <span class="arithmatex">\(i\)</span> 个有标号物品放到 <span class="arithmatex">\(k\)</span> 个有标号盒子里的指数型生成函数，那么除掉 <span class="arithmatex">\(k!\)</span> 就是 <span class="arithmatex">\(i\)</span> 个有标号物品放到 <span class="arithmatex">\(k\)</span> 个无标号盒子里的指数型生成函数。</p>
+<p><span class="arithmatex">\(\begin{Bmatrix}i\\k\end{Bmatrix}=\dfrac{\left[\dfrac{x^i}{i!}\right]F^k(x)}{k!}\)</span>，<span class="arithmatex">\(O(n\log n)\)</span> 计算多项式幂即可。</p>
+<p>另外，<span class="arithmatex">\(\exp F(x)=\sum\limits_{i=0}^{+\infty}\dfrac{F^i(x)}{i!}\)</span> 就是 <span class="arithmatex">\(i\)</span> 个有标号物品放到任意多个无标号盒子里的指数型生成函数（EXP 通过每项除以一个 <span class="arithmatex">\(i!\)</span> 去掉了盒子的标号）。这其实就是贝尔数的生成函数。</p>
+<p>这里涉及到很多「有标号」「无标号」的内容，注意辨析。</p>
+<p>???+ note "实现"
+    <code>cpp
+    int main() {
+      scanf("%d%d", &amp;n, &amp;k);
+      poly f(n + 1);
+      fact[0] = 1;
+      for (int i = 1; i &lt;= n; ++i) fact[i] = (ll)fact[i - 1] * i % mod;
+      for (int i = 1; i &lt;= n; ++i) f[i] = qpow(fact[i], mod - 2);
+      f = exp(log(f &gt;&gt; 1) * k) &lt;&lt; k, f.resize(n + 1);
+      int inv = qpow(fact[k], mod - 2);
+      for (int i = 0; i &lt;= n; ++i)
+        printf("%lld ", (ll)f[i] * fact[i] % mod * inv % mod);
+      return 0;
+    }</code></p>
+<h2 id="stirling-number_1">第一类斯特林数（Stirling Number）</h2>
+<p><strong>第一类斯特林数</strong>（斯特林轮换数）<span class="arithmatex">\(\begin{bmatrix}n\\ k\end{bmatrix}\)</span>，也可记做 <span class="arithmatex">\(s(n,k)\)</span>，表示将 <span class="arithmatex">\(n\)</span> 个两两不同的元素，划分为 <span class="arithmatex">\(k\)</span> 个互不区分的非空轮换的方案数。</p>
+<p>一个轮换就是一个首尾相接的环形排列。我们可以写出一个轮换 <span class="arithmatex">\([A,B,C,D]\)</span>，并且我们认为 <span class="arithmatex">\([A,B,C,D]=[B,C,D,A]=[C,D,A,B]=[D,A,B,C]\)</span>，即，两个可以通过旋转而互相得到的轮换是等价的。注意，我们不认为两个可以通过翻转而相互得到的轮换等价，即 <span class="arithmatex">\([A,B,C,D]\neq[D,C,B,A]\)</span>。</p>
+<h3 id="_5">递推式</h3>
+<div class="arithmatex">\[
+\begin{bmatrix}n\\ k\end{bmatrix}=\begin{bmatrix}n-1\\ k-1\end{bmatrix}+(n-1)\begin{bmatrix}n-1\\ k\end{bmatrix}
+\]</div>
+<p>边界是 <span class="arithmatex">\(\begin{bmatrix}n\\ 0\end{bmatrix}=[n=0]\)</span>。</p>
+<p>该递推式的证明可以考虑其组合意义。</p>
+<p>我们插入一个新元素时，有两种方案：</p>
+<ul>
+<li>将该新元素置于一个单独的轮换中，共有 <span class="arithmatex">\(\begin{bmatrix}n-1\\ k-1\end{bmatrix}\)</span> 种方案；</li>
+<li>将该元素插入到任何一个现有的轮换中，共有 <span class="arithmatex">\((n-1)\begin{bmatrix}n-1\\ k\end{bmatrix}\)</span> 种方案。</li>
+</ul>
+<p>根据加法原理，将两式相加即可得到递推式。</p>
+<h3 id="_6">通项公式</h3>
+<p>第一类斯特林数没有实用的通项公式。</p>
+<h3 id="_7">同一行第一类斯特林数的计算</h3>
+<p>类似第二类斯特林数，我们构造同行第一类斯特林数的生成函数，即</p>
+<p><span class="arithmatex">\(F_n(x)=\sum\limits_{i=0}^n\begin{bmatrix}n\\i\end{bmatrix}x^i\)</span></p>
+<p>根据递推公式，不难写出</p>
+<p><span class="arithmatex">\(F_n(x)=(n-1)F_{n-1}(x)+xF_{n-1}(x)\)</span></p>
+<p>于是</p>
+<p><span class="arithmatex">\(F_n(x)=\prod\limits_{i=0}^{n-1}(x+i)=\dfrac{(x+n-1)!}{(x-1)!}\)</span></p>
+<p>这其实是 <span class="arithmatex">\(x\)</span> 的 <span class="arithmatex">\(n\)</span> 次上升阶乘幂，记做 <span class="arithmatex">\(x^{\overline n}\)</span>。这个东西自然是可以暴力分治乘 <span class="arithmatex">\(O(n\log^2n)\)</span> 求出的，但用上升幂相关做法可以 <span class="arithmatex">\(O(n\log n)\)</span> 求出，详情见 <a href="../../poly/shift/#同一行第一类无符号-stirling-数">多项式平移 | 连续点值平移</a>。</p>
+<h3 id="_8">同一列第一类斯特林数的计算</h3>
+<p>仿照第二类斯特林数的计算，我们可以用指数型生成函数解决该问题。注意，由于递推公式和行有关，我们不能利用递推公式计算同列的第一类斯特林数。</p>
+<p>显然，单个轮换的指数型生成函数为</p>
+<p><span class="arithmatex">\(F(x)=\sum\limits_{i=1}^n\dfrac{(i-1)!x^i}{i!}=\sum\limits_{i=1}^n\dfrac{x^i}{i}\)</span></p>
+<p>它的 <span class="arithmatex">\(k\)</span> 次幂就是 <span class="arithmatex">\(\begin{bmatrix}i\\k\end{bmatrix}\)</span> 的指数型生成函数，<span class="arithmatex">\(O(n\log n)\)</span> 计算即可。</p>
+<p>???+ note "实现"
+    <code>cpp
+    int main() {
+      scanf("%d%d", &amp;n, &amp;k);
+      fact[0] = 1;
+      for (int i = 1; i &lt;= n; ++i) fact[i] = (ll)fact[i - 1] * i % mod;
+      ifact[n] = qpow(fact[n], mod - 2);
+      for (int i = n - 1; i &gt;= 0; --i) ifact[i] = (ll)ifact[i + 1] * (i + 1) % mod;
+      poly f(n + 1);
+      for (int i = 1; i &lt;= n; ++i) f[i] = (ll)fact[i - 1] * ifact[i] % mod;
+      f = exp(log(f &gt;&gt; 1) * k) &lt;&lt; k, f.resize(n + 1);
+      for (int i = 0; i &lt;= n; ++i)
+        printf("%lld ", (ll)f[i] * fact[i] % mod * ifact[k] % mod);
+      return 0;
+    }</code></p>
+<h2 id="_9">应用</h2>
+<h3 id="_10">上升幂与普通幂的相互转化</h3>
+<p>我们记上升阶乘幂 <span class="arithmatex">\(x^{\overline{n}}=\prod_{k=0}^{n-1} (x+k)\)</span>。</p>
+<p>则可以利用下面的恒等式将上升幂转化为普通幂：</p>
+<div class="arithmatex">\[
+x^{\overline{n}}=\sum_{k} \begin{bmatrix}n\\ k\end{bmatrix} x^k
+\]</div>
+<p>如果将普通幂转化为上升幂，则有下面的恒等式：</p>
+<div class="arithmatex">\[
+x^n=\sum_{k} \begin{Bmatrix}n\\ k\end{Bmatrix} (-1)^{n-k} x^{\overline{k}}
+\]</div>
+<h3 id="_11">下降幂与普通幂的相互转化</h3>
+<p>我们记下降阶乘幂 <span class="arithmatex">\(x^{\underline{n}}=\dfrac{x!}{(x-n)!}=\prod_{k=0}^{n-1} (x-k)\)</span>。</p>
+<p>则可以利用下面的恒等式将普通幂转化为下降幂：</p>
+<div class="arithmatex">\[
+x^n=\sum_{k} \begin{Bmatrix}n\\ k\end{Bmatrix} x^{\underline{k}}
+\]</div>
+<p>如果将下降幂转化为普通幂，则有下面的恒等式：</p>
+<div class="arithmatex">\[
+x^{\underline{n}}=\sum_{k} \begin{bmatrix}n\\ k\end{bmatrix} (-1)^{n-k} x^k
+\]</div>
+<h3 id="_12">多项式下降阶乘幂表示与多项式点值表示的关系</h3>
+<p>在这里，多项式的下降阶乘幂表示就是用</p>
+<div class="arithmatex">\[
+f(x)=\sum\limits_{i=0}^nb_i{x^{\underline{i}}}
+\]</div>
+<p>的形式表示一个多项式，而点值表示就是用 <span class="arithmatex">\(n+1\)</span> 个点</p>
+<div class="arithmatex">\[
+(i,a_i),i=0..n
+\]</div>
+<p>来表示一个多项式。</p>
+<p>显然，下降阶乘幂 <span class="arithmatex">\(b\)</span> 和点值 <span class="arithmatex">\(a\)</span> 间满足这样的关系：</p>
+<div class="arithmatex">\[
+a_k=\sum\limits_{i=0}^{n}b_ik^{\underline{i}}
+\]</div>
+<p>即</p>
+<div class="arithmatex">\[
+\begin{aligned}
+a_k&amp;=\sum\limits_{i=0}^{n}\dfrac{b_ik!}{(k-i)!}\\\dfrac{a_k}{k!}&amp;=\sum\limits_{i=0}^kb_i\dfrac{1}{(k-i)!}
+\end{aligned}
+\]</div>
+<p>这是一个卷积形式的式子，我们可以在 <span class="arithmatex">\(O(n\log n)\)</span> 的时间复杂度内完成点值和下降阶乘幂的互相转化。</p>
+<h2 id="_13">习题</h2>
+<ul>
+<li><a href="https://acm.hdu.edu.cn/showproblem.php?pid=3625">HDU3625 Examining the Rooms</a></li>
+<li><a href="https://uoj.ac/problem/540">UOJ540 联合省选 2020 组合数问题</a></li>
+<li><a href="https://uoj.ac/problem/269">UOJ269 清华集训 2016 如何优雅地求和</a></li>
+</ul>
+<h2 id="_14">参考资料与注释</h2>
+<ol>
+<li><a href="http://mathworld.wolfram.com/StirlingNumberoftheFirstKind.html">Stirling Number of the First Kind - Wolfram MathWorld</a></li>
+<li><a href="http://mathworld.wolfram.com/StirlingNumberoftheSecondKind.html">Stirling Number of the Second Kind - Wolfram MathWorld</a></li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

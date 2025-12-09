@@ -1,0 +1,1485 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Newton - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Newton
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../number-theory/basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        描述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#newtons-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Newton's Method
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="例题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多项式求逆
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多项式开方
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多项式指数函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        手算演示
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="手算演示">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复数多项式模多项式的平方根
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        整数模素数幂的平方根
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        代数证明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="代数证明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        有解的证明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        得到全部解的证明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Newton</h1>
+
+<h2 id="_1">描述</h2>
+<p>给定多项式 <span class="arithmatex">\(G\left(x, y\right)\)</span>，已知多项式 <span class="arithmatex">\(f\left(x\right)\)</span> 满足：</p>
+<div class="arithmatex">\[
+G\left(x, f\left(x\right)\right)\equiv 0\pmod{x^{n}}
+\]</div>
+<p>且存在数值 <span class="arithmatex">\(f_1\)</span> 使 <span class="arithmatex">\(G\left(x, y\right)\)</span> 满足以下条件：</p>
+<ul>
+<li><span class="arithmatex">\(G(0, f_1) = 0\)</span>；</li>
+<li><span class="arithmatex">\(\dfrac{\partial G}{\partial y}(0, f_1) \neq 0\)</span>。</li>
+</ul>
+<p>求出模 <span class="arithmatex">\(x^{n}\)</span> 意义下的 <span class="arithmatex">\(f\left(x\right)\)</span>。</p>
+<h2 id="newtons-method">Newton's Method</h2>
+<p>考虑倍增。</p>
+<p>首先当 <span class="arithmatex">\(n=1\)</span> 时，<span class="arithmatex">\(\left[x^{0}\right]G\left(x, f\left(x\right)\right)=0\)</span> 的解需要单独求出，假设中的 <span class="arithmatex">\(f_1\)</span> 即为一个解。</p>
+<p>假设现在已经得到了模 <span class="arithmatex">\(x^{\left\lceil\frac{n}{2}\right\rceil}\)</span> 意义下的解 <span class="arithmatex">\(f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\)</span>，要求模 <span class="arithmatex">\(x^{n}\)</span> 意义下的解 <span class="arithmatex">\(f\left(x\right) = f_n\left(x\right)\)</span>。</p>
+<p>将 <span class="arithmatex">\(G\left(x, f(x)\right)\)</span> 对 <span class="arithmatex">\(f(x)\)</span> 在 <span class="arithmatex">\(f(x)=f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\)</span> 处进行泰勒展开，有：</p>
+<div class="arithmatex">\[
+\sum_{i=0}^{+\infty}\frac{\frac{\partial^i G}{\partial y^i}\left(x, f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\right)}{i!}\left(f\left(x\right)-f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\right)^{i}\equiv 0\pmod{x^{n}}
+\]</div>
+<p>因为 <span class="arithmatex">\(f\left(x\right)-f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\)</span> 的最低非零项次数最低为 <span class="arithmatex">\(\left\lceil\frac{n}{2}\right\rceil\)</span>，故有：</p>
+<div class="arithmatex">\[
+\forall 2\leqslant i:\left(f\left(x\right)-f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\right)^{i}\equiv 0\pmod{x^{n}}
+\]</div>
+<p>则：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\sum_{i=0}^{+\infty}\frac{\frac{\partial^i G}{\partial y^i}\left(x, f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\right)}{i!}\left(f\left(x\right)-f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\right)^{i}&amp;\equiv G\left(x, f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\right)+\frac{\partial G}{\partial y}\left(x, f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\right)\left[f\left(x\right)-f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\right]\\
+&amp;\equiv 0\pmod{x^{n}}
+\end{aligned}
+\]</div>
+<div class="arithmatex">\[
+f_n\left(x\right)\equiv f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)-\frac{G\left(x, f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\right)}{\frac{\partial G}{\partial y}\left(x, f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\right)}\pmod{x^{n}}
+\]</div>
+<p>或者</p>
+<div class="arithmatex">\[
+f_{2n}\left(x\right)\equiv f_n\left(x\right)-\frac{G\left(x, f_n\left(x\right)\right)}{\frac{\partial G}{\partial y}\left(x, f_n\left(x\right)\right)}\pmod{x^{2n}}
+\]</div>
+<h2 id="_2">例题</h2>
+<h3 id="_3"><a href="../elementary-func/#多项式求逆">多项式求逆</a></h3>
+<p>设给定函数为 <span class="arithmatex">\(h\left(x\right)\)</span>，有：</p>
+<div class="arithmatex">\[
+G\left(x, y\right)=\frac{1}{y}-h\left(x\right)
+\]</div>
+<p>应用 Newton's Method 可得：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    f_{2n}\left(x\right)&amp;\equiv f_{n}\left(x\right)-\frac{1/f_{n}\left(x\right)-h\left(x\right)}{-1/f_{n}^{2}\left(x\right)}&amp;\pmod{x^{2n}}\\
+    &amp;\equiv 2f_{n}\left(x\right)-f_{n}^{2}\left(x\right)h\left(x\right)&amp;\pmod{x^{2n}}
+\end{aligned}
+\]</div>
+<p>时间复杂度</p>
+<div class="arithmatex">\[
+T\left(n\right)=T\left(\frac{n}{2}\right)+O\left(n\log{n}\right)=O\left(n\log{n}\right)
+\]</div>
+<h3 id="_4"><a href="../elementary-func/#多项式开方">多项式开方</a></h3>
+<p>设给定函数为 <span class="arithmatex">\(h\left(x\right)\)</span>，有：</p>
+<div class="arithmatex">\[
+G\left(x, y\right)=y^{2}-h\left(x\right)\equiv 0
+\]</div>
+<p>应用 Newton's Method 可得：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    f_{2n}\left(x\right)&amp;\equiv f_{n}\left(x\right)-\frac{f_{n}^{2}\left(x\right)-h\left(x\right)}{2f_{n}\left(x\right)}&amp;\pmod{x^{2n}}\\
+    &amp;\equiv\frac{f_{n}^{2}\left(x\right)+h\left(x\right)}{2f_{n}\left(x\right)}&amp;\pmod{x^{2n}}
+\end{aligned}
+\]</div>
+<p>时间复杂度</p>
+<div class="arithmatex">\[
+T\left(n\right)=T\left(\frac{n}{2}\right)+O\left(n\log{n}\right)=O\left(n\log{n}\right)
+\]</div>
+<h3 id="_5"><a href="../elementary-func/#多项式对数函数--指数函数">多项式指数函数</a></h3>
+<p>设给定函数为 <span class="arithmatex">\(h\left(x\right)\)</span>，有：</p>
+<div class="arithmatex">\[
+G\left(x, y\right)=\ln{y}-h\left(x\right)
+\]</div>
+<p>应用 Newton's Method 可得：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    f_{2n}\left(x\right)&amp;\equiv f_{n}\left(x\right)-\frac{\ln{f_{n}\left(x\right)}-h\left(x\right)}{1/f_{n}\left(x\right)}&amp;\pmod{x^{2n}}\\
+    &amp;\equiv f_{n}\left(x\right)\left(1-\ln{f_{n}\left(x\right)+h\left(x\right)}\right)&amp;\pmod{x^{2n}}
+\end{aligned}
+\]</div>
+<p>时间复杂度</p>
+<div class="arithmatex">\[
+T\left(n\right)=T\left(\frac{n}{2}\right)+O\left(n\log{n}\right)=O\left(n\log{n}\right)
+\]</div>
+<h2 id="_6">手算演示</h2>
+<p>为了方便理解，这里举几个例子演示一下算法流程。</p>
+<h3 id="_7">复数多项式模多项式的平方根</h3>
+<p>假设 <span class="arithmatex">\(h\)</span> 是一个不被 <span class="arithmatex">\(x\)</span> 整除（有常数项）的复数多项式，求它对模 <span class="arithmatex">\(x^n\)</span> 的平方根。</p>
+<p>我们有方程：</p>
+<div class="arithmatex">\[
+G\left(f(x)\right) = f^2(x)-h(x) \equiv 0\pmod{x^{n}}
+\]</div>
+<p>Taylor 展开 <span class="arithmatex">\(G\)</span> 得到下式。注意这里是对 <span class="arithmatex">\(f\)</span> 的展开，所以导数都是对 <span class="arithmatex">\(f\)</span> 的偏导数，<span class="arithmatex">\(x\)</span> 在这里是当成常数算的。</p>
+<div class="arithmatex">\[
+G(f(x)) = \sum_{i=0}^{+\infty}\frac{G^{\left(i\right)}\left(f_{0}(x)\right)}{i!}\left(f(x)-f_{0}(x)\right)^{i}
+= G(f_0(x)) + 2f_0(x)(f(x)-f_0(x)) + (f(x)-f_0(x))^2
+\]</div>
+<p>用倍增计算。假设倍增中的中间结果是 <span class="arithmatex">\(f_0(x), f_1(x), \ldots, f_j(x)\)</span>，或者数学严谨地说 <span class="arithmatex">\(f_j(x)\)</span> 是满足 <span class="arithmatex">\(G(f_j(x))\equiv 0\pmod{x^{2^j}}\)</span> 的一个复数多项式，且为了唯一性它同时满足以下两个条件：</p>
+<ul>
+<li><span class="arithmatex">\(f_{j}(x)\)</span> 次数不超过 <span class="arithmatex">\(x^{2^j}\)</span>；</li>
+<li><span class="arithmatex">\(f_{j+k}(x)-f_j(x)\equiv 0\pmod{x^{2^j}}\)</span>，对所有 <span class="arithmatex">\(k\)</span>。</li>
+</ul>
+<p>把 <span class="arithmatex">\(f_{j+1}(x)\)</span> 和 <span class="arithmatex">\(f_j(x)\)</span> 代入上面的式子就有：</p>
+<div class="arithmatex">\[
+G(f_{j+1}(x)) = G(f_j(x)) + 2f_j(f_{j+1}(x)-f_j(x)) + (f_{j+1}(x)-f_{j}(x))^2  \equiv 0 \pmod{x^{2^{j+1}}}
+\]</div>
+<p>显然 <span class="arithmatex">\(f_{j+1}(x)-f_j(x)\)</span> 必然是 <span class="arithmatex">\(x^{2^j}\)</span> 的倍数。于是得到</p>
+<div class="arithmatex">\[
+f_{j+1}(x) \equiv f_j(x) - \frac{f_j^2(x)-h(x)}{2f_j(x)} \equiv \frac{f_j(x)^2 + h(x)}{2f_j(x)} \pmod{x^{2^{j+1}}}
+\]</div>
+<p>如果 <span class="arithmatex">\(f_j(x)\)</span> 存在，那么 <span class="arithmatex">\(2f_j(x)\)</span> 不被 <span class="arithmatex">\(x\)</span> 整除（有常数项），所以必然有模 <span class="arithmatex">\(x^{2^{j+1}}\)</span> 的逆元。因此数列 <span class="arithmatex">\(f_0,f_1\ldots,f_j\)</span> 存在当且仅当 <span class="arithmatex">\(f_0\)</span> 存在。不被 <span class="arithmatex">\(x\)</span> 整除的复数多项式 <span class="arithmatex">\(h(x)\)</span> 模 <span class="arithmatex">\(x\)</span> 的平方根是一定存在的，因为 <span class="arithmatex">\(h(x)\)</span> 模掉 <span class="arithmatex">\(x\)</span> 就是个普通非零复数，一定有两个平方根。所以可以对所有有常数项的 <span class="arithmatex">\(h(x)\)</span> 用这个算法。</p>
+<p>选 <span class="arithmatex">\(h(x)=x+1\)</span> 举例计算如下：</p>
+<ul>
+<li><span class="arithmatex">\(f_0(x)=1\)</span>,<span class="arithmatex">\(f_1(x)=\dfrac{1^2+x+1}{2\times 1}\mod x^2 = \dfrac{1}{2}x+1\)</span>,<span class="arithmatex">\(f_2(x)=\dfrac{\left(\dfrac{1}{2}x+1\right)^2+x+1}{2\times \left(\dfrac{1}{2}x+1\right)}\mod x^4 = \dfrac{1}{16}x^3-\dfrac{1}{8}x^2+\dfrac{1}{2}x+1\)</span>,<span class="arithmatex">\(\ldots\)</span></li>
+<li><span class="arithmatex">\(f_0(x)=-1\)</span>,<span class="arithmatex">\(f_1(x)=\dfrac{(-1)^2+x+1}{2\times (-1)}\mod x^2 = -\dfrac{1}{2}x-1\)</span>,<span class="arithmatex">\(\ldots\)</span>（等于前一个取负）</li>
+</ul>
+<p>可以验证两个都是正确的模平方根多项式列。</p>
+<h3 id="_8">整数模素数幂的平方根</h3>
+<p>牛顿迭代算法还可以迁移到整数模素数的幂的情况。
+假设 <span class="arithmatex">\(h\)</span> 是一个不被 3 整除的「方便的」整数。（「方便」指「必然有解」，具体条件后文再言）假设要算 <span class="arithmatex">\(h\)</span> 在模 <span class="arithmatex">\(3^n\)</span> 意义下的平方根 <span class="arithmatex">\(f\)</span>。有方程：</p>
+<div class="arithmatex">\[
+G\left(f\right) = f^2-h \equiv 0\pmod{3^{n}}
+\]</div>
+<p>Taylor 展开 <span class="arithmatex">\(G\)</span> 得到：</p>
+<div class="arithmatex">\[
+G(f) = \sum_{i=0}^{+\infty}\frac{G^{\left(i\right)}\left(f_{0}\right)}{i!}\left(f-f_{0}\right)^{i}
+= G(f_0) + 2f_0(f-f_0) + (f-f_0)^2
+\]</div>
+<p>用倍增计算。假设倍增中得到的中间结果是 <span class="arithmatex">\(f_0, f_1, \ldots, f_j\)</span>，或者严谨地说 <span class="arithmatex">\(f_j\)</span> 是满足 <span class="arithmatex">\(G(f_j)\equiv 0\pmod{3^{2^j}}\)</span> 的一个整数，且为了唯一性它同时满足以下两个条件：</p>
+<ul>
+<li><span class="arithmatex">\(0 &lt; f_{j} &lt; 3^{2^j}\)</span>；</li>
+<li><span class="arithmatex">\(f_{j+k}-f_j\equiv 0\pmod{3^{2^j}}\)</span>，对所有 <span class="arithmatex">\(k\)</span>。</li>
+</ul>
+<p>把 <span class="arithmatex">\(f_{j+1}\)</span> 和 <span class="arithmatex">\(f_j\)</span> 代入上面的式子就有：</p>
+<div class="arithmatex">\[
+G(f_{j+1}) = G(f_j) + 2f_j(f_{j+1}-f_j) + (f_{j+1}-f_{j})^2  \equiv 0 \pmod{3^{2^{j+1}}}
+\]</div>
+<p>显然 <span class="arithmatex">\(f_{j+1}-f_j\)</span> 必然是 <span class="arithmatex">\(3^{2^j}\)</span> 的倍数。于是得到</p>
+<div class="arithmatex">\[
+f_{j+1} \equiv f_j - \frac{f_j^2-h}{2f_j} \equiv \frac{f_j^2 + h}{2f_j} \pmod{3^{2^{j+1}}}
+\]</div>
+<p>如果 <span class="arithmatex">\(f_j\)</span> 存在，那么 <span class="arithmatex">\(2f_j\)</span> 不被 <span class="arithmatex">\(3\)</span> 整除，所以必然有模 <span class="arithmatex">\(3^{2^{j+1}}\)</span> 的逆元。因此数列 <span class="arithmatex">\(f_0,f_1\ldots,f_j\)</span> 存在当且仅当 <span class="arithmatex">\(f_0\)</span> 存在。不被 3 整除的整数 <span class="arithmatex">\(h\)</span> 模 <span class="arithmatex">\(3\)</span> 的平方根要么不存在，要么有两个。所以 <span class="arithmatex">\(h\)</span> 有模 <span class="arithmatex">\(3\)</span> 平方根就是整个算法能跑的唯一条件。</p>
+<p>这里选 <span class="arithmatex">\(h=46\)</span> 实际计算示例。</p>
+<ul>
+<li><span class="arithmatex">\(f_0=1\)</span>,<span class="arithmatex">\(f_1=\dfrac{1^2+46}{2\times 1}\mod 9 = 1\)</span>,<span class="arithmatex">\(f_2=\dfrac{1^2+46}{2\times 1}\mod 81 = 64\)</span>,<span class="arithmatex">\(f_3=\dfrac{64^2+46}{2\times 64}\mod 6561 = 955\)</span>,<span class="arithmatex">\(\ldots\)</span></li>
+<li><span class="arithmatex">\(f_0=2\)</span>,<span class="arithmatex">\(f_1=\dfrac{2^2+46}{2\times 2}\mod 9 = 8\)</span>,<span class="arithmatex">\(f_2=\dfrac{8^2+46}{2\times 8}\mod 81 = 17\)</span>,<span class="arithmatex">\(f_3=\dfrac{17^2+46}{2\times 17}\mod 6561 = 5606\)</span>,<span class="arithmatex">\(\ldots\)</span>（等于前一个取负）</li>
+</ul>
+<p>可以验证一下两个都是正确的模平方根数列。</p>
+<h2 id="_9">代数证明</h2>
+<p>这一节对前文进行引申，用抽象代数的语言证明只要 <span class="arithmatex">\(f\)</span> 满足初始解条件，牛顿法对所有的 <span class="arithmatex">\(n\)</span> 都能给出解，并且可以得到全部的解。</p>
+<h3 id="_10">有解的证明</h3>
+<p>???+ note "引理 1"
+    设 <a href="../../algebra/ring-theory/#整环">整环</a>  <span class="arithmatex">\(R\)</span> 有多项式或 <a href="../../algebra/ring-theory/#形式幂级数环">形式幂级数</a>  <span class="arithmatex">\(f(X) = \sum_{i\geq 0}a_iX^i\)</span> 和 <span class="arithmatex">\(r,p\in R\)</span> 使得 <span class="arithmatex">\(f(r)\in Rp\)</span>（亦即 <span class="arithmatex">\(r\)</span> 是 <span class="arithmatex">\(f(X)\)</span> 在模 <span class="arithmatex">\(p\)</span> 意义下的根）且 <span class="arithmatex">\(f'(r)\in R\)</span> 在模 <span class="arithmatex">\(p\)</span> 意义下是可逆的。这里 <span class="arithmatex">\(f'(X) := \sum_{i\geq 0}(i+1)a_{i+1}X^i\)</span> 是 <span class="arithmatex">\(f(X)\)</span> 的 <strong>形式导数</strong>。那么 <span class="arithmatex">\(f\left(r-\dfrac{f(r)}{f'(r)}\right) \equiv 0\pmod {p^2}\)</span>。</p>
+<p>??? note "证明"
+    对所有 <span class="arithmatex">\(s\in R\)</span>，</p>
+<pre><code>$$
+\begin{aligned}
+f(r+sp) &amp;= \sum_{i\geq 0}a_i(r+sp)^i \\
+&amp;= \sum_{i\geq 0}a_ir^i + sp\sum_{i\geq 1}ia_ir^{i-1} + s^2p^2\left(\ldots\right) \\
+&amp;= f(r) + spf'(r) + s^2p^2\left(\frac{f''(r)}{2!} + \cdots\right),
+\end{aligned}
+$$
+
+所以
+
+$$
+f(r+sp) \in Rp^2 \iff f(r)+f'(r)sp \in Rp^2
+$$
+
+因为 $f(r)\in Rp$，且 $f'(r)$ 可逆，所以取 $sp = -\dfrac{f(r)}{f'(r)}$ 即可，这里 $\dfrac{1}{f'(r)}$ 是模 $p^2$ 意义下的逆元。因为 $f'(r)$ 在模 $p$ 意义下可逆，所以它在模 $p^2$ 意义下也必定存在逆元：设有 $a,b,c\in R$ 使 $af'(r) = bp+1$ 和 $f(r)=cp$，那么 $\left(a^2f'(r)-2\right)f'(r) = b^2p^2+1$，故可以取 $s=c(2-a^2f'(r))$。
+</code></pre>
+<p>对于域 <span class="arithmatex">\(k\)</span> 上的多项式环 <span class="arithmatex">\(k[X]\)</span>，设有 <span class="arithmatex">\(G(X, Y)\in k[X, Y]\)</span> 和 <span class="arithmatex">\(f_n\in k[X]\)</span> 使 <span class="arithmatex">\(G(X, f_n(X))\in k[X]X^n\)</span>，那么应用引理 1 就可得到</p>
+<div class="arithmatex">\[
+G\left(X, f_n(X) - \frac{G(X, f_n(X))}{\frac{\partial G}{\partial Y}(X, f_n(X))} \right)\equiv 0 \pmod {X^{2n}}
+\]</div>
+<p>而倍增的初始条件只要有 <span class="arithmatex">\(f_1\in k\)</span> 使得 <span class="arithmatex">\(G(X, f_1)\equiv 0\pmod X\)</span> 和 <span class="arithmatex">\(\dfrac{\partial G}{\partial Y}(X, f_1)\not\equiv 0\pmod X\)</span>。后一个条件保证了 <span class="arithmatex">\(\dfrac{\partial G}{\partial Y}\)</span> 有非零常数项，同时因为 <span class="arithmatex">\(X\left| \dfrac{G(X, f_n(X))}{\frac{\partial G}{\partial Y}(X, f_n(X))} \right.\)</span>，故而对所有的 <span class="arithmatex">\(n\)</span>，<span class="arithmatex">\(\dfrac{\partial G}{\partial Y}(X, f_n)\)</span> 总是模 <span class="arithmatex">\(X^n\)</span> 意义下可逆的，也就满足了下一次迭代的条件。</p>
+<h3 id="_11">得到全部解的证明</h3>
+<p>???+ note "引理 2"
+    若 <span class="arithmatex">\(R\)</span> 为 <a href="../../algebra/ring-theory/#唯一分解整环">UFD</a>，<span class="arithmatex">\(f,r,p\)</span> 定义同引理 1。则引理 1 给出的 <span class="arithmatex">\(r-\dfrac{f(r)}{f'(r)}\)</span> 是模 <span class="arithmatex">\(p^{2}\)</span> 意义下唯一满足以下两条件的 <span class="arithmatex">\(x\)</span> 的值：</p>
+<pre><code>-   $f(x)\in Rp^{2}$
+-   $x-r\in Rp$
+
+亦即
+
+$$
+\forall x\in R,\qquad p^2\mid f(x)\wedge p\mid (x-r) \implies x\equiv r-\dfrac{f(r)}{f'(r)} \pmod {p^2}
+$$
+</code></pre>
+<p>??? note "证明"
+    令 <span class="arithmatex">\(s = -\dfrac{f(r)}{f'(r)p}\)</span> 和 <span class="arithmatex">\(u = r+sp\)</span>，引理 1 保证 <span class="arithmatex">\(u\)</span> 满足两个条件，且 <span class="arithmatex">\(f(r) + f'(r)sp \in Rp^{2}\)</span>。
+    设 <span class="arithmatex">\(v\)</span> 是满足上述条件的值，则有 <span class="arithmatex">\(v = r+tp\)</span> 和 <span class="arithmatex">\(f(r) + f'(r)tp \in Rp^{2}\)</span>。
+    于是有 <span class="arithmatex">\(f'(r)(t-s)p\in Rp^{2}\)</span> 和 <span class="arithmatex">\(v-u\in Rp^{2}\)</span>。</p>
+<p>牛顿法可以保证得到模 <span class="arithmatex">\(X^{2^n}\)</span> 的全部解。假设 <span class="arithmatex">\(G(X, h)\equiv 0\pmod {X^{2^n}}\)</span>，那么令 <span class="arithmatex">\(h_{2^i} := h\pmod {X^{2^i}}\)</span>，然后取 <span class="arithmatex">\(f_1 = h_1\)</span> 并用牛顿法，根据引理 2 可得 <span class="arithmatex">\(f_{2^i} \equiv h_{2^i}\pmod {X^{2^i}}\)</span>，所以一定有 <span class="arithmatex">\(f_{2^n} = h\)</span>。</p>
+<p>上面的论证也说明了，在 <span class="arithmatex">\(\dfrac{\partial G}{\partial y}(0, y)\)</span> 永远可逆时，<span class="arithmatex">\(G(X, f)\equiv 0\pmod {X^n}\)</span> 的解的个数等于 <span class="arithmatex">\(G(0, f)\equiv 0\pmod X\)</span> 的解的个数。这个结论并非平凡。请看下面的例子。</p>
+<p>??? example "牛顿法无效时解的个数随次数而变多的例子"
+    模 <span class="arithmatex">\(X\)</span> 意义下 <span class="arithmatex">\(X^2\)</span> 的平方根只有 <span class="arithmatex">\(0\)</span>，但是模 <span class="arithmatex">\(X^4\)</span> 意义下 <span class="arithmatex">\(X^2\)</span> 的平方根有 <span class="arithmatex">\(X, -X, X^3+X, \ldots\)</span>。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1585 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Symbolic method - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Symbolic method
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../number-theory/basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        无标号体系
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="无标号体系">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集合的（不相交）并构造
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集合的笛卡尔积构造
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集合的 Sequence 构造
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集合的 Multiset 构造
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#powerset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集合的 Powerset 构造
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cycle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        集合的 Cycle 构造
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        有限制的构造
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考文献
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Symbolic method</h1>
+
+<p>符号化方法（symbolic method）是将组合对象快速转换成生成函数的一种方法，我们将考虑对于集合上定义的特定运算，然后导出其对应的生成函数的运算。</p>
+<p>我们称一个组合类（或简称为类）为 <span class="arithmatex">\((\mathcal{A},\lvert \cdot \rvert)\)</span>，其中 <span class="arithmatex">\(\mathcal{A}\)</span> 为组合对象的集合，函数 <span class="arithmatex">\(\lvert \cdot \rvert\)</span> 将每一个组合对象映射为一个非负整数，一般称为大小函数。需要注意的是这个非负整数不能是无限大的。例如对于字符集为 <span class="arithmatex">\(\lbrace 0,1\rbrace\)</span> 的字符串，可以将字符串的长度设置为其大小函数；对于树或图可将节点的数量设置为其大小函数，注意这并非绝对，也可能将某些特定节点的大小函数设置为 <span class="arithmatex">\(0\)</span> 等。</p>
+<p>本文是基于 Analytic Combinatorics 一书第一章的简化。</p>
+<h2 id="_1">无标号体系</h2>
+<p>在无标号体系中将使用普通生成函数（OGF）。对于集合 <span class="arithmatex">\(\mathcal{A}\)</span> 其对应 OGF 记为</p>
+<div class="arithmatex">\[
+A(z)=\sum_{\alpha\in\mathcal{A}}z^{\lvert \alpha \rvert}=\sum_{n\geq 0}a_nz^n
+\]</div>
+<p>我们约定使用同一组的字母表示同一个类对应的生成函数等，例如用 <span class="arithmatex">\(a_n\)</span> 表示 <span class="arithmatex">\(\lbrack z^n\rbrack A(z)\)</span> 即 <span class="arithmatex">\(A(z)\)</span> 中 <span class="arithmatex">\(z^n\)</span> 的系数，用 <span class="arithmatex">\(\mathcal{A}_n\)</span> 表示 <span class="arithmatex">\(\mathcal{A}\)</span> 中大小函数为 <span class="arithmatex">\(n\)</span> 的对象的集合（所以 <span class="arithmatex">\(a_n=\operatorname{card}(\mathcal{A}_n)\)</span> 其中 <span class="arithmatex">\(\operatorname{card}\)</span> 为基数（cardinality））。</p>
+<p>本文将不讨论可容许性（admissibility），读者可参考文献中的内容。</p>
+<p>下面将引入两种特殊的组合类和组合对象：</p>
+<ul>
+<li>记 <span class="arithmatex">\(\epsilon\)</span> 为中性对象（neutral object）和 <span class="arithmatex">\(\mathcal{E}=\lbrace \epsilon \rbrace\)</span> 为中性类（neutral class），中性对象的大小为 <span class="arithmatex">\(0\)</span>，中性类的 OGF 为 <span class="arithmatex">\(E(z)=1\)</span>。</li>
+<li>记 <span class="arithmatex">\(\circ\)</span> 或 <span class="arithmatex">\(\bullet\)</span> 为原子对象（atom object）和 <span class="arithmatex">\(\mathcal{Z}_{\circ}=\lbrace \circ\rbrace\)</span> 或 <span class="arithmatex">\(\mathcal{Z}_{\bullet}=\lbrace \bullet\rbrace\)</span> 或简写为 <span class="arithmatex">\(\mathcal{Z}\)</span> 为原子类（atom class），原子对象的大小为 <span class="arithmatex">\(1\)</span>，原子类的 OGF 为 <span class="arithmatex">\(Z(z)=z\)</span>。</li>
+</ul>
+<p>对于两个组合类 <span class="arithmatex">\(\mathcal{A}\)</span> 和 <span class="arithmatex">\(\mathcal{B}\)</span> 在组合意义上同构记为 <span class="arithmatex">\(\mathcal{A}=\mathcal{B}\)</span> 或 <span class="arithmatex">\(\mathcal{A}\cong\mathcal{B}\)</span>，但仅当该同构不平凡时才使用后者的记号。</p>
+<p>我们有</p>
+<div class="arithmatex">\[
+\mathcal{A}\cong\mathcal{E}\times \mathcal{A}\cong\mathcal{A}\times\mathcal{E}
+\]</div>
+<p>其中 <span class="arithmatex">\(\times\)</span> 为二元运算，表示集合的笛卡尔积。</p>
+<h3 id="_2">集合的（不相交）并构造</h3>
+<p>对于类 <span class="arithmatex">\(\mathcal{A}\)</span> 和 <span class="arithmatex">\(\mathcal{B}\)</span> 的并记为</p>
+<div class="arithmatex">\[
+\mathcal{A}+\mathcal{B}=(\mathcal{E}_{1}\times\mathcal{A})+(\mathcal{E}_2\times\mathcal{B})
+\]</div>
+<p>如此定义可以不违背集合论中集合不相交的要求，我们可以想象成将 <span class="arithmatex">\(\mathcal{A}\)</span> 中的对象染色成红色，将 <span class="arithmatex">\(\mathcal{B}\)</span> 中的对象染色成蓝色。</p>
+<p>对应 OGF 为</p>
+<div class="arithmatex">\[
+A(z)+B(z)
+\]</div>
+<p>考虑</p>
+<div class="arithmatex">\[
+A(z)+B(z)=\sum _ {\alpha\in\mathcal{A}}z^{\lvert \alpha\rvert} + \sum _ {\beta\in\mathcal{B}}z^{\lvert \beta\rvert}=\sum_{n\geq 0}(a_n+b_n)z^n
+\]</div>
+<p>对应形式幂级数的加法。</p>
+<h3 id="_3">集合的笛卡尔积构造</h3>
+<p>对于类 <span class="arithmatex">\(\mathcal{A}\)</span> 和 <span class="arithmatex">\(\mathcal{B}\)</span> 的笛卡尔积记为</p>
+<div class="arithmatex">\[
+\mathcal{A}\times \mathcal{B}=\left\lbrace (\alpha, \beta)\mid \alpha \in \mathcal{A},\beta\in\mathcal{B}\right\rbrace
+\]</div>
+<p>对应 OGF 为</p>
+<div class="arithmatex">\[
+A(z)\cdot B(z)
+\]</div>
+<p>我们定义 <span class="arithmatex">\((\alpha,\beta)\)</span> 的大小为其组成部分的大小之和，那么显然也有</p>
+<div class="arithmatex">\[
+\gamma =(\alpha_1,\alpha_2,\dots ,\alpha_n)\implies \lvert \gamma\rvert =\lvert \alpha_1\rvert +\lvert \alpha_2\rvert +\cdots +\lvert \alpha_n\rvert
+\]</div>
+<p>所以</p>
+<div class="arithmatex">\[
+A(z)\cdot B(z)=\left(\sum _ {\alpha\in\mathcal{A}}z^{\lvert \alpha\rvert}\right)\left(\sum _ {\beta\in\mathcal{B}}z^{\lvert \beta\rvert}\right)=\sum _ {(\alpha, \beta)\in(\mathcal{A}\times \mathcal{B})}z^{\lvert \alpha\rvert +\lvert \beta\rvert}=\sum_{n\geq 0}\sum_{i+j=n}a_ib_jz^n
+\]</div>
+<p>对应形式幂级数的乘法。</p>
+<h3 id="sequence">集合的 Sequence 构造</h3>
+<p>Sequence 构造生成了所有可能的组合。</p>
+<p>???+ note "例"
+    $$
+    \begin{aligned}
+    \operatorname{SEQ}(\lbrace a\rbrace)&amp;=\lbrace \epsilon\rbrace +\lbrace a\rbrace +\lbrace (a,a)\rbrace +\lbrace (a,a,a)\rbrace +\cdots\
+    \operatorname{SEQ}(\lbrace a,b\rbrace)&amp;=\lbrace \epsilon\rbrace +\lbrace a,b\rbrace +\lbrace (a,b)\rbrace + \lbrace(b,a)\rbrace +\lbrace (a,a)\rbrace +\lbrace (b,b)\rbrace\
+    &amp;+\lbrace (a,b,a)\rbrace +\lbrace (a,b,b)\rbrace +\lbrace (a,a,b)\rbrace\
+    &amp;+\lbrace (b,b,a)\rbrace +\lbrace (b,a,b)\rbrace +\lbrace (b,b,b)\rbrace +\lbrace (a,a,a)\rbrace +\lbrace (b,a,a)\rbrace\
+    &amp;+\cdots
+    \end{aligned}
+    $$</p>
+<pre><code>可以看到 $\lbrace (a,b)\rbrace ,\lbrace (b,a)\rbrace$ 这样组成部分的顺序不同的元素被生成了，可以认为 Sequence 构造生成了有序的组合。
+</code></pre>
+<p>我们定义</p>
+<div class="arithmatex">\[
+\operatorname{SEQ}(\mathcal{A})=\mathcal{E}+\mathcal{A}+(\mathcal{A}\times \mathcal{A})+(\mathcal{A}\times \mathcal{A}\times \mathcal{A})+\cdots
+\]</div>
+<p>且要求 <span class="arithmatex">\(\mathcal{A}_0=\varnothing\)</span>，也就是 <span class="arithmatex">\(\mathcal{A}\)</span> 中没有大小为 <span class="arithmatex">\(0\)</span> 的对象。</p>
+<p>对应 OGF 为</p>
+<div class="arithmatex">\[
+Q(A(z))=1+A(z)+A(z)^2+A(z)^3+\cdots =\frac{1}{1-A(z)}
+\]</div>
+<p>其中 <span class="arithmatex">\(Q\)</span> 为 Pólya 准逆（quasi-inversion）。</p>
+<p>???+ note "例：有序有根树（ordered rooted tree）"
+    我们可以使用 Sequence 构造来定义有序有根树，即孩子之间的顺序有意义的有根树，设该组合类为 <span class="arithmatex">\(\mathcal{T}\)</span> 那么一棵树为一个根节点和树的 Sequence，即</p>
+<pre><code>$$
+\mathcal{T}=\lbrace \bullet\rbrace\times\operatorname{SEQ}(\mathcal{T})
+$$
+
+对应 OGF 为
+
+$$
+T(z)=\frac{z}{1-T(z)}
+$$
+
+前几项系数为 `0 1 1 2 5 14 42 132 429 1430 4862 16796`，忽略常数项即 OEIS [A000108](http://oeis.org/A000108)。
+</code></pre>
+<h3 id="multiset">集合的 Multiset 构造</h3>
+<p>Multiset 构造生成了所有可能的组合，但不区分组成部分的元素之间的顺序。</p>
+<p>???+ note "例"
+    $$
+    \begin{aligned}
+    \operatorname{MSET}(\lbrace a\rbrace)&amp;=\lbrace \epsilon\rbrace +\lbrace a\rbrace +\lbrace (a,a)\rbrace +\lbrace (a,a,a)\rbrace +\cdots\
+    \operatorname{MSET}(\lbrace a,b\rbrace)&amp;=\lbrace \epsilon\rbrace +\lbrace a\rbrace +\lbrace (a,a)\rbrace +\lbrace (a,a,a)\rbrace +\cdots\
+    &amp;+\lbrace b\rbrace +\lbrace (a,b)\rbrace +\lbrace (a,a,b)\rbrace +\cdots \
+    &amp;+\lbrace (b,b)\rbrace + \lbrace (a,b,b)\rbrace +\lbrace (a,a,b,b)\rbrace + \cdots\
+    &amp;+\cdots
+    \end{aligned}
+    $$</p>
+<pre><code>注意到 $\lbrace (b,a)\rbrace,\lbrace (a,b,a)\rbrace$ 在 $\operatorname{SEQ}(\lbrace a,b\rbrace)$ 中出现，但在 $\operatorname{MSET}(\lbrace a,b\rbrace)$ 没有出现，可以认为 Multiset 生成了无序的组合。
+</code></pre>
+<p>我们定义其递推式为</p>
+<div class="arithmatex">\[
+\operatorname{MSET}(\lbrace \alpha_0,\alpha_1,\dots, \alpha_n\rbrace)=\operatorname{MSET}(\lbrace \alpha_0,\alpha_1,\dots, \alpha_{n-1}\rbrace)\times \operatorname{SEQ}(\lbrace \alpha_n\rbrace)
+\]</div>
+<p>即</p>
+<div class="arithmatex">\[
+\operatorname{MSET}(\mathcal{A})=\prod _ {\alpha\in\mathcal{A}}\operatorname{SEQ}(\lbrace \alpha\rbrace)
+\]</div>
+<p>且要求 <span class="arithmatex">\(\mathcal{A}_0=\varnothing\)</span>。或者也可以给出等价的</p>
+<div class="arithmatex">\[
+\operatorname{MSET}(\mathcal{A})=\operatorname{SEQ}(\mathcal{A})/\mathbf{R}
+\]</div>
+<p>其中 <span class="arithmatex">\(\mathbf{R}\)</span> 为等价关系，我们说 <span class="arithmatex">\((\alpha_1,\dots,\alpha_n)\mathbf{R}(\beta_1,\dots,\beta_n)\)</span> 当且仅当存在任一置换 <span class="arithmatex">\(\sigma\)</span> 对于所有 <span class="arithmatex">\(j\)</span> 满足 <span class="arithmatex">\(\beta_{j}=\alpha_{\sigma(j)}\)</span>。</p>
+<p>对应 OGF 为</p>
+<div class="arithmatex">\[
+\operatorname{Exp}(A(z))=\prod _ {\alpha \in\mathcal{A}}\left(1-z^{\lvert \alpha \rvert}\right)^{-1}=\prod _ {n\geq 1}\left(1-z^n\right)^{-a_n}
+\]</div>
+<p>注意到</p>
+<div class="arithmatex">\[
+\ln(1+z)=\frac{z}{1}-\frac{z^2}{2}+\frac{z^3}{3}-\cdots =\sum_{n\geq 1}\frac{(-1)^{n-1}z^n}{n}
+\]</div>
+<p>且 <span class="arithmatex">\(A(z)=\exp(\ln(A(z)))\)</span> 所以</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\operatorname{Exp}(A(z))&amp;=\exp\left(\sum _ {n\geq 1}-a_n\cdot \ln\left(1-z^n\right)\right)\\
+&amp;=\exp\left(\sum _ {n\geq 1}-a_n\cdot \sum _ {m\geq 1}\frac{-z^{nm}}{m}\right)\\
+&amp;=\exp\left(\frac{A(z)}{1}+\frac{A(z^2)}{2}+\frac{A(z^3)}{3}+\cdots \right)
+\end{aligned}
+\]</div>
+<p>其中 <span class="arithmatex">\(\operatorname{Exp}\)</span> 为 Pólya 指数，也被称为 Euler 变换。</p>
+<p>???+ note "例题 <a href="https://loj.ac/p/6268">LOJ 6268. 分拆数</a>"
+    <strong>题意</strong>：令 <span class="arithmatex">\(f(n)\)</span> 表示将 <span class="arithmatex">\(n\)</span> 进行分拆的方案数，求 <span class="arithmatex">\(f(1),f(2),\dots,f(10^5)\)</span> 对 <span class="arithmatex">\(998244353\)</span> 取模的值。</p>
+<pre><code>**解**：设全体正整数类为 $\mathcal{I}$，那么 $\mathcal{I}=\operatorname{SEQ}_{\geq 1}(\mathcal{Z})=\mathcal{Z}\times \operatorname{SEQ}(\mathcal{Z})$（下标 $\geq 1$ 为有限制的构造，见后文）。所求即
+
+$$
+\operatorname{MSET}(\mathcal{I})
+$$
+
+对应 OGF 前几项系数为 `1 2 3 5 7 11 15 22 30 42`（忽略常数项）即 OEIS [A000041](https://oeis.org/A000041)。
+</code></pre>
+<p>???+ note "例题 <a href="https://www.luogu.com.cn/problem/P4389">洛谷 P4389 付公主的背包</a>"
+    <strong>题意</strong>：给出 <span class="arithmatex">\(n\)</span> 种体积分别为 <span class="arithmatex">\(v_1,\dots ,v_n\)</span> 的商品和正整数 <span class="arithmatex">\(m\)</span>，求体积为 <span class="arithmatex">\(1,2,\dots,m\)</span> 的背包装满的方案数（商品数量不限，有同体积的不同种商品）对 <span class="arithmatex">\(998244353\)</span> 取模的值。约定 <span class="arithmatex">\(1\leq n,m\leq 10^5\)</span> 且 <span class="arithmatex">\(1\leq v_i\leq m\)</span>。</p>
+<pre><code>**解**：设商品的组合类为 $\mathcal{A}$，所求即 $\operatorname{MSET}(\mathcal{A})$ 对应 OGF 的系数。
+</code></pre>
+<p>???+ note "例题 <a href="https://www.luogu.com.cn/problem/P5900">洛谷 P5900 无标号无根树计数</a>"
+    <strong>题意</strong>：求出 <span class="arithmatex">\(n\)</span> 个节点的无标号无根树的个数对 <span class="arithmatex">\(998244353\)</span> 取模的值。约定 <span class="arithmatex">\(1\leq n\leq 2\times 10^5\)</span>。</p>
+<pre><code>**解**：设无标号有根树的组合类为 $\mathcal{T}$，那么
+
+$$
+\mathcal{T}=\lbrace \bullet\rbrace\times\operatorname{MSET}(\mathcal{T})
+$$
+
+根据 Richard Otter 的论文 [The Number of Trees](https://users.math.msu.edu/users/magyarp/Math482/Otter-Trees.pdf) 中的描述，对应无根树的 OGF 为
+
+$$
+T(z)-\frac{1}{2}T^2(z)+\frac{1}{2}T(z^2)
+$$
+
+前几项系数为 `1 1 1 2 3 6 11 23 47 106`（忽略常数项）即 OEIS [A000055](https://oeis.org/A000055)。
+</code></pre>
+<h3 id="powerset">集合的 Powerset 构造</h3>
+<p>Powerset 构造生成了所有子集。</p>
+<p>???+ note "例"
+    $$
+    \begin{aligned}
+    \operatorname{PSET}(\lbrace a\rbrace)&amp;=\lbrace \epsilon\rbrace +\lbrace a\rbrace \
+    \operatorname{PSET}(\lbrace a,b\rbrace)&amp;=\lbrace \epsilon\rbrace +\lbrace a\rbrace +\lbrace b\rbrace +\lbrace (a,b)\rbrace \
+    \operatorname{PSET}(\lbrace a,b,c\rbrace)&amp;=\lbrace \epsilon\rbrace +\lbrace a\rbrace +\lbrace b\rbrace +\lbrace (a,b)\rbrace +\lbrace c\rbrace +\lbrace (a,c)\rbrace +\lbrace (b,c)\rbrace +\lbrace (a,b,c)\rbrace\
+    \end{aligned}
+    $$</p>
+<p>我们定义其递推式为</p>
+<div class="arithmatex">\[
+\operatorname{PSET}(\lbrace \alpha_0,\alpha_1,\dots, \alpha_n\rbrace)=\operatorname{PSET}(\lbrace \alpha_0,\alpha_1,\dots, \alpha_{n-1}\rbrace)\times (\lbrace \epsilon\rbrace +\lbrace \alpha_n\rbrace)
+\]</div>
+<p>即</p>
+<div class="arithmatex">\[
+\operatorname{PSET}(\mathcal{A})\cong \prod _ {\alpha\in\mathcal{A}}\left(\lbrace \epsilon \rbrace +\lbrace \alpha\rbrace\right)
+\]</div>
+<p>且要求 <span class="arithmatex">\(\mathcal{A}_0=\varnothing\)</span>。</p>
+<p>对应 OGF 为</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\overline{\operatorname{Exp}}(A(z))&amp;=\prod _ {\alpha\in\mathcal{A}}\left(1+z^{\lvert \alpha \rvert}\right)=\prod _ {n\geq 1}\left(1+z^n\right)^{a_n}\\
+&amp;=\exp\left(\sum _ {n\geq 1}a_n\cdot \ln\left(1+z^n\right)\right)\\
+&amp;=\exp\left(\sum _ {n\geq 1}a_n\cdot \sum _ {m\geq 1}\frac{(-1)^{m-1}z^{nm}}{m}\right)\\
+&amp;=\exp\left(\frac{A(z)}{1}-\frac{A(z^2)}{2}+\frac{A(z^3)}{3}-\cdots \right)
+\end{aligned}
+\]</div>
+<p>其中 <span class="arithmatex">\(\overline{\operatorname{Exp}}\)</span> 为 Pólya 指数·改。</p>
+<p>容易发现 <span class="arithmatex">\(\operatorname{PSET}(\mathcal{A})\subset \operatorname{MSET}(\mathcal{A})\)</span>。</p>
+<h3 id="cycle">集合的 Cycle 构造</h3>
+<p>Cycle 构造生成了所有可能的组合，但不区分仅轮换不同的组合。</p>
+<p>我们定义为</p>
+<div class="arithmatex">\[
+\operatorname{CYC}(\mathcal{A})=\left(\operatorname{SEQ}(\mathcal{A})\setminus\lbrace \epsilon\rbrace\right)/\mathbf{S}
+\]</div>
+<p>其中 <span class="arithmatex">\(\mathbf{S}\)</span> 为等价关系，我们说 <span class="arithmatex">\((\alpha_1,\dots,\alpha_n)\mathbf{S}(\beta_1,\dots,\beta_n)\)</span> 当且仅当存在任一循环移位 <span class="arithmatex">\(\tau\)</span> 对于所有 <span class="arithmatex">\(j\)</span> 都满足 <span class="arithmatex">\(\beta_j=\alpha_{\tau(j)}\)</span>。</p>
+<p>???+ note "例"
+    为了简便我们令 <span class="arithmatex">\(\texttt{a},\texttt{b}\)</span> 均为大小为 <span class="arithmatex">\(1\)</span> 的字符，这里仅列举大小为 <span class="arithmatex">\(3\)</span> 和 <span class="arithmatex">\(4\)</span> 的字符串：</p>
+<pre><code>$$
+\operatorname{CYC}(\lbrace \texttt{a},\texttt{b}\rbrace)_3=\lbrace \texttt{aaa}\rbrace +\lbrace \texttt{aab}\rbrace+\lbrace \texttt{abb}\rbrace+\lbrace \texttt{bbb}\rbrace
+$$
+
+其中 $\texttt{aab}\mathbf{S}\texttt{baa}\mathbf{S}\texttt{aba}$ 只保留其一，同样的 $\texttt{abb}\mathbf{S}\texttt{bab}\mathbf{S}\texttt{bba}$ 只保留其一。
+
+$$
+\operatorname{CYC}(\lbrace \texttt{a},\texttt{b}\rbrace)_4=\lbrace \texttt{aaaa}\rbrace +\lbrace \texttt{aaab}\rbrace+\lbrace \texttt{aabb}\rbrace+\lbrace \texttt{abbb}\rbrace+\lbrace \texttt{bbbb}\rbrace +\lbrace \texttt{abab}\rbrace
+$$
+
+其中 $\texttt{aaab}\mathbf{S}\texttt{baaa}\mathbf{S}\texttt{abaa}\mathbf{S}\texttt{aaba}$，$\texttt{aabb}\mathbf{S}\texttt{baab}\mathbf{S}\texttt{bbaa}\mathbf{S}\texttt{abba}$，$\texttt{abbb}\mathbf{S}\texttt{babb}\mathbf{S}\texttt{bbab}\mathbf{S}\texttt{bbba}$ 和 $\texttt{abab}\mathbf{S}\texttt{baba}$。
+</code></pre>
+<p>对应 OGF 为</p>
+<div class="arithmatex">\[
+\operatorname{Log}(A(z))=\sum _ {n\geq 1}\frac{\varphi(n)}{n}\ln\frac{1}{1-A(z^n)}
+\]</div>
+<p>其中 <span class="arithmatex">\(\varphi\)</span> 为 Euler 函数，<span class="arithmatex">\(\operatorname{Log}\)</span> 为 Pólya 对数。</p>
+<p>由于证明较复杂，读者可参考 Flajolet 的论文 <a href="https://epubs.siam.org/doi/10.1137/0404006">The Cycle Construction</a> 或 Analytic Combinatorics 的附录。</p>
+<h3 id="_4">有限制的构造</h3>
+<p>对于上述所有构造，我们都没有限制其「组成部分」的个数，若在 <span class="arithmatex">\(\operatorname{SEQ}\)</span> 的下标给一个作用于整数的谓词用于约束其组成部分，如</p>
+<div class="arithmatex">\[
+\operatorname{SEQ}_{=k}(\mathcal{B}),\quad \operatorname{SEQ}_{\geq k}(\mathcal{B}),\quad \operatorname{SEQ}_{1..k}(\mathcal{B})
+\]</div>
+<p>其中 <span class="arithmatex">\(\operatorname{SEQ}_{=k}(\mathcal{B})\)</span> 也常简写为 <span class="arithmatex">\(\operatorname{SEQ}_k(\mathcal{B})\)</span>，<span class="arithmatex">\(\operatorname{SEQ}_{1..k}(\mathcal{B})\)</span> 表示在区间 <span class="arithmatex">\(\lbrack 1..k\rbrack\)</span> 上。</p>
+<p>令 <span class="arithmatex">\(\mathfrak{K}\)</span> 为任意上述 <span class="arithmatex">\(\operatorname{SEQ},\operatorname{PSET},\operatorname{MSET},\operatorname{CYC}\)</span> 之一，以及</p>
+<div class="arithmatex">\[
+\mathcal{A}=\mathfrak{K}_k(\mathcal{B})
+\]</div>
+<p>即我们需要对于 <span class="arithmatex">\(\alpha\in\mathcal{A}\)</span> 有</p>
+<div class="arithmatex">\[
+\alpha =\lbrace (\beta_1,\beta_2,\dots ,\beta_k)\mid \beta\in\mathcal{B}\rbrace
+\]</div>
+<p>设 <span class="arithmatex">\(\chi\)</span> 函数作用于组合对象上为其组成部分的个数，也就是要令 <span class="arithmatex">\(\chi(\alpha)=k\)</span>，不妨增加一元来「跟踪」组成部分的个数。</p>
+<p>令</p>
+<div class="arithmatex">\[
+A _ {n,k}=\operatorname{card}\left\lbrace \alpha\in\mathcal{A}\mid \lvert \alpha\rvert =n,\chi(\alpha)=k\right\rbrace
+\]</div>
+<p>那么</p>
+<div class="arithmatex">\[
+A(z,u)=\sum _ {n,k}A _ {n,k}u^kz^n=\sum _ {\alpha\in\mathcal{A}}z^{\lvert \alpha\rvert}u^{\chi(\alpha)}
+\]</div>
+<p>然后我们只要提取出 <span class="arithmatex">\(u^k\)</span> 的系数即可获得对应表达式，例如 <span class="arithmatex">\(\mathcal{A}=\operatorname{SEQ}_k(\mathcal{B})\)</span> 可直接导出</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;{}A(z,u)=\sum _ {k\geq 0}u^kB(z)^k=\frac{1}{1-uB(z)}\\
+\implies &amp;{}A(z)=B(z)^k
+\end{aligned}
+\]</div>
+<p>显然也有</p>
+<div class="arithmatex">\[
+\mathcal{A}=\operatorname{SEQ}_{\geq k}(\mathcal{B})\implies A(z)=\frac{B(z)^k}{1-B(z)}
+\]</div>
+<p>而对于 <span class="arithmatex">\(\operatorname{MSET} _ k(\mathcal{B})\)</span> 和 <span class="arithmatex">\(\operatorname{PSET} _ k(\mathcal{B})\)</span> 已经有</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;{}A(z,u)=\prod_n\left(1-uz^n\right)^{-b_n}\\
+\implies &amp;{}A(z)=\lbrack u^k\rbrack \exp\left(\frac{u}{1}B(z)+\frac{u^2}{2}B(z^2)+\frac{u^3}{3}B(z^3)+\cdots\right)
+\end{aligned}
+\]</div>
+<p>和</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;{}A(z,u)=\prod_n\left(1+uz^n\right)^{b_n}\\
+\implies &amp;{}A(z)=\lbrack u^k\rbrack \exp\left(\frac{u}{1}B(z)-\frac{u^2}{2}B(z^2)+\frac{u^3}{3}B(z^3)-\cdots\right)
+\end{aligned}
+\]</div>
+<p>对于 <span class="arithmatex">\(\operatorname{CYC}_k(\mathcal{B})\)</span> 同理。</p>
+<p>??? note "使用上式计算 <span class="arithmatex">\(\operatorname{MSET}_3(\mathcal{B})\)</span> 和 <span class="arithmatex">\(\operatorname{MSET}_4(\mathcal{B})\)</span> 对应 OGF"
+    尝试计算 <span class="arithmatex">\(\mathcal{A}=\operatorname{MSET}_3(\mathcal{B})\)</span> 为</p>
+<pre><code>$$
+\begin{aligned}
+\lbrack u^3\rbrack A(z,u)&amp;= \frac{1}{0!}\left(\lbrack u^3\rbrack 1\right)+\frac{1}{1!}\left(\lbrack u^3\rbrack \left(\frac{u}{1}B(z)+\frac{u^2}{2}B(z^2)+\frac{u^3}{3}B(z^3)+\cdots \right)\right)\\
+&amp;+\frac{1}{2!}\left(\lbrack u^3\rbrack \left(\frac{u}{1}B(z)+\frac{u^2}{2}B(z^2)+\cdots \right)^2\right)\\
+&amp;+\frac{1}{3!}\left(\lbrack u^3\rbrack \left(\frac{u}{1}B(z)+\cdots \right)^3\right)\\
+&amp;=\frac{B(z)^3}{6}+\frac{B(z)B(z^2)}{2}+\frac{B(z)^3}{3}
+\end{aligned}
+$$
+
+尝试计算 $\mathcal{A}=\operatorname{MSET}_4(\mathcal{B})$ 为
+
+$$
+\begin{aligned}
+\lbrack u^4\rbrack A(z,u)&amp;= \frac{1}{0!}\left(\lbrack u^4\rbrack 1\right)+\frac{1}{1!}\left(\lbrack u^4\rbrack \left(\frac{u}{1}B(z)+\frac{u^2}{2}B(z^2)+\frac{u^3}{3}B(z^3)+\frac{u^4}{4}B(z^4)+\cdots \right)\right)\\
+&amp;+\frac{1}{2!}\left(\lbrack u^4\rbrack \left(\frac{u}{1}B(z)+\frac{u^2}{2}B(z^2)+\frac{u^3}{3}B(z^3)+\cdots \right)^2\right)\\
+&amp;+\frac{1}{3!}\left(\lbrack u^4\rbrack \left(\frac{u}{1}B(z)+\frac{u^2}{2}B(z^2)+\cdots \right)^3\right)\\
+&amp;+\frac{1}{4!}\left(\lbrack u^4\rbrack \left(\frac{u}{1}B(z)+\cdots \right)^4\right)\\
+&amp;=\frac{B(z^4)}{4}+\frac{1}{2!}\left(\frac{B(z^2)^2}{4}+\frac{2B(z)B(z^3)}{3}\right)+\frac{1}{3!}\left(\frac{3B(z)^2B(z^2)}{2}\right)+\frac{B(z)^4}{4!}\\
+&amp;=\frac{B(z)^4}{24}+\frac{B(z)^2B(z^2)}{4}+\frac{B(z)B(z^3)}{3}+\frac{B(z^2)^2}{8}+\frac{B(z^4)}{4}
+\end{aligned}
+$$
+</code></pre>
+<p>我们发现 <span class="arithmatex">\(\mathcal{A}=\mathfrak{K}_k(\mathcal{B})\)</span> 中 <span class="arithmatex">\(A(z)\)</span> 是关于 <span class="arithmatex">\(B(z),B(z^2),\dots ,B(z^k)\)</span> 的一个表达式。</p>
+<p>需要注意的是对于有限制的构造 <span class="arithmatex">\(\mathfrak{K}_k(\mathcal{B})\)</span> 并没有要求 <span class="arithmatex">\(\mathcal{B}_0=\varnothing\)</span>。</p>
+<p>???+ note "常用有限制的构造"
+    $$
+    \begin{aligned}
+    \operatorname{PSET} _ {2}(\mathcal{A})&amp;:\quad \frac{A(z)^2}{2}-\frac{A(z^2)}{2}\
+    \operatorname{MSET} _ {2}(\mathcal{A})&amp;:\quad \frac{A(z)^2}{2}+\frac{A(z^2)}{2}\
+    \operatorname{CYC} _ {2}(\mathcal{A})&amp;:\quad \frac{A(z)^2}{2}+\frac{A(z^2)}{2}
+    \end{aligned}
+    $$</p>
+<pre><code>$$
+\begin{aligned}
+\operatorname{PSET} _ {3}(\mathcal{A})&amp;:\quad \frac{A(z)^3}{6}-\frac{A(z)A(z^2)}{2}+\frac{A(z^3)}{3}\\
+\operatorname{MSET} _ {3}(\mathcal{A})&amp;:\quad \frac{A(z)^3}{6}+\frac{A(z)A(z^2)}{2}+\frac{A(z^3)}{3}\\
+\operatorname{CYC} _ {3}(\mathcal{A})&amp;:\quad \frac{A(z)^3}{3}+\frac{2A(z^3)}{3}\\
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+\operatorname{PSET} _ {4}(\mathcal{A})&amp;:\quad \frac{A(z)^4}{24}-\frac{A(z)^2A(z^2)}{4}+\frac{A(z)A(z^3)}{3}+\frac{A(z^2)^2}{8}-\frac{A(z^4)}{4}\\
+\operatorname{MSET} _ {4}(\mathcal{A})&amp;:\quad \frac{A(z)^4}{24}+\frac{A(z)^2A(z^2)}{4}+\frac{A(z)A(z^3)}{3}+\frac{A(z^2)^2}{8}+\frac{A(z^4)}{4}\\
+\operatorname{CYC} _ {4}(\mathcal{A})&amp;:\quad \frac{A(z)^4}{4}+\frac{A(z^2)^2}{4}+\frac{A(z^4)}{2}\\
+\end{aligned}
+$$
+</code></pre>
+<p>上面的计算方法虽然有效但比较麻烦，读者可阅读 WolframMathWorld 网站的 <a href="https://mathworld.wolfram.com/PolyaEnumerationTheorem.html">Pólya Enumeration Theorem</a> 和 <a href="https://mathworld.wolfram.com/CycleIndex.html">Cycle Index</a> 等相关资料，后者 Cycle Index 在 OEIS 的生成函数表达式中也经常出现。</p>
+<p>???+ note "例题 <a href="https://loj.ac/p/6538">LOJ 6538. 烷基计数 加强版 加强版</a>"
+    <strong>题意</strong>：求出 <span class="arithmatex">\(n\)</span> 个节点的有根且根节点度数不超过 <span class="arithmatex">\(3\)</span>，其余节点度数不超过 <span class="arithmatex">\(4\)</span> 的无序树的个数对 <span class="arithmatex">\(998244353\)</span> 取模的值。约定 <span class="arithmatex">\(1\leq n\leq 10^5\)</span>。</p>
+<pre><code>**解**：设组合类为 $\mathcal{T}$ 那么
+
+$$
+\mathcal{T}=\lbrace \bullet\rbrace\times\operatorname{MSET}_{0,1,2,3}(\mathcal{T})
+$$
+
+或令组合类 $\hat{\mathcal{T}}=\mathcal{T}+\lbrace \epsilon\rbrace$ 那么
+
+$$
+\hat{\mathcal{T}}=\lbrace \epsilon\rbrace +\lbrace \bullet\rbrace\times\operatorname{MSET}_{3}(\hat{\mathcal{T}})
+$$
+
+可得到相同的结果。
+</code></pre>
+<h2 id="_5">参考文献</h2>
+<ul>
+<li>Philippe Flajolet and Robert Sedgewick.<a href="http://algo.inria.fr/flajolet/Publications/books.html">Analytic Combinatorics</a>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

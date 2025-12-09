@@ -1,0 +1,1871 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Matrix - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Matrix
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../number-theory/basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        向量与矩阵
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        引入
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        同型矩阵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        方阵
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="方阵">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主对角线
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对称矩阵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对角矩阵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三角矩阵
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单位三角矩阵
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运算
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="运算">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵的线性运算
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵的转置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵乘法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="矩阵乘法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        优化
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        方阵的逆
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        方阵的行列式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考代码
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        看待线性方程组的两种视角
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵乘法的应用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="矩阵乘法的应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵加速递推
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵表达修改
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定长路径统计
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定长最短路
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        限长路径计数/最短路
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Matrix</h1>
+
+<p>本文介绍线性代数中一个非常重要的内容——矩阵（Matrix），主要讲解矩阵的性质、运算，以及矩阵乘法的一些应用。</p>
+<h2 id="_1">向量与矩阵</h2>
+<p>在线性代数中，向量分为列向量和行向量。</p>
+<p>???+ warning "Warning"
+    在中国台湾地区关于「列」与「行」的翻译，恰好与中国大陆地区相反。在 <strong>OI Wiki</strong> 按照中国大陆地区的习惯，采用列（column）与行（row）的翻译。</p>
+<p>线性代数的主要研究对象是列向量，约定使用粗体小写字母表示列向量。在用到大量向量与矩阵的线性代数中，不引起混淆的情况下，在手写时，字母上方的向量记号可以省略不写。</p>
+<p>向量也是特殊的矩阵。如果想要表示行向量，需要在粗体小写字母右上方写转置记号。行向量在线性代数中一般表示方程。</p>
+<h2 id="_2">引入</h2>
+<p>矩阵的引入来自于线性方程组。与向量类似，矩阵体现了一种对数据「打包处理」的思想。</p>
+<p>例如，将线性方程组：</p>
+<div class="arithmatex">\[
+\begin{equation}
+    \begin{cases}
+        7x_1+8x_2+9x_3=13 \\
+        4x_1+5x_2+6x_3=12 \\
+        x_1+2x_2+3x_3=11
+    \end{cases}
+\end{equation}
+\]</div>
+<p>一般用圆括号或方括号表示矩阵。将上述系数抽出来，写成矩阵乘法的形式：</p>
+<div class="arithmatex">\[
+\begin{equation}
+    \begin{pmatrix}
+        7 &amp; 8 &amp; 9 \\
+        4 &amp; 5 &amp; 6 \\
+        1 &amp; 2 &amp; 3
+    \end{pmatrix}\begin{pmatrix}
+        x_1 \\ x_2 \\ x_3
+    \end{pmatrix}=\begin{pmatrix}
+      13 \\ 12 \\ 11
+    \end{pmatrix}
+\end{equation}
+\]</div>
+<p>简记为：</p>
+<div class="arithmatex">\[
+Ax=b
+\]</div>
+<p>即未知数列向量 x，左乘一个矩阵 A，得到列向量 b。这个式子可以认为是线性代数的基本形式。</p>
+<p>线性代数主要研究的运算模型是内积。内积是先相乘再相加，是行向量左乘列向量，得到一个数的过程。</p>
+<p>矩阵乘法是内积的拓展。矩阵乘法等价于左边矩阵抽出一行，与右边矩阵抽出一列进行内积，得到结果矩阵的对应元素，口诀「左行右列」。</p>
+<p>当研究对象是右边的列向量时，矩阵乘法相当于对列向量进行左乘。在左乘的观点下，矩阵就是对列向量的变换，将矩阵乘法中右边矩阵的每一个列向量进行变换，对应地得到结果矩阵中每一个列向量。</p>
+<p>矩阵可以对一个列向量进行变换，也可以对一组列向量进行「打包」变换，甚至可以对整个空间——即全体列向量进行变换。当矩阵被视为对整个空间变换的时候，也就脱离了空间，成为了纯粹变换的存在。</p>
+<h2 id="_3">定义</h2>
+<p>对于矩阵 <span class="arithmatex">\(A\)</span>，主对角线是指 <span class="arithmatex">\(A_{i,i}\)</span> 的元素。</p>
+<p>一般用 <span class="arithmatex">\(I\)</span> 来表示单位矩阵，就是主对角线上为 1，其余位置为 0。</p>
+<h3 id="_4">同型矩阵</h3>
+<p>两个矩阵，行数与列数对应相同，称为同型矩阵。</p>
+<h3 id="_5">方阵</h3>
+<p>行数等于列数的矩阵称为方阵。方阵是一种特殊的矩阵。对于「<span class="arithmatex">\(n\)</span> 阶矩阵」的习惯表述，实际上讲的是 <span class="arithmatex">\(n\)</span> 阶方阵。阶数相同的方阵为同型矩阵。</p>
+<p>研究方程组、向量组、矩阵的秩的时候，使用一般的矩阵。研究特征值和特征向量、二次型的时候，使用方阵。</p>
+<h4 id="_6">主对角线</h4>
+<p>方阵中行数等于列数的元素构成主对角线。</p>
+<h4 id="_7">对称矩阵</h4>
+<p>如果方阵的元素关于主对角线对称，即对于任意的 <span class="arithmatex">\(i\)</span> 和 <span class="arithmatex">\(j\)</span>，<span class="arithmatex">\(i\)</span> 行 <span class="arithmatex">\(j\)</span> 列的元素与 <span class="arithmatex">\(j\)</span> 行 <span class="arithmatex">\(i\)</span> 列的元素相等，则将方阵称为对称矩阵。</p>
+<h4 id="_8">对角矩阵</h4>
+<p>主对角线之外的元素均为 <span class="arithmatex">\(0\)</span> 的方阵称为对角矩阵，一般记作：</p>
+<div class="arithmatex">\[
+\operatorname{diag}\{\lambda_1,\cdots,\lambda_n\}
+\]</div>
+<p>式中的 <span class="arithmatex">\(\lambda_1,\cdots,\lambda_n\)</span> 是主对角线上的元素。</p>
+<p>对角矩阵是对称矩阵。</p>
+<p>如果对角矩阵的元素均为 <span class="arithmatex">\(1\)</span>，称为单位矩阵，记为 <span class="arithmatex">\(I\)</span>。只要乘法可以进行，无论形状，任何矩阵乘单位矩阵仍然保持不变。</p>
+<h4 id="_9">三角矩阵</h4>
+<p>如果方阵主对角线左下方的元素均为 <span class="arithmatex">\(0\)</span>，称为上三角矩阵。如果方阵主对角线右上方的元素均为 <span class="arithmatex">\(0\)</span>，称为下三角矩阵。</p>
+<p>两个上（下）三角矩阵的乘积仍然是上（下）三角矩阵。如果对角线元素均非 <span class="arithmatex">\(0\)</span>，则上（下）三角矩阵可逆，逆也是上（下）三角矩阵。</p>
+<h4 id="_10">单位三角矩阵</h4>
+<p>如果上三角矩阵 <span class="arithmatex">\(A\)</span> 的对角线全为 <span class="arithmatex">\(1\)</span>，则称 <span class="arithmatex">\(A\)</span> 是单位上三角矩阵。如果下三角矩阵 <span class="arithmatex">\(A\)</span> 的对角线全为 <span class="arithmatex">\(1\)</span>，则称 <span class="arithmatex">\(A\)</span> 是单位下三角矩阵。</p>
+<p>两个单位上（下）三角矩阵的乘积仍然是单位上（下）三角矩阵，单位上（下）三角矩阵的逆也是单位上（下）三角矩阵。</p>
+<h2 id="_11">运算</h2>
+<h3 id="_12">矩阵的线性运算</h3>
+<p>矩阵的线性运算分为加减法与数乘，它们均为逐个元素进行。只有同型矩阵之间可以对应相加减。</p>
+<h3 id="_13">矩阵的转置</h3>
+<p>矩阵的转置，就是在矩阵的右上角写上转置「T」记号，表示将矩阵的行与列互换。</p>
+<p>对称矩阵转置前后保持不变。</p>
+<h3 id="_14">矩阵乘法</h3>
+<p>矩阵的乘法是向量内积的推广。</p>
+<p>矩阵相乘只有在第一个矩阵的列数和第二个矩阵的行数相同时才有意义。</p>
+<p>设 <span class="arithmatex">\(A\)</span> 为 <span class="arithmatex">\(P \times M\)</span> 的矩阵，<span class="arithmatex">\(B\)</span> 为 <span class="arithmatex">\(M \times Q\)</span> 的矩阵，设矩阵 <span class="arithmatex">\(C\)</span> 为矩阵 <span class="arithmatex">\(A\)</span> 与 <span class="arithmatex">\(B\)</span> 的乘积，</p>
+<p>其中矩阵 <span class="arithmatex">\(C\)</span> 中的第 <span class="arithmatex">\(i\)</span> 行第 <span class="arithmatex">\(j\)</span> 列元素可以表示为：</p>
+<div class="arithmatex">\[
+C_{i,j} = \sum_{k=1}^MA_{i,k}B_{k,j}
+\]</div>
+<p>在矩阵乘法中，结果 <span class="arithmatex">\(C\)</span> 矩阵的第 <span class="arithmatex">\(i\)</span> 行第 <span class="arithmatex">\(j\)</span> 列的数，就是由矩阵 <span class="arithmatex">\(A\)</span> 第 <span class="arithmatex">\(i\)</span> 行 <span class="arithmatex">\(M\)</span> 个数与矩阵 <span class="arithmatex">\(B\)</span> 第 <span class="arithmatex">\(j\)</span> 列 <span class="arithmatex">\(M\)</span> 个数分别 <strong>相乘再相加</strong> 得到的。这里的 <strong>相乘再相加</strong>，就是向量的内积。乘积矩阵中第 <span class="arithmatex">\(i\)</span> 行第 <span class="arithmatex">\(j\)</span> 列的数恰好是乘数矩阵 <span class="arithmatex">\(A\)</span> 第 <span class="arithmatex">\(i\)</span> 个行向量与乘数矩阵 <span class="arithmatex">\(B\)</span> 第 <span class="arithmatex">\(j\)</span> 个列向量的内积，口诀为 <strong>左行右列</strong>。</p>
+<p>线性代数研究的向量多为列向量，根据这样的对矩阵乘法的定义方法，经常研究对列向量左乘一个矩阵的左乘运算，同时也可以在这里看出「打包处理」的思想，同时处理很多个向量内积。</p>
+<p>矩阵乘法满足结合律，不满足一般的交换律。</p>
+<p>利用结合律，矩阵乘法可以利用 <a href="../../binary-exponentiation/">快速幂</a> 的思想来优化。</p>
+<p>在比赛中，由于线性递推式可以表示成矩阵乘法的形式，也通常用矩阵快速幂来求线性递推数列的某一项。</p>
+<h4 id="_15">优化</h4>
+<p>首先对于比较小的矩阵，可以考虑直接手动展开循环以减小常数。</p>
+<p>可以重新排列循环以提高空间局部性，这样的优化不会改变矩阵乘法的时间复杂度，但是会得到常数级别的提升。</p>
+<pre><code class="language-cpp">// 以下文的参考代码为例
+mat operator*(const mat&amp; T) const {
+  mat res;
+  for (int i = 0; i &lt; sz; ++i)
+    for (int j = 0; j &lt; sz; ++j)
+      for (int k = 0; k &lt; sz; ++k) {
+        res.a[i][j] += mul(a[i][k], T.a[k][j]);
+        res.a[i][j] %= MOD;
+      }
+  return res;
+}
+
+// 不如
+mat operator*(const mat&amp; T) const {
+  mat res;
+  int r;
+  for (int i = 0; i &lt; sz; ++i)
+    for (int k = 0; k &lt; sz; ++k) {
+      r = a[i][k];
+      for (int j = 0; j &lt; sz; ++j)
+        res.a[i][j] += T.a[k][j] * r, res.a[i][j] %= MOD;
+    }
+  return res;
+}
+</code></pre>
+<h3 id="_16">方阵的逆</h3>
+<p>方阵 <span class="arithmatex">\(A\)</span> 的逆矩阵 <span class="arithmatex">\(P\)</span> 是使得 <span class="arithmatex">\(A \times P = I\)</span> 的矩阵。</p>
+<p>逆矩阵不一定存在。如果存在，可以使用 <a href="../../numerical/gauss/">高斯消元</a> 进行求解。</p>
+<h3 id="_17">方阵的行列式</h3>
+<p>行列式是方阵的一种运算。</p>
+<h2 id="_18">参考代码</h2>
+<p>一般来说，可以用一个二维数组来模拟矩阵。</p>
+<pre><code class="language-cpp">struct mat {
+  LL a[sz][sz];
+
+  mat() { memset(a, 0, sizeof a); }
+
+  mat operator-(const mat&amp; T) const {
+    mat res;
+    for (int i = 0; i &lt; sz; ++i)
+      for (int j = 0; j &lt; sz; ++j) {
+        res.a[i][j] = (a[i][j] - T.a[i][j]) % MOD;
+      }
+    return res;
+  }
+
+  mat operator+(const mat&amp; T) const {
+    mat res;
+    for (int i = 0; i &lt; sz; ++i)
+      for (int j = 0; j &lt; sz; ++j) {
+        res.a[i][j] = (a[i][j] + T.a[i][j]) % MOD;
+      }
+    return res;
+  }
+
+  mat operator*(const mat&amp; T) const {
+    mat res;
+    int r;
+    for (int i = 0; i &lt; sz; ++i)
+      for (int k = 0; k &lt; sz; ++k) {
+        r = a[i][k];
+        for (int j = 0; j &lt; sz; ++j)
+          res.a[i][j] += T.a[k][j] * r, res.a[i][j] %= MOD;
+      }
+    return res;
+  }
+
+  mat operator^(LL x) const {
+    mat res, bas;
+    for (int i = 0; i &lt; sz; ++i) res.a[i][i] = 1;
+    for (int i = 0; i &lt; sz; ++i)
+      for (int j = 0; j &lt; sz; ++j) bas.a[i][j] = a[i][j] % MOD;
+    while (x) {
+      if (x &amp; 1) res = res * bas;
+      bas = bas * bas;
+      x &gt;&gt;= 1;
+    }
+    return res;
+  }
+};
+</code></pre>
+<h2 id="_19">看待线性方程组的两种视角</h2>
+<p>看待矩阵 A，或者变换 A，有两种视角。</p>
+<p>第一种观点：按行看，观察 A 的每一行。这样一来把 A 看作方程组。于是就有了消元法解方程的过程。</p>
+<p>第二种观点：按列看，观察 A 的每一列。A 本身也是由列向量构成的。此时相当于把变换 A 本身看成了列向量组，而 x 是未知数系数，思考 A 当中的这组列向量能不能配上未知数，凑出列向量 b。</p>
+<p>例如，文章开头的例子变为：</p>
+<div class="arithmatex">\[
+\begin{equation}
+    \begin{pmatrix}
+        7 \\ 4 \\ 1
+    \end{pmatrix}x_1+\begin{pmatrix}
+        8 \\ 5 \\ 2
+    \end{pmatrix}x_2+\begin{pmatrix}
+        9 \\ 6 \\ 3
+    \end{pmatrix}x_3=\begin{pmatrix}
+      13 \\ 12 \\ 11
+    \end{pmatrix}
+\end{equation}
+\]</div>
+<p>解方程变为研究，是否可以通过调整三个系数 x，使得给定的三个基向量能够凑出结果的向量。</p>
+<p>按列看比按行看更新颖。在按列看的视角下，可以研究线性无关与线性相关。</p>
+<h2 id="_20">矩阵乘法的应用</h2>
+<h3 id="_21">矩阵加速递推</h3>
+<p>以 <a href="../../combinatorics/fibonacci/">斐波那契数列（Fibonacci Sequence）</a> 为例。在斐波那契数列当中，<span class="arithmatex">\(F_1 = F_2 = 1\)</span>，<span class="arithmatex">\(F_i = F_{i - 1} + F_{i - 2}(i \geq 3)\)</span>。</p>
+<p>如果有一道题目让你求斐波那契数列第 <span class="arithmatex">\(n\)</span> 项的值，最简单的方法莫过于直接递推了。但是如果 <span class="arithmatex">\(n\)</span> 的范围达到了 <span class="arithmatex">\(10^{18}\)</span> 级别，递推就不行了，此时我们可以考虑矩阵加速递推。</p>
+<p>根据斐波那契数列 <a href="../../combinatorics/fibonacci/#矩阵形式">递推公式的矩阵形式</a>:</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+  F_{n-1} &amp; F_{n-2}
+\end{bmatrix} \begin{bmatrix}
+  1 &amp; 1 \\
+  1 &amp; 0
+\end{bmatrix} = \begin{bmatrix}
+  F_n &amp; F_{n-1}
+\end{bmatrix}
+\]</div>
+<p>定义初始矩阵 <span class="arithmatex">\(\text{ans} = \begin{bmatrix}F_2 &amp; F_1\end{bmatrix} = \begin{bmatrix}1 &amp; 1\end{bmatrix}, \text{base} = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}\)</span>。那么，<span class="arithmatex">\(F_n\)</span> 就等于 <span class="arithmatex">\(\text{ans} \text{base}^{n-2}\)</span> 这个矩阵的第一行第一列元素，也就是 <span class="arithmatex">\(\begin{bmatrix}1 &amp; 1\end{bmatrix} \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}^{n-2}\)</span> 的第一行第一列元素。</p>
+<p>???+ warning "注意"
+    矩阵乘法不满足交换律，所以一定不能写成 <span class="arithmatex">\(\begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}^{n-2} \begin{bmatrix}1 &amp; 1\end{bmatrix}\)</span> 的第一行第一列元素。另外，对于 <span class="arithmatex">\(n \leq 2\)</span> 的情况，直接输出 <span class="arithmatex">\(1\)</span> 即可，不需要执行矩阵快速幂。</p>
+<p>为什么要乘上 <span class="arithmatex">\(\text{base}\)</span> 矩阵的 <span class="arithmatex">\(n-2\)</span> 次方而不是 <span class="arithmatex">\(n\)</span> 次方呢？因为 <span class="arithmatex">\(F_1, F_2\)</span> 是不需要进行矩阵乘法就能求的。也就是说，如果只进行一次乘法，就已经求出 <span class="arithmatex">\(F_3\)</span> 了。如果还不是很理解为什么幂是 <span class="arithmatex">\(n-2\)</span>，建议手算一下。</p>
+<p>下面是求斐波那契数列第 <span class="arithmatex">\(n\)</span> 项对 <span class="arithmatex">\(10^9+7\)</span> 取模的示例代码（核心部分）。</p>
+<pre><code class="language-cpp">constexpr int mod = 1000000007;
+
+struct Matrix {
+  int a[3][3];
+
+  Matrix() { memset(a, 0, sizeof a); }
+
+  Matrix operator*(const Matrix &amp;b) const {
+    Matrix res;
+    for (int i = 1; i &lt;= 2; ++i)
+      for (int j = 1; j &lt;= 2; ++j)
+        for (int k = 1; k &lt;= 2; ++k)
+          res.a[i][j] = (res.a[i][j] + a[i][k] * b.a[k][j]) % mod;
+    return res;
+  }
+} ans, base;
+
+void init() {
+  base.a[1][1] = base.a[1][2] = base.a[2][1] = 1;
+  ans.a[1][1] = ans.a[1][2] = 1;
+}
+
+void qpow(int b) {
+  while (b) {
+    if (b &amp; 1) ans = ans * base;
+    base = base * base;
+    b &gt;&gt;= 1;
+  }
+}
+
+int main() {
+  int n = read();
+  if (n &lt;= 2) return puts(&quot;1&quot;), 0;
+  init();
+  qpow(n - 2);
+  println(ans.a[1][1] % mod);
+}
+</code></pre>
+<p>这是一个稍微复杂一些的例子。</p>
+<div class="arithmatex">\[
+\begin{gathered}
+f_{1} = f_{2} = 0\\
+f_{n} = 7f_{n-1}+6f_{n-2}+5n+4\times 3^n
+\end{gathered}
+\]</div>
+<p>我们发现，<span class="arithmatex">\(f_n\)</span> 和 <span class="arithmatex">\(f_{n-1}, f_{n-2}, n\)</span> 有关，于是考虑构造一个矩阵描述状态。</p>
+<p>但是发现如果矩阵仅有这三个元素 <span class="arithmatex">\(\begin{bmatrix}f_n&amp; f_{n-1}&amp; n\end{bmatrix}\)</span> 是难以构造出转移方程的，因为乘方运算和 <span class="arithmatex">\(+1\)</span> 无法用矩阵描述。</p>
+<p>于是考虑构造一个更大的矩阵。</p>
+<div class="arithmatex">\[
+\begin{bmatrix}f_n&amp; f_{n-1}&amp; n&amp; 3^n &amp; 1\end{bmatrix}
+\]</div>
+<p>我们希望构造一个递推矩阵可以转移到</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+f_{n+1}&amp; f_{n}&amp; n+1&amp; 3^{n+1} &amp; 1
+\end{bmatrix}
+\]</div>
+<p>转移矩阵即为</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+7 &amp; 1 &amp; 0 &amp; 0 &amp; 0\\
+6 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+5 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+12 &amp; 0 &amp; 0 &amp; 3 &amp; 0\\
+5 &amp; 0 &amp; 1 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+<h3 id="_22">矩阵表达修改</h3>
+<p>???+ note "<a href="https://loj.ac/p/2980">「THUSCH 2017」大魔法师</a>"
+    大魔法师小 L 制作了 <span class="arithmatex">\(n\)</span> 个魔力水晶球，每个水晶球有水、火、土三个属性的能量值。小 L 把这 <span class="arithmatex">\(n\)</span> 个水晶球在地上从前向后排成一行，然后开始今天的魔法表演。</p>
+<pre><code>我们用 $A_i,\ B_i,\ C_i$ 分别表示从前向后第 $i$ 个水晶球（下标从 $1$ 开始）的水、火、土的能量值。
+
+小 L 计划施展 $m$ 次魔法。每次，他会选择一个区间 $[l, r]$，然后施展以下 $3$ 大类、$7$ 种魔法之一：
+
+1.  魔力激发：令区间里每个水晶球中 **特定属性** 的能量爆发，从而使另一个 **特定属性** 的能量增强。具体来说，有以下三种可能的表现形式：
+
+    -   火元素激发水元素能量：令 $A_i = A_i + B_i$。
+    -   土元素激发火元素能量：令 $B_i = B_i + C_i$。
+    -   水元素激发土元素能量：令 $C_i = C_i + A_i$。
+
+        **需要注意的是，增强一种属性的能量并不会改变另一种属性的能量，例如 $A_i = A_i + B_i$ 并不会使 $B_i$ 增加或减少。**
+2.  魔力增强：小 L 挥舞法杖，消耗自身 $v$ 点法力值，来改变区间里每个水晶球的 **特定属性** 的能量。具体来说，有以下三种可能的表现形式：
+
+    -   火元素能量定值增强：令 $A_i = A_i + v$。
+    -   水元素能量翻倍增强：令 $B_i=B_i \cdot v$。
+    -   土元素能量吸收融合：令 $C_i = v$。
+3.  魔力释放：小 L 将区间里所有水晶球的能量聚集在一起，融合成一个新的水晶球，然后送给场外观众。生成的水晶球每种属性的能量值等于区间内所有水晶球对应能量值的代数和。**需要注意的是，魔力释放的过程不会真正改变区间内水晶球的能量**。
+
+值得一提的是，小 L 制造和融合的水晶球的原材料都是定制版的 OI 工厂水晶，所以这些水晶球有一个能量阈值 $998244353$。当水晶球中某种属性的能量值大于等于这个阈值时，能量值会自动对阈值取模，从而避免水晶球爆炸。
+
+小 W 为小 L（唯一的）观众，围观了整个表演，并且收到了小 L 在表演中融合的每个水晶球。小 W 想知道，这些水晶球蕴涵的三种属性的能量值分别是多少。
+</code></pre>
+<p>由于矩阵的结合律和分配律成立，单点修改可以自然地推广到区间，即推出矩阵后直接用线段树维护区间矩阵乘积即可。</p>
+<p>下面将举几个例子。</p>
+<p><span class="arithmatex">\(A_i = A_i + v\)</span> 的转移</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+A &amp; B &amp; C &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 1 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0\\
+v &amp; 0 &amp; 0 &amp; 1\\
+\end{bmatrix}=
+\begin{bmatrix}
+A+v &amp; B &amp; C &amp; 1\\
+\end{bmatrix}
+\]</div>
+<p><span class="arithmatex">\(B_i=B_i \cdot v\)</span> 的转移</p>
+<div class="arithmatex">\[
+\begin{bmatrix}
+A &amp; B &amp; C &amp; 1
+\end{bmatrix}
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; v &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 1 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1\\
+\end{bmatrix}=
+\begin{bmatrix}
+A &amp; B \cdot v &amp; C &amp; 1\\
+\end{bmatrix}
+\]</div>
+<p>???+ note "<a href="https://loj.ac/p/6208">「LibreOJ 6208」树上询问</a>"
+    有一棵 <span class="arithmatex">\(n\)</span> 节点的树，根为 <span class="arithmatex">\(1\)</span> 号节点。每个节点有两个权值 <span class="arithmatex">\(k_i, t_i\)</span>，初始值均为 <span class="arithmatex">\(0\)</span>。</p>
+<pre><code>给出三种操作：
+
+1.  $\operatorname{Add}( x , d )$ 操作：将 $x$ 到根的路径上所有点的 $k_i\leftarrow k_i + d$
+2.  $\operatorname{Mul}( x , d )$ 操作：将 $x$ 到根的路径上所有点的 $t_i\leftarrow t_i + d \times k_i$
+3.  $\operatorname{Query}( x )$ 操作：询问点 $x$ 的权值 $t_x$
+
+    $n,~m \leq 100000, ~-10 \leq d \leq 10$
+</code></pre>
+<p>若直接思考，下放操作和维护信息并不是很好想。但是矩阵可以轻松地表达。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\begin{bmatrix}k &amp; t &amp; 1 \end{bmatrix}
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+d &amp; 0 &amp; 1
+\end{bmatrix}
+&amp;=
+\begin{bmatrix}k+d &amp; t &amp; 1 \end{bmatrix}\\
+\begin{bmatrix}k &amp; t &amp; 1 \end{bmatrix}
+\begin{bmatrix}
+1 &amp; d &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{bmatrix}
+&amp;=
+\begin{bmatrix}k &amp; t+d \times k &amp; 1 \end{bmatrix}
+\end{aligned}
+\]</div>
+<h3 id="_23">定长路径统计</h3>
+<p>???+ note "问题描述"
+    给一个 <span class="arithmatex">\(n\)</span> 阶有向图，每条边的边权均为 <span class="arithmatex">\(1\)</span>，然后给一个整数 <span class="arithmatex">\(k\)</span>，你的任务是对于所有点对 <span class="arithmatex">\((u,v)\)</span> 求出从 <span class="arithmatex">\(u\)</span> 到 <span class="arithmatex">\(v\)</span> 长度为 <span class="arithmatex">\(k\)</span> 的路径的数量（不一定是简单路径，即路径上的点或者边可能走多次）。</p>
+<p>我们将这个图用邻接矩阵 <span class="arithmatex">\(G\)</span>（对于图中的边 <span class="arithmatex">\((u\to v)\)</span>，令 <span class="arithmatex">\(G[u,v]=1\)</span>，其余为 <span class="arithmatex">\(0\)</span> 的矩阵；如果有重边，则设 <span class="arithmatex">\(G[u,v]\)</span> 为重边的数量）表示这个有向图。下述算法同样适用于图有自环的情况。</p>
+<p>显然，该邻接矩阵对应 <span class="arithmatex">\(k=1\)</span> 时的答案。</p>
+<p>假设我们知道长度为 <span class="arithmatex">\(k\)</span> 的路径条数构成的矩阵，记为矩阵 <span class="arithmatex">\(C_k\)</span>，我们想求 <span class="arithmatex">\(C_{k+1}\)</span>。显然有 DP 转移方程</p>
+<div class="arithmatex">\[
+C_{k+1}[i,j] = \sum_{p = 1}^{n} C_k[i,p] \cdot G[p,j]
+\]</div>
+<p>我们可以把它看作矩阵乘法的运算，于是上述转移可以描述为</p>
+<div class="arithmatex">\[
+C_{k+1} = C_k \cdot G
+\]</div>
+<p>那么把这个递推式展开可以得到</p>
+<div class="arithmatex">\[
+C_k = \underbrace{G \cdot G \cdots G}_{k \text{ 次}} = G^k
+\]</div>
+<p>要计算这个矩阵幂，我们可以使用快速幂（二进制取幂）的思想，在 <span class="arithmatex">\(O(n^3 \log k)\)</span> 的复杂度内计算结果。</p>
+<h3 id="_24">定长最短路</h3>
+<p>???+ note "问题描述"
+    给你一个 <span class="arithmatex">\(n\)</span> 阶加权有向图和一个整数 <span class="arithmatex">\(k\)</span>。对于每个点对 <span class="arithmatex">\((u,v)\)</span> 找到从 <span class="arithmatex">\(u\)</span> 到 <span class="arithmatex">\(v\)</span> 的恰好包含 <span class="arithmatex">\(k\)</span> 条边的最短路的长度。（不一定是简单路径，即路径上的点或者边可能走多次）</p>
+<p>我们仍构造这个图的邻接矩阵 <span class="arithmatex">\(G\)</span>，<span class="arithmatex">\(G[i,j]\)</span> 表示从 <span class="arithmatex">\(i\)</span> 到 <span class="arithmatex">\(j\)</span> 的边权。如果 <span class="arithmatex">\(i,j\)</span> 两点之间没有边，那么 <span class="arithmatex">\(G[i,j]=\infty\)</span>。（有重边的情况取边权的最小值）</p>
+<p>显然上述矩阵对应 <span class="arithmatex">\(k=1\)</span> 时问题的答案。我们仍假设我们知道 <span class="arithmatex">\(k\)</span> 的答案，记为矩阵 <span class="arithmatex">\(L_k\)</span>。现在我们想求 <span class="arithmatex">\(k+1\)</span> 的答案。显然有转移方程</p>
+<div class="arithmatex">\[
+L_{k+1}[i,j] = \min_{1\le p \le n} \left\{L_k[i,p] + G[p,j]\right\}
+\]</div>
+<p>事实上我们可以类比矩阵乘法，你发现上述转移只是把矩阵乘法的乘积求和变成相加取最小值，于是我们定义这个运算为 <span class="arithmatex">\(\odot\)</span>，即</p>
+<div class="arithmatex">\[
+A \odot B = C~~\Longleftrightarrow~~C[i,j]=\min_{1\le p \le n}\left\{A[i,p] + B[p,j]\right\}
+\]</div>
+<p>于是得到</p>
+<div class="arithmatex">\[
+L_{k+1} = L_k \odot G
+\]</div>
+<p>展开递推式得到</p>
+<div class="arithmatex">\[
+L_k = \underbrace{G \odot \ldots \odot G}_{k\text{ 次}} = G^{\odot k}
+\]</div>
+<p>我们仍然可以用矩阵快速幂的方法计算上式，因为它显然是具有结合律的。时间复杂度 <span class="arithmatex">\(O(n^3 \log k)\)</span>。</p>
+<h3 id="_25">限长路径计数/最短路</h3>
+<p>上述算法只适用于边数固定的情况。然而我们可以改进算法以解决边数小于等于 <span class="arithmatex">\(k\)</span> 的情况。具体地，考虑以下问题：</p>
+<p>???+ note "问题描述"
+    给一个 <span class="arithmatex">\(n\)</span> 阶有向图，边权为 <span class="arithmatex">\(1\)</span>，然后给一个整数 <span class="arithmatex">\(k\)</span>，你的任务是对于每个点对 <span class="arithmatex">\((u,v)\)</span> 找到从 <span class="arithmatex">\(u\)</span> 到 <span class="arithmatex">\(v\)</span> 长度小于等于 <span class="arithmatex">\(k\)</span> 的路径的数量（不一定是简单路径，即路径上的点或者边可能走多次）。</p>
+<p>我们对于每个点 <span class="arithmatex">\(v\)</span>，建立一个虚点 <span class="arithmatex">\(v'\)</span> 用于记录答案，并在图中加入 <span class="arithmatex">\((v,v')\)</span> 和 <span class="arithmatex">\((v',v')\)</span> 这两条边。那么对于点对 <span class="arithmatex">\((u,v)\)</span>，从 <span class="arithmatex">\(u\)</span> 到 <span class="arithmatex">\(v\)</span> 边数小于等于 <span class="arithmatex">\(k\)</span> 的路径的数量，就和从 <span class="arithmatex">\(u\)</span> 到 <span class="arithmatex">\(v'\)</span> 边数恰好等于 <span class="arithmatex">\(k+1\)</span> 的路径的数量相等，这是因为对于任意一条边数为 <span class="arithmatex">\(m(m \le k)\)</span> 的路径 <span class="arithmatex">\((p_0=u)\to p_1\to p_2 \to \dots \to p_{m-1} \to (p_m=v)\)</span>，都存在一条边数为 <span class="arithmatex">\(k+1\)</span> 的路径 <span class="arithmatex">\((p_0=u)\to p_1 \to p_2 \to \dots \to p_{m-1} \to (p_m=v) \to v'  \to \dots \to v'\)</span> 与之一一对应。</p>
+<p>对于求边数小于等于 <span class="arithmatex">\(k\)</span> 的最短路，只需对每个点加一个边权为 <span class="arithmatex">\(0\)</span> 的自环即可。</p>
+<h2 id="_26">习题</h2>
+<ul>
+<li><a href="https://www.luogu.com.cn/problem/P1962">洛谷 P1962 斐波那契数列</a>，即上面的例题，同题 POJ3070</li>
+<li><a href="https://www.luogu.com.cn/problem/P1349">洛谷 P1349 广义斐波那契数列</a>，<span class="arithmatex">\(\text{base}\)</span> 矩阵需要变化一下</li>
+<li><a href="https://www.luogu.com.cn/problem/P1939">洛谷 P1939【模板】矩阵加速（数列）</a>，<span class="arithmatex">\(\text{base}\)</span> 矩阵变成了 <span class="arithmatex">\(3 \times 3\)</span> 的矩阵，推导过程与上面差不多。</li>
+</ul>
+<p><strong>本页面部分内容译自博文 <a href="http://e-maxx.ru/algo/fixed_length_paths">Кратчайшие пути фиксированной длины, количества путей фиксированной длины</a> 与其英文翻译版 <a href="https://cp-algorithms.com/graph/fixed_length_paths.html">Number of paths of fixed length/Shortest paths of fixed length</a>。其中俄文版版权协议为 Public Domain + Leave a Link；英文版版权协议为 CC-BY-SA 4.0。</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

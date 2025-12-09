@@ -1,0 +1,1467 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="sshwy, ComeIntoCalm">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Egf - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Egf
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../number-theory/basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基本运算
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        封闭形式
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        指数生成函数与普通生成函数
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#egf-exp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        EGF 中多项式 exp 的组合意义
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        排列与圆排列
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        错排数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不动点
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lust" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lust
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Egf</h1>
+
+<p>序列 <span class="arithmatex">\(a\)</span> 的指数生成函数（exponential generating function，EGF）定义为形式幂级数：</p>
+<div class="arithmatex">\[
+\hat{F}(x)=\sum_{n}a_n \frac{x^n}{n!}
+\]</div>
+<h2 id="_1">基本运算</h2>
+<p>指数生成函数的加减法与普通生成函数是相同的，也就是对应项系数相加。</p>
+<p>考虑指数生成函数的乘法运算。对于两个序列 <span class="arithmatex">\(a,b\)</span>，设它们的指数生成函数分别为 <span class="arithmatex">\(\hat{F}(x),\hat{G}(x)\)</span>，那么</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\hat{F}(x)\hat{G}(x)
+&amp;=\sum_{i\ge 0}a_i\frac{x^i}{i!}\sum_{j\ge 0}b_j\frac{x^j}{j!}\\
+&amp;=\sum_{n\ge 0}x^{n}\sum_{i=0}^na_ib_{n-i}\frac{1}{i!(n-i)!}\\
+&amp;=\sum_{n\ge 0}\frac{x^{n}}{n!}\sum_{i=0}^n\binom{n}{i}a_ib_{n-i}
+\end{aligned}
+\]</div>
+<p>因此 <span class="arithmatex">\(\hat{F}(x)\hat{G}(x)\)</span> 是序列</p>
+<div class="arithmatex">\[
+\left\langle \sum_{i=0}^n \binom{n}{i}a_ib_{n-i} \right\rangle
+\]</div>
+<p>的指数生成函数。</p>
+<h2 id="_2">封闭形式</h2>
+<p>我们同样考虑指数生成函数的封闭形式。</p>
+<p>序列 <span class="arithmatex">\(\langle 1,1,1,\cdots\rangle\)</span> 的指数生成函数是：</p>
+<div class="arithmatex">\[
+\hat{F}(x) = \sum_{n \ge 0}\frac{x^n}{n!} = \mathrm{e}^x
+\]</div>
+<p>因为你将 <span class="arithmatex">\(\mathrm{e}^x\)</span> 在 <span class="arithmatex">\(x = 0\)</span> 处泰勒展开就得到了它的无穷级数形式。</p>
+<p>类似地，等比数列 <span class="arithmatex">\(\langle 1,p,p^2,\cdots\rangle\)</span> 的指数生成函数是：</p>
+<div class="arithmatex">\[
+\hat{F}(x) = \sum_{n\ge 0}\frac{p^nx^n}{n!}=\mathrm{e}^{px}
+\]</div>
+<h2 id="_3">指数生成函数与普通生成函数</h2>
+<p>如何理解指数生成函数？我们定义序列 <span class="arithmatex">\(a\)</span> 的指数生成函数是：</p>
+<div class="arithmatex">\[
+F(x)=\sum_{n\ge 0}a_n\frac{x^n}{n!}
+\]</div>
+<p>但 <span class="arithmatex">\(F(x)\)</span> 实际上也是序列 <span class="arithmatex">\(\left\langle \dfrac{a_n}{n!} \right\rangle\)</span> 的普通生成函数。</p>
+<p>这两种理解没有任何问题。也就是说，不同的生成函数只是对问题理解方式的转变。</p>
+<h2 id="egf-exp">EGF 中多项式 exp 的组合意义</h2>
+<p>如果您还没有学习多项式 exp 请先跳过这里，这是由 exp 理解引出的意义，从某种意义上来说可以加深对 EGF 的理解。</p>
+<p>EGF 中 <span class="arithmatex">\(f^n(x)\)</span> 的 <span class="arithmatex">\(f\)</span> 默认是一个 EGF，那么我们首先考虑任意两个 EGF 的乘积</p>
+<div class="arithmatex">\[
+\hat{H}(x) = \hat{F}(x)\hat{G}(x) = \sum_{n\geq 0} \left[ \sum_{i = 0}^n\binom {n}{i}f_ig_{n-i} \right] \frac{x^n}{n!}
+\]</div>
+<p>对于两个 EGF 相乘得到的 <span class="arithmatex">\([x^k]\hat{H}(x)\)</span>，实际上是一个卷积。而如果考虑多个 EGF 相乘得到的 <span class="arithmatex">\([x^k]\hat{H}(x)\)</span>，实际上就是对每个 EGF 选择一项 <span class="arithmatex">\(x^{a_i}\)</span> 使得 <span class="arithmatex">\(\sum_ia_i=k\)</span> 时每种情况系数的和。
+从集合的角度来理解就是把 <span class="arithmatex">\(n\)</span> 个有标号元素划分为 <span class="arithmatex">\(k&gt;0\)</span> 个有标号集合的方案数。</p>
+<blockquote>
+<p>如果 <span class="arithmatex">\(k=0\)</span> 则系数显然为原 EGF 各项常数的积，但是多项式 <span class="arithmatex">\(\exp\)</span> 中某些要求导致 <span class="arithmatex">\(\exp\)</span> 的 <span class="arithmatex">\(f(x)\)</span> 常数项必须为 <span class="arithmatex">\(0\)</span>，具体的原因在下文中会做出一些说明。</p>
+</blockquote>
+<p>多项式系数定义（具体请参考排列组合一栏中的多项式系数组合意义）里是默认集合有序的，但是 <span class="arithmatex">\(\exp(f(x))\)</span> 中 <span class="arithmatex">\(f^k(x)\)</span>，<span class="arithmatex">\(k\)</span> 个 <span class="arithmatex">\(f(x)\)</span> 相乘得到的 EGF 相同，而集合划分显然是无序的，因此其系数应该乘上 <span class="arithmatex">\(\dfrac{1}{k!}\)</span>。</p>
+<p>设 <span class="arithmatex">\(F_k(n)\)</span> 为 <span class="arithmatex">\(n\)</span> 个有标号元素划分成 <span class="arithmatex">\(k\)</span> 个非空无序集合（因为是 <span class="arithmatex">\(\exp\)</span> 所以有非空要求）的情况，<span class="arithmatex">\(f_i\)</span> 为 <span class="arithmatex">\(i\)</span> 个元素组成一个集合时，<span class="arithmatex">\(i\)</span> 个元素的有限集上特定组合结构的数量（是原有的 EGF，对这一个集合元素计数的方案，仅仅与该集合大小有关），那么 <span class="arithmatex">\(F_k(n)\)</span></p>
+<div class="arithmatex">\[
+F_k(n)=\frac{n!}{k!}\sum_{\sum_{i}^ka_i=n}\prod_{j=1}^{k}\frac{f_{a_j}}{a_j!}
+\]</div>
+<p>设 <span class="arithmatex">\(f_n\)</span> 的 EGF 为 <span class="arithmatex">\(\hat{F}(x)\)</span>，即：</p>
+<div class="arithmatex">\[
+\hat{F}(x) = \sum_{n \geq 0} f_n\frac{x^n}{n!}
+\]</div>
+<p>设 <span class="arithmatex">\(F_k(n)\)</span> 的 EGF 为 <span class="arithmatex">\(G_k(x)\)</span>，则：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+G_k(x)&amp;=\sum_{n \geq 0} F_k(n)\frac{x^n}{n!}\\
+&amp;=\sum_{n \geq 0} x^n\frac{1}{k!}\sum_{\sum_i^k a_i=n}\prod_{j=1}^{k}\frac{f_{a_j}}{a_j!}\\
+&amp;=\frac{1}{k!}\sum_{n \geq 0}\sum_{\sum_i^k a_i=n}\prod_{j=1}^{k}\frac{f_{a_j}x^{a_j}}{a_j!}\\
+&amp;=\frac{1}{k!}\hat{F}^k(x)
+\end{aligned}
+\]</div>
+<p>对于所有的 <span class="arithmatex">\(k \geq 0\)</span>：</p>
+<div class="arithmatex">\[
+\sum_{k \geq 0}G_k(x) = \sum_{k \geq 0}\frac{\hat{F}^k(x)}{k!} = \exp{\hat{F}(x)}
+\]</div>
+<p>上面是从组合角度直接列式理解，我们也可以从递推方面来证明 <span class="arithmatex">\(\exp(f(x))\)</span> 和 <span class="arithmatex">\(f(x)\)</span> 两者间的关系。</p>
+<p>同样设 <span class="arithmatex">\(F_k(n)\)</span> 为 <span class="arithmatex">\(n\)</span> 个有标号元素划分成 <span class="arithmatex">\(k\)</span> 个非空集合（无标号）的情况，<span class="arithmatex">\(g_i\)</span> 为 <span class="arithmatex">\(i\)</span> 个元素组成一个集合内部的方案数（意义同上文中的 <span class="arithmatex">\(f_i\)</span>），并令 <span class="arithmatex">\(G(x)\)</span> 为 <span class="arithmatex">\(\{g_i\}\)</span> 的 EGF，<span class="arithmatex">\(H_k(x)\)</span> 为 <span class="arithmatex">\(\{F_k(n)\}\)</span> 的 EGF。</p>
+<p><span class="arithmatex">\(n\)</span> 个元素中取出 <span class="arithmatex">\(i\)</span> 个元素作为一个单独划分出去的集合共有 <span class="arithmatex">\(g_i\)</span> 种方案，剩下的 <span class="arithmatex">\(n-i\)</span> 个元素构成 <span class="arithmatex">\(k-1\)</span> 个集合共 <span class="arithmatex">\(F_{k-1}(n-i)\)</span> 种方案，但最后的划分方案中，一个方案里的每个集合都会被枚举为单独划分出去的集合，所以重复计算了 <span class="arithmatex">\(k\)</span> 次，故还需要除以 <span class="arithmatex">\(k\)</span>。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+H_k(x) &amp;= \sum_{n\ge 0}\cfrac{x^n}{n!}F_k(n)\\
+&amp;=\sum_{n\ge 0}\cfrac{x^n}{n!}\sum_{i=1}^{n-k+1}\binom n {i} F_{k-1}(n-i)\times g_i\times \cfrac{1}{k}\\
+&amp;=\cfrac{1}{k}\sum_{n\ge 0}\cfrac{x^n}{n!}\sum_{i=0}^{n}\binom n {i}F_{k-1}(n-i)\times g_i\\
+&amp;=\cfrac{1}{k}\cdot  H_{k-1}(x)G(x)
+\end{aligned}
+\]</div>
+<p>上界是由非空集合划分推出的 <span class="arithmatex">\(n-(k-1)\geq i\)</span>（前 <span class="arithmatex">\(k-1\)</span> 个集合每个集合最少有一个元素），但是如果超过枚举上界涉及的 <span class="arithmatex">\(F_{k-1}(n-i)\)</span> 设为 <span class="arithmatex">\(0\)</span>，那么就没有影响。</p>
+<p>得到递推式之后可递归展开，边界为 <span class="arithmatex">\(k=1\)</span> 时 <span class="arithmatex">\(H_1(x)=G(x)\)</span>。</p>
+<div class="arithmatex">\[
+\begin{aligned}
+H_k(x) &amp;= \cfrac{1}{k}\cdot   H_{k-1}(x)G(x)\\
+&amp;= \cfrac{1}{k}\cdot\cfrac{1}{k-1}\cdot   H_{k-2}(x)G^2(x)\\
+&amp;=\cdots \\
+&amp;= \cfrac{1}{k}\cdot\cfrac{1}{k-1} \cdots\cfrac{1}{2}\cdot H_{1}(x)G^{k-1}(x)\\
+&amp;= \cfrac{1}{k!}G^{k}(x)\\
+\end{aligned}
+\]</div>
+<p>同样的有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\sum_{k\ge 0}H_k(x)=\sum_{k\ge 0}\cfrac{G^k(x)}{k!}=\exp G(x)
+\end{aligned}
+\]</div>
+<p>显然 <strong>定义成划分为非空集合</strong>（<span class="arithmatex">\(g_0=0\)</span>）是符合本身的意义的，如果 <strong>包含空集</strong>（<span class="arithmatex">\(g_0=1\)</span>），那么对应 <span class="arithmatex">\([x^n]G^k\)</span> 中就会有 <span class="arithmatex">\([x^n]G^y,y&gt;k\)</span> 的贡献（在至少一个 <span class="arithmatex">\(G\)</span> 中选择常数项），有计重，得不到所求量。</p>
+<p>从递推式的角度讲，多个 EGF 的乘积也可以看作一个类似于背包的组合（合并两组计数对象的过程）。</p>
+<p>总结多项式 <span class="arithmatex">\(\exp\)</span> 的意义就是：<strong>有标号元素构成的集合的生成集族有多少种情况</strong>，或划分为任意个非空子集的总方案数。</p>
+<h2 id="_4">排列与圆排列</h2>
+<p>长度为 <span class="arithmatex">\(n\)</span> 的排列数的指数生成函数是</p>
+<div class="arithmatex">\[
+\hat{P}(x)=\sum_{n\ge 0}\frac{n!x^n}{n!}=\sum_{n\ge 0}x^n=\frac{1}{1-x}
+\]</div>
+<p>圆排列的定义是把 <span class="arithmatex">\(1,2,\cdots,n\)</span> 排成一个环的方案数。也就是说旋转后的方案的等价的（但翻转是不等价的）。</p>
+<p><span class="arithmatex">\(n\)</span> 个数的圆排列数显然是 <span class="arithmatex">\((n-1)!\)</span>。因此 <span class="arithmatex">\(n\)</span> 个数的圆排列数的指数生成函数是</p>
+<div class="arithmatex">\[
+\hat{Q}(x)=\sum_{n\ge 1}\frac{(n-1)!x^n}{n!}=\sum_{n\ge 1}\frac{x^n}{n}=-\ln(1-x)=\ln\left( \frac{1}{1-x} \right)
+\]</div>
+<p>也就是说 <span class="arithmatex">\(\exp \hat{Q}(x)=\hat{P}(x)\)</span>。但这只是数学层面的推导。我们该怎样直观理解：圆排列数的 EGF 的 <span class="arithmatex">\(\exp\)</span> 是排列数的 EGF？</p>
+<p>一个排列，是由若干个置换环构成的。例如 <span class="arithmatex">\(p=[4,3,2,5,1]\)</span> 有两个置换环：</p>
+<p><img alt="" src="../images/p1.png" /></p>
+<p>（也就是说我们从 <span class="arithmatex">\(p_i\)</span> 向 <span class="arithmatex">\(i\)</span> 连有向边）</p>
+<p>而不同的置换环，会导出不同的排列。例如将第二个置换环改成</p>
+<p><img alt="" src="../images/p2.png" /></p>
+<p>那么它对应的排列就是 <span class="arithmatex">\([5,3,2,1,4]\)</span>。</p>
+<p>也就是说，长度为 <span class="arithmatex">\(n\)</span> 的排列的方案数是</p>
+<ol>
+<li>把 <span class="arithmatex">\(1,2,\cdots,n\)</span> 分成若干个集合</li>
+<li>每个集合形成一个置换环</li>
+</ol>
+<p>的方案数。而一个集合的数形成置换环的方案数显然就是这个集合大小的圆排列方案数。因此长度为 <span class="arithmatex">\(n\)</span> 的排列的方案数就是：把 <span class="arithmatex">\(1,2,\cdots,n\)</span> 分成若干个集合，每个集合的圆排列方案数之积。</p>
+<p>这就是多项式 <span class="arithmatex">\(\exp\)</span> 的直观理解。</p>
+<p>推广之</p>
+<ul>
+<li>如果 <span class="arithmatex">\(n\)</span> 个点 <strong>带标号</strong> 生成树的 EGF 是 <span class="arithmatex">\(\hat{F}(x)\)</span>，那么 <span class="arithmatex">\(n\)</span> 个点 <strong>带标号</strong> 生成森林的 EGF 就是 <span class="arithmatex">\(\exp \hat{F}(x)\)</span>——直观理解为，将 <span class="arithmatex">\(n\)</span> 个点分成若干个集合，每个集合构成一个生成树的方案数之积。</li>
+<li>
+<p>如果 <span class="arithmatex">\(n\)</span> 个点带标号无向连通图的 EGF 是 <span class="arithmatex">\(\hat{F}(x)\)</span>，那么 <span class="arithmatex">\(n\)</span> 个点带标号无向图的 EGF 就是 <span class="arithmatex">\(\exp \hat{F}(x)\)</span>，后者可以很容易计算得到</p>
+<div class="arithmatex">\[
+\exp \hat{F}(x)=\sum_{n\ge 0}2^{\binom{n}{2}}\frac{x^n}{n!}
+\]</div>
+<p>因此要计算前者，只需要一次多项式 <span class="arithmatex">\(\ln\)</span> 即可。</p>
+</li>
+</ul>
+<p>接下来我们来看一些指数生成函数的应用。</p>
+<h2 id="_5">应用</h2>
+<h3 id="_6">错排数</h3>
+<p>???+ note "错排数"
+    定义长度为 <span class="arithmatex">\(n\)</span> 的一个错排是满足 <span class="arithmatex">\(p_i\ne i\)</span> 的排列。</p>
+<pre><code>求错排数的指数生成函数。
+</code></pre>
+<p>从置换环的角度考虑，错排就是指置换环中不存在自环的排列。也就是说不存在长度为 <span class="arithmatex">\(1\)</span> 的置换环。后者的指数生成函数是</p>
+<div class="arithmatex">\[
+\sum_{n\ge 2}\frac{x^n}{n}=-\ln\left(1-x\right)-x
+\]</div>
+<p>因此错排数的指数生成函数就是 <span class="arithmatex">\(\exp(-\ln(1-x)-x)\)</span>。</p>
+<h3 id="_7">不动点</h3>
+<p>???+ note "<a href="https://www.51nod.com/Html/Challenge/Problem.html#problemId=1728">不动点</a>"
+    题意：求有多少个映射 <span class="arithmatex">\(f:\{1,2,\cdots,n\}\to \{1,2,\cdots,n\}\)</span>，使得</p>
+<pre><code>$$
+\underbrace{f\circ f\circ\cdots\circ f}_{k}=\underbrace{f\circ f\circ\cdots\circ f}_{k-1}
+$$
+
+$nk\le 2\times 10^6,1\le k\le 3$。
+</code></pre>
+<p>考虑 <span class="arithmatex">\(i\)</span> 向 <span class="arithmatex">\(f(i)\)</span> 连边。相当于我们从任意一个 <span class="arithmatex">\(i\)</span> 走 <span class="arithmatex">\(k\)</span> 步和走 <span class="arithmatex">\(k-1\)</span> 步到达的是同一个点。也就是说基环树的环是自环且深度不超过 <span class="arithmatex">\(k\)</span>（根结点深度为 <span class="arithmatex">\(1\)</span>）。把这个基环树当成有根树是一样的。因此我们的问题转化为：<span class="arithmatex">\(n\)</span> 个点带标号，深度不超过 <span class="arithmatex">\(k\)</span> 的有根树森林的计数。</p>
+<p>考虑 <span class="arithmatex">\(n\)</span> 个点带标号深度不超过 <span class="arithmatex">\(k\)</span> 的有根树，假设它的生成函数是：</p>
+<div class="arithmatex">\[
+\hat{F_k}(x)=\sum_{n\ge 0}f_{n,k}\frac{x^n}{n!}
+\]</div>
+<p>考虑递推求 <span class="arithmatex">\(\hat{F_k}(x)\)</span>。深度不超过 <span class="arithmatex">\(k\)</span> 的有根树，实际上就是深度不超过 <span class="arithmatex">\(k-1\)</span> 的若干棵有根树，把它们的根结点全部连到一个结点上去。因此</p>
+<div class="arithmatex">\[
+\hat{F_k}(x)=x\exp \hat{F}_{k-1}(x)
+\]</div>
+<p>那么答案的指数生成函数就是 <span class="arithmatex">\(\exp \hat{F}_k(x)\)</span>。求它的第 <span class="arithmatex">\(n\)</span> 项即可。</p>
+<h3 id="lust">Lust</h3>
+<p>???+ note "<a href="https://codeforces.com/contest/891/problem/E">Lust</a>"
+    给你一个 <span class="arithmatex">\(n\)</span> 个数的序列 <span class="arithmatex">\(a_1,a_2,\cdots,a_n\)</span>，和一个初值为 <span class="arithmatex">\(0\)</span> 的变量 <span class="arithmatex">\(s\)</span>，要求你重复以下操作 <span class="arithmatex">\(k\)</span> 次：</p>
+<pre><code>-   在 $1,2,\cdots,n$ 中等概率随机选择一个 $x$。
+-   令 $s$ 加上 $\prod_{i\ne x}a_i$。
+-   令 $a_x$ 减一。
+
+求 $k$ 次操作后 $s$ 的期望。
+
+$1\le n\le 5000,1\le k\le 10^9,0\le a_i\le 10^9$。
+</code></pre>
+<p>假设 <span class="arithmatex">\(k\)</span> 次操作后 <span class="arithmatex">\(a_i\)</span> 减少了 <span class="arithmatex">\(b_i\)</span>，那么实际上</p>
+<div class="arithmatex">\[
+s=\prod_{i=1}^n a_i-\prod_{i=1}^n(a_i- b_i)
+\]</div>
+<p>因此实际上我们的问题转化为，求 <span class="arithmatex">\(k\)</span> 次操作后 <span class="arithmatex">\(\prod_{i=1}^n (a_i- b_i)\)</span> 的期望。</p>
+<p>不妨考虑计算每种方案的的 <span class="arithmatex">\(\prod_{i=1}^n (a_i- b_i)\)</span> 的和，最后除以 <span class="arithmatex">\(n^k\)</span>。</p>
+<p>而 <span class="arithmatex">\(k\)</span> 次操作序列中，要使得 <span class="arithmatex">\(i\)</span> 出现了 <span class="arithmatex">\(b_i\)</span> 次的方案数是</p>
+<div class="arithmatex">\[
+\frac{k!}{b_1!b_2!\cdots b_n!}
+\]</div>
+<p>这与指数生成函数乘法的系数类似。</p>
+<p>设 <span class="arithmatex">\(a_j\)</span> 的指数生成函数是</p>
+<div class="arithmatex">\[
+F_j(x)=\sum_{i\ge 0}(a_j-i)\frac{x^i}{i!}
+\]</div>
+<p>那么答案就是</p>
+<div class="arithmatex">\[
+[x^k]\prod_{j=1}^nF_j(x)
+\]</div>
+<p>为了快速计算答案，我们需要将 <span class="arithmatex">\(F_j(x)\)</span> 转化为封闭形式：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+F_j(x)&amp;=\sum_{i\ge 0}a_j\frac{x^i}{i!}-\sum_{i\ge 1}\frac{x^i}{(i-1)!}\\
+&amp;=a_j\mathrm{e}^x-x\mathrm{e}^x\\
+&amp;=(a_j-x)\mathrm{e}^x
+\end{aligned}
+\]</div>
+<p>因此我们得到</p>
+<div class="arithmatex">\[
+\prod_{j=1}^nF_j(x)=\mathrm{e}^{nx}\prod_{j=1}^n(a_j-x)
+\]</div>
+<p>其中 <span class="arithmatex">\(\prod_{j=1}^n(a_j-x)\)</span> 是一个 <span class="arithmatex">\(n\)</span> 次多项式，可以暴力计算出来。假设它的展开式是 <span class="arithmatex">\(\sum_{i=0}^nc_ix^i\)</span>，那么</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\prod_{j=1}^nF_j(x)
+&amp;=\left(\sum_{i\ge 0} \frac{n^ix^i}{i!}\right)\left(\sum_{i=0}^nc_ix^i\right)\\
+&amp;=\sum_{i\ge 0}\sum_{j=0}^i c_jx^j\frac{n^{i-j}x^{i-j}}{(i-j)!}\\
+&amp;=\sum_{i\ge 0}\frac{x^{i}}{i!}\sum_{j=0}^i n^{i-j}i^{\underline{j}}c_j
+\end{aligned}
+\]</div>
+<p>计算这个多项式的 <span class="arithmatex">\(x^k\)</span> 项系数即可。</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

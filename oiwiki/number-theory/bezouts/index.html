@@ -1,0 +1,1688 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../gcd/">
+      
+      
+        <link rel="next" href="../inverse/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Bezout定理 - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bezout定理
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        裴蜀定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="裴蜀定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多个整数的情形
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一次不定方程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一次不定方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两个变量的情形
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多个变量的情形
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frobenius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frobenius 硬币问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frobenius 硬币问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sylvester" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sylvester 定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几何意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        裴蜀定理
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="裴蜀定理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多个整数的情形
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        例题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一次不定方程
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一次不定方程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        两个变量的情形
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        多个变量的情形
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#frobenius" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Frobenius 硬币问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Frobenius 硬币问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sylvester" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sylvester 定理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几何意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Bezout定理</h1>
+
+<p>裴蜀定理揭示了最大公约数与整数线性组合之间的深刻联系，是数论中最基础也最重要的结论之一。基于此，本文进一步讨论了一次不定方程的求解方法。</p>
+<h2 id="_1">裴蜀定理</h2>
+<p><strong>裴蜀定理</strong>（Bézout's lemma），也译作贝祖定理，或称作贝祖等式（Bézout's identity），给出了一个整数能够表示为两个整数的整系数线性组合的充分必要条件。</p>
+<p>???+ note "裴蜀定理"
+    设 <span class="arithmatex">\(a,b\)</span> 是不全为零的整数。那么，对于任意整数 <span class="arithmatex">\(x,y\)</span>，都有 <span class="arithmatex">\(\gcd(a,b)\mid ax+by\)</span> 成立；而且，存在整数 <span class="arithmatex">\(x,y\)</span>，使得 <span class="arithmatex">\(ax+by=\gcd(a,b)\)</span> 成立。</p>
+<p>??? note "证明"
+    记 <span class="arithmatex">\(d=\gcd(a,b)\)</span>。因为 <span class="arithmatex">\(d\mid a,b\)</span>，所以，存在整数 <span class="arithmatex">\(u,v\)</span> 使得 <span class="arithmatex">\(a=du,~b=dv\)</span> 成立。因此，总有</p>
+<pre><code>$$
+ax + by = d(ux+vy).
+$$
+
+这就说明 $d\mid ax+by$。
+
+反过来，需要说明存在 $x,y$ 使得等式成立。如果 $a,b$ 之一是 $0$，不妨设 $b=0$，那么它们的最大公约数为 $d=a$，显然有 $(x,y)=(1,0)$ 使得等式成立。接下来，考虑 $a,b$ 均不为零的情形。由于 $\gcd(a,b)=\gcd(-a,b)=\gcd(a,-b)$，所以不妨设 $a,b$ 都是正数。
+
+考虑辗转相除法的过程，有
+
+$$
+\begin{aligned}
+a   &amp;= q_1b   + r_1, &amp;&amp; 0\le r_1 &lt; b,\\
+b   &amp;= q_2r_1 + r_2, &amp;&amp; 0\le r_2 &lt; r_1,\\
+r_1 &amp;= q_3r_2 + r_3, &amp;&amp; 0\le r_3 &lt; r_2,\\
+    &amp; \cdots \\
+r_{n-3} &amp;= q_{n-1}r_{n-2} + r_{n-1}, &amp;&amp; 0\le r_{n-1} &lt; r_{n-2},\\
+r_{n-2} &amp;= q_nr_{n-1} + r_n,         &amp;&amp; 0\le r_n     &lt; r_{n-1},\\
+r_{n-1} &amp;= q_{n+1}r_n.
+\end{aligned}
+$$
+
+由于最大公约数是 $d$，最后一步辗转相除时，一定有 $r_n=d$。所以，倒数第二个等式可以写作
+
+$$
+d = r_n = r_{n-2} - q_nr_{n-1}.
+$$
+
+从倒数第三个等式中解出
+
+$$
+r_{n-1} = r_{n-3} - q_{n-1}r_{n-2}
+$$
+
+再代入上式，就可以消去 $r_{n-1}$：
+
+$$
+\begin{aligned}
+d &amp;= r_{n-2} - q_n(r_{n-3} - q_{n-1}r_{n-2}) \\
+&amp;= (1 + q_nq_{n-1})r_{n-2} - q_nr_{n-3}.
+\end{aligned}
+$$
+
+类似地，可以逐步地消去所有 $r_{n-2},r_{n-3},\cdots,r_2,r_1$，最终得到
+
+$$
+d = xa + yb.
+$$
+
+这就证明了存在 $x,y$ 使得 $ax+by=d$ 成立。由前文分析可知，这也证明了原命题。
+</code></pre>
+<p>此处，关于存在性的证明是构造性的，它同时给出了该系数的一种计算方法。这一计算方法就是 <a href="../gcd/#扩展欧几里得算法">扩展欧几里得算法</a>。</p>
+<p>考虑裴蜀定理在 <span class="arithmatex">\(\gcd(a,b)=1\)</span> 时的特殊情形，可以得到如下推论：</p>
+<p>???+ note "推论"
+    整数 <span class="arithmatex">\(a,b\)</span> 互素，当且仅当存在整数 <span class="arithmatex">\(x,y\)</span>，使得 <span class="arithmatex">\(ax+by=1\)</span> 成立。</p>
+<h3 id="_2">多个整数的情形</h3>
+<p>裴蜀定理可以推广到多个整数的情形。</p>
+<p>???+ note "定理"
+    设 <span class="arithmatex">\(a_1,a_2,\cdots,a_n\)</span> 是不全为零的整数。那么，对于任意整数 <span class="arithmatex">\(x_1,x_2,\cdots,x_n\)</span>，都有 <span class="arithmatex">\(\gcd(a_1,a_2,\cdots,a_n)\mid a_1x_1+a_2x_2+\cdots+a_nx_n\)</span> 成立；而且，存在整数 <span class="arithmatex">\(x_1,x_2,\cdots,x_n\)</span>，使得 <span class="arithmatex">\(\gcd(a_1,a_2,\cdots,a_n)=a_1x_1+a_2x_2+\cdots+a_nx_n\)</span> 成立。</p>
+<p>??? note "证明"
+    利用 <span class="arithmatex">\(\gcd(a_1,a_2,\cdots,a_n)=\gcd(\gcd(a_1,a_2,\cdots,a_{n-1}),a_n)\)</span> 这一点，对 <span class="arithmatex">\(n\)</span> 进行归纳即可。</p>
+<h3 id="_3">例题</h3>
+<p>???+ example "<a href="https://codeforces.com/problemset/problem/510/D">Codeforces 510 D. Fox And Jumping</a>"
+    给出 <span class="arithmatex">\(n\le 300\)</span> 张卡片，分别有 <span class="arithmatex">\(l_i\)</span> 和 <span class="arithmatex">\(c_i\)</span>。在一条无限长的纸带上，你可以选择花 <span class="arithmatex">\(c_i\)</span> 的钱来购买卡片 <span class="arithmatex">\(i\)</span>，从此以后可以向左或向右跳 <span class="arithmatex">\(l_i\)</span> 个单位任意次。问你至少花多少元钱才能够跳到纸带上全部位置。若不行，输出 <span class="arithmatex">\(-1\)</span>。</p>
+<p>??? note "解答"
+    分析该问题，发现想要跳到每一个格子上，必须使得所选数 <span class="arithmatex">\(l_{i_1}, \cdots, l_{i_k}\)</span> 通过数次相加或相减得出的绝对值为 <span class="arithmatex">\(1\)</span>。也就是说，存在整数 <span class="arithmatex">\(x_1, \cdots, x_k\)</span> 使得 <span class="arithmatex">\(l_{i_1} x_1 + \cdots + l_{i_k} x_k = 1\)</span>。由多个整数的裴蜀定理，这相当于从数组 <span class="arithmatex">\(l_1, \cdots, l_n\)</span> 中选择若干个数，满足它们的最大公约数为 <span class="arithmatex">\(1\)</span>，同时要求代价和最小。</p>
+<pre><code>**解法 1**：将最小代价和看作是最短路径问题，可以用 Dijkstra 算法求解。图的顶点处存储了当前的最大公约数的取值。图的起点是 $0$，要到达的目标点是 $1$。每走一步，就从当前顶点 $x$ 出发，沿着长度为 $c_i$ 的边走到顶点 $\gcd(x,l_i)$。这一算法的时间复杂度为 $O(n^2\log n)$。
+
+**解法 2**：从数组 $l_1, \cdots, l_n$ 选择若干个数，满足它们的最大公因数为 $1$，且代价和最小，由此可以想到 0-1 背包问题。
+
+设 $f_{i, j}$ 表示考虑前 $i$ 个数且最大公因数为 $j$ 的最小代价，则有转移方程：
+
+$$
+f_{i, j} = \min_{\gcd(k, l_i) = j} f_{i - 1, k} + c_i.
+$$
+
+DP 后最终的总代价即为 $f_{n, 1}$。
+
+如同一般的 0-1 背包问题，可以用滚动数组优化，去掉第一维。而这里 300 个数可以组成的最大公约数 $j$ 是很稀疏的，可以用哈希表储存。
+
+实际上，这里解法 1 建出的图便是解法 2 中动态规划的状态转移图，解法 2 相当于用动态规划求有向无环图的最短路，因此解法 1 和解法 2 是等价的。但解法 2 无需储存全图，同时 DP 的时间复杂度为 $O(n + m)$，相比 Dijkstra 算法更低，因此解法 2 在时间和空间上更优。
+</code></pre>
+<h2 id="_4">一次不定方程</h2>
+<p><strong>一次不定方程</strong>（linear Diophantine equation）是形如</p>
+<div class="arithmatex">\[
+a_1x_1 + a_2x_2 + \cdots + a_nx_n = b
+\]</div>
+<p>的不定方程，其中，<span class="arithmatex">\(a_1,a_2,\cdots,a_n\)</span> 都是整数。本节的目标是寻找它的全体整数解。</p>
+<h3 id="_5">两个变量的情形</h3>
+<p>首先考虑二元一次不定方程：</p>
+<div class="arithmatex">\[
+a_1x_1 + a_2x_2 = b.
+\]</div>
+<p>裴蜀定理指出，该方程有解，当且仅当</p>
+<div class="arithmatex">\[
+d = \gcd(a_1,a_2) \mid b.
+\]</div>
+<p>接下来，假设这一条件成立。利用扩展欧几里得算法可以求出方程 <span class="arithmatex">\(a_1x_1 + a_2x_2 = d\)</span> 的一组整数解 <span class="arithmatex">\((x_1^*,x_2^*)\)</span>。由此，可以得到原方程的一组特解</p>
+<div class="arithmatex">\[
+(x_1^\circ,x_2^\circ) = \left(\frac{b}{d}x_1^*,\frac{b}{d}x_2^*\right).
+\]</div>
+<p>要得到全部解，可以考虑将原方程与恒等式 <span class="arithmatex">\(a_1x_1^\circ+a_2x_2^\circ = b\)</span> 相减，就有</p>
+<div class="arithmatex">\[
+a_1(x_1 - x_1^\circ) + a_2(x_2 - x_2^\circ) = 0.
+\]</div>
+<p>这是一个关于 <span class="arithmatex">\((x_1-x_1^\circ,x_2-x_2^\circ)\)</span> 的齐次一次不定方程，它有通解</p>
+<div class="arithmatex">\[
+(x_1-x_1^\circ,x_2-x_2^\circ) = \left(t\dfrac{a_2}{d},-t\dfrac{a_1}{d}\right).\quad(t\in\mathbf Z)
+\]</div>
+<p>因此，原方程的通解就是</p>
+<div class="arithmatex">\[
+(x_1,x_2) = \left(x_1^\circ + t\dfrac{a_2}{d},x_2^\circ - t\dfrac{a_1}{d}\right).\quad(t\in\mathbf Z)
+\]</div>
+<p>这是直线 <span class="arithmatex">\(a_1x_1+a_2x_2 = b\)</span> 上一系列等间隔分布的整点。</p>
+<h3 id="_6">多个变量的情形</h3>
+<p>解决了二元的情形，多元的情形也就容易解决了。对于 <span class="arithmatex">\(n\)</span> 元一次不定方程</p>
+<div class="arithmatex">\[
+a_1x_1 + a_2x_2 + \cdots + a_nx_n = b,\quad (n&gt;3)
+\]</div>
+<p>由裴蜀定理可知，方程有解当且仅当</p>
+<div class="arithmatex">\[
+\gcd(a_1,a_2,\cdots,a_n) \mid b.
+\]</div>
+<p>和二元的情形类似，多元一次不定方程的通解同样可以写作</p>
+<div class="arithmatex">\[
+(x_1^\circ,x_2^\circ,\cdots,x_n^\circ) + \sum_{k=1}^{n-1} t_k(x_1^{(k)},x_2^{(k)},\cdots,x_n^{(k)})
+\]</div>
+<p>的形式，其中，<span class="arithmatex">\(x^\circ\)</span> 为一个特解，<span class="arithmatex">\(x^{(k)}\)</span> 为相应的齐次方程的 <span class="arithmatex">\((n-1)\)</span> 个解。</p>
+<p>要求出通解的具体形式，可以通过将 <span class="arithmatex">\(n\)</span> 元方程转化为 <span class="arithmatex">\((n-1)\)</span> 元方程来完成。不妨设 <span class="arithmatex">\(d_1 = \gcd(a_1,a_2)\)</span>，那么，根据裴蜀定理，<span class="arithmatex">\(a_1x_1+a_2x_2\)</span> 的全体恰为 <span class="arithmatex">\(d_1\)</span> 的所有倍数。因此，可以首先求解 <span class="arithmatex">\((n-1)\)</span> 元一次不定方程：</p>
+<div class="arithmatex">\[
+d_1y_1 + a_3x_3 + a_4x_4 + \cdots + a_nx_n = b.
+\]</div>
+<p>设得到的它的通解为</p>
+<div class="arithmatex">\[
+\begin{aligned}
+y_1 &amp;= y_1^\circ + \sum_{k=2}^{n-1}t_ky_1^{(k)}, \\
+x_i &amp;= x_i^\circ + \sum_{k=2}^{n-1}t_kx_i^{(k)},\quad i=3,\cdots,n.
+\end{aligned}
+\]</div>
+<p>设 <span class="arithmatex">\(a_1x_1+a_2x_2=d_1\)</span> 的一组特解为 <span class="arithmatex">\((x_1^*,x_2^*)\)</span>，那么，根据前一节的讨论可知，关于 <span class="arithmatex">\(x_1,x_2\)</span> 的二元一次不定方程 <span class="arithmatex">\(a_1x_1+a_2x_2=d_1y_1\)</span> 的通解就是</p>
+<div class="arithmatex">\[
+x_1 = x_1^*y_1 + t_1\dfrac{a_2}{d_1},~x_2 = x_2^*y_1 - t_1\dfrac{a_1}{d_1}.
+\]</div>
+<p>代入 <span class="arithmatex">\(y_1\)</span> 的表达式，就得到原方程的通解</p>
+<div class="arithmatex">\[
+\begin{aligned}
+x_1 &amp;= x_1^*y_1^\circ + t_1\dfrac{a_2}{d_1} + \sum_{k=2}^{n-1}t_kx_1^*y_1^{(k)}, \\
+x_2 &amp;= x_2^*y_1^\circ - t_1\dfrac{a_1}{d_1} + \sum_{k=2}^{n-1}t_kx_2^*y_1^{(k)}, \\
+x_i &amp;= x_i^\circ + \sum_{k=2}^{n-1}t_kx_i^{(k)},\quad i=3,\cdots,n.
+\end{aligned}
+\]</div>
+<h2 id="frobenius">Frobenius 硬币问题</h2>
+<p>裴蜀定理给出了一个整数可以由若干个整数线性表出的充分必要条件。与此紧密相关的是 <strong>Frobenius 硬币问题</strong>（Frobenius coin problem）：</p>
+<ul>
+<li>如果硬币共有 <span class="arithmatex">\(a_1,a_2,\cdots,a_n\)</span> 等若干种整数面值，且 <span class="arithmatex">\(\gcd(a_1,a_2,\cdots,a_n)=1\)</span>，那么，不能够由这些硬币组成的最大整数是多少？</li>
+</ul>
+<p>同样是在考察整数 <span class="arithmatex">\(k\)</span> 什么时候可以表示为 <span class="arithmatex">\(a_1x_1+a_2x_2+\cdots+a_nx_n\)</span> 的形式，裴蜀定理中 <span class="arithmatex">\(x_i\)</span> 可以是任意整数，而 Frobenius 硬币问题中 <span class="arithmatex">\(x_i\)</span> 只能是自然数。</p>
+<p>只有一种硬币的情形是平凡的，因为只能有 <span class="arithmatex">\(a_1=1\)</span>，所有自然数都可以由它表示。而 <span class="arithmatex">\(n&gt;2\)</span> 的情形又太过复杂，所以，本节仅讨论 <span class="arithmatex">\(n=2\)</span> 的情形。</p>
+<h3 id="sylvester">Sylvester 定理</h3>
+<p>在 1882 年，Sylvester 完全解决了 <span class="arithmatex">\(n = 2\)</span> 时的 Frobenius 硬币问题：</p>
+<p>???+ note "定理（Sylvester）"
+    对于互素的正整数 <span class="arithmatex">\(a_1,a_2\)</span>，不能够写作 <span class="arithmatex">\(a_1x_1+a_2x_2~(x_1,x_2\in\mathbf N)\)</span> 的最大整数是 <span class="arithmatex">\(C = a_1a_2 - a_1 - a_2\)</span>。而且，对于所有 <span class="arithmatex">\(k\in\mathbf Z\)</span>，整数 <span class="arithmatex">\(k\)</span> 和 <span class="arithmatex">\(C-k\)</span> 中有且只有一个可以写作该形式。</p>
+<p>为表述方便，称可以写作 <span class="arithmatex">\(a_1x_1+a_2x_2~(x_1,x_2\in\mathbf N)\)</span> 形式的整数为 <strong>可表示的</strong>。</p>
+<p>??? note "证明一"
+    由于 <span class="arithmatex">\(a_1,a_2\)</span> 互素，对于任意整数 <span class="arithmatex">\(k\)</span>，方程 <span class="arithmatex">\(a_1x_1+a_2x_2=k\)</span> 一定有解，且通解为</p>
+<pre><code>$$
+(x_1,x_2) = (x_1^\circ + ta_2, x_2^\circ - ta_1).\quad(t\in\mathbf Z)
+$$
+
+取 $t$ 为 $x_2^\circ$ 对 $a_1$ 作带余除法得到的商，那么，余数 $x_2 = x_2^\circ-ta_1$ 位于 $0$ 和 $a_1-1$ 之间。考察此时得到的一组解 $(x_1,x_2)$。因为 $x_2$ 是它能够取到的最小非负整数值，所以 $n$ 可表示当且仅当 $x_1\ge 0$。
+
+**第一步**：证明大于 $C$ 的整数都是可表示的。
+
+当 $k &gt; C$ 时，有
+
+$$
+a_1x_1 = k - a_2x_2 &gt; C - a_2(a_1-1) = -a_1.
+$$
+
+所以，$x_1 &gt; -1$，也就是说，$x_1\ge 0$。这说明，$(x_1,x_2)$ 是一组自然数解。此时，$k$ 可以写作所求形式。
+
+**第二步**：证明 $C$ 不可表示。进而，$C$ 是最大的不可表示的整数，且 $k$ 和 $C-k$ 并非都可表示的。
+
+反证法。假设 $C$ 可以表示，即存在 $x_1,x_2\in\mathbf N$ 使得 $a_1x_1+a_2x_2=C$ 成立。代入 $C$ 的表达式，可知
+
+$$
+a_1a_2 = a_1(x_1+1) + a_2(x_2+1).
+$$
+
+因此，$a_2\mid (x_1+1)$ 且 $a_1\mid (x_2+1)$。又因为 $x_1+1,x_2+1$ 都是正数，所以，有
+
+$$
+a_1a_2 \ge a_1a_2 + a_2a_1 = 2a_1a_2.
+$$
+
+矛盾。这就说明 $C$ 不可表示。结合第一步，它也就是不可表示的最大整数。
+
+如果 $k$ 和 $C-k$ 都可以表示，那么，将 $k$ 和 $C-k$ 的表示中的系数相加就得到 $C$ 的表示中的系数，这与 $C$ 不可表示矛盾，故而 $k$ 和 $C-k$ 至多只有一个可以表示。
+
+**第三步**：证明如果 $k$ 不可表示，那么 $C-k$ 一定是可表示的。
+
+设 $(x_1,x_2)$ 是前文所设的方程 $a_1x_1+a_2x_2=k$ 的整数解。那么，前文已经说明 $k$ 不可表示，就等价于 $x_1&lt;0$。因此，有
+
+$$
+C - k = a_1a_2 - a_1 - a_2 - a_1x_1 - a_2x_2 = a_1(-1-x_1) + a_2(a_1-1-x_2).
+$$
+
+其中，$-1-x_1$ 和 $a_1-1-x_2$ 都是非负整数，所以，$C-k$ 可以表示。
+</code></pre>
+<p>??? note "证明二"
+    此处仅证明 <span class="arithmatex">\(C=a_1a_2-a_1-a_2\)</span> 是最大的不可表示的自然数，其余部分的证明类似证明一。</p>
+<pre><code>考虑模 $a_2$ 意义下，每个剩余系中最小的可表示的自然数。因为同一个剩余系中的不同自然数可以通过加减若干个 $a_2$ 互相转化，所以，在讨论最小可表示数时，只需要考虑加减 $a_1$ 的可能性就可以了。由于 $a_1$ 和 $a_2$ 互素，所以，每个剩余系中最小的可表示的自然数恰好就是 $a_1$ 的倍数
+
+$$
+0,~a_1,~2a_1,~\cdots,~(a_2-1)a_1.
+$$
+
+因此，最大的不可表示数为
+
+$$
+\max_{0\le i &lt; a_2} ia_1 - a_2 = (a_2-1)a_1 - a_2 = C.
+$$
+</code></pre>
+<h3 id="_7">几何意义</h3>
+<p>将方程 <span class="arithmatex">\(a_1x_1 + a_2x_2 = k\)</span> 看作是一条直线。那么，<span class="arithmatex">\(k\)</span> 可表示，当且仅当这条直线在第一象限（包括坐标轴）内通过一个整点。当 <span class="arithmatex">\(k &lt; ab\)</span> 时，这条直线在第一象限至多只能通过一个整点。因此，对于 <span class="arithmatex">\(0\le k &lt; ab\)</span>，整数 <span class="arithmatex">\(k\)</span> 可以表示，当且仅当 <span class="arithmatex">\(k\)</span> 在第一象限通过恰好一个整点。</p>
+<p>因此，小于等于 <span class="arithmatex">\(k &lt; ab\)</span> 且可以表示的自然数的数量，恰好等于第一象限内直线 <span class="arithmatex">\(a_1x_1 + a_2x_2 = k\)</span> 下的整点个数（包含边界上的点）。这一数量就等于</p>
+<div class="arithmatex">\[
+\sum_{i=0}^{\lfloor k / a_1 \rfloor} \left\lfloor\dfrac{k-ia_1}{a_2}\right\rfloor.
+\]</div>
+<p>这是经典的直线下整点问题，可以用 <a href="../euclidean/#类欧几里得算法">类欧几里得算法</a> 在 <span class="arithmatex">\(O(\log\min\{a_1,a_2,k\})\)</span> 时间求解。</p>
+<h3 id="_8">习题</h3>
+<ul>
+<li><a href="https://www.luogu.com.cn/problem/P3951">Luogu P3951 NOIP2017 提高组 小凯的疑惑/蓝桥杯 2013 省 买不到的数目</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

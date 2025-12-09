@@ -1,0 +1,1773 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Stern brocot - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Stern brocot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        引入
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sternbrocot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stern–Brocot 树
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stern–Brocot 树">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        构造
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="构造">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        逐层构造
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三元组构造
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sternbrocot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        矩阵表示与 Stern–Brocot 数系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        建树实现
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        性质
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="性质">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单调性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最简性
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完全性
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        查找分数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="查找分数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        朴素算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        基于连分数的算法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#calkinwilf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calkin–Wilf 树
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Calkin–Wilf 树">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        与连分数的关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sternbrocot_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        与 Stern–Brocot 树的关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stern 双原子序列
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#farey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farey 序列
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Farey 序列">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        序列长度与分数查找
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farey_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farey 邻项
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        递推关系
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考资料与注释
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Stern brocot</h1>
+
+<h2 id="_1">引入</h2>
+<p>本文介绍存储最简分数的数据结构以及其它相关概念。它们与 <a href="../continued-fraction/">连分数</a> 紧密相关，在算法竞赛中可以用于解决一系列数论问题，并可能作为某些题目的隐含背景出现。</p>
+<h2 id="sternbrocot">Stern–Brocot 树</h2>
+<p>Stern–Brocot 树是一种维护分数的优雅的结构，包含所有不同的正有理数。这个结构分别由 Moritz Stern 在 1858 年和 Achille Brocot 在 1861 年独立发现。</p>
+<h3 id="_2">构造</h3>
+<h4 id="_3">逐层构造</h4>
+<p>Stern–Borcot 树可以在迭代构造第 <span class="arithmatex">\(k\)</span> 阶 Stern–Brocot 序列（Stern–Brocot sequence of order <span class="arithmatex">\(k\)</span>）的过程中得到。第 <span class="arithmatex">\(0\)</span> 阶 Stern–Brocot 序列由两个简单的分数组成：</p>
+<div class="arithmatex">\[
+\frac{0}{1},\ \frac{1}{0}.
+\]</div>
+<p>此处的 <span class="arithmatex">\(\dfrac{1}{0}\)</span> 严格意义上并不算是有理分数，可以理解为表示 <span class="arithmatex">\(\infty\)</span> 的最简分数。</p>
+<p>在第 <span class="arithmatex">\(k\)</span> 阶 Stern–Brocot 序列相邻的两个分数 <span class="arithmatex">\(\dfrac{a}{b}\)</span> 和 <span class="arithmatex">\(\dfrac{c}{d}\)</span> 中间插入它们的中位分数（mediant）[^mediant]<span class="arithmatex">\(\dfrac{a+c}{b+d}\)</span>，就得到第 <span class="arithmatex">\(k+1\)</span> 阶 Stern–Brocot 序列。尽管中位分数的定义本身允许分数的约分，但是在 Stern–Brocot 树的构造中，只需要直接将分子和分母分别相加即可，而不必担心约分的问题。由此，可以迭代地构造出所有阶的 Stern–Brocot 序列。前几次迭代的结果如下：</p>
+<div class="arithmatex">\[
+\begin{array}{ccccccccc}
+&amp;&amp;&amp;\dfrac{0}{1}, &amp; \dfrac{1}{1}, &amp; \dfrac{1}{0} &amp;&amp;&amp;\\\\
+&amp;&amp;\dfrac{0}{1}, &amp; \dfrac{1}{2}, &amp; \dfrac{1}{1}, &amp; \dfrac{2}{1}, &amp; \dfrac{1}{0} &amp;&amp;\\\\
+\dfrac{0}{1}, &amp; \dfrac{1}{3}, &amp; \dfrac{1}{2}, &amp; \dfrac{2}{3}, &amp; \dfrac{1}{1}, &amp; \dfrac{3}{2}, &amp; \dfrac{2}{1}, &amp; \dfrac{3}{1}, &amp; \dfrac{1}{0}
+\end{array}
+\]</div>
+<p>将每次迭代中新添加的分数连结成树状结构，就得到了 Stern–Brocot 树。如下图所示：</p>
+<p><img alt="" src="../images/stern-brocot-tree.svg" /></p>
+<p>第 <span class="arithmatex">\(k\)</span> 阶 Stern–Brocot 序列，不计左右端点，就是深度为 <span class="arithmatex">\(k-1\)</span> 的 Stern–Brocot 树的中序遍历。</p>
+<h4 id="_4">三元组构造</h4>
+<p>另一种等价的构造方式是以三元组</p>
+<div class="arithmatex">\[
+\left(\dfrac{0}{1},\dfrac{1}{1},\dfrac{1}{0}\right)
+\]</div>
+<p>作为根节点，且在每个节点</p>
+<div class="arithmatex">\[
+\left(\dfrac{a}{b},\dfrac{p}{q},\dfrac{c}{d}\right)
+\]</div>
+<p>后都分别添加</p>
+<div class="arithmatex">\[
+\left(\dfrac{a}{b},\dfrac{a+p}{b+q},\dfrac{p}{q}\right),\ \left(\dfrac{p}{q},\dfrac{p+c}{q+d},\dfrac{c}{d}\right)
+\]</div>
+<p>为左右子节点，就可以构造出整个 Stern–Brocot 树。Stern–Brocot 树的每个节点记录的三元组中，实际存储的分数是位于三元组中间的分数 <span class="arithmatex">\(\dfrac{p}{q}\)</span>，而左右两个分数 <span class="arithmatex">\(\dfrac{a}{b}\)</span> 和 <span class="arithmatex">\(\dfrac{c}{d}\)</span> 是更早就出现过的分数。而且，考虑前一种构造就会发现，分数 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 正是通过插入 <span class="arithmatex">\(\dfrac{a}{b}\)</span> 和 <span class="arithmatex">\(\dfrac{c}{d}\)</span> 的中位分数得到的。</p>
+<h4 id="sternbrocot_1">矩阵表示与 Stern–Brocot 数系</h4>
+<p>三元组构造意味着每个 Stern–Brocot 树上的节点都对应着一个矩阵</p>
+<div class="arithmatex">\[
+S = \begin{pmatrix}
+b &amp; d\\
+a &amp; c
+\end{pmatrix}.
+\]</div>
+<p>Stern–Brocot 树的根节点是单位矩阵 <span class="arithmatex">\(I\)</span>，而向左子节点移动和向右子节点移动则分别对应将当前节点矩阵右乘以矩阵</p>
+<div class="arithmatex">\[
+L=\begin{pmatrix}
+1 &amp; 1 \\
+0 &amp; 1
+\end{pmatrix},~
+R=\begin{pmatrix}
+1 &amp; 0 \\
+1 &amp; 1
+\end{pmatrix}.
+\]</div>
+<p>每个节点实际对应的分数就是 <span class="arithmatex">\(f(S)=\dfrac{a+c}{b+d}\)</span>。每个节点的矩阵 <span class="arithmatex">\(S\)</span> 都可以写成一系列矩阵 <span class="arithmatex">\(L\)</span> 和 <span class="arithmatex">\(R\)</span> 的乘积，这也可以理解为是由 <span class="arithmatex">\(L\)</span> 和 <span class="arithmatex">\(R\)</span> 构成的字符串，表示了从根节点到达它的路径。将所有正的有理数唯一地表示为这样的字符串，这可以看作得到了正有理数的一种表示，故而也称作 <strong>Stern–Brocot 数系</strong>（Stern–Brocot number system）。</p>
+<h4 id="_5">建树实现</h4>
+<p>建树算法只需要模拟上述过程即可。下面是对前 <span class="arithmatex">\(n\)</span> 层的 Stern–Brocot 树做中序遍历的代码。</p>
+<p>???+ example "建树"
+    === "C++"
+        <code>cpp
+        --8&lt;-- "docs/math/code/stern-brocot/tree-build.cpp:core"</code></p>
+<pre><code>=== "Python"
+    ```py
+    --8&lt;-- "docs/math/code/stern-brocot/tree-build.py:core"
+    ```
+</code></pre>
+<p>建树算法的复杂度是 <span class="arithmatex">\(O(n^2)\)</span> 的。</p>
+<h3 id="_6">性质</h3>
+<p>接下来讨论 Stern–Brocot 树的性质。简而言之，Stern–Brocot 树是包含所有正的最简有理分数的 <a href="../../ds/bst.md">二叉搜索树</a>，它也是分子和分母的 <a href="../../ds/binary-heap.md">堆</a>，也是分母和分子构成的二元组的 <a href="../../ds/cartesian-tree.md">笛卡尔树</a>。如果考虑前文的三元组构造中的左右端点形成的区间，则 Stern–Brocot 树也可以看作是 <span class="arithmatex">\([0,\infty]\)</span> 上的 <a href="../../ds/seg.md">线段树</a>。这些陈述可以通过如下的三条基本性质导出：</p>
+<h4 id="_7">单调性</h4>
+<p>在上面的构造中，每一层的分数都是单调递增的。为此只需要归纳证明。因为如果 <span class="arithmatex">\(\dfrac{a}{b} &lt; \dfrac{c}{d}\)</span>，那么必然有</p>
+<div class="arithmatex">\[
+\dfrac{a}{b} &lt; \dfrac{a+c}{b+d} &lt; \dfrac{c}{d}.
+\]</div>
+<p>这一点可以通过消去不等式的分母得出。归纳起点是 <span class="arithmatex">\(\dfrac{0}{1} &lt; \dfrac{1}{0}\)</span>，单调性也显然成立。</p>
+<h4 id="_8">最简性</h4>
+<p>在上面的构造中，每个分数都是最简分数。为此同样需要归纳证明上面的构造中，每一层相邻的分数 <span class="arithmatex">\(\dfrac{a}{b}\)</span> 和 <span class="arithmatex">\(\dfrac{c}{d}\)</span> 都满足等式</p>
+<div class="arithmatex">\[
+bc-ad = \det\begin{pmatrix}
+b &amp; d\\
+a &amp; c
+\end{pmatrix} = 1.
+\]</div>
+<p>根节点处是单位矩阵，这显然成立。向下移动时，乘以的矩阵 <span class="arithmatex">\(L\)</span> 和 <span class="arithmatex">\(R\)</span> 的行列式都是 <span class="arithmatex">\(1\)</span>，根据 <a href="../../linear-algebra/determinant/">行列式</a> 的性质可知，在下一层同样成立</p>
+<div class="arithmatex">\[
+\det\begin{pmatrix}b &amp; b+d \\ a &amp; a+c \end{pmatrix} = \det\begin{pmatrix}b+d &amp; d \\ a+c &amp; c\end{pmatrix} = 1.
+\]</div>
+<p>对于归纳起点 <span class="arithmatex">\(\dfrac{0}{1}\)</span> 和 <span class="arithmatex">\(\dfrac{1}{0}\)</span> 这也是显然的。由此，根据 <a href="../bezouts/">裴蜀定理</a>，必然可知每个分数的分子和分母都是互素的，即所有分数都是最简分数。</p>
+<h4 id="_9">完全性</h4>
+<p>最后，需要说明 Stern–Brocot 树包括了所有正的最简分数。因为前两条性质已经说明 Stern–Brocot 树是二叉搜索树，而任何正的最简分数 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 必然位于 <span class="arithmatex">\(\dfrac{0}{1}\)</span> 和 <span class="arithmatex">\(\dfrac{1}{0}\)</span> 之间，根据二叉搜索树上做搜索的方法，二叉搜索树上没有 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 的唯一可能性就是搜索过程无限长。这是不可能的。</p>
+<p>假设现在已经知道</p>
+<div class="arithmatex">\[
+\dfrac{a}{b} &lt; \dfrac{p}{q} &lt; \dfrac{c}{d},
+\]</div>
+<p>那么必然有</p>
+<div class="arithmatex">\[
+bp-aq \ge 1,\ cq-dp \ge 1.
+\]</div>
+<p>将两个不等式分别乘以 <span class="arithmatex">\((c+d)\)</span> 和 <span class="arithmatex">\((a+b)\)</span>，就能够得到</p>
+<div class="arithmatex">\[
+(c+d)(bp-aq) + (a+b)(cq-dp) \ge a+b+c+d.
+\]</div>
+<p>利用前面已经说明的等式 <span class="arithmatex">\(bc-ad=1\)</span> 可知</p>
+<div class="arithmatex">\[
+p+q \ge a+b+c+d.
+\]</div>
+<p>每次搜索更深入一层的时候，等式右侧都严格地增加，而左侧保持不变，因此搜索必然在有限步内停止。</p>
+<h3 id="_10">查找分数</h3>
+<p>在实际应用 Stern–Brocot 树的过程中，经常需要查询给定分数在 Stern–Brocot 树上的位置。</p>
+<h4 id="_11">朴素算法</h4>
+<p>因为 Stern–Brocot 是二叉搜索树，只需要通过比较当前分数和要寻找的分数的大小关系，就可以确定从根节点到给定分数的路径。将路径上向左子节点移动和向右子节点移动分别记作 <span class="arithmatex">\(L\)</span> 和 <span class="arithmatex">\(R\)</span>，则每个路径就对应一个由 <span class="arithmatex">\(L\)</span> 和 <span class="arithmatex">\(R\)</span> 构成的字符串，这就是上文提到的有理数在 Stern–Brocot 数系中的表示。求得到达某个有理数的路径的过程就相当于求得该有理数在 Stern–Brocot 数系中的表示。</p>
+<p>朴素的分数查找算法的实现如下：</p>
+<p>???+ example "朴素分数查找"
+    === "C++"
+        <code>cpp
+        --8&lt;-- "docs/math/code/stern-brocot/fraction-finding-1.cpp:core"</code></p>
+<pre><code>=== "Python"
+    ```python
+    --8&lt;-- "docs/math/code/stern-brocot/fraction-finding-1.py:core"
+    ```
+</code></pre>
+<p>算法的复杂度是 <span class="arithmatex">\(O(p+q)\)</span> 的，因此在算法竞赛中并不实用。</p>
+<p>在 Stern–Brocot 数系中，每个正的无理数都对应着唯一的无限长的字符串。可以使用同样的算法构造出这个字符串。这个无限长的字符串的每个前缀都对应着一个有理的最简分数。将这些最简分数排成一列，数列中的分数的分母是严格递增的，而数列的极限就是该无理数。因此，Stern-Brocot 树可以用于找到某个无理数的任意精度的有理逼近。但是，应当注意的是，这个有理数数列和无理数之间的差距并非严格递减的。对于有理逼近的严格理论，应当参考连分数页面的 <a href="../continued-fraction/#丢番图逼近">丢番图逼近</a> 一节。在实际应用 Stern-Brocot 树寻找某个实数在分母不超过某范围的最佳逼近时，最后应当注意比较左右区间端点到该实数的距离。</p>
+<h4 id="_12">快速算法</h4>
+<p>查找分数的朴素算法效率并不高，但是经过简单的优化就可以得到 <span class="arithmatex">\(O(\log(p+q))\)</span> 的快速查找算法。优化的关键是将连续的 <span class="arithmatex">\(L\)</span> 和 <span class="arithmatex">\(R\)</span> 合并处理。</p>
+<p>如果要查找的分数 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 落入 <span class="arithmatex">\(\dfrac{a}{b}\)</span> 和 <span class="arithmatex">\(\dfrac{c}{d}\)</span> 之间，那么连续 <span class="arithmatex">\(t\)</span> 次向右移动时，右侧边界保持不动，而左侧节点移动到 <span class="arithmatex">\(\dfrac{a+tc}{b+td}\)</span> 处；反过来，连续 <span class="arithmatex">\(t\)</span> 次向左移动时，左侧边界保持不动，而右侧节点移动到 <span class="arithmatex">\(\dfrac{ta+c}{tb+d}\)</span> 处。因此，可以直接通过 <span class="arithmatex">\(\dfrac{a+tc}{b+td}&lt;\dfrac{p}{q}\)</span> 或 <span class="arithmatex">\(\dfrac{p}{q}&lt;\dfrac{ta+c}{tb+d}\)</span> 来确定向右和向左移动的次数。此处取严格不等号，是因为算法移动的是左右端点，而要寻找的分数是作为最后得到的端点的中位分数出现的。</p>
+<p>???+ example "快速分数查找"
+    === "C++"
+        <code>cpp
+        --8&lt;-- "docs/math/code/stern-brocot/fraction-finding-2.cpp:core"</code></p>
+<pre><code>=== "Python"
+    ```python
+    --8&lt;-- "docs/math/code/stern-brocot/fraction-finding-2.py:core"
+    ```
+</code></pre>
+<p>当前查找算法需要在分数 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 已知。如果目标分数未知，往往需要在每次向右或向左移动时，对移动次数进行倍增查找或者二分查找。此时，分数查找算法的复杂度是 <span class="arithmatex">\(O(\log^2(p+q))\)</span>。</p>
+<h4 id="_13">基于连分数的算法</h4>
+<p>对于分数已知的情形，可以利用连分数给出更为简单的算法。不妨假设首组移动是向右的；如果不然，则设首组向右移动的次数为零。向右、向左交替移动端点，将每组移动后的端点位置排列如下：</p>
+<div class="arithmatex">\[
+\dfrac{p_0}{q_0},~\dfrac{p_1}{q_1},~\dfrac{p_2}{q_2},~\cdots,~\dfrac{p_{n-2}}{q_{n-2}},~\dfrac{p_{n-1}}{q_{n-1}},~\dfrac{p_n}{q_n}.
+\]</div>
+<p>其中，偶数组移动是向右的，故而记录的是左端点的位置；奇数组移动是向左的，故而记录的是右端点的位置。在这一列端点前面再添加两个端点</p>
+<div class="arithmatex">\[
+\dfrac{p_{-2}}{q_{-2}}=\dfrac{0}{1},~\dfrac{p_{-1}}{q_{-1}}=\dfrac{1}{0}.
+\]</div>
+<p>设第 <span class="arithmatex">\(k\)</span> 组移动的次数为 <span class="arithmatex">\(t_k\)</span>，那么根据上面得到的移动次数与端点位置之间的关系可知</p>
+<div class="arithmatex">\[
+\dfrac{p_k}{q_k} = \dfrac{t_kp_{k-1}+p_{k-2}}{t_kq_{k-1}+q_{k-2}}.
+\]</div>
+<p>根据连分数的 <a href="../continued-fraction/#递推关系">递推关系</a> 就可以知道，端点</p>
+<div class="arithmatex">\[
+\dfrac{p_k}{q_k} = [t_0,t_1,\cdots,t_k].
+\]</div>
+<p>最后得到的连分数是</p>
+<div class="arithmatex">\[
+\dfrac{p}{q} = \dfrac{p_k+p_{k-1}}{q_k+q_{k-1}} = [t_0,t_1,\cdots,t_{n-1},t_n,1].
+\]</div>
+<p>因此，在目标分数的末尾为一的 <a href="../continued-fraction/#简单连分数">连分数表示</a> 中，不计最后的一，前面的项就编码了 Stern–Brocot 树上自根节点到当前节点的路径。其中，偶数项（下标自 <span class="arithmatex">\(0\)</span> 开始）是向右子节点的边，奇数项是向左子节点的边。</p>
+<p>有理数的连分数表示可以通过辗转相除法求得，因此基于连分数表示的分数查找算法的复杂度是 <span class="arithmatex">\(O(\log\min\{p,q\})\)</span> 的。</p>
+<p>???+ example "基于连分数的分数查找"
+    === "C++"
+        <code>cpp
+        --8&lt;-- "docs/math/code/stern-brocot/fraction-finding-3.cpp:core"</code></p>
+<pre><code>=== "Python"
+    ```python
+    --8&lt;-- "docs/math/code/stern-brocot/fraction-finding-3.py:core"
+    ```
+</code></pre>
+<p>利用连分数表示，可以简单地表达出某个节点的父节点和子节点。对于节点 <span class="arithmatex">\([t_0,t_1,\cdots,t_n,1]\)</span>，它的父节点就是沿最后的移动方向少移动一步的节点：在 <span class="arithmatex">\(t_k&gt;1\)</span> 时，父节点是 <span class="arithmatex">\([t_0,t_1,\cdots,t_n - 1,1]\)</span>；否则，父节点是 <span class="arithmatex">\([t_0,t_1,\cdots,t_{n-1},1]\)</span>。它的两个子节点则分别是 <span class="arithmatex">\([t_0,t_1,\cdots,t_n+1,1]\)</span> 和 <span class="arithmatex">\([t_0,t_1,\cdots,t_n,1,1]\)</span>；两个节点哪个是左子节点，哪个是右子节点，需要根据 <span class="arithmatex">\(n\)</span> 的奇偶性判断。</p>
+<h2 id="calkinwilf">Calkin–Wilf 树</h2>
+<p>另外一种更为简单的存储正有理分数的结构是 Calkin–Wilf 树。它通常如下所示：</p>
+<p><img alt="pic" src="../images/calkin-wilf-tree.svg" /></p>
+<p>树的根节点为 <span class="arithmatex">\(\dfrac{1}{1}\)</span>。然后，对于分数 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 所在的节点，其左右子节点分别为 <span class="arithmatex">\(\dfrac{p}{p+q}\)</span> 和 <span class="arithmatex">\(\dfrac{p+q}{q}\)</span>。与 Stern–Brocot 树类似，它的每个分数都是最简分数，且包括全体正的最简分数各恰好一次。</p>
+<h3 id="_14">与连分数的关系</h3>
+<p>与 Stern–Brocot 树不同，Calkin–Wilf 树不是二叉搜索树，因此不能用于二分查找有理数。</p>
+<p>在 Calkin–Wilf 树中，当 <span class="arithmatex">\(p&gt;q\)</span> 时，分数 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 的父节点为 <span class="arithmatex">\(\dfrac{p-q}{q}\)</span>；当 <span class="arithmatex">\(p&lt;q\)</span> 时，为 <span class="arithmatex">\(\dfrac{p}{q-p}\)</span>。对于第一种情形，自 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 出发，它是父节点的右子节点，可以一直通过父节点的右边向上移动，直到分子不再大于分母为止，此时节点存储的分数是 <span class="arithmatex">\(\dfrac{p\bmod q}{q}\)</span>，本组移动的次数是 <span class="arithmatex">\(\left\lfloor\dfrac{p}{q}\right\rfloor\)</span>；对于第二种情形，它是父节点的左子节点，可以一直通过父节点的左边向上移动，直到分母不再大于分子为止，此时节点存储的分数是 <span class="arithmatex">\(\dfrac{p}{q\bmod p}\)</span>，本组移动的次数是 <span class="arithmatex">\(\left\lfloor\dfrac{q}{p}\right\rfloor\)</span>。</p>
+<p>利用连分数的语言，设当前的节点存储的是某个连分数的余项 <span class="arithmatex">\(s_k\)</span>，则沿父节点的右边向上移动 <span class="arithmatex">\(\lfloor s_k\rfloor\)</span> 次，到达分数 <span class="arithmatex">\(\dfrac{1}{s_{k+1}}\)</span>，随后沿父节点的左边移动 <span class="arithmatex">\(\lfloor s_{k+1}\rfloor\)</span> 次，到达分数 <span class="arithmatex">\(s_{k+2}\)</span>。因此，从节点 <span class="arithmatex">\(s_0=\dfrac{p}{q}\)</span> 开始向上到达根节点 <span class="arithmatex">\(\dfrac{1}{1}\)</span> 的路径由连分数 <span class="arithmatex">\([t_0,t_1,\cdots,t_n,1]\)</span> 编码：除去最后的 <span class="arithmatex">\(1\)</span>，偶数项（下标自 <span class="arithmatex">\(0\)</span> 开始）表示沿父节点的右边移动的次数，奇数项表示沿父节点的左边移动的次数。</p>
+<p>对于分数 <span class="arithmatex">\(\dfrac{p}{q}=[t_0,t_1,\cdots,t_n,1]\)</span> 所在的节点，它的父节点有如下表示：</p>
+<ol>
+<li>当 <span class="arithmatex">\(t_0&gt;0\)</span> 时，它的父节点为 <span class="arithmatex">\(\dfrac{p-q}{q}=[t_0 - 1, t_1, \cdots, t_n,1]\)</span>；</li>
+<li>当 <span class="arithmatex">\(t_0=0\)</span> 且 <span class="arithmatex">\(t_1&gt;1\)</span> 时，它的父节点为 <span class="arithmatex">\(\dfrac{p}{q-p} = [0, t_1 - 1, t_2, \cdots, t_n,1]\)</span>；</li>
+<li>当 <span class="arithmatex">\(t_0=0\)</span> 且 <span class="arithmatex">\(t_1=1\)</span> 时，它的父节点为 <span class="arithmatex">\(\dfrac{p}{q-p} = [t_2, t_3, \cdots, t_n,1]\)</span>。</li>
+</ol>
+<p>反过来，它的子节点则分别是 <span class="arithmatex">\(\dfrac{p+q}{q}=[t_0+1,t_1,\cdots,t_n,1]\)</span> 和 <span class="arithmatex">\(\dfrac{p}{p+q}=[0,1,t_0,t_1,\cdots,t_n,1]\)</span>。对于第二个子节点的连分数表示，在 <span class="arithmatex">\(t_0=0\)</span> 时，应当理解为 <span class="arithmatex">\([0,1+t_1,\cdots,t_n,1]\)</span>。</p>
+<h3 id="sternbrocot_2">与 Stern–Brocot 树的关系</h3>
+<p>同样和连分数建立起联系，Stern–Brocot 树中路径上节点呈现的是渐近分数的递归关系，而 Calkin–Wilf 树中路径上节点呈现的是余项的递归关系。同一个分数的连分数表示是一定的，因此它在 Calkin–Wilf 树上到达根节点的路径的编码和 Stern–Brocot 树的根节点到它的路径的编码是完全一样的。但是，由于路径的方向相反，所以虽然 Stern–Brocot 树和 Calkin–Wilf 树同一层存储的分数是一样的，但是位置并不相同。</p>
+<p>如果对两个树分别做 <a href="../../graph/bfs.md">广度优先搜索</a> 并依次对节点编号，根节点编号为 <span class="arithmatex">\(1\)</span>，那么编号为 <span class="arithmatex">\(v\)</span> 的节点的左右子节点分别是 <span class="arithmatex">\(2v\)</span> 和 <span class="arithmatex">\(2v+1\)</span>。从编号的二进制表示来看，除去起始的 <span class="arithmatex">\(1\)</span>，从高位至低位每个 <span class="arithmatex">\(1\)</span> 均表示向右子节点移动，每个 <span class="arithmatex">\(0\)</span> 均表示向左子节点移动。Calkin–Wilf 树上，连分数 <span class="arithmatex">\([t_0,t_1,\cdots,t_n,1]\)</span> 表示的有理数所在节点的编号是</p>
+<div class="arithmatex">\[
+1\cdots \underbrace{0\cdots 0}_{t_3}\underbrace{1\cdots 1}_{t_2}\underbrace{0\cdots 0}_{t_1}\underbrace{1\cdots 1}_{t_0}.
+\]</div>
+<p>相应地，Stern–Brocot 树上，连分数 <span class="arithmatex">\([t_0,t_1,\cdots,t_n,1]\)</span> 表示的有理数所在节点的编号是</p>
+<div class="arithmatex">\[
+1\underbrace{1\cdots 1}_{t_0}\underbrace{0\cdots 0}_{t_1}\underbrace{1\cdots 1}_{t_2}\underbrace{0\cdots 0}_{t_3}\cdots.
+\]</div>
+<p>删去初始的 <span class="arithmatex">\(1\)</span>，余下的二进制位组成的编号，恰为同一层的顶点自左向右的编号（自 <span class="arithmatex">\(0\)</span> 开始）。此处的推导说明，Stern–Brocot 树和 Calkin–Wilf 树中同一层的分数的排列互为位逆序置换（bit-reversal permutation），即将下标的二进制位（补齐起始的 <span class="arithmatex">\(0\)</span>）反转得到的 <span class="arithmatex">\(0\sim (2^k-1)\)</span> 上的置换。</p>
+<p>正因如此，Stern–Brocot 树上的节点有时会按照对应的 Calkin–Wilf 树上的节点编号，由此得到的编号如下图所示：</p>
+<p><img alt="pic" src="../images/stern-brocot-index.svg" /></p>
+<p>这个编号可以递归地构造：根节点编号为 <span class="arithmatex">\(1\)</span>，每次移动到左子节点时，就将编号首位的 <span class="arithmatex">\(1\)</span> 替换成 <span class="arithmatex">\(10\)</span>，而移动到右子节点时，就将编号首位的 <span class="arithmatex">\(1\)</span> 替换成 <span class="arithmatex">\(11\)</span>。对该编号自右向左解读就可以得到自根节点到该节点的路径。</p>
+<h3 id="stern">Stern 双原子序列</h3>
+<p>将 Calkin–Wilf 树中的所有分数按照广度优先搜索的编号排列，或将 Stern–Brocot 树中的所有分数按照上图所示的编号排列，就得到如下序列：</p>
+<div class="arithmatex">\[
+\frac{1}{1},~\dfrac{1}{2},~\dfrac{2}{1},~\dfrac{1}{3},~\dfrac{3}{2},~\dfrac{2}{3},~\dfrac{3}{1},~\dfrac{1}{4},~\dfrac{4}{3},~\dfrac{3}{5},~\dfrac{5}{2},\cdots.
+\]</div>
+<p>利用 Calkin–Wilf 树的构造过程，可以证明，该序列中相邻的两个分数，前一个的分母必然等于后一个的分子。将分子单独列出，就得到 Stern 双原子序列（Stern diatomic sequence，<a href="https://oeis.org/A002487">OEIS A002487</a>），也称为 Stern–Brocot 序列（Stern–Brocot sequence）。上述序列的编号从 <span class="arithmatex">\(1\)</span> 开始，并补充规定第 <span class="arithmatex">\(0\)</span> 个数是 <span class="arithmatex">\(0\)</span>。</p>
+<p>设 <span class="arithmatex">\(a_n\)</span> 是 Stern 双原子序列中第 <span class="arithmatex">\(n\)</span> 个数，那么，它满足如下递归关系：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+a_{2n} &amp;= a_n,\\
+a_{2n+1} &amp;= a_n + a_{n+1}. 
+\end{aligned}
+\]</div>
+<p>递归起点是 <span class="arithmatex">\(a_0=0\)</span> 和 <span class="arithmatex">\(a_1=1\)</span>。要求得 Stern 双原子序列中 <span class="arithmatex">\(a_n\)</span> 的值，直接利用递归关系复杂度为 <span class="arithmatex">\(O(\log^2n)\)</span>，并不优秀。更好的做法是，将它视为 Calkin–Wilf 树上编号为 <span class="arithmatex">\(n\)</span> 的分数的分子，利用上文描述的基于连分数的递归关系求解，复杂度为 <span class="arithmatex">\(O(\log n)\)</span>。</p>
+<h2 id="farey">Farey 序列</h2>
+<p>Farey 序列与 Stern–Brocot 树有着极其相似的特征。记 <strong>第 <span class="arithmatex">\(n\)</span> 阶 Farey 序列</strong>（Farey sequence of order <span class="arithmatex">\(n\)</span>）为 <span class="arithmatex">\(F_n\)</span>。它表示把分母小于等于 <span class="arithmatex">\(n\)</span> 的所有位于 <span class="arithmatex">\([0,1]\)</span> 之间的最简分数按大小顺序排列形成的序列：</p>
+<div class="arithmatex">\[
+\begin{array}{lllllllllllll}
+F_1=\bigg\{&amp;\dfrac{0}{1},&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;\dfrac{1}{1}&amp;\bigg\}\\\\
+F_2=\bigg\{&amp;\dfrac{0}{1},&amp;&amp;&amp;&amp;&amp;\dfrac{1}{2},&amp;&amp;&amp;&amp;&amp;\dfrac{1}{1}&amp;\bigg\}\\\\
+F_3=\bigg\{&amp;\dfrac{0}{1},&amp;&amp;&amp;\dfrac{1}{3},&amp;&amp;\dfrac{1}{2},&amp;&amp;\dfrac{2}{3},&amp;&amp;&amp;\dfrac{1}{1}&amp;\bigg\}\\\\
+F_4=\bigg\{&amp;\dfrac{0}{1},&amp;&amp;\dfrac{1}{4},&amp;\dfrac{1}{3},&amp;&amp;\dfrac{1}{2},&amp;&amp;\dfrac{2}{3},&amp;\dfrac{3}{4},&amp;&amp;\dfrac{1}{1}&amp;\bigg\}\\\\
+F_5=\bigg\{&amp;\dfrac{0}{1},&amp;\dfrac{1}{5},&amp;\dfrac{1}{4},&amp;\dfrac{1}{3},&amp;\dfrac{2}{5},&amp;\dfrac{1}{2},&amp;\dfrac{3}{5},&amp;\dfrac{2}{3},&amp;\dfrac{3}{4},&amp;\dfrac{4}{5},&amp;\dfrac{1}{1}&amp;\bigg\}
+\end{array}
+\]</div>
+<p>根据 Farey 序列的定义，它自然满足单调性、最简性和完全性。如上图所示，<span class="arithmatex">\(F_k\)</span> 相较于 <span class="arithmatex">\(F_{k-1}\)</span> 新添加的分数总是 <span class="arithmatex">\(F_{k-1}\)</span> 中相邻分数的中位分数。</p>
+<p>上文中构建 Stern–Brocot 树的算法同样适用于构建 Farey 序列。因为 Stern–Brocot 树中包括所有最简分数，因此只要将边界条件修改为对分母的限制就可以得到构造 Farey 序列的代码。可以将第 <span class="arithmatex">\(n\)</span> 阶 Farey 序列 <span class="arithmatex">\(F_n\)</span> 看作是第 <span class="arithmatex">\(n-1\)</span> 阶 Stern–Brocot 序列的子序列。</p>
+<p>???+ example "构建 Farey 序列"
+    === "C++"
+        <code>cpp
+        --8&lt;-- "docs/math/code/stern-brocot/farey-build.cpp:core"</code></p>
+<pre><code>=== "Python"
+    ```python
+    --8&lt;-- "docs/math/code/stern-brocot/farey-build.py:core"
+    ```
+</code></pre>
+<p>直接构建 Farey 序列的复杂度是 <span class="arithmatex">\(O(|F_n|)=O(n^2)\)</span> 的。</p>
+<h3 id="_15">序列长度与分数查找</h3>
+<p>Farey 序列的长度可以递归求出。相较于 <span class="arithmatex">\(F_{n-1}\)</span>，序列 <span class="arithmatex">\(F_n\)</span> 多出来的分数的分母都是 <span class="arithmatex">\(n\)</span>，而分子不超过 <span class="arithmatex">\(n\)</span> 且与 <span class="arithmatex">\(n\)</span> 互素，因此有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+|F_n| &amp;= |F_{n-1}| + \varphi(n) = 1 + \sum_{k=1}^n\varphi(k).
+\end{aligned}
+\]</div>
+<p>此处的 <span class="arithmatex">\(\varphi(n)\)</span> 是 <a href="../euler-totient/">欧拉函数</a>。该式利用 <a href="../sieve/#筛法求欧拉函数">线性筛</a> 可以 <span class="arithmatex">\(O(n)\)</span> 求出，而利用 <a href="../du/#问题一">杜教筛</a> 可以将复杂度降到 <span class="arithmatex">\(O(n^{2/3})\)</span>。</p>
+<p>相较于直接求出序列的长度，更为常见的情景是需要求出序列 <span class="arithmatex">\(F_k\)</span> 中某一分数 <span class="arithmatex">\(r=\dfrac{p}{q}\)</span> 的编号。这相当于求值</p>
+<div class="arithmatex">\[
+1 + \sum_{k = 1}^n\sum_{i=1}^{\lfloor rk\rfloor}[i\perp k] = 1 + \sum_{d=1}^n\mu(d)\sum_{j=1}^{\lfloor n/d\rfloor}\lfloor rj\rfloor.
+\]</div>
+<p>要得到右式，应用了 <a href="../mobius/">莫比乌斯反演</a>。线性筛和枚举因子结合，可以做到 <span class="arithmatex">\(O(n)\)</span> 预处理和 <span class="arithmatex">\(O(n\log n)\)</span> 询问；杜教筛和 <a href="../euclidean/">类欧几里得算法</a> 结合，可以做到 <span class="arithmatex">\(O(n^{2/3})\)</span> 预处理和 <span class="arithmatex">\(O(\sqrt n\log n)\)</span> 询问。</p>
+<p>反过来，已知编号求解分数，需要对 <span class="arithmatex">\([0,1]\)</span> 之间的实数进行二分，或者在 Stern–Brocot 树上进行 <a href="#快速算法">二分</a>。前者可能受到浮点数精度限制，对分数编号的询问次数为 <span class="arithmatex">\(O(\log V)\)</span>，其中 <span class="arithmatex">\(V\)</span> 是精度范围；后者不受浮点数精度限制，但是对分数编号的询问次数为 <span class="arithmatex">\(O(\log^2n)\)</span>。</p>
+<h3 id="farey_1">Farey 邻项</h3>
+<p>如果分数 <span class="arithmatex">\(\dfrac{a}{b}\)</span> 和 <span class="arithmatex">\(\dfrac{c}{d}\)</span> 在某个 Farey 序列中相邻，就称它们为 <strong>Farey 邻项</strong>（Farey neighbors），也称为 Farey 对（Farey pair）。</p>
+<p>设 <span class="arithmatex">\(\dfrac{a}{b}&lt;\dfrac{c}{d}\)</span>。从 Farey 序列的构造过程可知，两个相邻分数中后加入的分数必然是另一个分数与它先前的邻项的中位分数，因此 Farey 邻项在某一阶 Stern–Brocot 序列中也相邻，根据 <a href="#最简性">最简性</a> 中证明的结论可知，必然也有</p>
+<div class="arithmatex">\[
+bc-ad=1.
+\]</div>
+<p>反过来，这也是两个最简真分数成为 Farey 邻项的充分条件。现在说明这一点。不妨设 <span class="arithmatex">\(\dfrac{a}{b}\)</span> 是两个分数中分母较大的，那么两个分数都会出现在 <span class="arithmatex">\(F_b\)</span> 中。设 <span class="arithmatex">\(\dfrac{e}{f}\)</span> 是序列 <span class="arithmatex">\(F_b\)</span> 中排在 <span class="arithmatex">\(\dfrac{a}{b}\)</span> 右侧的一项，按照已经说明的必要性可知，<span class="arithmatex">\(be-af=1\)</span>。但是，<a href="../linear-equation/">线性同余方程</a>  <span class="arithmatex">\(bx-ay=1\)</span> 只有一组 <span class="arithmatex">\(y\le b\)</span> 的正整数解，故而必然有 <span class="arithmatex">\((e,f)=(c,d)\)</span>。</p>
+<p>其实，因为下一个会出现在两者之间的最简分数必然是 <span class="arithmatex">\(\dfrac{a+c}{b+d}\)</span>，所以 <span class="arithmatex">\(\dfrac{a}{b}\)</span> 和 <span class="arithmatex">\(\dfrac{c}{d}\)</span> 在第 <span class="arithmatex">\(\max\{b,d\}\)</span> 到第 <span class="arithmatex">\((b+d-1)\)</span> 阶 Farey 序列中都是相邻的。</p>
+<p>分母不超过 <span class="arithmatex">\(9\)</span> 的 Farey 邻项关系如下图所示：</p>
+<p><img alt="" src="../images/farey-diagram-ford-circle.svg" /></p>
+<p>图中的圆称为 <a href="https://en.wikipedia.org/wiki/Ford_circle">Ford 圆</a>：对于每个 <span class="arithmatex">\([0,1]\)</span> 内的最简分数 <span class="arithmatex">\(\dfrac{p}{q}\)</span>，都以 <span class="arithmatex">\(\left(\dfrac{p}{q},\dfrac{1}{2q^2}\right)\)</span> 为圆心、以 <span class="arithmatex">\(\dfrac{1}{2q^2}\)</span> 为半径绘制一个圆。图示说明，两个分数对应的 Ford 圆只能相切或相离，且两圆相切，当且仅当两分数是 Farey 邻项。而且，对于图中相切的任何两个圆，总存在唯一的第三个圆和两圆都相切。这第三个圆对应的分数就是两个圆对应的分数的中位分数。</p>
+<p>要验证相切的圆总是对应着 Farey 邻项，可以直接计算两圆心的距离：</p>
+<div class="arithmatex">\[
+\left(\dfrac{a}{b}-\dfrac{c}{d}\right)^2 + \left(\dfrac{1}{2b^2}-\dfrac{1}{2d^2}\right)^2 = \left(\dfrac{1}{2b^2}+\dfrac{1}{2d^2}\right)^2+\frac{(bc-ad)^2-1}{b^2d^2}.
+\]</div>
+<p>因为两个最简分数并不相同，所以 <span class="arithmatex">\(|bc-ad|\ge 1\)</span>，故而两圆只能相切或相离。而且，两圆相切，当且仅当 <span class="arithmatex">\(|bc-ad|=1\)</span>，这就等价于两分数是 Ford 邻项。</p>
+<p>最后，要计算 Farey 邻项的数目。除了 <span class="arithmatex">\(\left(\dfrac{0}{1},\dfrac{1}{1}\right)\)</span>，其余 Farey 邻项的分母都不相同。不妨设 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 是其中分母较大的那个，则另一个分数必然可以从二元一次不定方程</p>
+<div class="arithmatex">\[
+qx-py=\pm 1
+\]</div>
+<p>中解得。两个方程各恰有一组满足 <span class="arithmatex">\(y&lt;q\)</span> 的正整数解，分别对应位于 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 左右两侧的邻项。因而，每个位于 <span class="arithmatex">\((0,1)\)</span> 内的真分数都有两个分母小于它的分母的 Farey 邻项，再加上 <span class="arithmatex">\(\dfrac{0}{1}\)</span> 和 <span class="arithmatex">\(\dfrac{1}{1}\)</span>，这说明序列 <span class="arithmatex">\(F_n\)</span> 中共计 <span class="arithmatex">\((2|F_n|-3)\)</span> 对 Farey 邻项。</p>
+<p>当然，在这个过程中找到的分数 <span class="arithmatex">\(\dfrac{a}{b}&lt;\dfrac{c}{d}\)</span> 就是在序列中插入 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 时它的左右邻项。因此，它们本就是 Farey 邻项且 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 是它们的中位分数。设 <span class="arithmatex">\(\dfrac{p}{q}=[t_0,t_1,\cdots,t_n,1]\)</span>，则这两个分母更小的 Farey 邻项就分别是 <span class="arithmatex">\([t_0,t_1,\cdots,t_n]\)</span> 和 <span class="arithmatex">\([t_0,t_1,\cdots,t_{n-1}]\)</span>。</p>
+<p>要计算当前分数 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 的其它 Farey 邻项，只需要利用 <a href="../bezouts/#两个变量的情形">扩展欧几里得算法</a> 求出所有符合条件的解即可。</p>
+<h3 id="_16">递推关系</h3>
+<p>Farey 序列有一个简洁的递推关系，可以自左向右地顺序求出第 <span class="arithmatex">\(n\)</span> 阶 Farey 序列的全部分数。</p>
+<p>首先，前面的分析指出，在 <span class="arithmatex">\(F_n\)</span> 中，新添加的项 <span class="arithmatex">\(\dfrac{p}{n}\)</span> 总是左右相邻两个分数的中位分数。其实，这个关系对于 <span class="arithmatex">\(F_n\)</span> 中（除了两端点）所有分数都成立。设 <span class="arithmatex">\(\dfrac{a}{b}&lt;\dfrac{p}{q}&lt;\dfrac{c}{d}\)</span>，根据 Farey 邻项的充要条件，总是有</p>
+<div class="arithmatex">\[
+bp-aq = 1 = cq-dp \iff \frac{p}{q} = \dfrac{a+c}{b+d}.
+\]</div>
+<p>不过，对于一般的情形，分数 <span class="arithmatex">\(\dfrac{a+c}{b+d}\)</span> 可能需要约分。</p>
+<p>利用这个观察就可以构建如下的递推关系。设 <span class="arithmatex">\(\dfrac{a}{b}\)</span> 和 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 是已知的，要求出第三个分数 <span class="arithmatex">\(\dfrac{c}{d}\)</span> 的值。此时，存在 <span class="arithmatex">\(k\)</span> 使得</p>
+<div class="arithmatex">\[
+a+c = kp,\ b+d=kq
+\]</div>
+<p>成立。因为差值</p>
+<div class="arithmatex">\[
+\frac{kp-a}{kq-b} - \dfrac{p}{q} = \dfrac{bp-aq}{q(kq-b)} = \dfrac{1}{q(kq-b)}
+\]</div>
+<p>随着 <span class="arithmatex">\(k\)</span> 增加而减小，且紧邻着 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 的应该是所有满足 <span class="arithmatex">\(kq-d\le n\)</span> 的分数中该差值最小的那个，因而，必然有</p>
+<div class="arithmatex">\[
+k = \left\lfloor\dfrac{n+b}{q}\right\rfloor.
+\]</div>
+<p>可以验证这样得到的分数必然在 <span class="arithmatex">\(F_n\)</span> 中。因此，<span class="arithmatex">\(F_n\)</span> 中的分数的分子和分母满足递推关系：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+p_k &amp;= \left\lfloor\frac{n + q_{k-2}}{q_{k-1}}\right\rfloor p_{k-1} - p_{k-2},\\
+q_k &amp;= \left\lfloor\frac{n + q_{k-2}}{q_{k-1}}\right\rfloor q_{k-1} - q_{k-2}.
+\end{aligned}
+\]</div>
+<p>递推起点是 <span class="arithmatex">\((p_0,q_0)=(0,1)\)</span> 和 <span class="arithmatex">\((p_1,q_1)=(1,n)\)</span>。</p>
+<h2 id="_17">习题</h2>
+<p>以本文材料为背景的题目：</p>
+<ul>
+<li><a href="https://loj.ac/p/6685">LOJ 6685. 迷宫</a></li>
+<li><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=33&amp;page=show_problem&amp;problem=1018">UVa 10077. The Stern-Brocot Number System</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P8058">Luogu P8058. [BalkanOI2003] Farey 序列</a></li>
+<li><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=862&amp;page=show_problem&amp;problem=4878">UVa 12995. Farey Sequence</a></li>
+<li><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=16&amp;page=show_problem&amp;problem=1349">UVa 10408. Farey Sequences</a></li>
+<li><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=279&amp;page=show_problem&amp;problem=3869">UVa 12438. Farey Polygon</a></li>
+<li><a href="https://atcoder.jp/contests/arc123/tasks/arc123_f">AtCoder ARC123F. Insert Addition</a></li>
+</ul>
+<p>需要在 Stern–Brocot 树上作二分的题目：</p>
+<ul>
+<li><a href="https://atcoder.jp/contests/abc333/tasks/abc333_g">AtCoder ABC333G. Nearest Fraction</a></li>
+<li><a href="https://www.spoj.com/problems/DIVCNT1/">SPOJ DIVCNT1 - Counting Divisors</a></li>
+<li><a href="https://www.spoj.com/problems/AFS3/">SPOJ AFS3 - Amazing Factor Sequence (hard)</a></li>
+</ul>
+<h2 id="_18">参考资料与注释</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Stern%E2%80%93Brocot_tree">Stern–Brocot tree - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Calkin%E2%80%93Wilf_tree">Calkin–Wilf tree - Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Farey_sequence">Farey sequence - Wikipedia</a></li>
+</ul>
+<p><strong>本页面部分内容译自博文 <a href="http://e-maxx.ru/algo/stern_brocot_farey">Дерево Штерна-Броко. Ряд Фарея</a> 与其英文翻译版 <a href="https://cp-algorithms.com/others/stern_brocot_tree_farey_sequences.html">The Stern-Brocot Tree and Farey Sequences</a>。其中俄文版版权协议为 Public Domain + Leave a Link；英文版版权协议为 CC-BY-SA 4.0。本页面另有部分内容译自博文 <a href="https://cp-algorithms.com/algebra/continued-fractions.html">Continued fractions</a>，版权协议为 CC-BY-SA 4.0。内容均有改动。</strong></p>
+<p>[^mediant]: 译名来自张明尧、张凡翻译的《具体数学》第 4.5 节。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

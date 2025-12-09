@@ -1,0 +1,1844 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Inclusion exclusion principle - Math-wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.618322db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Math-wiki" class="md-header__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Math-wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Inclusion exclusion principle
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  简介
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ineq/" class="md-tabs__link">
+          
+  
+  
+  不等式
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../number-theory/basic/" class="md-tabs__link">
+          
+  
+  
+  数论
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../complex/" class="md-tabs__link">
+          
+  
+  
+  杂项
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Math-wiki" class="md-nav__button md-logo" aria-label="Math-wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Math-wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    不等式
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    不等式
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ineq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最最最基本的不等关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../am-gm.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    数论
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    数论
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    基础知识
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mod-arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    模运算
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/prime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    质数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/gcd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    最大公约数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/bezouts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bezout定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/inverse/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    逆元
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/crt/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中国剩余定理（CRT）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/euler-function.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    欧拉函数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/fermat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    费马小定理与欧拉定理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/primitive-root/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    阶与原根
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/congruence-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/linear-congruence-equation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    线性同余方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic-residue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次剩余
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/pell-equation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    pell方程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/mobius/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    莫比乌斯反演
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/lifting-the-exponent.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LTE引理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../number-theory/quadratic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    二次域
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    杂项
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    杂项
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../complex/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    复数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        引入
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定义
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        证明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        补集
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        不定方程非负整数解计数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="不定方程非负整数解计数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        没有限制时
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        容斥模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haoi2008" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HAOI2008 硬币购物
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完全图子图染色问题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="完全图子图染色问题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数学形式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        容斥模型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        逆向分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数论中的容斥
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数论中的容斥">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#k" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        容斥原理求最大公约数为 k 的数对个数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        容斥原理推导欧拉函数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        容斥原理一般化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="容斥原理一般化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        证明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        推论
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DAG 计数
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DAG 计数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        直接 DP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        放宽限制
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#min-max" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Min-max 容斥
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pkuwc2018" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PKUWC2018 随机游走
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PKUWC2018 随机游走">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参考文献
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Inclusion exclusion principle</h1>
+
+<h2 id="_1">引入</h2>
+<p>???+ note "入门例题"
+    假设班里有 <span class="arithmatex">\(10\)</span> 个学生喜欢数学，<span class="arithmatex">\(15\)</span> 个学生喜欢语文，<span class="arithmatex">\(21\)</span> 个学生喜欢编程，班里至少喜欢一门学科的有多少个学生呢？</p>
+<p>是 <span class="arithmatex">\(10+15+21=46\)</span> 个吗？不是的，因为有些学生可能同时喜欢数学和语文，或者语文和编程，甚至还有可能三者都喜欢。</p>
+<p>为了叙述方便，我们把喜欢语文、数学、编程的学生集合分别用 <span class="arithmatex">\(A,B,C\)</span> 表示，则学生总数等于 <span class="arithmatex">\(|A\cup B\cup C|\)</span>。刚才已经讲过，如果把这三个集合的元素个数 <span class="arithmatex">\(|A|,|B|,|C|\)</span> 直接加起来，会有一些元素重复统计了，因此需要扣掉 <span class="arithmatex">\(|A\cap B|,|B\cap C|,|C\cap A|\)</span>，但这样一来，又有一小部分多扣了，需要加回来，即 <span class="arithmatex">\(|A\cap B\cap C|\)</span>。即</p>
+<div class="arithmatex">\[
+|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|B\cap C|-|C\cap A|+|A\cap B\cap C|
+\]</div>
+<p><img alt="容斥原理 - venn 图示例" src="../images/incexcp.png" /></p>
+<p>把上述问题推广到一般情况，就是我们熟知的容斥原理。</p>
+<h2 id="_2">定义</h2>
+<p>设 U 中元素有 n 种不同的属性，而第 i 种属性称为 <span class="arithmatex">\(P_i\)</span>，拥有属性 <span class="arithmatex">\(P_i\)</span> 的元素构成集合 <span class="arithmatex">\(S_i\)</span>，那么</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\left|\bigcup_{i=1}^{n}S_i\right|=&amp;\sum_{i}|S_i|-\sum_{i&lt;j}|S_i\cap S_j|+\sum_{i&lt;j&lt;k}|S_i\cap S_j\cap S_k|-\cdots\\
+&amp;+(-1)^{m-1}\sum_{a_i&lt;a_{i+1} }\left|\bigcap_{i=1}^{m}S_{a_i}\right|+\cdots+(-1)^{n-1}|S_1\cap\cdots\cap S_n|
+\end{aligned}
+\]</div>
+<p>即</p>
+<div class="arithmatex">\[
+\left|\bigcup_{i=1}^{n}S_i\right|=\sum_{m=1}^n(-1)^{m-1}\sum_{a_i&lt;a_{i+1} }\left|\bigcap_{i=1}^mS_{a_i}\right|
+\]</div>
+<h3 id="_3">证明</h3>
+<p>对于每个元素使用二项式定理计算其出现的次数。对于元素 x，假设它出现在 <span class="arithmatex">\(T_1,T_2,\cdots,T_m\)</span> 的集合中，那么它的出现次数为</p>
+<div class="arithmatex">\[
+\begin{aligned}
+Cnt=&amp;|\{T_i\}|-|\{T_i\cap T_j|i&lt;j\}|+\cdots+(-1)^{k-1}\left|\left\{\bigcap_{i=1}^{k}T_{a_i}|a_i&lt;a_{i+1}\right\}\right|\\
+&amp;+\cdots+(-1)^{m-1}|\{T_1\cap\cdots\cap T_m\}|\\
+=&amp;\dbinom{m}{1}-\dbinom{m}{2}+\cdots+(-1)^{m-1}\dbinom{m}{m}\\
+=&amp;\dbinom{m}{0}-\sum_{i=0}^m(-1)^i\dbinom{m}{i}\\
+=&amp;1-(1-1)^m=1
+\end{aligned}
+\]</div>
+<p>于是每个元素出现的次数为 1，那么合并起来就是并集。证毕。</p>
+<h3 id="_4">补集</h3>
+<p>对于全集 U 下的 <strong>集合的并</strong> 可以使用容斥原理计算，而集合的交则用全集减去 <strong>补集的并集</strong> 求得：</p>
+<div class="arithmatex">\[
+\left|\bigcap_{i=1}^{n}S_i\right|=|U|-\left|\bigcup_{i=1}^n\overline{S_i}\right|
+\]</div>
+<p>右边使用容斥即可。</p>
+<p>可能接触过容斥的读者都清楚上述内容，而更关心的是容斥的应用。</p>
+<p>那么接下来我们给出 3 个层次不同的例题来为大家展示容斥原理的应用。</p>
+<h2 id="_5">不定方程非负整数解计数</h2>
+<p>???+ note "不定方程非负整数解计数"
+    给出不定方程 <span class="arithmatex">\(\sum_{i=1}^nx_i=m\)</span> 和 <span class="arithmatex">\(n\)</span> 个限制条件 <span class="arithmatex">\(x_i\leq b_i\)</span>，其中 <span class="arithmatex">\(m,b_i \in \mathbb{N}\)</span>. 求方程的非负整数解的个数。</p>
+<h3 id="_6">没有限制时</h3>
+<p>如果没有 <span class="arithmatex">\(x_i\leq b_i\)</span> 的限制，那么不定方程 <span class="arithmatex">\(\sum_{i=1}^nx_i=m\)</span> 的非负整数解的数目为 <span class="arithmatex">\(\dbinom{m+n-1}{n-1}\)</span>.</p>
+<p>略证：插板法。</p>
+<p>相当于你有 <span class="arithmatex">\(m\)</span> 个球要分给 <span class="arithmatex">\(n\)</span> 个盒子，允许某个盒子是空的。这个问题不能直接用组合数解决。</p>
+<p>于是我们再加入 <span class="arithmatex">\(n-1\)</span> 个球，于是问题就变成了在一个长度为 <span class="arithmatex">\(m+n-1\)</span> 的球序列中选择 <span class="arithmatex">\(n-1\)</span> 个球，然后这个 <span class="arithmatex">\(n-1\)</span> 个球把这个序列隔成了 <span class="arithmatex">\(n\)</span> 份，恰好可以一一对应放到 <span class="arithmatex">\(n\)</span> 个盒子中。那么在 <span class="arithmatex">\(m+n-1\)</span> 个球中选择 <span class="arithmatex">\(n-1\)</span> 个球的方案数就是 <span class="arithmatex">\(\dbinom{m+n-1}{n-1}\)</span>。</p>
+<h3 id="_7">容斥模型</h3>
+<p>接着我们尝试抽象出容斥原理的模型：</p>
+<ol>
+<li>全集 U：不定方程 <span class="arithmatex">\(\sum_{i=1}^nx_i=m\)</span> 的非负整数解</li>
+<li>元素：变量 <span class="arithmatex">\(x_i\)</span>.</li>
+<li>属性：<span class="arithmatex">\(x_i\)</span> 的属性即 <span class="arithmatex">\(x_i\)</span> 满足的条件，即 <span class="arithmatex">\(x_i\leq b_i\)</span> 的条件</li>
+</ol>
+<p>目标：所有变量满足对应属性时集合的大小，即 <span class="arithmatex">\(|\bigcap_{i=1}^nS_i|\)</span>.</p>
+<p>这个东西可以用 <span class="arithmatex">\(\left|\bigcap_{i=1}^{n}S_i\right|=|U|-\left|\bigcup_{i=1}^n\overline{S_i}\right|\)</span> 求解。<span class="arithmatex">\(|U|\)</span> 可以用组合数计算，后半部分自然使用容斥原理展开。</p>
+<p>那么问题变成，对于一些 <span class="arithmatex">\(\overline{S_{a_i}}\)</span> 的交集求大小。考虑 <span class="arithmatex">\(\overline{S_{a_i} }\)</span> 的含义，表示 <span class="arithmatex">\(x_{a_i}\geq b_{a_i}+1\)</span> 的解的数目。而交集表示同时满足这些条件。因此这个交集对应的不定方程中，有些变量有 <strong>下界限制</strong>，而有些则没有限制。</p>
+<p>能否消除这些下界限制呢？既然要求的是非负整数解，而有些变量的下界又大于 <span class="arithmatex">\(0\)</span>，那么我们直接 <strong>把这个下界减掉</strong>，就可以使得这些变量的下界变成 <span class="arithmatex">\(0\)</span>，即没有下界啦。因此对于</p>
+<div class="arithmatex">\[
+\left|\bigcap_{a_i&lt;a_{i+1} }^{1\leq i\leq k}S_{a_i}\right|
+\]</div>
+<p>的不定方程形式为</p>
+<div class="arithmatex">\[
+\sum_{i=1}^nx_i=m-\sum_{i=1}^k(b_{a_i}+1)
+\]</div>
+<p>于是这个也可以组合数计算啦。这个长度为 <span class="arithmatex">\(k\)</span> 的 <span class="arithmatex">\(a\)</span> 数组相当于在枚举子集。</p>
+<h2 id="haoi2008">HAOI2008 硬币购物</h2>
+<p>???+ note "HAOI2008 硬币购物"
+    4 种面值的硬币，第 i 种的面值是 <span class="arithmatex">\(C_i\)</span>。<span class="arithmatex">\(n\)</span> 次询问，每次询问给出每种硬币的数量 <span class="arithmatex">\(D_i\)</span> 和一个价格 <span class="arithmatex">\(S\)</span>，问付款方式。</p>
+<pre><code>$n\leq 10^3,S\leq 10^5$.
+</code></pre>
+<p>如果用背包做的话复杂度是 <span class="arithmatex">\(O(4nS)\)</span>，无法承受。这道题最明显的特点就是硬币一共只有四种。抽象模型，其实就是让我们求方程 <span class="arithmatex">\(\sum_{i=1}^4C_ix_i=S,x_i\leq D_i\)</span> 的非负整数解的个数。</p>
+<p>采用同样的容斥方式，<span class="arithmatex">\(x_i\)</span> 的属性为 <span class="arithmatex">\(x_i\leq D_i\)</span>. 套用容斥原理的公式，最后我们要求解</p>
+<div class="arithmatex">\[
+\sum_{i=1}^4C_ix_i=S-\sum_{i=1}^kC_{a_i}(D_{a_i}+1)
+\]</div>
+<p>也就是无限背包问题。这个问题可以预处理，算上询问，总复杂度 <span class="arithmatex">\(O(4S+2^4n)\)</span>。</p>
+<p>??? note "代码实现"
+    <code>cpp
+    --8&lt;-- "docs/math/code/inclusion-exclusion-principle/inclusion-exclusion-principle_1.cpp"</code></p>
+<h2 id="_8">完全图子图染色问题</h2>
+<p>前面的三道题都是容斥原理的正向运用，这道题则需要用到容斥原理逆向分析。</p>
+<p>???+ note "完全图子图染色问题"
+    A 和 B 喜欢对图（不一定连通）进行染色，而他们的规则是，相邻的结点必须染同一种颜色。今天 A 和 B 玩游戏，对于 <span class="arithmatex">\(n\)</span> 阶 <strong>完全图</strong>  <span class="arithmatex">\(G=(V,E)\)</span>。他们定义一个估价函数 <span class="arithmatex">\(F(S)\)</span>，其中 S 是边集，<span class="arithmatex">\(S\subseteq E\)</span>.<span class="arithmatex">\(F(S)\)</span> 的值是对图 <span class="arithmatex">\(G'=(V,S)\)</span> 用 <span class="arithmatex">\(m\)</span> 种颜色染色的总方案数。他们的另一个规则是，如果 <span class="arithmatex">\(|S|\)</span> 是奇数，那么 A 的得分增加 <span class="arithmatex">\(F(S)\)</span>，否则 B 的得分增加 <span class="arithmatex">\(F(S)\)</span>. 问 A 和 B 的得分差值。</p>
+<h3 id="_9">数学形式</h3>
+<p>一看这道题的算法趋向并不明显，因此对于棘手的题目首先抽象出数学形式。得分差即为奇偶对称差，可以用 -1 的幂次来作为系数。我们求的是</p>
+<div class="arithmatex">\[
+Ans=\sum_{S\subseteq E}(-1)^{|S|-1}F(S)
+\]</div>
+<h3 id="_10">容斥模型</h3>
+<p>相邻结点染同一种颜色，我们把它当作属性。在这里我们先不遵守染色的规则，假定我们用 m 种颜色直接对图染色。对于图 <span class="arithmatex">\(G'=(V,S)\)</span>，我们把它当作 <strong>元素</strong>。<strong>属性</strong>  <span class="arithmatex">\(x_i=x_j\)</span> 的含义是结点 i,j 染同色（注意，并未要求 i,j 之间有连边）。</p>
+<p>而属性 <span class="arithmatex">\(x_i=x_j\)</span> 对应的 <strong>集合</strong> 定义为 <span class="arithmatex">\(Q_{i,j}\)</span>，其含义是所有满足该属性的图 <span class="arithmatex">\(G'\)</span> 的染色方案，集合的大小就是满足该属性的染色方案数，集合内的元素相当于所有满足该属性的图 <span class="arithmatex">\(G'\)</span> 的染色图。</p>
+<p>回到题目，「相邻的结点必须染同一种颜色」，可以理解为若干个 <span class="arithmatex">\(Q\)</span> 集合的交集。因此可以写出</p>
+<div class="arithmatex">\[
+F(S)=\left|\bigcap_{(i,j)\in S}Q_{i,j}\right|
+\]</div>
+<p>上述式子右边的含义就是说对于 S 内的每一条边 <span class="arithmatex">\((i,j)\)</span> 都满足 <span class="arithmatex">\(x_i=x_j\)</span> 的染色方案数，也就是 <span class="arithmatex">\(F(S)\)</span>.</p>
+<p>是不是很有容斥的味道了？由于容斥原理本身没有二元组的形式，因此我们把 <strong>所有</strong> 的边 <span class="arithmatex">\((i,j)\)</span> 映射到 <span class="arithmatex">\(T=\frac{n(n+1)}{2}\)</span> 个整数上，假设将 <span class="arithmatex">\((i,j)\)</span> 映射为 <span class="arithmatex">\(k,1\leq k\leq T\)</span>，同时 <span class="arithmatex">\(Q_{i,j}\)</span> 映射为 <span class="arithmatex">\(Q_k\)</span>. 那么属性 <span class="arithmatex">\(x_i=x_j\)</span> 则定义为 <span class="arithmatex">\(P_k\)</span>.</p>
+<p>同时 S 可以表示为若干个 k 组成的集合，即 <span class="arithmatex">\(S\iff K=\{k_1,k_2,\cdots,k_m\}\)</span>.（也就是说我们在边集与数集间建立了等价关系）。</p>
+<p>而 E 对应集合 <span class="arithmatex">\(M=\left\{1,2,\cdots,\frac{n(n+1)}{2}\right\}\)</span>. 于是乎</p>
+<div class="arithmatex">\[
+F(S)\iff F(\{ {k_i}\})=\left|\bigcap_{k_i}Q_{k_i}\right|
+\]</div>
+<h3 id="_11">逆向分析</h3>
+<p>那么要求的式子展开</p>
+<div class="arithmatex">\[
+\begin{aligned}
+Ans &amp;= \sum_{K\subseteq M}(-1)^{|K|-1}\left|\bigcap_{k_i\in K}Q_{k_i}\right|\\
+    &amp;= \sum_{i}|Q_i|-\sum_{i&lt;j}|Q_i\cap Q_j|+\sum_{i&lt;j&lt;k}|Q_i\cap Q_j\cap Q_k|-\cdots+(-1)^{T-1}\left|\bigcap_{i=1}^TQ_i\right|
+\end{aligned}
+\]</div>
+<p>于是就出现了容斥原理的展开形式，因此对这个式子逆向推导</p>
+<div class="arithmatex">\[
+Ans=\left|\bigcup_{i=1}^TQ_i\right|
+\]</div>
+<p>再考虑等式右边的含义，只要满足 <span class="arithmatex">\(1\sim T\)</span> 任一条件即可，也就是存在两个点同色（不一定相邻）的染色方案数！而我们知道染色方案的全集是 <span class="arithmatex">\(U\)</span>，显然 <span class="arithmatex">\(|U|=m^n\)</span>. 而转化为补集，就是求两两异色的染色方案数，即 <span class="arithmatex">\(A_m^n=\frac{m!}{(m-n)!}\)</span>. 因此</p>
+<div class="arithmatex">\[
+Ans=m^n-A_m^n
+\]</div>
+<p>解决这道题，我们首先抽象出题目数学形式，然后从题目中信息量最大的条件，<span class="arithmatex">\(F(S)\)</span> 函数的定义入手，将其转化为集合的交并补。然后将式子转化为容斥原理的形式，并 <strong>逆向推导</strong> 出最终的结果。这道题体现的正是容斥原理的逆用。</p>
+<h2 id="_12">数论中的容斥</h2>
+<p>使用容斥原理能够巧妙地求解一些数论问题。</p>
+<h3 id="k">容斥原理求最大公约数为 k 的数对个数</h3>
+<p>考虑下面的问题：</p>
+<p>???+ note "求最大公约数为 <span class="arithmatex">\(k\)</span> 的数对个数"
+    设 <span class="arithmatex">\(1 \le x, y \le N\)</span>，<span class="arithmatex">\(f(k)\)</span> 表示最大公约数为 <span class="arithmatex">\(k\)</span> 的有序数对 <span class="arithmatex">\((x, y)\)</span> 的个数，求 <span class="arithmatex">\(f(1)\)</span> 到 <span class="arithmatex">\(f(N)\)</span> 的值。</p>
+<p>这道题固然可以用欧拉函数或莫比乌斯反演的方法来做，但是都不如用容斥原理来的简单。</p>
+<p>由容斥原理可以得知，先找到所有以 <span class="arithmatex">\(k\)</span> 为 <strong>公约数</strong> 的数对，再从中剔除所有以 <span class="arithmatex">\(k\)</span> 的倍数为 <strong>公约数</strong> 的数对，余下的数对就是以 <span class="arithmatex">\(k\)</span> 为 <strong>最大公约数</strong> 的数对。即 <span class="arithmatex">\(f(k)=\)</span> 以 <span class="arithmatex">\(k\)</span> 为 <strong>公约数</strong> 的数对个数 <span class="arithmatex">\(-\)</span> 以 <span class="arithmatex">\(k\)</span> 的倍数为 <strong>公约数</strong> 的数对个数。</p>
+<p>进一步可发现，以 <span class="arithmatex">\(k\)</span> 的倍数为 <strong>公约数</strong> 的数对个数等于所有以 <span class="arithmatex">\(k\)</span> 的倍数为 <strong>最大公约数</strong> 的数对个数之和。于是，可以写出如下表达式：</p>
+<div class="arithmatex">\[
+f(k)= \lfloor (N/k) \rfloor ^2 - \sum_{i=2}^{i*k \le N} f(i*k)
+\]</div>
+<p>由于当 <span class="arithmatex">\(k&gt;N/2\)</span> 时，我们可以直接算出 <span class="arithmatex">\(f(k)= \lfloor (N/k) \rfloor ^2\)</span>，因此我们可以倒过来，从 <span class="arithmatex">\(f(N)\)</span> 算到 <span class="arithmatex">\(f(1)\)</span> 就可以了。于是，我们使用容斥原理完成了本题。</p>
+<pre><code class="language-cpp">for (long long k = N; k &gt;= 1; k--) {
+  f[k] = (N / k) * (N / k);
+  for (long long i = k + k; i &lt;= N; i += k) f[k] -= f[i];
+}
+</code></pre>
+<p>上述方法的时间复杂度为 <span class="arithmatex">\(O( \sum_{i=1}^{N} N/i)=O(N \sum_{i=1}^{N} 1/i)=O(N \log N)\)</span>。</p>
+<p>附赠三倍经验供大家练手。</p>
+<ul>
+<li><a href="https://www.luogu.com.cn/problem/P2398">Luogu P2398 GCD SUM</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P2158">Luogu P2158[SDOI2008] 仪仗队</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P1447">Luogu P1447[NOI2010] 能量采集</a></li>
+</ul>
+<h3 id="_13">容斥原理推导欧拉函数</h3>
+<p>考虑下面的问题：</p>
+<p>???+ note "欧拉函数公式"
+    求欧拉函数 <span class="arithmatex">\(\varphi(n)\)</span>。其中 <span class="arithmatex">\(\varphi(n)=|\{1\leq x\leq n|\gcd(x,n)=1\}|\)</span>。</p>
+<p>直接计算是 <span class="arithmatex">\(O(n\log n)\)</span> 的，用线性筛是 <span class="arithmatex">\(O(n)\)</span> 的，杜教筛是 <span class="arithmatex">\(O(n^{\frac{2}{3}})\)</span> 的（话说一道数论入门题用容斥做为什么还要扯到杜教筛上），接下来考虑用容斥推出欧拉函数的公式</p>
+<p>判断两个数是否互质，首先分解质因数</p>
+<div class="arithmatex">\[
+n=\prod_{i=1}^k{p_i}^{c_i}
+\]</div>
+<p>那么就要求对于任意 <span class="arithmatex">\(p_i\)</span>，<span class="arithmatex">\(x\)</span> 都不是 <span class="arithmatex">\(p_i\)</span> 的倍数，即 <span class="arithmatex">\(p_i\nmid x\)</span>. 把它当作属性，对应的集合为 <span class="arithmatex">\(S_i\)</span>，因此有</p>
+<div class="arithmatex">\[
+\varphi(n)=\left|\bigcap_{i=1}^kS_i\right|=|U|-\left|\bigcup_{i=1}^k\overline{S_i}\right|
+\]</div>
+<p>全集大小 <span class="arithmatex">\(|U|=n\)</span>，而 <span class="arithmatex">\(\overline{S_i}\)</span> 表示的是 <span class="arithmatex">\(p_i\mid x\)</span> 构成的集合，显然 <span class="arithmatex">\(|\overline{S_i}|=\frac{n}{p_i}\)</span>，并由此推出</p>
+<div class="arithmatex">\[
+\left|\bigcap_{a_i&lt;a_{i+1}}S_{a_i}\right|=\frac{n}{\prod p_{a_i}}
+\]</div>
+<p>因此可得</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\varphi(n)&amp;=n-\sum_{i}\frac{n}{p_i}+\sum_{i&lt;j}\frac{n}{p_ip_j}-\cdots+(-1)^k\frac{n}{p_1p_2 \cdots p_k}\\
+&amp;=n\left(1-\frac{1}{p_1}\right)\left(1-\frac{1}{p_2}\right)\cdots\left(1-\frac{1}{p_k}\right)\\
+&amp;=n\prod_{i=1}^k\left(1-\frac{1}{p_i}\right)
+\end{aligned}
+\]</div>
+<p>这就是欧拉函数的数学表示啦</p>
+<h2 id="_14">容斥原理一般化</h2>
+<p>容斥原理常用于集合的计数问题，而对于两个集合的函数 <span class="arithmatex">\(f(S),g(S)\)</span>，若</p>
+<div class="arithmatex">\[
+f(S)=\sum_{T\subseteq S}g(T)
+\]</div>
+<p>那么就有</p>
+<div class="arithmatex">\[
+g(S)=\sum_{T\subseteq S}(-1)^{|S|-|T|}f(T)
+\]</div>
+<h3 id="_15">证明</h3>
+<p>接下来我们简单证明一下。我们从等式的右边开始推：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+&amp;\sum_{T\subseteq S}(-1)^{|S|-|T|}f(T)\\
+=&amp;\sum_{T\subseteq S}(-1)^{|S|-|T|}\sum_{Q\subseteq T}g(Q)\\
+=&amp;\sum_{Q}g(Q)\sum_{Q\subseteq T\subseteq S}(-1)^{|S|-|T|}\\
+\end{aligned}
+\]</div>
+<p>我们发现后半部分的求和与 <span class="arithmatex">\(Q\)</span> 无关，因此把后半部分的 <span class="arithmatex">\(Q\)</span> 剔除：</p>
+<div class="arithmatex">\[
+=\sum_{Q}g(Q)\sum_{T\subseteq (S\setminus Q)}(-1)^{|S\setminus Q|-|T|}
+\]</div>
+<p>记关于集合 <span class="arithmatex">\(P\)</span> 的函数 <span class="arithmatex">\(F(P)=\sum_{T\subseteq P}(-1)^{|P|-|T|}\)</span>，并化简这个函数：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+F(P)&amp;=\sum_{T\subseteq P}(-1)^{|P|-|T|}\\
+&amp;=\sum_{i=0}^{|P|}\dbinom{|P|}{i}(-1)^{|P|-i}=\sum_{i=0}^{|P|}\dbinom{|P|}{i}1^i(-1)^{|P|-i}\\
+&amp;=(1-1)^{|P|}=0^{|P|}
+\end{aligned}
+\]</div>
+<p>因此原来的式子的值是</p>
+<div class="arithmatex">\[
+\sum_{Q}g(Q)\sum_{T\subseteq (S\setminus Q)}(-1)^{|S\setminus Q|-|T|}=\sum_{Q}g(Q)F(S\setminus Q)=\sum_{Q}g(Q)\cdot 0^{|S\setminus Q|}
+\]</div>
+<p>分析发现，仅当 <span class="arithmatex">\(|S\setminus Q|=0\)</span> 时有 <span class="arithmatex">\(0^0=1\)</span>，这时 <span class="arithmatex">\(Q=S\)</span>，对答案的贡献就是 <span class="arithmatex">\(g(S)\)</span>，其他时侯 <span class="arithmatex">\(0^{|S\setminus Q|}=0\)</span>，则对答案无贡献。于是得到</p>
+<div class="arithmatex">\[
+\sum_{Q}g(Q)\cdot 0^{|S\setminus Q|}=g(S)
+\]</div>
+<p>综上所述，得证。</p>
+<h3 id="_16">推论</h3>
+<p>该形式还有这样一个推论。在全集 <span class="arithmatex">\(U\)</span> 下，对于函数 <span class="arithmatex">\(f(S),g(S)\)</span>，如果</p>
+<div class="arithmatex">\[
+f(S)=\sum_{S\subseteq T}g(T)
+\]</div>
+<p>那么</p>
+<div class="arithmatex">\[
+g(S)=\sum_{S\subseteq T}(-1)^{|T|-|S|}f(T)
+\]</div>
+<p>这个推论其实就是补集形式，证法类似。</p>
+<h2 id="dag">DAG 计数</h2>
+<p>???+ note "DAG 计数"
+    对 <span class="arithmatex">\(n\)</span> 个点带标号的有向无环图进行计数，对 <span class="arithmatex">\(10^9+7\)</span> 取模。<span class="arithmatex">\(n\leq 5\times 10^3\)</span>。</p>
+<h3 id="dp">直接 DP</h3>
+<p>考虑 DP，定义 <span class="arithmatex">\(f[i,j]\)</span> 表示 <span class="arithmatex">\(i\)</span> 个点的 DAG，有 <span class="arithmatex">\(j\)</span> 点个入度为 <span class="arithmatex">\(0\)</span> 的图的个数。假设去掉这 <span class="arithmatex">\(j\)</span> 个点后，有 <span class="arithmatex">\(k\)</span> 个点入度为 <span class="arithmatex">\(0\)</span>，那么在去掉前这 <span class="arithmatex">\(k\)</span> 个点至少与这 <span class="arithmatex">\(j\)</span> 个点中的某几个有连边，即 <span class="arithmatex">\(2^j-1\)</span> 种情况；而这 <span class="arithmatex">\(j\)</span> 个点除了与 <span class="arithmatex">\(k\)</span> 个点连边，还可以与剩下的点任意连边，有 <span class="arithmatex">\(2^{i-j-k}\)</span> 种情况。因此方程如下：</p>
+<div class="arithmatex">\[
+f[i,j]=\binom{i}{j}\sum_{k=1}^{i-j}(2^j-1)^k2^{(i-j-k)j}f[i-j,k]
+\]</div>
+<p>计算上式的复杂度是 <span class="arithmatex">\(O(n^3)\)</span> 的。</p>
+<h3 id="_17">放宽限制</h3>
+<p>上述 DP 的定义是恰好 <span class="arithmatex">\(j\)</span> 个点入度为 <span class="arithmatex">\(0\)</span>, 太过于严格，可以放宽为至少 <span class="arithmatex">\(j\)</span> 个点入度为 <span class="arithmatex">\(0\)</span>。直接定义 <span class="arithmatex">\(f[i]\)</span> 表示 <span class="arithmatex">\(i\)</span> 个点的 DAG 个数。可以直接容斥。考虑选出的 <span class="arithmatex">\(j\)</span> 个点，这 <span class="arithmatex">\(j\)</span> 个点可以和剩下的 <span class="arithmatex">\(i-j\)</span> 个点有任意的连边，即 <span class="arithmatex">\(\left(2^{i-j}\right)^j=2^{(i-j)j}\)</span> 种情况：</p>
+<div class="arithmatex">\[
+f[i]=\sum_{j=1}^i(-1)^{j-1}\binom{i}{j}2^{(i-j)j}f[i-j]
+\]</div>
+<p>计算上式的复杂度是 <span class="arithmatex">\(O(n^2)\)</span> 的。</p>
+<h2 id="min-max">Min-max 容斥</h2>
+<p>对于满足 <a href="../../order-theory/#偏序集">全序</a> 关系并且其中元素满足可加减性的序列 <span class="arithmatex">\(\{x_i\}\)</span>，设其长度为 <span class="arithmatex">\(n\)</span>，并设 <span class="arithmatex">\(S=\{1,2,3,\cdots,n\}\)</span>，则有：</p>
+<div class="arithmatex">\[
+\max_{i\in S}{x_i}=\sum_{T\subseteq S}{(-1)^{|T|-1}\min_{j\in T}{x_j}}
+\]</div>
+<div class="arithmatex">\[
+\min_{i\in S}{x_i}=\sum_{T\subseteq S}{(-1)^{|T|-1}\max_{j\in T}{x_j}}
+\]</div>
+<p><strong>证明：</strong> 考虑做一个到一般容斥原理的映射。对于 <span class="arithmatex">\(x\in S\)</span>，假设 <span class="arithmatex">\(x\)</span> 是第 <span class="arithmatex">\(k\)</span> 小的元素。那么我们定义一个映射 <span class="arithmatex">\(f:x\mapsto \{1,2,\cdots,k\}\)</span>。显然这是一个双射。</p>
+<p>那么容易发现，对于 <span class="arithmatex">\(x,y\in S\)</span>，<span class="arithmatex">\(f(\min(x,y))=f(x)\cap f(y)\)</span>，<span class="arithmatex">\(f(\max(x,y))=f(x)\cup f(y)\)</span>。因此我们得到：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\left|f\left(\max_{i\in S}{x_i}\right)\right|
+&amp;= \left| \bigcup_{i\in S} f(x_i) \right|\\
+&amp;= \sum_{T\subseteq S}(-1)^{|T|-1} \left|\bigcap_{j\in T}f(x_j)\right|\\
+&amp;= \sum_{T\subseteq S}(-1)^{|T|-1} \left|f\left(\min_{j\in T}{x_j}\right)\right|\\
+\end{aligned}
+\]</div>
+<p>然后再把 <span class="arithmatex">\(\left|f\left(\max_{i\in S}{x_i}\right)\right|\)</span> 映射回 <span class="arithmatex">\(\max_{i\in S}{x_i}\)</span>，而 <span class="arithmatex">\(\min\)</span> 是类似的。</p>
+<p>证毕。</p>
+<p>但是你可能觉得这个式子非常蠢，最大值明明可以直接求。之所以 min-max 容斥这么重要，是因为它在期望上也是成立的，即：</p>
+<div class="arithmatex">\[
+E\left(\max_{i\in S}{x_i}\right)=\sum_{T\subseteq S}{(-1)^{|T|-1}E\left(\min_{j\in T}{x_j} \right)}
+\]</div>
+<div class="arithmatex">\[
+E\left(\min_{i\in S}{x_i}\right)=\sum_{T\subseteq S}{(-1)^{|T|-1}E\left(\max_{j\in T}{x_j} \right)}
+\]</div>
+<p><strong>证明：</strong> 我们考虑计算期望的一种方法：</p>
+<div class="arithmatex">\[
+E\left(\max_{i\in S}{x_i}\right)=\sum_{y}{P(y=x)\max_{j\in S}{y_j}}
+\]</div>
+<p>其中 <span class="arithmatex">\(y\)</span> 是一个长度为 <span class="arithmatex">\(n\)</span> 的序列。</p>
+<p>我们对后面的 <span class="arithmatex">\(\max\)</span> 使用之前的式子：</p>
+<div class="arithmatex">\[
+\begin{aligned}E\left(\max_{i\in S}{x_i}\right)&amp;=\sum_{y}{P(y=x)\max_{j\in S}{y_j}}\\
+&amp;=\sum_{y}{P(y=x)\sum_{T\subseteq S}{(-1)^{|T|-1}\min_{j\in T}{y_j}}} \end{aligned}
+\]</div>
+<p>调换求和顺序：</p>
+<div class="arithmatex">\[
+\begin{aligned}E\left(\max_{i\in S}{x_i}\right)
+&amp;=\sum_{y}{P(y=x)\sum_{T\subseteq S}{(-1)^{|T|-1}\min_{j\in T}{y_j}}}\\
+&amp;=\sum_{T\subseteq S}{(-1)^{|T|-1}\sum_y{P(y=x)\min_{j\in T}{y_j}}}\\
+&amp;=\sum_{T\subseteq S}{(-1)^{|T|-1}E\left(\min_{j\in T}{y_j}\right)} \end{aligned}
+\]</div>
+<p><span class="arithmatex">\(\min\)</span> 是类似的。</p>
+<p>证毕。</p>
+<p>还有更强的：</p>
+<div class="arithmatex">\[
+\underset{i\in S}{\operatorname{kthmax}{x_i}}=\sum_{T\subseteq S}{(-1)^{|T|-k}\dbinom {|T|-1}{k-1}\min_{j\in T}{x_j}}
+\]</div>
+<div class="arithmatex">\[
+\underset{i\in S}{\operatorname{kthmin}{x_i}}=\sum_{T\subseteq S}{(-1)^{|T|-k}\dbinom {|T|-1}{k-1}\max_{j\in T}{x_j}}
+\]</div>
+<div class="arithmatex">\[
+E\left(\underset{i\in S}{\operatorname{kthmax}{x_i}}\right)=\sum_{T\subseteq S}{(-1)^{|T|-k}\dbinom {|T|-1}{k-1}E\left(\min_{j\in T}{x_j}\right)}
+\]</div>
+<div class="arithmatex">\[
+E\left(\underset{i\in S}{\operatorname{kthmin}{x_i}}\right)=\sum_{T\subseteq S}{(-1)^{|T|-k}\dbinom {|T|-1}{k-1}E\left(\max_{j\in T}{x_j}\right)}
+\]</div>
+<p>规定若 <span class="arithmatex">\(n&lt; m\)</span>，则 <span class="arithmatex">\(\dbinom nm=0\)</span>。</p>
+<p><strong>证明：</strong> 不妨设 <span class="arithmatex">\(\forall 1\le i&lt;n,x_i\le x_{i+1}\)</span>。则有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\sum_{T\subseteq S}{(-1)^{|T|-k}\dbinom {|T|-1}{k-1}\min_{j\in T}{x_j}}
+&amp;=\sum_{i\in S}{x_i\sum_{T\subseteq S}{(-1)^{|T|-k}\dbinom {|T|-1}{k-1}\left[x_i=\min_{j\in T}{x_j} \right]}}\\
+&amp;=\sum_{i\in S}{x_i\sum_{j=k}^n{\dbinom {n-i}{j-1}\dbinom {j-1}{k-1}(-1)^{j-k}}}
+\end{aligned}
+\]</div>
+<p>又因为有组合恒等式：<span class="arithmatex">\(\dbinom ab\dbinom bc=\dbinom ac\dbinom {a-c}{b-c}\)</span>，所以有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+\sum_{T\subseteq S}{(-1)^{|T|-k}\dbinom {|T|-1}{k-1}\min_{j\in T}{x_j}}
+&amp;=\sum_{i\in S}{x_i\sum_{j=k}^n{\dbinom {n-i}{j-1}\dbinom {j-1}{k-1}(-1)^{j-k}}}\\
+&amp;=\sum_{i\in S}{x_i\sum_{j=k}^n{\dbinom {n-i}{k-1}\dbinom {n-i-k+1}{j-k}(-1)^{j-k}}}\\
+&amp;=\sum_{i\in S}{\dbinom {n-i}{k-1}x_i\sum_{j=k}^n{\dbinom {n-i-k+1}{j-k}(-1)^{j-k}}}\\
+&amp;=\sum_{i\in S}{\dbinom {n-i}{k-1}x_i\sum_{j=0}^{n-i-k+1}{\dbinom {n-i-k+1}j(-1)^{j}}}
+\end{aligned}
+\]</div>
+<p>当 <span class="arithmatex">\(i=n-k+1\)</span> 时：</p>
+<div class="arithmatex">\[
+\dbinom {n-i}{k-1}\sum_{j=0}^{n-i-k+1}{\dbinom {n-i-k+1}j(-1)^{j}}=1
+\]</div>
+<p>否则：</p>
+<div class="arithmatex">\[
+\dbinom {n-i}{k-1}\sum_{j=0}^{n-i-k+1}{\dbinom {n-i-k+1}j(-1)^{j}}=0
+\]</div>
+<p>所以：</p>
+<div class="arithmatex">\[
+\sum_{i\in S}{\dbinom {n-i}{k-1}x_i\sum_{j=0}^{n-i-k+1}{\dbinom {n-i-k+1}j(-1)^{j}}}=\underset{i\in S}{\operatorname{kthmax}}{x_i}
+\]</div>
+<p>剩下三个是类似的。</p>
+<p>证毕。</p>
+<p>根据 min-max 容斥，我们还可以得到下面的式子：</p>
+<div class="arithmatex">\[
+\underset{i\in S}{\operatorname{lcm}}{x_i}=\prod_{T\subseteq S}{\left(\gcd_{j\in T}{x_j} \right)^{(-1)^{|T|-1}}}
+\]</div>
+<p>因为 <span class="arithmatex">\(\operatorname{lcm},\gcd,a^{1},a^{-1}\)</span> 分别相当于 <span class="arithmatex">\(\max,\min,+,-\)</span>，就是说相当于对于指数做了一个 min-max 容斥，自然就是对的了</p>
+<h2 id="pkuwc2018">PKUWC2018 随机游走</h2>
+<p>???+ note "<a href="https://loj.ac/problem/2542">PKUWC2018 随机游走</a>"
+    给定一棵 <span class="arithmatex">\(n\)</span> 个点的树，你从 <span class="arithmatex">\(x\)</span> 出发，每次等概率随机选择一条与所在点相邻的边走过去。</p>
+<pre><code>有 $Q$ 次询问。每次询问给出一个集合 $S$，求如果从 $x$ 出发一直随机游走，直到点集 $S$ 中的点都至少经过一次的话，期望游走几步。
+
+特别地，点 $x$（即起点）视为一开始就被经过了一次。
+
+对 $998244353$ 取模。
+
+$1\le n\le 18,1\le Q\le 5000,1\le |S|\le n$。
+</code></pre>
+<p>期望游走的步数也就是游走的时间。那么设随机变量 <span class="arithmatex">\(x_i\)</span> 表示第一次走到结点 <span class="arithmatex">\(i\)</span> 的时间。那么我们要求的就是</p>
+<div class="arithmatex">\[
+E\left(\max_{i\in S}x_i\right)
+\]</div>
+<p>使用 min-max 容斥可以得到</p>
+<div class="arithmatex">\[
+E\left(\max_{i\in S}x_i\right)
+=E\left(\sum_{T\subseteq S}(-1)^{|T|-1}\min_{i\in T}x_i\right)
+=\sum_{T\subseteq S}(-1)^{|T|-1}E\left(\min_{i\in T}x_i\right)
+\]</div>
+<p>对于一个集合 <span class="arithmatex">\(T\in[n]\)</span>，考虑求出 <span class="arithmatex">\(F(T)=E(\min_{i\in T}x_i)\)</span>。</p>
+<p>考虑 <span class="arithmatex">\(E(\min_{i\in T}x_i)\)</span> 的含义，是第一次走到 <span class="arithmatex">\(T\)</span> 中某一个点的期望时间。不妨设 <span class="arithmatex">\(f(i)\)</span> 表示从结点 <span class="arithmatex">\(i\)</span> 出发，第一次走到 <span class="arithmatex">\(T\)</span> 中某个结点的期望时间。</p>
+<ul>
+<li>对于 <span class="arithmatex">\(i\in T\)</span>，有 <span class="arithmatex">\(f(i)=0\)</span>。</li>
+<li>对于 <span class="arithmatex">\(i\notin T\)</span>，有 <span class="arithmatex">\(f(i)=1+\frac{1}{\text{deg}(i)}\sum_{(i,j)\in E}f(j)\)</span>。</li>
+</ul>
+<p>如果直接高斯消元，复杂度 <span class="arithmatex">\(O(n^3)\)</span>。那么我们对每个 <span class="arithmatex">\(T\)</span> 都计算 <span class="arithmatex">\(F(T)\)</span> 的总复杂度就是 <span class="arithmatex">\(O(2^nn^3)\)</span>，不能接受。我们使用树上消元的技巧。</p>
+<p>不妨设根结点是 <span class="arithmatex">\(1\)</span>，结点 <span class="arithmatex">\(u\)</span> 的父亲是 <span class="arithmatex">\(p_u\)</span>。对于叶子结点 <span class="arithmatex">\(i\)</span>，<span class="arithmatex">\(f(i)\)</span> 只会和 <span class="arithmatex">\(i\)</span> 的父亲有关（也可能 <span class="arithmatex">\(f(i)=0\)</span>，那样更好）。因此我们可以把 <span class="arithmatex">\(f(i)\)</span> 表示成 <span class="arithmatex">\(f(i)=A_i+B_if(p_i)\)</span> 的形式，其中 <span class="arithmatex">\(A_i,B_i\)</span> 可以快速计算。</p>
+<p>对于非叶结点 <span class="arithmatex">\(i\)</span>，考虑它的儿子序列 <span class="arithmatex">\(j_1,\cdots,j_k\)</span>。由于 <span class="arithmatex">\(f(j_e)=A_{j_e}+B_{j_e}f(i)\)</span>。因此可以得到</p>
+<div class="arithmatex">\[
+f(i)=1+\frac{1}{\deg(i)}\sum_{e=1}^k\left(A_{j_e}+B_{j_e}f(i)\right)+\frac{f(p_i)}{\deg(i)}
+\]</div>
+<p>那么变换一下可以得到</p>
+<div class="arithmatex">\[
+f(i)=\frac{\deg(i)+\sum_{e=1}^kA_{j_e}}{\deg(i)-\sum_{e=1}^kB_{j_e}}+
+\frac{f(p_i)}{\deg(i)-\sum_{e=1}^kB_{j_e}}
+\]</div>
+<p>于是我们把 <span class="arithmatex">\(f(i)\)</span> 也写成了 <span class="arithmatex">\(A_i+B_if(p_i)\)</span> 的形式。这样可以一直倒推到根结点。而根结点没有父亲。也就是说</p>
+<div class="arithmatex">\[
+f(1)=\frac{\deg(1)+\sum_{e=1}^kA_{j_e}}{\deg(1)-\sum_{e=1}^kB_{j_e}}
+\]</div>
+<p>解一下这个方程我们就得到了 <span class="arithmatex">\(f(1)\)</span>，再从上往下推一次就得到了每个点的 <span class="arithmatex">\(f(i)\)</span>。那么 <span class="arithmatex">\(F(T)=f(x)\)</span>。时间复杂度 <span class="arithmatex">\(O(n)\)</span>。</p>
+<p>这样，我们可以对于每一个 <span class="arithmatex">\(T\)</span> 计算出 <span class="arithmatex">\(F(T)\)</span>，时间复杂度 <span class="arithmatex">\(O(2^nn)\)</span>。</p>
+<p>回到容斥的部分，我们知道 <span class="arithmatex">\(E(\max_{i\in S}x_i)=\sum_{T\subseteq S}(-1)^{|T|-1}F(T)\)</span>。</p>
+<p>不妨设 <span class="arithmatex">\(F'(T)=(-1)^{|T|-1}F(T)\)</span>，那么进一步得到 <span class="arithmatex">\(E(\max_{i\in S}x_i)=\sum_{T\subseteq S}F'(T)\)</span>。因此可以使用 FMT（也叫子集前缀和，或者 FWT 或变换）在 <span class="arithmatex">\(O(2^nn)\)</span> 的时间内对每个 <span class="arithmatex">\(S\)</span> 计算出 <span class="arithmatex">\(E(\max_{i\in S}x_i)\)</span>，这样就可以 <span class="arithmatex">\(O(1)\)</span> 回答询问了。</p>
+<h3 id="_18">习题</h3>
+<ul>
+<li><a href="https://atcoder.jp/contests/abc331/tasks/abc331_g">ABC331- G - Collect Them All</a></li>
+<li><a href="https://www.luogu.com.cn/problem/P4707">洛谷 P4707 重返现世</a></li>
+</ul>
+<h2 id="_19">参考文献</h2>
+<p><a href="https://github.com/OI-wiki/libs/blob/master/%E9%9B%86%E8%AE%AD%E9%98%9F%E5%8E%86%E5%B9%B4%E8%AE%BA%E6%96%87/%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9F2013%E8%AE%BA%E6%96%87%E9%9B%86.pdf">浅探容斥原理 - 王迪</a>，2013 年信息学奥林匹克中国国家队候选队员论文集</p>
+<p><a href="https://www.cnblogs.com/cjoieryl/p/10078167.html">有标号的 DAG 计数系列问题 - Cyhlnj</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Total_order">全序关系 - Wikipedia</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs"], "search": "../../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
