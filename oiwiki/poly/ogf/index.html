@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#基本运算" class="md-skip">
           Skip to content
         </a>
       
@@ -1092,7 +1092,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#基本运算" class="md-nav__link">
     <span class="md-ellipsis">
       
         基本运算
@@ -1103,7 +1103,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#封闭形式" class="md-nav__link">
     <span class="md-ellipsis">
       
         封闭形式
@@ -1114,7 +1114,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#斐波那契数列的生成函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         斐波那契数列的生成函数
@@ -1126,7 +1126,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#展开方式一" class="md-nav__link">
     <span class="md-ellipsis">
       
         展开方式一
@@ -1137,7 +1137,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#展开方式二" class="md-nav__link">
     <span class="md-ellipsis">
       
         展开方式二
@@ -1153,7 +1153,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#牛顿二项式定理" class="md-nav__link">
     <span class="md-ellipsis">
       
         牛顿二项式定理
@@ -1164,7 +1164,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#卡特兰数的生成函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         卡特兰数的生成函数
@@ -1175,7 +1175,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#应用" class="md-nav__link">
     <span class="md-ellipsis">
       
         应用
@@ -1187,7 +1187,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#食物" class="md-nav__link">
     <span class="md-ellipsis">
       
         食物
@@ -1244,7 +1244,7 @@ F(x)=\sum_{n}a_n x^n
 <li>序列 <span class="arithmatex">\(a=\langle 1,3,5,7,9,\cdots\rangle\)</span> 的生成函数是 <span class="arithmatex">\(\sum_{n\ge 0}(2n+1)x^n\)</span>。</li>
 </ol>
 <p>换句话说，如果序列 <span class="arithmatex">\(a\)</span> 有通项公式，那么它的普通生成函数的系数就是通项公式。</p>
-<h2 id="_1">基本运算</h2>
+<h2 id="基本运算">基本运算<a class="headerlink" href="#基本运算" title="Permanent link"></a></h2>
 <p>考虑两个序列 <span class="arithmatex">\(a,b\)</span> 的普通生成函数，分别为 <span class="arithmatex">\(F(x),G(x)\)</span>。那么有</p>
 <div class="arithmatex">\[
 F(x)\pm G(x)=\sum_n (a_n\pm b_n)x^n
@@ -1255,7 +1255,7 @@ F(x)\pm G(x)=\sum_n (a_n\pm b_n)x^n
 F(x)G(x)=\sum_n x^n \sum_{i=0}^na_ib_{n-i}
 \]</div>
 <p>因此 <span class="arithmatex">\(F(x)G(x)\)</span> 是序列 <span class="arithmatex">\(\langle \sum_{i=0}^n a_ib_{n-i} \rangle\)</span> 的普通生成函数。</p>
-<h2 id="_2">封闭形式</h2>
+<h2 id="封闭形式">封闭形式<a class="headerlink" href="#封闭形式" title="Permanent link"></a></h2>
 <p>在运用生成函数的过程中，我们不会一直使用形式幂级数的形式，而会适时地转化为封闭形式以更好地化简。</p>
 <p>例如 <span class="arithmatex">\(\langle 1,1,1,\cdots\rangle\)</span> 的普通生成函数 <span class="arithmatex">\(F(x)=\sum_{n\ge 0}x^n\)</span>，我们可以发现</p>
 <div class="arithmatex">\[
@@ -1271,55 +1271,47 @@ F(x)=\frac{1}{1-x}
 \begin{aligned}F(x)px+1 &amp;=F(x)\\F(x) &amp;=\frac{1}{1-px}\end{aligned}
 \]</div>
 <p>等比数列的封闭形式与展开形式是常用的变换手段。</p>
-<p>???+ note "小练习"
-    请求出下列数列的普通生成函数（形式幂级数形式和封闭形式）。难度是循序渐进的。</p>
-<pre><code>1.  $a=\langle 0,1,1,1,1,\cdots\rangle$。
-2.  $a=\langle 1,0,1,0,1,\cdots \rangle$。
-3.  $a=\langle 1,2,3,4,\cdots \rangle$。
-4.  $a_n=\binom{m}{n}$（$m$ 是常数，$n\ge 0$）。
-5.  $a_n=\binom{m+n}{n}$（$m$ 是常数，$n\ge 0$）。
-</code></pre>
-<p>??? note "答案"
-    第一个：</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>小练习</summary>
+<p>请求出下列数列的普通生成函数（形式幂级数形式和封闭形式）。难度是循序渐进的。</p>
+<ol>
+<li><span class="arithmatex">\(a=\langle 0,1,1,1,1,\cdots\rangle\)</span>。</li>
+<li><span class="arithmatex">\(a=\langle 1,0,1,0,1,\cdots \rangle\)</span>。</li>
+<li><span class="arithmatex">\(a=\langle 1,2,3,4,\cdots \rangle\)</span>。</li>
+<li><span class="arithmatex">\(a_n=\binom{m}{n}\)</span>（<span class="arithmatex">\(m\)</span> 是常数，<span class="arithmatex">\(n\ge 0\)</span>）。</li>
+<li><span class="arithmatex">\(a_n=\binom{m+n}{n}\)</span>（<span class="arithmatex">\(m\)</span> 是常数，<span class="arithmatex">\(n\ge 0\)</span>）。</li>
+</ol>
+</details>
+<details class="note">
+<summary>答案</summary>
+<p>第一个：</p>
+<div class="arithmatex">\[
 F(x)=\sum_{n\ge 1}x^n=\dfrac{x}{1-x}
-$$
-
-第二个：
-
-$$
+\]</div>
+<p>第二个：</p>
+<div class="arithmatex">\[
 \begin{aligned}
 F(x)&amp;=\sum_{n\ge 0}x^{2n}\\
 &amp;=\sum_{n\ge 0}(x^2)^{n}\\
 &amp;=\frac{1}{1-x^2}
 \end{aligned}
-$$
-
-第三个（求导）：
-
-$$
+\]</div>
+<p>第三个（求导）：</p>
+<div class="arithmatex">\[
 \begin{aligned}F(x)&amp;=\sum_{n\ge 0}(n+1)x^n\\&amp;=\sum_{n\ge 1}nx^{n-1}\\&amp;=\sum_{n\ge 0}(x^n)'\\&amp;=\left(\frac{1}{1-x}\right)'\\&amp;=\frac{1}{(1-x)^2}\end{aligned}
-$$
-
-第四个（二项式定理）：
-
-$$
+\]</div>
+<p>第四个（二项式定理）：</p>
+<div class="arithmatex">\[
 F(x)=\sum_{n\ge 0}\binom{m}{n}x^n=(1+x)^m
-$$
-
-第五个：
-
-$$
+\]</div>
+<p>第五个：</p>
+<div class="arithmatex">\[
 F(x)=\sum_{n\ge 0}\binom{m+n}{n}x^n=\frac{1}{(1-x)^{m+1}}
-$$
-
-可以使用归纳法证明。
-
-首先当 $m=0$ 时，有 $F(x)=\dfrac{1}{1-x}$。
-
-而当 $m&gt;0$ 时，有
-
-$$
+\]</div>
+<p>可以使用归纳法证明。</p>
+<p>首先当 <span class="arithmatex">\(m=0\)</span> 时，有 <span class="arithmatex">\(F(x)=\dfrac{1}{1-x}\)</span>。</p>
+<p>而当 <span class="arithmatex">\(m&gt;0\)</span> 时，有</p>
+<div class="arithmatex">\[
 \begin{aligned}
 \frac{1}{(1-x)^{m+1}}
 &amp;=\frac{1}{(1-x)^m}\frac{1}{1-x}\\
@@ -1327,9 +1319,9 @@ $$
 &amp;=\sum_{n\ge 0} x^n\sum_{i=0}^n \binom{m+i-1}{i}\\
 &amp;=\sum_{n\ge 0}\binom{m+n}{n}x^n
 \end{aligned}
-$$
-</code></pre>
-<h2 id="_3">斐波那契数列的生成函数</h2>
+\]</div>
+</details>
+<h2 id="斐波那契数列的生成函数">斐波那契数列的生成函数<a class="headerlink" href="#斐波那契数列的生成函数" title="Permanent link"></a></h2>
 <p>接下来我们来推导斐波那契数列的生成函数。</p>
 <p>斐波那契数列定义为 <span class="arithmatex">\(a_0=0,a_1=1,a_n=a_{n-1}+a_{n-2}\;(n&gt;1)\)</span>。设它的普通生成函数是 <span class="arithmatex">\(F(x)\)</span>，那么根据它的递推式，我们可以类似地列出关于 <span class="arithmatex">\(F(x)\)</span> 的方程：</p>
 <div class="arithmatex">\[
@@ -1340,7 +1332,7 @@ F(x)=xF(x)+x^2F(x)-a_0x+a_1x+a_0
 F(x)=\frac{x}{1-x-x^2}
 \]</div>
 <p>那么接下来的问题是，如何求出它的展开形式？</p>
-<h3 id="_4">展开方式一</h3>
+<h3 id="展开方式一">展开方式一<a class="headerlink" href="#展开方式一" title="Permanent link"></a></h3>
 <p>不妨将 <span class="arithmatex">\(x+x^2\)</span> 当作一个整体，那么可以得到</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1356,7 +1348,7 @@ F(x) &amp;= \dfrac{x}{1-(x+x^2)} \\
 a_n = \sum_{i=0}^{\lfloor(n-1)/2\rfloor}\binom{n-i-1}{i}.
 \]</div>
 <p>这并不是我们熟知的有关黄金分割比的形式。</p>
-<h3 id="_5">展开方式二</h3>
+<h3 id="展开方式二">展开方式二<a class="headerlink" href="#展开方式二" title="Permanent link"></a></h3>
 <p>考虑求解一个待定系数的方程：</p>
 <div class="arithmatex">\[
 \frac{A}{1-ax}+\frac{B}{1-bx}= \frac{x}{1-x-x^2}
@@ -1410,7 +1402,7 @@ c_2&amp;=2
 <div class="arithmatex">\[
 [x^n]G(x)=1-2^{n+1}+(n+1)\cdot 2^{n+1}
 \]</div>
-<h2 id="_6">牛顿二项式定理</h2>
+<h2 id="牛顿二项式定理">牛顿二项式定理<a class="headerlink" href="#牛顿二项式定理" title="Permanent link"></a></h2>
 <p>我们重新定义组合数的运算：</p>
 <div class="arithmatex">\[
 \binom{r}{k}=\frac{r^{\underline{k}}}{k!}\quad(r\in\mathbf{C},k\in\mathbf{N})
@@ -1420,24 +1412,26 @@ c_2&amp;=2
 (1+x)^{\alpha}=\sum_{n\ge 0}\binom{\alpha}{n}x^n
 \]</div>
 <p>二项式定理其实是牛顿二项式定理的一个特殊情况。</p>
-<h2 id="_7">卡特兰数的生成函数</h2>
+<h2 id="卡特兰数的生成函数">卡特兰数的生成函数<a class="headerlink" href="#卡特兰数的生成函数" title="Permanent link"></a></h2>
 <p>参考 <a href="../../combinatorics/catalan/#代数推演">Catalan 数形式的代数推演</a>。</p>
-<h2 id="_8">应用</h2>
+<h2 id="应用">应用<a class="headerlink" href="#应用" title="Permanent link"></a></h2>
 <p>接下来给出一些例题，来介绍生成函数在 OI 中的具体应用。</p>
-<h3 id="_9">食物</h3>
-<p>???+ note "<a href="https://hydro.ac/p/bzoj-P3028">食物</a>"
-    在许多不同种类的食物中选出 <span class="arithmatex">\(n\)</span> 个，每种食物的限制如下：</p>
-<pre><code>1.  承德汉堡：偶数个
-2.  可乐：0 个或 1 个
-3.  鸡腿：0 个，1 个或 2 个
-4.  蜜桃多：奇数个
-5.  鸡块：4 的倍数个
-6.  包子：0 个，1 个，2 个或 3 个
-7.  土豆片炒肉：不超过一个。
-8.  面包：3 的倍数个
-
-每种食物都是以「个」为单位，只要总数加起来是 $n$ 就算一种方案。对于给出的 $n$ 你需要计算出方案数，对 $10007$ 取模。
-</code></pre>
+<h3 id="食物">食物<a class="headerlink" href="#食物" title="Permanent link"></a></h3>
+<details class="note" open="open">
+<summary><a href="https://hydro.ac/p/bzoj-P3028">食物</a></summary>
+<p>在许多不同种类的食物中选出 <span class="arithmatex">\(n\)</span> 个，每种食物的限制如下：</p>
+<ol>
+<li>承德汉堡：偶数个</li>
+<li>可乐：0 个或 1 个</li>
+<li>鸡腿：0 个，1 个或 2 个</li>
+<li>蜜桃多：奇数个</li>
+<li>鸡块：4 的倍数个</li>
+<li>包子：0 个，1 个，2 个或 3 个</li>
+<li>土豆片炒肉：不超过一个。</li>
+<li>面包：3 的倍数个</li>
+</ol>
+<p>每种食物都是以「个」为单位，只要总数加起来是 <span class="arithmatex">\(n\)</span> 就算一种方案。对于给出的 <span class="arithmatex">\(n\)</span> 你需要计算出方案数，对 <span class="arithmatex">\(10007\)</span> 取模。</p>
+</details>
 <p>这是一道经典的生成函数题。对于一种食物，我们可以设 <span class="arithmatex">\(a_n\)</span> 表示这种食物选 <span class="arithmatex">\(n\)</span> 个的方案数，并求出它的生成函数。而两种食物一共选 <span class="arithmatex">\(n\)</span> 个的方案数的生成函数，就是它们生成函数的卷积。多种食物选 <span class="arithmatex">\(n\)</span> 个的方案数的生成函数也是它们生成函数的卷积。</p>
 <p>在理解了方案数可以用卷积表示以后，我们就可以构造生成函数（标号对应题目中食物的标号）：</p>
 <ol>
@@ -1460,13 +1454,13 @@ F(x)=\frac{(1+x)(1-x^3)x(1-x^4)(1+x)}{(1-x^2)(1-x)(1-x^2)(1-x^4)(1-x)(1-x^3)}
 F(x)=\sum_{n\ge 1}\binom{n+2}{n-1}x^n
 \]</div>
 <p>因此答案就是 <span class="arithmatex">\(\dbinom{n+2}{n-1}=\dbinom{n+2}{3}\)</span>。</p>
-<h3 id="sweet">Sweet</h3>
-<p>???+ note "<a href="https://hydro.ac/p/bzoj-P3027">「CEOI2004」Sweet</a>"
-    有 <span class="arithmatex">\(n\)</span> 堆糖果。不同的堆里糖果的种类不同（即同一个堆里的糖果种类是相同的，不同的堆里的糖果的种类是不同的）。第 <span class="arithmatex">\(i\)</span> 个堆里有 <span class="arithmatex">\(m_i\)</span> 个糖果。现在要吃掉至少 <span class="arithmatex">\(a\)</span> 个糖果，但不超过 <span class="arithmatex">\(b\)</span> 个。求有多少种方案。</p>
-<pre><code>两种方案不同当且仅当吃的个数不同，或者吃的糖果中，某一种糖果的个数在两个方案中不同。
-
-$n\le 10,0\le a\le b\le 10^7,m_i\le 10^6$。
-</code></pre>
+<h3 id="sweet">Sweet<a class="headerlink" href="#sweet" title="Permanent link"></a></h3>
+<details class="note" open="open">
+<summary><a href="https://hydro.ac/p/bzoj-P3027">「CEOI2004」Sweet</a></summary>
+<p>有 <span class="arithmatex">\(n\)</span> 堆糖果。不同的堆里糖果的种类不同（即同一个堆里的糖果种类是相同的，不同的堆里的糖果的种类是不同的）。第 <span class="arithmatex">\(i\)</span> 个堆里有 <span class="arithmatex">\(m_i\)</span> 个糖果。现在要吃掉至少 <span class="arithmatex">\(a\)</span> 个糖果，但不超过 <span class="arithmatex">\(b\)</span> 个。求有多少种方案。</p>
+<p>两种方案不同当且仅当吃的个数不同，或者吃的糖果中，某一种糖果的个数在两个方案中不同。</p>
+<p><span class="arithmatex">\(n\le 10,0\le a\le b\le 10^7,m_i\le 10^6\)</span>。</p>
+</details>
 <p>在第 <span class="arithmatex">\(i\)</span> 堆吃 <span class="arithmatex">\(j\)</span> 个糖果的方案数（显然为 1）的生成函数为</p>
 <div class="arithmatex">\[
 F_i(x)=\sum_{j=0}^{m_i}x^j=\frac{1-x^{m_i+1}}{1-x}
@@ -1551,7 +1545,9 @@ c_k\sum_{i=a-k}^{b-k}\binom{n-1+i}{i}=c_k\left(
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#定义" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#定义" class="md-nav__link">
     <span class="md-ellipsis">
       
         定义
@@ -1112,7 +1112,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#pn" class="md-nav__link">
+  <a href="#pn-筛" class="md-nav__link">
     <span class="md-ellipsis">
       
         PN 筛
@@ -1124,7 +1124,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#过程" class="md-nav__link">
     <span class="md-ellipsis">
       
         过程
@@ -1135,7 +1135,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#性质" class="md-nav__link">
     <span class="md-ellipsis">
       
         性质
@@ -1151,7 +1151,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#例题" class="md-nav__link">
     <span class="md-ellipsis">
       
         例题
@@ -1163,7 +1163,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#luogu-p5325min_25" class="md-nav__link">
+  <a href="#luogu-p5325模板min_25-筛" class="md-nav__link">
     <span class="md-ellipsis">
       
         Luogu P5325【模板】Min_25 筛
@@ -1174,7 +1174,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#loj-6053" class="md-nav__link">
+  <a href="#loj-6053简单的函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         「LOJ #6053」简单的函数
@@ -1190,7 +1190,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#习题" class="md-nav__link">
     <span class="md-ellipsis">
       
         习题
@@ -1201,7 +1201,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#参考资料" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料
@@ -1230,7 +1230,7 @@
 
   <h1>Powerful number</h1>
 
-<h2 id="_1">定义</h2>
+<h2 id="定义">定义<a class="headerlink" href="#定义" title="Permanent link"></a></h2>
 <p>Powerful Number（以下简称 PN）筛类似于杜教筛，或者说是杜教筛的一个扩展，可以拿来求一些积性函数的前缀和。</p>
 <p><strong>要求</strong>：</p>
 <ul>
@@ -1242,7 +1242,7 @@
 </li>
 </ul>
 <p>假设现在要求积性函数 <span class="arithmatex">\(f\)</span> 的前缀和 <span class="arithmatex">\(F(n) = \sum_{i=1}^{n} f(i)\)</span>。</p>
-<h2 id="powerful-number">Powerful Number</h2>
+<h2 id="powerful-number">Powerful Number<a class="headerlink" href="#powerful-number" title="Permanent link"></a></h2>
 <p><strong>定义</strong>：对于正整数 <span class="arithmatex">\(n\)</span>，记 <span class="arithmatex">\(n\)</span> 的质因数分解为 <span class="arithmatex">\(n = \prod_{i=1}^{m} p_{i}^{e_{i}}\)</span>。<span class="arithmatex">\(n\)</span> 是 PN 当且仅当 <span class="arithmatex">\(\forall 1 \le i \le m, e_{i} &gt; 1\)</span>。</p>
 <p><strong>性质 1</strong>：所有 PN 都可以表示成 <span class="arithmatex">\(a^{2}b^{3}\)</span> 的形式。</p>
 <p><strong>证明</strong>：若 <span class="arithmatex">\(e_i\)</span> 是偶数，则将 <span class="arithmatex">\(p_{i}^{e_{i}}\)</span> 合并进 <span class="arithmatex">\(a^{2}\)</span> 里；若 <span class="arithmatex">\(e_i\)</span> 为奇数，则先将 <span class="arithmatex">\(p_{i}^{3}\)</span> 合并进 <span class="arithmatex">\(b^{3}\)</span> 里，再将 <span class="arithmatex">\(p_{i}^{e_{i}-3}\)</span> 合并进 <span class="arithmatex">\(a^{2}\)</span> 里。</p>
@@ -1252,7 +1252,7 @@
 \int_{1}^{\sqrt{n}} \sqrt[3]{\frac{n}{x^2}} \mathrm{d}x = O(\sqrt{n})
 \]</div>
 <p>那么如何求出 <span class="arithmatex">\(n\)</span> 以内所有的 PN 呢？线性筛找出 <span class="arithmatex">\(\sqrt{n}\)</span> 内的所有素数，再 DFS 搜索各素数的指数即可。由于 <span class="arithmatex">\(n\)</span> 以内的 PN 至多有 <span class="arithmatex">\(O(\sqrt{n})\)</span> 个，所以至多搜索 <span class="arithmatex">\(O(\sqrt{n})\)</span> 次。</p>
-<h2 id="pn">PN 筛</h2>
+<h2 id="pn-筛">PN 筛<a class="headerlink" href="#pn-筛" title="Permanent link"></a></h2>
 <p>首先，构造出一个易求前缀和的积性函数 <span class="arithmatex">\(g\)</span>，且满足对于素数 <span class="arithmatex">\(p\)</span>，<span class="arithmatex">\(g(p) = f(p)\)</span>。记 <span class="arithmatex">\(G(n) = \sum_{i=1}^{n} g(i)\)</span>。</p>
 <p>然后，构造函数 <span class="arithmatex">\(h = f / g\)</span>，这里的 <span class="arithmatex">\(/\)</span> 表示狄利克雷卷积除法。根据狄利克雷卷积的性质可以得知 <span class="arithmatex">\(h\)</span> 也为积性函数，因此 <span class="arithmatex">\(h(1) = 1\)</span>。<span class="arithmatex">\(f = g * h\)</span>，这里 <span class="arithmatex">\(*\)</span> 表示狄利克雷卷积。</p>
 <p>对于素数 <span class="arithmatex">\(p\)</span>，<span class="arithmatex">\(f(p) = g(1)h(p) + g(p)h(1) = h(p) + g(p) \implies h(p) = 0\)</span>。根据 <span class="arithmatex">\(h(p)=0\)</span> 和 <span class="arithmatex">\(h\)</span> 是积性函数可以推出对于非 PN 的数 <span class="arithmatex">\(n\)</span> 有 <span class="arithmatex">\(h(n) = 0\)</span>，即 <span class="arithmatex">\(h\)</span> 仅在 PN 处取有效值。</p>
@@ -1269,7 +1269,7 @@ F(n) &amp;= \sum_{i = 1}^{n} f(i)\\
 \]</div>
 <p><span class="arithmatex">\(O(\sqrt{n})\)</span> 找出所有 PN，计算出所有 <span class="arithmatex">\(h\)</span> 的有效值。对于 <span class="arithmatex">\(h\)</span> 有效值的计算，只需要计算出所有 <span class="arithmatex">\(h(p^c)\)</span> 处的值，就可以根据 <span class="arithmatex">\(h\)</span> 为积性函数推出 <span class="arithmatex">\(h\)</span> 的所有有效值。现在对于每一个有效值 <span class="arithmatex">\(d\)</span>，计算 <span class="arithmatex">\(h(d)G\left(\left\lfloor \dfrac{n}{d} \right\rfloor\right)\)</span> 并累加即可得到 <span class="arithmatex">\(F(n)\)</span>。</p>
 <p>下面考虑计算 <span class="arithmatex">\(h(p^c)\)</span>，一共有两种方法：一种是直接推出 <span class="arithmatex">\(h(p^c)\)</span> 仅与 <span class="arithmatex">\(p, c\)</span> 有关的计算公式，再根据公式计算 <span class="arithmatex">\(h(p^c)\)</span>；另一种是根据 <span class="arithmatex">\(f = g * h\)</span> 有 <span class="arithmatex">\(f(p^c) = \sum_{i=0}^c g(p^i)h(p^{c-i})\)</span>，移项可得 <span class="arithmatex">\(h(p^c) = f(p^c) - \sum_{i=1}^{c}g(p^i)h(p^{c-i})\)</span>，现在就可以枚举素数 <span class="arithmatex">\(p\)</span> 再枚举指数 <span class="arithmatex">\(c\)</span> 求解出所有 <span class="arithmatex">\(h(p^c)\)</span>。</p>
-<h3 id="_2">过程</h3>
+<h3 id="过程">过程<a class="headerlink" href="#过程" title="Permanent link"></a></h3>
 <ol>
 <li>构造 <span class="arithmatex">\(g\)</span></li>
 <li>构造快速计算 <span class="arithmatex">\(G\)</span> 的方法</li>
@@ -1278,14 +1278,14 @@ F(n) &amp;= \sum_{i = 1}^{n} f(i)\\
 <li>得到结果</li>
 </ol>
 <p>对于第 3 步，可以直接根据公式计算，可以使用枚举法预处理打表，也可以搜索到了再临时推。</p>
-<h3 id="_3">性质</h3>
+<h3 id="性质">性质<a class="headerlink" href="#性质" title="Permanent link"></a></h3>
 <p>以使用第二种方法计算 <span class="arithmatex">\(h(p^c)\)</span> 为例进行分析。可以分为计算 <span class="arithmatex">\(h(p^c)\)</span> 和搜索两部分进行分析。</p>
 <p>对于第一部分，根据 <span class="arithmatex">\(O(\sqrt{n})\)</span> 内的素数个数为 <span class="arithmatex">\(O\left(\dfrac{\sqrt{n}}{\log n}\right)\)</span>，每个素数 <span class="arithmatex">\(p\)</span> 的指数 <span class="arithmatex">\(c\)</span> 至多为 <span class="arithmatex">\(\log n\)</span>，计算 <span class="arithmatex">\(h(p^c)\)</span> 需要循环 <span class="arithmatex">\((c - 1)\)</span> 次，由此有第一部分的时间复杂度为 <span class="arithmatex">\(O\left(\dfrac{\sqrt{n}}{\log n} \cdot \log n \cdot \log n\right) = O(\sqrt{n}\log{n})\)</span>，且这是一个宽松的上界。根据题目的不同还可以添加不同的优化，从而降低第一部分的时间复杂度。</p>
 <p>对于搜索部分，由于 <span class="arithmatex">\(n\)</span> 以内的 PN 至多有 <span class="arithmatex">\(O(\sqrt{n})\)</span> 个，所以至多搜索 <span class="arithmatex">\(O(\sqrt{n})\)</span> 次。对于每一个 PN，根据计算 <span class="arithmatex">\(G\)</span> 的方法不同，时间复杂度也不同。例如，假设计算 <span class="arithmatex">\(G\left(\left\lfloor \dfrac{n}{d}\right\rfloor\right)\)</span> 的时间复杂度为 <span class="arithmatex">\(O(1)\)</span>，则第二部分的复杂度为 <span class="arithmatex">\(O(\sqrt{n})\)</span>。</p>
 <p>特别地，若借助杜教筛计算 <span class="arithmatex">\(G\left(\left\lfloor \dfrac{n}{d}\right\rfloor\right)\)</span>，则第二部分的时间复杂度为杜教筛的时间复杂度，即 <span class="arithmatex">\(O(n^{\frac{2}{3}})\)</span>。因为若事先计算一次 <span class="arithmatex">\(G(n)\)</span>，并且预先使用线性筛优化和用支持快速随机访问的数据结构（如 C++ 中的 <code>std::map</code> 和 <code>std::unordered_map</code>）记录较大的值，则杜教筛过程中用到的 <span class="arithmatex">\(G\left(\left\lfloor \dfrac{n}{d}\right\rfloor\right)\)</span> 都是线性筛中记录的或者 <code>std::map</code> 中记录的，这一点可以直接用程序验证。</p>
 <p>对于空间复杂度，其瓶颈在于存储 <span class="arithmatex">\(h(p^c)\)</span>。若使用二维数组 <span class="arithmatex">\(a\)</span> 记录，<span class="arithmatex">\(a_{i,j}\)</span> 表示 <span class="arithmatex">\(h(p_i^j)\)</span> 的值，则空间复杂度为 <span class="arithmatex">\(O\left(\dfrac{\sqrt{n}}{\log n} \cdot \log n\right) = O(\sqrt{n})\)</span>。</p>
-<h2 id="_4">例题</h2>
-<h3 id="luogu-p5325min_25"><a href="https://www.luogu.com.cn/problem/P5325">Luogu P5325【模板】Min_25 筛</a></h3>
+<h2 id="例题">例题<a class="headerlink" href="#例题" title="Permanent link"></a></h2>
+<h3 id="luogu-p5325模板min_25-筛"><a href="https://www.luogu.com.cn/problem/P5325">Luogu P5325【模板】Min_25 筛</a><a class="headerlink" href="#luogu-p5325模板min_25-筛" title="Permanent link"></a></h3>
 <p><strong>题意</strong>：给定积性函数 <span class="arithmatex">\(f(p^k) = p^k(p^k-1)\)</span>，求 <span class="arithmatex">\(\sum_{i=1}^{n} f(i)\)</span>。</p>
 <p>易得 <span class="arithmatex">\(f(p) = p(p-1) = \operatorname{id}(p)\varphi(p)\)</span>，构造 <span class="arithmatex">\(g(n) = \operatorname{id}(n)\varphi(n)\)</span>。</p>
 <p>考虑使用杜教筛求 <span class="arithmatex">\(G(n)\)</span>，根据 <span class="arithmatex">\((\operatorname{id}\cdot \varphi) * \operatorname{id} = \operatorname{id}_2\)</span> 可得 <span class="arithmatex">\(G(n)= \sum_{i=1}^{n} i^2 - \sum_{d=2}^{n} d \cdot G\left(\left\lfloor \dfrac{n}{d} \right\rfloor\right)\)</span>。</p>
@@ -1304,10 +1304,12 @@ F(n) &amp;= \sum_{i = 1}^{n} f(i)\\
 \end{aligned}
 \]</div>
 <p>再根据 <span class="arithmatex">\(h(p) = 0\)</span>，通过累加法即可推出 <span class="arithmatex">\(h(p^k) = (k-1)(p-1)p^k\)</span>。</p>
-<p>??? note "参考代码"
-    <code>cpp
-    --8&lt;-- "docs/math/code/powerful-number/powerful-number_1.cpp"</code></p>
-<h3 id="loj-6053"><a href="https://loj.ac/problem/6053">「LOJ #6053」简单的函数</a></h3>
+<details class="note">
+<summary>参考代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/powerful-number/powerful-number_1.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="loj-6053简单的函数"><a href="https://loj.ac/problem/6053">「LOJ #6053」简单的函数</a><a class="headerlink" href="#loj-6053简单的函数" title="Permanent link"></a></h3>
 <p>给定 <span class="arithmatex">\(f(n)\)</span>：</p>
 <div class="arithmatex">\[
 f(n) =
@@ -1368,16 +1370,18 @@ S_2(n)
 \]</div>
 <p>综上，有 <span class="arithmatex">\(S_2(n) = S_1(n) + S_2\left(\left\lfloor \dfrac{n}{2} \right\rfloor\right)\)</span>。</p>
 <p><span class="arithmatex">\(S_1\)</span> 可以用杜教筛求，<span class="arithmatex">\(S_2\)</span> 直接按照公式推，这样 <span class="arithmatex">\(G\)</span> 也可以求出来了。</p>
-<p>??? note "参考代码"
-    <code>cpp
-    --8&lt;-- "docs/math/code/powerful-number/powerful-number_2.cpp"</code></p>
-<h2 id="_5">习题</h2>
+<details class="note">
+<summary>参考代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/powerful-number/powerful-number_2.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="习题">习题<a class="headerlink" href="#习题" title="Permanent link"></a></h2>
 <ul>
 <li><a href="https://projecteuler.net/problem=708">PE708 Twos are all you need</a></li>
 <li><a href="https://projecteuler.net/problem=639">PE639 Summing a multiplicative function</a></li>
 <li><a href="https://projecteuler.net/problem=484">PE484 Arithmetic Derivative</a></li>
 </ul>
-<h2 id="_6">参考资料</h2>
+<h2 id="参考资料">参考资料<a class="headerlink" href="#参考资料" title="Permanent link"></a></h2>
 <ul>
 <li><a href="https://www.cnblogs.com/wallbreaker5th/p/13901487.html">破壁人五号 - Powerful number 筛略解</a></li>
 <li><a href="https://www.luogu.com.cn/blog/command-block/du-jiao-shai">command_block - 杜教筛（+ 贝尔级数 + powerful number）</a></li>
@@ -1436,7 +1440,9 @@ S_2(n)
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

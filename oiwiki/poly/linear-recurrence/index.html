@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#简介" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#简介" class="md-nav__link">
     <span class="md-ellipsis">
       
         简介
@@ -1102,7 +1102,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#fiduccia" class="md-nav__link">
+  <a href="#fiduccia-算法" class="md-nav__link">
     <span class="md-ellipsis">
       
         Fiduccia 算法
@@ -1113,7 +1113,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#表示为有理函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         表示为有理函数
@@ -1124,7 +1124,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bostanmori" class="md-nav__link">
+  <a href="#bostanmori-算法" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bostan–Mori 算法
@@ -1136,7 +1136,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#计算单项" class="md-nav__link">
     <span class="md-ellipsis">
       
         计算单项
@@ -1147,7 +1147,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#计算连续若干项" class="md-nav__link">
     <span class="md-ellipsis">
       
         计算连续若干项
@@ -1158,7 +1158,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#找到新的有理函数表示" class="md-nav__link">
     <span class="md-ellipsis">
       
         找到新的有理函数表示
@@ -1179,7 +1179,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#参考文献" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考文献
@@ -1208,7 +1208,7 @@
 
   <h1>Linear recurrence</h1>
 
-<h2 id="_1">简介</h2>
+<h2 id="简介">简介<a class="headerlink" href="#简介" title="Permanent link"></a></h2>
 <p>常系数齐次线性递推数列（又称为 C-finite 或 C-recursive 数列）是常见的一类基础的递推数列。</p>
 <p>对于数列 <span class="arithmatex">\(\left(a_j\right)_{j\geq 0}\)</span> 和其递推式</p>
 <div class="arithmatex">\[
@@ -1216,7 +1216,7 @@ a_n=\sum_{j=1}^{d}c_ja_{n-j},\qquad (n\geq d)
 \]</div>
 <p>其中 <span class="arithmatex">\(c_j\)</span> 不全为零，我们的目标是在给出初值 <span class="arithmatex">\(a_0,\dots ,a_{d-1}\)</span> 和递推式中的 <span class="arithmatex">\(c_1,\dots ,c_d\)</span> 后求出 <span class="arithmatex">\(a_k\)</span>。如果 <span class="arithmatex">\(k\gg d\)</span>，我们想要更快速的算法。</p>
 <p>这里 <span class="arithmatex">\(\left(a_j\right)_{j\geq 0}\)</span> 被称为 <span class="arithmatex">\(d\)</span> 阶的常系数齐次线性递推数列。</p>
-<h3 id="fiduccia">Fiduccia 算法</h3>
+<h3 id="fiduccia-算法">Fiduccia 算法<a class="headerlink" href="#fiduccia-算法" title="Permanent link"></a></h3>
 <p>Fiduccia 算法使用多项式取模和快速幂来计算 <span class="arithmatex">\(a_k\)</span>，时间为 <span class="arithmatex">\(O(\mathsf{M}(d)\log k)\)</span>，其中 <span class="arithmatex">\(O(\mathsf{M}(d))\)</span> 表示两个次数为 <span class="arithmatex">\(O(d)\)</span> 的多项式相乘的时间。</p>
 <p><strong>算法</strong>：构造多项式 <span class="arithmatex">\(\Gamma(x):=x^d-\sum_{j=0}^{d-1}c_{d-j}x^j\)</span> 和 <span class="arithmatex">\(A(x):=\sum_{j=0}^{d-1}a_jx^j\)</span>，那么</p>
 <div class="arithmatex">\[
@@ -1288,7 +1288,7 @@ a_{d-1}
 \end{bmatrix}
 \]</div>
 <p>可知 <span class="arithmatex">\(\left(\left(C_\Gamma\right)^{k}\right)^{\intercal}\)</span> 的第一行为 <span class="arithmatex">\(B_{x^k\bmod{\Gamma}}\)</span>，根据矩阵乘法的定义得证。</p>
-<h3 id="_2">表示为有理函数</h3>
+<h3 id="表示为有理函数">表示为有理函数<a class="headerlink" href="#表示为有理函数" title="Permanent link"></a></h3>
 <p>对于上述数列 <span class="arithmatex">\(\left(a_j\right)_{j\geq 0}\)</span> 一定存在有理函数</p>
 <div class="arithmatex">\[
 \frac{P(x)}{Q(x)}=\sum_{j\geq 0}a_jx^j
@@ -1308,8 +1308,8 @@ p_0q_0^{-1},&amp;\text{ if }N=0, \\
 P(x)=\left(\left(\sum_{j\geq 0}a_jx^j\right)\cdot x^d\Gamma\left(x^{-1}\right)\right)\bmod{x^d}
 \]</div>
 <p>那么根据 <span class="arithmatex">\(\tilde{q}_N\)</span> 的定义，必然有 <span class="arithmatex">\(\dfrac{P(x)}{Q(x)}=\sum_{j\geq 0}a_jx^j\)</span>。</p>
-<h3 id="bostanmori">Bostan–Mori 算法</h3>
-<h4 id="_3">计算单项</h4>
+<h3 id="bostanmori-算法">Bostan–Mori 算法<a class="headerlink" href="#bostanmori-算法" title="Permanent link"></a></h3>
+<h4 id="计算单项">计算单项<a class="headerlink" href="#计算单项" title="Permanent link"></a></h4>
 <p>我们的目标仍然是给出上述多项式 <span class="arithmatex">\(P(x),Q(x)\)</span>，求算 <span class="arithmatex">\(\left\lbrack x^k\right\rbrack\dfrac{P(x)}{Q(x)}\)</span>。</p>
 <p>Bostan–Mori 算法基于 Graeffe 迭代，对于上述多项式 <span class="arithmatex">\(P(x),Q(x)\)</span> 有</p>
 <div class="arithmatex">\[
@@ -1320,7 +1320,7 @@ P(x)=\left(\left(\sum_{j\geq 0}a_jx^j\right)\cdot x^d\Gamma\left(x^{-1}\right)\r
 \left\lbrack x^k\right\rbrack\dfrac{P(x)}{Q(x)}=\left\lbrack x^{\left\lfloor k/2\right\rfloor}\right\rbrack \frac{U_{k\bmod{2}}(x)}{V(x)}
 \]</div>
 <p>我们付出两次多项式乘法的代价使得问题至少减少为原先的一半，而当 <span class="arithmatex">\(k=0\)</span> 时显然有 <span class="arithmatex">\(\left\lbrack x^0\right\rbrack \dfrac{P(x)}{Q(x)}=\dfrac{P(0)}{Q(0)}\)</span>，时间复杂度同上。</p>
-<h4 id="_4">计算连续若干项</h4>
+<h4 id="计算连续若干项">计算连续若干项<a class="headerlink" href="#计算连续若干项" title="Permanent link"></a></h4>
 <p>目标是给出上述多项式 <span class="arithmatex">\(P(x),Q(x)\)</span>，求算 <span class="arithmatex">\(\left\lbrack x^{\left\lbrack L,R\right)}\right\rbrack\dfrac{P(x)}{Q(x)}\)</span>。下面的计算中我们只需考虑对答案「<strong>有影响</strong>」的系数，这是 Bostan–Mori 算法的关键。</p>
 <p>我们不妨假设 <span class="arithmatex">\(\deg{P}&lt;\deg{Q}\)</span>，否则我们也可以通过一次带余除法使问题回到这种情况。</p>
 <p>我们先考虑更简单的问题：</p>
@@ -1376,7 +1376,7 @@ P(x)=\left(\left(\sum_{j\geq 0}a_jx^j\right)\cdot x^d\Gamma\left(x^{-1}\right)\r
 \end{array}
 \]</div>
 <p>但是只有这个算法还不够，我们需要重新找到一个有理函数并求算更多系数。</p>
-<h4 id="_5">找到新的有理函数表示</h4>
+<h4 id="找到新的有理函数表示">找到新的有理函数表示<a class="headerlink" href="#找到新的有理函数表示" title="Permanent link"></a></h4>
 <p>我们知道 <span class="arithmatex">\(Q(x)\)</span> 本身和 <span class="arithmatex">\(Q(x)^{-1}\)</span> 的一部分连续的系数比如 <span class="arithmatex">\(\left\lbrack x^{\left\lbrack L,L+\deg Q\right)}\right\rbrack Q(x)^{-1}\)</span> 和 <span class="arithmatex">\(L\geq 0\)</span>，我们希望求出 <span class="arithmatex">\(\left\lbrack x^{\left\lbrack L+\deg Q,L+2\deg Q\right)}\right\rbrack Q(x)^{-1}\)</span>，这等价于我们要求某个 <span class="arithmatex">\(P(x)\)</span> 且 <span class="arithmatex">\(\deg P&lt; \deg Q\)</span> 使得 <span class="arithmatex">\(\dfrac{P(x)}{Q(x)}\)</span> 的前 <span class="arithmatex">\(\deg Q\)</span> 项与 <span class="arithmatex">\(\left\lbrack x^{\left\lbrack L,L+\deg Q\right)}\right\rbrack Q(x)^{-1}\)</span> 相同。简单来说：递推关系（有理函数的分母）是不变的，我们所做的只是更换初值（有理函数的分子）。</p>
 <p>具体的，考虑</p>
 <div class="arithmatex">\[
@@ -1391,7 +1391,7 @@ P(x)=\left(\left(\sum_{j\geq 0}a_jx^j\right)\cdot x^d\Gamma\left(x^{-1}\right)\r
 \frac{\widetilde{P}(x)}{Q(x)}=\sum_{j\geq 0}\left(\left\lbrack x^{L+j}\right\rbrack \frac{P(x)}{Q(x)}\right)x^j
 \]</div>
 <p>最后我们使用形式幂级数的除法计算出 <span class="arithmatex">\(\left\lbrack x^{\left\lbrack 0,R-L\right)}\right\rbrack\dfrac{\widetilde{P}(x)}{Q(x)}\)</span>，时间为 <span class="arithmatex">\(O(\mathsf{M}(d)\log L+\mathsf{M}(R-L))\)</span>。</p>
-<h2 id="_6">参考文献</h2>
+<h2 id="参考文献">参考文献<a class="headerlink" href="#参考文献" title="Permanent link"></a></h2>
 <ol>
 <li>Alin Bostan, Ryuhei Mori.<a href="https://arxiv.org/abs/2008.08822">A Simple and Fast Algorithm for Computing the <span class="arithmatex">\(N\)</span>-th Term of a Linearly Recurrent Sequence</a>.</li>
 </ol>
@@ -1449,7 +1449,9 @@ P(x)=\left(\left(\sum_{j\geq 0}a_jx^j\right)\cdot x^d\Gamma\left(x^{-1}\right)\r
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

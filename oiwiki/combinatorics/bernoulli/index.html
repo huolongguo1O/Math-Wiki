@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#等幂求和" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#等幂求和" class="md-nav__link">
     <span class="md-ellipsis">
       
         等幂求和
@@ -1101,7 +1101,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#递推公式" class="md-nav__link">
     <span class="md-ellipsis">
       
         递推公式
@@ -1113,7 +1113,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#证明" class="md-nav__link">
     <span class="md-ellipsis">
       
         证明
@@ -1125,7 +1125,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#利用归纳法证明" class="md-nav__link">
     <span class="md-ellipsis">
       
         利用归纳法证明
@@ -1136,7 +1136,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#利用指数生成函数证明" class="md-nav__link">
     <span class="md-ellipsis">
       
         利用指数生成函数证明
@@ -1177,7 +1177,7 @@
 
 <p>伯努利数 <span class="arithmatex">\(B_n\)</span> 是一个与数论有密切关联的有理数序列。前几项被发现的伯努利数分别为：</p>
 <p><span class="arithmatex">\(B_0=1,B_1=-\frac{1}{2},B_2=\frac{1}{6},B_3=0,B_4=-\frac{1}{30},\dots\)</span></p>
-<h2 id="_1">等幂求和</h2>
+<h2 id="等幂求和">等幂求和<a class="headerlink" href="#等幂求和" title="Permanent link"></a></h2>
 <p>伯努利数是由雅各布·伯努利的名字命名的，他在研究 <span class="arithmatex">\(m\)</span> 次幂和的公式时发现了奇妙的关系。我们记</p>
 <div class="arithmatex">\[
 S_{m}(n)=\sum_{k=0}^{n-1}k^m=0^m+1^m+\dots+(n-1)^m
@@ -1194,7 +1194,7 @@ S_4(n)&amp;=\frac{1}{5}n^5-\frac{1}{2}n^4+\frac{1}{3}n^3-\frac{1}{30}n
 \]</div>
 <p>可以发现，在 <span class="arithmatex">\(S_m(n)\)</span> 中 <span class="arithmatex">\(n^{m+1}\)</span> 的系数总是 <span class="arithmatex">\(\frac{1}{m+1}\)</span>，<span class="arithmatex">\(n^m\)</span> 的系数总是 <span class="arithmatex">\(-\frac{1}{2}\)</span>，<span class="arithmatex">\(n^{m-1}\)</span> 的系数总是 <span class="arithmatex">\(\frac{m}{12}\)</span>，<span class="arithmatex">\(n^{m-3}\)</span> 的系数是 <span class="arithmatex">\(-\frac{m(m-1)(m-2)}{720}\)</span>，<span class="arithmatex">\(n^{m-4}\)</span> 的系数总是零等。</p>
 <p>而 <span class="arithmatex">\(n^{m-k}\)</span> 的系数总是某个常数乘以 <span class="arithmatex">\(m^{\underline{k}}\)</span>，<span class="arithmatex">\(m^{\underline{k}}\)</span> 表示下降阶乘幂，即 <span class="arithmatex">\(\frac{m!}{(m-k)!}\)</span>。</p>
-<h2 id="_2">递推公式</h2>
+<h2 id="递推公式">递推公式<a class="headerlink" href="#递推公式" title="Permanent link"></a></h2>
 <div class="arithmatex">\[
 \begin{aligned}
 S_m{(n)}&amp;=\frac{1}{m+1}(B_0n^{m+1}+\binom{m+1}{1}B_1 n^m+\dots+\binom{m+1}{m}B_m n) \\
@@ -1241,8 +1241,8 @@ B_0&amp;=1
 </tr>
 </tbody>
 </table>
-<h3 id="_3">证明</h3>
-<h4 id="_4">利用归纳法证明</h4>
+<h3 id="证明">证明<a class="headerlink" href="#证明" title="Permanent link"></a></h3>
+<h4 id="利用归纳法证明">利用归纳法证明<a class="headerlink" href="#利用归纳法证明" title="Permanent link"></a></h4>
 <p>这个证明方法来自 Concrete Mathematics 6.5 BERNOULLI NUMBER。</p>
 <p>运用二项式系数的恒等变换和归纳法进行证明：</p>
 <div class="arithmatex">\[
@@ -1318,7 +1318,7 @@ n^{m+1}&amp;=\sum_{k=0}^{m}\frac{n^{k+1}}{k+1}\binom{m+1}{k}[m - k = 0]+(m+1)\De
 \end{aligned}
 \]</div>
 <p>于是 <span class="arithmatex">\(\Delta=0\)</span>，且有 <span class="arithmatex">\(S_m(n)=\hat{S}_m(n)\)</span>。</p>
-<h4 id="_5">利用指数生成函数证明</h4>
+<h4 id="利用指数生成函数证明">利用指数生成函数证明<a class="headerlink" href="#利用指数生成函数证明" title="Permanent link"></a></h4>
 <p>对递推式 <span class="arithmatex">\(\sum_{j=0}^{m}\binom{m+1}{j}B_j=[m=0]\)</span></p>
 <p>两边都加上 <span class="arithmatex">\(B_{m + 1}\)</span>，即得到：</p>
 <div class="arithmatex">\[
@@ -1368,42 +1368,75 @@ S \times m(n)&amp;=m![z^m]F_n(z)\\
 \end{aligned}
 \]</div>
 <p>故得证。</p>
-<p>??? note "参考实现"
-    ```cpp
-    using ll = long long;
-    constexpr int MAXN = 10000;
-    constexpr int mod = 1e9 + 7;
-    ll B[MAXN];        // 伯努利数
-    ll C[MAXN][MAXN];  // 组合数
-    ll inv[MAXN];      // 逆元（计算伯努利数）</p>
-<pre><code>void init() {
-  // 预处理组合数
-  for (int i = 0; i &lt; MAXN; i++) {
-    C[i][0] = C[i][i] = 1;
-    for (int k = 1; k &lt; i; k++) {
-      C[i][k] = (C[i - 1][k] % mod + C[i - 1][k - 1] % mod) % mod;
-    }
-  }
-  // 预处理逆元
-  inv[1] = 1;
-  for (int i = 2; i &lt; MAXN; i++) {
-    inv[i] = (mod - mod / i) * inv[mod % i] % mod;
-  }
-  // 预处理伯努利数
-  B[0] = 1;
-  for (int i = 1; i &lt; MAXN; i++) {
-    ll ans = 0;
-    if (i == MAXN - 1) break;
-    for (int k = 0; k &lt; i; k++) {
-      ans += C[i + 1][k] * B[k];
-      ans %= mod;
-    }
-    ans = (ans * (-inv[i + 1]) % mod + mod) % mod;
-    B[i] = ans;
-  }
-}
-```
-</code></pre>
+<details class="note">
+<summary>参考实现</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">ll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">;</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAXN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10000</span><span class="p">;</span>
+<span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1e9</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
+<span class="n">ll</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span><span class="w">        </span><span class="c1">// 伯努利数</span>
+<span class="n">ll</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">MAXN</span><span class="p">][</span><span class="n">MAXN</span><span class="p">];</span><span class="w">  </span><span class="c1">// 组合数</span>
+<span class="n">ll</span><span class="w"> </span><span class="n">inv</span><span class="p">[</span><span class="n">MAXN</span><span class="p">];</span><span class="w">      </span><span class="c1">// 逆元（计算伯努利数）</span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// 预处理组合数</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MAXN</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">k</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">mod</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">mod</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// 预处理逆元</span>
+<span class="w">  </span><span class="n">inv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MAXN</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">inv</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">mod</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">inv</span><span class="p">[</span><span class="n">mod</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">mod</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// 预处理伯努利数</span>
+<span class="w">  </span><span class="n">B</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">MAXN</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">ll</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">MAXN</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">k</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">ans</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">k</span><span class="p">]</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">];</span>
+<span class="w">      </span><span class="n">ans</span><span class="w"> </span><span class="o">%=</span><span class="w"> </span><span class="n">mod</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ans</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="n">inv</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">mod</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">mod</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">mod</span><span class="p">;</span>
+<span class="w">    </span><span class="n">B</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
 
 
 
@@ -1458,7 +1491,9 @@ S \times m(n)&amp;=m![z^m]F_n(z)\\
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#定义" class="md-skip">
           Skip to content
         </a>
       
@@ -1092,7 +1092,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#定义" class="md-nav__link">
     <span class="md-ellipsis">
       
         定义
@@ -1103,7 +1103,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#性质" class="md-nav__link">
     <span class="md-ellipsis">
       
         性质
@@ -1114,7 +1114,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#记号" class="md-nav__link">
     <span class="md-ellipsis">
       
         记号
@@ -1125,7 +1125,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#解释" class="md-nav__link">
     <span class="md-ellipsis">
       
         解释
@@ -1136,7 +1136,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#复杂度分析" class="md-nav__link">
     <span class="md-ellipsis">
       
         复杂度分析
@@ -1147,7 +1147,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#过程" class="md-nav__link">
     <span class="md-ellipsis">
       
         过程
@@ -1158,7 +1158,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#例题" class="md-nav__link">
     <span class="md-ellipsis">
       
         例题
@@ -1187,13 +1187,13 @@
 
   <h1>Min 25</h1>
 
-<h2 id="_1">定义</h2>
+<h2 id="定义">定义<a class="headerlink" href="#定义" title="Permanent link"></a></h2>
 <p>从此种筛法的思想方法来说，其又被称为「Extended Eratosthenes Sieve」。</p>
 <p>由于其由 <a href="http://min-25.hatenablog.com/">Min_25</a> 发明并最早开始使用，故称「Min_25 筛」。</p>
-<h2 id="_2">性质</h2>
+<h2 id="性质">性质<a class="headerlink" href="#性质" title="Permanent link"></a></h2>
 <p>其可以在 <span class="arithmatex">\(O\left(\frac{n^{\frac{3}{4}}}{\log{n}}\right)\)</span> 或 <span class="arithmatex">\(\Theta\left(n^{1 - \epsilon}\right)\)</span> 的时间复杂度下解决一类 <strong>积性函数</strong> 的前缀和问题。</p>
 <p>要求：<span class="arithmatex">\(f(p)\)</span> 是一个关于 <span class="arithmatex">\(p\)</span> 可以快速求值的完全积性函数之和（例如多项式）；<span class="arithmatex">\(f(p^{c})\)</span> 可以快速求值。</p>
-<h2 id="_3">记号</h2>
+<h2 id="记号">记号<a class="headerlink" href="#记号" title="Permanent link"></a></h2>
 <ul>
 <li><strong>如无特别说明，本节中所有记为 <span class="arithmatex">\(p\)</span> 的变量的取值集合均为全体质数。</strong></li>
 <li><span class="arithmatex">\(x / y := \left\lfloor\frac{x}{y}\right\rfloor\)</span></li>
@@ -1203,7 +1203,7 @@
 <li><span class="arithmatex">\(F_{\mathrm{prime}}(n) := \sum_{2 \le p \le n} f(p)\)</span></li>
 <li><span class="arithmatex">\(F_{k}(n) := \sum_{i = 2}^{n} [p_{k} \le \operatorname{lpf}(i)] f(i)\)</span></li>
 </ul>
-<h2 id="_4">解释</h2>
+<h2 id="解释">解释<a class="headerlink" href="#解释" title="Permanent link"></a></h2>
 <p>观察 <span class="arithmatex">\(F_{k}(n)\)</span> 的定义，可以发现答案即为 <span class="arithmatex">\(F_{1}(n) + f(1) = F_{1}(n) + 1\)</span>。</p>
 <p>考虑如何求出 <span class="arithmatex">\(F_{k}(n)\)</span>。通过枚举每个 <span class="arithmatex">\(i\)</span> 的最小质因子及其次数可以得到递推式：</p>
 <div class="arithmatex">\[
@@ -1227,8 +1227,10 @@
 一般情况下，<span class="arithmatex">\(f(p)\)</span> 是一个关于 <span class="arithmatex">\(p\)</span> 的低次多项式，可以表示为 <span class="arithmatex">\(f(p) = \sum a_{i} p^{c_{i}}\)</span>。<br />
 那么对于每个 <span class="arithmatex">\(p^{c_{i}}\)</span>，其对 <span class="arithmatex">\(F_{\mathrm{prime}}(n)\)</span> 的贡献即为 <span class="arithmatex">\(a_{i} \sum_{2 \le p \le n} p^{c_{i}}\)</span>。<br />
 分开考虑每个 <span class="arithmatex">\(p^{c_{i}}\)</span> 的贡献，问题就转变为了：给定 <span class="arithmatex">\(n, s, g(p) = p^{s}\)</span>，对所有的 <span class="arithmatex">\(m = n / i\)</span>，求 <span class="arithmatex">\(\sum_{p \le m} g(p)\)</span>。</p>
-<p>???+ tip "注意"
-    <span class="arithmatex">\(g(p) = p^{s}\)</span> 是完全积性函数！</p>
+<details class="tip" open="open">
+<summary>注意</summary>
+<p><span class="arithmatex">\(g(p) = p^{s}\)</span> 是完全积性函数！</p>
+</details>
 <p>于是设 <span class="arithmatex">\(G_{k}(n) := \sum_{i = 2}^{n} \left[p_{k} &lt; \operatorname{lpf}(i) \lor \operatorname{isprime}(i)\right] g(i)\)</span>，即埃筛第 <span class="arithmatex">\(k\)</span> 轮筛完后剩下的数的 <span class="arithmatex">\(g\)</span> 值之和。<br />
 对于一个合数 <span class="arithmatex">\(x \le n\)</span>，必定有 <span class="arithmatex">\(\operatorname{lpf}(x) \le \sqrt{x} \le \sqrt{n}\)</span>。设 <span class="arithmatex">\(p_{\ell(n)}\)</span> 为不大于 <span class="arithmatex">\(\sqrt{n}\)</span> 的最大质数，则 <span class="arithmatex">\(\sum_{2\le p\le n}g(p) = G_{\ell(n)}(n)\)</span>，即在埃筛进行 <span class="arithmatex">\(\ell\)</span> 轮之后剩下的均为质数。
 考虑 <span class="arithmatex">\(G\)</span> 的边界值，显然为 <span class="arithmatex">\(G_{0}(n) = \sum_{i = 2}^{n} g(i)\)</span>。（还记得吗？特别约定了 <span class="arithmatex">\(p_{0} = 1\)</span>）<br />
@@ -1242,7 +1244,7 @@
 <div class="arithmatex">\[
 G_{k}(n) = G_{k - 1}(n) - \left[p_{k}^{2} \le n\right] g(p_{k}) (G_{k - 1}(n / p_{k}) - G_{k - 1}(p_{k - 1}))
 \]</div>
-<h2 id="_5">复杂度分析</h2>
+<h2 id="复杂度分析">复杂度分析<a class="headerlink" href="#复杂度分析" title="Permanent link"></a></h2>
 <p>对于 <span class="arithmatex">\(F_{k}(n)\)</span> 的计算，其第一种方法的时间复杂度被证明为 <span class="arithmatex">\(O\left(n^{1 - \epsilon}\right)\)</span>（见 zzt 集训队论文 2.3）；<br />
 对于第二种方法，其本质即为洲阁筛的第二部分，在洲阁论文中也有提及（6.5.4），其时间复杂度被证明为 <span class="arithmatex">\(O\left(\frac{n^{\frac{3}{4}}}{\log{n}}\right)\)</span>。</p>
 <p>对于 <span class="arithmatex">\(F_{\mathrm{prime}}(n)\)</span> 的计算，事实上，其实现与洲阁筛第一部分是相同的。<br />
@@ -1260,7 +1262,7 @@ G_{k}(n) = G_{k - 1}(n) - \left[p_{k}^{2} \le n\right] g(p_{k}) (G_{k - 1}(n / p
 <p>首先，通过一次数论分块可以得到所有的有效值，用一个大小为 <span class="arithmatex">\(O(\sqrt{n})\)</span> 的数组 <span class="arithmatex">\(\text{lis}\)</span> 记录。对于有效值 <span class="arithmatex">\(v\)</span>，记 <span class="arithmatex">\(\text{id}(v)\)</span> 为 <span class="arithmatex">\(v\)</span> 在 <span class="arithmatex">\(\text{lis}\)</span> 中的下标，易得：对于所有有效值 <span class="arithmatex">\(v\)</span>，<span class="arithmatex">\(\text{id}(v) \le \sqrt{n}\)</span>。</p>
 <p>然后分开考虑小于等于 <span class="arithmatex">\(\sqrt{n}\)</span> 的有效值和大于 <span class="arithmatex">\(\sqrt{n}\)</span> 的有效值：对于小于等于 <span class="arithmatex">\(\sqrt{n}\)</span> 的有效值 <span class="arithmatex">\(v\)</span>，用一个数组 <span class="arithmatex">\(\text{le}\)</span> 记录其 <span class="arithmatex">\(\text{id}(v)\)</span>，即 <span class="arithmatex">\(\text{le}_v = \text{id}(v)\)</span>；对于大于 <span class="arithmatex">\(\sqrt{n}\)</span> 的有效值 <span class="arithmatex">\(v\)</span>，用一个数组 <span class="arithmatex">\(\text{ge}\)</span> 记录 <span class="arithmatex">\(\text{id}(v)\)</span>，由于 <span class="arithmatex">\(v\)</span> 过大所以借助 <span class="arithmatex">\(v' = n / v &lt; \sqrt{n}\)</span> 记录 <span class="arithmatex">\(\text{id}(v)\)</span>，即 <span class="arithmatex">\(\text{ge}_{v'} = \text{id}(v)\)</span>。</p>
 <p>这样，就可以使用两个大小为 <span class="arithmatex">\(O(\sqrt{n})\)</span> 的数组记录所有有效值的 <span class="arithmatex">\(\text{id}\)</span> 并 <span class="arithmatex">\(O(1)\)</span> 查询。在计算 <span class="arithmatex">\(F_{k}\)</span> 或 <span class="arithmatex">\(F_{\mathrm{prime}}\)</span> 时，使用有效值的 <span class="arithmatex">\(\text{id}\)</span> 代替有效值作为下标，即可将空间复杂度优化至 <span class="arithmatex">\(O(\sqrt{n})\)</span>。</p>
-<h2 id="_6">过程</h2>
+<h2 id="过程">过程<a class="headerlink" href="#过程" title="Permanent link"></a></h2>
 <p>对于 <span class="arithmatex">\(F_{k}(n)\)</span> 的计算，我们实现时一般选择实现难度较低的第一种方法，其在数据规模较小时往往比第二种方法的表现要好；</p>
 <p>对于 <span class="arithmatex">\(F_{\mathrm{prime}}(n)\)</span> 的计算，直接按递推式实现即可。</p>
 <p>对于 <span class="arithmatex">\(p_{k}^{2} \le n\)</span>，可以用线性筛预处理出 <span class="arithmatex">\(s_{k} := F_{\mathrm{prime}}(p_{k})\)</span> 来替代 <span class="arithmatex">\(F_{k}\)</span> 递推式中的 <span class="arithmatex">\(F_{\mathrm{prime}}(p_{k - 1})\)</span>。<br />
@@ -1277,30 +1279,37 @@ G_{k}(n) = G_{k - 1}(n) - \left[p_{k}^{2} \le n\right] g(p_{k}) (G_{k - 1}(n / p
 <li>对 <span class="arithmatex">\(f(p)\)</span> 多项式表示中的每一项筛出对应的 <span class="arithmatex">\(G\)</span>，合并得到 <span class="arithmatex">\(F_{\mathrm{prime}}\)</span> 的所有 <span class="arithmatex">\(O(\sqrt{n})\)</span> 个有用点值；</li>
 <li>按照 <span class="arithmatex">\(F_{k}\)</span> 的递推式实现递归，求出 <span class="arithmatex">\(F_{1}(n)\)</span>。</li>
 </ol>
-<h2 id="_7">例题</h2>
-<p>???+ example "<a href="https://www.luogu.com.cn/problem/P4213">Luogu P4213【模板】杜教筛</a>"
-    求 <span class="arithmatex">\(\displaystyle \sum_{i = 1}^{n} \varphi(i)\)</span> 和 <span class="arithmatex">\(\displaystyle \sum_{i = 1}^{n} \mu(i)\)</span>。</p>
-<p>??? note "解答"
-    对于求 <span class="arithmatex">\(\varphi(i)\)</span> 的前缀和，首先易知 <span class="arithmatex">\(f(p) = p - 1\)</span>。对于 <span class="arithmatex">\(f(p)\)</span> 的一次项 <span class="arithmatex">\((p)\)</span>，有 <span class="arithmatex">\(g(p) = p, G_{0}(n) = \sum_{i = 2}^{n} g(i) = \frac{(n + 2) (n - 1)}{2}\)</span>；对于 <span class="arithmatex">\(f(p)\)</span> 的常数项 <span class="arithmatex">\((-1)\)</span>，有 <span class="arithmatex">\(g(p) = -1, G_{0}(n) = \sum_{i = 2}^{n} g(i) = -n + 1\)</span>。筛两次加起来即可得到 <span class="arithmatex">\(F_{\mathrm{prime}}\)</span> 的所有 <span class="arithmatex">\(O(\sqrt{n})\)</span> 个所需点值。</p>
-<pre><code>对于求 $\mu(i)$ 的前缀和，易知 $f(p) = -1$。则 $g(p) = -1, G_{0}(n) = \sum_{i = 2}^{n} g(i) = -n + 1$。直接筛即可得到 $F_{\mathrm{prime}}$ 的所有 $O(\sqrt{n})$ 个所需点值。
-</code></pre>
-<p>???+ example "<a href="https://loj.ac/p/6053">LOJ 6053 简单的函数</a>"
-    给定 <span class="arithmatex">\(f(n)\)</span>：</p>
-<pre><code>$$
+<h2 id="例题">例题<a class="headerlink" href="#例题" title="Permanent link"></a></h2>
+<details class="example" open="open">
+<summary><a href="https://www.luogu.com.cn/problem/P4213">Luogu P4213【模板】杜教筛</a></summary>
+<p>求 <span class="arithmatex">\(\displaystyle \sum_{i = 1}^{n} \varphi(i)\)</span> 和 <span class="arithmatex">\(\displaystyle \sum_{i = 1}^{n} \mu(i)\)</span>。</p>
+</details>
+<details class="note">
+<summary>解答</summary>
+<p>对于求 <span class="arithmatex">\(\varphi(i)\)</span> 的前缀和，首先易知 <span class="arithmatex">\(f(p) = p - 1\)</span>。对于 <span class="arithmatex">\(f(p)\)</span> 的一次项 <span class="arithmatex">\((p)\)</span>，有 <span class="arithmatex">\(g(p) = p, G_{0}(n) = \sum_{i = 2}^{n} g(i) = \frac{(n + 2) (n - 1)}{2}\)</span>；对于 <span class="arithmatex">\(f(p)\)</span> 的常数项 <span class="arithmatex">\((-1)\)</span>，有 <span class="arithmatex">\(g(p) = -1, G_{0}(n) = \sum_{i = 2}^{n} g(i) = -n + 1\)</span>。筛两次加起来即可得到 <span class="arithmatex">\(F_{\mathrm{prime}}\)</span> 的所有 <span class="arithmatex">\(O(\sqrt{n})\)</span> 个所需点值。</p>
+<p>对于求 <span class="arithmatex">\(\mu(i)\)</span> 的前缀和，易知 <span class="arithmatex">\(f(p) = -1\)</span>。则 <span class="arithmatex">\(g(p) = -1, G_{0}(n) = \sum_{i = 2}^{n} g(i) = -n + 1\)</span>。直接筛即可得到 <span class="arithmatex">\(F_{\mathrm{prime}}\)</span> 的所有 <span class="arithmatex">\(O(\sqrt{n})\)</span> 个所需点值。</p>
+</details>
+<details class="example" open="open">
+<summary><a href="https://loj.ac/p/6053">LOJ 6053 简单的函数</a></summary>
+<p>给定 <span class="arithmatex">\(f(n)\)</span>：</p>
+<div class="arithmatex">\[
 f(n) = \begin{cases}
     1 &amp; n = 1 \\
     p \operatorname{xor} c &amp; n = p^{c} \\
     f(a)f(b) &amp; n = ab \land a \perp b
 \end{cases}
-$$
-
-求 $\displaystyle \sum_{i = 1}^{n} f(i)$。
-</code></pre>
-<p>??? note "解答"
-    易知 <span class="arithmatex">\(f(p) = p - 1 + 2[p = 2]\)</span>。则按照筛 <span class="arithmatex">\(\varphi\)</span> 的方法筛，对 <span class="arithmatex">\(2\)</span> 讨论一下即可。</p>
-<p>??? note "参考代码"
-    <code>cpp
-    --8&lt;-- "docs/math/code/min-25/min-25_1.cpp"</code></p>
+\]</div>
+<p>求 <span class="arithmatex">\(\displaystyle \sum_{i = 1}^{n} f(i)\)</span>。</p>
+</details>
+<details class="note">
+<summary>解答</summary>
+<p>易知 <span class="arithmatex">\(f(p) = p - 1 + 2[p = 2]\)</span>。则按照筛 <span class="arithmatex">\(\varphi\)</span> 的方法筛，对 <span class="arithmatex">\(2\)</span> 讨论一下即可。</p>
+</details>
+<details class="note">
+<summary>参考代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/min-25/min-25_1.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
 
 
 
@@ -1358,7 +1367,9 @@ $$
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

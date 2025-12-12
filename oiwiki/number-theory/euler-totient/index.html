@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#定义" class="md-skip">
           Skip to content
         </a>
       
@@ -1092,7 +1092,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#定义" class="md-nav__link">
     <span class="md-ellipsis">
       
         定义
@@ -1103,7 +1103,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#性质" class="md-nav__link">
     <span class="md-ellipsis">
       
         性质
@@ -1114,7 +1114,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#实现" class="md-nav__link">
     <span class="md-ellipsis">
       
         实现
@@ -1125,7 +1125,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#应用" class="md-nav__link">
     <span class="md-ellipsis">
       
         应用
@@ -1136,7 +1136,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#欧拉定理" class="md-nav__link">
     <span class="md-ellipsis">
       
         欧拉定理
@@ -1148,7 +1148,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#扩展欧拉定理" class="md-nav__link">
     <span class="md-ellipsis">
       
         扩展欧拉定理
@@ -1164,7 +1164,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#习题" class="md-nav__link">
     <span class="md-ellipsis">
       
         习题
@@ -1175,7 +1175,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#参考资料与注释" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料与注释
@@ -1204,11 +1204,11 @@
 
   <h1>Euler totient</h1>
 
-<h2 id="_1">定义</h2>
+<h2 id="定义">定义<a class="headerlink" href="#定义" title="Permanent link"></a></h2>
 <p>欧拉函数（Euler's totient function），即 <span class="arithmatex">\(\varphi(n)\)</span>，表示的是小于等于 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(n\)</span> 互质的数的个数。</p>
 <p>比如说 <span class="arithmatex">\(\varphi(1) = 1\)</span>。</p>
 <p>当 <span class="arithmatex">\(n\)</span> 是质数的时候，显然有 <span class="arithmatex">\(\varphi(n) = n - 1\)</span>。</p>
-<h2 id="_2">性质</h2>
+<h2 id="性质">性质<a class="headerlink" href="#性质" title="Permanent link"></a></h2>
 <ul>
 <li>
 <p>欧拉函数是 <a href="../basic/#积性函数">积性函数</a>。</p>
@@ -1218,14 +1218,13 @@
 </li>
 <li>
 <p><span class="arithmatex">\(n = \sum_{d \mid n}{\varphi(d)}\)</span>。</p>
-<p>???+ note "证明"
-    利用 <a href="../mobius/">莫比乌斯反演</a> 相关知识可以得出。</p>
-<pre><code>也可以这样考虑：如果 $\gcd(k, n) = d$，那么 $\gcd(\dfrac{k}{d},\dfrac{n}{d}) = 1, ( k &lt; n )$。
-
-如果我们设 $f(x)$ 表示 $\gcd(k, n) = x$ 的数的个数，那么 $n = \sum_{i = 1}^n{f(i)}$。
-
-根据上面的证明，我们发现，$f(x) = \varphi(\dfrac{n}{x})$，从而 $n = \sum_{d \mid n}\varphi(\dfrac{n}{d})$。注意到约数 $d$ 和 $\dfrac{n}{d}$ 具有对称性，所以上式化为 $n = \sum_{d \mid n}\varphi(d)$。
-</code></pre>
+<details class="note" open="open">
+<summary>证明</summary>
+<p>利用 <a href="../mobius/">莫比乌斯反演</a> 相关知识可以得出。</p>
+<p>也可以这样考虑：如果 <span class="arithmatex">\(\gcd(k, n) = d\)</span>，那么 <span class="arithmatex">\(\gcd(\dfrac{k}{d},\dfrac{n}{d}) = 1, ( k &lt; n )\)</span>。</p>
+<p>如果我们设 <span class="arithmatex">\(f(x)\)</span> 表示 <span class="arithmatex">\(\gcd(k, n) = x\)</span> 的数的个数，那么 <span class="arithmatex">\(n = \sum_{i = 1}^n{f(i)}\)</span>。</p>
+<p>根据上面的证明，我们发现，<span class="arithmatex">\(f(x) = \varphi(\dfrac{n}{x})\)</span>，从而 <span class="arithmatex">\(n = \sum_{d \mid n}\varphi(\dfrac{n}{d})\)</span>。注意到约数 <span class="arithmatex">\(d\)</span> 和 <span class="arithmatex">\(\dfrac{n}{d}\)</span> 具有对称性，所以上式化为 <span class="arithmatex">\(n = \sum_{d \mid n}\varphi(d)\)</span>。</p>
+</details>
 </li>
 <li>
 <p>若 <span class="arithmatex">\(n = p^k\)</span>，其中 <span class="arithmatex">\(p\)</span> 是质数，那么 <span class="arithmatex">\(\varphi(n) = p^k - p^{k - 1}\)</span>。
@@ -1233,13 +1232,16 @@
 </li>
 <li>
 <p>由唯一分解定理，设 <span class="arithmatex">\(n = \prod_{i=1}^{s}p_i^{k_i}\)</span>，其中 <span class="arithmatex">\(p_i\)</span> 是质数，有 <span class="arithmatex">\(\varphi(n) = n \times \prod_{i = 1}^s{\dfrac{p_i - 1}{p_i}}\)</span>。</p>
-<p>???+ note "证明"
-    -   引理：设 <span class="arithmatex">\(p\)</span> 为任意质数，那么 <span class="arithmatex">\(\varphi(p^k)=p^{k-1}\times(p-1)\)</span>。</p>
-<pre><code>    证明：显然对于从 1 到 $p^k$ 的所有数中，除了 $p^{k-1}$ 个 $p$ 的倍数以外其它数都与 $p^k$ 互素，故 $\varphi(p^k)=p^k-p^{k-1}=p^{k-1}\times(p-1)$，证毕。
-
-接下来我们证明 $\varphi(n) = n \times \prod_{i = 1}^s{\dfrac{p_i - 1}{p_i}}$。由唯一分解定理与 $\varphi(x)$ 函数的积性
-
-$$
+<details class="note" open="open">
+<summary>证明</summary>
+<ul>
+<li>
+<p>引理：设 <span class="arithmatex">\(p\)</span> 为任意质数，那么 <span class="arithmatex">\(\varphi(p^k)=p^{k-1}\times(p-1)\)</span>。</p>
+<p>证明：显然对于从 1 到 <span class="arithmatex">\(p^k\)</span> 的所有数中，除了 <span class="arithmatex">\(p^{k-1}\)</span> 个 <span class="arithmatex">\(p\)</span> 的倍数以外其它数都与 <span class="arithmatex">\(p^k\)</span> 互素，故 <span class="arithmatex">\(\varphi(p^k)=p^k-p^{k-1}=p^{k-1}\times(p-1)\)</span>，证毕。</p>
+</li>
+</ul>
+<p>接下来我们证明 <span class="arithmatex">\(\varphi(n) = n \times \prod_{i = 1}^s{\dfrac{p_i - 1}{p_i}}\)</span>。由唯一分解定理与 <span class="arithmatex">\(\varphi(x)\)</span> 函数的积性</p>
+<div class="arithmatex">\[
 \begin{aligned}
     \varphi(n) &amp;= \prod_{i=1}^{s} \varphi(p_i^{k_i}) \\
     &amp;= \prod_{i=1}^{s} (p_i-1)\times {p_i}^{k_i-1}\\
@@ -1247,52 +1249,80 @@ $$
     &amp;=n~ \prod_{i=1}^{s} (1- \frac{1}{p_i})
     &amp;\square
 \end{aligned}
-$$
-</code></pre>
+\]</div>
+</details>
 </li>
 <li>
 <p>对任意不全为 <span class="arithmatex">\(0\)</span> 的整数 <span class="arithmatex">\(m,n\)</span>，<span class="arithmatex">\(\varphi(mn)\varphi(\gcd(m,n))=\varphi(m)\varphi(n)\gcd(m,n)\)</span>。</p>
 <p>可由上一条直接计算得出。</p>
 </li>
 </ul>
-<h2 id="_3">实现</h2>
+<h2 id="实现">实现<a class="headerlink" href="#实现" title="Permanent link"></a></h2>
 <p>如果只要求一个数的欧拉函数值，那么直接根据定义质因数分解的同时求就好了。这个过程可以用 <a href="../pollard-rho/">Pollard Rho</a> 算法优化。</p>
-<p>???+ note "参考实现"
-    === "C++"
-        ```cpp
-        #include <cmath></p>
-<pre><code>    int euler_phi(int n) {
-      int ans = n;
-      for (int i = 2; i * i &lt;= n; i++)
-        if (n % i == 0) {
-          ans = ans / i * (i - 1);
-          while (n % i == 0) n /= i;
-        }
-      if (n &gt; 1) ans = ans / n * (n - 1);
-      return ans;
-    }
-    ```
+<details class="note" open="open">
+<summary>参考实现</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
 
-=== "Python"
-    ```python
-    import math
+<span class="kt">int</span><span class="w"> </span><span class="nf">euler_phi</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">      </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">ans</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
 
 
-    def euler_phi(n):
-        ans = n
-        for i in range(2, math.isqrt(n) + 1):
-            if n % i == 0:
-                ans = ans // i * (i - 1)
-                while n % i == 0:
-                    n = n // i
-        if n &gt; 1:
-            ans = ans // n * (n - 1)
-        return ans
-    ```
-</code></pre>
+<span class="k">def</span><span class="w"> </span><span class="nf">euler_phi</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">ans</span> <span class="o">=</span> <span class="n">n</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">isqrt</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">ans</span> <span class="o">=</span> <span class="n">ans</span> <span class="o">//</span> <span class="n">i</span> <span class="o">*</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+            <span class="k">while</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="n">i</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">ans</span> <span class="o">=</span> <span class="n">ans</span> <span class="o">//</span> <span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ans</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
 <p>如果是多个数的欧拉函数值，可以利用后面会提到的线性筛法来求得。</p>
 <p>详见：<a href="../sieve/#筛法求欧拉函数">筛法求欧拉函数</a></p>
-<h2 id="_4">应用</h2>
+<h2 id="应用">应用<a class="headerlink" href="#应用" title="Permanent link"></a></h2>
 <p>欧拉函数常常用于化简一列最大公约数的和。国内有些文章称它为 <strong>欧拉反演</strong><a href="这一说法并未见于学术期刊或国外的论坛中，在使用该说法时应当注意。">^1</a>。</p>
 <p>在结论</p>
 <div class="arithmatex">\[
@@ -1308,25 +1338,25 @@ n=\sum_{d|n}\varphi(d)
 \]</div>
 <p>这里关键的观察是 <span class="arithmatex">\(\sum_{i=1}^n[d|i]=\lfloor\frac{n}{d}\rfloor\)</span>，即在 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(n\)</span> 之间能够被 <span class="arithmatex">\(d\)</span> 整除的 <span class="arithmatex">\(i\)</span> 的个数是 <span class="arithmatex">\(\lfloor\frac{n}{d}\rfloor\)</span>。</p>
 <p>利用这个式子，就可以遍历约数求和了。需要多组查询的时候，可以预处理欧拉函数的前缀和，利用数论分块查询。</p>
-<p>???+ note "<a href="https://www.luogu.com.cn/problem/P2398">GCD SUM</a>"
-    给定 <span class="arithmatex">\(n\le 100000\)</span>，求</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary><a href="https://www.luogu.com.cn/problem/P2398">GCD SUM</a></summary>
+<p>给定 <span class="arithmatex">\(n\le 100000\)</span>，求</p>
+<div class="arithmatex">\[
 \sum_{i=1}^n\sum_{j=1}^n\gcd(i,j).
-$$
-
-??? note "思路"
-    仿照上文的推导，可以得出
-
-    $$
-    \sum_{i=1}^n\sum_{j=1}^n\gcd(i,j) = \sum_{d=1}^n\left\lfloor\frac{n}{d}\right\rfloor^2\varphi(d).
-    $$
-
-    此时需要从 $1$ 遍历到 $n$ 求欧拉函数，用线性筛做就可以 $O(n)$ 得到答案。
-</code></pre>
-<h2 id="_5">欧拉定理</h2>
+\]</div>
+<details class="note">
+<summary>思路</summary>
+<p>仿照上文的推导，可以得出</p>
+<div class="arithmatex">\[
+\sum_{i=1}^n\sum_{j=1}^n\gcd(i,j) = \sum_{d=1}^n\left\lfloor\frac{n}{d}\right\rfloor^2\varphi(d).
+\]</div>
+<p>此时需要从 <span class="arithmatex">\(1\)</span> 遍历到 <span class="arithmatex">\(n\)</span> 求欧拉函数，用线性筛做就可以 <span class="arithmatex">\(O(n)\)</span> 得到答案。</p>
+</details>
+</details>
+<h2 id="欧拉定理">欧拉定理<a class="headerlink" href="#欧拉定理" title="Permanent link"></a></h2>
 <p>与欧拉函数紧密相关的一个定理就是欧拉定理。其描述如下：</p>
 <p>若 <span class="arithmatex">\(\gcd(a, m) = 1\)</span>，则 <span class="arithmatex">\(a^{\varphi(m)} \equiv 1 \pmod{m}\)</span>。</p>
-<h3 id="_6">扩展欧拉定理</h3>
+<h3 id="扩展欧拉定理">扩展欧拉定理<a class="headerlink" href="#扩展欧拉定理" title="Permanent link"></a></h3>
 <p>当然也有扩展欧拉定理，用于处理一般的 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(m\)</span> 的情形。</p>
 <div class="arithmatex">\[
 a^b\equiv
@@ -1338,7 +1368,7 @@ a^{b\bmod\varphi(m)+\varphi(m)},&amp;\gcd(a,\,m)\ne1,\,b\ge\varphi(m)
 \pmod m
 \]</div>
 <p>证明和习题详见 <a href="../fermat/">欧拉定理</a>。</p>
-<h2 id="_7">习题</h2>
+<h2 id="习题">习题<a class="headerlink" href="#习题" title="Permanent link"></a></h2>
 <ul>
 <li><a href="http://www.spoj.com/problems/ETF/">SPOJ ETF. Euler Totient Function</a></li>
 <li><a href="http://uva.onlinejudge.org/index.php?option=onlinejudge&amp;page=show_problem&amp;problem=1120">UVa 10179. Irreducible Basic Fractions</a></li>
@@ -1349,7 +1379,7 @@ a^{b\bmod\varphi(m)+\varphi(m)},&amp;\gcd(a,\,m)\ne1,\,b\ge\varphi(m)
 <li><a href="https://www.luogu.com.cn/problem/P2155">Luogu P2155 [SDOI2008] 沙拉公主的困惑</a></li>
 <li><a href="https://www.luogu.com.cn/problem/P2568">Luogu P2568 GCD</a></li>
 </ul>
-<h2 id="_8">参考资料与注释</h2>
+<h2 id="参考资料与注释">参考资料与注释<a class="headerlink" href="#参考资料与注释" title="Permanent link"></a></h2>
 
 
 
@@ -1407,7 +1437,9 @@ a^{b\bmod\varphi(m)+\varphi(m)},&amp;\gcd(a,\,m)\ne1,\,b\ge\varphi(m)
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

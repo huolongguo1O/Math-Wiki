@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#特征子空间" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#特征子空间" class="md-nav__link">
     <span class="md-ellipsis">
       
         特征子空间
@@ -1101,7 +1101,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#不变子空间" class="md-nav__link">
     <span class="md-ellipsis">
       
         不变子空间
@@ -1112,7 +1112,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#准素分解" class="md-nav__link">
     <span class="md-ellipsis">
       
         准素分解
@@ -1123,7 +1123,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#可对角化矩阵" class="md-nav__link">
     <span class="md-ellipsis">
       
         可对角化矩阵
@@ -1134,7 +1134,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#幂零矩阵" class="md-nav__link">
     <span class="md-ellipsis">
       
         幂零矩阵
@@ -1146,7 +1146,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#循环子空间" class="md-nav__link">
     <span class="md-ellipsis">
       
         循环子空间
@@ -1157,7 +1157,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#jordan" class="md-nav__link">
+  <a href="#幂零-jordan-块" class="md-nav__link">
     <span class="md-ellipsis">
       
         幂零 Jordan 块
@@ -1168,7 +1168,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#一些定理" class="md-nav__link">
     <span class="md-ellipsis">
       
         一些定理
@@ -1202,7 +1202,7 @@
 
   <h1>Diagonalization</h1>
 
-<h2 id="_1">特征子空间</h2>
+<h2 id="特征子空间">特征子空间<a class="headerlink" href="#特征子空间" title="Permanent link"></a></h2>
 <p>矩阵 <span class="arithmatex">\(A\)</span> 的属于 <span class="arithmatex">\(\lambda_0\)</span> 的全部特征向量，再添上零向量，构成一个线性空间，称为矩阵 <span class="arithmatex">\(A\)</span> 的一个特征子空间，记为 <span class="arithmatex">\(E(\lambda_0)\)</span>。它是齐次线性方程组：</p>
 <div class="arithmatex">\[
 (\lambda_0 I-A)X=0
@@ -1217,7 +1217,7 @@ r(\lambda_i I-A)+\operatorname{dim} N(\lambda_i I-A)=n
 \operatorname{dim} E(\lambda_i)=n-r(\lambda_i I-A)
 \]</div>
 <p>也称为 <span class="arithmatex">\(\lambda_i\)</span> 的 <strong>几何重数</strong>。</p>
-<h2 id="_2">不变子空间</h2>
+<h2 id="不变子空间">不变子空间<a class="headerlink" href="#不变子空间" title="Permanent link"></a></h2>
 <p>在研究线性变换 <span class="arithmatex">\(T\)</span> 的时候，常常希望选取空间 <span class="arithmatex">\(V\)</span> 的一个基，使得线性变换 <span class="arithmatex">\(T\)</span> 对于这个基的矩阵具有尽可能简单的形状。</p>
 <p>设 <span class="arithmatex">\(V\)</span> 是数域 <span class="arithmatex">\(F\)</span> 上的线性空间，<span class="arithmatex">\(W\)</span> 是 <span class="arithmatex">\(V\)</span> 的一个子空间，<span class="arithmatex">\(T\)</span> 是 <span class="arithmatex">\(V\)</span> 上的一个线性变换。如果对于 <span class="arithmatex">\(W\)</span> 中任意的向量 <span class="arithmatex">\(x\)</span>，都有 <span class="arithmatex">\(T(x)\)</span> 也在 <span class="arithmatex">\(W\)</span> 中（也称为空间在变换下不变或稳定），称 <span class="arithmatex">\(W\)</span> 是 <span class="arithmatex">\(T\)</span> 的一个不变子空间。</p>
 <p>空间在变换下不变，并不是说坐标在变换下真的「不变」，有可能是进行了一个拉伸等变形，只是变形后还落在空间里。</p>
@@ -1229,7 +1229,7 @@ r(\lambda_i I-A)+\operatorname{dim} N(\lambda_i I-A)=n
 <p>设 <span class="arithmatex">\(W\)</span> 是线性变换 <span class="arithmatex">\(T\)</span> 的一个不变子空间。只考虑 <span class="arithmatex">\(T\)</span> 在不变子空间 <span class="arithmatex">\(W\)</span> 上的作用，就得到子空间 <span class="arithmatex">\(W\)</span> 本身的线性变换，称为 <span class="arithmatex">\(T\)</span> 在子空间 <span class="arithmatex">\(W\)</span> 上的限制，记作 <span class="arithmatex">\({T|}_W\)</span>。</p>
 <p>对于 <span class="arithmatex">\(V\)</span> 中任意的线性变换 <span class="arithmatex">\(T\)</span>，像空间 <span class="arithmatex">\(R(T)\)</span> 与核空间 <span class="arithmatex">\(N(T)\)</span> 是 <span class="arithmatex">\(T\)</span> 的不变子空间。这两种情况的含义是，空间 <span class="arithmatex">\(V\)</span> 在变换前后，完成了自身的压缩（像空间），或者压缩到 <span class="arithmatex">\(0\)</span>（核空间）。</p>
 <p>对于 <span class="arithmatex">\(V\)</span> 中任意的线性变换 <span class="arithmatex">\(T\)</span>，<span class="arithmatex">\(T\)</span> 的特征子空间是 <span class="arithmatex">\(T\)</span> 的不变子空间。</p>
-<h2 id="_3">准素分解</h2>
+<h2 id="准素分解">准素分解<a class="headerlink" href="#准素分解" title="Permanent link"></a></h2>
 <p>根据代数基本定理，最小多项式可以分解为：</p>
 <div class="arithmatex">\[
 m_A(\lambda)={(\lambda-\lambda_1)}^{r_1}\cdots{(\lambda-\lambda_S)}^{r_S}
@@ -1252,7 +1252,7 @@ V=W_1\oplus W_2\oplus\cdots\oplus W_S
 \]</div>
 <p>其中，<span class="arithmatex">\(A_i\)</span> 是 <span class="arithmatex">\(T_i\)</span> 在对应基下的矩阵。</p>
 <p>该定理表明，可以使用不变子空间简化线性变换的矩阵。</p>
-<h2 id="_4">可对角化矩阵</h2>
+<h2 id="可对角化矩阵">可对角化矩阵<a class="headerlink" href="#可对角化矩阵" title="Permanent link"></a></h2>
 <p>对于 <span class="arithmatex">\(n\)</span> 阶方阵 <span class="arithmatex">\(A\)</span>，如果相似于一个对角阵，则称 <span class="arithmatex">\(A\)</span> 为可对角化矩阵，或称单纯矩阵。</p>
 <ul>
 <li>对角阵的和、积、逆，如果存在，仍然是对角阵，其对角线上的元素就是它的特征值。</li>
@@ -1275,7 +1275,7 @@ V=W_1\oplus W_2\oplus\cdots\oplus W_S
 <p>对于重特征值而言，特征向量张成空间。为了描述这个空间，需要从其中选择代表。一般会选择线性无关的代表，代表的个数就是空间的维数。</p>
 <p>选取代表时，常常将它们正交化与单位化。最终得到的就是一套单位正交的代表。</p>
 <p>特征向量不一定正交，不同特征值的特征向量，可能无法正交。因此正交化只能对于重特征值的特征向量进行。但是单位化可以对任意特征向量进行。</p>
-<h2 id="_5">幂零矩阵</h2>
+<h2 id="幂零矩阵">幂零矩阵<a class="headerlink" href="#幂零矩阵" title="Permanent link"></a></h2>
 <p>设 <span class="arithmatex">\(T\)</span> 是空间 <span class="arithmatex">\(V\)</span> 的一个线性变换。如果存在一个正整数 <span class="arithmatex">\(r\)</span>，使得 <span class="arithmatex">\(T^r\)</span> 为零变换，称 <span class="arithmatex">\(T\)</span> 是空间 <span class="arithmatex">\(V\)</span> 的一个幂零变换。</p>
 <p>对于某一个正整数 <span class="arithmatex">\(r\)</span>，满足条件 <span class="arithmatex">\(N^r=0\)</span> 的矩阵称为幂零矩阵。</p>
 <p>一般可以进一步假定 <span class="arithmatex">\(r\)</span> 是使 <span class="arithmatex">\(T^r\)</span> 为零变换的最小正整数，于是 <span class="arithmatex">\(T\)</span> 的最小多项式是 <span class="arithmatex">\(x^r\)</span>。于是存在一个向量 <span class="arithmatex">\(\xi_0\)</span>，使得：</p>
@@ -1291,7 +1291,7 @@ V=W_1\oplus W_2\oplus\cdots\oplus W_S
     \]</div>
 </li>
 </ul>
-<h3 id="_6">循环子空间</h3>
+<h3 id="循环子空间">循环子空间<a class="headerlink" href="#循环子空间" title="Permanent link"></a></h3>
 <p>定理：设 <span class="arithmatex">\(T\)</span> 是空间 <span class="arithmatex">\(V\)</span> 的一个线性变换，<span class="arithmatex">\(\xi\)</span> 是空间 <span class="arithmatex">\(V\)</span> 的一个向量。如果存在一个正整数 <span class="arithmatex">\(s\)</span>，使得：</p>
 <ul>
 <li>
@@ -1319,7 +1319,7 @@ T^r(\xi_0)=0
 </ul>
 <p>那么子空间 <span class="arithmatex">\(W\)</span> 称为关于 <span class="arithmatex">\(T\)</span> 的一个循环子空间，简称 <span class="arithmatex">\(T\)</span> 循环子空间。此时 <span class="arithmatex">\(\xi_0\)</span> 称为循环子空间 <span class="arithmatex">\(W\)</span> 的一个生成向量，向量 <span class="arithmatex">\(\xi_0,T(\xi_0),\cdots,T^{r-1}(\xi_0)\)</span> 称为 <span class="arithmatex">\(W\)</span> 的一个循环基。</p>
 <p>显然，一个 <span class="arithmatex">\(T\)</span> 循环子空间 <span class="arithmatex">\(W\)</span> 在 <span class="arithmatex">\(T\)</span> 作用下不变，并且对于循环子空间 <span class="arithmatex">\(W\)</span> 中的任意向量 <span class="arithmatex">\(\xi\)</span>，均有 <span class="arithmatex">\(T^r(\xi)=0\)</span>，这里 <span class="arithmatex">\(r\)</span> 为循环子空间的维数。</p>
-<h3 id="jordan">幂零 Jordan 块</h3>
+<h3 id="幂零-jordan-块">幂零 Jordan 块<a class="headerlink" href="#幂零-jordan-块" title="Permanent link"></a></h3>
 <p>如果空间 <span class="arithmatex">\(W\)</span> 是变换 <span class="arithmatex">\(T\)</span> 的循环子空间，那么 <span class="arithmatex">\(T\)</span> 在 <span class="arithmatex">\(W\)</span> 上的限制 <span class="arithmatex">\({T|}_W\)</span> 是 <span class="arithmatex">\(W\)</span> 的一个幂零变换，并且 <span class="arithmatex">\({T|}_W\)</span> 关于 <span class="arithmatex">\(W\)</span> 的倒序排列的循环基 <span class="arithmatex">\(T^{r-1}(\xi_0),T^{r-2}(\xi_0),\cdots,\xi_0\)</span> 的矩阵是如下形状的 <span class="arithmatex">\(r\)</span> 阶上三角矩阵：</p>
 <div class="arithmatex">\[
 N_r=\begin{pmatrix}
@@ -1335,7 +1335,7 @@ N_r=\begin{pmatrix}
 <p>设 <span class="arithmatex">\(T\)</span> 是 <span class="arithmatex">\(n\)</span> 维空间 <span class="arithmatex">\(V\)</span> 的一个幂零变换，把出现在 <span class="arithmatex">\(V\)</span> 关于 <span class="arithmatex">\(T\)</span> 的循环子空间的分解中，唯一确定的一组正整数 <span class="arithmatex">\(r_1\geq\cdots\geq r_S\)</span> 叫做 <span class="arithmatex">\(T\)</span> 的不变指数。</p>
 <p>对于 <span class="arithmatex">\(n\)</span> 阶幂零矩阵 <span class="arithmatex">\(A\)</span>，<span class="arithmatex">\(A\)</span> 与一个上述形状的矩阵 <span class="arithmatex">\(N\)</span> 相似，也唯一确定一个正整数序列 <span class="arithmatex">\(r_1\geq\cdots\geq r_S\)</span>，称为矩阵 <span class="arithmatex">\(A\)</span> 的不变指数。</p>
 <p>幂零阵虽然不能和对角阵相似，但是可以相似于这样的标准形式。在 Jordan 标准型，将相似对角化与幂零阵的标准形式，二者结合起来，给出一般的矩阵通过相似变换可以达到的标准形式。</p>
-<h3 id="_7">一些定理</h3>
+<h3 id="一些定理">一些定理<a class="headerlink" href="#一些定理" title="Permanent link"></a></h3>
 <ol>
 <li>
 <p>设 <span class="arithmatex">\(T\)</span> 是空间 <span class="arithmatex">\(V\)</span> 的一个幂零变换，而</p>
@@ -1437,7 +1437,9 @@ N_{r_1} &amp;   &amp;   &amp; 0\\
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

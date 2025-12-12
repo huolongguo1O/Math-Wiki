@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#k" class="md-skip">
+        <a href="#k-部分拆数" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#k" class="md-nav__link">
+  <a href="#k-部分拆数" class="md-nav__link">
     <span class="md-ellipsis">
       
         k 部分拆数
@@ -1102,7 +1102,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#例题" class="md-nav__link">
     <span class="md-ellipsis">
       
         例题
@@ -1113,7 +1113,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#生成函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         生成函数
@@ -1124,7 +1124,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ferrers" class="md-nav__link">
+  <a href="#ferrers-图" class="md-nav__link">
     <span class="md-ellipsis">
       
         Ferrers 图
@@ -1140,7 +1140,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#互异分拆数" class="md-nav__link">
     <span class="md-ellipsis">
       
         互异分拆数
@@ -1152,7 +1152,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#例题_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         例题
@@ -1163,7 +1163,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#奇分拆数" class="md-nav__link">
     <span class="md-ellipsis">
       
         奇分拆数
@@ -1179,7 +1179,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#五边形数定理" class="md-nav__link">
     <span class="md-ellipsis">
       
         五边形数定理
@@ -1191,7 +1191,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#例题_2" class="md-nav__link">
     <span class="md-ellipsis">
       
         例题
@@ -1262,7 +1262,7 @@ n=r_1+r_2+\ldots+r_k \quad r_1 \ge r_2 \ge \ldots \ge r_k \ge 1
 </tr>
 </tbody>
 </table>
-<h2 id="k">k 部分拆数</h2>
+<h2 id="k-部分拆数">k 部分拆数<a class="headerlink" href="#k-部分拆数" title="Permanent link"></a></h2>
 <p>将 <span class="arithmatex">\(n\)</span> 分成恰有 <span class="arithmatex">\(k\)</span> 个部分的分拆，称为 <span class="arithmatex">\(k\)</span> 部分拆数，记作 <span class="arithmatex">\(p(n,k)\)</span>。</p>
 <p>显然，<span class="arithmatex">\(k\)</span> 部分拆数 <span class="arithmatex">\(p(n,k)\)</span> 同时也是下面方程的解数：</p>
 <div class="arithmatex">\[
@@ -1403,39 +1403,61 @@ p(n,k)=p(n-1,k-1)+p(n-k,k)
 </tr>
 </tbody>
 </table>
-<h3 id="_1">例题</h3>
-<p>???+ note "计算 k 部分拆数"
-    计算 <span class="arithmatex">\(k\)</span> 部分拆数 <span class="arithmatex">\(p(n,k)\)</span>。多组输入，其中 <span class="arithmatex">\(n\)</span> 上界为 <span class="arithmatex">\(10000\)</span>，<span class="arithmatex">\(k\)</span> 上界为 <span class="arithmatex">\(1000\)</span>，对 <span class="arithmatex">\(1000007\)</span> 取模。</p>
-<pre><code>观察表格与递推式，按列更新对于存储更有利。不难写出程序：
+<h3 id="例题">例题<a class="headerlink" href="#例题" title="Permanent link"></a></h3>
+<details class="note" open="open">
+<summary>计算 k 部分拆数</summary>
+<p>计算 <span class="arithmatex">\(k\)</span> 部分拆数 <span class="arithmatex">\(p(n,k)\)</span>。多组输入，其中 <span class="arithmatex">\(n\)</span> 上界为 <span class="arithmatex">\(10000\)</span>，<span class="arithmatex">\(k\)</span> 上界为 <span class="arithmatex">\(1000\)</span>，对 <span class="arithmatex">\(1000007\)</span> 取模。</p>
+<p>观察表格与递推式，按列更新对于存储更有利。不难写出程序：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span>
 
-```cpp
-#include &lt;cstdio&gt;
-#include &lt;cstring&gt;
+<span class="kt">int</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="mi">10005</span><span class="p">][</span><span class="mi">1005</span><span class="p">];</span><span class="w"> </span><span class="cm">/*将自然数n分拆为k个部分的方法数*/</span>
 
-int p[10005][1005]; /*将自然数n分拆为k个部分的方法数*/
-
-int main() {
-  int n, k;
-  while (~scanf("%d%d", &amp;n, &amp;k)) {
-    memset(p, 0, sizeof(p));
-    p[0][0] = 1;
-    int i;
-    for (i = 1; i &lt;= n; ++i) {
-      int j;
-      for (j = 1; j &lt;= k; ++j) {
-        if (i - j &gt;= 0) /*p[i-j][j]所有部分大于1*/
-        {
-          p[i][j] = (p[i - j][j] + p[i - 1][j - 1]) %
-                    1000007; /*p[i-1][j-1]至少有一个部分为1。*/
-        }
-      }
-    }
-    printf("%d\n", p[n][k]);
-  }
-}
-```
-</code></pre>
-<h3 id="_2">生成函数</h3>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">;</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">k</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">p</span><span class="p">));</span>
+<span class="w">    </span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">k</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="cm">/*p[i-j][j]所有部分大于1*/</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">%</span>
+<span class="w">                    </span><span class="mi">1000007</span><span class="p">;</span><span class="w"> </span><span class="cm">/*p[i-1][j-1]至少有一个部分为1。*/</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">k</span><span class="p">]);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="生成函数">生成函数<a class="headerlink" href="#生成函数" title="Permanent link"></a></h3>
 <p>由等比数列求和公式，有：</p>
 <div class="arithmatex">\[
 \frac{1}{1-x^k}=1+x^k+x^{2k}+x^{3k}+\ldots
@@ -1447,7 +1469,7 @@ int main() {
 <div class="arithmatex">\[
 \sum_{n,k=0}^\infty {p(n,k) x^n y^k }=\frac{1}{1-xy}  \frac{1}{1-x^2 y}  \frac{1}{1-x^3 y}\ldots
 \]</div>
-<h3 id="ferrers">Ferrers 图</h3>
+<h3 id="ferrers-图">Ferrers 图<a class="headerlink" href="#ferrers-图" title="Permanent link"></a></h3>
 <p>Ferrers 图：将分拆的每个部分用点组成的行表示。每行点的个数为这个部分的大小。</p>
 <p>根据分拆的定义，Ferrers 图中不同的行按照递减的次序排放。最长行在最上面。</p>
 <p>例如：分拆 <span class="arithmatex">\(12=5+4+2+1\)</span> 的 Ferrers 图。</p>
@@ -1457,7 +1479,7 @@ int main() {
 <p>最大 <span class="arithmatex">\(k\)</span> 分拆数：自然数 <span class="arithmatex">\(n\)</span> 的最大部分为 <span class="arithmatex">\(k\)</span> 的分拆个数。</p>
 <p>根据共轭的定义，有显然结论：</p>
 <p>最大 <span class="arithmatex">\(k\)</span> 分拆数与 <span class="arithmatex">\(k\)</span> 部分拆数相同，均为 <span class="arithmatex">\(p(n,k)\)</span>。</p>
-<h2 id="_3">互异分拆数</h2>
+<h2 id="互异分拆数">互异分拆数<a class="headerlink" href="#互异分拆数" title="Permanent link"></a></h2>
 <p>互异分拆数：<span class="arithmatex">\(pd_n\)</span>。自然数 <span class="arithmatex">\(n\)</span> 的各部分互不相同的分拆方法数。（Different）</p>
 <table>
 <thead>
@@ -1628,44 +1650,71 @@ pd(n,k)=pd(n-k,k-1)+pd(n-k,k)
 </tr>
 </tbody>
 </table>
-<h3 id="_4">例题</h3>
-<p>???+ note "计算互异分拆数"
-    计算互异分拆数 <span class="arithmatex">\(pd_n\)</span>。多组输入，其中 <span class="arithmatex">\(n\)</span> 上界为 <span class="arithmatex">\(50000\)</span>，对 <span class="arithmatex">\(1000007\)</span> 取模。</p>
-<pre><code>观察表格与递推式，按列更新对于存储更有利。代码中将后一位缩减了空间，仅保留相邻两项。
+<h3 id="例题_1">例题<a class="headerlink" href="#例题_1" title="Permanent link"></a></h3>
+<details class="note" open="open">
+<summary>计算互异分拆数</summary>
+<p>计算互异分拆数 <span class="arithmatex">\(pd_n\)</span>。多组输入，其中 <span class="arithmatex">\(n\)</span> 上界为 <span class="arithmatex">\(50000\)</span>，对 <span class="arithmatex">\(1000007\)</span> 取模。</p>
+<p>观察表格与递推式，按列更新对于存储更有利。代码中将后一位缩减了空间，仅保留相邻两项。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstring&gt;</span>
 
-```cpp
-#include &lt;cstdio&gt;
-#include &lt;cstring&gt;
+<span class="kt">int</span><span class="w"> </span><span class="n">pd</span><span class="p">[</span><span class="mi">50005</span><span class="p">][</span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="cm">/*将自然数n分拆为k个部分的互异方法数*/</span>
 
-int pd[50005][2]; /*将自然数n分拆为k个部分的互异方法数*/
-
-int main() {
-  int n;
-  while (~scanf("%d", &amp;n)) {
-    memset(pd, 0, sizeof(pd));
-    pd[0][0] = 1;
-    int ans = 0;
-    int j;
-    for (j = 1; j &lt; 350; ++j) {
-      int i;
-      for (i = 0; i &lt; 350; ++i) {
-        pd[i][j &amp; 1] = 0; /*pd[i][j]只与pd[][j]和pd[][j-1]有关*/
-      }
-      for (i = 0; i &lt;= n; ++i) {
-        if (i - j &gt;= 0) /*pd[i-j][j]所有部分大于1*/
-        {
-          pd[i][j &amp; 1] = (pd[i - j][j &amp; 1] + pd[i - j][(j - 1) &amp; 1]) %
-                         1000007; /*pd[i-j][j-1]至少有一个部分为1。*/
-        }
-      }
-      ans = (ans + pd[n][j &amp; 1]) % 1000007;
-    }
-    printf("%d\n", ans);
-  }
-}
-```
-</code></pre>
-<h3 id="_5">奇分拆数</h3>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">memset</span><span class="p">(</span><span class="n">pd</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">pd</span><span class="p">));</span>
+<span class="w">    </span><span class="n">pd</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">350</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">350</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">pd</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="cm">/*pd[i][j]只与pd[][j]和pd[][j-1]有关*/</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="cm">/*pd[i-j][j]所有部分大于1*/</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="n">pd</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">pd</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">][</span><span class="n">j</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pd</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">j</span><span class="p">][(</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">%</span>
+<span class="w">                         </span><span class="mi">1000007</span><span class="p">;</span><span class="w"> </span><span class="cm">/*pd[i-j][j-1]至少有一个部分为1。*/</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="n">ans</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">ans</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">pd</span><span class="p">[</span><span class="n">n</span><span class="p">][</span><span class="n">j</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">1000007</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ans</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="奇分拆数">奇分拆数<a class="headerlink" href="#奇分拆数" title="Permanent link"></a></h3>
 <p>奇分拆数：<span class="arithmatex">\(po_n\)</span>。自然数 <span class="arithmatex">\(n\)</span> 的各部分都是奇数的分拆方法数。（Odd）</p>
 <p>有一个显然的等式：</p>
 <div class="arithmatex">\[
@@ -1684,7 +1733,7 @@ po_n=pd_n
 pd_n=pde_n+pdo_n
 \]</div>
 <p>同样也有相应的 <span class="arithmatex">\(k\)</span> 部概念。由于过于复杂，不再列出。</p>
-<h2 id="_6">五边形数定理</h2>
+<h2 id="五边形数定理">五边形数定理<a class="headerlink" href="#五边形数定理" title="Permanent link"></a></h2>
 <p>单独观察分拆数的生成函数的分母部分：</p>
 <div class="arithmatex">\[
 \prod_{i=1}^\infty (1-x^i ) 
@@ -1734,50 +1783,84 @@ n=(s+1)+(s+2)+\ldots+(s+s)=\frac{s(3s+1)}{2}
 p_n=p_{n-1}+p_{n-2}-p_{n-5}-p_{n-7}+\ldots
 \]</div>
 <p>这个递推式有无限项，但是如果规定负数的分拆数是 <span class="arithmatex">\(0\)</span>（<span class="arithmatex">\(0\)</span> 的分拆数已经定义为 <span class="arithmatex">\(1\)</span>），那么就简化为了有限项。</p>
-<h3 id="_7">例题</h3>
-<p>???+ note "计算分拆数"
-    计算分拆数 <span class="arithmatex">\(p_n\)</span>。多组输入，其中 <span class="arithmatex">\(n\)</span> 上界为 <span class="arithmatex">\(50000\)</span>，对 <span class="arithmatex">\(1000007\)</span> 取模。</p>
-<pre><code>采用五边形数定理的方法。有代码：
+<h3 id="例题_2">例题<a class="headerlink" href="#例题_2" title="Permanent link"></a></h3>
+<details class="note" open="open">
+<summary>计算分拆数</summary>
+<p>计算分拆数 <span class="arithmatex">\(p_n\)</span>。多组输入，其中 <span class="arithmatex">\(n\)</span> 上界为 <span class="arithmatex">\(50000\)</span>，对 <span class="arithmatex">\(1000007\)</span> 取模。</p>
+<p>采用五边形数定理的方法。有代码：</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cstdio&gt;</span>
 
-```cpp
-#include &lt;cstdio&gt;
+<span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">100010</span><span class="p">];</span>
+<span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="mi">50005</span><span class="p">];</span>
 
-long long a[100010];
-long long p[50005];
-
-int main() {
-  p[0] = 1;
-  p[1] = 1;
-  p[2] = 2;
-  int i;
-  for (i = 1; i &lt; 50005;
-       i++) /*递推式系数1,2,5,7,12,15,22,26...i*(3*i-1)/2,i*(3*i+1)/2*/
-  {
-    a[2 * i] = i * (i * 3 - 1) / 2; /*五边形数为1,5,12,22...i*(3*i-1)/2*/
-    a[2 * i + 1] = i * (i * 3 + 1) / 2;
-  }
-  for (
-      i = 3; i &lt; 50005;
-      i++) /*p[n]=p[n-1]+p[n-2]-p[n-5]-p[n-7]+p[12]+p[15]-...+p[n-i*[3i-1]/2]+p[n-i*[3i+1]/2]*/
-  {
-    p[i] = 0;
-    int j;
-    for (j = 2; a[j] &lt;= i; j++) /*有可能为负数,式中加1000007*/
-    {
-      if (j &amp; 2) {
-        p[i] = (p[i] + p[i - a[j]] + 1000007) % 1000007;
-      } else {
-        p[i] = (p[i] - p[i - a[j]] + 1000007) % 1000007;
-      }
-    }
-  }
-  int n;
-  while (~scanf("%d", &amp;n)) {
-    printf("%lld\n", p[n]);
-  }
-}
-```
-</code></pre>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">50005</span><span class="p">;</span>
+<span class="w">       </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="cm">/*递推式系数1,2,5,7,12,15,22,26...i*(3*i-1)/2,i*(3*i+1)/2*/</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="cm">/*五边形数为1,5,12,22...i*(3*i-1)/2*/</span>
+<span class="w">    </span><span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span>
+<span class="w">      </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">50005</span><span class="p">;</span>
+<span class="w">      </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="cm">/*p[n]=p[n-1]+p[n-2]-p[n-5]-p[n-7]+p[12]+p[15]-...+p[n-i*[3i-1]/2]+p[n-i*[3i+1]/2]*/</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="cm">/*有可能为负数,式中加1000007*/</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">j</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1000007</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">1000007</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1000007</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">1000007</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="o">~</span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">n</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%lld</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">[</span><span class="n">n</span><span class="p">]);</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
 
 
 
@@ -1832,7 +1915,9 @@ int main() {
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

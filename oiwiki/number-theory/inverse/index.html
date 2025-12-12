@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#基本概念" class="md-skip">
           Skip to content
         </a>
       
@@ -707,7 +707,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#基本概念" class="md-nav__link">
     <span class="md-ellipsis">
       
         基本概念
@@ -718,7 +718,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#单个逆元的求法" class="md-nav__link">
     <span class="md-ellipsis">
       
         单个逆元的求法
@@ -730,7 +730,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#扩展欧几里得算法" class="md-nav__link">
     <span class="md-ellipsis">
       
         扩展欧几里得算法
@@ -741,7 +741,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#快速幂法" class="md-nav__link">
     <span class="md-ellipsis">
       
         快速幂法
@@ -757,7 +757,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#多个逆元的求法" class="md-nav__link">
     <span class="md-ellipsis">
       
         多个逆元的求法
@@ -768,7 +768,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#线性时间预处理逆元" class="md-nav__link">
     <span class="md-ellipsis">
       
         线性时间预处理逆元
@@ -779,7 +779,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#习题" class="md-nav__link">
     <span class="md-ellipsis">
       
         习题
@@ -790,7 +790,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#参考资料与注释" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料与注释
@@ -1236,7 +1236,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#基本概念" class="md-nav__link">
     <span class="md-ellipsis">
       
         基本概念
@@ -1247,7 +1247,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#单个逆元的求法" class="md-nav__link">
     <span class="md-ellipsis">
       
         单个逆元的求法
@@ -1259,7 +1259,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#扩展欧几里得算法" class="md-nav__link">
     <span class="md-ellipsis">
       
         扩展欧几里得算法
@@ -1270,7 +1270,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#快速幂法" class="md-nav__link">
     <span class="md-ellipsis">
       
         快速幂法
@@ -1286,7 +1286,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#多个逆元的求法" class="md-nav__link">
     <span class="md-ellipsis">
       
         多个逆元的求法
@@ -1297,7 +1297,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#线性时间预处理逆元" class="md-nav__link">
     <span class="md-ellipsis">
       
         线性时间预处理逆元
@@ -1308,7 +1308,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#习题" class="md-nav__link">
     <span class="md-ellipsis">
       
         习题
@@ -1319,7 +1319,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#参考资料与注释" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料与注释
@@ -1349,42 +1349,56 @@
   <h1>逆元</h1>
 
 <p>本文介绍模意义下乘法运算的逆元，并讨论它的常见求解方法。</p>
-<h2 id="_1">基本概念</h2>
+<h2 id="基本概念">基本概念<a class="headerlink" href="#基本概念" title="Permanent link"></a></h2>
 <p>非零实数 <span class="arithmatex">\(a\in\mathbf R\)</span> 的乘法逆元就是它的倒数 <span class="arithmatex">\(a^{-1}\)</span>。类似地，数论中也可以定义一个整数 <span class="arithmatex">\(a\)</span> 在模 <span class="arithmatex">\(m\)</span> 意义下的逆元 <span class="arithmatex">\(a^{-1}\bmod m\)</span>，或简单地记作 <span class="arithmatex">\(a^{-1}\)</span>。这就是 <strong>模逆元</strong>（modular multiplicative inverse），也称作 <strong>数论倒数</strong>。</p>
-<p>???+ abstract "逆元"
-    对于非零整数 <span class="arithmatex">\(a,m\)</span>，如果存在 <span class="arithmatex">\(b\)</span> 使得 <span class="arithmatex">\(ab\equiv 1\pmod m\)</span>，就称 <span class="arithmatex">\(b\)</span> 是 <span class="arithmatex">\(a\)</span> 在模 <span class="arithmatex">\(m\)</span> 意义下的 <strong>逆元</strong>（inverse）。</p>
+<details class="abstract" open="open">
+<summary>逆元</summary>
+<p>对于非零整数 <span class="arithmatex">\(a,m\)</span>，如果存在 <span class="arithmatex">\(b\)</span> 使得 <span class="arithmatex">\(ab\equiv 1\pmod m\)</span>，就称 <span class="arithmatex">\(b\)</span> 是 <span class="arithmatex">\(a\)</span> 在模 <span class="arithmatex">\(m\)</span> 意义下的 <strong>逆元</strong>（inverse）。</p>
+</details>
 <p>这相当于说，<span class="arithmatex">\(b\)</span> 是线性同余方程 <span class="arithmatex">\(ax\equiv 1\pmod m\)</span> 的解。根据 <a href="../linear-equation/">线性同余方程</a> 的性质可知，当且仅当 <span class="arithmatex">\(\gcd(a,m)=1\)</span>，即 <span class="arithmatex">\(a,m\)</span> 互素时，逆元 <span class="arithmatex">\(a^{-1}\bmod m\)</span> 存在，且在模 <span class="arithmatex">\(m\)</span> 的意义下是唯一的。</p>
-<h2 id="_2">单个逆元的求法</h2>
+<h2 id="单个逆元的求法">单个逆元的求法<a class="headerlink" href="#单个逆元的求法" title="Permanent link"></a></h2>
 <p>利用扩展欧几里得算法或快速幂法，可以在 <span class="arithmatex">\(O(\log m)\)</span> 时间内求出单个整数的逆元。</p>
-<h3 id="_3">扩展欧几里得算法</h3>
+<h3 id="扩展欧几里得算法">扩展欧几里得算法<a class="headerlink" href="#扩展欧几里得算法" title="Permanent link"></a></h3>
 <p>求解逆元，就相当于求解线性同余方程。因此，可以使用 <a href="../gcd/#扩展欧几里得算法">扩展欧几里得算法</a> 在 <span class="arithmatex">\(O(\log\min\{a,m\})\)</span> 时间内求解逆元。同时，由于逆元对应的线性方程比较特殊，可以适当地简化相应的步骤。</p>
-<p>???+ example "参考实现"
-    === "C++"
-        <code>cpp
-        --8&lt;-- "docs/math/code/inverse/inverse-1.cpp:core"</code></p>
-<pre><code>=== "Python"
-    ```python
-    --8&lt;-- "docs/math/code/inverse/inverse-1.py:core"
-    ```
-</code></pre>
+<details class="example" open="open">
+<summary>参考实现</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/inverse/inverse-1.cpp:core&quot;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">--</span><span class="mi">8</span><span class="o">&lt;--</span> <span class="s2">&quot;docs/math/code/inverse/inverse-1.py:core&quot;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
 <p>这一算法适用于所有逆元存在的情形。</p>
-<h3 id="_4">快速幂法</h3>
+<h3 id="快速幂法">快速幂法<a class="headerlink" href="#快速幂法" title="Permanent link"></a></h3>
 <p>这一方法主要适用于模数是素数 <span class="arithmatex">\(p\)</span> 的情形。此时，由 <a href="../fermat/#费马小定理">费马小定理</a> 可知对于任意 <span class="arithmatex">\(a\perp p\)</span> 都有</p>
 <div class="arithmatex">\[
 a\cdot a^{p-2} = a^{p-1} \equiv 1 \pmod p.
 \]</div>
 <p>根据逆元的唯一性可知，逆元 <span class="arithmatex">\(a^{-1}\bmod p\)</span> 就等于 <span class="arithmatex">\(a^{p-2}\bmod p\)</span>，因此可以直接使用 <a href="../../binary-exponentiation/">快速幂</a> 在 <span class="arithmatex">\(O(\log p)\)</span> 时间内计算：</p>
-<p>???+ example "参考实现"
-    === "C++"
-        <code>cpp
-        --8&lt;-- "docs/math/code/inverse/inverse-2.cpp:core"</code></p>
-<pre><code>=== "Python"
-    ```python
-    --8&lt;-- "docs/math/code/inverse/inverse-2.py:core"
-    ```
-</code></pre>
+<details class="example" open="open">
+<summary>参考实现</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/inverse/inverse-2.cpp:core&quot;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">--</span><span class="mi">8</span><span class="o">&lt;--</span> <span class="s2">&quot;docs/math/code/inverse/inverse-2.py:core&quot;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
 <p>当然，理论上，这一方法可以利用 <a href="../fermat/#欧拉定理">欧拉定理</a> 推广到一般的模数 <span class="arithmatex">\(m\)</span> 的情形，即利用 <span class="arithmatex">\(a^{\varphi(m)-1}\bmod m\)</span> 计算逆元。但是，单次求解 <a href="../euler-totient/">欧拉函数</a> <span class="arithmatex">\(\varphi(m)\)</span> 并不容易，因此该算法在一般情况下效率不高。</p>
-<h2 id="_5">多个逆元的求法</h2>
+<h2 id="多个逆元的求法">多个逆元的求法<a class="headerlink" href="#多个逆元的求法" title="Permanent link"></a></h2>
 <p>有些场景下，需要快速处理出多个整数 <span class="arithmatex">\(a_1,a_2,\cdots,a_n\)</span> 在模 <span class="arithmatex">\(m\)</span> 意义下的逆元。此时，逐个求解逆元，总共需要 <span class="arithmatex">\(O(n\log m)\)</span> 的时间。实际上，如果将它们统一处理，就可以在 <span class="arithmatex">\(O(n+\log m)\)</span> 的时间内求出所有整数的逆元。</p>
 <p>考虑序列 <span class="arithmatex">\(\{a_i\}\)</span> 的前缀积：</p>
 <div class="arithmatex">\[
@@ -1399,17 +1413,23 @@ S_{i-1}^{-1} = a_iS_i^{-1} \bmod m,~ i = n,n-1,\cdots,1.
 a_i^{-1} = S_{i-1}S_i^{-1} \bmod m,~ i = 1,2,\cdots,n.
 \]</div>
 <p>参考实现如下：</p>
-<p>???+ example "参考实现"
-    === "C++"
-        <code>cpp
-        --8&lt;-- "docs/math/code/inverse/inverse-3.cpp:core"</code></p>
-<pre><code>=== "Python"
-    ```python
-    --8&lt;-- "docs/math/code/inverse/inverse-3.py:core"
-    ```
-</code></pre>
+<details class="example" open="open">
+<summary>参考实现</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">C++</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/inverse/inverse-3.cpp:core&quot;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">--</span><span class="mi">8</span><span class="o">&lt;--</span> <span class="s2">&quot;docs/math/code/inverse/inverse-3.py:core&quot;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
 <p>算法中，只求了一次单个元素的逆元，因此总的时间复杂度是 <span class="arithmatex">\(O(n+\log m)\)</span> 的。</p>
-<h2 id="_6">线性时间预处理逆元</h2>
+<h2 id="线性时间预处理逆元">线性时间预处理逆元<a class="headerlink" href="#线性时间预处理逆元" title="Permanent link"></a></h2>
 <p>如果要预处理前 <span class="arithmatex">\(n\)</span> 个正整数在素数模 <span class="arithmatex">\(p\)</span> 下的逆元，还可以通过本节将要讨论的递推关系在 <span class="arithmatex">\(O(n)\)</span> 时间内计算。这一方法常用于组合数计算中前 <span class="arithmatex">\(n\)</span> 个正整数的阶乘的倒数的预处理。</p>
 <p>对于 <span class="arithmatex">\(1&lt; i &lt; p\)</span> 的正整数 <span class="arithmatex">\(i\)</span>，考察带余除法：</p>
 <div class="arithmatex">\[
@@ -1425,18 +1445,24 @@ i^{-1} \equiv - \left\lfloor \dfrac{p}{i} \right\rfloor (p\bmod i)^{-1} \pmod p.
 \]</div>
 <p>这就是用于线性时间递推求逆元的公式。由于 <span class="arithmatex">\(p\bmod i &lt; i\)</span>，这一公式将求解 <span class="arithmatex">\(i^{-1}\bmod p\)</span> 的问题转化为规模更小的问题 <span class="arithmatex">\((p\bmod i)^{-1}\bmod p\)</span>。因此，从 <span class="arithmatex">\(1^{-1}\bmod p=1\)</span> 开始，对每个 <span class="arithmatex">\(i\)</span> 顺次应用该公式，就可以在 <span class="arithmatex">\(O(n)\)</span> 时间内获得前 <span class="arithmatex">\(n\)</span> 个整数的逆元。</p>
 <p>参考实现如下：</p>
-<p>???+ example "参考实现"
-    === "C++"
-        <code>cpp
-        --8&lt;-- "docs/math/code/inverse/inverse-4.cpp:core"</code></p>
-<pre><code>=== "Python"
-    ```python
-    --8&lt;-- "docs/math/code/inverse/inverse-4.py:core"
-    ```
-</code></pre>
+<details class="example" open="open">
+<summary>参考实现</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">C++</label><label for="__tabbed_4_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/inverse/inverse-4.cpp:core&quot;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">--</span><span class="mi">8</span><span class="o">&lt;--</span> <span class="s2">&quot;docs/math/code/inverse/inverse-4.py:core&quot;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
 <p>这一算法只适用于模数是素数的情形。对于模数 <span class="arithmatex">\(m\)</span> 不是素数的情形，无法保证递推公式中得到的 <span class="arithmatex">\(m\bmod i\)</span> 仍然与 <span class="arithmatex">\(m\)</span> 互素，因而递推所需要的 <span class="arithmatex">\((m\bmod i)^{-1}\)</span> 可能并不存在。一个这样的例子是 <span class="arithmatex">\(m=8,i=3\)</span>。此时，<span class="arithmatex">\(m\bmod i = 2\)</span>，不存在模 <span class="arithmatex">\(m\)</span> 的逆元。</p>
 <p>另外，得到该递推公式后，一种自然的想法是直接递归求解任意一个数 <span class="arithmatex">\(a\)</span> 的逆元。每次递归时，都利用递推公式将它转化为更小的余数 <span class="arithmatex">\(p\bmod a\)</span> 的逆元，直到余数变为 <span class="arithmatex">\(1\)</span> 时停止。目前尚不清楚这样做的复杂度[^linear-recursion]，因此，推荐使用前文所述的常规方法求解。</p>
-<h2 id="_7">习题</h2>
+<h2 id="习题">习题<a class="headerlink" href="#习题" title="Permanent link"></a></h2>
 <ul>
 <li><a href="https://loj.ac/problem/110">LOJ 110 乘法逆元</a></li>
 <li><a href="https://loj.ac/problem/161">LOJ 161 乘法逆元 2</a></li>
@@ -1444,7 +1470,7 @@ i^{-1} \equiv - \left\lfloor \dfrac{p}{i} \right\rfloor (p\bmod i)^{-1} \pmod p.
 <li><a href="https://www.luogu.com.cn/problem/P2054">Luogu P2054「AHOI2005」洗牌</a></li>
 <li><a href="https://loj.ac/problem/2034">LOJ 2034「SDOI2016」排列计数</a></li>
 </ul>
-<h2 id="_8">参考资料与注释</h2>
+<h2 id="参考资料与注释">参考资料与注释<a class="headerlink" href="#参考资料与注释" title="Permanent link"></a></h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Modular_multiplicative_inverse">Modular multiplicative inverse - Wikipedia</a></li>
 </ul>
@@ -1503,7 +1529,9 @@ i^{-1} \equiv - \left\lfloor \dfrac{p}{i} \right\rfloor (p\bmod i)^{-1} \pmod p.
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

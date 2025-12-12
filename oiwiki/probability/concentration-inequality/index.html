@@ -1101,7 +1101,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#markov" class="md-nav__link">
+  <a href="#markov-不等式" class="md-nav__link">
     <span class="md-ellipsis">
       
         Markov 不等式
@@ -1113,7 +1113,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#证明" class="md-nav__link">
     <span class="md-ellipsis">
       
         证明
@@ -1129,7 +1129,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#chebyshev" class="md-nav__link">
+  <a href="#chebyshev-不等式" class="md-nav__link">
     <span class="md-ellipsis">
       
         Chebyshev 不等式
@@ -1141,7 +1141,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#证明_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         证明
@@ -1157,7 +1157,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#chernoff" class="md-nav__link">
+  <a href="#chernoff-不等式" class="md-nav__link">
     <span class="md-ellipsis">
       
         Chernoff 不等式
@@ -1169,7 +1169,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#poisson-chernoff" class="md-nav__link">
+  <a href="#poisson-试验之和的-chernoff-不等式" class="md-nav__link">
     <span class="md-ellipsis">
       
         Poisson 试验之和的 Chernoff 不等式
@@ -1185,7 +1185,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hoeffding" class="md-nav__link">
+  <a href="#hoeffding-不等式" class="md-nav__link">
     <span class="md-ellipsis">
       
         Hoeffding 不等式
@@ -1196,7 +1196,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#应用举例" class="md-nav__link">
     <span class="md-ellipsis">
       
         应用举例
@@ -1208,7 +1208,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#例随机撒点估算圆周率" class="md-nav__link">
     <span class="md-ellipsis">
       
         例：随机撒点估算圆周率
@@ -1219,7 +1219,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#例抽奖问题" class="md-nav__link">
     <span class="md-ellipsis">
       
         例：抽奖问题
@@ -1230,7 +1230,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#例随机选取一半元素" class="md-nav__link">
     <span class="md-ellipsis">
       
         例：随机选取一半元素
@@ -1241,7 +1241,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#balls-and-bins" class="md-nav__link">
+  <a href="#练习balls-and-bins" class="md-nav__link">
     <span class="md-ellipsis">
       
         练习：Balls and Bins
@@ -1277,7 +1277,7 @@
 
 <p>算法竞赛中有时会用到 <a href="../../misc/rand-technique.md">随机化算法</a>，这些算法的正确性与时空复杂度通常依赖于「某些随机事件发生的概率很小」这一前提。例如，快速排序的复杂度依赖于「所选的 <code>pivot</code> 元素几乎是最小或最大元素」这一事件较少发生。</p>
 <p>本文将简要介绍一些用于分析随机化算法的工具并给出几个简单应用的例子。</p>
-<h2 id="union-bound">Union Bound</h2>
+<h2 id="union-bound">Union Bound<a class="headerlink" href="#union-bound" title="Permanent link"></a></h2>
 <p>记 <span class="arithmatex">\(A_1, \cdots, A_m\)</span> 为随机事件，则</p>
 <div class="arithmatex">\[
 P\left\{ \bigcup_{i=1}^m A_i \right\} \leq \sum_{i=1}^m P\{A_i\}
@@ -1290,13 +1290,13 @@ P\left\{ \bigcup_{i=1}^m A_i \right\} \leq \sum_{i=1}^m P\{A_i\}
 <li>……</li>
 </ul>
 <p>随着层数越来越多，交替出现的上界和下界也越来越紧。这一系列结论形式上类似容斥原理，证明过程也和容斥类似，这里略去。</p>
-<h2 id="markov">Markov 不等式</h2>
+<h2 id="markov-不等式">Markov 不等式<a class="headerlink" href="#markov-不等式" title="Permanent link"></a></h2>
 <p>设 <span class="arithmatex">\(X\)</span> 是一个取值非负的随机变量，则对任意正实数 <span class="arithmatex">\(a\)</span> 有</p>
 <div class="arithmatex">\[
 P\{ X \geq a \} \leq \frac{EX}{a}
 \]</div>
 <p>事实上，由于 Markov 不等式本身并没有用到随机变量除期望外的与分布有关的任何信息，因此直接应用这个不等式得到的约束通常很松。</p>
-<h3 id="_1">证明</h3>
+<h3 id="证明">证明<a class="headerlink" href="#证明" title="Permanent link"></a></h3>
 <p>记 <span class="arithmatex">\(I\)</span> 为事件 <span class="arithmatex">\(X \geq a\)</span> 的示性函数，则有</p>
 <div class="arithmatex">\[
 I \leq \frac{X}{a}
@@ -1305,7 +1305,7 @@ I \leq \frac{X}{a}
 <div class="arithmatex">\[
 P\{ X \geq a \} = EI \leq E \left[ \frac{X}{a} \right] = \frac{EX}{a}
 \]</div>
-<h2 id="chebyshev">Chebyshev 不等式</h2>
+<h2 id="chebyshev-不等式">Chebyshev 不等式<a class="headerlink" href="#chebyshev-不等式" title="Permanent link"></a></h2>
 <p>设 <span class="arithmatex">\(X\)</span> 是一随机变量，则对任意的 <span class="arithmatex">\(a &gt; 0\)</span> 都有</p>
 <div class="arithmatex">\[
 P \{ |X - EX| \geq a \} \leq \frac{DX}{a^2}
@@ -1315,7 +1315,7 @@ P \{ |X - EX| \geq a \} \leq \frac{DX}{a^2}
 P \{ |X - EX| \geq k\sigma \} \leq \frac{1}{k^2}
 \]</div>
 <p>其中 <span class="arithmatex">\(\sigma\)</span> 是 <span class="arithmatex">\(X\)</span> 的标准差。</p>
-<h3 id="_2">证明</h3>
+<h3 id="证明_1">证明<a class="headerlink" href="#证明_1" title="Permanent link"></a></h3>
 <p>由已知，有</p>
 <div class="arithmatex">\[
 P \{ |X - EX| \geq a \} = P \{ (X - EX)^2 \geq a^2 \}
@@ -1324,7 +1324,7 @@ P \{ |X - EX| \geq a \} = P \{ (X - EX)^2 \geq a^2 \}
 <div class="arithmatex">\[
 P \{ (X - EX)^2 \geq a^2 \} \leq \frac{E(X - EX)^2}{a^2} = \frac{DX}{a^2}
 \]</div>
-<h2 id="chernoff">Chernoff 不等式</h2>
+<h2 id="chernoff-不等式">Chernoff 不等式<a class="headerlink" href="#chernoff-不等式" title="Permanent link"></a></h2>
 <p>一般的 Chernoff 不等式可以从直接对随机变量 <span class="arithmatex">\(\mathrm{e}^{tX}\)</span> 应用 Markov 不等式得出：</p>
 <p>设 <span class="arithmatex">\(X\)</span> 是一随机变量，则对任意的 <span class="arithmatex">\(t &gt; 0\)</span> 都有</p>
 <div class="arithmatex">\[
@@ -1334,7 +1334,7 @@ P\{ X \geq a \} = P\{ \mathrm{e}^{tX} &gt; \mathrm{e}^{ta} \} \leq \frac{E \math
 <div class="arithmatex">\[
 P\{ X \leq a \} = P\{ \mathrm{e}^{tX} &gt; \mathrm{e}^{ta} \} \leq \frac{E \mathrm{e}^{tX}}{\mathrm{e}^{ta}}
 \]</div>
-<h3 id="poisson-chernoff">Poisson 试验之和的 Chernoff 不等式</h3>
+<h3 id="poisson-试验之和的-chernoff-不等式">Poisson 试验之和的 Chernoff 不等式<a class="headerlink" href="#poisson-试验之和的-chernoff-不等式" title="Permanent link"></a></h3>
 <p>算法竞赛中涉及的随机变量通常没有那么「一般」，我们可以用概率论中的 Poisson 试验对其进行描述。</p>
 <p>所谓 Poisson 试验，是指在只有两种可能结果的随机试验。</p>
 <p>一次的 Poisson 试验的结果可以用一个取值为 <span class="arithmatex">\(0\)</span> 或 <span class="arithmatex">\(1\)</span> 的随机变量 <span class="arithmatex">\(X\)</span> 进行刻画，其概率分布为</p>
@@ -1349,101 +1349,97 @@ P\{ X = i \} = \begin{cases}
 <div class="arithmatex">\[
 P\left\{ |X - \mu| \geq \epsilon \mu \right\} \leq 2 \exp\left( - \frac{1}{3} \mu \epsilon^2 \right)
 \]</div>
-<h2 id="hoeffding">Hoeffding 不等式</h2>
+<h2 id="hoeffding-不等式">Hoeffding 不等式<a class="headerlink" href="#hoeffding-不等式" title="Permanent link"></a></h2>
 <p>若 <span class="arithmatex">\(X_1, \cdots, X_n\)</span> 为互相独立的实随机变量且 <span class="arithmatex">\(X_i\in [a_i,b_i]\)</span>，记随机变量 <span class="arithmatex">\(X=\sum\limits_{i=1}^n X_i\)</span>，则</p>
 <div class="arithmatex">\[
 P\{ |X - EX| \geq \epsilon \} \leq 2\exp \left( \frac {-2\epsilon^2}{\sum\limits_{i=1}^n (b_i-a_i)^2} \right)
 \]</div>
 <p>Chernoff 不等式和 Hoeffding 不等式都限制了随机变量偏离其期望值的程度。这两个不等式的证明过程较为冗长，有兴趣的同学可以查阅 Probability and Computing 一书中的相关章节。</p>
 <p>从经验上讲，如果 <span class="arithmatex">\(EX\)</span> 不太接近 <span class="arithmatex">\(a_1+\cdots+a_n\)</span>，则该不等式给出的界往往相对比较紧；如果非常接近的话（例如在 <a href="https://matthew99.blog.uoj.ac/blog/5511">UOJ #72 全新做法</a> 中），给出的界则往往很松，此时更好的选择是使用 Chernoff 不等式。</p>
-<h2 id="_3">应用举例</h2>
-<h3 id="_4">例：随机撒点估算圆周率</h3>
+<h2 id="应用举例">应用举例<a class="headerlink" href="#应用举例" title="Permanent link"></a></h2>
+<h3 id="例随机撒点估算圆周率">例：随机撒点估算圆周率<a class="headerlink" href="#例随机撒点估算圆周率" title="Permanent link"></a></h3>
 <p>考虑下列估计圆周率 <span class="arithmatex">\(\pi\)</span> 的精确值的算法：</p>
 <p>在正方形区域 <span class="arithmatex">\([-1, 1]^2\)</span> 内随机生成 <span class="arithmatex">\(n\)</span> 个点，记其中落入单位圆盘 <span class="arithmatex">\(x^2 + y^2 \leq 1\)</span> 的点数为 <span class="arithmatex">\(m\)</span>，则可以取 <span class="arithmatex">\(\dfrac{4m}{n}\)</span> 为 <span class="arithmatex">\(\pi\)</span> 的近似值。</p>
 <p>问题：若要保证上述算法以至少 <span class="arithmatex">\((1 - \delta)\)</span> 的概率返回相对误差不超过 <span class="arithmatex">\(\epsilon\)</span> 的结果，<span class="arithmatex">\(n\)</span> 应该如何取定？</p>
-<p>??? note "解答"
-    记 <span class="arithmatex">\(X_i\)</span> 表示事件「随机生成的第 <span class="arithmatex">\(i\)</span> 个点在单位圆内」，则圆内总点数 <span class="arithmatex">\(X = \sum_{i=1}^{n} X_i\)</span>。我们需要找到一个合适的 <span class="arithmatex">\(n\)</span> 使得</p>
-<pre><code>$$
+<details class="note">
+<summary>解答</summary>
+<p>记 <span class="arithmatex">\(X_i\)</span> 表示事件「随机生成的第 <span class="arithmatex">\(i\)</span> 个点在单位圆内」，则圆内总点数 <span class="arithmatex">\(X = \sum_{i=1}^{n} X_i\)</span>。我们需要找到一个合适的 <span class="arithmatex">\(n\)</span> 使得</p>
+<div class="arithmatex">\[
 P\left\{ \left| \frac{4X}{n} - \pi \right| \geq \epsilon \pi \right\} \leq \delta
-$$
-
-上式等价于
-
-$$
+\]</div>
+<p>上式等价于</p>
+<div class="arithmatex">\[
 P\left\{ \left| X - \frac{\pi}{4}n \right| \geq \epsilon \cdot \frac{\pi}{4}n  \right\} \leq \delta
-$$
-
-根据 Chernoff 不等式，我们只需令
-
-$$
+\]</div>
+<p>根据 Chernoff 不等式，我们只需令</p>
+<div class="arithmatex">\[
 2 \exp\left( - \frac{1}{3} \epsilon^2 \cdot \frac{\pi}{4}n \right) \leq \delta
-$$
-
-即可，由此可解得
-
-$$
+\]</div>
+<p>即可，由此可解得</p>
+<div class="arithmatex">\[
 n \geq \frac{12}{\pi} \epsilon^{-2} \ln \frac{2}{\delta}
-$$
-
-即当 $n = \Omega(\epsilon^{-2} \ln \frac{1}{\delta})$ 时可以达到需要的准确率。
-</code></pre>
-<h3 id="_5">例：抽奖问题</h3>
+\]</div>
+<p>即当 <span class="arithmatex">\(n = \Omega(\epsilon^{-2} \ln \frac{1}{\delta})\)</span> 时可以达到需要的准确率。</p>
+</details>
+<h3 id="例抽奖问题">例：抽奖问题<a class="headerlink" href="#例抽奖问题" title="Permanent link"></a></h3>
 <p>一个箱子里有 <span class="arithmatex">\(n\)</span> 个球，其中恰有 <span class="arithmatex">\(k\)</span> 个球对应着大奖。你要进行若干次独立、等概率的随机抽取，每次抽完之后会把球放回箱子。请问抽多少次能保证以至少 <span class="arithmatex">\((1 - \epsilon)\)</span> 的概率，满足 <strong>每一个</strong> 奖球都被抽到至少一次？</p>
-<p>??? note "解答"
-    假如只有一个奖球，则抽取 <span class="arithmatex">\(M=n\log\epsilon^{-1}\)</span> 次即可保证，因为 <span class="arithmatex">\(M\)</span> 次全不中的概率</p>
-<pre><code>$$
+<details class="note">
+<summary>解答</summary>
+<p>假如只有一个奖球，则抽取 <span class="arithmatex">\(M=n\log\epsilon^{-1}\)</span> 次即可保证，因为 <span class="arithmatex">\(M\)</span> 次全不中的概率</p>
+<div class="arithmatex">\[
 \Big(1-\dfrac 1n\Big)^{n\log\epsilon^{-1}}\leq e^{\log\epsilon}=\epsilon
-$$
-
-现在有 $k&gt;1$ 个奖球，那么根据 Union Bound，我们只需保证每个奖球被漏掉的概率都不超过 $\dfrac \epsilon k$ 即可。于是答案是 $n \log \dfrac{k}{\epsilon}$。
-</code></pre>
-<h3 id="_6">例：随机选取一半元素</h3>
+\]</div>
+<p>现在有 <span class="arithmatex">\(k&gt;1\)</span> 个奖球，那么根据 Union Bound，我们只需保证每个奖球被漏掉的概率都不超过 <span class="arithmatex">\(\dfrac \epsilon k\)</span> 即可。于是答案是 <span class="arithmatex">\(n \log \dfrac{k}{\epsilon}\)</span>。</p>
+</details>
+<h3 id="例随机选取一半元素">例：随机选取一半元素<a class="headerlink" href="#例随机选取一半元素" title="Permanent link"></a></h3>
 <p>给出一个算法，从 <span class="arithmatex">\(n\)</span> 个元素中等概率随机选取一个大小为 <span class="arithmatex">\(\dfrac{n}{2}\)</span> 的子集，保证 <span class="arithmatex">\(n\)</span> 是偶数。你能使用的唯一的随机源是一枚均匀硬币，同时请你尽量减少抛硬币的次数（不要求最少）。</p>
-<p>??? note "解法"
-    首先可以想到这样的算法：</p>
-<pre><code>-   通过抛 $n$ 次硬币，可以从所有子集中等概率随机选一个。
--   不断重复这一过程，直到选出的子集大小恰好为 $\dfrac n2$。
-    -   注意到大小为 $\dfrac n2$ 的子集至少占所有子集的 $\dfrac 1n$，因此重复次数的期望值 $\leq n$。
-
-这一算法期望需要抛 $n^2$ 次硬币。
-
-另一个算法：
-
--   我们可以通过抛期望 $2\lceil\log_2 n\rceil$ 次硬币来实现随机 $n$ 选 1。
-    -   具体方法：随机生成 $\lceil\log_2 n\rceil$ 位的二进制数，如果大于等于 $n$ 则重新随机，否则选择对应编号（编号从 0 开始）的元素并结束过程。
--   然后我们从所有元素中选一个，再从剩下的元素中再选一个，以此类推，直到选出 $\dfrac n2$ 个元素为止。
-
-这一算法期望需要抛 $n\lceil\log_2 n\rceil$ 次硬币。
-
-将两个算法缝合起来：
-
--   先用第一个算法随机得到一个子集。
--   如果该子集大小不到 $\dfrac n2$，则利用第二个算法不断添加元素，直到将大小补到 $\dfrac n2$。
--   如果该子集大小超过 $\dfrac n2$，则利用第二个算法不断删除元素，直到将大小削到 $\dfrac n2$。
-
-尝试分析第二、第三步所需的操作次数（即添加/删除元素的次数）：
-
--   记 01 随机变量 $X_i$ 表示 $i$ 是否被选入初始的子集，令 $X:=X_1+\cdots+X_n$ 表示子集大小，则第二、第三步所需的操作次数等于 $\big|X-\mathrm{E}[X]\big|$。在 Hoeffding 不等式中取 $t=c\cdot\sqrt n$（其中 $c$ 为任意常数），得到 $\mathrm{Pr}\Big[\big|X-\mathrm{E}[X]\big|\geq t\Big]\leq 2\mathrm{e}^{-c^2}$。也就是说，我们可以通过允许 $\Theta(\sqrt n)$ 级别的偏移，来得到任意小的常数级别的失败概率。
-
-至此我们已经说明：该算法可以以很大概率保证抛硬币次数在 $n+\Theta(\sqrt n\log n)$ 以内。
-
--   其中 $n$ 来自获得初始子集的抛硬币次数；$\Theta(\sqrt n\log n)$ 是 $\Theta(\sqrt n)$ 次添加/删除元素的总开销。
-
-??? note "计算期望复杂度"
-    我们再从另一个角度分析，尝试计算该算法的期望抛硬币次数。
-
-    用 Hoeffding 不等式求第二、第三步中操作次数期望值的上界：
-
-    $$
-    E|X - EX| = \int_0^\infty P\{ |X - E[X]| \geq t \} \mathrm{d}t \leq 
-    2 \int_0^\infty \exp \left(-\frac {t^2}{n}\right) \mathrm{d}t=\sqrt{\pi n}
-    $$
-
-    从而第二、第三步所需抛硬币次数的期望值是 $\sqrt{\pi n}\cdot2\lceil\log_2 n\rceil$。
-
-    综上，该算法期望需要抛 $n+2\sqrt{\pi n}\lceil\log_2 n\rceil$ 次硬币。
-</code></pre>
-<h3 id="balls-and-bins">练习：Balls and Bins</h3>
+<details class="note">
+<summary>解法</summary>
+<p>首先可以想到这样的算法：</p>
+<ul>
+<li>通过抛 <span class="arithmatex">\(n\)</span> 次硬币，可以从所有子集中等概率随机选一个。</li>
+<li>不断重复这一过程，直到选出的子集大小恰好为 <span class="arithmatex">\(\dfrac n2\)</span>。<ul>
+<li>注意到大小为 <span class="arithmatex">\(\dfrac n2\)</span> 的子集至少占所有子集的 <span class="arithmatex">\(\dfrac 1n\)</span>，因此重复次数的期望值 <span class="arithmatex">\(\leq n\)</span>。</li>
+</ul>
+</li>
+</ul>
+<p>这一算法期望需要抛 <span class="arithmatex">\(n^2\)</span> 次硬币。</p>
+<p>另一个算法：</p>
+<ul>
+<li>我们可以通过抛期望 <span class="arithmatex">\(2\lceil\log_2 n\rceil\)</span> 次硬币来实现随机 <span class="arithmatex">\(n\)</span> 选 1。<ul>
+<li>具体方法：随机生成 <span class="arithmatex">\(\lceil\log_2 n\rceil\)</span> 位的二进制数，如果大于等于 <span class="arithmatex">\(n\)</span> 则重新随机，否则选择对应编号（编号从 0 开始）的元素并结束过程。</li>
+</ul>
+</li>
+<li>然后我们从所有元素中选一个，再从剩下的元素中再选一个，以此类推，直到选出 <span class="arithmatex">\(\dfrac n2\)</span> 个元素为止。</li>
+</ul>
+<p>这一算法期望需要抛 <span class="arithmatex">\(n\lceil\log_2 n\rceil\)</span> 次硬币。</p>
+<p>将两个算法缝合起来：</p>
+<ul>
+<li>先用第一个算法随机得到一个子集。</li>
+<li>如果该子集大小不到 <span class="arithmatex">\(\dfrac n2\)</span>，则利用第二个算法不断添加元素，直到将大小补到 <span class="arithmatex">\(\dfrac n2\)</span>。</li>
+<li>如果该子集大小超过 <span class="arithmatex">\(\dfrac n2\)</span>，则利用第二个算法不断删除元素，直到将大小削到 <span class="arithmatex">\(\dfrac n2\)</span>。</li>
+</ul>
+<p>尝试分析第二、第三步所需的操作次数（即添加/删除元素的次数）：</p>
+<ul>
+<li>记 01 随机变量 <span class="arithmatex">\(X_i\)</span> 表示 <span class="arithmatex">\(i\)</span> 是否被选入初始的子集，令 <span class="arithmatex">\(X:=X_1+\cdots+X_n\)</span> 表示子集大小，则第二、第三步所需的操作次数等于 <span class="arithmatex">\(\big|X-\mathrm{E}[X]\big|\)</span>。在 Hoeffding 不等式中取 <span class="arithmatex">\(t=c\cdot\sqrt n\)</span>（其中 <span class="arithmatex">\(c\)</span> 为任意常数），得到 <span class="arithmatex">\(\mathrm{Pr}\Big[\big|X-\mathrm{E}[X]\big|\geq t\Big]\leq 2\mathrm{e}^{-c^2}\)</span>。也就是说，我们可以通过允许 <span class="arithmatex">\(\Theta(\sqrt n)\)</span> 级别的偏移，来得到任意小的常数级别的失败概率。</li>
+</ul>
+<p>至此我们已经说明：该算法可以以很大概率保证抛硬币次数在 <span class="arithmatex">\(n+\Theta(\sqrt n\log n)\)</span> 以内。</p>
+<ul>
+<li>其中 <span class="arithmatex">\(n\)</span> 来自获得初始子集的抛硬币次数；<span class="arithmatex">\(\Theta(\sqrt n\log n)\)</span> 是 <span class="arithmatex">\(\Theta(\sqrt n)\)</span> 次添加/删除元素的总开销。</li>
+</ul>
+<details class="note">
+<summary>计算期望复杂度</summary>
+<p>我们再从另一个角度分析，尝试计算该算法的期望抛硬币次数。</p>
+<p>用 Hoeffding 不等式求第二、第三步中操作次数期望值的上界：</p>
+<div class="arithmatex">\[
+E|X - EX| = \int_0^\infty P\{ |X - E[X]| \geq t \} \mathrm{d}t \leq 
+2 \int_0^\infty \exp \left(-\frac {t^2}{n}\right) \mathrm{d}t=\sqrt{\pi n}
+\]</div>
+<p>从而第二、第三步所需抛硬币次数的期望值是 <span class="arithmatex">\(\sqrt{\pi n}\cdot2\lceil\log_2 n\rceil\)</span>。</p>
+<p>综上，该算法期望需要抛 <span class="arithmatex">\(n+2\sqrt{\pi n}\lceil\log_2 n\rceil\)</span> 次硬币。</p>
+</details>
+</details>
+<h3 id="练习balls-and-bins">练习：Balls and Bins<a class="headerlink" href="#练习balls-and-bins" title="Permanent link"></a></h3>
 <p><span class="arithmatex">\(n\)</span> 个球独立随机地扔到 <span class="arithmatex">\(n\)</span> 个盒子里，试证明：球最多的盒子中的球数以 <span class="arithmatex">\(1 - \dfrac{1}{n}\)</span> 的概率不少于 <span class="arithmatex">\(\Omega \left( \dfrac{\log n}{\log \log n} \right)\)</span>。</p>
 
 
@@ -1499,7 +1495,9 @@ $$
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#素性测试" class="md-skip">
           Skip to content
         </a>
       
@@ -625,7 +625,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#素性测试" class="md-nav__link">
     <span class="md-ellipsis">
       
         素性测试
@@ -637,7 +637,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#试除法" class="md-nav__link">
     <span class="md-ellipsis">
       
         试除法
@@ -648,7 +648,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fermat" class="md-nav__link">
+  <a href="#fermat-素性测试" class="md-nav__link">
     <span class="md-ellipsis">
       
         Fermat 素性测试
@@ -659,7 +659,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#millerrabin" class="md-nav__link">
+  <a href="#millerrabin-素性测试" class="md-nav__link">
     <span class="md-ellipsis">
       
         Miller–Rabin 素性测试
@@ -675,7 +675,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#反素数" class="md-nav__link">
     <span class="md-ellipsis">
       
         反素数
@@ -687,7 +687,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#过程" class="md-nav__link">
     <span class="md-ellipsis">
       
         过程
@@ -698,7 +698,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#例题" class="md-nav__link">
     <span class="md-ellipsis">
       
         例题
@@ -714,7 +714,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#参考资料与注释" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料与注释
@@ -1244,7 +1244,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#素性测试" class="md-nav__link">
     <span class="md-ellipsis">
       
         素性测试
@@ -1256,7 +1256,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#试除法" class="md-nav__link">
     <span class="md-ellipsis">
       
         试除法
@@ -1267,7 +1267,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#fermat" class="md-nav__link">
+  <a href="#fermat-素性测试" class="md-nav__link">
     <span class="md-ellipsis">
       
         Fermat 素性测试
@@ -1278,7 +1278,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#millerrabin" class="md-nav__link">
+  <a href="#millerrabin-素性测试" class="md-nav__link">
     <span class="md-ellipsis">
       
         Miller–Rabin 素性测试
@@ -1294,7 +1294,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#反素数" class="md-nav__link">
     <span class="md-ellipsis">
       
         反素数
@@ -1306,7 +1306,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#过程" class="md-nav__link">
     <span class="md-ellipsis">
       
         过程
@@ -1317,7 +1317,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#例题" class="md-nav__link">
     <span class="md-ellipsis">
       
         例题
@@ -1333,7 +1333,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#参考资料与注释" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料与注释
@@ -1364,100 +1364,162 @@
 
 <p>素数与合数的定义，见 <a href="../basic/">数论基础</a>。</p>
 <p>素数计数函数：小于或等于 <span class="arithmatex">\(x\)</span> 的素数的个数，用 <span class="arithmatex">\(\pi(x)\)</span> 表示。随着 <span class="arithmatex">\(x\)</span> 的增大，有这样的近似结果：<span class="arithmatex">\(\pi(x) \sim \dfrac{x}{\ln(x)}\)</span>。</p>
-<h2 id="_1">素性测试</h2>
+<h2 id="素性测试">素性测试<a class="headerlink" href="#素性测试" title="Permanent link"></a></h2>
 <p><strong>素性测试</strong>（Primality test）可以用于判定所给自然数是否为素数。</p>
 <p>素性测试有两种：</p>
 <ol>
 <li>确定性测试：绝对确定一个数是否为素数。常见例子包括试除法、Lucas–Lehmer 测试和椭圆曲线素性证明。</li>
 <li>概率性测试：通常比确定性测试快很多，但有可能（尽管概率很小）错误地将 <a href="../basic/#素数与合数">合数</a> 识别为质数（尽管反之则不会）。因此，通过概率素性测试的数字被称为 <strong>可能素数</strong>，直到它们的素数可以被确定性地证明。而通过测试但实际上是合数的数字则被称为 <strong>伪素数</strong>。有许多特定类型的伪素数，最常见的是费马伪素数，它们是满足费马小定理的合数。概率性测试的常见例子包括 Miller–Rabin 测试。</li>
 </ol>
-<h3 id="_2">试除法</h3>
+<h3 id="试除法">试除法<a class="headerlink" href="#试除法" title="Permanent link"></a></h3>
 <p>暴力做法自然可以枚举从小到大的每个数看是否能整除。</p>
-<p>???+ example "参考实现"
-    === "C++"
-        <code>cpp
-        bool isPrime(int a) {
-          if (a &lt; 2) return false;
-          for (int i = 2; i &lt; a; ++i)
-            if (a % i == 0) return false;
-          return true;
-        }</code></p>
-<pre><code>=== "Python"
-    ```python
-    def isPrime(a):
-        if a &lt; 2:
-            return False
-        for i in range(2, a):
-            if a % i == 0:
-                return False
-        return True
-    ```
-</code></pre>
+<details class="example" open="open">
+<summary>参考实现</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">isPrime</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">isPrime</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">a</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
 <p>这样做是十分稳妥了，但是真的有必要每个数都去判断吗？</p>
 <p>很容易发现这样一个事实：如果 <span class="arithmatex">\(x\)</span> 是 <span class="arithmatex">\(a\)</span> 的约数，那么 <span class="arithmatex">\(\frac{a}{x}\)</span> 也是 <span class="arithmatex">\(a\)</span> 的约数。</p>
 <p>这个结论告诉我们，对于每一对 <span class="arithmatex">\((x, \frac{a}{x} )\)</span>，只检验其中的一个就足够了。为了方便起见，我们只考察每一对的较小数。不难发现，所有这些较小数都在 <span class="arithmatex">\([1, \sqrt{a}]\)</span> 这个区间里。</p>
 <p>由于 <span class="arithmatex">\(1\)</span> 肯定是约数，所以不检验它。</p>
-<p>???+ example "参考实现"
-    === "C++"
-        <code>cpp
-        bool isPrime(int a) {
-          if (a &lt; 2) return 0;
-          for (int i = 2; (long long)i * i &lt;= a; ++i)  // 防溢出
-            if (a % i == 0) return 0;
-          return 1;
-        }</code></p>
-<pre><code>=== "Python"
-    ```python
-    def isPrime(a):
-        if a &lt; 2:
-            return False
-        for i in range(2, int(sqrt(a)) + 1):
-            if a % i == 0:
-                return False
-        return True
-    ```
-</code></pre>
-<h3 id="fermat">Fermat 素性测试</h3>
+<details class="example" open="open">
+<summary>参考实现</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">isPrime</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">)</span><span class="n">i</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w">  </span><span class="c1">// 防溢出</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">isPrime</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">a</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
+<h3 id="fermat-素性测试">Fermat 素性测试<a class="headerlink" href="#fermat-素性测试" title="Permanent link"></a></h3>
 <p><strong>Fermat 素性检验</strong> 是最简单的概率性素性检验。</p>
 <p>我们可以根据 <a href="../fermat/#费马小定理">费马小定理</a> 得出一种检验素数的思路：</p>
 <p>基本思想是不断地选取在 <span class="arithmatex">\([2, n-1]\)</span> 中的基底 <span class="arithmatex">\(a\)</span>，并检验是否每次都有 <span class="arithmatex">\(a^{n-1} \equiv 1 \pmod n\)</span>。</p>
-<p>???+ example "参考实现"
-    === "C++"
-        <code>cpp
-        bool fermat(int n) {
-          if (n &lt; 3) return n == 2;
-          // test_time 为测试次数,建议设为不小于 8
-          // 的整数以保证正确率,但也不宜过大,否则会影响效率
-          for (int i = 1; i &lt;= test_time; ++i) {
-            int a = rand() % (n - 2) + 2;
-            if (quickPow(a, n - 1, n) != 1) return false;
-          }
-          return true;
-        }</code></p>
-<pre><code>=== "Python"
-    ```python
-    def fermat(n):
-        if n &lt; 3:
-            return n == 2
-        # test_time 为测试次数,建议设为不小于 8
-        # 的整数以保证正确率,但也不宜过大,否则会影响效率
-        for i in range(1, test_time + 1):
-            a = random.randint(0, 32767) % (n - 2) + 2
-            if quickPow(a, n - 1, n) != 1:
-                return False
-        return True
-    ```
-</code></pre>
+<details class="example" open="open">
+<summary>参考实现</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">C++</label><label for="__tabbed_3_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">fermat</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// test_time 为测试次数,建议设为不小于 8</span>
+<span class="w">  </span><span class="c1">// 的整数以保证正确率,但也不宜过大,否则会影响效率</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">test_time</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">quickPow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">fermat</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="c1"># test_time 为测试次数,建议设为不小于 8</span>
+    <span class="c1"># 的整数以保证正确率,但也不宜过大,否则会影响效率</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">test_time</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">32767</span><span class="p">)</span> <span class="o">%</span> <span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="n">quickPow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
 <p>如果 <span class="arithmatex">\(a^{n−1} \equiv 1 \pmod n\)</span> 但 <span class="arithmatex">\(n\)</span> 不是素数，则称 <span class="arithmatex">\(n\)</span> 为以 <span class="arithmatex">\(a\)</span> 为底的 <strong>Fermat 伪素数</strong>。我们在实践中观察到，如果 <span class="arithmatex">\(a^{n−1} \equiv 1 \pmod n\)</span>，那么 <span class="arithmatex">\(n\)</span> 通常是素数。但其实存在反例：对于 <span class="arithmatex">\(n = 341\)</span> 且 <span class="arithmatex">\(a = 2\)</span>，虽然有 <span class="arithmatex">\(2^{340}\equiv 1 {\pmod {341}}\)</span>，但是 <span class="arithmatex">\(341 = 11 \cdot 31\)</span> 是合数。事实上，对于任何固定的基底 <span class="arithmatex">\(a\)</span>，这样的反例都有无穷多个[^inf-fermat-pp]。</p>
 <p>既然对于单个基底，Fermat 素性测试无法保证正确性，一个自然的想法就是多检查几组基底。但是，即使检查了所有可能的与 <span class="arithmatex">\(n\)</span> 互素的基底 <span class="arithmatex">\(a\)</span>，依然无法保证 <span class="arithmatex">\(n\)</span> 是素数。也就是说，费马小定理的逆命题并不成立：即使对于所有 <span class="arithmatex">\(a\perp n\)</span>，都有 <span class="arithmatex">\(a^{n-1}\equiv 1\pmod n\)</span>，<span class="arithmatex">\(n\)</span> 也不一定是素数。这样的数称为 <a href="../primitive-root/#carmichael-数">Carmichael 数</a>。它也有无穷多个。这迫使我们寻找更为严格的素性测试。</p>
-<h3 id="millerrabin">Miller–Rabin 素性测试</h3>
+<h3 id="millerrabin-素性测试">Miller–Rabin 素性测试<a class="headerlink" href="#millerrabin-素性测试" title="Permanent link"></a></h3>
 <p><strong>Miller–Rabin 素性测试</strong>（Miller–Rabin primality test）是更好的素数判定方法。它是由 Miller 和 Rabin 二人根据 Fermat 素性测试优化得到的。和其它概率性素数测试一样，它也只能检测出伪素数。要确保是素数，需要用慢得多的确定性算法。然而，实际上没有已知的数字通过了 Miller–Rabin 测试等高级概率性测试但实际上却是合数，因此我们可以放心使用。</p>
 <p>在不考虑乘法的复杂度时，对数 <span class="arithmatex">\(n\)</span> 进行 <span class="arithmatex">\(k\)</span> 轮测试的时间复杂度是 <span class="arithmatex">\(O(k \log n)\)</span>。Miller–Rabin 素性测试常用于对高精度数进行测试，此时时间复杂度是 <span class="arithmatex">\(O(k \log^3n)\)</span>，利用 FFT 等技术可以优化到 <a href="https://en.wikipedia.org/wiki/Miller%E2%80%93Rabin_primality_test#Complexity"><span class="arithmatex">\(O(k \log^2n \log \log n \log \log \log n)\)</span></a>。</p>
 <p>为了解决 Carmichael 数带来的挑战，Miller–Rabin 素性测试进一步考虑了素数的如下性质：</p>
-<p>???+ note "二次探测定理"
-    如果 <span class="arithmatex">\(p\)</span> 是奇素数，则 <span class="arithmatex">\(x^2 \equiv 1 \pmod p\)</span> 的解为 <span class="arithmatex">\(x \equiv 1 \pmod p\)</span> 或者 <span class="arithmatex">\(x \equiv p - 1 \pmod p\)</span>。</p>
-<p>??? note "证明"
-    容易验证，<span class="arithmatex">\(p\)</span> 为奇素数时，<span class="arithmatex">\(x\equiv 1\pmod p\)</span> 和 <span class="arithmatex">\(x\equiv p-1\pmod p\)</span> 都可以使得上式成立。由 <a href="../congruence-equation/#定理-3lagrange-定理">Lagrange 定理</a> 可知，这就是该方程的所有解。</p>
+<details class="note" open="open">
+<summary>二次探测定理</summary>
+<p>如果 <span class="arithmatex">\(p\)</span> 是奇素数，则 <span class="arithmatex">\(x^2 \equiv 1 \pmod p\)</span> 的解为 <span class="arithmatex">\(x \equiv 1 \pmod p\)</span> 或者 <span class="arithmatex">\(x \equiv p - 1 \pmod p\)</span>。</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>容易验证，<span class="arithmatex">\(p\)</span> 为奇素数时，<span class="arithmatex">\(x\equiv 1\pmod p\)</span> 和 <span class="arithmatex">\(x\equiv p-1\pmod p\)</span> 都可以使得上式成立。由 <a href="../congruence-equation/#定理-3lagrange-定理">Lagrange 定理</a> 可知，这就是该方程的所有解。</p>
+</details>
 <p>将费马小定理和二次探测定理结合起来使用，就得到 Miller–Rabin 素性测试：</p>
 <ol>
 <li>将 <span class="arithmatex">\(a^{n-1} \equiv 1 \pmod n\)</span> 中的指数 <span class="arithmatex">\(n−1\)</span> 分解为 <span class="arithmatex">\(n−1=u \times 2^t\)</span>；</li>
@@ -1471,142 +1533,170 @@
 <li>如果找出了一个非平凡平方根 <span class="arithmatex">\(a^{u \times 2^s} \not\equiv n-1 \pmod n\)</span>，则之后的平方操作全都会得到 <span class="arithmatex">\(1\)</span>。可以选择直接返回 <code>false</code>，也可以放到 <span class="arithmatex">\(t\)</span> 次平方操作后再返回 <code>false</code>。</li>
 </ul>
 <p>这样得到了较正确的 Miller Rabin：（来自 fjzzq2002）</p>
-<p>???+ example "参考实现"
-    === "C++"
-        <code>cpp
-        bool millerRabin(int n) {
-          if (n &lt; 3 || n % 2 == 0) return n == 2;
-          if (n % 3 == 0) return n == 3;
-          int u = n - 1, t = 0;
-          while (u % 2 == 0) u /= 2, ++t;
-          // test_time 为测试次数，建议设为不小于 8
-          // 的整数以保证正确率，但也不宜过大，否则会影响效率
-          for (int i = 0; i &lt; test_time; ++i) {
-            // 0, 1, n-1 可以直接通过测试, a 取值范围 [2, n-2]
-            int a = rand() % (n - 3) + 2, v = quickPow(a, u, n);
-            if (v == 1) continue;
-            int s;
-            for (s = 0; s &lt; t; ++s) {
-              if (v == n - 1) break;  // 得到平凡平方根 n-1，通过此轮测试
-              v = (long long)v * v % n;
-            }
-            // 如果找到了非平凡平方根，则会由于无法提前 break; 而运行到 s == t
-            // 如果 Fermat 素性测试无法通过，则一直运行到 s == t 前 v 都不会等于 -1
-            if (s == t) return 0;
-          }
-          return 1;
-        }</code></p>
-<pre><code>=== "Python"
-    ```python
-    def millerRabin(n):
-        if n &lt; 3 or n % 2 == 0:
-            return n == 2
-        if n % 3 == 0:
-            return n == 3
-        u, t = n - 1, 0
-        while u % 2 == 0:
-            u = u // 2
-            t = t + 1
-        # test_time 为测试次数,建议设为不小于 8
-        # 的整数以保证正确率,但也不宜过大,否则会影响效率
-        for i in range(test_time):
-            # 0, 1, n-1 可以直接通过测试, a 取值范围 [2, n-2]
-            a = random.randint(2, n - 2)
-            v = pow(a, u, n)
-            if v == 1:
-                continue
-            s = 0
-            while s &lt; t:
-                if v == n - 1:
-                    break
-                v = v * v % n
-                s = s + 1
-            # 如果找到了非平凡平方根，则会由于无法提前 break; 而运行到 s == t
-            # 如果 Fermat 素性测试无法通过，则一直运行到 s == t 前 v 都不会等于 -1
-            if s == t:
-                return False
-        return True
-    ```
-</code></pre>
+<details class="example" open="open">
+<summary>参考实现</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">C++</label><label for="__tabbed_4_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kt">bool</span><span class="w"> </span><span class="nf">millerRabin</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">u</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="n">u</span><span class="w"> </span><span class="o">/=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="o">++</span><span class="n">t</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// test_time 为测试次数，建议设为不小于 8</span>
+<span class="w">  </span><span class="c1">// 的整数以保证正确率，但也不宜过大，否则会影响效率</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">test_time</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// 0, 1, n-1 可以直接通过测试, a 取值范围 [2, n-2]</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rand</span><span class="p">()</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">quickPow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">n</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">v</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">break</span><span class="p">;</span><span class="w">  </span><span class="c1">// 得到平凡平方根 n-1，通过此轮测试</span>
+<span class="w">      </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="kt">long</span><span class="p">)</span><span class="n">v</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// 如果找到了非平凡平方根，则会由于无法提前 break; 而运行到 s == t</span>
+<span class="w">    </span><span class="c1">// 如果 Fermat 素性测试无法通过，则一直运行到 s == t 前 v 都不会等于 -1</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">s</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">millerRabin</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">3</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">3</span>
+    <span class="n">u</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">u</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">u</span> <span class="o">=</span> <span class="n">u</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="n">t</span> <span class="o">=</span> <span class="n">t</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="c1"># test_time 为测试次数,建议设为不小于 8</span>
+    <span class="c1"># 的整数以保证正确率,但也不宜过大,否则会影响效率</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">test_time</span><span class="p">):</span>
+        <span class="c1"># 0, 1, n-1 可以直接通过测试, a 取值范围 [2, n-2]</span>
+        <span class="n">a</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">v</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">while</span> <span class="n">s</span> <span class="o">&lt;</span> <span class="n">t</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">v</span> <span class="o">==</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="k">break</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">v</span> <span class="o">*</span> <span class="n">v</span> <span class="o">%</span> <span class="n">n</span>
+            <span class="n">s</span> <span class="o">=</span> <span class="n">s</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="c1"># 如果找到了非平凡平方根，则会由于无法提前 break; 而运行到 s == t</span>
+        <span class="c1"># 如果 Fermat 素性测试无法通过，则一直运行到 s == t 前 v 都不会等于 -1</span>
+        <span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="n">t</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
 <p>可以证明[^millerrabinproof]，奇合数 <span class="arithmatex">\(n &gt; 9\)</span> 通过随机选取的一个基底 <span class="arithmatex">\(a\)</span> 的 Miller–Rabin 素性测试的概率至多为四分之一。因此，随机选取 <span class="arithmatex">\(k\)</span> 个基底后，仍将合数误判为素数的概率不超过 <span class="arithmatex">\(1/4^k\)</span>。</p>
-<p>??? note "证明"
-    设 <span class="arithmatex">\(n-1=u2^t\)</span>，其中，<span class="arithmatex">\(u\)</span> 是奇数且 <span class="arithmatex">\(t\)</span> 是正整数。那么，整数 <span class="arithmatex">\(n\)</span> 可以通过基底为 <span class="arithmatex">\(a\)</span> 的 Miller–Rabin 素性测试说明</p>
-<pre><code>$$
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(n-1=u2^t\)</span>，其中，<span class="arithmatex">\(u\)</span> 是奇数且 <span class="arithmatex">\(t\)</span> 是正整数。那么，整数 <span class="arithmatex">\(n\)</span> 可以通过基底为 <span class="arithmatex">\(a\)</span> 的 Miller–Rabin 素性测试说明</p>
+<div class="arithmatex">\[
 a^u\equiv 1{\textstyle\pmod n},\text{ or }a^{u2^i}\equiv -1{\textstyle\pmod n}\text{ for some }0\le i &lt; t.
-$$
-
-记这样的 $a$（的同余类）集合为 $S$，要说明的是
-
-$$
+\]</div>
+<p>记这样的 <span class="arithmatex">\(a\)</span>（的同余类）集合为 <span class="arithmatex">\(S\)</span>，要说明的是</p>
+<div class="arithmatex">\[
 |S| \le \dfrac14\varphi(n).
-$$
-
-其中，$\varphi(n)$ 是 [欧拉函数](./euler-totient.md)。证明分为三步。
-
-**第一步**：设 $\ell$ 是使得 $2^\ell \mid p-1$ 对所有 $n$ 的素因子 $p$ 都成立的最大正整数。那么，可以证明
-
-$$
+\]</div>
+<p>其中，<span class="arithmatex">\(\varphi(n)\)</span> 是 <a href="../euler-totient/">欧拉函数</a>。证明分为三步。</p>
+<p><strong>第一步</strong>：设 <span class="arithmatex">\(\ell\)</span> 是使得 <span class="arithmatex">\(2^\ell \mid p-1\)</span> 对所有 <span class="arithmatex">\(n\)</span> 的素因子 <span class="arithmatex">\(p\)</span> 都成立的最大正整数。那么，可以证明</p>
+<div class="arithmatex">\[
 S\subseteq S' = \{a\bmod n:a^{u2^{\ell-1}}\equiv\pm 1{\textstyle\pmod n}\}.
-$$
-
-集合 $S$ 中的元素 $a$ 只有两种可能。如果 $a^u\equiv 1\pmod n$，那么，显然 $a^{u2^{\ell-1}}\equiv 1\pmod n$ 也成立，亦即 $a\in S'$。如果对于 $0\le i &lt; t$ 成立 $a^{u2^i}\equiv -1\pmod n$，那么，对于任意素因子 $p\mid n$，都有 $a^{u2^i}\equiv-1\pmod p$。设 $\delta_p(a)$ 是 $a$ 模 $p$ 的 [阶](./primitive-root.md#阶)，那么，显然有 $\delta_p(a)\mid u2^{i+1}$ 但是 $\delta_p(a)\nmid u2^{i}$，这说明，$\delta_p(a)$ 的素因数分解中，$2$ 的指数恰为 $i+1$，因而 $2^{i+1}\mid\delta_p(a)$。由费马小定理可知，$\delta_p(a)\mid p-1$，所以，$2^{i+1}\mid p-1$。这一点对于 $n$ 的所有素因子 $p$ 都成立。因此，$i+1\le\ell$。这说明 $a^{u2^{\ell-1}} = (a^{u2^i})^{2^{\ell-1-i}} \equiv \pm 1 \pmod n$，同样有 $a\in S'$。综合两种可能，就得到 $S\subseteq S'$。
-
-**第二步**：计算 $|S'|$ 的大小。
-
-假设 $n$ 有素因数分解 $n = p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$，那么，由 [中国剩余定理](./crt.md) 可知，条件 $a^{u2^{\ell - 1}}\equiv 1\pmod n$ 等价于 $a^{u2^{\ell - 1}}\equiv 1\pmod{p_i^{e_i}}$ 对所有 $p_i^{e_i}$ 都成立。由于模奇素数幂 $p_i^{e_i}$ 的 [原根](./primitive-root.md#原根) 总是存在的，所以，同余方程 $a^{u2^{\ell - 1}}\equiv 1\pmod{p_i^{e_i}}$ 的 [解的数量](./residue.md#性质) 为
-
-$$
+\]</div>
+<p>集合 <span class="arithmatex">\(S\)</span> 中的元素 <span class="arithmatex">\(a\)</span> 只有两种可能。如果 <span class="arithmatex">\(a^u\equiv 1\pmod n\)</span>，那么，显然 <span class="arithmatex">\(a^{u2^{\ell-1}}\equiv 1\pmod n\)</span> 也成立，亦即 <span class="arithmatex">\(a\in S'\)</span>。如果对于 <span class="arithmatex">\(0\le i &lt; t\)</span> 成立 <span class="arithmatex">\(a^{u2^i}\equiv -1\pmod n\)</span>，那么，对于任意素因子 <span class="arithmatex">\(p\mid n\)</span>，都有 <span class="arithmatex">\(a^{u2^i}\equiv-1\pmod p\)</span>。设 <span class="arithmatex">\(\delta_p(a)\)</span> 是 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(p\)</span> 的 <a href="../primitive-root/#阶">阶</a>，那么，显然有 <span class="arithmatex">\(\delta_p(a)\mid u2^{i+1}\)</span> 但是 <span class="arithmatex">\(\delta_p(a)\nmid u2^{i}\)</span>，这说明，<span class="arithmatex">\(\delta_p(a)\)</span> 的素因数分解中，<span class="arithmatex">\(2\)</span> 的指数恰为 <span class="arithmatex">\(i+1\)</span>，因而 <span class="arithmatex">\(2^{i+1}\mid\delta_p(a)\)</span>。由费马小定理可知，<span class="arithmatex">\(\delta_p(a)\mid p-1\)</span>，所以，<span class="arithmatex">\(2^{i+1}\mid p-1\)</span>。这一点对于 <span class="arithmatex">\(n\)</span> 的所有素因子 <span class="arithmatex">\(p\)</span> 都成立。因此，<span class="arithmatex">\(i+1\le\ell\)</span>。这说明 <span class="arithmatex">\(a^{u2^{\ell-1}} = (a^{u2^i})^{2^{\ell-1-i}} \equiv \pm 1 \pmod n\)</span>，同样有 <span class="arithmatex">\(a\in S'\)</span>。综合两种可能，就得到 <span class="arithmatex">\(S\subseteq S'\)</span>。</p>
+<p><strong>第二步</strong>：计算 <span class="arithmatex">\(|S'|\)</span> 的大小。</p>
+<p>假设 <span class="arithmatex">\(n\)</span> 有素因数分解 <span class="arithmatex">\(n = p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}\)</span>，那么，由 <a href="../crt/">中国剩余定理</a> 可知，条件 <span class="arithmatex">\(a^{u2^{\ell - 1}}\equiv 1\pmod n\)</span> 等价于 <span class="arithmatex">\(a^{u2^{\ell - 1}}\equiv 1\pmod{p_i^{e_i}}\)</span> 对所有 <span class="arithmatex">\(p_i^{e_i}\)</span> 都成立。由于模奇素数幂 <span class="arithmatex">\(p_i^{e_i}\)</span> 的 <a href="../primitive-root/#原根">原根</a> 总是存在的，所以，同余方程 <span class="arithmatex">\(a^{u2^{\ell - 1}}\equiv 1\pmod{p_i^{e_i}}\)</span> 的 <a href="../residue/#性质">解的数量</a> 为</p>
+<div class="arithmatex">\[
 \gcd(u2^{\ell-1},p_i^{e_i-1}(p_i-1)) = \gcd(u2^{\ell-1},p_i-1) = 2^{\ell-1}\gcd(u,p_i-1).
-$$
-
-第一个等号成立，是因为 $u$ 是 $n-1$ 的因子，不可能是 $p_i$ 的倍数；第二个等号成立，是因为 $\ell$ 的选取方式。所以，由中国剩余定理可知，同余方程 $a^{u2^{\ell-1}}\equiv 1\pmod n$ 的解的数量为
-
-$$
+\]</div>
+<p>第一个等号成立，是因为 <span class="arithmatex">\(u\)</span> 是 <span class="arithmatex">\(n-1\)</span> 的因子，不可能是 <span class="arithmatex">\(p_i\)</span> 的倍数；第二个等号成立，是因为 <span class="arithmatex">\(\ell\)</span> 的选取方式。所以，由中国剩余定理可知，同余方程 <span class="arithmatex">\(a^{u2^{\ell-1}}\equiv 1\pmod n\)</span> 的解的数量为</p>
+<div class="arithmatex">\[
 \prod_{p\mid n}2^{\ell-1}\gcd(u,p-1).
-$$
-
-同理，条件 $a^{u2^{\ell - 1}}\equiv -1\pmod n$ 等价于 $a^{u2^{\ell - 1}}\equiv -1\pmod{p_i^{e_i}}$ 对所有 $p_i^{e_i}$ 都成立。对于任意因子 $p_i^{e_i}$，条件 $a^{u2^{\ell - 1}}\equiv -1\pmod{p_i^{e_i}}$ 都等价于 $a^{u2^{\ell - 1}}\not\equiv 1\pmod{p_i^{e_i}}$ 且 $a^{u2^{\ell}}\equiv 1\pmod{p_i^{e_i}}$ 成立。类似上文，可以计算出同余方程 $a^{u2^{\ell}}\equiv 1\pmod{p_i^{e_i}}$ 的解的数量为 $2^{\ell}\gcd(u,p_i-1)$，因此，同余方程 $a^{u2^{\ell - 1}}\equiv -1\pmod{p_i^{e_i}}$ 的解的数量也等于
-
-$$
+\]</div>
+<p>同理，条件 <span class="arithmatex">\(a^{u2^{\ell - 1}}\equiv -1\pmod n\)</span> 等价于 <span class="arithmatex">\(a^{u2^{\ell - 1}}\equiv -1\pmod{p_i^{e_i}}\)</span> 对所有 <span class="arithmatex">\(p_i^{e_i}\)</span> 都成立。对于任意因子 <span class="arithmatex">\(p_i^{e_i}\)</span>，条件 <span class="arithmatex">\(a^{u2^{\ell - 1}}\equiv -1\pmod{p_i^{e_i}}\)</span> 都等价于 <span class="arithmatex">\(a^{u2^{\ell - 1}}\not\equiv 1\pmod{p_i^{e_i}}\)</span> 且 <span class="arithmatex">\(a^{u2^{\ell}}\equiv 1\pmod{p_i^{e_i}}\)</span> 成立。类似上文，可以计算出同余方程 <span class="arithmatex">\(a^{u2^{\ell}}\equiv 1\pmod{p_i^{e_i}}\)</span> 的解的数量为 <span class="arithmatex">\(2^{\ell}\gcd(u,p_i-1)\)</span>，因此，同余方程 <span class="arithmatex">\(a^{u2^{\ell - 1}}\equiv -1\pmod{p_i^{e_i}}\)</span> 的解的数量也等于</p>
+<div class="arithmatex">\[
 2^{\ell}\gcd(u,p_i-1) - 2^{\ell-1}\gcd(u,p_i-1) = 2^{\ell-1}\gcd(u,p_i-1).
-$$
-
-再次应用中国剩余定理，就得到同余方程 $a^{u2^{\ell - 1}}\equiv -1\pmod n$ 的解的数量等于
-
-$$
+\]</div>
+<p>再次应用中国剩余定理，就得到同余方程 <span class="arithmatex">\(a^{u2^{\ell - 1}}\equiv -1\pmod n\)</span> 的解的数量等于</p>
+<div class="arithmatex">\[
 \prod_{p\mid n}2^{\ell-1}\gcd(u,p-1).
-$$
-
-因此，综合两种情形，有
-
-$$
+\]</div>
+<p>因此，综合两种情形，有</p>
+<div class="arithmatex">\[
 |S'| = 2\prod_{p\mid n}2^{\ell-1}\gcd(u,p-1).
-$$
-
-**第三步**：证明 $|S'|\le\varphi(n)/4$．
-
-结合欧拉函数的表达式 $\varphi(n)=\prod_ip_i^{e_i-1}(p_i-1)$ 可知
-
-$$
+\]</div>
+<p><strong>第三步</strong>：证明 <span class="arithmatex">\(|S'|\le\varphi(n)/4\)</span>．</p>
+<p>结合欧拉函数的表达式 <span class="arithmatex">\(\varphi(n)=\prod_ip_i^{e_i-1}(p_i-1)\)</span> 可知</p>
+<div class="arithmatex">\[
 \dfrac{\varphi(n)}{|S'|} = \dfrac{1}{2}\prod_ip_i^{e_i-1}\dfrac{p_i-1}{2^{\ell-1}\gcd(u,p_i-1)}.
-$$
-
-对于每一个 $i$，相应的因子 $p_i^{e_i-1}\dfrac{p_i-1}{2^{\ell-1}\gcd(u,p_i-1)}$ 都是一个偶数，所以，$\varphi(n)/|S'|$ 是一个整数。假设 $|S'|\le\varphi(n)/4$ 不成立。必然有 $\varphi(n)/|S'|=1,2,3$，亦即
-
-$$
+\]</div>
+<p>对于每一个 <span class="arithmatex">\(i\)</span>，相应的因子 <span class="arithmatex">\(p_i^{e_i-1}\dfrac{p_i-1}{2^{\ell-1}\gcd(u,p_i-1)}\)</span> 都是一个偶数，所以，<span class="arithmatex">\(\varphi(n)/|S'|\)</span> 是一个整数。假设 <span class="arithmatex">\(|S'|\le\varphi(n)/4\)</span> 不成立。必然有 <span class="arithmatex">\(\varphi(n)/|S'|=1,2,3\)</span>，亦即</p>
+<div class="arithmatex">\[
 \prod_ip_i^{e_i-1}\dfrac{p_i-1}{2^{\ell-1}\gcd(u,p_i-1)} = 2,4,6.
-$$
-
-由于连乘式中的每个因子都是偶数，所以，这个连乘式要么只有一个因子且这个因子就等于 $2,4,6$，要么就只有两个因子且都等于 $2$。
-
-首先考虑有两个因子的情形。此时，两个因子都没有奇素因子，所以，$p_i^{e_i-1}=1$，亦即 $n$ 没有平方因子。不妨设 $n=p_1p_2$ 且 $p_1&lt;p_2$ 都是素数。两个因子都等于 $2$，所以，总有 $p_i-1=2^{\ell}\gcd(u,p_i-1)$。因此，$p_i=1+2^\ell m_i$，其中，$m_i$ 是奇数，而且 $m_i\mid u$。将 $p_1p_2=n=1+u2^t$ 对 $m_1$ 取模就得到 $p_1p_2\equiv 1\pmod{m_1}$，故而 $p_2\equiv 1\pmod{m_1}$，这说明，$m_1\mid m_2$。反过来也成立。这就说明 $m_1=m_2$，也就是 $p_1=p_2$。这与 $p_1&lt;p_2$ 矛盾。这一情形不成立。
-
-最后，考虑只有一个因子的情形，亦即合数 $n=p^e$ 且 $e&gt;1$。此时，必然有 $p^{e-1}\mid 2,4,6$。因此，唯一的情形是 $p=3,e=2$，亦即 $n=9$，与命题所设相矛盾。这一情形也不成立。
-
-综合所有情形可知，$|S'|\le\varphi(n)/4$ 成立。
-
-结合上述三个步骤可知，$|S|\le |S'|\le \varphi(n)/4$ 对于所有奇合数 $n&gt;9$ 都成立。
-</code></pre>
+\]</div>
+<p>由于连乘式中的每个因子都是偶数，所以，这个连乘式要么只有一个因子且这个因子就等于 <span class="arithmatex">\(2,4,6\)</span>，要么就只有两个因子且都等于 <span class="arithmatex">\(2\)</span>。</p>
+<p>首先考虑有两个因子的情形。此时，两个因子都没有奇素因子，所以，<span class="arithmatex">\(p_i^{e_i-1}=1\)</span>，亦即 <span class="arithmatex">\(n\)</span> 没有平方因子。不妨设 <span class="arithmatex">\(n=p_1p_2\)</span> 且 <span class="arithmatex">\(p_1&lt;p_2\)</span> 都是素数。两个因子都等于 <span class="arithmatex">\(2\)</span>，所以，总有 <span class="arithmatex">\(p_i-1=2^{\ell}\gcd(u,p_i-1)\)</span>。因此，<span class="arithmatex">\(p_i=1+2^\ell m_i\)</span>，其中，<span class="arithmatex">\(m_i\)</span> 是奇数，而且 <span class="arithmatex">\(m_i\mid u\)</span>。将 <span class="arithmatex">\(p_1p_2=n=1+u2^t\)</span> 对 <span class="arithmatex">\(m_1\)</span> 取模就得到 <span class="arithmatex">\(p_1p_2\equiv 1\pmod{m_1}\)</span>，故而 <span class="arithmatex">\(p_2\equiv 1\pmod{m_1}\)</span>，这说明，<span class="arithmatex">\(m_1\mid m_2\)</span>。反过来也成立。这就说明 <span class="arithmatex">\(m_1=m_2\)</span>，也就是 <span class="arithmatex">\(p_1=p_2\)</span>。这与 <span class="arithmatex">\(p_1&lt;p_2\)</span> 矛盾。这一情形不成立。</p>
+<p>最后，考虑只有一个因子的情形，亦即合数 <span class="arithmatex">\(n=p^e\)</span> 且 <span class="arithmatex">\(e&gt;1\)</span>。此时，必然有 <span class="arithmatex">\(p^{e-1}\mid 2,4,6\)</span>。因此，唯一的情形是 <span class="arithmatex">\(p=3,e=2\)</span>，亦即 <span class="arithmatex">\(n=9\)</span>，与命题所设相矛盾。这一情形也不成立。</p>
+<p>综合所有情形可知，<span class="arithmatex">\(|S'|\le\varphi(n)/4\)</span> 成立。</p>
+<p>结合上述三个步骤可知，<span class="arithmatex">\(|S|\le |S'|\le \varphi(n)/4\)</span> 对于所有奇合数 <span class="arithmatex">\(n&gt;9\)</span> 都成立。</p>
+</details>
 <p>另外，假设 <a href="https://en.wikipedia.org/wiki/Generalized_Riemann_hypothesis">广义 Riemann 猜想</a>（generalized Riemann hypothesis, GRH）成立，则对数 <span class="arithmatex">\(n\)</span> 最多只需要测试 <span class="arithmatex">\([2, \min\{n-2, \lfloor 2\ln^2 n \rfloor\}]\)</span> 中的全部整数即可 <strong>确定</strong> 数 <span class="arithmatex">\(n\)</span> 的素性。[^deterministic-proof]</p>
 <p>而在 OI 范围内，通常都是对 <span class="arithmatex">\([1, 2^{64})\)</span> 范围内的数进行素性检验。对于 <span class="arithmatex">\([1, 2^{32})\)</span> 范围内的数，选取 <span class="arithmatex">\(\{2, 7, 61\}\)</span> 三个数作为基底进行 Miller–Rabin 素性检验就可以确定素性；对于 <span class="arithmatex">\([1, 2^{64})\)</span> 范围内的数，选取 <span class="arithmatex">\(\{2, 325, 9375, 28178, 450775, 9780504, 1795265022\}\)</span> 七个数作为基底进行 Miller–Rabin 素性检验就可以确定素性。[^witnesses]</p>
 <p>也可以选取 <span class="arithmatex">\(\{2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37\}\)</span>（即前 <span class="arithmatex">\(12\)</span> 个素数）检验 <span class="arithmatex">\([1, 2^{64})\)</span> 范围内的素数。</p>
@@ -1616,14 +1706,18 @@ $$
 <li>把 <span class="arithmatex">\(a\)</span> 换成 <span class="arithmatex">\(a \bmod n\)</span>；</li>
 <li>如果 <span class="arithmatex">\(a \equiv 0 \pmod n\)</span> 或 <span class="arithmatex">\(a \equiv \pm 1 \pmod n\)</span>，则直接通过该轮测试。</li>
 </ul>
-<h2 id="_3">反素数</h2>
+<h2 id="反素数">反素数<a class="headerlink" href="#反素数" title="Permanent link"></a></h2>
 <p>顾名思义，素数就是因子只有两个的数，那么反素数，就是因子最多的数（并且因子个数相同的时候值最小），所以反素数是相对于一个集合来说的。</p>
 <p>一种符合直觉的反素数定义是：在一个正整数集合中，因子最多并且值最小的数，就是反素数。</p>
-<p>???+ abstract "反素数"
-    对于某个正整数 <span class="arithmatex">\(n\)</span>，如果任何小于 <span class="arithmatex">\(n\)</span> 的正数的约数个数都小于 <span class="arithmatex">\(n\)</span> 的约数个数，则称为是 <strong>反素数</strong>（anti-prime, a.k.a., highly compositive numbers）。</p>
-<p>???+ warning "注意"
-    注意区分 <a href="https://en.wikipedia.org/wiki/Emirp">emirp</a>，它表示的是逐位反转后是不同素数的素数（如 149 和 941 均为 emirp，101 不是 emirp）。</p>
-<h3 id="_4">过程</h3>
+<details class="abstract" open="open">
+<summary>反素数</summary>
+<p>对于某个正整数 <span class="arithmatex">\(n\)</span>，如果任何小于 <span class="arithmatex">\(n\)</span> 的正数的约数个数都小于 <span class="arithmatex">\(n\)</span> 的约数个数，则称为是 <strong>反素数</strong>（anti-prime, a.k.a., highly compositive numbers）。</p>
+</details>
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>注意区分 <a href="https://en.wikipedia.org/wiki/Emirp">emirp</a>，它表示的是逐位反转后是不同素数的素数（如 149 和 941 均为 emirp，101 不是 emirp）。</p>
+</details>
+<h3 id="过程">过程<a class="headerlink" href="#过程" title="Permanent link"></a></h3>
 <p>那么，如何来求解反素数呢？</p>
 <p>首先，既然要求因子数，首先要做的就是素因子分解。把 <span class="arithmatex">\(n\)</span> 分解成 <span class="arithmatex">\(n=p_{1}^{k_{1}}p_{2}^{k_{2}} \cdots p_{n}^{k_{n}}\)</span> 的形式，其中 <span class="arithmatex">\(p\)</span> 是素数，<span class="arithmatex">\(k\)</span> 为他的指数。这样的话总因子个数就是 <span class="arithmatex">\((k_1+1) \times (k_2+1) \times (k_3+1) \cdots \times (k_n+1)\)</span>。</p>
 <p>但是显然质因子分解的复杂度是很高的，并且前一个数的结果不能被后面利用。所以要换个方法。</p>
@@ -1673,22 +1767,34 @@ $$
 </li>
 </ol>
 <p>然后 dfs 里面不断一层一层枚举次数继续往下迭代可以。</p>
-<h3 id="_5">例题</h3>
-<p>???+ example "<a href="https://codeforces.com/problemset/problem/27/E">Codeforces 27E. A number with a given number of divisors</a>"
-    求具有给定除数个数的最小自然数。答案保证不超过 <span class="arithmatex">\(10^{18}\)</span>。</p>
-<p>??? note "解题思路"
-    对于这种题，我们只要以因子数为 dfs 的返回条件基准，不断更新找到的最小值就可以了。</p>
-<p>??? note "参考代码"
-    <code>cpp
-    --8&lt;-- "docs/math/code/prime/prime_1.cpp"</code></p>
-<p>???+ example "<a href="https://pintia.cn/problem-sets/91827364500/exam/problems/type/7?problemSetProblemId=91827366061">ZOJ 2562 More Divisors</a>"
-    求不超过 <span class="arithmatex">\(n\)</span> 的数中，除数最多的数。</p>
-<p>??? note "解题思路"
-    思路同上，只不过要改改 dfs 的返回条件。注意这样的题目的数据范围，32 位整数可能溢出。</p>
-<p>??? note "参考代码"
-    <code>cpp
-    --8&lt;-- "docs/math/code/prime/prime_2.cpp"</code></p>
-<h2 id="_6">参考资料与注释</h2>
+<h3 id="例题">例题<a class="headerlink" href="#例题" title="Permanent link"></a></h3>
+<details class="example" open="open">
+<summary><a href="https://codeforces.com/problemset/problem/27/E">Codeforces 27E. A number with a given number of divisors</a></summary>
+<p>求具有给定除数个数的最小自然数。答案保证不超过 <span class="arithmatex">\(10^{18}\)</span>。</p>
+</details>
+<details class="note">
+<summary>解题思路</summary>
+<p>对于这种题，我们只要以因子数为 dfs 的返回条件基准，不断更新找到的最小值就可以了。</p>
+</details>
+<details class="note">
+<summary>参考代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/prime/prime_1.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<details class="example" open="open">
+<summary><a href="https://pintia.cn/problem-sets/91827364500/exam/problems/type/7?problemSetProblemId=91827366061">ZOJ 2562 More Divisors</a></summary>
+<p>求不超过 <span class="arithmatex">\(n\)</span> 的数中，除数最多的数。</p>
+</details>
+<details class="note">
+<summary>解题思路</summary>
+<p>思路同上，只不过要改改 dfs 的返回条件。注意这样的题目的数据范围，32 位整数可能溢出。</p>
+</details>
+<details class="note">
+<summary>参考代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/prime/prime_2.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="参考资料与注释">参考资料与注释<a class="headerlink" href="#参考资料与注释" title="Permanent link"></a></h2>
 <ol>
 <li>Rui-Juan Jing, Marc Moreno-Maza, Delaram Talaashrafi, "<a href="https://arxiv.org/abs/1811.01510">Complexity Estimates for Fourier-Motzkin Elimination</a>", Journal of Functional Programming 16:2 (2006) pp 197-217.</li>
 <li><a href="http://www.matrix67.com/blog/archives/234">数论部分第一节：素数与素性测试</a></li>
@@ -1760,7 +1866,9 @@ $$
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

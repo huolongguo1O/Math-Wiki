@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#定义" class="md-skip">
           Skip to content
         </a>
       
@@ -849,7 +849,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#定义" class="md-nav__link">
     <span class="md-ellipsis">
       
         定义
@@ -860,7 +860,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#素数幂模同余方程" class="md-nav__link">
     <span class="md-ellipsis">
       
         素数幂模同余方程
@@ -871,7 +871,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#素数模同余方程" class="md-nav__link">
     <span class="md-ellipsis">
       
         素数模同余方程
@@ -882,7 +882,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#高次同余方程组的求解方法" class="md-nav__link">
     <span class="md-ellipsis">
       
         高次同余方程（组）的求解方法
@@ -893,7 +893,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#参考资料" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料
@@ -1199,7 +1199,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#定义" class="md-nav__link">
     <span class="md-ellipsis">
       
         定义
@@ -1210,7 +1210,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#素数幂模同余方程" class="md-nav__link">
     <span class="md-ellipsis">
       
         素数幂模同余方程
@@ -1221,7 +1221,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#素数模同余方程" class="md-nav__link">
     <span class="md-ellipsis">
       
         素数模同余方程
@@ -1232,7 +1232,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#高次同余方程组的求解方法" class="md-nav__link">
     <span class="md-ellipsis">
       
         高次同余方程（组）的求解方法
@@ -1243,7 +1243,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#参考资料" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料
@@ -1272,23 +1272,21 @@
 
   <h1>同余方程</h1>
 
-<h2 id="_1">定义</h2>
-<p>???+ abstract "同余方程"
-    对正整数 <span class="arithmatex">\(m\)</span> 和一元整系数多项式 <span class="arithmatex">\(f(x)=\sum_{i=0}^n a_ix^i\)</span>，其中未知数 <span class="arithmatex">\(x\in\mathbf{Z}_m\)</span>，称形如</p>
-<pre><code>$$
+<h2 id="定义">定义<a class="headerlink" href="#定义" title="Permanent link"></a></h2>
+<details class="abstract" open="open">
+<summary>同余方程</summary>
+<p>对正整数 <span class="arithmatex">\(m\)</span> 和一元整系数多项式 <span class="arithmatex">\(f(x)=\sum_{i=0}^n a_ix^i\)</span>，其中未知数 <span class="arithmatex">\(x\in\mathbf{Z}_m\)</span>，称形如</p>
+<div class="arithmatex">\[
 f(x)\equiv 0\pmod m\tag{1}
-$$
-
-的方程为关于未知数 $x$ 的模 $m$ 的一元 **同余方程**（Congruence Equation）．
-
-若 $a_n\not\equiv 0\pmod m$，则称上式为 $n$ 次同余方程．
-
-类似可定义同余方程组．
-</code></pre>
+\]</div>
+<p>的方程为关于未知数 <span class="arithmatex">\(x\)</span> 的模 <span class="arithmatex">\(m\)</span> 的一元 <strong>同余方程</strong>（Congruence Equation）．</p>
+<p>若 <span class="arithmatex">\(a_n\not\equiv 0\pmod m\)</span>，则称上式为 <span class="arithmatex">\(n\)</span> 次同余方程．</p>
+<p>类似可定义同余方程组．</p>
+</details>
 <p>关于一次同余方程与方程组的相关内容请参见 <a href="../linear-equation/">线性同余方程</a> 与 <a href="../crt/">中国剩余定理</a>．</p>
 <p>本文首先研究同余方程的可解性和解集结构，之后会简要介绍高次同余方程的解法．</p>
 <p>由 <a href="../crt/">中国剩余定理</a> 可知，求解关于模合数 <span class="arithmatex">\(m\)</span> 的同余方程可转化为求解模素数幂次的情况．故以下只介绍素数幂模同余方程和素数模同余方程的相关理论．</p>
-<h2 id="_2">素数幂模同余方程</h2>
+<h2 id="素数幂模同余方程">素数幂模同余方程<a class="headerlink" href="#素数幂模同余方程" title="Permanent link"></a></h2>
 <p>以下假设模数 <span class="arithmatex">\(m=p^e~(p\in\mathbf{P},~e\in\mathbf{Z}_{&gt;1})\)</span>．</p>
 <p>注意到，若 <span class="arithmatex">\(x_0\)</span> 是方程</p>
 <div class="arithmatex">\[
@@ -1300,215 +1298,227 @@ f(x)\equiv 0\pmod{p^{e-1}}
 \]</div>
 <p>的解．这启发我们尝试通过较低的模幂次的解去构造较高的模幂次的解．我们有如下定理：</p>
 <p><a id="定理-1"></a></p>
-<p>???+ note "定理 1（Hensel 引理）"
-    对素数 <span class="arithmatex">\(p\)</span> 和整数 <span class="arithmatex">\(e&gt;1\)</span>，取整系数多项式 <span class="arithmatex">\(f(x)=\sum_{i=0}^na_ix^i~(p^e\nmid a_n)\)</span>，令 <span class="arithmatex">\(f'(x)=\sum_{i=1}^nia_ix^{i-1}\)</span> 为其导数．令 <span class="arithmatex">\(x_0\)</span> 为方程</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理 1（Hensel 引理）</summary>
+<p>对素数 <span class="arithmatex">\(p\)</span> 和整数 <span class="arithmatex">\(e&gt;1\)</span>，取整系数多项式 <span class="arithmatex">\(f(x)=\sum_{i=0}^na_ix^i~(p^e\nmid a_n)\)</span>，令 <span class="arithmatex">\(f'(x)=\sum_{i=1}^nia_ix^{i-1}\)</span> 为其导数．令 <span class="arithmatex">\(x_0\)</span> 为方程</p>
+<div class="arithmatex">\[
 f(x)\equiv 0\pmod{p^{e-1}}\tag{2}
-$$
-
-的解，则：
-
-1.  若 $f'(x_0)\not\equiv 0\pmod p$，则存在整数 $t$ 使得
-
-    $$
-    x=x_0+p^{e-1}t \tag{3}
-    $$
-
-    是方程
-
-    $$
-    f(x)\equiv 0\pmod{p^e} \tag{4}
-    $$
-
-    的解．
-2.  若 $f'(x_0)\equiv 0\pmod p$ 且 $f(x_0)\equiv 0\pmod{p^e}$，则对 $t=0,1,\dots,p-1$，由式 $(3)$ 确定的 $x$ 均为方程 $(4)$ 的解．
-3.  若 $f'(x_0)\equiv 0\pmod p$ 且 $f(x_0)\not\equiv 0\pmod{p^e}$，则不能由式 $(3)$ 构造方程 $(4)$ 的解．
-</code></pre>
-<p>???+ note "证明"
-    我们假设式 <span class="arithmatex">\((3)\)</span> 是方程 <span class="arithmatex">\((4)\)</span> 的解，即</p>
-<pre><code>$$
+\]</div>
+<p>的解，则：</p>
+<ol>
+<li>
+<p>若 <span class="arithmatex">\(f'(x_0)\not\equiv 0\pmod p\)</span>，则存在整数 <span class="arithmatex">\(t\)</span> 使得</p>
+<div class="arithmatex">\[
+x=x_0+p^{e-1}t \tag{3}
+\]</div>
+<p>是方程</p>
+<div class="arithmatex">\[
+f(x)\equiv 0\pmod{p^e} \tag{4}
+\]</div>
+<p>的解．</p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(f'(x_0)\equiv 0\pmod p\)</span> 且 <span class="arithmatex">\(f(x_0)\equiv 0\pmod{p^e}\)</span>，则对 <span class="arithmatex">\(t=0,1,\dots,p-1\)</span>，由式 <span class="arithmatex">\((3)\)</span> 确定的 <span class="arithmatex">\(x\)</span> 均为方程 <span class="arithmatex">\((4)\)</span> 的解．</p>
+</li>
+<li>若 <span class="arithmatex">\(f'(x_0)\equiv 0\pmod p\)</span> 且 <span class="arithmatex">\(f(x_0)\not\equiv 0\pmod{p^e}\)</span>，则不能由式 <span class="arithmatex">\((3)\)</span> 构造方程 <span class="arithmatex">\((4)\)</span> 的解．</li>
+</ol>
+</details>
+<details class="note" open="open">
+<summary>证明</summary>
+<p>我们假设式 <span class="arithmatex">\((3)\)</span> 是方程 <span class="arithmatex">\((4)\)</span> 的解，即</p>
+<div class="arithmatex">\[
 f(x_0+p^{e-1}t)\equiv 0\pmod{p^e}
-$$
-
-整理后可得
-
-$$
+\]</div>
+<p>整理后可得</p>
+<div class="arithmatex">\[
 f(x_0)+p^{e-1}tf'(x_0)\equiv 0\pmod{p^e}
-$$
-
-于是
-
-$$
+\]</div>
+<p>于是</p>
+<div class="arithmatex">\[
 tf'(x_0)\equiv -\frac{f(x_0)}{p^{e-1}}\pmod p\tag{5}
-$$
-
-1.  若 $f'(x_0)\not\equiv 0\pmod p$，则关于 $t$ 的方程 $(5)$ 有唯一解 $t_0$，代入式 $(3)$ 可验证其为方程 $(4)$ 的解．
-2.  若 $f'(x_0)\equiv 0\pmod p$ 且 $f(x_0)\equiv 0\pmod{p^e}$，则任意 $t$ 均能使方程 $(5)$ 成立，代入式 $(3)$ 可验证其均为方程 $(4)$ 的解．
-3.  若 $f'(x_0)\equiv 0\pmod p$ 且 $f(x_0)\not\equiv 0\pmod{p^e}$，则方程 $(5)$ 无解，从而不能由式 $(3)$ 构造方程 $(4)$ 的解．
-</code></pre>
+\]</div>
+<ol>
+<li>若 <span class="arithmatex">\(f'(x_0)\not\equiv 0\pmod p\)</span>，则关于 <span class="arithmatex">\(t\)</span> 的方程 <span class="arithmatex">\((5)\)</span> 有唯一解 <span class="arithmatex">\(t_0\)</span>，代入式 <span class="arithmatex">\((3)\)</span> 可验证其为方程 <span class="arithmatex">\((4)\)</span> 的解．</li>
+<li>若 <span class="arithmatex">\(f'(x_0)\equiv 0\pmod p\)</span> 且 <span class="arithmatex">\(f(x_0)\equiv 0\pmod{p^e}\)</span>，则任意 <span class="arithmatex">\(t\)</span> 均能使方程 <span class="arithmatex">\((5)\)</span> 成立，代入式 <span class="arithmatex">\((3)\)</span> 可验证其均为方程 <span class="arithmatex">\((4)\)</span> 的解．</li>
+<li>若 <span class="arithmatex">\(f'(x_0)\equiv 0\pmod p\)</span> 且 <span class="arithmatex">\(f(x_0)\not\equiv 0\pmod{p^e}\)</span>，则方程 <span class="arithmatex">\((5)\)</span> 无解，从而不能由式 <span class="arithmatex">\((3)\)</span> 构造方程 <span class="arithmatex">\((4)\)</span> 的解．</li>
+</ol>
+</details>
 <p>进而我们有推论：</p>
 <p><a id="推论-1"></a></p>
-<p>???+ note "推论 1"
-    对 <a href="#定理-1">定理 1</a> 的 <span class="arithmatex">\(p\)</span>，<span class="arithmatex">\(e\)</span>，<span class="arithmatex">\(f(x)\)</span>，<span class="arithmatex">\(x_0\)</span>，</p>
-<pre><code>1.  若 $s$ 是方程 $f(x)\equiv 0\pmod p$ 的解，且 $f'(s)\not\equiv 0\pmod p$，则存在 $x_s\in\mathbf{Z}_{p^e}$，$x_s\equiv s\pmod p$ 使得 $x_s$ 是方程 $(4)$ 的解．
-2.  若方程 $f(x)\equiv 0\pmod p$ 与 $f'(x)\equiv 0\pmod p$ 无公共解，则方程 $(4)$ 和方程 $f(x)\equiv 0\pmod p$ 的解数相同．
-</code></pre>
+<details class="note" open="open">
+<summary>推论 1</summary>
+<p>对 <a href="#定理-1">定理 1</a> 的 <span class="arithmatex">\(p\)</span>，<span class="arithmatex">\(e\)</span>，<span class="arithmatex">\(f(x)\)</span>，<span class="arithmatex">\(x_0\)</span>，</p>
+<ol>
+<li>若 <span class="arithmatex">\(s\)</span> 是方程 <span class="arithmatex">\(f(x)\equiv 0\pmod p\)</span> 的解，且 <span class="arithmatex">\(f'(s)\not\equiv 0\pmod p\)</span>，则存在 <span class="arithmatex">\(x_s\in\mathbf{Z}_{p^e}\)</span>，<span class="arithmatex">\(x_s\equiv s\pmod p\)</span> 使得 <span class="arithmatex">\(x_s\)</span> 是方程 <span class="arithmatex">\((4)\)</span> 的解．</li>
+<li>若方程 <span class="arithmatex">\(f(x)\equiv 0\pmod p\)</span> 与 <span class="arithmatex">\(f'(x)\equiv 0\pmod p\)</span> 无公共解，则方程 <span class="arithmatex">\((4)\)</span> 和方程 <span class="arithmatex">\(f(x)\equiv 0\pmod p\)</span> 的解数相同．</li>
+</ol>
+</details>
 <p>从而我们可以将素数幂模同余方程化归到素数模同余方程的情况．</p>
-<h2 id="_3">素数模同余方程</h2>
+<h2 id="素数模同余方程">素数模同余方程<a class="headerlink" href="#素数模同余方程" title="Permanent link"></a></h2>
 <p>以下令 <span class="arithmatex">\(p\in\mathbf{P}\)</span>，整系数多项式 <span class="arithmatex">\(f(x)=\sum_{i=0}^na_ix^i\)</span>，其中 <span class="arithmatex">\(p\nmid a_n\)</span>，<span class="arithmatex">\(x\in\mathbf{Z}_p\)</span>．</p>
 <p><a id="定理-2"></a></p>
-<p>???+ note "定理 2"
-    若方程</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理 2</summary>
+<p>若方程</p>
+<div class="arithmatex">\[
 f(x)\equiv 0\pmod p\tag{6}
-$$
-
-有 $k$ 个不同的解 $x_1,x_2,\dots,x_k~(k\leq n)$，则
-
-$$
+\]</div>
+<p>有 <span class="arithmatex">\(k\)</span> 个不同的解 <span class="arithmatex">\(x_1,x_2,\dots,x_k~(k\leq n)\)</span>，则</p>
+<div class="arithmatex">\[
 f(x)\equiv g(x)\prod_{i=1}^k(x-x_i)\pmod p,
-$$
-
-其中 $\deg g=n-k$ 且 $[x^{n-k}]g(x)=a_n$．
-</code></pre>
-<p>???+ note "证明"
-    对 <span class="arithmatex">\(k\)</span> 应用数学归纳法．</p>
-<pre><code>-   当 $k=1$ 时，做多项式带余除法，有 $f(x)=(x-x_1)g(x)+r$，其中 $r\in\mathbf{Z}$．
-
-    由 $f(x_1)\equiv 0\pmod p$ 可知 $r\equiv 0\pmod p$，从而 $f(x)\equiv(x-x_1)g(x)\pmod p$．
--   假设命题对 $k-1$($k&gt;1$) 时的情况成立，现在设 $f(x)$ 有 $k$ 个不同的解 $x_1,x_2,\dots,x_k$，则 $f(x)\equiv(x-x_1)h(x)\pmod p$，进而有
-
-    $$
-    (\forall i=2,3,\dots,k),~~0\equiv f(x_i)\equiv (x_i-x_1)h(x_i)\pmod p
-    $$
-
-    从而 $h(x)$ 有 $k-1$ 个不同的解 $x_2,x_3,\dots,x_k$，由归纳假设有
-
-    $$
-    h(x)\equiv g(x)\prod_{i=2}^k(x-x_i)\pmod p
-    $$
-
-    其中 $\deg g=n-k$ 且 $[x^{n-k}]g(x)=a_n$．
-
-    因此命题得证．
-</code></pre>
+\]</div>
+<p>其中 <span class="arithmatex">\(\deg g=n-k\)</span> 且 <span class="arithmatex">\([x^{n-k}]g(x)=a_n\)</span>．</p>
+</details>
+<details class="note" open="open">
+<summary>证明</summary>
+<p>对 <span class="arithmatex">\(k\)</span> 应用数学归纳法．</p>
+<ul>
+<li>
+<p>当 <span class="arithmatex">\(k=1\)</span> 时，做多项式带余除法，有 <span class="arithmatex">\(f(x)=(x-x_1)g(x)+r\)</span>，其中 <span class="arithmatex">\(r\in\mathbf{Z}\)</span>．</p>
+<p>由 <span class="arithmatex">\(f(x_1)\equiv 0\pmod p\)</span> 可知 <span class="arithmatex">\(r\equiv 0\pmod p\)</span>，从而 <span class="arithmatex">\(f(x)\equiv(x-x_1)g(x)\pmod p\)</span>．</p>
+</li>
+<li>
+<p>假设命题对 <span class="arithmatex">\(k-1\)</span>(<span class="arithmatex">\(k&gt;1\)</span>) 时的情况成立，现在设 <span class="arithmatex">\(f(x)\)</span> 有 <span class="arithmatex">\(k\)</span> 个不同的解 <span class="arithmatex">\(x_1,x_2,\dots,x_k\)</span>，则 <span class="arithmatex">\(f(x)\equiv(x-x_1)h(x)\pmod p\)</span>，进而有</p>
+<div class="arithmatex">\[
+(\forall i=2,3,\dots,k),~~0\equiv f(x_i)\equiv (x_i-x_1)h(x_i)\pmod p
+\]</div>
+<p>从而 <span class="arithmatex">\(h(x)\)</span> 有 <span class="arithmatex">\(k-1\)</span> 个不同的解 <span class="arithmatex">\(x_2,x_3,\dots,x_k\)</span>，由归纳假设有</p>
+<div class="arithmatex">\[
+h(x)\equiv g(x)\prod_{i=2}^k(x-x_i)\pmod p
+\]</div>
+<p>其中 <span class="arithmatex">\(\deg g=n-k\)</span> 且 <span class="arithmatex">\([x^{n-k}]g(x)=a_n\)</span>．</p>
+<p>因此命题得证．</p>
+</li>
+</ul>
+</details>
 <p><a id="推论-2"></a></p>
-<p>???+ note "推论 2"
-    对素数 <span class="arithmatex">\(p\)</span>，</p>
-<pre><code>-   $(\forall x\in\mathbf{Z}),~~x^{p-1}-1 \equiv \prod_{i=1}^{p-1}(x-i)\pmod p$．
--   （[Wilson 定理](./factorial.md#wilson-定理)）$(p-1)! \equiv -1 \pmod p$．
-</code></pre>
+<details class="note" open="open">
+<summary>推论 2</summary>
+<p>对素数 <span class="arithmatex">\(p\)</span>，</p>
+<ul>
+<li><span class="arithmatex">\((\forall x\in\mathbf{Z}),~~x^{p-1}-1 \equiv \prod_{i=1}^{p-1}(x-i)\pmod p\)</span>．</li>
+<li>（<a href="../factorial/#wilson-定理">Wilson 定理</a>）<span class="arithmatex">\((p-1)! \equiv -1 \pmod p\)</span>．</li>
+</ul>
+</details>
 <p><a id="定理-3lagrange-定理"></a></p>
-<p>???+ note "定理 3（Lagrange 定理）"
-    方程 <span class="arithmatex">\((6)\)</span> 至多有 <span class="arithmatex">\(n\)</span> 个不同解．</p>
-<p>???+ note "证明"
-    假设 <span class="arithmatex">\(f(x)\)</span> 有 <span class="arithmatex">\(n+1\)</span> 个不同解 <span class="arithmatex">\(x_1,x_2,\dots,x_{n+1}\)</span>，则由 <a href="#定理-2">定理 2</a>，对 <span class="arithmatex">\(x_1,x_2,\dots,x_n\)</span> 有</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理 3（Lagrange 定理）</summary>
+<p>方程 <span class="arithmatex">\((6)\)</span> 至多有 <span class="arithmatex">\(n\)</span> 个不同解．</p>
+</details>
+<details class="note" open="open">
+<summary>证明</summary>
+<p>假设 <span class="arithmatex">\(f(x)\)</span> 有 <span class="arithmatex">\(n+1\)</span> 个不同解 <span class="arithmatex">\(x_1,x_2,\dots,x_{n+1}\)</span>，则由 <a href="#定理-2">定理 2</a>，对 <span class="arithmatex">\(x_1,x_2,\dots,x_n\)</span> 有</p>
+<div class="arithmatex">\[
 f(x)\equiv a_n\prod_{i=1}^n(x-x_i)\pmod p
-$$
-
-令 $x=x_{n+1}$，则
-
-$$
+\]</div>
+<p>令 <span class="arithmatex">\(x=x_{n+1}\)</span>，则</p>
+<div class="arithmatex">\[
 0\equiv f(x_{n+1})\equiv a_n\prod_{i=1}^n(x_{n+1}-x_i)\pmod p
-$$
-
-而右侧显然不是 $p$ 的倍数，因此假设矛盾．
-</code></pre>
+\]</div>
+<p>而右侧显然不是 <span class="arithmatex">\(p\)</span> 的倍数，因此假设矛盾．</p>
+</details>
 <p><a id="推论-3"></a></p>
-<p>???+ note "推论 3"
-    若同余方程 <span class="arithmatex">\(\sum_{i=0}^nb_ix^i\equiv 0\pmod p\)</span> 的解数大于 <span class="arithmatex">\(n\)</span>，则</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>推论 3</summary>
+<p>若同余方程 <span class="arithmatex">\(\sum_{i=0}^nb_ix^i\equiv 0\pmod p\)</span> 的解数大于 <span class="arithmatex">\(n\)</span>，则</p>
+<div class="arithmatex">\[
 (\forall i=0,1,\dots,n),~~p\mid b_i.
-$$
-</code></pre>
+\]</div>
+</details>
 <p><a id="定理-4"></a></p>
-<p>???+ note "定理 4"
-    方程 <span class="arithmatex">\((6)\)</span> 若解的个数不为 <span class="arithmatex">\(p\)</span>，则必存在满足 <span class="arithmatex">\(\deg r&lt;p\)</span> 的整系数多项式 <span class="arithmatex">\(r(x)\)</span> 使得 <span class="arithmatex">\(f(x)\equiv 0\pmod p\)</span> 和 <span class="arithmatex">\(r(x)\equiv 0\pmod p\)</span> 的解集相同．</p>
-<p>???+ note "证明"
-    不妨设 <span class="arithmatex">\(n\geq p\)</span>，对 <span class="arithmatex">\(f(x)\)</span> 做多项式带余除法</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理 4</summary>
+<p>方程 <span class="arithmatex">\((6)\)</span> 若解的个数不为 <span class="arithmatex">\(p\)</span>，则必存在满足 <span class="arithmatex">\(\deg r&lt;p\)</span> 的整系数多项式 <span class="arithmatex">\(r(x)\)</span> 使得 <span class="arithmatex">\(f(x)\equiv 0\pmod p\)</span> 和 <span class="arithmatex">\(r(x)\equiv 0\pmod p\)</span> 的解集相同．</p>
+</details>
+<details class="note" open="open">
+<summary>证明</summary>
+<p>不妨设 <span class="arithmatex">\(n\geq p\)</span>，对 <span class="arithmatex">\(f(x)\)</span> 做多项式带余除法</p>
+<div class="arithmatex">\[
 f(x)=g(x)\left(x^p-x\right)+r(x)
-$$
-
-其中 $\deg r&lt;p$．
-
-由 [Fermat 小定理](./fermat.md) 知对任意整数 $x$ 有 $x^p\equiv x\pmod p$，从而
-
--   若 $r(x)\equiv 0\pmod p$，则由 [推论 2](#推论-2) 可知 $f(x)$ 有 $p$ 个不同的解．
--   若 $r(x)\not\equiv 0\pmod p$，则由 $f(x)\equiv r(x)\pmod p$ 可知 $f(x)$ 和 $r(x)$ 的解集相同．
-</code></pre>
+\]</div>
+<p>其中 <span class="arithmatex">\(\deg r&lt;p\)</span>．</p>
+<p>由 <a href="../fermat/">Fermat 小定理</a> 知对任意整数 <span class="arithmatex">\(x\)</span> 有 <span class="arithmatex">\(x^p\equiv x\pmod p\)</span>，从而</p>
+<ul>
+<li>若 <span class="arithmatex">\(r(x)\equiv 0\pmod p\)</span>，则由 <a href="#推论-2">推论 2</a> 可知 <span class="arithmatex">\(f(x)\)</span> 有 <span class="arithmatex">\(p\)</span> 个不同的解．</li>
+<li>若 <span class="arithmatex">\(r(x)\not\equiv 0\pmod p\)</span>，则由 <span class="arithmatex">\(f(x)\equiv r(x)\pmod p\)</span> 可知 <span class="arithmatex">\(f(x)\)</span> 和 <span class="arithmatex">\(r(x)\)</span> 的解集相同．</li>
+</ul>
+</details>
 <p>我们可以通过这个定理对同余方程降次．</p>
 <p><a id="定理-5"></a></p>
-<p>???+ note "定理 5"
-    设 <span class="arithmatex">\(n\leq p\)</span>，则方程</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理 5</summary>
+<p>设 <span class="arithmatex">\(n\leq p\)</span>，则方程</p>
+<div class="arithmatex">\[
 x^n+\sum_{i=0}^{n-1}a_ix^i\equiv 0\pmod p\tag{7}
-$$
-
-有 $n$ 个解当且仅当存在整系数多项式 $q(x)$，$r(x)~(\deg r &lt; n)$ 使得
-
-$$
+\]</div>
+<p>有 <span class="arithmatex">\(n\)</span> 个解当且仅当存在整系数多项式 <span class="arithmatex">\(q(x)\)</span>，<span class="arithmatex">\(r(x)~(\deg r &lt; n)\)</span> 使得</p>
+<div class="arithmatex">\[
 x^p-x=f(x)q(x)+pr(x). \tag{8}
-$$
-</code></pre>
-<p>???+ note "证明"
-    -   必要性：由多项式除法知存在整系数多项式 <span class="arithmatex">\(q(x)\)</span>，<span class="arithmatex">\(r_1(x)~(\deg r_1 &lt; n)\)</span> 使得</p>
-<pre><code>    $$
-    x^p-x=f(x)q(x)+r_1(x).
-    $$
-
-    若方程 $(7)$ 有 $n$ 个解，则 $r_1\equiv 0\pmod p$ 也有 $n$ 个相同的解，进而由 [推论 3](#推论-3) 可知存在整系数多项式 $r(x)$ 满足 $r_1(x)=pr(x)$，从而命题得证．
--   充分性：若式 $(8)$ 成立，则由 [Fermat 小定理](./fermat.md) 可知，对任意整数 $x$,
-
-    $$
-    0\equiv x^p-x\equiv f(x)q(x)\pmod p.
-    $$
-
-    即方程 $f(x)q(x)\equiv 0\pmod p$ 有 $p$ 个解．
-
-    设方程 $(7)$ 的解数为 $s$，则由 [Lagrange 定理](#定理-3lagrange-定理) 可知 $s\leq n$．
-
-    又由于 $\deg q=p-n$，则由 [Lagrange 定理](#定理-3lagrange-定理) 可知 $q(x)\equiv 0\pmod p$ 的解数不超过 $p-n$，而方程 $f(x)q(x)\equiv 0\pmod p$ 的解集是 $f(x)\equiv 0\pmod p$ 解集和 $q(x)\equiv 0\pmod p$ 解集的并集，故 $s+(p-n)\geq p$，有 $s\geq n$．
-
-    因此 $s=n$．
-</code></pre>
+\]</div>
+</details>
+<details class="note" open="open">
+<summary>证明</summary>
+<ul>
+<li>
+<p>必要性：由多项式除法知存在整系数多项式 <span class="arithmatex">\(q(x)\)</span>，<span class="arithmatex">\(r_1(x)~(\deg r_1 &lt; n)\)</span> 使得</p>
+<div class="arithmatex">\[
+x^p-x=f(x)q(x)+r_1(x).
+\]</div>
+<p>若方程 <span class="arithmatex">\((7)\)</span> 有 <span class="arithmatex">\(n\)</span> 个解，则 <span class="arithmatex">\(r_1\equiv 0\pmod p\)</span> 也有 <span class="arithmatex">\(n\)</span> 个相同的解，进而由 <a href="#推论-3">推论 3</a> 可知存在整系数多项式 <span class="arithmatex">\(r(x)\)</span> 满足 <span class="arithmatex">\(r_1(x)=pr(x)\)</span>，从而命题得证．</p>
+</li>
+<li>
+<p>充分性：若式 <span class="arithmatex">\((8)\)</span> 成立，则由 <a href="../fermat/">Fermat 小定理</a> 可知，对任意整数 <span class="arithmatex">\(x\)</span>,</p>
+<div class="arithmatex">\[
+0\equiv x^p-x\equiv f(x)q(x)\pmod p.
+\]</div>
+<p>即方程 <span class="arithmatex">\(f(x)q(x)\equiv 0\pmod p\)</span> 有 <span class="arithmatex">\(p\)</span> 个解．</p>
+<p>设方程 <span class="arithmatex">\((7)\)</span> 的解数为 <span class="arithmatex">\(s\)</span>，则由 <a href="#定理-3lagrange-定理">Lagrange 定理</a> 可知 <span class="arithmatex">\(s\leq n\)</span>．</p>
+<p>又由于 <span class="arithmatex">\(\deg q=p-n\)</span>，则由 <a href="#定理-3lagrange-定理">Lagrange 定理</a> 可知 <span class="arithmatex">\(q(x)\equiv 0\pmod p\)</span> 的解数不超过 <span class="arithmatex">\(p-n\)</span>，而方程 <span class="arithmatex">\(f(x)q(x)\equiv 0\pmod p\)</span> 的解集是 <span class="arithmatex">\(f(x)\equiv 0\pmod p\)</span> 解集和 <span class="arithmatex">\(q(x)\equiv 0\pmod p\)</span> 解集的并集，故 <span class="arithmatex">\(s+(p-n)\geq p\)</span>，有 <span class="arithmatex">\(s\geq n\)</span>．</p>
+<p>因此 <span class="arithmatex">\(s=n\)</span>．</p>
+</li>
+</ul>
+</details>
 <p>对于非首一多项式，由于 <span class="arithmatex">\(\mathbf{Z}_p\)</span> 是域，故可以将其化为首一多项式，从而适用该定理．</p>
 <p><a id="定理-6"></a></p>
-<p>???+ note "定理 6"
-    设 <span class="arithmatex">\(n\mid p-1\)</span>，<span class="arithmatex">\(p\nmid a\)</span>，则方程</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理 6</summary>
+<p>设 <span class="arithmatex">\(n\mid p-1\)</span>，<span class="arithmatex">\(p\nmid a\)</span>，则方程</p>
+<div class="arithmatex">\[
 x^n\equiv a\pmod p\tag{9}
-$$
-
-有解当且仅当
-
-$$
+\]</div>
+<p>有解当且仅当</p>
+<div class="arithmatex">\[
 a^{\frac{p-1}{n}}\equiv 1\pmod p.
-$$
-
-而且，若 $(9)$ 有解，则解数为 $n$．
-</code></pre>
-<p>???+ note "Note"
-    方程 <span class="arithmatex">\((9)\)</span> 解集的具体结构可参见 <a href="../residue/">k 次剩余</a>．</p>
-<p>???+ note "证明"
-    -   必要性：若方程 <span class="arithmatex">\((9)\)</span> 有解 <span class="arithmatex">\(x_0\)</span>，则</p>
-<pre><code>    $$
-    a^{\frac{p-1}{n}}\equiv {\left(x_0^n\right)}^{\frac{p-1}{n}}\equiv 1\pmod p
-    $$
--   充分性：若 $a^{\frac{p-1}{n}}\equiv 1\pmod p$，则
-
-    $$
-    \begin{aligned}
-        x^p-x&amp;=x\left(x^{p-1}-1\right)\\
-        &amp;=x\left(\left(x^n\right)^{\frac{p-1}{n}}-a^{\frac{p-1}{n}}+a^{\frac{p-1}{n}}-1\right)\\
-        &amp;=\left(x^n-a\right)P(x)+x\left(a^{\frac{p-1}{n}}-1\right)\\
-    \end{aligned}
-    $$
-
-    其中 $P(x)$ 是某个整系数多项式，因此由 [定理 5](#定理-5) 可知方程 $(9)$ 有 $n$ 个解．
-</code></pre>
-<h2 id="_4">高次同余方程（组）的求解方法</h2>
+\]</div>
+<p>而且，若 <span class="arithmatex">\((9)\)</span> 有解，则解数为 <span class="arithmatex">\(n\)</span>．</p>
+</details>
+<details class="note" open="open">
+<summary>Note</summary>
+<p>方程 <span class="arithmatex">\((9)\)</span> 解集的具体结构可参见 <a href="../residue/">k 次剩余</a>．</p>
+</details>
+<details class="note" open="open">
+<summary>证明</summary>
+<ul>
+<li>
+<p>必要性：若方程 <span class="arithmatex">\((9)\)</span> 有解 <span class="arithmatex">\(x_0\)</span>，则</p>
+<div class="arithmatex">\[
+a^{\frac{p-1}{n}}\equiv {\left(x_0^n\right)}^{\frac{p-1}{n}}\equiv 1\pmod p
+\]</div>
+</li>
+<li>
+<p>充分性：若 <span class="arithmatex">\(a^{\frac{p-1}{n}}\equiv 1\pmod p\)</span>，则</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    x^p-x&amp;=x\left(x^{p-1}-1\right)\\
+    &amp;=x\left(\left(x^n\right)^{\frac{p-1}{n}}-a^{\frac{p-1}{n}}+a^{\frac{p-1}{n}}-1\right)\\
+    &amp;=\left(x^n-a\right)P(x)+x\left(a^{\frac{p-1}{n}}-1\right)\\
+\end{aligned}
+\]</div>
+<p>其中 <span class="arithmatex">\(P(x)\)</span> 是某个整系数多项式，因此由 <a href="#定理-5">定理 5</a> 可知方程 <span class="arithmatex">\((9)\)</span> 有 <span class="arithmatex">\(n\)</span> 个解．</p>
+</li>
+</ul>
+</details>
+<h2 id="高次同余方程组的求解方法">高次同余方程（组）的求解方法<a class="headerlink" href="#高次同余方程组的求解方法" title="Permanent link"></a></h2>
 <p>首先我们可以借助 <a href="../crt/">中国剩余定理</a> 将求解 <strong>同余方程组</strong> 转为求解 <strong>同余方程</strong>，以及将求解模 <strong>合数</strong>  <span class="arithmatex">\(m\)</span> 的同余方程转化为求解模 <strong>素数幂次</strong> 的同余方程．之后我们借助 <a href="#定理-1">定理 1</a> 将求解模 <strong>素数幂次</strong> 的同余方程转化为求解模 <strong>素数</strong> 的同余方程．</p>
 <p>结合模素数同余方程的若干定理，我们只需考虑方程</p>
 <div class="arithmatex">\[
@@ -1531,7 +1541,7 @@ x^n\equiv a\pmod p,
 <p>则求法参见 <a href="../residue/">k 次剩余</a>．</p>
 </li>
 </ul>
-<h2 id="_5">参考资料</h2>
+<h2 id="参考资料">参考资料<a class="headerlink" href="#参考资料" title="Permanent link"></a></h2>
 <ol>
 <li><a href="https://mathworld.wolfram.com/CongruenceEquation.html">Congruence Equation -- from Wolfram MathWorld</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Lagrange%27s_theorem_%28number_theory%29">Lagrange's theorem (number theory) - Wikipedia</a></li>
@@ -1596,7 +1606,9 @@ x^n\equiv a\pmod p,
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

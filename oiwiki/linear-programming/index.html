@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#引入" class="md-skip">
           Skip to content
         </a>
       
@@ -1092,7 +1092,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#引入" class="md-nav__link">
     <span class="md-ellipsis">
       
         引入
@@ -1104,7 +1104,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#一个简单的例子" class="md-nav__link">
     <span class="md-ellipsis">
       
         一个简单的例子
@@ -1115,7 +1115,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#图解法" class="md-nav__link">
     <span class="md-ellipsis">
       
         图解法
@@ -1131,7 +1131,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#基本概念" class="md-nav__link">
     <span class="md-ellipsis">
       
         基本概念
@@ -1143,7 +1143,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#线性规划问题" class="md-nav__link">
     <span class="md-ellipsis">
       
         线性规划问题
@@ -1154,7 +1154,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#标准形式" class="md-nav__link">
     <span class="md-ellipsis">
       
         标准形式
@@ -1165,7 +1165,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#可行域与问题的解" class="md-nav__link">
     <span class="md-ellipsis">
       
         可行域与问题的解
@@ -1181,7 +1181,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#常见算法" class="md-nav__link">
     <span class="md-ellipsis">
       
         常见算法
@@ -1192,7 +1192,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#对偶问题" class="md-nav__link">
     <span class="md-ellipsis">
       
         对偶问题
@@ -1204,7 +1204,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#对偶原理" class="md-nav__link">
     <span class="md-ellipsis">
       
         对偶原理
@@ -1215,7 +1215,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#互补松弛条件" class="md-nav__link">
     <span class="md-ellipsis">
       
         互补松弛条件
@@ -1226,7 +1226,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#原始对偶方法" class="md-nav__link">
     <span class="md-ellipsis">
       
         原始‑对偶方法
@@ -1242,7 +1242,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#整数规划" class="md-nav__link">
     <span class="md-ellipsis">
       
         整数规划
@@ -1254,7 +1254,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#全幺模矩阵" class="md-nav__link">
     <span class="md-ellipsis">
       
         全幺模矩阵
@@ -1270,7 +1270,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#参考文献与注释" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考文献与注释
@@ -1299,20 +1299,43 @@
 
   <h1>Linear programming</h1>
 
-<h2 id="_1">引入</h2>
+<h2 id="引入">引入<a class="headerlink" href="#引入" title="Permanent link"></a></h2>
 <p>线性规划（linear programming, LP）是研究线性约束条件下线性目标函数最值问题的方法总称，是运筹学的一个分支，在多方面均有应用。线性规划的某些特殊情况，如网络流、多商品流量等问题都有可能在算法竞赛题目中出现。算法竞赛很少会出现只能用线性规划算法解决的问题，绝大多数这类问题可以通过网络流建模等方法更高效地解决。</p>
-<h3 id="_2">一个简单的例子</h3>
+<h3 id="一个简单的例子">一个简单的例子<a class="headerlink" href="#一个简单的例子" title="Permanent link"></a></h3>
 <p>一个问题能够写成线性规划的形式，既要有若干个线性约束条件，又要有线性的目标函数。</p>
 <p>考虑下面的例子：</p>
-<p>???+ example "例子"
-    早点师傅每天可以制作一定数量的包子和油条，这两种早餐深受顾客喜爱。为了最大化利润，师傅希望尽可能多地制作早点，但在实际操作中受到食材、时间等多种资源的限制。为此，师傅统计了制作每份早点所需的食材用量、制作时间及其对应的利润，具体如下表所示：</p>
-<pre><code>|  早点 | 植物油 |  面粉 |  时间 |  利润 |
-| :-: | :-: | :-: | :-: | :-: |
-|  包子 | $4$ | $7$ | $8$ | $5$ |
-|  油条 | $7$ | $3$ | $6$ | $6$ |
-
-假设师傅每天最多可以购入 $66$ 单位的植物油和 $60$ 单位的面粉，并且最多可以投入 $96$ 单位的制作时间。那么，师傅应如何合理安排包子和油条的生产数量，才能使每天的利润最大化？
-</code></pre>
+<details class="example" open="open">
+<summary>例子</summary>
+<p>早点师傅每天可以制作一定数量的包子和油条，这两种早餐深受顾客喜爱。为了最大化利润，师傅希望尽可能多地制作早点，但在实际操作中受到食材、时间等多种资源的限制。为此，师傅统计了制作每份早点所需的食材用量、制作时间及其对应的利润，具体如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">早点</th>
+<th style="text-align: center;">植物油</th>
+<th style="text-align: center;">面粉</th>
+<th style="text-align: center;">时间</th>
+<th style="text-align: center;">利润</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">包子</td>
+<td style="text-align: center;"><span class="arithmatex">\(4\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(7\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(8\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(5\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">油条</td>
+<td style="text-align: center;"><span class="arithmatex">\(7\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(6\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>假设师傅每天最多可以购入 <span class="arithmatex">\(66\)</span> 单位的植物油和 <span class="arithmatex">\(60\)</span> 单位的面粉，并且最多可以投入 <span class="arithmatex">\(96\)</span> 单位的制作时间。那么，师傅应如何合理安排包子和油条的生产数量，才能使每天的利润最大化？</p>
+</details>
 <p>用数学语言描述，可以设 <span class="arithmatex">\(x_1\)</span> 和 <span class="arithmatex">\(x_2\)</span> 分别是师傅制作包子和油条的数量。那么，「总共需要的植物油不超过 <span class="arithmatex">\(66\)</span> 单位」就可以表示为</p>
 <div class="arithmatex">\[
 4x_1 + 7x_2 \le 66.
@@ -1333,7 +1356,7 @@ x_1,x_2\ge 0.
 z = 5x_1 + 6x_2.
 \]</div>
 <p>这就是一个典型的线性规划问题。它的目标函数是关于决策变量的线性函数，约束条件则由决策变量构成的线性等式或不等式组成。</p>
-<h3 id="_3">图解法</h3>
+<h3 id="图解法">图解法<a class="headerlink" href="#图解法" title="Permanent link"></a></h3>
 <p>对于只有两个决策变量的线性规划问题，可以通过图解法直观地解决问题。</p>
 <p>考虑本节的问题</p>
 <div class="arithmatex">\[
@@ -1351,9 +1374,9 @@ z = 5x_1 + 6x_2.
 <p>如图所示，这样的情形发生在红点所示位置。它是直线 <span class="arithmatex">\(4x_1 + 7x_2 = 66\)</span> 和直线 <span class="arithmatex">\(7x_1 + 3x_2 = 60\)</span> 的交点。联立两直线方程可知，它的坐标是 <span class="arithmatex">\((6,6)\)</span>。这是本问题唯一的最优解。早点师傅的最大利润是 <span class="arithmatex">\(z=66\)</span>。</p>
 <p>当问题涉及多于两个决策变量时，图解法不再适用。但是，本节的例子中的一些观察仍然有效。线性规划问题中的每个不等式约束都描述了一个「半平面」，所有可行的解的集合就是这些「半平面」的交集，因此，总是一个「凸多边形」。规划问题的最优解总是可以在该「凸多边形」的某个「顶点」处取得。这些「顶点」的左边可以通过联立这些「半平面」的「边界」的方程求得。将这些观察拓展到高维空间，就发展出了一个高效的求解线性规划问题的方法——单纯形法。这也是算法竞赛中最常应用的方法。</p>
 <p>另外一个值得注意的问题是，原则上，早点师傅制作的包子和油条都不是无限可分的，应当是某个整数。虽然本题求解过程中没有明确地限制这一点，但是由于最终的最优解的确是整数，所以，即使加上整数限制，本题的答案仍然是可行的。但是对于很多规划问题，最优解可能无法取得在整点处，这些问题实际上是一类整数规划问题，而非简单的线性规划问题。本文的结尾简单地讨论了这一类问题。</p>
-<h2 id="_4">基本概念</h2>
+<h2 id="基本概念">基本概念<a class="headerlink" href="#基本概念" title="Permanent link"></a></h2>
 <p>本节介绍线性规划问题的基本概念。</p>
-<h3 id="_5">线性规划问题</h3>
+<h3 id="线性规划问题">线性规划问题<a class="headerlink" href="#线性规划问题" title="Permanent link"></a></h3>
 <p>一个线性规划问题 <span class="arithmatex">\(P\)</span> 通常由如下两部分组成：</p>
 <ul>
 <li>
@@ -1372,7 +1395,7 @@ g_j(x_1,x_2,\cdots,x_n)=a_{j1}x_1+a_{j2}x_2+\cdots+a_{jn}x_n \le (=,\ge) b_j
 </li>
 </ul>
 <p>线性规划问题，就是要在满足所给约束的前提下，最大化或者最小化目标函数。满足所给约束的解 <span class="arithmatex">\((x_1,x_2,\cdots,x_n)\in\mathbf R^n\)</span> 称为 <strong>可行解</strong>（feasible solution）；在所有可行解中，使得目标函数取得最值的解称为 <strong>最优解</strong>（optimal solution）。</p>
-<h3 id="_6">标准形式</h3>
+<h3 id="标准形式">标准形式<a class="headerlink" href="#标准形式" title="Permanent link"></a></h3>
 <p>为了方便描述和进一步处理，通常需要指定一个线性规划问题的标准形式。不同文献可能有不同的规定方式，本文规定线性规划的标准形式如下：</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1386,8 +1409,10 @@ g_j(x_1,x_2,\cdots,x_n)=a_{j1}x_1+a_{j2}x_2+\cdots+a_{jn}x_n \le (=,\ge) b_j
 \max\{c^Tx : Ax = b \ge 0,~ x\ge 0\}.
 \]</div>
 <p>其中，<span class="arithmatex">\(x=(x_i)\in\mathbf R^n\)</span> 是决策变量，<span class="arithmatex">\(b=(b_j)\in\mathbf R^m\)</span> 和 <span class="arithmatex">\(A=(a_{ji})\in\mathbf R^{m\times n}\)</span> 是约束中涉及的常量。线性规划问题的规模就是指它的决策变量的数目和它的约束的个数。</p>
-<p>???+ tip "向量不等式"
-    本文中会多次出现像 <span class="arithmatex">\(b \ge 0\)</span> 这样的向量不等式。一般地，对于向量 <span class="arithmatex">\(x,y\in\mathbf R^n\)</span>，不等式 <span class="arithmatex">\(x\le y\)</span> 表示 <span class="arithmatex">\(\forall i(x_i\le y_i)\)</span>，即逐维地进行实数意义上的比较。这一关系是向量空间上的 <a href="../order-theory/#二元关系">偏序关系</a>，也就是说，存在两个向量无法比较的情形。</p>
+<details class="tip" open="open">
+<summary>向量不等式</summary>
+<p>本文中会多次出现像 <span class="arithmatex">\(b \ge 0\)</span> 这样的向量不等式。一般地，对于向量 <span class="arithmatex">\(x,y\in\mathbf R^n\)</span>，不等式 <span class="arithmatex">\(x\le y\)</span> 表示 <span class="arithmatex">\(\forall i(x_i\le y_i)\)</span>，即逐维地进行实数意义上的比较。这一关系是向量空间上的 <a href="../order-theory/#二元关系">偏序关系</a>，也就是说，存在两个向量无法比较的情形。</p>
+</details>
 <p>标准形式的选取只是为了行文方便，而并没有任何特别之处，因为任何线性规划问题都可以等价地写成下面的六种形式：</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1408,9 +1433,10 @@ g_j(x_1,x_2,\cdots,x_n)=a_{j1}x_1+a_{j2}x_2+\cdots+a_{jn}x_n \le (=,\ge) b_j
 <li>如果某个决策变量 <span class="arithmatex">\(x_i\)</span> 没有非负约束，那么，可以将它替换成两个非负变量的差值，即 <span class="arithmatex">\(x_j = x^+_j - x^-_j\)</span> 且 <span class="arithmatex">\(x^+_j,x^-_j \ge 0\)</span>。</li>
 </ol>
 <p>通过这些操作转化得到的线性规划问题的规模不超过原问题的规模的二倍，而且这些问题的可行解和最优解都很容易相互转化。因此，对于一般形式的线性规划问题，总是可以首先将它转化为标准形式（或上述六种形式之一）再进行求解。</p>
-<p>??? example "例子"
-    考虑线性规划问题</p>
-<pre><code>$$
+<details class="example">
+<summary>例子</summary>
+<p>考虑线性规划问题</p>
+<div class="arithmatex">\[
 \begin{aligned}
 \max\;&amp; 3x_1 - 2x_2 + x_3 \\
 \text{subject to }&amp; 2x_1 + 3x_2 + 4x_3 \ge 1,\\
@@ -1418,11 +1444,9 @@ g_j(x_1,x_2,\cdots,x_n)=a_{j1}x_1+a_{j2}x_2+\cdots+a_{jn}x_n \le (=,\ge) b_j
 &amp; 5x_2 - x_3 = -1, \\
 &amp; x_1, x_2 \ge 0.
 \end{aligned}
-$$
-
-通过操作 1、2 和 3 可以将它转化为形式 $\min\{c^Tx : Ax \ge b\}$，即
-
-$$
+\]</div>
+<p>通过操作 1、2 和 3 可以将它转化为形式 <span class="arithmatex">\(\min\{c^Tx : Ax \ge b\}\)</span>，即</p>
+<div class="arithmatex">\[
 \begin{aligned}
 \min\;&amp; -3x_1 + 2x_2 - x_3 \\
 \text{subject to }&amp; 2x_1 + 3x_2 + 4x_3 \ge 1,\\
@@ -1432,11 +1456,9 @@ $$
 &amp; x_1 \ge 0,\\
 &amp; x_2 \ge 0.
 \end{aligned}
-$$
-
-通过操作 4 和 5 可以将它转化为形式 $\max\{c^Tx : Ax = b,~ x\ge 0\}$，即
-
-$$
+\]</div>
+<p>通过操作 4 和 5 可以将它转化为形式 <span class="arithmatex">\(\max\{c^Tx : Ax = b,~ x\ge 0\}\)</span>，即</p>
+<div class="arithmatex">\[
 \begin{aligned}
 \max\;&amp; 3x_1 - 2x_2 + x^+_3 - x^-_3 \\
 \text{subject to }&amp; 2x_1 + 3x_2 + 4x^+_3 - 4x^-_3 - x_4 = 1,\\
@@ -1444,20 +1466,22 @@ $$
 &amp; 5x_2 - x^+_3 + x^-_3 = -1, \\
 &amp; x_1, x_2, x^+_3, x^-_3, x_4, x_5 \ge 0.
 \end{aligned}
-$$
-</code></pre>
-<h3 id="_7">可行域与问题的解</h3>
+\]</div>
+</details>
+<h3 id="可行域与问题的解">可行域与问题的解<a class="headerlink" href="#可行域与问题的解" title="Permanent link"></a></h3>
 <p>所有可行解的集合 <span class="arithmatex">\(\mathcal D\subseteq\mathbf R^n\)</span> 称为线性规划问题 <span class="arithmatex">\(P\)</span> 的 <strong>可行域</strong>（feasible region）。从几何角度看，每个不等式约束 <span class="arithmatex">\(a_j^T x \le b_j\)</span> 都描述了一个半空间 <span class="arithmatex">\(\{x\in\mathbf R^n:a_j^T x \le b_j\}\)</span>，每个等式约束 <span class="arithmatex">\(a^T_jx = b_j\)</span> 都描述了一个超平面 <span class="arithmatex">\(\{x\in\mathbf R^n:a_j^Tx=b_j\}\)</span>，所以，可行域一定是有限多个半空间和超平面的交集。在优化领域[^poly-names]，这样的几何体通常称为 <span class="arithmatex">\(\mathbf R^n\)</span> 中的 <strong>多面体</strong>（polyhedron）。多面体一定是闭凸集，但未必是有界的。有界的多面体也称为 <strong>多胞形</strong>（polytope）。多胞形可以看作是平面上的多边形在高维空间的推广，而多面体将它进一步推广到可能无界的情形。</p>
-<p>???+ example "多面体的例子"
-    此处列举了一些常见的多面体：</p>
-<pre><code>1.  空集 $\varnothing$，又称为 **零胞形**（nullitope），维度规定为 $-1$。
-2.  **仿射子空间**（affine subspace），即若干超平面的交集 $\{x\in\mathbf R^n:Ax = b\}$。它相当于线性方程组 $Ax = b$ 的解集：当方程组无解时，它就是空集；否则，它总是可以写成 $x_0+V$ 的形式，其中，$x_0\in\mathbf R^n$ 且 $V\subseteq\mathbf R^n$ 是 $n-\operatorname{rank}(A)$ 维线性子空间。特别地，超平面也是仿射子空间。
-3.  **多面体锥**（polyhedral cone），即空间中有限多个点 $\{x_i\}$ 的全体非负线性组合 $\{\sum_i\alpha_ix_i:\alpha_i\ge 0\}$。它是顶点位于原点的凸锥体。等价地，它可以看作是由若干个经过原点的超平面围成的多面体，即 $\{x\in\mathbf R^n : Ax\le 0\}$。特别地，半空间也是多面体锥。
-4.  多胞形，即有界的多面体。特别地，$-1$、$0$、$1$、$2$、$3$ 维的多胞形就是常见的空集、点、线段、多边形和（通常意义下的）多面体。一个集合是多胞形，当且仅当它是有限多个点 $\{x_i\}$ 的凸包 $\{\sum_i\alpha_ix_i:\alpha_i\ge 0,~\sum_i\alpha_i=1\}$。一个 $k$ 维的多胞形至少是由 $k+1$ 个点生成的凸包。
-5.  **单纯形**（simplex），即恰由 $k+1$ 个点生成的 $k$ 维多胞形。它是最简单的 $k$ 维多胞形。特别地，$-1$、$0$、$1$、$2$、$3$ 维的多胞形分别是空集、点、线段、三角形和四面体。最简单的 $k$ 维单纯形的例子，就是 $\{x\in\mathbf R^k:x_i\ge 0,~\sum_ix_i=1\}$。实际上，任何 $k$ 维单纯形都可以通过仿射变换（即平移和伸缩）变为这样一种特殊情形。值得注意的是，单纯形法并不是真的在单纯形上进行的。
-
-任何多面体，都可以看作是一个多面体锥和一个多胞形的 [Minkowski 和](../geometry/convex-hull.md#闵可夫斯基和)：前者描述了多面体无界的部分，后者描述了多面体有界部分的形状。这个多面体锥是唯一的：多面体 $\{x\in\mathbf R^n:Ax\le b\}$ 分解得到的多面体锥一定是 $\{x\in\mathcal R^n:Ax\le 0\}$。
-</code></pre>
+<details class="example" open="open">
+<summary>多面体的例子</summary>
+<p>此处列举了一些常见的多面体：</p>
+<ol>
+<li>空集 <span class="arithmatex">\(\varnothing\)</span>，又称为 <strong>零胞形</strong>（nullitope），维度规定为 <span class="arithmatex">\(-1\)</span>。</li>
+<li><strong>仿射子空间</strong>（affine subspace），即若干超平面的交集 <span class="arithmatex">\(\{x\in\mathbf R^n:Ax = b\}\)</span>。它相当于线性方程组 <span class="arithmatex">\(Ax = b\)</span> 的解集：当方程组无解时，它就是空集；否则，它总是可以写成 <span class="arithmatex">\(x_0+V\)</span> 的形式，其中，<span class="arithmatex">\(x_0\in\mathbf R^n\)</span> 且 <span class="arithmatex">\(V\subseteq\mathbf R^n\)</span> 是 <span class="arithmatex">\(n-\operatorname{rank}(A)\)</span> 维线性子空间。特别地，超平面也是仿射子空间。</li>
+<li><strong>多面体锥</strong>（polyhedral cone），即空间中有限多个点 <span class="arithmatex">\(\{x_i\}\)</span> 的全体非负线性组合 <span class="arithmatex">\(\{\sum_i\alpha_ix_i:\alpha_i\ge 0\}\)</span>。它是顶点位于原点的凸锥体。等价地，它可以看作是由若干个经过原点的超平面围成的多面体，即 <span class="arithmatex">\(\{x\in\mathbf R^n : Ax\le 0\}\)</span>。特别地，半空间也是多面体锥。</li>
+<li>多胞形，即有界的多面体。特别地，<span class="arithmatex">\(-1\)</span>、<span class="arithmatex">\(0\)</span>、<span class="arithmatex">\(1\)</span>、<span class="arithmatex">\(2\)</span>、<span class="arithmatex">\(3\)</span> 维的多胞形就是常见的空集、点、线段、多边形和（通常意义下的）多面体。一个集合是多胞形，当且仅当它是有限多个点 <span class="arithmatex">\(\{x_i\}\)</span> 的凸包 <span class="arithmatex">\(\{\sum_i\alpha_ix_i:\alpha_i\ge 0,~\sum_i\alpha_i=1\}\)</span>。一个 <span class="arithmatex">\(k\)</span> 维的多胞形至少是由 <span class="arithmatex">\(k+1\)</span> 个点生成的凸包。</li>
+<li><strong>单纯形</strong>（simplex），即恰由 <span class="arithmatex">\(k+1\)</span> 个点生成的 <span class="arithmatex">\(k\)</span> 维多胞形。它是最简单的 <span class="arithmatex">\(k\)</span> 维多胞形。特别地，<span class="arithmatex">\(-1\)</span>、<span class="arithmatex">\(0\)</span>、<span class="arithmatex">\(1\)</span>、<span class="arithmatex">\(2\)</span>、<span class="arithmatex">\(3\)</span> 维的多胞形分别是空集、点、线段、三角形和四面体。最简单的 <span class="arithmatex">\(k\)</span> 维单纯形的例子，就是 <span class="arithmatex">\(\{x\in\mathbf R^k:x_i\ge 0,~\sum_ix_i=1\}\)</span>。实际上，任何 <span class="arithmatex">\(k\)</span> 维单纯形都可以通过仿射变换（即平移和伸缩）变为这样一种特殊情形。值得注意的是，单纯形法并不是真的在单纯形上进行的。</li>
+</ol>
+<p>任何多面体，都可以看作是一个多面体锥和一个多胞形的 <a href="../geometry/convex-hull.md#闵可夫斯基和">Minkowski 和</a>：前者描述了多面体无界的部分，后者描述了多面体有界部分的形状。这个多面体锥是唯一的：多面体 <span class="arithmatex">\(\{x\in\mathbf R^n:Ax\le b\}\)</span> 分解得到的多面体锥一定是 <span class="arithmatex">\(\{x\in\mathcal R^n:Ax\le 0\}\)</span>。</p>
+</details>
 <p>线性规划的解与多面体的结构紧密相关。对于多面体 <span class="arithmatex">\(\mathcal D\in\mathbf R^n\)</span> 和向量 <span class="arithmatex">\(c\in\mathbf R^n\setminus\{0\}\)</span>，考虑如下的线性规划问题 <span class="arithmatex">\(P\)</span>：（对最小化的情形也可以类似地讨论）</p>
 <div class="arithmatex">\[
 \max\{c^Tx:x\in\mathcal D\}.
@@ -1477,14 +1501,15 @@ $$
 <p>特别地，标准形式的线性规划的可行域 <span class="arithmatex">\(\mathcal D=\{x\in\mathbf R^n:Ax=b,~x\ge 0\}\)</span> 的系数矩阵 <span class="arithmatex">\(\begin{pmatrix}A\\ I\end{pmatrix}\)</span> 的秩是 <span class="arithmatex">\(n\)</span>，因此，它的极小面就是它的顶点。也就是说，如果问题有界，那么它的最优解一定可以选取为某个顶点。而且，这个顶点可以通过选取 <span class="arithmatex">\(n\)</span> 个线性独立的紧约束联立得到。这正是线性规划的标准形式的方便之处。</p>
 </li>
 </ul>
-<p>???+ example "例子"
-    下图中，<span class="arithmatex">\(\mathcal D\)</span> 为可行域。目标函数中的系数是 <span class="arithmatex">\(c_1,c_2,c_3\)</span> 时，分别对应着唯一最优解、多组最优解和无界三种情形。对于前两种情形，相应的红色粗实线就是解集对应的支撑超平面（之一），最优解集分别是多面体 <span class="arithmatex">\(\mathcal D\)</span> 的顶点 <span class="arithmatex">\(B\)</span> 和边 <span class="arithmatex">\(\overline{CD}\)</span>。对于第三种情形，因为可行域 <span class="arithmatex">\(\mathcal D\)</span> 中包含方向为 <span class="arithmatex">\(c_3\)</span> 的射线，所以，以 <span class="arithmatex">\(c_3\)</span> 为法向量的超平面可以不断沿着 <span class="arithmatex">\(c_3\)</span> 方向移动，进而问题是无界的。</p>
-<pre><code>![](./images/lp-feasible.svg)
-</code></pre>
+<details class="example" open="open">
+<summary>例子</summary>
+<p>下图中，<span class="arithmatex">\(\mathcal D\)</span> 为可行域。目标函数中的系数是 <span class="arithmatex">\(c_1,c_2,c_3\)</span> 时，分别对应着唯一最优解、多组最优解和无界三种情形。对于前两种情形，相应的红色粗实线就是解集对应的支撑超平面（之一），最优解集分别是多面体 <span class="arithmatex">\(\mathcal D\)</span> 的顶点 <span class="arithmatex">\(B\)</span> 和边 <span class="arithmatex">\(\overline{CD}\)</span>。对于第三种情形，因为可行域 <span class="arithmatex">\(\mathcal D\)</span> 中包含方向为 <span class="arithmatex">\(c_3\)</span> 的射线，所以，以 <span class="arithmatex">\(c_3\)</span> 为法向量的超平面可以不断沿着 <span class="arithmatex">\(c_3\)</span> 方向移动，进而问题是无界的。</p>
+<p><img alt="" src="../images/lp-feasible.svg" /></p>
+</details>
 <p>这些讨论忽略了 <span class="arithmatex">\(c=0\)</span> 的情形。此时，线性规划问题显然不能是无界的，所以要么问题本身是不可行的，要么最优价值等于 <span class="arithmatex">\(0\)</span>，且最优解集就是 <span class="arithmatex">\(\mathcal D\)</span> 本身。这类特殊的线性规划也称为 <strong>可行性线性规划</strong>（feasibility linear programming）。</p>
 <p>值得指出的是，判定线性规划问题是否可行、是否有界，以及求出不等式组的可行解等问题，都和解线性规划问题本身同样困难<a href="更严格的表述是，它们之间可以在多项式时间内相互归约。">^reducible</a>。比如说，下文中强对偶定理的证明就说明，解一个有界的线性规划问题，就相当于寻找一组不等式的可行解。因此，对于判断不等式组是否有解和判断方程组是否有非负解等任务，最有效的方式就是求解相应的可行性线性规划[^other-methods]。</p>
 <p>另外，如果线性规划问题的一个约束，在可行域的所有面上都不是紧的，那么这个约束就是 <strong>冗余的</strong>（redundant）。本文开头早点师傅的例子中，工作时间的约束就是一个冗余约束。在给定的不等式组中判定某个不等式 <span class="arithmatex">\(a_j^Tx\le b_j\)</span> 是否冗余这一问题，可以通过求解线性规划问题 <span class="arithmatex">\(\max\{a_j^Tx:x\in\mathcal D\}\)</span>，并将它与 <span class="arithmatex">\(b_j\)</span> 相比较来解决。</p>
-<h2 id="_8">常见算法</h2>
+<h2 id="常见算法">常见算法<a class="headerlink" href="#常见算法" title="Permanent link"></a></h2>
 <p>算法竞赛中，很少有问题只能通过线性规划的算法解决。大多数可以用线性规划方法求解的题目，通常也可以通过网络流等更为专门也更为高效的算法来解决。</p>
 <p>解决线性规划问题的常见算法如下：</p>
 <ul>
@@ -1494,7 +1519,7 @@ $$
 </ul>
 <p>尽管单纯形法的最差情形复杂度是指数级的，而内点法的复杂度是多项式的，但这两类算法在大多数实际问题中的表现都非常出色。相比之下，虽然椭球法的理论复杂度是多项式级别的，但是通常运行缓慢，并不实用。</p>
 <p>目前尚不清楚线性规划问题是否存在强多项式复杂度的算法。</p>
-<h2 id="_9">对偶问题</h2>
+<h2 id="对偶问题">对偶问题<a class="headerlink" href="#对偶问题" title="Permanent link"></a></h2>
 <p>每个线性规划问题都对应着一个对偶问题。原问题和对偶问题的解有着紧密的联系。通过对偶问题，不仅有助于更深入地理解问题的结构，还常常可以提升原问题的求解效率。</p>
 <p>对于线性规划问题 <span class="arithmatex">\(P\)</span>（所涉小写字母变量均为向量）</p>
 <div class="arithmatex">\[
@@ -1568,23 +1593,24 @@ $$
 <div class="arithmatex">\[
 \max\{b^Ty:A^Ty\le c\}.
 \]</div>
-<h3 id="_10">对偶原理</h3>
+<h3 id="对偶原理">对偶原理<a class="headerlink" href="#对偶原理" title="Permanent link"></a></h3>
 <p>原问题和对偶问题不仅在形式上互为镜像，而且两者的解也紧密相关。这称为 <strong>对偶原理</strong>（duality principal）。为表述方便，本节在叙述和证明定理时，将采用标准形式的原问题。</p>
 <p>首先，<strong>弱对偶定理</strong>（weak duality theorem）说明，对偶问题的最大值不超过原问题的最小值。</p>
-<p>???+ note "弱对偶定理"
-    对于所有 <span class="arithmatex">\(A\in\mathbf R^{m\times n}\)</span>，<span class="arithmatex">\(b\in\mathbf R^m\)</span> 和 <span class="arithmatex">\(c\in\mathbf R^n\)</span>，总有</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>弱对偶定理</summary>
+<p>对于所有 <span class="arithmatex">\(A\in\mathbf R^{m\times n}\)</span>，<span class="arithmatex">\(b\in\mathbf R^m\)</span> 和 <span class="arithmatex">\(c\in\mathbf R^n\)</span>，总有</p>
+<div class="arithmatex">\[
 \max\{b^Ty:A^Ty\le c\} \le \min\{c^Tx:Ax=b,~x\ge 0\}.
-$$
-</code></pre>
-<p>??? note "证明"
-    如果原问题和对偶问题中的任何一个不可行，那么该不等式就是平凡的。假设两个问题都是可行的。那么，对于所有可行的 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span>，都有</p>
-<pre><code>$$
+\]</div>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>如果原问题和对偶问题中的任何一个不可行，那么该不等式就是平凡的。假设两个问题都是可行的。那么，对于所有可行的 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span>，都有</p>
+<div class="arithmatex">\[
 b^Ty = x^TA^Ty \le x^Tc.
-$$
-
-因此，将两侧取最值，就得到弱对偶定理成立。
-</code></pre>
+\]</div>
+<p>因此，将两侧取最值，就得到弱对偶定理成立。</p>
+</details>
 <p>基于弱对偶定理，原问题和对偶问题的解的情况只能有下面四种情形：</p>
 <ol>
 <li>原问题和对偶问题均不可行，即 <span class="arithmatex">\(-\infty\le+\infty\)</span>；</li>
@@ -1593,113 +1619,110 @@ $$
 <li>原问题和对偶问题均有界。</li>
 </ol>
 <p>弱对偶定理有很多推论。例如，它实际上给出了利用原问题和对偶问题的可行性判定原问题无界的方法。</p>
-<p>???+ note "推论"
-    线性规划问题无界，当且仅当它可行，且它的对偶问题不可行。</p>
+<details class="note" open="open">
+<summary>推论</summary>
+<p>线性规划问题无界，当且仅当它可行，且它的对偶问题不可行。</p>
+</details>
 <p>将弱对偶定理应用于可行性线性规划问题，就得到 Farkas 引理（和它的各种变体）。</p>
-<p>???+ note "Farkas 引理"
-    对于 <span class="arithmatex">\(A\in\mathbf R^{m\times n}\)</span> 和 <span class="arithmatex">\(b\in\mathbf R^n\)</span>，下列情形中恰有一种成立：</p>
-<pre><code>1.  存在 $x\in\mathbf R^n$，使得 $Ax=b$ 且 $x\ge 0$；
-2.  存在 $y\in\mathbf R^m$，使得 $A^T y\ge 0$ 且 $b^Ty&lt;0$。
-</code></pre>
-<p>??? note "证明"
-    考虑线性规划问题 <span class="arithmatex">\(\max\{0:Ax=b,~x\ge 0\}\)</span>，它的对偶问题是 <span class="arithmatex">\(\min\{b^Ty:A^Ty\ge 0\}\)</span>。对偶问题显然是可行的，因为至少 <span class="arithmatex">\(0\in\mathbf R^m\)</span> 是一组可行解。因此，根据弱对偶定理，要么原问题可行，要么对偶问题无界，二者必择其一。原问题可行就是 Farkas 引理中的情形 1，而对偶问题无界就等价于 Farkas 引理中的情形 2。这就证明了 Farkas 引理。</p>
+<details class="note" open="open">
+<summary>Farkas 引理</summary>
+<p>对于 <span class="arithmatex">\(A\in\mathbf R^{m\times n}\)</span> 和 <span class="arithmatex">\(b\in\mathbf R^n\)</span>，下列情形中恰有一种成立：</p>
+<ol>
+<li>存在 <span class="arithmatex">\(x\in\mathbf R^n\)</span>，使得 <span class="arithmatex">\(Ax=b\)</span> 且 <span class="arithmatex">\(x\ge 0\)</span>；</li>
+<li>存在 <span class="arithmatex">\(y\in\mathbf R^m\)</span>，使得 <span class="arithmatex">\(A^T y\ge 0\)</span> 且 <span class="arithmatex">\(b^Ty&lt;0\)</span>。</li>
+</ol>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>考虑线性规划问题 <span class="arithmatex">\(\max\{0:Ax=b,~x\ge 0\}\)</span>，它的对偶问题是 <span class="arithmatex">\(\min\{b^Ty:A^Ty\ge 0\}\)</span>。对偶问题显然是可行的，因为至少 <span class="arithmatex">\(0\in\mathbf R^m\)</span> 是一组可行解。因此，根据弱对偶定理，要么原问题可行，要么对偶问题无界，二者必择其一。原问题可行就是 Farkas 引理中的情形 1，而对偶问题无界就等价于 Farkas 引理中的情形 2。这就证明了 Farkas 引理。</p>
+</details>
 <p>Farkas 实际上是一种 <a href="https://en.wikipedia.org/wiki/Hyperplane_separation_theorem">超平面分离定理</a>。情形 1 是在说，点 <span class="arithmatex">\(b\)</span> 位于 <span class="arithmatex">\(A\)</span> 的列向量生成的多面体锥 <span class="arithmatex">\(C\)</span> 里；因此，Farkas 引理说明，当且仅当点 <span class="arithmatex">\(b\)</span> 不在这一凸锥 <span class="arithmatex">\(C\)</span> 中时，存在经过原点且法向量为 <span class="arithmatex">\(y\)</span> 的超平面 <span class="arithmatex">\(H:y^Tx = 0\)</span> 强分离了点 <span class="arithmatex">\(b\)</span> 和多面体锥 <span class="arithmatex">\(C\)</span>。</p>
 <p>事实上，对于弱对偶定理允许的第四种情形，有更强的结论成立：原问题和对偶问题的最优值是相等的。将后三种情形合在一起，就得到 <strong>强对偶定理</strong>（strong duality theorem）：只要原问题或对偶问题之一是可行的，它们的最优值就必然相等。</p>
-<p>???+ note "强对偶定理"
-    对于所有 <span class="arithmatex">\(A\in\mathbf R^{m\times n}\)</span>，<span class="arithmatex">\(b\in\mathbf R^m\)</span> 和 <span class="arithmatex">\(c\in\mathbf R^n\)</span>，都有</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>强对偶定理</summary>
+<p>对于所有 <span class="arithmatex">\(A\in\mathbf R^{m\times n}\)</span>，<span class="arithmatex">\(b\in\mathbf R^m\)</span> 和 <span class="arithmatex">\(c\in\mathbf R^n\)</span>，都有</p>
+<div class="arithmatex">\[
 \max\{b^Ty:A^Ty\le c\} = \min\{c^Tx:Ax=b,~x\ge 0\}.
-$$
-
-只要两个集合之一非空。
-</code></pre>
-<p>??? note "证明"
-    弱对偶定理唯一没有包含的情形，就是原问题和对偶问题都可行的情形。此时，考虑如下可行性线性规划问题 <span class="arithmatex">\(Q\)</span>：</p>
-<pre><code>$$
+\]</div>
+<p>只要两个集合之一非空。</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>弱对偶定理唯一没有包含的情形，就是原问题和对偶问题都可行的情形。此时，考虑如下可行性线性规划问题 <span class="arithmatex">\(Q\)</span>：</p>
+<div class="arithmatex">\[
 \max\{0:c^Tx \le b^Ty,~Ax=b,~x\ge 0,~A^Ty\le c\}.
-$$
-
-如果问题 $Q$ 有可行解 $(x^*,y^*)\in\mathbf R^n\times\mathbf R^m$，那么，由弱对偶定理和最优性可知
-
-$$
+\]</div>
+<p>如果问题 <span class="arithmatex">\(Q\)</span> 有可行解 <span class="arithmatex">\((x^*,y^*)\in\mathbf R^n\times\mathbf R^m\)</span>，那么，由弱对偶定理和最优性可知</p>
+<div class="arithmatex">\[
 b^Ty^* \le \max\{b^Ty:A^Ty\le c\} \le \min\{c^Tx:Ax=b,~x\ge 0\} \le c^Tx^*,
-$$
-
-但是 $c^Tx^*\le b^Ty^*$，故而所有这些不等式都可以取得等号，也就是说，不仅强对偶成立，而且 $x^*$ 和 $y^*$ 分别是原问题和对偶问题的最优解。
-
-因此，只需要证明问题 $Q$ 是可行的。假设不然。仿照 Farkas 引理的证明，可以考虑问题 $Q$ 的对偶问题 $DQ$：
-
-$$
+\]</div>
+<p>但是 <span class="arithmatex">\(c^Tx^*\le b^Ty^*\)</span>，故而所有这些不等式都可以取得等号，也就是说，不仅强对偶成立，而且 <span class="arithmatex">\(x^*\)</span> 和 <span class="arithmatex">\(y^*\)</span> 分别是原问题和对偶问题的最优解。</p>
+<p>因此，只需要证明问题 <span class="arithmatex">\(Q\)</span> 是可行的。假设不然。仿照 Farkas 引理的证明，可以考虑问题 <span class="arithmatex">\(Q\)</span> 的对偶问题 <span class="arithmatex">\(DQ\)</span>：</p>
+<div class="arithmatex">\[
 \min\{c^T\mu - b^T\lambda : ct - A^T\lambda \ge 0,~ -bt + A\mu = 0,~t\ge 0,~\mu\ge 0\}.
-$$
-
-因为 $(t,\lambda,\mu)=(0,0,0)$ 是对偶问题 $DQ$ 的一组可行解，所以由弱对偶定理可知，问题 $Q$ 不可行，就意味着对偶问题 $DQ$ 无界，即存在一组 $(t^*,\lambda^*,\mu^*)$ 使得
-
-$$
+\]</div>
+<p>因为 <span class="arithmatex">\((t,\lambda,\mu)=(0,0,0)\)</span> 是对偶问题 <span class="arithmatex">\(DQ\)</span> 的一组可行解，所以由弱对偶定理可知，问题 <span class="arithmatex">\(Q\)</span> 不可行，就意味着对偶问题 <span class="arithmatex">\(DQ\)</span> 无界，即存在一组 <span class="arithmatex">\((t^*,\lambda^*,\mu^*)\)</span> 使得</p>
+<div class="arithmatex">\[
 c^T\mu^* - b^T\lambda^* &lt;0,~ ct^* - A^T\lambda^* \ge 0,~ -bt^* + A\mu^* = 0,~t^*\ge 0,~\mu^*\ge 0.
-$$
-
-此时，如果 $t^*&gt;0$，那么这些不等式实际说明 $(x,y)=(\mu^*/t^*,\lambda^*/t^*)$ 是前述问题的一组可行解，与假设矛盾。所以，只能有 $t^*=0$。这说明
-
-$$
+\]</div>
+<p>此时，如果 <span class="arithmatex">\(t^*&gt;0\)</span>，那么这些不等式实际说明 <span class="arithmatex">\((x,y)=(\mu^*/t^*,\lambda^*/t^*)\)</span> 是前述问题的一组可行解，与假设矛盾。所以，只能有 <span class="arithmatex">\(t^*=0\)</span>。这说明</p>
+<div class="arithmatex">\[
 c^T\mu^* &lt; b^T\lambda^*,~ A^T\lambda^*\le 0,~ A\mu^*=0,~\mu^*\ge 0.
-$$
-
-但是，因为已经假设定理中的原问题和对偶问题都可行，也就是说，存在 $(x_0,y_0)$ 使得
-
-$$
+\]</div>
+<p>但是，因为已经假设定理中的原问题和对偶问题都可行，也就是说，存在 <span class="arithmatex">\((x_0,y_0)\)</span> 使得</p>
+<div class="arithmatex">\[
 Ax_0 = b,~ x_0\ge 0,~ A^Ty_0\le c
-$$
-
-成立，所以，有
-
-$$
+\]</div>
+<p>成立，所以，有</p>
+<div class="arithmatex">\[
 0 = (A\mu^*)^Ty_0 = (A^Ty_0)^T\mu^* \le c^T\mu^* &lt; b^T\lambda^* = x_0^TA^T\lambda^* \le 0.
-$$
-
-这显然矛盾。这一矛盾说明问题 $Q$ 是可行的，进而说明强对偶成立。
-</code></pre>
+\]</div>
+<p>这显然矛盾。这一矛盾说明问题 <span class="arithmatex">\(Q\)</span> 是可行的，进而说明强对偶成立。</p>
+</details>
 <p>从强对偶定理的证明过程还能得到如下推论：</p>
-<p>???+ note "推论"
-    设原问题和对偶问题的一组可行解 <span class="arithmatex">\(x^*\)</span> 和 <span class="arithmatex">\(y^*\)</span> 满足强对偶性，即 <span class="arithmatex">\(c^Tx^* = b^Ty^*\)</span>。那么，它们同样分别是原问题和对偶问题的最优解。</p>
+<details class="note" open="open">
+<summary>推论</summary>
+<p>设原问题和对偶问题的一组可行解 <span class="arithmatex">\(x^*\)</span> 和 <span class="arithmatex">\(y^*\)</span> 满足强对偶性，即 <span class="arithmatex">\(c^Tx^* = b^Ty^*\)</span>。那么，它们同样分别是原问题和对偶问题的最优解。</p>
+</details>
 <p>强对偶定理说明，对于可行的线性规划问题，只需要求解它的对偶问题，就能够得到原问题的最优价值。</p>
-<h3 id="_11">互补松弛条件</h3>
+<h3 id="互补松弛条件">互补松弛条件<a class="headerlink" href="#互补松弛条件" title="Permanent link"></a></h3>
 <p>和其它的优化问题一样，互补松弛条件是线性规划问题的最优性条件的一部分。而且，因为目标函数是线性的，所以对于线性规划问题来说，互补松弛条件是可行解成为最优解的充分必要条件。</p>
 <p>所谓 <strong>互补松弛</strong>（complementary slackness）条件，就是指只有在原问题（对偶问题）中的约束取得等号（即约束是紧的）的时候，对偶问题（原问题）中与之对应的变量才能取非零值。如果将变量取非零值也当成一条松弛的约束，那么这就相当于说，原问题和对偶问题中相对应的变量和约束不能同时是松弛的。因此，这一条件称为互补松弛条件。</p>
 <p>以标准形式的线性规划问题为例，如下结论成立：</p>
-<p>???+ note "定理"
-    假设 <span class="arithmatex">\(x^*\)</span> 和 <span class="arithmatex">\(y^*\)</span> 分别是原问题 <span class="arithmatex">\(\min\{c^Tx:Ax=b,~x\ge 0\}\)</span> 和对偶问题 <span class="arithmatex">\(\max\{b^Ty:A^Ty\le c\}\)</span> 的可行解。那么，当且仅当互补松弛条件成立，即</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理</summary>
+<p>假设 <span class="arithmatex">\(x^*\)</span> 和 <span class="arithmatex">\(y^*\)</span> 分别是原问题 <span class="arithmatex">\(\min\{c^Tx:Ax=b,~x\ge 0\}\)</span> 和对偶问题 <span class="arithmatex">\(\max\{b^Ty:A^Ty\le c\}\)</span> 的可行解。那么，当且仅当互补松弛条件成立，即</p>
+<div class="arithmatex">\[
 x^T(A^Ty-c) = 0
-$$
-
-时，$x^*$ 和 $y^*$ 也分别是原问题和对偶问题的最优解。
-</code></pre>
-<p>??? note "证明"
-    因为 <span class="arithmatex">\(x^*\)</span> 和 <span class="arithmatex">\(y^*\)</span> 都是可行解，所以，有</p>
-<pre><code>$$
+\]</div>
+<p>时，<span class="arithmatex">\(x^*\)</span> 和 <span class="arithmatex">\(y^*\)</span> 也分别是原问题和对偶问题的最优解。</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>因为 <span class="arithmatex">\(x^*\)</span> 和 <span class="arithmatex">\(y^*\)</span> 都是可行解，所以，有</p>
+<div class="arithmatex">\[
 b^Ty^* - c^Tx^* = (x^*)^T(A^T y^* - c).
-$$
-
-因此，互补松弛条件成立，当且仅当 $b^Ty^* = c^Tx^*$。根据强对偶定理的推论，这一条件成立，当且仅当 $x^*$ 和 $y^*$ 分别是原问题的最优解。
-</code></pre>
+\]</div>
+<p>因此，互补松弛条件成立，当且仅当 <span class="arithmatex">\(b^Ty^* = c^Tx^*\)</span>。根据强对偶定理的推论，这一条件成立，当且仅当 <span class="arithmatex">\(x^*\)</span> 和 <span class="arithmatex">\(y^*\)</span> 分别是原问题的最优解。</p>
+</details>
 <p>标准形式可能太过特殊。该定理的稍微一般的形式如下：</p>
-<p>???+ note "定理"
-    假设 <span class="arithmatex">\(x^*\)</span> 和 <span class="arithmatex">\(y^*\)</span> 分别是原问题 <span class="arithmatex">\(\min\{c^Tx:Ax\ge b,~x\ge 0\}\)</span> 和对偶问题 <span class="arithmatex">\(\max\{b^Ty:A^Ty\le c,~y\ge 0\}\)</span> 的可行解。那么，当且仅当互补松弛条件成立，即</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理</summary>
+<p>假设 <span class="arithmatex">\(x^*\)</span> 和 <span class="arithmatex">\(y^*\)</span> 分别是原问题 <span class="arithmatex">\(\min\{c^Tx:Ax\ge b,~x\ge 0\}\)</span> 和对偶问题 <span class="arithmatex">\(\max\{b^Ty:A^Ty\le c,~y\ge 0\}\)</span> 的可行解。那么，当且仅当互补松弛条件成立，即</p>
+<div class="arithmatex">\[
 x^T(A^Ty-c) = y^T(Ax-b) = 0
-$$
-
-时，$x^*$ 和 $y^*$ 也分别是原问题和对偶问题的最优解。
-</code></pre>
-<p>??? note "证明"
-    证明基本同上，只是这次要将差值写成</p>
-<pre><code>$$
+\]</div>
+<p>时，<span class="arithmatex">\(x^*\)</span> 和 <span class="arithmatex">\(y^*\)</span> 也分别是原问题和对偶问题的最优解。</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>证明基本同上，只是这次要将差值写成</p>
+<div class="arithmatex">\[
 b^Ty^* - c^Tx^* = (x^*)^T(A^T y^* - c) - (y^*)^T(Ax^*-b).
-$$
-</code></pre>
+\]</div>
+</details>
 <p>互补松弛条件提供了判断线性规划问题的可行解的最优性的简单条件。</p>
-<h3 id="_12">原始‑对偶方法</h3>
+<h3 id="原始对偶方法">原始‑对偶方法<a class="headerlink" href="#原始对偶方法" title="Permanent link"></a></h3>
 <p>对偶问题可以辅助原问题的求解。在解决线性规划问题时，常常会用到的一种方法是 <strong>原始‑对偶方法</strong>（primal-dual method）。它通过求解一系列相对简单的辅助问题，逐步改进对偶问题的解，进而获得原始问题的最优解。</p>
 <p>对于标准形式的原问题</p>
 <div class="arithmatex">\[
@@ -1758,7 +1781,7 @@ I = \{i : (A^Ty - c)_i = 0\}.
 </ol>
 <p>这个过程中其实只有问题 <span class="arithmatex">\((DRP)\)</span> 是确实需要求解的，它与问题 <span class="arithmatex">\((RP)\)</span> 通过强对偶定理相互联系。问题 <span class="arithmatex">\((DRP)\)</span> 提供了一个改进对偶问题解的方向，而且相对于对偶问题 <span class="arithmatex">\((D)\)</span> 本身，问题 <span class="arithmatex">\((DRP)\)</span> 的形式更加简单。问题 <span class="arithmatex">\((DRP)\)</span> 的可行性由 Farkas 引理保证，而约束 <span class="arithmatex">\(y\le 1\)</span> 只是一组规范化条件，保证了问题 <span class="arithmatex">\((DRP)\)</span> 有界。</p>
 <p>算法竞赛中，原始‑对偶方法广泛地应用于各类组合优化问题。例如二分图最大权匹配的 <a href="../graph/graph-matching/bigraph-weight-match.md#hungarian-algorithmkuhnmunkres-algorithm">匈牙利算法</a>、最小费用流的 <a href="../graph/flow/min-cost.md">消圈算法</a> 和 <a href="../graph/flow/min-cost.md#ssp-算法">SSP 算法（原始‑对偶算法）</a>、最短路的 <a href="../graph/shortest-path.md#dijkstra-算法">Dijkstra 算法</a>、最大流的 <a href="../graph/flow/max-flow.md#fordfulkerson-增广">Ford–Fulkerson 增广算法</a> 等，都可以看作是原始‑对偶方法的直接应用。</p>
-<h2 id="_13">整数规划</h2>
+<h2 id="整数规划">整数规划<a class="headerlink" href="#整数规划" title="Permanent link"></a></h2>
 <p><strong>整数规划</strong>（integer programming）通常指 <strong>整数线性规划</strong>（integer linear programming, ILP）。标准形式的整数线性规划如下：</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1770,37 +1793,37 @@ I = \{i : (A^Ty - c)_i = 0\}.
 \]</div>
 <p>其中，<span class="arithmatex">\(A\in\mathbf R^{m\times n}\)</span>，<span class="arithmatex">\(b\in\mathbf R^m\)</span>，<span class="arithmatex">\(c\in\mathbf R^n\)</span>。也就是说，整数线性规划是在线性规划问题上添加决策变量必须为整数这一约束条件所得到的问题。</p>
 <p>整数约束显著增加了整数规划问题的复杂性。许多组合优化问题，例如背包问题、适定性问题以及众多图论中的优化问题，都可以表示为整数规划模型，而这些问题中的多数被证明是 NP 困难的。</p>
-<h3 id="_14">全幺模矩阵</h3>
+<h3 id="全幺模矩阵">全幺模矩阵<a class="headerlink" href="#全幺模矩阵" title="Permanent link"></a></h3>
 <p>正因如此，对于很多大规模的整数优化问题，有时候会考虑将它的整数约束松弛掉，转而求解一个线性规划问题。通常来说，松弛后的线性规划问题的最优价值只是原来的整数规划问题的一个下界估计（假设问题是最小化问题）。但是，如果松弛后的线性规划问题的最优解恰好是整数解，那么，它也一定是原来的整数规划问题的最优解。</p>
 <p>一个自然的问题是，是否存在条件，能够保证线性规划问题的最优解都是整数解？全幺模矩阵的概念就提供了这样的一个条件。</p>
-<p>???+ abstract "全幺模矩阵"
-    如果矩阵 <span class="arithmatex">\(A\in\mathbf R^{m\times n}\)</span> 的所有子方阵的行列式都是 <span class="arithmatex">\(0\)</span> 或 <span class="arithmatex">\(\pm 1\)</span>，那么，矩阵 <span class="arithmatex">\(A\)</span> 就称为一个 <strong>全幺模矩阵</strong>（totally unimodular matrix）。</p>
+<details class="abstract" open="open">
+<summary>全幺模矩阵</summary>
+<p>如果矩阵 <span class="arithmatex">\(A\in\mathbf R^{m\times n}\)</span> 的所有子方阵的行列式都是 <span class="arithmatex">\(0\)</span> 或 <span class="arithmatex">\(\pm 1\)</span>，那么，矩阵 <span class="arithmatex">\(A\)</span> 就称为一个 <strong>全幺模矩阵</strong>（totally unimodular matrix）。</p>
+</details>
 <p>特别地，全幺模矩阵的所有元素都是 <span class="arithmatex">\(0\)</span> 或 <span class="arithmatex">\(\pm 1\)</span>。利用全幺模矩阵的概念，可以叙述如下结论：</p>
-<p>???+ note "定理"
-    对于全幺模矩阵 <span class="arithmatex">\(A\in\mathbf Z^{m\times n}\)</span>，<span class="arithmatex">\(b\in\mathbf Z^{m}\)</span> 且 <span class="arithmatex">\(c\in\mathbf Z^n\)</span>，线性规划问题及其对偶问题</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理</summary>
+<p>对于全幺模矩阵 <span class="arithmatex">\(A\in\mathbf Z^{m\times n}\)</span>，<span class="arithmatex">\(b\in\mathbf Z^{m}\)</span> 且 <span class="arithmatex">\(c\in\mathbf Z^n\)</span>，线性规划问题及其对偶问题</p>
+<div class="arithmatex">\[
 \min\{c^Tx : Ax=b,x\ge 0\} = \max\{b^Ty: A^Ty\le c\}
-$$
-
-都有整数最优解，只要它们都有界。
-</code></pre>
-<p>??? note "证明"
-    前文已经说明，线性规划问题的最优解集可以取作它的一个极小面，而后者是由若干线性独立的紧约束作为等式联立得到的方程组的解：</p>
-<pre><code>$$
+\]</div>
+<p>都有整数最优解，只要它们都有界。</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>前文已经说明，线性规划问题的最优解集可以取作它的一个极小面，而后者是由若干线性独立的紧约束作为等式联立得到的方程组的解：</p>
+<div class="arithmatex">\[
 \{x\in\mathbf R^n : a_j^Tx = b_j,~\forall j\in J\}.
-$$
-
-记这个方程组为 $A_Jx=b_J$，且 $A_J=(A_1,A_2)$，其中，$A_1$ 是满秩的方阵，行列式为 $\pm 1$。那么，由 Cramer 法则，解
-
-$$
+\]</div>
+<p>记这个方程组为 <span class="arithmatex">\(A_Jx=b_J\)</span>，且 <span class="arithmatex">\(A_J=(A_1,A_2)\)</span>，其中，<span class="arithmatex">\(A_1\)</span> 是满秩的方阵，行列式为 <span class="arithmatex">\(\pm 1\)</span>。那么，由 Cramer 法则，解</p>
+<div class="arithmatex">\[
 x = \begin{pmatrix}A_1^{-1}b_J \\ 0\end{pmatrix}
-$$
-
-就是极小面上的一个整数解。
-</code></pre>
+\]</div>
+<p>就是极小面上的一个整数解。</p>
+</details>
 <p>常见的图论模型中，网络流、最短路、二分图等对应的线性规划问题的系数矩阵都是全幺模矩阵。因此，只需要这些问题仅涉及整数参数，它们的最优解就可以取作整数，而不用担心线性规划问题的解对应着分数流、分数匹配等情形。所以，<a href="../graph/flow/max-flow.md">最大流</a>、<a href="../graph/flow/min-cut.md">最小割</a>、<a href="../graph/flow/min-cost.md">最小费用流</a>、<a href="../graph/shortest-path.md">最短路</a>、<a href="../graph/diff-constraints.md">差分约束</a>、<a href="../graph/graph-matching/bigraph-match.md#线性规划形式">二分图最大（权）匹配和最小点覆盖</a> 等问题，都可以转化为线性规划问题求解。而且，最大流与最小割、最短路与差分约束、二分图最大匹配和最小点覆盖，两两互为对偶问题。</p>
 <p>除此之外，还有一些常见的图论模型，它所有的可行解恰巧是某个顶点均为整点的多胞形的全体顶点。因此，可以通过巧妙地选取约束，使得相应的组合优化问题的解，恰为某个线性规划问题的最优解。例如，一般图匹配和生成树等图论模型都属于这种情况，因此 <a href="../graph/graph-matching/general-weight-match.md">一般图最大（权）匹配</a> 和 <a href="../graph/mst.md">最小生成树</a> 等问题同样可以转化为线性规划问题。</p>
-<h2 id="_15">参考文献与注释</h2>
+<h2 id="参考文献与注释">参考文献与注释<a class="headerlink" href="#参考文献与注释" title="Permanent link"></a></h2>
 <ul>
 <li>Schrijver, Alexander. Theory of linear and integer programming. John Wiley &amp; Sons, 1998.</li>
 <li>Papadimitriou, Christos H., and Kenneth Steiglitz. Combinatorial optimization: algorithms and complexity. Courier Corporation, 1998.</li>
@@ -1866,7 +1889,9 @@ $$
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

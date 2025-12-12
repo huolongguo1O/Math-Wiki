@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#恩特林格数" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#恩特林格数" class="md-nav__link">
     <span class="md-ellipsis">
       
         恩特林格数
@@ -1101,7 +1101,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#seidelentringerarnold" class="md-nav__link">
+  <a href="#seidelentringerarnold-三角" class="md-nav__link">
     <span class="md-ellipsis">
       
         Seidel–Entringer–Arnold 三角
@@ -1112,7 +1112,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#zigzag" class="md-nav__link">
+  <a href="#zigzag-置换" class="md-nav__link">
     <span class="md-ellipsis">
       
         zigzag 置换
@@ -1123,7 +1123,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#zigzag_1" class="md-nav__link">
+  <a href="#交替置换与-zigzag-数" class="md-nav__link">
     <span class="md-ellipsis">
       
         交替置换与 zigzag 数
@@ -1134,7 +1134,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#zigzag_2" class="md-nav__link">
+  <a href="#恩特林格数与-zigzag-数的关系" class="md-nav__link">
     <span class="md-ellipsis">
       
         恩特林格数与 zigzag 数的关系
@@ -1145,7 +1145,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#参考资料与链接" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料与链接
@@ -1174,7 +1174,7 @@
 
   <h1>Entringer</h1>
 
-<h2 id="_1">恩特林格数</h2>
+<h2 id="恩特林格数">恩特林格数<a class="headerlink" href="#恩特林格数" title="Permanent link"></a></h2>
 <p>恩特林格数（Entringer number，<a href="http://oeis.org/A008281">OEIS A008281</a>）<span class="arithmatex">\(E(n,k)\)</span> 是满足下述条件的 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(n\)</span> 共 <span class="arithmatex">\(n+1\)</span> 个数的置换数目：</p>
 <ul>
 <li>首元素是 <span class="arithmatex">\(k\)</span>；</li>
@@ -1191,7 +1191,7 @@ E(n,0)=0
 <div class="arithmatex">\[
 E(n,k)=E(n,k-1)+E(n-1,n-k)
 \]</div>
-<h2 id="seidelentringerarnold">Seidel–Entringer–Arnold 三角</h2>
+<h2 id="seidelentringerarnold-三角">Seidel–Entringer–Arnold 三角<a class="headerlink" href="#seidelentringerarnold-三角" title="Permanent link"></a></h2>
 <p>恩特林格数的一个适当排列的数字三角，称为 Seidel–Entringer–Arnold 三角（Seidel–Entringer–Arnold triangle，<a href="http://oeis.org/A008280">OEIS A008280</a>）。该三角是按照「牛耕」顺序（ox-plowing order）排列的恩特林格数 <span class="arithmatex">\(E_(n,k)\)</span>：</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1237,7 +1237,7 @@ E(4,4) &amp; &amp; &amp; &amp;
 &amp; 5
 \end{aligned}
 \]</div>
-<h2 id="zigzag">zigzag 置换</h2>
+<h2 id="zigzag-置换">zigzag 置换<a class="headerlink" href="#zigzag-置换" title="Permanent link"></a></h2>
 <p>一个 zigzag 置换（zigzag permutation）是一个 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n\)</span> 的排列 <span class="arithmatex">\(c_1\)</span> 到 <span class="arithmatex">\(c_i\)</span>，使得任意一个元素 <span class="arithmatex">\(c_i\)</span> 的大小都不介于 <span class="arithmatex">\(c_{i-1}\)</span> 和 <span class="arithmatex">\(c_{i+1}\)</span> 之间。</p>
 <p>对于 zigzag 置换的个数 <span class="arithmatex">\(Z_n\)</span>（<a href="http://oeis.org/A001250">OEIS A001250</a>），从 <span class="arithmatex">\(n=0\)</span> 开始有：</p>
 <div class="arithmatex">\[
@@ -1253,7 +1253,7 @@ n=4: &amp; \{1,3,2,4\}, \{1,4,2,3\}, \{2,1,4,3\}, \{2,3,1,4\}, \{2,4,1,3\}, \\
 &amp; \{3,1,4,2\}, \{3,2,4,1\}, \{3,4,1,2\}, \{4,1,3,2\}, \{4,2,3,1\}
 \end{aligned}
 \]</div>
-<h2 id="zigzag_1">交替置换与 zigzag 数</h2>
+<h2 id="交替置换与-zigzag-数">交替置换与 zigzag 数<a class="headerlink" href="#交替置换与-zigzag-数" title="Permanent link"></a></h2>
 <p>（注意和「错位排列」进行概念上的区分。）</p>
 <p>对于大于 <span class="arithmatex">\(1\)</span> 的 <span class="arithmatex">\(n\)</span>，每个 zigzag 置换翻转过来仍旧为 zigzag 置换，可以两两配对，所以必然为偶数。</p>
 <p>这里再给出一种配对的方法：将 zigzag 置换分为交替置换（alternating permutation）和反交替置换（reverse alternating permutation）。</p>
@@ -1303,7 +1303,7 @@ y=\tan\left(\frac{1}{2}x+C\right)
 y=\tan x+\sec x
 \]</div>
 <p>正切函数是奇函数，正割函数是偶函数，两者之和构成 zigzag 数的生成函数。</p>
-<h2 id="zigzag_2">恩特林格数与 zigzag 数的关系</h2>
+<h2 id="恩特林格数与-zigzag-数的关系">恩特林格数与 zigzag 数的关系<a class="headerlink" href="#恩特林格数与-zigzag-数的关系" title="Permanent link"></a></h2>
 <p>根据恩特林格数的定义，恩特林格数 <span class="arithmatex">\(E(n,k)\)</span> 是首元素为 <span class="arithmatex">\(k\)</span> 的 <span class="arithmatex">\(0\)</span> 到 <span class="arithmatex">\(n\)</span> 的交替置换个数。因此恩特林格数与 zigzag 数事实上有关系：</p>
 <div class="arithmatex">\[
 A_n=E(n,n)
@@ -1337,7 +1337,7 @@ A_n=\frac{(-1)^{(n-1)/2}2^{n+1}(2^{n+1}-1)B_{n+1}}{n+1}
 \sec x+\tan x=A_0+A_1x+A_2\frac{x^2}{2!}+A_3\frac{x^3}{3!}+A_4\frac{x^4}{4!}+A_5\frac{x^5}{5!}+\cdots
 \]</div>
 <p>构成 zigzag 数的生成函数。</p>
-<h2 id="_2">参考资料与链接</h2>
+<h2 id="参考资料与链接">参考资料与链接<a class="headerlink" href="#参考资料与链接" title="Permanent link"></a></h2>
 <ol>
 <li><a href="https://en.wikipedia.org/wiki/Alternating_permutation">Alternating permutation - Wikipedia</a></li>
 </ol>
@@ -1395,7 +1395,9 @@ A_n=\frac{(-1)^{(n-1)/2}2^{n+1}(2^{n+1}-1)B_{n+1}}{n+1}
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

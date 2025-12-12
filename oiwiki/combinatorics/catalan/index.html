@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#引入" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#引入" class="md-nav__link">
     <span class="md-ellipsis">
       
         引入
@@ -1101,7 +1101,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#应用" class="md-nav__link">
     <span class="md-ellipsis">
       
         应用
@@ -1112,7 +1112,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#常见形式" class="md-nav__link">
     <span class="md-ellipsis">
       
         常见形式
@@ -1124,7 +1124,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#代数推演" class="md-nav__link">
     <span class="md-ellipsis">
       
         代数推演
@@ -1135,7 +1135,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#组合意义" class="md-nav__link">
     <span class="md-ellipsis">
       
         组合意义
@@ -1151,7 +1151,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#例题" class="md-nav__link">
     <span class="md-ellipsis">
       
         例题
@@ -1162,7 +1162,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#习题" class="md-nav__link">
     <span class="md-ellipsis">
       
         习题
@@ -1173,7 +1173,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#参考资料与注释" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料与注释
@@ -1202,7 +1202,7 @@
 
   <h1>Catalan</h1>
 
-<h2 id="_1">引入</h2>
+<h2 id="引入">引入<a class="headerlink" href="#引入" title="Permanent link"></a></h2>
 <p>Catalan 数经常出现在各类计数问题中。比利时数学家 Eugène Charles Catalan 在 1958 年研究括号序列计数问题时发现了这一数列，它也因此得名。清朝数学家明安图早在 18 世纪 30 年代就已经发现这一数列。</p>
 <p>Catalan 数满足如下递推关系：</p>
 <div class="arithmatex">\[
@@ -1215,81 +1215,87 @@ C_n = \begin{cases}
 <div class="arithmatex">\[
 1,1,2,5,14,42,132,429,1430,\ldots
 \]</div>
-<h2 id="_2">应用</h2>
+<h2 id="应用">应用<a class="headerlink" href="#应用" title="Permanent link"></a></h2>
 <p>Catalan 数 <span class="arithmatex">\(C_n\)</span> 的递推关系有着天然的递归结构：规模为 <span class="arithmatex">\(n\)</span> 的计数问题 <span class="arithmatex">\(C_n\)</span>，可以通过枚举分界点，分拆为两个规模分别为 <span class="arithmatex">\(i\)</span> 和 <span class="arithmatex">\((n-1-i)\)</span> 的子问题。这一递推关系使得 Catalan 数广泛出现于各类具有类似递归结构的问题中。</p>
 <ul>
 <li>
 <p><a id="path-counting"></a><strong>路径计数问题</strong>：有一个大小为 <span class="arithmatex">\(n\times n\)</span> 的方格图，左下角为 <span class="arithmatex">\((0, 0)\)</span>，右上角为 <span class="arithmatex">\((n, n)\)</span>。从左下角开始，每次都只能向右或者向上走一单位，不走到对角线 <span class="arithmatex">\(y=x\)</span> 上方（但可以触碰）的情况下，到达右上角的路径总数为 <span class="arithmatex">\(C_n\)</span>。</p>
-<p>??? note "证明"
-    设方案数为 <span class="arithmatex">\(T_n\)</span>。考虑 <span class="arithmatex">\(n \ge 2\)</span> 的情况。设路径 <strong>第一次</strong> 走到对角线 <span class="arithmatex">\(y=x\)</span> 的点是 <span class="arithmatex">\((k,k)~(k \in [1,n])\)</span>。考察从 <span class="arithmatex">\((0,0)\)</span> 到 <span class="arithmatex">\((k,k)\)</span> 的除起点和终点外，中间的点 <strong>不经过对角线（不能碰到）</strong> 的路径。</p>
-<pre><code>![catalan2](./images/catalan-2.svg)
-
-如图所示，这些路径的第一步一定向右，从 $(0,0)$ 到 $(1,0)$；最后一步一定向上，从 $(k,k-1)$ 到 $(k,k)$。因此，这些路径就是从 $(1,0)$ 到 $(k,k-1)$ 的不越过直线 $y=x-1$ 的路径，这样路径的数目就是 $T_{k-1}$。同时，从 $(k,k)$ 到 $(n,n)$ 的合法路径数就是 $T_{n-k}$。根据乘法原理，第一次在 $(k,k)$ 处触碰对角线的路径数目为 $T_{k-1} T_{n-k}$。枚举 $k$ 的所有可能性，所有合法路径的数目为
-
-$$
+<details class="note">
+<summary>证明</summary>
+<p>设方案数为 <span class="arithmatex">\(T_n\)</span>。考虑 <span class="arithmatex">\(n \ge 2\)</span> 的情况。设路径 <strong>第一次</strong> 走到对角线 <span class="arithmatex">\(y=x\)</span> 的点是 <span class="arithmatex">\((k,k)~(k \in [1,n])\)</span>。考察从 <span class="arithmatex">\((0,0)\)</span> 到 <span class="arithmatex">\((k,k)\)</span> 的除起点和终点外，中间的点 <strong>不经过对角线（不能碰到）</strong> 的路径。</p>
+<p><img alt="catalan2" src="../images/catalan-2.svg" /></p>
+<p>如图所示，这些路径的第一步一定向右，从 <span class="arithmatex">\((0,0)\)</span> 到 <span class="arithmatex">\((1,0)\)</span>；最后一步一定向上，从 <span class="arithmatex">\((k,k-1)\)</span> 到 <span class="arithmatex">\((k,k)\)</span>。因此，这些路径就是从 <span class="arithmatex">\((1,0)\)</span> 到 <span class="arithmatex">\((k,k-1)\)</span> 的不越过直线 <span class="arithmatex">\(y=x-1\)</span> 的路径，这样路径的数目就是 <span class="arithmatex">\(T_{k-1}\)</span>。同时，从 <span class="arithmatex">\((k,k)\)</span> 到 <span class="arithmatex">\((n,n)\)</span> 的合法路径数就是 <span class="arithmatex">\(T_{n-k}\)</span>。根据乘法原理，第一次在 <span class="arithmatex">\((k,k)\)</span> 处触碰对角线的路径数目为 <span class="arithmatex">\(T_{k-1} T_{n-k}\)</span>。枚举 <span class="arithmatex">\(k\)</span> 的所有可能性，所有合法路径的数目为</p>
+<div class="arithmatex">\[
 T_n = \sum_{k=1}^n T_{k-1}T_{n-k}.
-$$
-
-做代换 $k=i+1$ 就可以发现，这就是 Catalan 数的递推关系。由 $T_0=1$ 可知 $T_n = C_n$。
-</code></pre>
+\]</div>
+<p>做代换 <span class="arithmatex">\(k=i+1\)</span> 就可以发现，这就是 Catalan 数的递推关系。由 <span class="arithmatex">\(T_0=1\)</span> 可知 <span class="arithmatex">\(T_n = C_n\)</span>。</p>
+</details>
 <!-- To make bot happy. Do NOT delete this line. -->
 </li>
 <li>
 <p><strong>圆内不相交弦计数问题</strong>：圆上有 <span class="arithmatex">\(2n\)</span> 个点，将这些点成对连接起来且使得所得到的 <span class="arithmatex">\(n\)</span> 条线段两两不交的方案数是 <span class="arithmatex">\(C_n\)</span>。</p>
-<p>??? note "证明"
-    记 <span class="arithmatex">\(2n\)</span> 个点的方案数为 <span class="arithmatex">\(T_n\)</span>。将 <span class="arithmatex">\(2n\)</span> 个点按顺时针标号，分别为 <span class="arithmatex">\(1,2,\ldots,2n\)</span>。由于弦两两不交，<span class="arithmatex">\(1\)</span> 号点只能连接偶数号点；否则，两点之间的奇数个点无法在不穿过两点连线的情况下两两配对。如果连接了 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(2k~(k\in[1,n])\)</span>，那么左边有 <span class="arithmatex">\(2k-2\)</span> 个点，右边有 <span class="arithmatex">\(2n-2k\)</span> 个点，由乘法原理，这样的方案数为 <span class="arithmatex">\(T_{k-1}T_{n-k}\)</span>。因此，枚举 <span class="arithmatex">\(k\)</span>，有 <span class="arithmatex">\(T_n = \sum_{k=1}^n T_{k-1} T_{n-k}\)</span>。令 <span class="arithmatex">\(k=i+1\)</span>，就得到 Catalan 数的递推关系。由 <span class="arithmatex">\(T_0=1\)</span> 可知 <span class="arithmatex">\(T_n=C_n\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>记 <span class="arithmatex">\(2n\)</span> 个点的方案数为 <span class="arithmatex">\(T_n\)</span>。将 <span class="arithmatex">\(2n\)</span> 个点按顺时针标号，分别为 <span class="arithmatex">\(1,2,\ldots,2n\)</span>。由于弦两两不交，<span class="arithmatex">\(1\)</span> 号点只能连接偶数号点；否则，两点之间的奇数个点无法在不穿过两点连线的情况下两两配对。如果连接了 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(2k~(k\in[1,n])\)</span>，那么左边有 <span class="arithmatex">\(2k-2\)</span> 个点，右边有 <span class="arithmatex">\(2n-2k\)</span> 个点，由乘法原理，这样的方案数为 <span class="arithmatex">\(T_{k-1}T_{n-k}\)</span>。因此，枚举 <span class="arithmatex">\(k\)</span>，有 <span class="arithmatex">\(T_n = \sum_{k=1}^n T_{k-1} T_{n-k}\)</span>。令 <span class="arithmatex">\(k=i+1\)</span>，就得到 Catalan 数的递推关系。由 <span class="arithmatex">\(T_0=1\)</span> 可知 <span class="arithmatex">\(T_n=C_n\)</span>。</p>
+</details>
 <!-- To make bot happy. Do NOT delete this line. -->
 </li>
 <li>
 <p><a id="triangulation-counting"></a><strong>三角剖分计数问题</strong>：对角线不相交的情况下，将一个凸 <span class="arithmatex">\((n+2)\)</span> 边形区域分成三角形区域的方法数为 <span class="arithmatex">\(C_n\)</span>。</p>
-<p>??? note "证明"
-    设 <span class="arithmatex">\((n+2)\)</span> 边形三角剖分的方案数为 <span class="arithmatex">\(T_n\)</span>。先选定一条边 <span class="arithmatex">\((1,n+2)\)</span> 作为基边，它一定属于一个三角形，记该三角形的第三个点为 <span class="arithmatex">\(k~(k\in[2,n+1])\)</span>。这样，原凸多边形变成了三个部分：</p>
-<pre><code>-   三角形 $(1,k,n+2)$。
--   $k$ 边形，顶点 $1\sim k$。
--   $(n+3-k)$ 边形，顶点 $k\sim (n+2)$。
-
-后面两个部分都是子问题，所以，有递推关系
-
-$$
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\((n+2)\)</span> 边形三角剖分的方案数为 <span class="arithmatex">\(T_n\)</span>。先选定一条边 <span class="arithmatex">\((1,n+2)\)</span> 作为基边，它一定属于一个三角形，记该三角形的第三个点为 <span class="arithmatex">\(k~(k\in[2,n+1])\)</span>。这样，原凸多边形变成了三个部分：</p>
+<ul>
+<li>三角形 <span class="arithmatex">\((1,k,n+2)\)</span>。</li>
+<li><span class="arithmatex">\(k\)</span> 边形，顶点 <span class="arithmatex">\(1\sim k\)</span>。</li>
+<li><span class="arithmatex">\((n+3-k)\)</span> 边形，顶点 <span class="arithmatex">\(k\sim (n+2)\)</span>。</li>
+</ul>
+<p>后面两个部分都是子问题，所以，有递推关系</p>
+<div class="arithmatex">\[
 T_n = \sum_{k=2}^{n+1} T_{k-2}T_{n+1-k}.
-$$
-
-令 $k=i+2$，就得到 Catalan 数递归关系。由 $T_0=T_1=1$ 可知 $T_n=C_n$。
-</code></pre>
+\]</div>
+<p>令 <span class="arithmatex">\(k=i+2\)</span>，就得到 Catalan 数递归关系。由 <span class="arithmatex">\(T_0=T_1=1\)</span> 可知 <span class="arithmatex">\(T_n=C_n\)</span>。</p>
+</details>
 <!-- To make bot happy. Do NOT delete this line. -->
 </li>
 <li>
 <p><strong>二叉树计数问题</strong>：含有 <span class="arithmatex">\(n\)</span> 个结点的形态不同的二叉树数目为 <span class="arithmatex">\(C_n\)</span>。等价地，含有 <span class="arithmatex">\(n\)</span> 个非叶结点的形态不同的满二叉树数目为 <span class="arithmatex">\(C_{n}\)</span>。</p>
-<p>??? note "证明"
-    记 <span class="arithmatex">\(n\)</span> 个结点的二叉树数目为 <span class="arithmatex">\(T_n\)</span>。任取一个根结点，枚举左右子树大小。设左子树大小为 <span class="arithmatex">\(i\in[0,n-1]\)</span>，则右子树大小为 <span class="arithmatex">\((n-1-i)\)</span>。左右子树均为子问题，所以，有递推关系</p>
-<pre><code>$$
+<details class="note">
+<summary>证明</summary>
+<p>记 <span class="arithmatex">\(n\)</span> 个结点的二叉树数目为 <span class="arithmatex">\(T_n\)</span>。任取一个根结点，枚举左右子树大小。设左子树大小为 <span class="arithmatex">\(i\in[0,n-1]\)</span>，则右子树大小为 <span class="arithmatex">\((n-1-i)\)</span>。左右子树均为子问题，所以，有递推关系</p>
+<div class="arithmatex">\[
 T_n = \sum_{i=0}^{n-1}T_iT_{n-1-i}.
-$$
-
-这就是 Catalan 数递推关系。由 $T_0=T_1=1$ 可知 $T_n=C_n$。
-</code></pre>
+\]</div>
+<p>这就是 Catalan 数递推关系。由 <span class="arithmatex">\(T_0=T_1=1\)</span> 可知 <span class="arithmatex">\(T_n=C_n\)</span>。</p>
+</details>
 <!-- To make bot happy. Do NOT delete this line. -->
 </li>
 <li>
 <p><strong>括号序列计数问题</strong>：由 <span class="arithmatex">\(n\)</span> 对括号构成的合法括号序列数为 <span class="arithmatex">\(C_n\)</span>。</p>
-<p>??? note "证明"
-    联系路径计数问题。将左括号视为向上走，右括号视为向右走。合法括号序列即为，在任意位置，左括号的数量不少于右括号的数量。相当于路径计数问题中，在任意时刻，向上走的次数不少于向右走的次数。因此，合法括号序列与合法路径之间存在双射。合法括号序列的数目同样为 <span class="arithmatex">\(C_n\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>联系路径计数问题。将左括号视为向上走，右括号视为向右走。合法括号序列即为，在任意位置，左括号的数量不少于右括号的数量。相当于路径计数问题中，在任意时刻，向上走的次数不少于向右走的次数。因此，合法括号序列与合法路径之间存在双射。合法括号序列的数目同样为 <span class="arithmatex">\(C_n\)</span>。</p>
+</details>
 <!-- To make bot happy. Do NOT delete this line. -->
 </li>
 <li>
 <p><strong>出栈序列计数问题</strong>：一个栈（无穷大）的进栈序列为 <span class="arithmatex">\(1,2,3, \ldots ,n\)</span>，合法出栈序列的数目为 <span class="arithmatex">\(C_n\)</span>。</p>
-<p>??? note "证明"
-    联系括号序列计数问题。将入栈视为左括号，出栈视为右括号。任意时刻，入栈的次数不少于出栈的次数。因此，合法出栈序列与合法括号序列之间存在双射。合法出栈序列的数目同样为 <span class="arithmatex">\(C_n\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>联系括号序列计数问题。将入栈视为左括号，出栈视为右括号。任意时刻，入栈的次数不少于出栈的次数。因此，合法出栈序列与合法括号序列之间存在双射。合法出栈序列的数目同样为 <span class="arithmatex">\(C_n\)</span>。</p>
+</details>
 <!-- To make bot happy. Do NOT delete this line. -->
 </li>
 <li>
 <p><a id="seq-counting"></a><strong>数列计数问题</strong>：由 <span class="arithmatex">\(n\)</span> 个 <span class="arithmatex">\(+1\)</span> 和 <span class="arithmatex">\(n\)</span> 个 <span class="arithmatex">\(-1\)</span> 组成的数列 <span class="arithmatex">\(a_1,a_2, \ldots ,a_{2n}\)</span> 中，部分和满足 <span class="arithmatex">\(a_1+a_2+ \ldots +a_k \geq 0~(k=1,2,3, \ldots ,2n)\)</span> 的数列数目为 <span class="arithmatex">\(C_n\)</span>。</p>
-<p>??? note "证明"
-    联系括号序列计数问题。将 <span class="arithmatex">\(+1\)</span> 视为左括号，<span class="arithmatex">\(-1\)</span> 视为右括号。任意时刻，<span class="arithmatex">\(+1\)</span> 的数量不少于 <span class="arithmatex">\(-1\)</span> 的数量。因此，合法数列与合法括号序列之间存在双射。合法数列的数目同样为 <span class="arithmatex">\(C_n\)</span>。</p>
+<details class="note">
+<summary>证明</summary>
+<p>联系括号序列计数问题。将 <span class="arithmatex">\(+1\)</span> 视为左括号，<span class="arithmatex">\(-1\)</span> 视为右括号。任意时刻，<span class="arithmatex">\(+1\)</span> 的数量不少于 <span class="arithmatex">\(-1\)</span> 的数量。因此，合法数列与合法括号序列之间存在双射。合法数列的数目同样为 <span class="arithmatex">\(C_n\)</span>。</p>
+</details>
 </li>
 </ul>
 <p>尽管这一递推关系应用广泛，但是直接计算复杂度较高，需要寻找更为简单的公式。</p>
-<h2 id="_3">常见形式</h2>
+<h2 id="常见形式">常见形式<a class="headerlink" href="#常见形式" title="Permanent link"></a></h2>
 <p>Catalan 数有如下常见的表达式：</p>
 <div class="arithmatex">\[
 C_n = \frac{1}{n+1}\binom{2n}{n} = \dfrac{(2n)!}{n!(n+1)!},~ n\ge 0. \tag{2}
@@ -1302,11 +1308,12 @@ C_n = \frac{(4n-2)}{n+1}C_{n-1},~ n &gt; 0,~ C_0 = 1. \tag{4}
 \]</div>
 <p>Catalan 数的这些形式都可以高效计算：前两个形式将它转换为阶乘和组合数的计算问题，第三个形式则提供了顺次计算的递推公式。</p>
 <p>对于这三种常见形式，本文提供两种证明方式。</p>
-<h3 id="_4">代数推演</h3>
+<h3 id="代数推演">代数推演<a class="headerlink" href="#代数推演" title="Permanent link"></a></h3>
 <p>通过代数方法得出 Catalan 数的上述表达式共两步。首先，验证三个形式相互等价。</p>
-<p>??? note "证明表达式 <span class="arithmatex">\((2)\sim(4)\)</span> 等价"
-    只需要证明表达式 <span class="arithmatex">\((3)\)</span> 可以转化为表达式 <span class="arithmatex">\((2)\)</span> 中阶乘形式：</p>
-<pre><code>$$
+<details class="note">
+<summary>证明表达式 <span class="arithmatex">\((2)\sim(4)\)</span> 等价</summary>
+<p>只需要证明表达式 <span class="arithmatex">\((3)\)</span> 可以转化为表达式 <span class="arithmatex">\((2)\)</span> 中阶乘形式：</p>
+<div class="arithmatex">\[
 \begin{aligned}
 C_n &amp;= \binom{2n}{n} - \binom{2n}{n+1} \\
 &amp;= \frac{(2n)!}{n!n!} - \frac{(2n)!}{(n-1)!(n+1)!} \\
@@ -1314,20 +1321,18 @@ C_n &amp;= \binom{2n}{n} - \binom{2n}{n+1} \\
 &amp;= \frac{(2n)!}{n!n!}\left(1- \frac{n}{n+1}\right) \\
 &amp;= \dfrac{(2n)!}{n!(n+1)!}.
 \end{aligned}
-$$
-
-以及，表达式 $(4)$ 也可以转化为表达式 $(2)$ 中阶乘形式：
-
-$$
+\]</div>
+<p>以及，表达式 <span class="arithmatex">\((4)\)</span> 也可以转化为表达式 <span class="arithmatex">\((2)\)</span> 中阶乘形式：</p>
+<div class="arithmatex">\[
 C_n = \prod_{i=1}^n\frac{(4i-2)}{i+1} = \prod_{i=1}^n\frac{2i(2i-1)}{i(i+1)} = \dfrac{(2n)!}{n!(n+1)!}.
-$$
-
-因此，三个表达式互相等价。
-</code></pre>
+\]</div>
+<p>因此，三个表达式互相等价。</p>
+</details>
 <p>紧接着，验证这些形式确实是 Catalan 数递推公式的解。为此，考虑使用生成函数方法直接求出递推公式 <span class="arithmatex">\((1)\)</span> 的解。</p>
-<p>??? note "利用生成函数方法求解递推公式 <span class="arithmatex">\((1)\)</span>"
-    考虑 Catalan 数的普通生成函数 <span class="arithmatex">\(C(x)=\sum_{n=0}^{\infty}C_nx^n\)</span>。由于 Catalan 数的递推关系和卷积形式很相似，所以考虑用卷积构造 <span class="arithmatex">\(C(x)\)</span> 的方程：</p>
-<pre><code>$$
+<details class="note">
+<summary>利用生成函数方法求解递推公式 <span class="arithmatex">\((1)\)</span></summary>
+<p>考虑 Catalan 数的普通生成函数 <span class="arithmatex">\(C(x)=\sum_{n=0}^{\infty}C_nx^n\)</span>。由于 Catalan 数的递推关系和卷积形式很相似，所以考虑用卷积构造 <span class="arithmatex">\(C(x)\)</span> 的方程：</p>
+<div class="arithmatex">\[
 \begin{aligned}
 C(x)&amp;=\sum_{n=0}^{\infty}C_nx^n\\
 &amp;=1+\sum_{n=1}^{\infty}\left(\sum_{i=0}^{n-1}C_iC_{n-i-1}\right)x^{n}\\
@@ -1335,38 +1340,28 @@ C(x)&amp;=\sum_{n=0}^{\infty}C_nx^n\\
 &amp;=1+x\sum_{i=0}^{\infty}C_ix^i\sum_{j=0}^{\infty}C_jx^j\\
 &amp;=1+xC^2(x).
 \end{aligned}
-$$
-
-其中，倒数第二个等号交换了求和次序，并令 $j=n-1-i$。由此，解得：
-
-$$
+\]</div>
+<p>其中，倒数第二个等号交换了求和次序，并令 <span class="arithmatex">\(j=n-1-i\)</span>。由此，解得：</p>
+<div class="arithmatex">\[
 C(x)=\dfrac{1\pm \sqrt{1-4x}}{2x} = \frac{2}{1\mp \sqrt{1-4x}}.
-$$
-
-由初值条件 $C_0=1$ 可知，$C(0)=1$。代入检验可以发现唯一可行的解就是
-
-$$
+\]</div>
+<p>由初值条件 <span class="arithmatex">\(C_0=1\)</span> 可知，<span class="arithmatex">\(C(0)=1\)</span>。代入检验可以发现唯一可行的解就是</p>
+<div class="arithmatex">\[
 C(x) = \dfrac{1- \sqrt{1-4x}}{2x}.
-$$
-
-接下来，需要将它展开为幂级数的形式。利用 $(1+x)^a$ 的 [幂级数展开式](../poly/intro.md#常见的幂级数展开式) 可知：
-
-$$
+\]</div>
+<p>接下来，需要将它展开为幂级数的形式。利用 <span class="arithmatex">\((1+x)^a\)</span> 的 <a href="../../poly/intro/#常见的幂级数展开式">幂级数展开式</a> 可知：</p>
+<div class="arithmatex">\[
 \sqrt{1-4x} = \sum_{n=0}^{\infty} \dfrac{\left(\frac{1}{2}\right)_{-n}}{n!}(-4x)^n,
-$$
-
-其中，$\left(\dfrac{1}{2}\right)_{-n}$ 是下降阶乘幂：
-
-$$
+\]</div>
+<p>其中，<span class="arithmatex">\(\left(\dfrac{1}{2}\right)_{-n}\)</span> 是下降阶乘幂：</p>
+<div class="arithmatex">\[
 \begin{aligned}
 \left(\frac{1}{2}\right)_{-n} &amp;= \prod_{k=0}^{n-1}\left(\dfrac{1}{2}-k\right) = \dfrac{1}{2^n}\prod_{k=1}^{n-1}(1-2k) = \dfrac{(-1)^{n-1}}{2^n}\prod_{k=1}^{n-1}(2k-1)\\
 &amp;= \dfrac{(-1)^{n-1}}{2^{2n-1}}\prod_{k=1}^{n-1}\dfrac{(2k-1)2k}{k} = \dfrac{(-1)^{n-1}}{2^{2n-1}}\dfrac{(2n-2)!}{(n-1)!}.
 \end{aligned}
-$$
-
-代入 $C(x)$ 的表达式，就有
-
-$$
+\]</div>
+<p>代入 <span class="arithmatex">\(C(x)\)</span> 的表达式，就有</p>
+<div class="arithmatex">\[
 \begin{aligned}
 C(x) &amp;= \dfrac{1}{2x}\left(1-\sum_{n=0}^{\infty} \dfrac{\left(\frac{1}{2}\right)_{-n}}{n!}(-4x)^n\right)\\
 &amp;= -\dfrac{1}{2x}\sum_{n=1}^\infty \dfrac{(-4x)^n}{n!}\left(\frac{1}{2}\right)_{-n} \\
@@ -1374,69 +1369,67 @@ C(x) &amp;= \dfrac{1}{2x}\left(1-\sum_{n=0}^{\infty} \dfrac{\left(\frac{1}{2}\ri
 &amp;= \sum_{n=1}^{\infty}\dfrac{(2n-2)!}{(n-1)!n!}x^{n-1}\\
 &amp;= \sum_{n=0}^{\infty}\dfrac{(2n)!}{n!(n+1)!}x^n.
 \end{aligned}
-$$
-
-由此，就得到 $C_n$ 的表达式 $(2)$。
-</code></pre>
-<h3 id="_5">组合意义</h3>
+\]</div>
+<p>由此，就得到 <span class="arithmatex">\(C_n\)</span> 的表达式 <span class="arithmatex">\((2)\)</span>。</p>
+</details>
+<h3 id="组合意义">组合意义<a class="headerlink" href="#组合意义" title="Permanent link"></a></h3>
 <p>由于 Catalan 数具有明显的组合意义，所以只使用组合计数方法同样可以证明这些形式。本节为三个表达式分别提供一个组合意义的证明。</p>
-<p>??? note "表达式 <span class="arithmatex">\((2)\)</span> 的证明"
-    考虑 <a href="#seq-counting">数列计数问题</a>。对于任意由 <span class="arithmatex">\(\pm 1\)</span> 组成的序列 <span class="arithmatex">\(\{a_i\}_{i=1}^{2n}\)</span>，定义它的部分和为 <span class="arithmatex">\(S_i = \sum_{j=1}^{i}a_i\)</span>，并定义它的 <strong>超额量</strong>（exceedance）为 <span class="arithmatex">\(S_i &lt; 0\)</span> 且 <span class="arithmatex">\(a_i = -1\)</span> 的下标数量。超额量为 <span class="arithmatex">\(0\)</span>，就等价于数列合法；超额量的取值范围是 <span class="arithmatex">\([0,n]\)</span>，共 <span class="arithmatex">\((n+1)\)</span> 种可能的取值。需要证明的是，不同超额量的数列数量其实是一样的。</p>
-<pre><code>为此，可以构造一个从超额量为 $e &gt; 0$ 的数列到超额量为 $(e-1)$ 的数列的映射 $f$。对于超额量为 $e &gt; 0$ 的序列 $\{a_i\}$，取下标 $k$ 为使得 $S_i = 0$ 且 $a_i = +1$ 成立的下标最小值。将 $a_k$ 左右两侧的序列交换，就得到如下序列 $\{a'_i\}$：
-
-$$
+<details class="note">
+<summary>表达式 <span class="arithmatex">\((2)\)</span> 的证明</summary>
+<p>考虑 <a href="#seq-counting">数列计数问题</a>。对于任意由 <span class="arithmatex">\(\pm 1\)</span> 组成的序列 <span class="arithmatex">\(\{a_i\}_{i=1}^{2n}\)</span>，定义它的部分和为 <span class="arithmatex">\(S_i = \sum_{j=1}^{i}a_i\)</span>，并定义它的 <strong>超额量</strong>（exceedance）为 <span class="arithmatex">\(S_i &lt; 0\)</span> 且 <span class="arithmatex">\(a_i = -1\)</span> 的下标数量。超额量为 <span class="arithmatex">\(0\)</span>，就等价于数列合法；超额量的取值范围是 <span class="arithmatex">\([0,n]\)</span>，共 <span class="arithmatex">\((n+1)\)</span> 种可能的取值。需要证明的是，不同超额量的数列数量其实是一样的。</p>
+<p>为此，可以构造一个从超额量为 <span class="arithmatex">\(e &gt; 0\)</span> 的数列到超额量为 <span class="arithmatex">\((e-1)\)</span> 的数列的映射 <span class="arithmatex">\(f\)</span>。对于超额量为 <span class="arithmatex">\(e &gt; 0\)</span> 的序列 <span class="arithmatex">\(\{a_i\}\)</span>，取下标 <span class="arithmatex">\(k\)</span> 为使得 <span class="arithmatex">\(S_i = 0\)</span> 且 <span class="arithmatex">\(a_i = +1\)</span> 成立的下标最小值。将 <span class="arithmatex">\(a_k\)</span> 左右两侧的序列交换，就得到如下序列 <span class="arithmatex">\(\{a'_i\}\)</span>：</p>
+<div class="arithmatex">\[
 a_{k+1},a_{k+2},\cdots,a_{2n},a_k,a_{1},a_{2},\cdots,a_{k-1}.
-$$
-
-由于原序列中 $a_k$ 右侧部分在交换前后对应的部分和序列不变，所以它们贡献的超额量也不变。对于原序列中 $a_k$ 左侧部分，它们对应的部分和在交换后全部增加 $1$，因此，它们贡献的超额量会减少，而且减少的数量恰好等于原序列 $a_k$ 左侧部分中满足 $S_i=-1$ 且 $a_i=-1$ 的下标数量。因为 $a_k$ 的选取保证了这样的下标有且仅有一个，所以，序列 $\{a'_i\}$ 的超额量就等于 $(e-1)$。也就是说，映射 $f$ 可以将序列的超额量恰好减少 $1$。
-
-映射 $f$ 是可逆的。注意到序列 $\{a'_i\}$ 中，$a_k$ 对应的位置恰好为满足 $S'_k=+1$ 且 $a'_i = +1$ 的下标最大值。这是因为交换后，这些部分和都比交换前对应的部分和恰好大 $1$，因此，现在的部分和为 $+1$ 对应交换前部分和等于 $0$。但是，根据 $k$ 的选取，交换前这一部分（即原序列 $a_k$ 左侧部分）是没有满足 $S_i = 0$ 且 $a_i = +1$ 成立的下标的。
-
-由此，映射 $f$ 构成了超额量为 $e&gt;0$ 的序列和超额量为 $(e-1)$ 的序列之间的双射。这就说明，不同超额量的数列数量其实是一样的。由于数列总数是 $\dbinom{2n}{n}$，合法数列（即超额量为 $0$ 的数列）数量就等于
-
-$$
+\]</div>
+<p>由于原序列中 <span class="arithmatex">\(a_k\)</span> 右侧部分在交换前后对应的部分和序列不变，所以它们贡献的超额量也不变。对于原序列中 <span class="arithmatex">\(a_k\)</span> 左侧部分，它们对应的部分和在交换后全部增加 <span class="arithmatex">\(1\)</span>，因此，它们贡献的超额量会减少，而且减少的数量恰好等于原序列 <span class="arithmatex">\(a_k\)</span> 左侧部分中满足 <span class="arithmatex">\(S_i=-1\)</span> 且 <span class="arithmatex">\(a_i=-1\)</span> 的下标数量。因为 <span class="arithmatex">\(a_k\)</span> 的选取保证了这样的下标有且仅有一个，所以，序列 <span class="arithmatex">\(\{a'_i\}\)</span> 的超额量就等于 <span class="arithmatex">\((e-1)\)</span>。也就是说，映射 <span class="arithmatex">\(f\)</span> 可以将序列的超额量恰好减少 <span class="arithmatex">\(1\)</span>。</p>
+<p>映射 <span class="arithmatex">\(f\)</span> 是可逆的。注意到序列 <span class="arithmatex">\(\{a'_i\}\)</span> 中，<span class="arithmatex">\(a_k\)</span> 对应的位置恰好为满足 <span class="arithmatex">\(S'_k=+1\)</span> 且 <span class="arithmatex">\(a'_i = +1\)</span> 的下标最大值。这是因为交换后，这些部分和都比交换前对应的部分和恰好大 <span class="arithmatex">\(1\)</span>，因此，现在的部分和为 <span class="arithmatex">\(+1\)</span> 对应交换前部分和等于 <span class="arithmatex">\(0\)</span>。但是，根据 <span class="arithmatex">\(k\)</span> 的选取，交换前这一部分（即原序列 <span class="arithmatex">\(a_k\)</span> 左侧部分）是没有满足 <span class="arithmatex">\(S_i = 0\)</span> 且 <span class="arithmatex">\(a_i = +1\)</span> 成立的下标的。</p>
+<p>由此，映射 <span class="arithmatex">\(f\)</span> 构成了超额量为 <span class="arithmatex">\(e&gt;0\)</span> 的序列和超额量为 <span class="arithmatex">\((e-1)\)</span> 的序列之间的双射。这就说明，不同超额量的数列数量其实是一样的。由于数列总数是 <span class="arithmatex">\(\dbinom{2n}{n}\)</span>，合法数列（即超额量为 <span class="arithmatex">\(0\)</span> 的数列）数量就等于</p>
+<div class="arithmatex">\[
 C_n = \dfrac{1}{n+1}\dbinom{2n}{n}.
-$$
-
-这就证明了 Catalan 数的表达式 $(2)$。
-</code></pre>
-<p>??? note "表达式 <span class="arithmatex">\((3)\)</span> 的证明"
-    考虑 <a href="#path-counting">路径计数问题</a>。这是典型的格路计数问题，可以通过反射原理求解。具体到本问题，考虑用总路径数目减去不合法的路径数目。总路径数一共要走 <span class="arithmatex">\(2n\)</span> 步，其中 <span class="arithmatex">\(n\)</span> 步向右，所以方案数为 <span class="arithmatex">\(\dbinom{2n}{n}\)</span>。一条路径不合法，当且仅当它碰到了直线 <span class="arithmatex">\(y = x+1\)</span>。对于任意一条非法路径，可以找到第一次碰到直线 <span class="arithmatex">\(y = x+1\)</span> 的位置，并将该位置之后的路径关于直线 <span class="arithmatex">\(y=x+1\)</span> 做对称。此时，可以发现，一条从 <span class="arithmatex">\((0,0)\)</span> 到 <span class="arithmatex">\((n,n)\)</span> 的非法路径，变成了一条从 <span class="arithmatex">\((0,0)\)</span> 到 <span class="arithmatex">\((n-1,n+1)\)</span> 的路径。</p>
-<pre><code>![catalan1](./images/catalan-1.svg)
-
-由于从 $(0,0)$ 到 $(n-1,n+1)$ 的路径必定要穿过直线 $y = x+1$，所以每条这样的路径都对应一条从 $(0,0)$ 到 $(n,n)$ 的非法路径。类似总路径数的计算，非法路径数目的总数就是 $\dbinom{2n}{n+1}$。因此，合法路径的总数为
-
-$$
+\]</div>
+<p>这就证明了 Catalan 数的表达式 <span class="arithmatex">\((2)\)</span>。</p>
+</details>
+<details class="note">
+<summary>表达式 <span class="arithmatex">\((3)\)</span> 的证明</summary>
+<p>考虑 <a href="#path-counting">路径计数问题</a>。这是典型的格路计数问题，可以通过反射原理求解。具体到本问题，考虑用总路径数目减去不合法的路径数目。总路径数一共要走 <span class="arithmatex">\(2n\)</span> 步，其中 <span class="arithmatex">\(n\)</span> 步向右，所以方案数为 <span class="arithmatex">\(\dbinom{2n}{n}\)</span>。一条路径不合法，当且仅当它碰到了直线 <span class="arithmatex">\(y = x+1\)</span>。对于任意一条非法路径，可以找到第一次碰到直线 <span class="arithmatex">\(y = x+1\)</span> 的位置，并将该位置之后的路径关于直线 <span class="arithmatex">\(y=x+1\)</span> 做对称。此时，可以发现，一条从 <span class="arithmatex">\((0,0)\)</span> 到 <span class="arithmatex">\((n,n)\)</span> 的非法路径，变成了一条从 <span class="arithmatex">\((0,0)\)</span> 到 <span class="arithmatex">\((n-1,n+1)\)</span> 的路径。</p>
+<p><img alt="catalan1" src="../images/catalan-1.svg" /></p>
+<p>由于从 <span class="arithmatex">\((0,0)\)</span> 到 <span class="arithmatex">\((n-1,n+1)\)</span> 的路径必定要穿过直线 <span class="arithmatex">\(y = x+1\)</span>，所以每条这样的路径都对应一条从 <span class="arithmatex">\((0,0)\)</span> 到 <span class="arithmatex">\((n,n)\)</span> 的非法路径。类似总路径数的计算，非法路径数目的总数就是 <span class="arithmatex">\(\dbinom{2n}{n+1}\)</span>。因此，合法路径的总数为</p>
+<div class="arithmatex">\[
 C_n = \binom{2n}{n} - \binom{2n}{n+1}.
-$$
-
-这就是 Catalan 数的表达式 $(3)$。
-</code></pre>
-<p>??? note "表达式 <span class="arithmatex">\((4)\)</span> 的证明"
-    考虑 <a href="#triangulation-counting">三角剖分计数问题</a>。设 <span class="arithmatex">\(P\)</span> 是凸 <span class="arithmatex">\((n+2)\)</span> 边形，固定它的一个边为基边。对于多边形 <span class="arithmatex">\(P\)</span> 的每一个三角剖分，都可以选择它的一个非基边（包括三角剖分时新加的边）标记，并定向。这共有 <span class="arithmatex">\((4n+2)C_n\)</span> 种剖分加标记的方案。又设 <span class="arithmatex">\(Q\)</span> 是凸 <span class="arithmatex">\((n+3)\)</span> 边形，仍固定它的一个边为基边。对于多边形 <span class="arithmatex">\(Q\)</span>，可以选择它的一条非基边标记，然后再做三角剖分。这共有 <span class="arithmatex">\((n+2)C_{n+1}\)</span> 种标记加剖分的方案。</p>
-<pre><code>![](./images/catalan-triangulation.svg)
-
-如图所示，这两组操作得到的结果之间存在明显的双射。对于 $P$ 剖分并标记的一个结果，可以将它的标记边扩展为三角形，定向所指向的终点扩展为一条新边，并将这条新边打上标记，这就得到对 $Q$ 标记并剖分的一个结果；对于 $Q$ 标记并剖分的一个结果，可以将它的标记边压缩为一个点，并将压缩得到的对角线打上标记，且指向压缩得到的顶点，这就得到对 $P$ 剖分并标记的一个结果。因此，
-
-$$
+\]</div>
+<p>这就是 Catalan 数的表达式 <span class="arithmatex">\((3)\)</span>。</p>
+</details>
+<details class="note">
+<summary>表达式 <span class="arithmatex">\((4)\)</span> 的证明</summary>
+<p>考虑 <a href="#triangulation-counting">三角剖分计数问题</a>。设 <span class="arithmatex">\(P\)</span> 是凸 <span class="arithmatex">\((n+2)\)</span> 边形，固定它的一个边为基边。对于多边形 <span class="arithmatex">\(P\)</span> 的每一个三角剖分，都可以选择它的一个非基边（包括三角剖分时新加的边）标记，并定向。这共有 <span class="arithmatex">\((4n+2)C_n\)</span> 种剖分加标记的方案。又设 <span class="arithmatex">\(Q\)</span> 是凸 <span class="arithmatex">\((n+3)\)</span> 边形，仍固定它的一个边为基边。对于多边形 <span class="arithmatex">\(Q\)</span>，可以选择它的一条非基边标记，然后再做三角剖分。这共有 <span class="arithmatex">\((n+2)C_{n+1}\)</span> 种标记加剖分的方案。</p>
+<p><img alt="" src="../images/catalan-triangulation.svg" /></p>
+<p>如图所示，这两组操作得到的结果之间存在明显的双射。对于 <span class="arithmatex">\(P\)</span> 剖分并标记的一个结果，可以将它的标记边扩展为三角形，定向所指向的终点扩展为一条新边，并将这条新边打上标记，这就得到对 <span class="arithmatex">\(Q\)</span> 标记并剖分的一个结果；对于 <span class="arithmatex">\(Q\)</span> 标记并剖分的一个结果，可以将它的标记边压缩为一个点，并将压缩得到的对角线打上标记，且指向压缩得到的顶点，这就得到对 <span class="arithmatex">\(P\)</span> 剖分并标记的一个结果。因此，</p>
+<div class="arithmatex">\[
 (4n+2)C_n = (n+2)C_{n+1}.
-$$
-
-稍作整理，并结合 $C_0=1$，就得到 Catalan 数的表达式 $(4)$。
-</code></pre>
-<h2 id="_6">例题</h2>
-<p>???+ example "<a href="https://www.luogu.com.cn/problem/P1044">洛谷 P1044 栈</a>"
-    入栈顺序为 <span class="arithmatex">\(1,2,\ldots ,n\)</span>，求所有可能的出栈顺序的总数。</p>
-<p>??? note "参考代码"
-    === "C++"
-        <code>cpp
-        --8&lt;-- "docs/math/code/combinatorics/catalan/catalan_1.cpp"</code></p>
-<pre><code>=== "Python"
-    ```python
-    --8&lt;-- "docs/math/code/combinatorics/catalan/catalan_1.py"
-    ```
-</code></pre>
-<h2 id="_7">习题</h2>
+\]</div>
+<p>稍作整理，并结合 <span class="arithmatex">\(C_0=1\)</span>，就得到 Catalan 数的表达式 <span class="arithmatex">\((4)\)</span>。</p>
+</details>
+<h2 id="例题">例题<a class="headerlink" href="#例题" title="Permanent link"></a></h2>
+<details class="example" open="open">
+<summary><a href="https://www.luogu.com.cn/problem/P1044">洛谷 P1044 栈</a></summary>
+<p>入栈顺序为 <span class="arithmatex">\(1,2,\ldots ,n\)</span>，求所有可能的出栈顺序的总数。</p>
+</details>
+<details class="note">
+<summary>参考代码</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/combinatorics/catalan/catalan_1.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">--</span><span class="mi">8</span><span class="o">&lt;--</span> <span class="s2">&quot;docs/math/code/combinatorics/catalan/catalan_1.py&quot;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
+<h2 id="习题">习题<a class="headerlink" href="#习题" title="Permanent link"></a></h2>
 <ul>
 <li><a href="https://www.luogu.com.cn/problem/P2532">Luogu P2532 [AHOI2012] 树屋阶梯</a></li>
 <li><a href="https://www.luogu.com.cn/problem/P1641">Luogu P1641 [SCOI2010] 生成字符串</a></li>
@@ -1446,7 +1439,7 @@ $$
 <li><a href="https://www.luogu.com.cn/problem/P5014">Luogu P5014 水の三角（修改版）</a></li>
 <li><a href="https://www.luogu.com.cn/problem/P3978">Luogu P3978 [TJOI2015] 概率论</a></li>
 </ul>
-<h2 id="_8">参考资料与注释</h2>
+<h2 id="参考资料与注释">参考资料与注释<a class="headerlink" href="#参考资料与注释" title="Permanent link"></a></h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Catalan_number">Catalan number - Wikipedia</a></li>
 </ul>
@@ -1504,7 +1497,9 @@ $$
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

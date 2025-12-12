@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#错位排列" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#错位排列" class="md-nav__link">
     <span class="md-ellipsis">
       
         错位排列
@@ -1102,7 +1102,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#定义" class="md-nav__link">
     <span class="md-ellipsis">
       
         定义
@@ -1113,7 +1113,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#容斥原理的计算" class="md-nav__link">
     <span class="md-ellipsis">
       
         容斥原理的计算
@@ -1124,7 +1124,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#递推的计算" class="md-nav__link">
     <span class="md-ellipsis">
       
         递推的计算
@@ -1135,7 +1135,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#其他关系" class="md-nav__link">
     <span class="md-ellipsis">
       
         其他关系
@@ -1169,11 +1169,11 @@
 
   <h1>Derangement</h1>
 
-<h2 id="_1">错位排列</h2>
-<h3 id="_2">定义</h3>
+<h2 id="错位排列">错位排列<a class="headerlink" href="#错位排列" title="Permanent link"></a></h2>
+<h3 id="定义">定义<a class="headerlink" href="#定义" title="Permanent link"></a></h3>
 <p>错位排列（derangement）是没有任何元素出现在其有序位置的排列。即，对于 <span class="arithmatex">\(1\sim n\)</span> 的排列 <span class="arithmatex">\(P\)</span>，如果满足 <span class="arithmatex">\(P_i\neq i\)</span>，则称 <span class="arithmatex">\(P\)</span> 是 <span class="arithmatex">\(n\)</span> 的错位排列。</p>
 <p>例如，三元错位排列有 <span class="arithmatex">\(\{2,3,1\}\)</span> 和 <span class="arithmatex">\(\{3,1,2\}\)</span>。四元错位排列有 <span class="arithmatex">\(\{2,1,4,3\}\)</span>、<span class="arithmatex">\(\{2,3,4,1\}\)</span>、<span class="arithmatex">\(\{2,4,1,3\}\)</span>、<span class="arithmatex">\(\{3,1,4,2\}\)</span>、<span class="arithmatex">\(\{3,4,1,2\}\)</span>、<span class="arithmatex">\(\{3,4,2,1\}\)</span>、<span class="arithmatex">\(\{4,1,2,3\}\)</span>、<span class="arithmatex">\(\{4,3,1,2\}\)</span> 和 <span class="arithmatex">\(\{4,3,2,1\}\)</span>。错位排列是没有不动点的排列，即没有长度为 1 的循环。</p>
-<h3 id="_3">容斥原理的计算</h3>
+<h3 id="容斥原理的计算">容斥原理的计算<a class="headerlink" href="#容斥原理的计算" title="Permanent link"></a></h3>
 <p>全集 <span class="arithmatex">\(U\)</span> 即为 <span class="arithmatex">\(1\sim n\)</span> 的排列，<span class="arithmatex">\(|U|=n!\)</span>；属性就是 <span class="arithmatex">\(P_i\neq i\)</span>. 套用补集的公式，问题变成求 <span class="arithmatex">\(\left|\bigcup_{i=1}^n\overline{S_i}\right|\)</span>.</p>
 <p>可以知道，<span class="arithmatex">\(\overline{S_i}\)</span> 的含义是满足 <span class="arithmatex">\(P_i=i\)</span> 的排列的数量。用容斥原理把问题式子展开，需要对若干个特定的集合的交集求大小，即：</p>
 <div class="arithmatex">\[
@@ -1198,7 +1198,7 @@
 D_n=n!-n!\sum_{k=1}^n\frac{(-1)^{k-1} }{k!}=n!\sum_{k=0}^n\frac{(-1)^k}{k!}
 \]</div>
 <p>错位排列数列的前几项为 <span class="arithmatex">\(0,1,2,9,44,265\)</span>（<a href="http://oeis.org/A000166">OEIS A000166</a>）。</p>
-<h3 id="_4">递推的计算</h3>
+<h3 id="递推的计算">递推的计算<a class="headerlink" href="#递推的计算" title="Permanent link"></a></h3>
 <p>把错位排列问题具体化，考虑这样一个问题：</p>
 <p><span class="arithmatex">\(n\)</span> 封不同的信，编号分别是 <span class="arithmatex">\(1,2,3,4,5\)</span>，现在要把这五封信放在编号 <span class="arithmatex">\(1,2,3,4,5\)</span> 的信封中，要求信封的编号与信的编号不一样。问有多少种不同的放置方法？</p>
 <p>假设考虑到第 <span class="arithmatex">\(n\)</span> 个信封，初始时暂时把第 <span class="arithmatex">\(n\)</span> 封信放在第 <span class="arithmatex">\(n\)</span> 个信封中，然后考虑两种情况的递推：</p>
@@ -1217,7 +1217,7 @@ D_n=(n-1)(D_{n-1}+D_{n-2})
 <div class="arithmatex">\[
 D_n=nD_{n-1}+{(-1)}^n
 \]</div>
-<h3 id="_5">其他关系</h3>
+<h3 id="其他关系">其他关系<a class="headerlink" href="#其他关系" title="Permanent link"></a></h3>
 <p>错位排列数有一个简单的取整表达式，增长速度与阶乘仅相差常数：</p>
 <div class="arithmatex">\[
 D_n=\begin{cases}
@@ -1283,7 +1283,9 @@ P=\lim_{n\to\infty}\frac{D_n}{n!}=\frac{1}{\mathrm{e}}
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

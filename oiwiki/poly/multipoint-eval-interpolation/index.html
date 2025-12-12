@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#多项式的多点求值" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#多项式的多点求值" class="md-nav__link">
     <span class="md-ellipsis">
       
         多项式的多点求值
@@ -1102,7 +1102,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#描述" class="md-nav__link">
     <span class="md-ellipsis">
       
         描述
@@ -1113,7 +1113,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#解法" class="md-nav__link">
     <span class="md-ellipsis">
       
         解法
@@ -1129,7 +1129,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#多项式的快速插值" class="md-nav__link">
     <span class="md-ellipsis">
       
         多项式的快速插值
@@ -1141,7 +1141,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#描述_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         描述
@@ -1152,7 +1152,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#解法_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         解法
@@ -1186,13 +1186,13 @@
 
   <h1>Multipoint eval interpolation</h1>
 
-<h2 id="_1">多项式的多点求值</h2>
-<h3 id="_2">描述</h3>
+<h2 id="多项式的多点求值">多项式的多点求值<a class="headerlink" href="#多项式的多点求值" title="Permanent link"></a></h2>
+<h3 id="描述">描述<a class="headerlink" href="#描述" title="Permanent link"></a></h3>
 <p>给出一个多项式 <span class="arithmatex">\(f\left(x\right)\)</span> 和 <span class="arithmatex">\(n\)</span> 个点 <span class="arithmatex">\(x_{1},x_{2},\dots,x_{n}\)</span>，求</p>
 <div class="arithmatex">\[
 f\left(x_{1}\right),f\left(x_{2}\right),\dots,f\left(x_{n}\right)
 \]</div>
-<h3 id="_3">解法</h3>
+<h3 id="解法">解法<a class="headerlink" href="#解法" title="Permanent link"></a></h3>
 <p>考虑使用分治来将问题规模减半。</p>
 <p>将给定的点分为两部分：</p>
 <div class="arithmatex">\[
@@ -1216,14 +1216,14 @@ f_{0}\left(x\right)\equiv f\left(x\right)\pmod{g_{0}\left(x\right)}
 <div class="arithmatex">\[
 T\left(n\right)=2T\left(\frac{n}{2}\right)+O\left(n\log{n}\right)=O\left(n\log^{2}{n}\right)
 \]</div>
-<h2 id="_4">多项式的快速插值</h2>
-<h3 id="_5">描述</h3>
+<h2 id="多项式的快速插值">多项式的快速插值<a class="headerlink" href="#多项式的快速插值" title="Permanent link"></a></h2>
+<h3 id="描述_1">描述<a class="headerlink" href="#描述_1" title="Permanent link"></a></h3>
 <p>给出一个 <span class="arithmatex">\(n+1\)</span> 个点的集合</p>
 <div class="arithmatex">\[
 X=\left\{\left(x_{0},y_{0}\right),\left(x_{1},y_{1}\right),\dots,\left(x_{n},y_{n}\right)\right\}
 \]</div>
 <p>求一个 <span class="arithmatex">\(n\)</span> 次多项式 <span class="arithmatex">\(f\left(x\right)\)</span> 使得其满足 <span class="arithmatex">\(\forall\left(x,y\right)\in X:f\left(x\right)=y\)</span>。</p>
-<h3 id="_6">解法</h3>
+<h3 id="解法_1">解法<a class="headerlink" href="#解法_1" title="Permanent link"></a></h3>
 <p>考虑拉格朗日插值公式</p>
 <div class="arithmatex">\[
 f(x) = \sum_{i=1}^{n} \prod_{j\neq i }\frac{x-x_j}{x_i-x_j} y_i
@@ -1301,7 +1301,9 @@ M_1(x) &amp; = \prod_{i = \left\lfloor \frac n2 \right \rfloor+1}^n (x - x_i)
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

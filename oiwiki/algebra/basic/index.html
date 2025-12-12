@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#群" class="md-skip">
           Skip to content
         </a>
       
@@ -1092,7 +1092,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#群" class="md-nav__link">
     <span class="md-ellipsis">
       
         群
@@ -1103,7 +1103,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#环" class="md-nav__link">
     <span class="md-ellipsis">
       
         环
@@ -1114,7 +1114,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#域" class="md-nav__link">
     <span class="md-ellipsis">
       
         域
@@ -1125,7 +1125,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#应用" class="md-nav__link">
     <span class="md-ellipsis">
       
         应用
@@ -1136,7 +1136,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#参考资料与注释" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料与注释
@@ -1173,201 +1173,252 @@
 <li>组合数学中，<a href="../../combinatorics/polya/">Pólya 计数原理</a> 的严格表述和证明需要用到群论的相关概念。</li>
 </ul>
 <p>基于此，本章节将着重介绍无法跳过的基础知识和与这些应用直接相关的部分。作为开始，本文介绍群、环、域的基本概念。</p>
-<h2 id="_1">群</h2>
+<h2 id="群">群<a class="headerlink" href="#群" title="Permanent link"></a></h2>
 <p>群的定义如下。</p>
-<p>???+ abstract "群"
-    设 <span class="arithmatex">\(G\)</span> 是非空集合，其上有二元运算 <span class="arithmatex">\(\cdot:G\times G\rightarrow G\)</span>，如果它们满足以下性质，则称 <span class="arithmatex">\((G,\cdot)\)</span> 是一个 <strong>群</strong>（group）：</p>
-<pre><code>1.  结合律（associative property）：对于所有 $a,b,c\in G$，成立 $a\cdot(b\cdot c)=(a\cdot b)\cdot c$；
-2.  有单位元：存在 $e\in G$，使得对于任意 $a\in G$，都成立 $a\cdot e = e\cdot a = a$。这里，$e$ 称为 $G$ 的 **单位元**（identity element），也称幺元；
-3.  存在逆元：对于所有 $a\in G$，都存在相应的 $b\in G$ 使得 $a\cdot b=b\cdot a=e$。这里，$b$ 称为 $a$ 的 **逆元**（inverse element）。
-</code></pre>
-<p>??? info "关于定义中的封闭性条件"
-    这里的二元运算就隐含了所谓的封闭性条件，即对于任何 <span class="arithmatex">\(a,b\in G\)</span>，都有 <span class="arithmatex">\(a\cdot b\in G\)</span>。有些文章会将其单独列出。</p>
-<p>???+ note "群的基本性质"
-    对于群 <span class="arithmatex">\((G,\cdot)\)</span>，以下性质总是成立：</p>
-<pre><code>1.  对于任何有限长的列 $\{g_i\}_{i=1}^k\subseteq G$，乘积 $g_1\cdot g_2\cdot\cdots\cdot g_k$ 的运算结果与加括号的方式无关；
-2.  单位元 $e$ 总是唯一的；
-3.  对于任何元素 $a\in G$，它的逆 $a^{-1}$ 也是唯一的；
-4.  消去律（cancellation law）：对于 $a,b,c\in G$，如果 $a\cdot c=b\cdot c$ 或 $c\cdot a=c\cdot b$，那么有 $a=b$。
-</code></pre>
+<details class="abstract" open="open">
+<summary>群</summary>
+<p>设 <span class="arithmatex">\(G\)</span> 是非空集合，其上有二元运算 <span class="arithmatex">\(\cdot:G\times G\rightarrow G\)</span>，如果它们满足以下性质，则称 <span class="arithmatex">\((G,\cdot)\)</span> 是一个 <strong>群</strong>（group）：</p>
+<ol>
+<li>结合律（associative property）：对于所有 <span class="arithmatex">\(a,b,c\in G\)</span>，成立 <span class="arithmatex">\(a\cdot(b\cdot c)=(a\cdot b)\cdot c\)</span>；</li>
+<li>有单位元：存在 <span class="arithmatex">\(e\in G\)</span>，使得对于任意 <span class="arithmatex">\(a\in G\)</span>，都成立 <span class="arithmatex">\(a\cdot e = e\cdot a = a\)</span>。这里，<span class="arithmatex">\(e\)</span> 称为 <span class="arithmatex">\(G\)</span> 的 <strong>单位元</strong>（identity element），也称幺元；</li>
+<li>存在逆元：对于所有 <span class="arithmatex">\(a\in G\)</span>，都存在相应的 <span class="arithmatex">\(b\in G\)</span> 使得 <span class="arithmatex">\(a\cdot b=b\cdot a=e\)</span>。这里，<span class="arithmatex">\(b\)</span> 称为 <span class="arithmatex">\(a\)</span> 的 <strong>逆元</strong>（inverse element）。</li>
+</ol>
+</details>
+<details class="info">
+<summary>关于定义中的封闭性条件</summary>
+<p>这里的二元运算就隐含了所谓的封闭性条件，即对于任何 <span class="arithmatex">\(a,b\in G\)</span>，都有 <span class="arithmatex">\(a\cdot b\in G\)</span>。有些文章会将其单独列出。</p>
+</details>
+<details class="note" open="open">
+<summary>群的基本性质</summary>
+<p>对于群 <span class="arithmatex">\((G,\cdot)\)</span>，以下性质总是成立：</p>
+<ol>
+<li>对于任何有限长的列 <span class="arithmatex">\(\{g_i\}_{i=1}^k\subseteq G\)</span>，乘积 <span class="arithmatex">\(g_1\cdot g_2\cdot\cdots\cdot g_k\)</span> 的运算结果与加括号的方式无关；</li>
+<li>单位元 <span class="arithmatex">\(e\)</span> 总是唯一的；</li>
+<li>对于任何元素 <span class="arithmatex">\(a\in G\)</span>，它的逆 <span class="arithmatex">\(a^{-1}\)</span> 也是唯一的；</li>
+<li>消去律（cancellation law）：对于 <span class="arithmatex">\(a,b,c\in G\)</span>，如果 <span class="arithmatex">\(a\cdot c=b\cdot c\)</span> 或 <span class="arithmatex">\(c\cdot a=c\cdot b\)</span>，那么有 <span class="arithmatex">\(a=b\)</span>。</li>
+</ol>
+</details>
 <p>群相当常见。通俗地说，所有不损失结构的变换都自动构成群。以常见的几种类型的群为例。</p>
-<p>???+ example "群的例子"
-    -   <strong>对称群</strong>（symmetric group）：集合 <span class="arithmatex">\(M\)</span> 上的所有 <a href="../../permutation/">置换</a>，即自 <span class="arithmatex">\(M\)</span> 到 <span class="arithmatex">\(M\)</span> 自身的双射，就在映射的复合下构成群 <span class="arithmatex">\(S_M\)</span>。单位元是恒等变换，逆元是逆映射（双射必然存在逆映射）。如果集合 <span class="arithmatex">\(M\)</span> 有限，大小为 <span class="arithmatex">\(n\)</span>，也常记作 <span class="arithmatex">\(S_n\)</span>，称作 <span class="arithmatex">\(n\)</span> 次对称群。
-    -   空间对称群（symmetry group）：对于一个几何图形，能够使其与自身重合的变换全体也在映射的复合下构成群。这描述了该几何图形的空间对称性。具体例子可以参考 <a href="../../combinatorics/polya/#常见空间对称群">常见空间对称群</a>。
-    -   整数的加法群：整数集 <span class="arithmatex">\(\mathbf Z\)</span> 在加法 <span class="arithmatex">\(+\)</span> 运算下构成群 <span class="arithmatex">\((\mathbf Z,+)\)</span>。单位元是 <span class="arithmatex">\(0\)</span>，逆元是相反数。
-    -   整数模 <span class="arithmatex">\(n\)</span> 乘法群（multiplicative group of integers modulo <span class="arithmatex">\(n\)</span>）：对于一个模数 <span class="arithmatex">\(n\)</span>，所有与 <span class="arithmatex">\(n\)</span> 互质的整数对应的 <a href="../../number-theory/basic/#同余类与剩余系">同余类</a>，在乘法运算下构成群 <span class="arithmatex">\(((\mathbf Z/n\mathbf Z)^\times,\times)\)</span>。单位元是 <span class="arithmatex">\(\bar 1\)</span>，逆元就是模 <span class="arithmatex">\(n\)</span> 的 <a href="../../number-theory/inverse/">乘法逆元</a>（对应的同余类），其存在性由 <a href="../../number-theory/bezouts/">裴蜀定理</a> 保证。具体结构分析参考 <a href="../ring-theory/#应用整数同余类的乘法群">整数模 <span class="arithmatex">\(n\)</span> 乘法群</a>。
-    -   一般线性群（general linear group）：数域 <span class="arithmatex">\(F\)</span> 上的 <span class="arithmatex">\(n\)</span> 维的全体可逆方阵在乘法运算下构成群 <span class="arithmatex">\(GL_n(F)\)</span>。单位元是单位矩阵，逆元是逆矩阵。</p>
+<details class="example" open="open">
+<summary>群的例子</summary>
+<ul>
+<li><strong>对称群</strong>（symmetric group）：集合 <span class="arithmatex">\(M\)</span> 上的所有 <a href="../../permutation/">置换</a>，即自 <span class="arithmatex">\(M\)</span> 到 <span class="arithmatex">\(M\)</span> 自身的双射，就在映射的复合下构成群 <span class="arithmatex">\(S_M\)</span>。单位元是恒等变换，逆元是逆映射（双射必然存在逆映射）。如果集合 <span class="arithmatex">\(M\)</span> 有限，大小为 <span class="arithmatex">\(n\)</span>，也常记作 <span class="arithmatex">\(S_n\)</span>，称作 <span class="arithmatex">\(n\)</span> 次对称群。</li>
+<li>空间对称群（symmetry group）：对于一个几何图形，能够使其与自身重合的变换全体也在映射的复合下构成群。这描述了该几何图形的空间对称性。具体例子可以参考 <a href="../../combinatorics/polya/#常见空间对称群">常见空间对称群</a>。</li>
+<li>整数的加法群：整数集 <span class="arithmatex">\(\mathbf Z\)</span> 在加法 <span class="arithmatex">\(+\)</span> 运算下构成群 <span class="arithmatex">\((\mathbf Z,+)\)</span>。单位元是 <span class="arithmatex">\(0\)</span>，逆元是相反数。</li>
+<li>整数模 <span class="arithmatex">\(n\)</span> 乘法群（multiplicative group of integers modulo <span class="arithmatex">\(n\)</span>）：对于一个模数 <span class="arithmatex">\(n\)</span>，所有与 <span class="arithmatex">\(n\)</span> 互质的整数对应的 <a href="../../number-theory/basic/#同余类与剩余系">同余类</a>，在乘法运算下构成群 <span class="arithmatex">\(((\mathbf Z/n\mathbf Z)^\times,\times)\)</span>。单位元是 <span class="arithmatex">\(\bar 1\)</span>，逆元就是模 <span class="arithmatex">\(n\)</span> 的 <a href="../../number-theory/inverse/">乘法逆元</a>（对应的同余类），其存在性由 <a href="../../number-theory/bezouts/">裴蜀定理</a> 保证。具体结构分析参考 <a href="../ring-theory/#应用整数同余类的乘法群">整数模 <span class="arithmatex">\(n\)</span> 乘法群</a>。</li>
+<li>一般线性群（general linear group）：数域 <span class="arithmatex">\(F\)</span> 上的 <span class="arithmatex">\(n\)</span> 维的全体可逆方阵在乘法运算下构成群 <span class="arithmatex">\(GL_n(F)\)</span>。单位元是单位矩阵，逆元是逆矩阵。</li>
+</ul>
+</details>
 <p>要更好地理解群的定义，不妨对比着看几个不属于群的例子。</p>
-<p>???+ example "不是群的例子"
-    -   所有 <span class="arithmatex">\(M\)</span> 到自身的映射（不一定是双射），并不构成群。因为那些不是双射的映射不存在逆元。
-    -   整数在乘法下并不构成群，因为 <span class="arithmatex">\(2\)</span> 在整数范围内没有乘法逆元。
-    -   正整数在加法下也不构成群，因为正整数没有加法单位元。
-    -   模 <span class="arithmatex">\(n\)</span> 的所有非零同余类在乘法意义下往往不构成群。比如说 <span class="arithmatex">\((\mathbf Z/6\mathbf Z)\setminus\{\overline 0\}\)</span> 中，<span class="arithmatex">\(\overline 2\times\overline 3=\overline 0\)</span> 不属于这个集合，这意味着乘法都不是这个集合上良定义的二元运算（或者说，它不满足封闭性）。</p>
+<details class="example" open="open">
+<summary>不是群的例子</summary>
+<ul>
+<li>所有 <span class="arithmatex">\(M\)</span> 到自身的映射（不一定是双射），并不构成群。因为那些不是双射的映射不存在逆元。</li>
+<li>整数在乘法下并不构成群，因为 <span class="arithmatex">\(2\)</span> 在整数范围内没有乘法逆元。</li>
+<li>正整数在加法下也不构成群，因为正整数没有加法单位元。</li>
+<li>模 <span class="arithmatex">\(n\)</span> 的所有非零同余类在乘法意义下往往不构成群。比如说 <span class="arithmatex">\((\mathbf Z/6\mathbf Z)\setminus\{\overline 0\}\)</span> 中，<span class="arithmatex">\(\overline 2\times\overline 3=\overline 0\)</span> 不属于这个集合，这意味着乘法都不是这个集合上良定义的二元运算（或者说，它不满足封闭性）。</li>
+</ul>
+</details>
 <p>有时，也需要讨论这些更不完善的结构的性质。因此，可以定义如下概念，它们比群更宽泛。</p>
-<p>???+ abstract "半群"
-    对于非空集合 <span class="arithmatex">\(G\)</span> 和其上的二元运算 <span class="arithmatex">\(\cdot\)</span>，如果该运算满足结合律，则称 <span class="arithmatex">\((G,\cdot)\)</span> 是一个 <strong>半群</strong>（semigroup）。</p>
-<p>???+ abstract "幺半群"
-    对于半群 <span class="arithmatex">\((G,\cdot)\)</span>，如果它还存在单位元，则称 <span class="arithmatex">\((G,\cdot)\)</span> 是一个 <strong>幺半群</strong>（monoid）。</p>
-<p>???+ example "幺半群和半群的例子"
-    上面的例子中，<span class="arithmatex">\((\mathbf N_+,+)\)</span> 是半群，而 <span class="arithmatex">\((\mathbf Z,\times)\)</span> 是幺半群。</p>
+<details class="abstract" open="open">
+<summary>半群</summary>
+<p>对于非空集合 <span class="arithmatex">\(G\)</span> 和其上的二元运算 <span class="arithmatex">\(\cdot\)</span>，如果该运算满足结合律，则称 <span class="arithmatex">\((G,\cdot)\)</span> 是一个 <strong>半群</strong>（semigroup）。</p>
+</details>
+<details class="abstract" open="open">
+<summary>幺半群</summary>
+<p>对于半群 <span class="arithmatex">\((G,\cdot)\)</span>，如果它还存在单位元，则称 <span class="arithmatex">\((G,\cdot)\)</span> 是一个 <strong>幺半群</strong>（monoid）。</p>
+</details>
+<details class="example" open="open">
+<summary>幺半群和半群的例子</summary>
+<p>上面的例子中，<span class="arithmatex">\((\mathbf N_+,+)\)</span> 是半群，而 <span class="arithmatex">\((\mathbf Z,\times)\)</span> 是幺半群。</p>
+</details>
 <p>最后，很多熟悉的群上的运算除了满足结合律外，还满足交换律。这类群的结构相对简单，它们称作 Abel 群，也称作交换群。</p>
-<p>???+ abstract "Abel 群"
-    对于群 <span class="arithmatex">\((G,\cdot)\)</span>，如果运算 <span class="arithmatex">\(\cdot\)</span> 还满足交换律（commutative property），即对于所有 <span class="arithmatex">\(a,b\in G\)</span>，都成立 <span class="arithmatex">\(a\cdot b=b\cdot a\)</span>，则称 <span class="arithmatex">\((G,\cdot)\)</span> 是一个 <strong>Abel 群</strong>（Abelian group）或 <strong>交换群</strong>（communicate group）。</p>
-<p>???+ example "Abel 群和非 Abel 群的例子"
-    -   整数加法群 <span class="arithmatex">\((\mathbf Z,+)\)</span> 就是一个 Abel 群。
-    -   当 <span class="arithmatex">\(n\ge3\)</span> 时，对称群 <span class="arithmatex">\(S_n\)</span> 并不是 Abel 群。</p>
+<details class="abstract" open="open">
+<summary>Abel 群</summary>
+<p>对于群 <span class="arithmatex">\((G,\cdot)\)</span>，如果运算 <span class="arithmatex">\(\cdot\)</span> 还满足交换律（commutative property），即对于所有 <span class="arithmatex">\(a,b\in G\)</span>，都成立 <span class="arithmatex">\(a\cdot b=b\cdot a\)</span>，则称 <span class="arithmatex">\((G,\cdot)\)</span> 是一个 <strong>Abel 群</strong>（Abelian group）或 <strong>交换群</strong>（communicate group）。</p>
+</details>
+<details class="example" open="open">
+<summary>Abel 群和非 Abel 群的例子</summary>
+<ul>
+<li>整数加法群 <span class="arithmatex">\((\mathbf Z,+)\)</span> 就是一个 Abel 群。</li>
+<li>当 <span class="arithmatex">\(n\ge3\)</span> 时，对称群 <span class="arithmatex">\(S_n\)</span> 并不是 Abel 群。</li>
+</ul>
+</details>
 <p>这些就是群论相关的基本定义。群论的更多内容，可以参考 <a href="../group-theory/">群论</a> 或相关书籍。</p>
-<h2 id="_2">环</h2>
+<h2 id="环">环<a class="headerlink" href="#环" title="Permanent link"></a></h2>
 <p>环的定义如下。</p>
-<p>???+ abstract "环"
-    对于非空集合 <span class="arithmatex">\(R\)</span> 和其上的两个二元运算 <span class="arithmatex">\(+:R\times R\rightarrow R\)</span> 和 <span class="arithmatex">\(\cdot:R\times R\rightarrow R\)</span>，如果它们满足以下性质，则称 <span class="arithmatex">\((R,+,\cdot)\)</span> 是一个 <strong>环</strong>（ring）：</p>
-<pre><code>1.  $(R,+)$ 构成 Abel 群，其单位元记作 $0$，元素 $a\in R$ 在 $+$ 下的逆元记作 $-a$。
-2.  $(R,\cdot)$ 构成半群，即 $\cdot$ 满足结合律。
-3.  分配律（distributive property）：对于所有 $a,b,c\in R$，成立 $a\cdot(b+c)=a\cdot b+a\cdot c$ 和 $(a+b)\cdot c=a\cdot c+b\cdot c$。
-</code></pre>
+<details class="abstract" open="open">
+<summary>环</summary>
+<p>对于非空集合 <span class="arithmatex">\(R\)</span> 和其上的两个二元运算 <span class="arithmatex">\(+:R\times R\rightarrow R\)</span> 和 <span class="arithmatex">\(\cdot:R\times R\rightarrow R\)</span>，如果它们满足以下性质，则称 <span class="arithmatex">\((R,+,\cdot)\)</span> 是一个 <strong>环</strong>（ring）：</p>
+<ol>
+<li><span class="arithmatex">\((R,+)\)</span> 构成 Abel 群，其单位元记作 <span class="arithmatex">\(0\)</span>，元素 <span class="arithmatex">\(a\in R\)</span> 在 <span class="arithmatex">\(+\)</span> 下的逆元记作 <span class="arithmatex">\(-a\)</span>。</li>
+<li><span class="arithmatex">\((R,\cdot)\)</span> 构成半群，即 <span class="arithmatex">\(\cdot\)</span> 满足结合律。</li>
+<li>分配律（distributive property）：对于所有 <span class="arithmatex">\(a,b,c\in R\)</span>，成立 <span class="arithmatex">\(a\cdot(b+c)=a\cdot b+a\cdot c\)</span> 和 <span class="arithmatex">\((a+b)\cdot c=a\cdot c+b\cdot c\)</span>。</li>
+</ol>
+</details>
 <p>为表述方便，这两个二元运算 <span class="arithmatex">\(+\)</span> 和 <span class="arithmatex">\(\cdot\)</span> 常称作该环的加法和乘法，相应地，加法单位元称作 <strong>零元</strong>（zero），乘法单位元（如果存在）称作 <strong>幺元</strong>（identity）。应避免和具体的数集中的加法、乘法，以及自然数零和一产生混淆。</p>
-<p>??? info "关于定义中是否要求乘法单位元"
-    在有的定义中，环必须存在乘法单位元；相对地，不存在乘法单位元的则被称为 <strong>伪环</strong>（rng 或 pseudo-ring）。遇到的时候需根据上下文加以判断。维基百科采用的就是这种定义[^ring-wiki]。</p>
+<details class="info">
+<summary>关于定义中是否要求乘法单位元</summary>
+<p>在有的定义中，环必须存在乘法单位元；相对地，不存在乘法单位元的则被称为 <strong>伪环</strong>（rng 或 pseudo-ring）。遇到的时候需根据上下文加以判断。维基百科采用的就是这种定义[^ring-wiki]。</p>
+</details>
 <p>环的加法结构相当简单，但是乘法结构十分原始。因而如果类比群，在乘法上做更多要求，可以得到如下相关定义。</p>
-<p>???+ abstract "幺环"
-    对于环 <span class="arithmatex">\((R,+,\cdot)\)</span>，如果它含幺，即存在乘法单位元，记作 <span class="arithmatex">\(1\)</span>，则称 <span class="arithmatex">\((R,+,\cdot)\)</span> 是一个 <strong>幺环</strong>（ring with identity）。</p>
-<p>???+ abstract "除环"
-    对于非零幺环 <span class="arithmatex">\((R,+,\cdot)\)</span>，如果对于所有非 <span class="arithmatex">\(0\)</span> 元素 <span class="arithmatex">\(a\in R\)</span>，都存在乘法逆元（记作 <span class="arithmatex">\(a^{-1}\)</span>），则称 <span class="arithmatex">\((R,+,\cdot)\)</span> 是一个 <strong>除环</strong>（division ring）。</p>
-<p>???+ abstract "交换环"
-    对于环 <span class="arithmatex">\((R,+,\cdot)\)</span>，如果它的乘法满足交换律，则称 <span class="arithmatex">\((R,+,\cdot)\)</span> 是一个 <strong>交换环</strong>（commutative ring）。</p>
+<details class="abstract" open="open">
+<summary>幺环</summary>
+<p>对于环 <span class="arithmatex">\((R,+,\cdot)\)</span>，如果它含幺，即存在乘法单位元，记作 <span class="arithmatex">\(1\)</span>，则称 <span class="arithmatex">\((R,+,\cdot)\)</span> 是一个 <strong>幺环</strong>（ring with identity）。</p>
+</details>
+<details class="abstract" open="open">
+<summary>除环</summary>
+<p>对于非零幺环 <span class="arithmatex">\((R,+,\cdot)\)</span>，如果对于所有非 <span class="arithmatex">\(0\)</span> 元素 <span class="arithmatex">\(a\in R\)</span>，都存在乘法逆元（记作 <span class="arithmatex">\(a^{-1}\)</span>），则称 <span class="arithmatex">\((R,+,\cdot)\)</span> 是一个 <strong>除环</strong>（division ring）。</p>
+</details>
+<details class="abstract" open="open">
+<summary>交换环</summary>
+<p>对于环 <span class="arithmatex">\((R,+,\cdot)\)</span>，如果它的乘法满足交换律，则称 <span class="arithmatex">\((R,+,\cdot)\)</span> 是一个 <strong>交换环</strong>（commutative ring）。</p>
+</details>
 <p>这里除环的定义中有趣的一点是，它将 <span class="arithmatex">\(0\)</span> 视为乘法结构中的特殊元素。这是因为 <span class="arithmatex">\(0 = 0\cdot a = a\cdot 0\)</span>[^zero-multiplication]。也就是说，环中加法单位元乘以任何元素都得到其自身。这样，它自然不会存在乘法逆元，除非它本身就是乘法单位元。这样的环只有零环（见下面的例子）。</p>
 <p>这里的启示是，理解一般的环的乘法结构时，要去除加法单位元的影响，考察 <span class="arithmatex">\(R\setminus\{0\}\)</span>。基于这一想法，有如下定义。</p>
-<p>???+ abstract "零因子"
-    对于环 <span class="arithmatex">\((R,+,\cdot)\)</span>，如果存在 <span class="arithmatex">\(b\in R\)</span> 且 <span class="arithmatex">\(b\ne 0\)</span>，成立 <span class="arithmatex">\(a\cdot b=0\)</span> 或 <span class="arithmatex">\(b\cdot a=0\)</span>，则称非零元素 <span class="arithmatex">\(a\)</span> 为一个 <strong>零因子</strong>（zero divisor）。</p>
-<p>???+ abstract "可逆元（单位）"
-    对于环 <span class="arithmatex">\((R,+,\cdot)\)</span>，如果元素 <span class="arithmatex">\(a\)</span> 有乘法逆元，即存在 <span class="arithmatex">\(b\in R\)</span>，成立 <span class="arithmatex">\(a\cdot b=b\cdot a=1\)</span>，则称元素 <span class="arithmatex">\(a\in R\)</span> 是一个 <strong>可逆元</strong>，或称 <strong>单位</strong>（unit）。</p>
-<p>???+ warning "「单位」与「单位元」"
-    请不要混淆这两个概念。为避免混淆，抽象代数部分将使用「可逆元」的名称代替「单位」。</p>
+<details class="abstract" open="open">
+<summary>零因子</summary>
+<p>对于环 <span class="arithmatex">\((R,+,\cdot)\)</span>，如果存在 <span class="arithmatex">\(b\in R\)</span> 且 <span class="arithmatex">\(b\ne 0\)</span>，成立 <span class="arithmatex">\(a\cdot b=0\)</span> 或 <span class="arithmatex">\(b\cdot a=0\)</span>，则称非零元素 <span class="arithmatex">\(a\)</span> 为一个 <strong>零因子</strong>（zero divisor）。</p>
+</details>
+<details class="abstract" open="open">
+<summary>可逆元（单位）</summary>
+<p>对于环 <span class="arithmatex">\((R,+,\cdot)\)</span>，如果元素 <span class="arithmatex">\(a\)</span> 有乘法逆元，即存在 <span class="arithmatex">\(b\in R\)</span>，成立 <span class="arithmatex">\(a\cdot b=b\cdot a=1\)</span>，则称元素 <span class="arithmatex">\(a\in R\)</span> 是一个 <strong>可逆元</strong>，或称 <strong>单位</strong>（unit）。</p>
+</details>
+<details class="warning" open="open">
+<summary>「单位」与「单位元」</summary>
+<p>请不要混淆这两个概念。为避免混淆，抽象代数部分将使用「可逆元」的名称代替「单位」。</p>
+</details>
 <p>零因子不可能是可逆元，可逆元不可能是零因子。但是，一个非零元素可以既不是零因子，也不是可逆元。</p>
 <p>如果一个环没有零因子，就说明所有非零元素的集合在乘法运算下封闭，即 <span class="arithmatex">\((R\setminus\{0\},\cdot)\)</span> 构成半群。进一步地，如果还要求它成为交换幺半群，就可以得到整环的定义。</p>
-<p>???+ abstract "整环"
-    对于非零环 <span class="arithmatex">\((R,+,\cdot)\)</span>，如果它是交换环，有乘法单位元，且无零因子，则称它为整环（integral domain）。</p>
+<details class="abstract" open="open">
+<summary>整环</summary>
+<p>对于非零环 <span class="arithmatex">\((R,+,\cdot)\)</span>，如果它是交换环，有乘法单位元，且无零因子，则称它为整环（integral domain）。</p>
+</details>
 <p>虽然整环中的元素不一定存在逆元，但是没有零因子这一特性已经足够在整环上建立消去律。</p>
-<p>???+ note "整环的消去律"
-    设整环 <span class="arithmatex">\(R\)</span> 有元素 <span class="arithmatex">\(a,b,c\in R\)</span> 且 <span class="arithmatex">\(a\neq 0\)</span>，如果 <span class="arithmatex">\(ab=ac\)</span>，则必然有 <span class="arithmatex">\(b=c\)</span>。</p>
+<details class="note" open="open">
+<summary>整环的消去律</summary>
+<p>设整环 <span class="arithmatex">\(R\)</span> 有元素 <span class="arithmatex">\(a,b,c\in R\)</span> 且 <span class="arithmatex">\(a\neq 0\)</span>，如果 <span class="arithmatex">\(ab=ac\)</span>，则必然有 <span class="arithmatex">\(b=c\)</span>。</p>
+</details>
 <p>对于一般的幺环，如果只考虑它的全体可逆元，那么同样可以得到群结构。这称为环的乘法群或是单位群。</p>
-<p>???+ abstract "乘法群（单位群）"
-    对于幺环 <span class="arithmatex">\((R,+,\cdot)\)</span>，设 <span class="arithmatex">\(R^\times\)</span> 为 <span class="arithmatex">\(R\)</span> 中全体可逆元的集合，则 <span class="arithmatex">\((R^\times,\cdot)\)</span> 构成群，称为幺环 <span class="arithmatex">\(R\)</span> 的 <strong>乘法群</strong>（multiplicative group），或是 <strong>单位群</strong>（unit group）。</p>
+<details class="abstract" open="open">
+<summary>乘法群（单位群）</summary>
+<p>对于幺环 <span class="arithmatex">\((R,+,\cdot)\)</span>，设 <span class="arithmatex">\(R^\times\)</span> 为 <span class="arithmatex">\(R\)</span> 中全体可逆元的集合，则 <span class="arithmatex">\((R^\times,\cdot)\)</span> 构成群，称为幺环 <span class="arithmatex">\(R\)</span> 的 <strong>乘法群</strong>（multiplicative group），或是 <strong>单位群</strong>（unit group）。</p>
+</details>
 <p>最简单的一些环的例子如下。</p>
-<p>???+ example "环的例子"
-    -   零环（zero ring）：集合 <span class="arithmatex">\(\{0\}\)</span> 在通常意义的加法 <span class="arithmatex">\(+\)</span> 和乘法 <span class="arithmatex">\(\times\)</span> 下构成环，称为零环。它是唯一的只有一个元素的环，也是唯一的加法单位元和乘法单位元相等的环。
-    -   整数环：整数集 <span class="arithmatex">\(\mathbf Z\)</span> 和其上通常定义的加法 <span class="arithmatex">\(+\)</span> 和乘法 <span class="arithmatex">\(\times\)</span> 构成了环 <span class="arithmatex">\((\mathbf Z,+,\times)\)</span>。实际上，这是一个整环，但是它不是除环。
-    -   多项式环：对于一个环 <span class="arithmatex">\(R\)</span>，可以在上面定义 <a href="../ring-theory/#多项式环">多项式环</a>  <span class="arithmatex">\(R[x]\)</span>。如果 <span class="arithmatex">\(R\)</span> 是整环，则该多项式环必然是整环。
-    -   四元数（quaternion）：类比复数，可以考虑集合 <span class="arithmatex">\(\mathbf H=\{a+b\mathrm{i}+c\mathrm{j}+d\mathrm{k}:a,b,c,d\in\mathbf R\}\)</span>，并且定义其上的加法和乘法，这里，<span class="arithmatex">\(\mathrm{i},\mathrm{j},\mathrm{k}\)</span> 的乘法运算满足</p>
-<pre><code>    $$
-    \mathrm{i}^2=\mathrm{j}^2=\mathrm{k}^2=-1,\ \mathrm{i}\mathrm{j}=-\mathrm{j}\mathrm{i}=\mathrm{k},\ \mathrm{j}\mathrm{k}=-\mathrm{k}\mathrm{j}=\mathrm{i},\ \mathrm{k}\mathrm{i}=-\mathrm{i}\mathrm{k}=\mathrm{j}.
-    $$
-
-    那么可以验证，$\mathbf H$ 构成环，而且，它是一个非交换的除环。
--   整数集的子集 $2\mathbf Z$，在通常意义的加法和乘法下构成环，它是交换环，没有零因子，但是并不含幺。
--   整数模 $n$ 同余类 $\mathbf Z/n\mathbf Z$ 在同余类的加法和乘法运算下构成环，它是交换环，含幺（即 $\bar 1$）。这样的环含有零因子，当且仅当 $n$ 是合数。所以，当 $n$ 是素数时，环 $(\mathbf Z/n\mathbf Z, +,\times)$ 是整环；而且，此时它也是除环，所以它实际构成为了一个域。它的乘法群 $((\mathbf Z/n\mathbf Z)^\times,\times)$ 就是整数模 $n$ 乘法群。
--   矩阵环：环 $R$ 上的全体 $n$ 维方阵在矩阵的加法和乘法下构成一个环 $M_n(R)$。一般地，这个环有零因子，且不是交换环。
--   对于一个集合 $A$ 的全体子集 $\mathcal P(A)$，如果定义集合的对称差 $\triangle$ 和交 $\cap$ 分别为其加法和乘法运算，则 $(\mathcal P(A),\triangle,\cap)$ 构成环。一般地，这个环含幺，有零因子，且是交换环。
-</code></pre>
+<details class="example" open="open">
+<summary>环的例子</summary>
+<ul>
+<li>零环（zero ring）：集合 <span class="arithmatex">\(\{0\}\)</span> 在通常意义的加法 <span class="arithmatex">\(+\)</span> 和乘法 <span class="arithmatex">\(\times\)</span> 下构成环，称为零环。它是唯一的只有一个元素的环，也是唯一的加法单位元和乘法单位元相等的环。</li>
+<li>整数环：整数集 <span class="arithmatex">\(\mathbf Z\)</span> 和其上通常定义的加法 <span class="arithmatex">\(+\)</span> 和乘法 <span class="arithmatex">\(\times\)</span> 构成了环 <span class="arithmatex">\((\mathbf Z,+,\times)\)</span>。实际上，这是一个整环，但是它不是除环。</li>
+<li>多项式环：对于一个环 <span class="arithmatex">\(R\)</span>，可以在上面定义 <a href="../ring-theory/#多项式环">多项式环</a>  <span class="arithmatex">\(R[x]\)</span>。如果 <span class="arithmatex">\(R\)</span> 是整环，则该多项式环必然是整环。</li>
+<li>
+<p>四元数（quaternion）：类比复数，可以考虑集合 <span class="arithmatex">\(\mathbf H=\{a+b\mathrm{i}+c\mathrm{j}+d\mathrm{k}:a,b,c,d\in\mathbf R\}\)</span>，并且定义其上的加法和乘法，这里，<span class="arithmatex">\(\mathrm{i},\mathrm{j},\mathrm{k}\)</span> 的乘法运算满足</p>
+<div class="arithmatex">\[
+\mathrm{i}^2=\mathrm{j}^2=\mathrm{k}^2=-1,\ \mathrm{i}\mathrm{j}=-\mathrm{j}\mathrm{i}=\mathrm{k},\ \mathrm{j}\mathrm{k}=-\mathrm{k}\mathrm{j}=\mathrm{i},\ \mathrm{k}\mathrm{i}=-\mathrm{i}\mathrm{k}=\mathrm{j}.
+\]</div>
+<p>那么可以验证，<span class="arithmatex">\(\mathbf H\)</span> 构成环，而且，它是一个非交换的除环。</p>
+</li>
+<li>
+<p>整数集的子集 <span class="arithmatex">\(2\mathbf Z\)</span>，在通常意义的加法和乘法下构成环，它是交换环，没有零因子，但是并不含幺。</p>
+</li>
+<li>整数模 <span class="arithmatex">\(n\)</span> 同余类 <span class="arithmatex">\(\mathbf Z/n\mathbf Z\)</span> 在同余类的加法和乘法运算下构成环，它是交换环，含幺（即 <span class="arithmatex">\(\bar 1\)</span>）。这样的环含有零因子，当且仅当 <span class="arithmatex">\(n\)</span> 是合数。所以，当 <span class="arithmatex">\(n\)</span> 是素数时，环 <span class="arithmatex">\((\mathbf Z/n\mathbf Z, +,\times)\)</span> 是整环；而且，此时它也是除环，所以它实际构成为了一个域。它的乘法群 <span class="arithmatex">\(((\mathbf Z/n\mathbf Z)^\times,\times)\)</span> 就是整数模 <span class="arithmatex">\(n\)</span> 乘法群。</li>
+<li>矩阵环：环 <span class="arithmatex">\(R\)</span> 上的全体 <span class="arithmatex">\(n\)</span> 维方阵在矩阵的加法和乘法下构成一个环 <span class="arithmatex">\(M_n(R)\)</span>。一般地，这个环有零因子，且不是交换环。</li>
+<li>对于一个集合 <span class="arithmatex">\(A\)</span> 的全体子集 <span class="arithmatex">\(\mathcal P(A)\)</span>，如果定义集合的对称差 <span class="arithmatex">\(\triangle\)</span> 和交 <span class="arithmatex">\(\cap\)</span> 分别为其加法和乘法运算，则 <span class="arithmatex">\((\mathcal P(A),\triangle,\cap)\)</span> 构成环。一般地，这个环含幺，有零因子，且是交换环。</li>
+</ul>
+</details>
 <p>当然，对于环的结构的讨论远不止这些，要了解更多内容，可以参考 <a href="../ring-theory/">环论</a> 或相关书籍。</p>
-<h2 id="_3">域</h2>
+<h2 id="域">域<a class="headerlink" href="#域" title="Permanent link"></a></h2>
 <p>域是一个比环性质更强的代数结构。具体地，域是交换除环。当然也可以写出它完整的定义。</p>
-<p>???+ abstract "域"
-    对于非空集合 <span class="arithmatex">\(F\)</span> 和其上的两个二元运算 <span class="arithmatex">\(+:F\times F\rightarrow F\)</span> 和 <span class="arithmatex">\(\cdot:F\times F\rightarrow F\)</span>，如果它们满足以下性质，则称 <span class="arithmatex">\((F,+,\cdot)\)</span> 是一个 <strong>域</strong>（field）：</p>
-<pre><code>1.  $(F,+)$ 构成 Abel 群，其单位元记作 $0$，元素 $a\in F$ 在 $+$ 下的逆元记作 $-a$。
-2.  $(F\setminus\{0\},\cdot)$ 构成 Abel 群，其单位元记作 $1$，元素 $a\in F\setminus\{0\}$ 在 $\cdot$ 下的逆元记作 $a^{-1}$。
-</code></pre>
+<details class="abstract" open="open">
+<summary>域</summary>
+<p>对于非空集合 <span class="arithmatex">\(F\)</span> 和其上的两个二元运算 <span class="arithmatex">\(+:F\times F\rightarrow F\)</span> 和 <span class="arithmatex">\(\cdot:F\times F\rightarrow F\)</span>，如果它们满足以下性质，则称 <span class="arithmatex">\((F,+,\cdot)\)</span> 是一个 <strong>域</strong>（field）：</p>
+<ol>
+<li><span class="arithmatex">\((F,+)\)</span> 构成 Abel 群，其单位元记作 <span class="arithmatex">\(0\)</span>，元素 <span class="arithmatex">\(a\in F\)</span> 在 <span class="arithmatex">\(+\)</span> 下的逆元记作 <span class="arithmatex">\(-a\)</span>。</li>
+<li><span class="arithmatex">\((F\setminus\{0\},\cdot)\)</span> 构成 Abel 群，其单位元记作 <span class="arithmatex">\(1\)</span>，元素 <span class="arithmatex">\(a\in F\setminus\{0\}\)</span> 在 <span class="arithmatex">\(\cdot\)</span> 下的逆元记作 <span class="arithmatex">\(a^{-1}\)</span>。</li>
+</ol>
+</details>
 <p>换句话说，域是对加、减、乘、除四则运算都封闭的代数结构。</p>
 <p>常见的域的例子如下。</p>
-<p>???+ example "域的例子"
-    -   数域：有理数集 <span class="arithmatex">\(\mathbf Q\)</span>，实数集 <span class="arithmatex">\(\mathbf R\)</span> 和复数集 <span class="arithmatex">\(\mathbf C\)</span> 在通常意义的加法和乘法下都构成域。
-    -   有限域（finite field）：以质数 <span class="arithmatex">\(p\)</span> 为模的整数同余类的集合 <span class="arithmatex">\(\mathbf Z/p\mathbf Z\)</span> 在同余类的加法和乘法下构成域。当然，除此之外还有其他的有限域，它们的结构由其大小唯一确定，且大小必然是质数幂的形式。
-    -   <strong>分式域</strong>（fraction field）：设 <span class="arithmatex">\((R,+,\cdot)\)</span> 为整环，可以考虑形如 <span class="arithmatex">\(ab^{-1}\)</span> 的元素构成的集合 <span class="arithmatex">\(Q\)</span>。严格地说，在集合 <span class="arithmatex">\(R\times(R\setminus\{0\})\)</span> 上定义等价关系：<span class="arithmatex">\((a_1,b_1)\sim(a_2,b_2)\)</span> 当且仅当 <span class="arithmatex">\(a_1b_2=a_2b_1\)</span>。那么，集合 <span class="arithmatex">\(Q\)</span> 就是这一关系下的等价类构成的集合 <span class="arithmatex">\(R\times(R\setminus\{0\})/\sim\)</span>，其中，<span class="arithmatex">\((a,b)\)</span> 所在等价类就记作 <span class="arithmatex">\(ab^{-1}\)</span>。如果定义它上面的运算为</p>
-<pre><code>    $$
-    \begin{aligned}
-    a_1b_1^{-1}+a_2b_2^{-1} &amp;= (a_1\cdot b_2+a_2\cdot b_1)(b_1\cdot b_2)^{-1},\\
-    (a_1b_1^{-1})\cdot(a_2b_2^{-1}) &amp;= (a_1\cdot a_2)(b_1\cdot b_2)^{-1}
-    \end{aligned}
-    $$
-
-    则 $(Q,+,\cdot)$ 构成域，称为 $R$ 的分式域。例如，有理数域 $(\mathbf Q,+,\times)$ 就是整数环 $(\mathbf Z,+,\times)$ 的分式域。
--   二次域（quadratic field）：它是在有理数域 $\mathbf Q$ 中添加了 $\sqrt d$ 而扩张成的，这里 $d\neq 0,1$ 且没有平方因子。相关内容可以参考 [二次域](../number-theory/quadratic.md)。
-</code></pre>
+<details class="example" open="open">
+<summary>域的例子</summary>
+<ul>
+<li>数域：有理数集 <span class="arithmatex">\(\mathbf Q\)</span>，实数集 <span class="arithmatex">\(\mathbf R\)</span> 和复数集 <span class="arithmatex">\(\mathbf C\)</span> 在通常意义的加法和乘法下都构成域。</li>
+<li>有限域（finite field）：以质数 <span class="arithmatex">\(p\)</span> 为模的整数同余类的集合 <span class="arithmatex">\(\mathbf Z/p\mathbf Z\)</span> 在同余类的加法和乘法下构成域。当然，除此之外还有其他的有限域，它们的结构由其大小唯一确定，且大小必然是质数幂的形式。</li>
+<li>
+<p><strong>分式域</strong>（fraction field）：设 <span class="arithmatex">\((R,+,\cdot)\)</span> 为整环，可以考虑形如 <span class="arithmatex">\(ab^{-1}\)</span> 的元素构成的集合 <span class="arithmatex">\(Q\)</span>。严格地说，在集合 <span class="arithmatex">\(R\times(R\setminus\{0\})\)</span> 上定义等价关系：<span class="arithmatex">\((a_1,b_1)\sim(a_2,b_2)\)</span> 当且仅当 <span class="arithmatex">\(a_1b_2=a_2b_1\)</span>。那么，集合 <span class="arithmatex">\(Q\)</span> 就是这一关系下的等价类构成的集合 <span class="arithmatex">\(R\times(R\setminus\{0\})/\sim\)</span>，其中，<span class="arithmatex">\((a,b)\)</span> 所在等价类就记作 <span class="arithmatex">\(ab^{-1}\)</span>。如果定义它上面的运算为</p>
+<div class="arithmatex">\[
+\begin{aligned}
+a_1b_1^{-1}+a_2b_2^{-1} &amp;= (a_1\cdot b_2+a_2\cdot b_1)(b_1\cdot b_2)^{-1},\\
+(a_1b_1^{-1})\cdot(a_2b_2^{-1}) &amp;= (a_1\cdot a_2)(b_1\cdot b_2)^{-1}
+\end{aligned}
+\]</div>
+<p>则 <span class="arithmatex">\((Q,+,\cdot)\)</span> 构成域，称为 <span class="arithmatex">\(R\)</span> 的分式域。例如，有理数域 <span class="arithmatex">\((\mathbf Q,+,\times)\)</span> 就是整数环 <span class="arithmatex">\((\mathbf Z,+,\times)\)</span> 的分式域。</p>
+</li>
+<li>
+<p>二次域（quadratic field）：它是在有理数域 <span class="arithmatex">\(\mathbf Q\)</span> 中添加了 <span class="arithmatex">\(\sqrt d\)</span> 而扩张成的，这里 <span class="arithmatex">\(d\neq 0,1\)</span> 且没有平方因子。相关内容可以参考 <a href="../../number-theory/quadratic/">二次域</a>。</p>
+</li>
+</ul>
+</details>
 <p>域相较于环，拥有着非常简单的加法和乘法结构。所以，域本身的结构往往很简单。这使得域的研究和环的研究大不相同，通常会转而研究域的扩张，以及相应的 Galois 理论。在算法竞赛中，有时会需要在有理数域或者有限域的扩域上进行计算。域论的相关内容，可以参考 <a href="../field-theory/">域论</a> 或相关书籍。</p>
-<h2 id="_4">应用</h2>
+<h2 id="应用">应用<a class="headerlink" href="#应用" title="Permanent link"></a></h2>
 <p>最后，以下面的题目为例，说明抽象的代数对象是怎样辅助分析具体的问题的。</p>
-<p>???+ note "<a href="https://www.luogu.com.cn/problem/P4751">【模板】"动态 DP"&amp; 动态树分治（加强版）</a>"
-    给定大小为 <span class="arithmatex">\(n\)</span> 的带点权的树，进行 <span class="arithmatex">\(m\)</span> 次点权修改。每次修改后要输出树上最大带权独立集的权值之和。问题强制在线。</p>
-<p>???+ note "思路分析"
-    这道题是动态 DP 模板，一种复杂度正确的代码实现需要用到 <a href="../../ds/global-bst.md">全局平衡二叉树</a>，具体样例代码也在对应页面。这里仅仅结合该题情景，分析建模的过程。</p>
-<pre><code>为了突出重点，这里暂不考虑全局平衡二叉树对于树形结构的处理，转而考虑链上的最大带权独立集的 DP 问题。顺次考虑链 $[1,n]$ 上的每个点，对于点 $i$ 可以选（$1$）或不选（$0$）。分别设这两种情形下，$[1,i]$ 上子问题的最优解为 $f_{i,1}$ 和 $f_{i,0}$。所以，可以写出 DP 方程为
-
-$$
+<details class="note" open="open">
+<summary><a href="https://www.luogu.com.cn/problem/P4751">【模板】"动态 DP"&amp; 动态树分治（加强版）</a></summary>
+<p>给定大小为 <span class="arithmatex">\(n\)</span> 的带点权的树，进行 <span class="arithmatex">\(m\)</span> 次点权修改。每次修改后要输出树上最大带权独立集的权值之和。问题强制在线。</p>
+</details>
+<details class="note" open="open">
+<summary>思路分析</summary>
+<p>这道题是动态 DP 模板，一种复杂度正确的代码实现需要用到 <a href="../../ds/global-bst.md">全局平衡二叉树</a>，具体样例代码也在对应页面。这里仅仅结合该题情景，分析建模的过程。</p>
+<p>为了突出重点，这里暂不考虑全局平衡二叉树对于树形结构的处理，转而考虑链上的最大带权独立集的 DP 问题。顺次考虑链 <span class="arithmatex">\([1,n]\)</span> 上的每个点，对于点 <span class="arithmatex">\(i\)</span> 可以选（<span class="arithmatex">\(1\)</span>）或不选（<span class="arithmatex">\(0\)</span>）。分别设这两种情形下，<span class="arithmatex">\([1,i]\)</span> 上子问题的最优解为 <span class="arithmatex">\(f_{i,1}\)</span> 和 <span class="arithmatex">\(f_{i,0}\)</span>。所以，可以写出 DP 方程为</p>
+<div class="arithmatex">\[
 \begin{aligned}
 f_{i,1}&amp;=w_{i}+f_{i-1,0},\\
 f_{i,0}&amp;=\max\{f_{i-1,1},f_{i-1,0}\}.
 \end{aligned}
-$$
-
-它的初值为 $(f_{0,1},f_{0,0})=(0,0)$，而最终答案就是 $\max\{f_{n,1},f_{n,0}\}$。要表示点 $i$ 对于最终结果的影响，只需要注意到这一递归关系可以写作
-
-$$
+\]</div>
+<p>它的初值为 <span class="arithmatex">\((f_{0,1},f_{0,0})=(0,0)\)</span>，而最终答案就是 <span class="arithmatex">\(\max\{f_{n,1},f_{n,0}\}\)</span>。要表示点 <span class="arithmatex">\(i\)</span> 对于最终结果的影响，只需要注意到这一递归关系可以写作</p>
+<div class="arithmatex">\[
 (f_{i,1},f_{i,0})=g(f_{i-1,1},f_{i-1,0};w_i).
-$$
-
-这是一连串 $\mathbf R^2$ 到 $\mathbf R^2$ 的映射，它将 $(f_{i-1,1},f_{i-1,0})$ 映射到 $(f_{i,1},f_{i,0})$，用群的语言描述，这些变换在映射的复合之下构成幺半群。这正是线段树可以维护的。
-
-但是，这样的含参变换 $g(\cdot;w_i)$ 如果没有特殊的结构，一般的 $\mathbf R^2$ 到 $\mathbf R^2$ 的映射是不可能用有限维的数据描述的。这里就需要另一项观察，即如果在 $\mathbf R\cup\{-\infty\}$ 上，定义 $\max$ 作为加法、$+$ 作为乘法，那么 $\mathbf R\cup\{-\infty\}$ 构成一种类似环的结构，这里，$-\infty$ 是加法单位元，$0$ 是乘法单位元。但是它不是环，因为其中的元素并非都有加法逆元。这样的结构叫做半环[^semiring]，这里 $(\mathbf R\cup\{-\infty\},\max,+)$ 形成的半环叫做 **热带半环**（tropical semiring）。
-
-基于热带半环 $(R,\oplus,\otimes)$，可以定义它上面的矩阵乘法。即对于 $m\times n$ 维矩阵 $A=(a_{ij})$ 和 $n\times p$ 维矩阵 $B=(b_{jk})$，可以定义其乘积 $AB$ 为 $(c_{ik})$，它的每项元素等于
-
-$$
+\]</div>
+<p>这是一连串 <span class="arithmatex">\(\mathbf R^2\)</span> 到 <span class="arithmatex">\(\mathbf R^2\)</span> 的映射，它将 <span class="arithmatex">\((f_{i-1,1},f_{i-1,0})\)</span> 映射到 <span class="arithmatex">\((f_{i,1},f_{i,0})\)</span>，用群的语言描述，这些变换在映射的复合之下构成幺半群。这正是线段树可以维护的。</p>
+<p>但是，这样的含参变换 <span class="arithmatex">\(g(\cdot;w_i)\)</span> 如果没有特殊的结构，一般的 <span class="arithmatex">\(\mathbf R^2\)</span> 到 <span class="arithmatex">\(\mathbf R^2\)</span> 的映射是不可能用有限维的数据描述的。这里就需要另一项观察，即如果在 <span class="arithmatex">\(\mathbf R\cup\{-\infty\}\)</span> 上，定义 <span class="arithmatex">\(\max\)</span> 作为加法、<span class="arithmatex">\(+\)</span> 作为乘法，那么 <span class="arithmatex">\(\mathbf R\cup\{-\infty\}\)</span> 构成一种类似环的结构，这里，<span class="arithmatex">\(-\infty\)</span> 是加法单位元，<span class="arithmatex">\(0\)</span> 是乘法单位元。但是它不是环，因为其中的元素并非都有加法逆元。这样的结构叫做半环[^semiring]，这里 <span class="arithmatex">\((\mathbf R\cup\{-\infty\},\max,+)\)</span> 形成的半环叫做 <strong>热带半环</strong>（tropical semiring）。</p>
+<p>基于热带半环 <span class="arithmatex">\((R,\oplus,\otimes)\)</span>，可以定义它上面的矩阵乘法。即对于 <span class="arithmatex">\(m\times n\)</span> 维矩阵 <span class="arithmatex">\(A=(a_{ij})\)</span> 和 <span class="arithmatex">\(n\times p\)</span> 维矩阵 <span class="arithmatex">\(B=(b_{jk})\)</span>，可以定义其乘积 <span class="arithmatex">\(AB\)</span> 为 <span class="arithmatex">\((c_{ik})\)</span>，它的每项元素等于</p>
+<div class="arithmatex">\[
 c_{ik} = \bigoplus_{j=1}^n(b_{ij}\otimes c_{jk}) = \max_{1\le j\le n}\;(b_{ij}+c_{jk}).
-$$
-
-有了这些记号，可以将上述递推关系看作是热带半环上的线性变换，并用矩阵语言写作
-
-$$
+\]</div>
+<p>有了这些记号，可以将上述递推关系看作是热带半环上的线性变换，并用矩阵语言写作</p>
+<div class="arithmatex">\[
 \left(\begin{matrix}f_{i,1}\\f_{i,0}\end{matrix}\right)
 =\left(\begin{matrix}-\infty&amp;w_i\\0&amp;0\end{matrix}\right)\left(\begin{matrix}f_{i-1,1}\\f_{i-1,0}\end{matrix}\right).
-$$
-
-由此，只要用线段树维护这一热带半环上的矩阵的乘积就可以回答多次修改的链上的动态 DP 问题。
-
-现在回到该问题的树上版本。对于树上的节点 $i$，其子节点集合记作 $S(i)$，则该处的 DP 方程为
-
-$$
+\]</div>
+<p>由此，只要用线段树维护这一热带半环上的矩阵的乘积就可以回答多次修改的链上的动态 DP 问题。</p>
+<p>现在回到该问题的树上版本。对于树上的节点 <span class="arithmatex">\(i\)</span>，其子节点集合记作 <span class="arithmatex">\(S(i)\)</span>，则该处的 DP 方程为</p>
+<div class="arithmatex">\[
 \begin{aligned}
 f_{i,1}&amp;=w_i+\sum_{j\in S(i)}f_{j,0},\\
 f_{i,0}&amp;=\sum_{j\in S(i)}\max\{f_{j,1},f_{j,0}\}.
 \end{aligned}
-$$
-
-首先，通过树链剖分将问题转化为链上版本。设 $h$ 是 $i$ 的重子节点，那么上述递推方程可以写作
-
-$$
+\]</div>
+<p>首先，通过树链剖分将问题转化为链上版本。设 <span class="arithmatex">\(h\)</span> 是 <span class="arithmatex">\(i\)</span> 的重子节点，那么上述递推方程可以写作</p>
+<div class="arithmatex">\[
 \begin{aligned}
 f_{i,1}&amp;=w_i+f_{h,0}+g_{i,1},\\
 f_{i,0}&amp;=\max\{f_{j,0},f_{j,1}\}+g_{i,0},
 \end{aligned}
-$$
-
-这里，
-
-$$
+\]</div>
+<p>这里，</p>
+<div class="arithmatex">\[
 \begin{aligned}
 g_{i,1}&amp;=\sum_{j\in S(i),\ j\neq h}f_{j,0},\\
 g_{i,0}&amp;=\sum_{j\in S(i),\ j\neq h}\max\{f_{j,1},f_{j,0}\}
 \end{aligned}
-$$
-
-总结了轻子节点的贡献。根据上文描述，这些变换都可以写作热带半环上的矩阵形式，所以，整个问题也就可以在树剖后的线段树上维护。但是，直接用树剖加线段树的单次修改是 $O(\log^2n)$ 的，所以需要用到上文提到的全局平衡二叉树优化到 $O(\log n)$，当然也可以用 LCT 维护。
-
-这里提到的热带半环以及上面的矩阵运算其实并不罕见。如果将上文中的 $\max$ 换作 $\min$，则相应的热带半环常用于最短路问题中。如果 $n$ 维方阵 $A$ 给出了顶点数目为 $n$ 的某个图的两点间的（最短）边权，那么，$A^k$ 的 $(i,j)$ 处的元素就是自点 $i$ 经至多 $k$ 条边到点 $j$ 的最短距离；特别地，$A^n$ 就是该图的距离矩阵。当然实际实现的时候并不会真的暴力计算这一矩阵的幂，而是使用复杂度为 $O(n^3)$ 的 Floyd 算法。
-</code></pre>
-<h2 id="_5">参考资料与注释</h2>
+\]</div>
+<p>总结了轻子节点的贡献。根据上文描述，这些变换都可以写作热带半环上的矩阵形式，所以，整个问题也就可以在树剖后的线段树上维护。但是，直接用树剖加线段树的单次修改是 <span class="arithmatex">\(O(\log^2n)\)</span> 的，所以需要用到上文提到的全局平衡二叉树优化到 <span class="arithmatex">\(O(\log n)\)</span>，当然也可以用 LCT 维护。</p>
+<p>这里提到的热带半环以及上面的矩阵运算其实并不罕见。如果将上文中的 <span class="arithmatex">\(\max\)</span> 换作 <span class="arithmatex">\(\min\)</span>，则相应的热带半环常用于最短路问题中。如果 <span class="arithmatex">\(n\)</span> 维方阵 <span class="arithmatex">\(A\)</span> 给出了顶点数目为 <span class="arithmatex">\(n\)</span> 的某个图的两点间的（最短）边权，那么，<span class="arithmatex">\(A^k\)</span> 的 <span class="arithmatex">\((i,j)\)</span> 处的元素就是自点 <span class="arithmatex">\(i\)</span> 经至多 <span class="arithmatex">\(k\)</span> 条边到点 <span class="arithmatex">\(j\)</span> 的最短距离；特别地，<span class="arithmatex">\(A^n\)</span> 就是该图的距离矩阵。当然实际实现的时候并不会真的暴力计算这一矩阵的幂，而是使用复杂度为 <span class="arithmatex">\(O(n^3)\)</span> 的 Floyd 算法。</p>
+</details>
+<h2 id="参考资料与注释">参考资料与注释<a class="headerlink" href="#参考资料与注释" title="Permanent link"></a></h2>
 <ul>
-<li>Dummitt, D.S. and Foote, R.M. (2004) Abstract Algebra. 3rd Edition, John Wiley &amp; Sons, Inc.</li>
+<li>Dummitt, D.S. and Foote, R.M. (2004) Abstract Algebra. 3<sup>rd</sup> Edition, John Wiley &amp; Sons, Inc.</li>
 <li><a href="https://en.wikipedia.org/wiki/Tropical_semiring">Tropical semiring - Wikipedia</a></li>
 </ul>
 <p>[^oi-wiki-not-wikipedia]: 因为 <a href="https://oi-wiki.org/intro/what-oi-wiki-is-not/#oi-wiki-%E4%B8%8D%E6%98%AF%E7%99%BE%E7%A7%91%E5%85%A8%E4%B9%A6">OI Wiki 不是百科全书</a>。</p>
@@ -1431,7 +1482,9 @@ $$
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>

@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#形式幂级数多项式的复合" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#形式幂级数多项式的复合" class="md-nav__link">
     <span class="md-ellipsis">
       
         形式幂级数/多项式的复合
@@ -1101,7 +1101,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#常见的特殊形式复合" class="md-nav__link">
     <span class="md-ellipsis">
       
         常见的特殊形式复合
@@ -1113,7 +1113,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#kronecker" class="md-nav__link">
+  <a href="#kronecker-代换" class="md-nav__link">
     <span class="md-ellipsis">
       
         Kronecker 代换
@@ -1129,7 +1129,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#形式幂级数的复合逆" class="md-nav__link">
     <span class="md-ellipsis">
       
         形式幂级数的复合逆
@@ -1141,7 +1141,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#由转置原理导出" class="md-nav__link">
     <span class="md-ellipsis">
       
         由转置原理导出
@@ -1157,7 +1157,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#参考文献" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考文献
@@ -1187,7 +1187,7 @@
   <h1>Comp rev</h1>
 
 <p>形式幂级数的复合和复合逆也是常见的形式幂级数操作，对于没有特殊性质的 <span class="arithmatex">\(f\)</span> 之前我们一直使用的多是 <span class="arithmatex">\(O\left(n^2\right)\)</span> 的算法来计算 <span class="arithmatex">\(f(g) \bmod{x^n}\)</span> 其中 <span class="arithmatex">\(f\in\mathbb{C}\left\lbrack\left\lbrack x\right\rbrack\right\rbrack,g\in x\mathbb{C}\left\lbrack\left\lbrack x\right\rbrack\right\rbrack\)</span>，但是因为效率较低应用较少。我们介绍 Kinoshita–Li 的 <span class="arithmatex">\(O\left(\mathsf{M}\left(n\right)\log n\right)\)</span> 的算法，其中 <span class="arithmatex">\(O\left(\mathsf{M}\left(n\right)\right)\)</span> 为两个次数为 <span class="arithmatex">\(O\left( n\right)\)</span> 的多项式相乘的时间。</p>
-<h2 id="_1">形式幂级数/多项式的复合</h2>
+<h2 id="形式幂级数多项式的复合">形式幂级数/多项式的复合<a class="headerlink" href="#形式幂级数多项式的复合" title="Permanent link"></a></h2>
 <p>若要计算 <span class="arithmatex">\(f\left(g\left(x\right)\right)\bmod{x^n}\)</span> 那么需要 <span class="arithmatex">\(f\left(g\left(x\right)\right)\)</span> 的每一项系数都是有限项之和，所以之前要求 <span class="arithmatex">\(f(x)\in\mathbb{C}\left\lbrack\left\lbrack x\right\rbrack\right\rbrack,g(x)\in x\mathbb{C}\left\lbrack\left\lbrack x\right\rbrack\right\rbrack\)</span>，而如果 <span class="arithmatex">\(f(x),g(x)\in\mathbb{C}\left\lbrack x\right\rbrack\)</span> 也可以满足这个条件。因为我们需要将 <span class="arithmatex">\(f\left(g\left(x\right)\right)\)</span> 的系数截断，不妨直接考虑 <span class="arithmatex">\(f(x),g(x)\)</span> 都是多项式的情况。对于 <span class="arithmatex">\(f(x)=\sum_{j=0}^{n-1}f_jx^j\)</span>，有</p>
 <div class="arithmatex">\[
 f\left(g\left(x\right)\right)=\sum_{j=0}^{n-1}f_jg\left(x\right)^j
@@ -1233,7 +1233,7 @@ f\left(g\left(x\right)\right)\bmod{x^n}=\operatorname{\mathsf{Comp}}\left(f\left
 \]</div>
 <p>注意第三个参数是因为 <span class="arithmatex">\(g(0)\)</span> 可能不为零，如果 <span class="arithmatex">\(\deg f\geq n\)</span> 此时不能截断 <span class="arithmatex">\(f(x)\)</span> 来计算 <span class="arithmatex">\(f\left(g(x)\right)\)</span>，我们也可以选择计算 <span class="arithmatex">\(f(g)=f\circ \left(x+g(0)\right)\circ \left(g-g(0)\right)\)</span>，此时可以取 <span class="arithmatex">\(F:=f\left(x+g(0)\right)\bmod{x^n}\)</span> 和 <span class="arithmatex">\(G:=g-g(0)\)</span> 转而计算 <span class="arithmatex">\(\operatorname{\mathsf{Comp}}\left(F\left(y^{-1}\right),1-y\cdot G(x),n,1\right)\)</span>。</p>
 <p>另外因为调用的限制最后递归终止时的 <span class="arithmatex">\(Q(0,y)^{-1}\)</span> 是可以直接导出的，不需要使用形式幂级数的乘法逆元算法来计算，我们只需计算一次乘法然后提取需要的系数。</p>
-<h2 id="_2">常见的特殊形式复合</h2>
+<h2 id="常见的特殊形式复合">常见的特殊形式复合<a class="headerlink" href="#常见的特殊形式复合" title="Permanent link"></a></h2>
 <p>我们常用的 <a href="../elementary-func/">多项式初等函数</a> 都可以通过复合计算：</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1244,17 +1244,17 @@ g(0)=1&amp;,\space g^e=1+\dfrac{e}{1}(g-1)+\dfrac{e(e-1)}{2}(g-1)^2+\cdots
 \end{aligned}
 \]</div>
 <p>在复合逆的计算中我们也会用到求幂函数。</p>
-<h3 id="kronecker">Kronecker 代换</h3>
+<h3 id="kronecker-代换">Kronecker 代换<a class="headerlink" href="#kronecker-代换" title="Permanent link"></a></h3>
 <p>在分析时间复杂度之前我们先考虑如何作二元多项式乘法，一种想法是将系数「打包」，这一方法由 Kronecker 在 1882 年通过 <span class="arithmatex">\(y\mapsto x^N\)</span> 将 <span class="arithmatex">\(R\left\lbrack x,y\right\rbrack\)</span> 上的乘法缩减为 <span class="arithmatex">\(R\left\lbrack x\right\rbrack\)</span> 上的乘法，但是要求 <span class="arithmatex">\(N\)</span> 足够大。</p>
 <p>不妨设 <span class="arithmatex">\(\deg_x \left(AB\right)&lt;N\)</span>，那么我们计算 <span class="arithmatex">\(A\left(x,x^N\right)B\left(x,x^N\right)\)</span> 之后仍然可以还原出 <span class="arithmatex">\(A(x,y)B(x,y)\)</span> 且「打包」和「拆包」的时间为线性。</p>
 <p>我们使用 Kronecker 代换再计算一元多项式乘法即可，不难发现在 <span class="arithmatex">\(n\)</span> 为二的幂时上述算法可以在 <span class="arithmatex">\(O\left(\mathsf{M}\left(n\right)\log n\right)\)</span> 时间完成，因为每一次递归中 <span class="arithmatex">\(y\)</span> 的次数翻倍，但是 <span class="arithmatex">\(x\)</span> 的次数减半。</p>
-<p>??? note "模板（<a href="https://www.luogu.com.cn/problem/P5373">P5373【模板】多项式复合函数</a>）"
-    代码相对于原算法作了一些简化及修改，使得代码更短。</p>
-<pre><code>```cpp
---8&lt;-- "docs/math/code/poly/comp-rev/comp_1.cpp"
-```
-</code></pre>
-<h2 id="_3">形式幂级数的复合逆</h2>
+<details class="note">
+<summary>模板（<a href="https://www.luogu.com.cn/problem/P5373">P5373【模板】多项式复合函数</a>）</summary>
+<p>代码相对于原算法作了一些简化及修改，使得代码更短。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/poly/comp-rev/comp_1.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="形式幂级数的复合逆">形式幂级数的复合逆<a class="headerlink" href="#形式幂级数的复合逆" title="Permanent link"></a></h2>
 <p>现给出 <span class="arithmatex">\(f\in x\mathbb{C}\left\lbrack\left\lbrack x\right\rbrack\right\rbrack\)</span> 且 <span class="arithmatex">\(f'(0)\neq 0\)</span>，求出 <span class="arithmatex">\(g(x)\bmod{x^n}\)</span> 满足 <span class="arithmatex">\(f(g)\equiv g(f)\equiv x\pmod{x^n}\)</span>。</p>
 <p>根据 <a href="../lagrange-inversion/">Lagrange 反演</a>，对于 <span class="arithmatex">\(n&gt;1,k\geq 0\)</span> 我们有</p>
 <div class="arithmatex">\[
@@ -1320,15 +1320,15 @@ u&amp;=\begin{cases}
 6&amp;\textbf{return }\left((t^{-1}x) \circ \left(x\cdot H\right)\right)
 \end{array}
 \]</div>
-<p>??? note "模板（<a href="https://www.luogu.com.cn/problem/P5809">P5809【模板】多项式复合逆</a>）"
-    代码相对于原算法作了一些简化及修改，使得代码更短。</p>
-<pre><code>```cpp
---8&lt;-- "docs/math/code/poly/comp-rev/rev_1.cpp"
-```
-</code></pre>
-<h3 id="_4">由转置原理导出</h3>
+<details class="note">
+<summary>模板（<a href="https://www.luogu.com.cn/problem/P5809">P5809【模板】多项式复合逆</a>）</summary>
+<p>代码相对于原算法作了一些简化及修改，使得代码更短。</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/poly/comp-rev/rev_1.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="由转置原理导出">由转置原理导出<a class="headerlink" href="#由转置原理导出" title="Permanent link"></a></h3>
 <p>Power Projection 问题是 Modular Composition 的转置，Kinoshita 和 Li 指出我们前文的复合算法可以由 Power Projection 算法直接转置得到。同样的，如果优化可以应用于 Power Projection 算法，其也可以应用于 Modular Composition 算法。我们省略细节。</p>
-<h2 id="_5">参考文献</h2>
+<h2 id="参考文献">参考文献<a class="headerlink" href="#参考文献" title="Permanent link"></a></h2>
 <ol>
 <li>Yasunori Kinoshita, Baitian Li.<a href="https://arxiv.org/abs/2404.05177">Power Series Composition in Near-Linear Time</a>. FOCS 2024.</li>
 <li>Alin Bostan, Ryuhei Mori.<a href="https://arxiv.org/abs/2008.08822">A Simple and Fast Algorithm for Computing the N-th Term of a Linearly Recurrent Sequence</a>. SOSA 2021: 118-132</li>
@@ -1389,7 +1389,9 @@ u&amp;=\begin{cases}
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
-        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
+      
+        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
       
     
   </body>
