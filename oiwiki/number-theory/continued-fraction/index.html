@@ -1431,7 +1431,7 @@ x = \lim_{k\rightarrow\infty} x_k = \lim_{k\rightarrow\infty} [a_0,a_1,\cdots,a_
 <div class="arithmatex">\[
 x = [a_0,a_1,\cdots,a_n] = [a_0,a_1,\cdots,a_n-1,1].
 \]</div>
-<p>这两个连分数称为有理数 <span class="arithmatex">\(x\)</span> 的 <strong>连分数表示</strong>（continued fraction representation）。其中，末项不为一的称为标准表示，末项为一的称为非标准表示。[^one-representation]</p>
+<p>这两个连分数称为有理数 <span class="arithmatex">\(x\)</span> 的 <strong>连分数表示</strong>（continued fraction representation）。其中，末项不为一的称为标准表示，末项为一的称为非标准表示。<sup id="fnref:one-representation"><a class="footnote-ref" href="#fn:one-representation">1</a></sup></p>
 <details class="example">
 <summary>例子</summary>
 <p>有理数 <span class="arithmatex">\(x=\dfrac{5}{3}\)</span> 的连分数表示为</p>
@@ -1550,7 +1550,7 @@ P_0(a_0) = a_0,\ P_1(a_0,a_1) = a_0a_1 + 1.
 P_{-1} = 1,\ P_{-2} = 0,
 \]</div>
 <p>可以验证对于 <span class="arithmatex">\(k=0,1\)</span> 也成立上述递推关系。这相当于规定了形式分数 <span class="arithmatex">\(r_{-1}=\dfrac{1}{0}\)</span> 和 <span class="arithmatex">\(r_{-2}=\dfrac{0}{1}\)</span>。</p>
-<p>满足上述递推关系的多项式列 <span class="arithmatex">\(P_k\)</span> 称为 <strong>连项式</strong>[^continuant]（continuant）。它可以写作行列式的形式：</p>
+<p>满足上述递推关系的多项式列 <span class="arithmatex">\(P_k\)</span> 称为 <strong>连项式</strong><sup id="fnref:continuant"><a class="footnote-ref" href="#fn:continuant">2</a></sup>（continuant）。它可以写作行列式的形式：</p>
 <div class="arithmatex">\[
 P_k(a_0,\cdots,a_k)=\det
 \begin{pmatrix}
@@ -1827,7 +1827,7 @@ a_{k+1} = \frac{q_{k+1}}{q_k}-\frac{q_{k-1}}{q_k} &lt; \dfrac{\sqrt{5}+1}{2}-\df
 <div class="arithmatex">\[
 \left|x-\dfrac{p}{q}\right| &lt; \dfrac{1}{Cq^2} 
 \]</div>
-<p>成立。下面证明 <span class="arithmatex">\(\phi=\dfrac{\sqrt{5}+1}{2}\)</span> 就是这样的 <span class="arithmatex">\(x\)</span>。[^sqrt5]</p>
+<p>成立。下面证明 <span class="arithmatex">\(\phi=\dfrac{\sqrt{5}+1}{2}\)</span> 就是这样的 <span class="arithmatex">\(x\)</span>。<sup id="fnref:sqrt5"><a class="footnote-ref" href="#fn:sqrt5">3</a></sup></p>
 <p>设 <span class="arithmatex">\(\phi'=\dfrac{-\sqrt{5}+1}{2}\)</span> 是 <span class="arithmatex">\(\phi\)</span> 的共轭根。它们都是方程 <span class="arithmatex">\(x^2-x-1=0\)</span> 的根。因而，对任意实数 <span class="arithmatex">\(x\)</span>，都有</p>
 <div class="arithmatex">\[
 x^2-x-1 = (x-\phi)(x-\phi').
@@ -1860,7 +1860,7 @@ x^2-x-1 = (x-\phi)(x-\phi').
 <p>第一类最佳逼近未必是渐近分数，而是一类更宽泛的分数。</p>
 <details class="abstract" open="open">
 <summary>中间分数</summary>
-<p>设实数 <span class="arithmatex">\(x\)</span> 有渐近分数 <span class="arithmatex">\(x_{k+1}=[a_0,a_1,\cdots,a_k,a_{k+1}]\)</span>，且整数 <span class="arithmatex">\(t\)</span> 满足 <span class="arithmatex">\(0\le t\le a_{k+1}\)</span>[^semi-range]，则分数 <span class="arithmatex">\(x_{k,t}=[a_0,a_1,\cdots,a_{k},t]\)</span> 称为 <span class="arithmatex">\(x\)</span> 的 <strong>中间分数</strong>（intermediate fraction）、<strong>半收敛子</strong>（semiconvergent）或 <strong>次渐近分数</strong>（secondary convergent）。[^semiconvergent]</p>
+<p>设实数 <span class="arithmatex">\(x\)</span> 有渐近分数 <span class="arithmatex">\(x_{k+1}=[a_0,a_1,\cdots,a_k,a_{k+1}]\)</span>，且整数 <span class="arithmatex">\(t\)</span> 满足 <span class="arithmatex">\(0\le t\le a_{k+1}\)</span><sup id="fnref:semi-range"><a class="footnote-ref" href="#fn:semi-range">4</a></sup>，则分数 <span class="arithmatex">\(x_{k,t}=[a_0,a_1,\cdots,a_{k},t]\)</span> 称为 <span class="arithmatex">\(x\)</span> 的 <strong>中间分数</strong>（intermediate fraction）、<strong>半收敛子</strong>（semiconvergent）或 <strong>次渐近分数</strong>（secondary convergent）。<sup id="fnref:semiconvergent"><a class="footnote-ref" href="#fn:semiconvergent">5</a></sup></p>
 <p>类似于渐近分数的情形，大于（小于）<span class="arithmatex">\(x\)</span> 的中间分数称为 <strong>上（下）中间分数</strong>（upper (lower) semiconvergent）。</p>
 </details>
 <p>根据递推公式，中间分数可以写成</p>
@@ -2104,7 +2104,7 @@ x = \dfrac{\omega p_n+p_{n-1}}{\omega q_n+q_{n-1}} = [a_0,a_1,\cdots,a_n,\omega]
 <p>就落在连结点 <span class="arithmatex">\(\vec\xi_{k-2}\)</span> 和点 <span class="arithmatex">\(\vec\xi_k\)</span> 的线段上。它们对应着中间分数 <span class="arithmatex">\(\xi_{k-1,t}\)</span>。</p>
 </li>
 <li>
-<p>利用几何的方法可以构造出所有的渐近分数和中间分数。从点 <span class="arithmatex">\(\vec\xi_{-2}=(1,0)\)</span> 和点 <span class="arithmatex">\(\vec\xi_{-1}=(0,1)\)</span> 开始，两个点位于直线 <span class="arithmatex">\(y=\xi x\)</span> 两侧，这意味着 <span class="arithmatex">\(\vec\xi\times\vec\xi_{-2}\)</span> 和 <span class="arithmatex">\(\vec\xi\times\vec\xi_{-1}\)</span> 符号相反。将 <span class="arithmatex">\(\vec\xi_{-1}\)</span> 按照向量的加法添加到 <span class="arithmatex">\(\vec\xi_{-2}\)</span> 上，直到无法继续添加而不穿过直线 <span class="arithmatex">\(y=\xi x\)</span> 为止，将结果记作 <span class="arithmatex">\(\vec\xi_0\)</span>，此时仍与 <span class="arithmatex">\(\vec\xi_{-1}\)</span> 不同侧。再将 <span class="arithmatex">\(\vec\xi_0\)</span> 添加到 <span class="arithmatex">\(\vec\xi_{-1}\)</span> 上，直到无法继续添加而不穿过直线 <span class="arithmatex">\(y=\xi x\)</span> 为止，将结果记作 <span class="arithmatex">\(\vec\xi_1\)</span>，此时仍与 <span class="arithmatex">\(\vec\xi_0\)</span> 不同侧。这个过程可以一直持续到无穷，除非在有限步内某个 <span class="arithmatex">\(\vec\xi_n\)</span> 就恰好落在直线 <span class="arithmatex">\(y=\xi x\)</span> 上。后者意味着向量 <span class="arithmatex">\(\vec\xi\)</span> 与 <span class="arithmatex">\(\vec\xi_n\)</span> 共线，即 <span class="arithmatex">\(\xi=\dfrac{p_n}{q_n}\)</span> 为有理点。这个过程就可以得到前面示意图中的图形。Boris Delaunay 将这个过程形象地称为鼻子拉伸算法（nose-streching algorithm）[^nose-streching]。</p>
+<p>利用几何的方法可以构造出所有的渐近分数和中间分数。从点 <span class="arithmatex">\(\vec\xi_{-2}=(1,0)\)</span> 和点 <span class="arithmatex">\(\vec\xi_{-1}=(0,1)\)</span> 开始，两个点位于直线 <span class="arithmatex">\(y=\xi x\)</span> 两侧，这意味着 <span class="arithmatex">\(\vec\xi\times\vec\xi_{-2}\)</span> 和 <span class="arithmatex">\(\vec\xi\times\vec\xi_{-1}\)</span> 符号相反。将 <span class="arithmatex">\(\vec\xi_{-1}\)</span> 按照向量的加法添加到 <span class="arithmatex">\(\vec\xi_{-2}\)</span> 上，直到无法继续添加而不穿过直线 <span class="arithmatex">\(y=\xi x\)</span> 为止，将结果记作 <span class="arithmatex">\(\vec\xi_0\)</span>，此时仍与 <span class="arithmatex">\(\vec\xi_{-1}\)</span> 不同侧。再将 <span class="arithmatex">\(\vec\xi_0\)</span> 添加到 <span class="arithmatex">\(\vec\xi_{-1}\)</span> 上，直到无法继续添加而不穿过直线 <span class="arithmatex">\(y=\xi x\)</span> 为止，将结果记作 <span class="arithmatex">\(\vec\xi_1\)</span>，此时仍与 <span class="arithmatex">\(\vec\xi_0\)</span> 不同侧。这个过程可以一直持续到无穷，除非在有限步内某个 <span class="arithmatex">\(\vec\xi_n\)</span> 就恰好落在直线 <span class="arithmatex">\(y=\xi x\)</span> 上。后者意味着向量 <span class="arithmatex">\(\vec\xi\)</span> 与 <span class="arithmatex">\(\vec\xi_n\)</span> 共线，即 <span class="arithmatex">\(\xi=\dfrac{p_n}{q_n}\)</span> 为有理点。这个过程就可以得到前面示意图中的图形。Boris Delaunay 将这个过程形象地称为鼻子拉伸算法（nose-streching algorithm）<sup id="fnref:nose-streching"><a class="footnote-ref" href="#fn:nose-streching">6</a></sup>。</p>
 </li>
 <li>
 <p>如果需要快速计算每一步将 <span class="arithmatex">\(\vec\xi_{k-1}\)</span> 添加到 <span class="arithmatex">\(\vec\xi_{k-2}\)</span> 需要的次数，可以借助叉积。因为 <span class="arithmatex">\(\vec\xi\times\vec\xi_{k-1}\)</span> 与 <span class="arithmatex">\(\vec\xi\times\vec\xi_{k-2}\)</span> 符号相反，所以如果记 <span class="arithmatex">\(\vec\xi_{k-1,t}=t\vec\xi_{k-1}+\vec\xi_{k-2}\)</span> 为向 <span class="arithmatex">\(\vec\xi_{k-2}\)</span> 添加 <span class="arithmatex">\(t\)</span> 次 <span class="arithmatex">\(\vec\xi_{k-1}\)</span> 得到的结果，则 <span class="arithmatex">\(\vec\xi\times\vec\xi_{k-1,t}=t(\vec\xi\times\vec\xi_{k-1})+(\vec\xi\times\vec\xi_{k-2})\)</span> 不改变符号，就意味着没有穿过直线。在不变号之前，<span class="arithmatex">\(\vec\xi\times\vec\xi_{k-1,t}\)</span> 的绝对值会逐渐下降。记</p>
@@ -2247,7 +2247,7 @@ L(x) = \dfrac{ax+b}{cx+d},
 <div class="arithmatex">\[
 M_i=\begin{pmatrix}a_i &amp; b_i \\ c_i &amp; d_i\end{pmatrix}
 \]</div>
-<p>则它们有如下性质：[^pgl2]</p>
+<p>则它们有如下性质：<sup id="fnref:pgl2"><a class="footnote-ref" href="#fn:pgl2">7</a></sup></p>
 <ol>
 <li>分式线性变换的复合 <span class="arithmatex">\(L_1\circ L_2\)</span> 和逆变换 <span class="arithmatex">\(L_1^{-1}\)</span> 仍然是分式线性变换，即全体分式线性变换构成 <a href="../../algebra/basic/#群">群</a>；</li>
 <li>分式线性变换在系数同乘以非零常数后保持不变，即对于任意 <span class="arithmatex">\(\lambda\neq 0\)</span>，如果 <span class="arithmatex">\(M_2=\lambda M_1\)</span>，则 <span class="arithmatex">\(L_2=L_1\)</span>；</li>
@@ -2490,7 +2490,7 @@ Q_{k+1} &amp;= \dfrac{D-P_{k+1}^2}{Q_k}.
 \end{aligned}
 \]</div>
 </details>
-<p>这个递推公式可以直接用于二次无理数的连分数的计算，而且根据定理的证明，<span class="arithmatex">\(|P_k|&lt;\sqrt{D}\)</span> 且 <span class="arithmatex">\(Q_k\le 2\sqrt{D}\)</span>。该算法的复杂度取决于循环节的长度，而后者可以证明是 <span class="arithmatex">\(O(\sqrt{D}\log D)\)</span> 的[^period-surd]。</p>
+<p>这个递推公式可以直接用于二次无理数的连分数的计算，而且根据定理的证明，<span class="arithmatex">\(|P_k|&lt;\sqrt{D}\)</span> 且 <span class="arithmatex">\(Q_k\le 2\sqrt{D}\)</span>。该算法的复杂度取决于循环节的长度，而后者可以证明是 <span class="arithmatex">\(O(\sqrt{D}\log D)\)</span> 的<sup id="fnref:period-surd"><a class="footnote-ref" href="#fn:period-surd">8</a></sup>。</p>
 <details class="example" open="open">
 <summary>二次无理数</summary>
 <p>给定二次无理数 <span class="arithmatex">\(\alpha=\dfrac{x+y\sqrt{n}}{z}\)</span>，求出其连分数的表示。其中，<span class="arithmatex">\(x,y,z,n\in\mathbf Z\)</span> 且 <span class="arithmatex">\(n&gt;0\)</span> 不是完全平方。</p>
@@ -2734,7 +2734,7 @@ r_5&amp;=8+\sqrt{74}&amp;&amp;=\left[\overline{16,1,1,1,1}\right]
 <details class="example" open="open">
 <summary><a href="https://www.codechef.com/problems/ES">June Challenge 2017 - Euler Sum</a></summary>
 <p>求 <span class="arithmatex">\(\sum\limits_{x=1}^N \lfloor \mathrm{e}x \rfloor\)</span> 的值，其中，<span class="arithmatex">\(\mathrm{e}\)</span> 是自然对数的底。</p>
-<p>提示：<span class="arithmatex">\(e = [2,1,2,1,1,4,1,1,6,1,\cdots,1,2n,1, \cdots]\)</span>。[^continued-fraction-of-e]</p>
+<p>提示：<span class="arithmatex">\(e = [2,1,2,1,1,4,1,1,6,1,\cdots,1,2n,1, \cdots]\)</span>。<sup id="fnref:continued-fraction-of-e"><a class="footnote-ref" href="#fn:continued-fraction-of-e">9</a></sup></p>
 </details>
 <details class="note">
 <summary>解答</summary>
@@ -2848,15 +2848,38 @@ r_5&amp;=8+\sqrt{74}&amp;&amp;=\left[\overline{16,1,1,1,1}\right]
 <li><a href="https://hsinhaoyu.github.io/cont_frac/">Understanding Bill Gosper's continued fraction arithmetic (implemented in Python)</a></li>
 </ul>
 <p><strong>本页面主要内容译自博文 <a href="https://cp-algorithms.com/algebra/continued-fractions.html">Continued fractions</a>，版权协议为 CC-BY-SA 4.0，内容有改动。</strong></p>
-<p>[^one-representation]: 自然数 <span class="arithmatex">\(1\)</span> 只有非标准表示：<span class="arithmatex">\(1=[1]=[0,1]\)</span>。</p>
-<p>[^continuant]: 译名来自张明尧、张凡翻译的《具体数学》第 6.7 节。</p>
-<p>[^sqrt5]: 此时不能默认既约分数 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 一定是渐近分数，虽然 Legendre 定理表明 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 确实只能是某个渐近分数。对于渐近分数的情形，可以通过渐近分数逼近实数的误差入手加以证明。</p>
-<p>[^semi-range]: 不同文献可能对此处的 <span class="arithmatex">\(t\)</span> 的取值范围是否包括端点有不同的处理。</p>
-<p>[^semiconvergent]: <span class="arithmatex">\(t=0\)</span> 时，应理解为形式连分数，相当于截断到连分数的倒数第二项。</p>
-<p>[^nose-streching]: 此说法并非专业术语。可能转译自俄文文献 <a href="https://old.mccme.ru/free-books/mmmf-lectures/book.14-full.pdf">ЦЕПНЫЕ ДРОБИ</a>，在 Алгоритм «вытягивания носов» 一节。</p>
-<p>[^pgl2]: 这些性质表明，全体分式线性变换的群同构于 <a href="https://en.wikipedia.org/wiki/Projective_linear_group">射影线性群</a>  <span class="arithmatex">\(PGL_2(\mathbf R)\)</span>。</p>
-<p>[^period-surd]: 证明见 <a href="https://en.wikipedia.org/wiki/Periodic_continued_fraction#Length_of_the_repeating_block">维基百科页面</a> 的参考文献。</p>
-<p>[^continued-fraction-of-e]: 关于自然对数的底 <span class="arithmatex">\(\mathrm{e}\)</span> 的连分数展开的证明可以参考 <a href="https://proofwiki.org/wiki/Continued_Fraction_Expansion_of_Euler%27s_Number">此处</a>。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:one-representation">
+<p>自然数 <span class="arithmatex">\(1\)</span> 只有非标准表示：<span class="arithmatex">\(1=[1]=[0,1]\)</span>。&#160;<a class="footnote-backref" href="#fnref:one-representation" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:continuant">
+<p>译名来自张明尧、张凡翻译的《具体数学》第 6.7 节。&#160;<a class="footnote-backref" href="#fnref:continuant" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:sqrt5">
+<p>此时不能默认既约分数 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 一定是渐近分数，虽然 Legendre 定理表明 <span class="arithmatex">\(\dfrac{p}{q}\)</span> 确实只能是某个渐近分数。对于渐近分数的情形，可以通过渐近分数逼近实数的误差入手加以证明。&#160;<a class="footnote-backref" href="#fnref:sqrt5" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:semi-range">
+<p>不同文献可能对此处的 <span class="arithmatex">\(t\)</span> 的取值范围是否包括端点有不同的处理。&#160;<a class="footnote-backref" href="#fnref:semi-range" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:semiconvergent">
+<p><span class="arithmatex">\(t=0\)</span> 时，应理解为形式连分数，相当于截断到连分数的倒数第二项。&#160;<a class="footnote-backref" href="#fnref:semiconvergent" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:nose-streching">
+<p>此说法并非专业术语。可能转译自俄文文献 <a href="https://old.mccme.ru/free-books/mmmf-lectures/book.14-full.pdf">ЦЕПНЫЕ ДРОБИ</a>，在 Алгоритм «вытягивания носов» 一节。&#160;<a class="footnote-backref" href="#fnref:nose-streching" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pgl2">
+<p>这些性质表明，全体分式线性变换的群同构于 <a href="https://en.wikipedia.org/wiki/Projective_linear_group">射影线性群</a>  <span class="arithmatex">\(PGL_2(\mathbf R)\)</span>。&#160;<a class="footnote-backref" href="#fnref:pgl2" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:period-surd">
+<p>证明见 <a href="https://en.wikipedia.org/wiki/Periodic_continued_fraction#Length_of_the_repeating_block">维基百科页面</a> 的参考文献。&#160;<a class="footnote-backref" href="#fnref:period-surd" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:continued-fraction-of-e">
+<p>关于自然对数的底 <span class="arithmatex">\(\mathrm{e}\)</span> 的连分数展开的证明可以参考 <a href="https://proofwiki.org/wiki/Continued_Fraction_Expansion_of_Euler%27s_Number">此处</a>。&#160;<a class="footnote-backref" href="#fnref:continued-fraction-of-e" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -2916,7 +2939,7 @@ r_5&amp;=8+\sqrt{74}&amp;&amp;=\left[\overline{16,1,1,1,1}\right]
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

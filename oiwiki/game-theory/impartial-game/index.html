@@ -1387,7 +1387,7 @@
 <p><img alt="博弈图的例子" src="../images/nim.svg" /></p>
 <p>马上就会提到，图中的红色结点表示必胜状态，黑色结点表示必败状态。</p>
 </details>
-<p>由于 Nim 游戏是公平组合游戏，每个玩家是否有必胜策略，只取决当前游戏所处的状态，而与玩家的身份无关。因此，所有状态可以分为（先手）<strong>必胜状态</strong> 和（先手）<strong>必败状态</strong>，分别记为 <span class="arithmatex">\(\mathcal N\)</span> 态和 <span class="arithmatex">\(\mathcal P\)</span> 态[^n-vs-p]。这个定义适用于所有公平组合游戏。</p>
+<p>由于 Nim 游戏是公平组合游戏，每个玩家是否有必胜策略，只取决当前游戏所处的状态，而与玩家的身份无关。因此，所有状态可以分为（先手）<strong>必胜状态</strong> 和（先手）<strong>必败状态</strong>，分别记为 <span class="arithmatex">\(\mathcal N\)</span> 态和 <span class="arithmatex">\(\mathcal P\)</span> 态<sup id="fnref:n-vs-p"><a class="footnote-ref" href="#fn:n-vs-p">1</a></sup>。这个定义适用于所有公平组合游戏。</p>
 <p>通过下述引理，可以归纳地将所有状态标记为必胜状态和必败状态：<a id="np-lem"></a></p>
 <details class="note" open="open">
 <summary>引理</summary>
@@ -1473,7 +1473,7 @@ S_{0,1,2} = \{*1, *2\}.
 </details>
 <p>在随后的讨论中，记号 <span class="arithmatex">\(T\in S\)</span> 应当理解为状态 <span class="arithmatex">\(T\)</span> 是状态 <span class="arithmatex">\(S\)</span> 的后继状态。</p>
 <h3 id="游戏的和与等价">游戏的和与等价<a class="headerlink" href="#游戏的和与等价" title="Permanent link"></a></h3>
-<p>游戏的等价关系，依赖于游戏的和[^more-sums]的概念。</p>
+<p>游戏的等价关系，依赖于游戏的和<sup id="fnref:more-sums"><a class="footnote-ref" href="#fn:more-sums">2</a></sup>的概念。</p>
 <details class="note" open="open">
 <summary>游戏的和</summary>
 <p>游戏 <span class="arithmatex">\(G\)</span> 和 <span class="arithmatex">\(H\)</span> 的 <strong>和</strong>（sum），或称 <strong>游戏组合</strong>（combined game），记作 <span class="arithmatex">\(G+H\)</span>，是指游戏</p>
@@ -1992,8 +1992,17 @@ x, &amp; \text{otherwise}.
 <li>Conway, John H. On numbers and games. AK Peters/CRC Press, 2000.</li>
 <li>Berlekamp, Elwyn R., John H. Conway, and Richard K. Guy. Winning ways for your mathematical plays, volume 1-4. AK Peters/CRC Press, 2001-2004.</li>
 </ul>
-<p>[^n-vs-p]: 「<span class="arithmatex">\(\mathcal N\)</span> 态」和「<span class="arithmatex">\(\mathcal P\)</span> 态」这两个名称分别表示「下一名玩家胜利」（Next player wins）和「前一名玩家胜利」（Previous player wins）。</p>
-<p>[^more-sums]: 本文讨论的「和」都是 <strong>长规则</strong>（long rule）下的 <strong>析取和</strong>（disjunctive sum）。这也是最常见的一种游戏组合方式。除此之外，还有其他可能的游戏组合方式。关于它们的详细讨论，可以参考 Conway, John H. On numbers and games. AK Peters/CRC Press, 2000. 一书的第 14 章。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:n-vs-p">
+<p>「<span class="arithmatex">\(\mathcal N\)</span> 态」和「<span class="arithmatex">\(\mathcal P\)</span> 态」这两个名称分别表示「下一名玩家胜利」（Next player wins）和「前一名玩家胜利」（Previous player wins）。&#160;<a class="footnote-backref" href="#fnref:n-vs-p" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:more-sums">
+<p>本文讨论的「和」都是 <strong>长规则</strong>（long rule）下的 <strong>析取和</strong>（disjunctive sum）。这也是最常见的一种游戏组合方式。除此之外，还有其他可能的游戏组合方式。关于它们的详细讨论，可以参考 Conway, John H. On numbers and games. AK Peters/CRC Press, 2000. 一书的第 14 章。&#160;<a class="footnote-backref" href="#fnref:more-sums" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -2053,7 +2062,7 @@ x, &amp; \text{otherwise}.
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

@@ -1396,8 +1396,8 @@
 <li>右操作数大于等于左操作数的位数；</li>
 </ol>
 <p>例如，对于 <code>int</code> 类型的变量 <code>a</code> ， <code>a&lt;&lt;-1</code> 和 <code>a&lt;&lt;32</code> 都是未定义的。</p>
-<p>对于左移操作，需要确保移位后的结果能被原数的类型容纳，否则行为也是未定义的。[<sup>note1]对一个负数执行左移操作也未定义。[</sup>note2]</p>
-<p>对于右移操作，右侧多余的位将会被舍弃，而左侧较为复杂：对于无符号数，会在左侧补 <span class="arithmatex">\(0\)</span>；而对于有符号数，则会用最高位的数（其实就是符号位，非负数为 <span class="arithmatex">\(0\)</span>，负数为 <span class="arithmatex">\(1\)</span>）补齐。[^note3]</p>
+<p>对于左移操作，需要确保移位后的结果能被原数的类型容纳，否则行为也是未定义的。<sup id="fnref:note1"><a class="footnote-ref" href="#fn:note1">1</a></sup>对一个负数执行左移操作也未定义。<sup id="fnref:note2"><a class="footnote-ref" href="#fn:note2">2</a></sup></p>
+<p>对于右移操作，右侧多余的位将会被舍弃，而左侧较为复杂：对于无符号数，会在左侧补 <span class="arithmatex">\(0\)</span>；而对于有符号数，则会用最高位的数（其实就是符号位，非负数为 <span class="arithmatex">\(0\)</span>，负数为 <span class="arithmatex">\(1\)</span>）补齐。<sup id="fnref:note3"><a class="footnote-ref" href="#fn:note3">3</a></sup></p>
 <h2 id="复合赋值位运算符">复合赋值位运算符<a class="headerlink" href="#复合赋值位运算符" title="Permanent link"></a></h2>
 <p>和 <code>+=</code> , <code>-=</code> 等运算符类似，位运算也有复合赋值运算符： <code>&amp;=</code> , <code>|=</code> , <code>^=</code> , <code>&lt;&lt;=</code> , <code>&gt;&gt;=</code> 。（取反是单目运算，所以没有。）</p>
 <h2 id="关于优先级">关于优先级<a class="headerlink" href="#关于优先级" title="Permanent link"></a></h2>
@@ -1447,8 +1447,10 @@
 </div>
 </div>
 </div>
-<p>!!! warning
-    我们平常写的除法是向 <span class="arithmatex">\(0\)</span> 取整，而这里的右移是向下取整（注意这里的区别），即当数大于等于 <span class="arithmatex">\(0\)</span> 时两种方法等价，当数小于 <span class="arithmatex">\(0\)</span> 时会有区别，如： <code>-1 / 2</code> 的值为 <span class="arithmatex">\(0\)</span> ，而 <code>-1 &gt;&gt; 1</code> 的值为 <span class="arithmatex">\(-1\)</span> 。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>我们平常写的除法是向 <span class="arithmatex">\(0\)</span> 取整，而这里的右移是向下取整（注意这里的区别），即当数大于等于 <span class="arithmatex">\(0\)</span> 时两种方法等价，当数小于 <span class="arithmatex">\(0\)</span> 时会有区别，如： <code>-1 / 2</code> 的值为 <span class="arithmatex">\(0\)</span> ，而 <code>-1 &gt;&gt; 1</code> 的值为 <span class="arithmatex">\(-1\)</span> 。</p>
+</div>
 <h3 id="取绝对值">取绝对值<a class="headerlink" href="#取绝对值" title="Permanent link"></a></h3>
 <p>在某些机器上，效率比 <code>n &gt; 0 ? n : -n</code> 高。</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">C++</label><label for="__tabbed_2_2">Python</label></div>
@@ -1644,7 +1646,7 @@
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">cnt</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p>求一个数的汉明权重还可以使用 <code>lowbit</code> 操作：我们将这个数不断地减去它的 <code>lowbit</code>[^note4]，直到这个数变为 <span class="arithmatex">\(0\)</span>。</p>
+<p>求一个数的汉明权重还可以使用 <code>lowbit</code> 操作：我们将这个数不断地减去它的 <code>lowbit</code><sup id="fnref:note4"><a class="footnote-ref" href="#fn:note4">4</a></sup>，直到这个数变为 <span class="arithmatex">\(0\)</span>。</p>
 <p>代码如下：</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
@@ -1733,10 +1735,23 @@
 <li>位运算技巧： <a href="https://graphics.stanford.edu/~seander/bithacks.html">https://graphics.stanford.edu/~seander/bithacks.html</a> </li>
 <li>Other Builtins of GCC： <a href="https://gcc.gnu.org/onlinedocs/gcc/Other-Builtins.html">https://gcc.gnu.org/onlinedocs/gcc/Other-Builtins.html</a> </li>
 </ol>
-<p>[^note1]: 适用于 C++14 以前的标准。在 C++14 和 C++17 标准中，若原值为带符号类型，且移位后的结果能被原类型的无符号版本容纳，则将该结果 <a href="../lang/var.md#类型转换">转换</a> 为相应的带符号值，否则行为未定义。在 C++20 标准中，规定了无论是带符号数还是无符号数，左移均直接舍弃移出结果类型的位。</p>
-<p>[^note2]: 适用于 C++20 以前的标准。</p>
-<p>[^note3]: 这种右移方式称为算术右移。在 C++20 以前的标准中，并没有规定带符号数右移运算的实现方式，大多数平台均采用算术右移。在 C++20 标准中，规定了带符号数右移运算是算术右移。</p>
-<p>[^note4]: 一个数二进制表示从低往高的第一个 <span class="arithmatex">\(1\)</span> 连同后面的零，如 <span class="arithmatex">\((1010)_2\)</span> 的 <code>lowbit</code> 是 <span class="arithmatex">\((0010)_2\)</span>，详见 <a href="../ds/fenwick.md">树状数组</a>。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:note1">
+<p>适用于 C++14 以前的标准。在 C++14 和 C++17 标准中，若原值为带符号类型，且移位后的结果能被原类型的无符号版本容纳，则将该结果 <a href="../lang/var.md#类型转换">转换</a> 为相应的带符号值，否则行为未定义。在 C++20 标准中，规定了无论是带符号数还是无符号数，左移均直接舍弃移出结果类型的位。&#160;<a class="footnote-backref" href="#fnref:note1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:note2">
+<p>适用于 C++20 以前的标准。&#160;<a class="footnote-backref" href="#fnref:note2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:note3">
+<p>这种右移方式称为算术右移。在 C++20 以前的标准中，并没有规定带符号数右移运算的实现方式，大多数平台均采用算术右移。在 C++20 标准中，规定了带符号数右移运算是算术右移。&#160;<a class="footnote-backref" href="#fnref:note3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:note4">
+<p>一个数二进制表示从低往高的第一个 <span class="arithmatex">\(1\)</span> 连同后面的零，如 <span class="arithmatex">\((1010)_2\)</span> 的 <code>lowbit</code> 是 <span class="arithmatex">\((0010)_2\)</span>，详见 <a href="../ds/fenwick.md">树状数组</a>。&#160;<a class="footnote-backref" href="#fnref:note4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1793,7 +1808,7 @@
       
         <script src="../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

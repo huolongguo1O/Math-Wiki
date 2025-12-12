@@ -1420,8 +1420,7 @@
 
   <h1>Graph enumeration</h1>
 
-<p>在组合数学中，图论计数（Graph Enumeration）是研究满足特定性质的图的计数问题的分支。<a href="../../poly/intro/">生成函数</a>、<a href="../polya/">波利亚计数定理</a> 与 <a href="../../poly/symbolic-method/#%E9%9B%86%E5%90%88%E7%9A%84-cycle-%E6%9E%84%E9%80%A0">符号化方法</a> 和 <a href="https://oeis.org/">OEIS</a> 是解决这类问题时最重要的数学工具。图论计数可分为有标号和无标号两大类问题，大多数情况下[^1]有标号版本的问题都比其对应的无标号问题更加简单，因此我们将先考察有标号问题的计数。</p>
-<p>[^1]: 也许无标号二叉树是一个反例，在结构简单的情况下，对应的置换群是恒等群（Identity Group），此时有标号版本可以直接通过乘以 <span class="arithmatex">\(n!\)</span> 得到。</p>
+<p>在组合数学中，图论计数（Graph Enumeration）是研究满足特定性质的图的计数问题的分支。<a href="../../poly/intro/">生成函数</a>、<a href="../polya/">波利亚计数定理</a> 与 <a href="../../poly/symbolic-method/#%E9%9B%86%E5%90%88%E7%9A%84-cycle-%E6%9E%84%E9%80%A0">符号化方法</a> 和 <a href="https://oeis.org/">OEIS</a> 是解决这类问题时最重要的数学工具。图论计数可分为有标号和无标号两大类问题，大多数情况下<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>有标号版本的问题都比其对应的无标号问题更加简单，因此我们将先考察有标号问题的计数。</p>
 <h2 id="有标号树">有标号树<a class="headerlink" href="#有标号树" title="Permanent link"></a></h2>
 <p>即 Cayley 公式，参见 <a href="../../graph/prufer.md">Prüfer 序列</a> 一文，我们也可以使用 <a href="../../graph/matrix-tree.md">Kirchhoff 矩阵树定理</a> 或 <a href="../../poly/intro/#生成函数">生成函数</a> 和 <a href="https://codeforces.com/blog/entry/104184">拉格朗日定理</a> 得到这一结果。</p>
 <h3 id="习题">习题<a class="headerlink" href="#习题" title="Permanent link"></a></h3>
@@ -1529,11 +1528,10 @@ C(x) &amp;= \ln(G(x))
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>下面讨论有标号二分图计数，</p>
-<p>我们设 <span class="arithmatex">\(b_n\)</span> 表示 n 个结点的二分图方案数，<span class="arithmatex">\(g_n\)</span> 表示 <span class="arithmatex">\(n\)</span> 个结点对结点进行 2 染色，满足相同颜色的结点之间不存在边的图的方案数。枚举其中一种颜色节点的数量，有[^2]：</p>
+<p>我们设 <span class="arithmatex">\(b_n\)</span> 表示 n 个结点的二分图方案数，<span class="arithmatex">\(g_n\)</span> 表示 <span class="arithmatex">\(n\)</span> 个结点对结点进行 2 染色，满足相同颜色的结点之间不存在边的图的方案数。枚举其中一种颜色节点的数量，有<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup>：</p>
 <div class="arithmatex">\[
 g_n = \sum_{i=0}^{n} \binom{n}{i}2^{i(n-i)}
 \]</div>
-<p>[^2]: <a href="https://www.luogu.com.cn/blog/PinkRabbit/solution-sp4420">粉兔的 blog</a> 告诉我们，这个序列也可以使用 <a href="../../poly/czt/">Chirp Z-Transform</a> 优化。</p>
 <p>接下来我们用两种不同的方法建立 <span class="arithmatex">\(g_n\)</span> 与 <span class="arithmatex">\(b_n\)</span> 之间的关系。</p>
 <h4 id="方法一算两次">方法一：算两次<a class="headerlink" href="#方法一算两次" title="Permanent link"></a></h4>
 <p>我们设 <span class="arithmatex">\(c_{n, k}\)</span> 表示有 k 个连通分量的二分图方案数，那么不难得到如下关系：</p>
@@ -1715,6 +1713,17 @@ w(p) = \frac{n!}{\prod_{i}(p_i)\prod_{i}(q_i!)}
 <li><a href="https://github.com/lychees/ACM-Training/blob/master/Note/Book/Combinatorial%20Problems%20and%20Exercises_L%C3%A1szl%C3%B3%20Lov%C3%A1sz.pdf">Combinatorial Problems and Exercises, László Lovász</a></li>
 <li><a href="https://yufeizhao.com/gtacbook/">Graph Theory and Additive Combinatorics</a></li>
 </ol>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>也许无标号二叉树是一个反例，在结构简单的情况下，对应的置换群是恒等群（Identity Group），此时有标号版本可以直接通过乘以 <span class="arithmatex">\(n!\)</span> 得到。&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><a href="https://www.luogu.com.cn/blog/PinkRabbit/solution-sp4420">粉兔的 blog</a> 告诉我们，这个序列也可以使用 <a href="../../poly/czt/">Chirp Z-Transform</a> 优化。&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1771,7 +1780,7 @@ w(p) = \frac{n!}{\prod_{i}(p_i)\prod_{i}(q_i!)}
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

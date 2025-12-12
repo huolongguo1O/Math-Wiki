@@ -1316,7 +1316,7 @@
   <h1>Fwt</h1>
 
 <h2 id="简介">简介<a class="headerlink" href="#简介" title="Permanent link"></a></h2>
-<p>沃尔什转换（Walsh Transform）<a href="[维基百科](https://zh.wikipedia.org/zh-cn/%E6%B2%83%E7%88%BE%E4%BB%80%E8%BD%89%E6%8F%9B)">^note1</a>是在频谱分析上作为离散傅立叶变换的替代方案的一种方法，在信号处理中应用很广泛。FFT 是 double 类型的，但是 Walsh 把信号在不同震荡频率方波下拆解，因此所有的系数都是绝对值大小相同的整数，这使得不需要作浮点数的乘法运算，提高了运算速度。</p>
+<p>沃尔什转换（Walsh Transform）<sup id="fnref:note1"><a class="footnote-ref" href="#fn:note1">1</a></sup>是在频谱分析上作为离散傅立叶变换的替代方案的一种方法，在信号处理中应用很广泛。FFT 是 double 类型的，但是 Walsh 把信号在不同震荡频率方波下拆解，因此所有的系数都是绝对值大小相同的整数，这使得不需要作浮点数的乘法运算，提高了运算速度。</p>
 <p>所以，FWT 和 FFT 的核心思想应该是相同的，都是对数组的变换。我们记对数组 <span class="arithmatex">\(A\)</span> 进行快速沃尔什变换后得到的结果为 <span class="arithmatex">\(FWT[A]\)</span>。</p>
 <p>那么 FWT 核心思想就是：</p>
 <p>我们需要一个新序列 <span class="arithmatex">\(C\)</span>，由序列 <span class="arithmatex">\(A\)</span> 和序列 <span class="arithmatex">\(B\)</span> 经过某运算规则得到，即 <span class="arithmatex">\(C = A \cdot B\)</span>；</p>
@@ -1729,6 +1729,14 @@ c(i,j)c(i,k)=c(i,j\oplus k)
 <li><a href="https://zhuanlan.zhihu.com/p/41867199">桃酱的算法笔记</a></li>
 <li><a href="https://znpdco.github.io/%E7%AE%97%E6%B3%95/2024/05/07/FWT.html">ZnPdCo 的博客</a></li>
 </ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:note1">
+<p><a href="https://zh.wikipedia.org/zh-cn/%E6%B2%83%E7%88%BE%E4%BB%80%E8%BD%89%E6%8F%9B">维基百科</a>&#160;<a class="footnote-backref" href="#fnref:note1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1788,7 +1796,7 @@ c(i,j)c(i,k)=c(i,j\oplus k)
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

@@ -1466,7 +1466,7 @@ a_1\equiv a_2\pmod p\implies \left(\frac{a_1}{p}\right)=\left(\frac{a_2}{p}\righ
 \left(\frac{p}{q}\right)\left(\frac{q}{p}\right)=(-1)^{\frac{p-1}{2}\frac{q-1}{2}}.
 \]</div>
 </details>
-<p>证明方式很多[<sup>ref5]。一种证明方式是基于如下引理[</sup>ref6]：</p>
+<p>证明方式很多<sup id="fnref:ref5"><a class="footnote-ref" href="#fn:ref5">5</a></sup>。一种证明方式是基于如下引理<sup id="fnref:ref6"><a class="footnote-ref" href="#fn:ref6">6</a></sup>：</p>
 <details class="note" open="open">
 <summary>Gauss 引理</summary>
 <p>设 <span class="arithmatex">\(p\)</span> 是奇素数，<span class="arithmatex">\((n,p)=1\)</span>，对整数 <span class="arithmatex">\(k~\left(1\leq k\leq (p-1)/2\right)\)</span>，令 <span class="arithmatex">\(r_k=nk\bmod p\)</span>，设 <span class="arithmatex">\(A=\{r_k:r_k &lt; p/2\}\)</span>，<span class="arithmatex">\(B=\{r_k:r_k &gt; p/2\}\)</span>，则</p>
@@ -1492,7 +1492,7 @@ n^{\frac{p-1}{2}}\equiv(-1)^{\mu}\pmod{p}.
 </details>
 <details class="tip">
 <summary>推广</summary>
-<p>Gauss 引理可做如下推广[^ref7]：</p>
+<p>Gauss 引理可做如下推广<sup id="fnref:ref7"><a class="footnote-ref" href="#fn:ref7">7</a></sup>：</p>
 <p>设 <span class="arithmatex">\(p\)</span> 是奇素数，令 <span class="arithmatex">\(I\subset\mathbf{Z}_p^*\)</span> 满足 <span class="arithmatex">\(I\cup -I=\mathbf{Z}_p^*\)</span> 且 <span class="arithmatex">\(I\cap -I=\varnothing\)</span>，其中 <span class="arithmatex">\(-I:=\{-i:i\in I\}\)</span>，则对任意与 <span class="arithmatex">\(p\)</span> 互质的整数 <span class="arithmatex">\(n\)</span>，</p>
 <div class="arithmatex">\[
 \left(\frac{n}{p}\right)=(-1)^{|J|},
@@ -1672,7 +1672,7 @@ a_0^2+a_1^2(r^2-a)-a \equiv -2a_0a_1x \pmod {f(x)}
 </code></pre></div></td></tr></table></div>
 </details>
 <h3 id="bostanmori-算法">Bostan–Mori 算法<a class="headerlink" href="#bostanmori-算法" title="Permanent link"></a></h3>
-<p>该算法基于 Cipolla 算法，我们将问题转换为 <a href="../../poly/linear-recurrence/">常系数齐次线性递推</a> 再应用 Bostan–Mori 算法。考虑另一种常见的 Cipolla 算法的描述：<span class="arithmatex">\(b=x^{\left(p+1\right)/2}\bmod{\left(x^2-tx+a\right)}\)</span> 为满足 <span class="arithmatex">\(b^2\equiv a\pmod{p}\)</span> 的一个解[^ref3]，其中 <span class="arithmatex">\(x^2-tx+a\in \mathbf{F}_p\lbrack x\rbrack\)</span> 为不可约多项式。系数 <span class="arithmatex">\(t\)</span> 的选取同样使用随机方法。证明过程略。参考 Bostan 和 Mori 论文[^ref4]中的算法我们可以发现问题可转化为求解形式幂级数的乘法逆元的某一项系数：</p>
+<p>该算法基于 Cipolla 算法，我们将问题转换为 <a href="../../poly/linear-recurrence/">常系数齐次线性递推</a> 再应用 Bostan–Mori 算法。考虑另一种常见的 Cipolla 算法的描述：<span class="arithmatex">\(b=x^{\left(p+1\right)/2}\bmod{\left(x^2-tx+a\right)}\)</span> 为满足 <span class="arithmatex">\(b^2\equiv a\pmod{p}\)</span> 的一个解<sup id="fnref:ref3"><a class="footnote-ref" href="#fn:ref3">3</a></sup>，其中 <span class="arithmatex">\(x^2-tx+a\in \mathbf{F}_p\lbrack x\rbrack\)</span> 为不可约多项式。系数 <span class="arithmatex">\(t\)</span> 的选取同样使用随机方法。证明过程略。参考 Bostan 和 Mori 论文<sup id="fnref:ref4"><a class="footnote-ref" href="#fn:ref4">4</a></sup>中的算法我们可以发现问题可转化为求解形式幂级数的乘法逆元的某一项系数：</p>
 <div class="arithmatex">\[
 b=\left\lbrack x^{(p+1)/2}\right\rbrack\dfrac{1}{1-tx+ax^2}
 \]</div>
@@ -1684,7 +1684,7 @@ b=\left\lbrack x^{(p+1)/2}\right\rbrack\dfrac{1}{1-tx+ax^2}
 \left\lbrack x^{n/2}\right\rbrack\dfrac{k_0+(k_0k_3-k_1k_2)x}{1+(2k_3-k_2^2)x+k_3^2x^2},&amp;\text{else if }n\neq 0
 \end{cases}
 \]</div>
-<p>而 <span class="arithmatex">\(n=0\)</span> 时显然有 <span class="arithmatex">\(\left\lbrack x^0\right\rbrack\dfrac{k_0+k_1x}{1+k_2x+k_3x^2}=k_0\)</span>，该算法乘法次数相较于 Cipolla 算法更少。其他相关乘法次数较少的算法可见 Müller 的文章[^ref2]。</p>
+<p>而 <span class="arithmatex">\(n=0\)</span> 时显然有 <span class="arithmatex">\(\left\lbrack x^0\right\rbrack\dfrac{k_0+k_1x}{1+k_2x+k_3x^2}=k_0\)</span>，该算法乘法次数相较于 Cipolla 算法更少。其他相关乘法次数较少的算法可见 Müller 的文章<sup id="fnref:ref2"><a class="footnote-ref" href="#fn:ref2">2</a></sup>。</p>
 <h3 id="legendre-算法">Legendre 算法<a class="headerlink" href="#legendre-算法" title="Permanent link"></a></h3>
 <p>对于同余方程 <span class="arithmatex">\(x^2\equiv a\pmod p\)</span>，其中 <span class="arithmatex">\(p\)</span> 为奇素数且 <span class="arithmatex">\(a\)</span> 为二次剩余。Legendre 算法可描述为找到 <span class="arithmatex">\(r\)</span> 满足 <span class="arithmatex">\(r^2-a\)</span> 为二次非剩余，令 <span class="arithmatex">\(a_0+a_1x=(r-x)^{\frac{p-1}{2}}\bmod (x^2-a)\)</span>，那么 <span class="arithmatex">\(a_0\equiv 0\pmod p\)</span> 且 <span class="arithmatex">\(a_1^{-2}\equiv a\pmod p\)</span>.</p>
 <details class="note" open="open">
@@ -1712,7 +1712,7 @@ x&amp;\mapsto (b,-b)
 <p>所以 <span class="arithmatex">\(2a_0=(\pm 1)+(\mp 1)=0\)</span> 而 <span class="arithmatex">\(2a_1b=(\pm 1)-(\mp 1)=\pm 2\)</span>.</p>
 </details>
 <h3 id="tonellishanks-算法">Tonelli–Shanks 算法<a class="headerlink" href="#tonellishanks-算法" title="Permanent link"></a></h3>
-<p>Tonelli–Shanks 算法是基于离散对数求解同余方程 <span class="arithmatex">\(x^2\equiv a\pmod p\)</span> 的算法[^ref1]，其中 <span class="arithmatex">\(p\)</span> 为奇素数且 <span class="arithmatex">\(a\)</span> 为模 <span class="arithmatex">\(p\)</span> 的二次剩余。</p>
+<p>Tonelli–Shanks 算法是基于离散对数求解同余方程 <span class="arithmatex">\(x^2\equiv a\pmod p\)</span> 的算法<sup id="fnref:ref1"><a class="footnote-ref" href="#fn:ref1">1</a></sup>，其中 <span class="arithmatex">\(p\)</span> 为奇素数且 <span class="arithmatex">\(a\)</span> 为模 <span class="arithmatex">\(p\)</span> 的二次剩余。</p>
 <p>令 <span class="arithmatex">\(p-1=m2^n\)</span>，其中 <span class="arithmatex">\(m\)</span> 为奇数。仍然使用随机方法寻找 <span class="arithmatex">\(r\in\mathbf{F}_p\)</span> 满足 <span class="arithmatex">\(r\)</span> 为二次非剩余。令 <span class="arithmatex">\(g\equiv r^m\pmod p\)</span> 且 <span class="arithmatex">\(b\equiv a^{(m-1)/2}\pmod p\)</span>，那么存在整数 <span class="arithmatex">\(e\in\lbrace 0,1,2,\dots ,2^n-1\rbrace\)</span> 满足 <span class="arithmatex">\(ab^2\equiv g^e\pmod p\)</span>。若 <span class="arithmatex">\(a\)</span> 为二次剩余，那么 <span class="arithmatex">\(e\)</span> 为偶数且 <span class="arithmatex">\(\left(abg^{-e/2}\right)^2\equiv a\pmod p\)</span>.</p>
 <details class="note" open="open">
 <summary>证明</summary>
@@ -1753,13 +1753,32 @@ g^{e2^{n-1}} \equiv a^{m2^{n-1}} = a^{\frac{p-1}{2}} \equiv 1 \pmod p.
 <li><a href="https://en.wikipedia.org/wiki/Quadratic_residue">Quadratic residue - Wikipedia</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Euler%27s_criterion">Euler's criterion - Wikipedia</a></li>
 </ol>
-<p>[^ref1]: Daniel. J. Bernstein. Faster Square Roots in Annoying Finite Fields.</p>
-<p>[^ref2]: S. Müller, On the computation of square roots in finite fields, Design, Codes and Cryptography, Vol.31, pp. 301-312, 2004.</p>
-<p>[^ref3]: A. Menezes, P. van Oorschot and S. Vanstone. Handbook of Applied Cryptography, 1996.</p>
-<p>[^ref4]: Alin Bostan, Ryuhei Mori. A Simple and Fast Algorithm for Computing the N-th Term of a Linearly Recurrent Sequence. Available at <a href="https://arxiv.org/abs/2008.08822">https://arxiv.org/abs/2008.08822</a>.</p>
-<p>[^ref5]: <a href="https://en.wikipedia.org/wiki/Proofs_of_quadratic_reciprocity">Proofs of quadratic reciprocity - Wikipedia</a></p>
-<p>[^ref6]: Carl Friedrich Gauss. Untersuchungen über höhere Arithmetik, 1965. Page 458-462.</p>
-<p>[^ref7]: Kobi Kremnizer.<a href="https://courses.maths.ox.ac.uk/pluginfile.php/29788/mod_resource/content/1/numbertheory-2022.pdf">Lectures in number theory 2022</a>. Proposition 4.3.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:ref1">
+<p>Daniel. J. Bernstein. Faster Square Roots in Annoying Finite Fields.&#160;<a class="footnote-backref" href="#fnref:ref1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref2">
+<p>S. Müller, On the computation of square roots in finite fields, Design, Codes and Cryptography, Vol.31, pp. 301-312, 2004.&#160;<a class="footnote-backref" href="#fnref:ref2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref3">
+<p>A. Menezes, P. van Oorschot and S. Vanstone. Handbook of Applied Cryptography, 1996.&#160;<a class="footnote-backref" href="#fnref:ref3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref4">
+<p>Alin Bostan, Ryuhei Mori. A Simple and Fast Algorithm for Computing the N-th Term of a Linearly Recurrent Sequence. Available at <a href="https://arxiv.org/abs/2008.08822">https://arxiv.org/abs/2008.08822</a>.&#160;<a class="footnote-backref" href="#fnref:ref4" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref5">
+<p><a href="https://en.wikipedia.org/wiki/Proofs_of_quadratic_reciprocity">Proofs of quadratic reciprocity - Wikipedia</a>&#160;<a class="footnote-backref" href="#fnref:ref5" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref6">
+<p>Carl Friedrich Gauss. Untersuchungen über höhere Arithmetik, 1965. Page 458-462.&#160;<a class="footnote-backref" href="#fnref:ref6" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ref7">
+<p>Kobi Kremnizer.<a href="https://courses.maths.ox.ac.uk/pluginfile.php/29788/mod_resource/content/1/numbertheory-2022.pdf">Lectures in number theory 2022</a>. Proposition 4.3.&#160;<a class="footnote-backref" href="#fnref:ref7" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1819,7 +1838,7 @@ g^{e2^{n-1}} \equiv a^{m2^{n-1}} = a^{\frac{p-1}{2}} \equiv 1 \pmod p.
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

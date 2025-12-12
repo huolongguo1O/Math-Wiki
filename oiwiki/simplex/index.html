@@ -1426,7 +1426,7 @@ x_B = A_B^{-1}b - A_B^{-1}A_Nx_N.
 <summary>「基」</summary>
 <p>「基」这个名称，可以从线性代数的角度理解。设 <span class="arithmatex">\(A\)</span> 的全体列向量张成的线性空间为 <span class="arithmatex">\(V\)</span>。那么，基 <span class="arithmatex">\(B\)</span> 对应的列向量就是空间 <span class="arithmatex">\(V\)</span> 的一组基。</p>
 </details>
-<p>在基变量 <span class="arithmatex">\(x_B\)</span> 的表达式中，令 <span class="arithmatex">\(x_N=0\)</span>，就得到全体等式约束的一组解[^notation]</p>
+<p>在基变量 <span class="arithmatex">\(x_B\)</span> 的表达式中，令 <span class="arithmatex">\(x_N=0\)</span>，就得到全体等式约束的一组解<sup id="fnref:notation"><a class="footnote-ref" href="#fn:notation">1</a></sup></p>
 <div class="arithmatex">\[
 x = (x_B,x_N) = (A_B^{-1}b,0).
 \]</div>
@@ -1760,7 +1760,7 @@ x_{B_{\sim L}}= &amp; (A_B^{-1}b)_{\sim L} &amp; (A_B^{-1}A_N)_{(\sim L)} \\
 <li>选择对应着最陡的边的入基变量，即沿着边移动单位长度引起的价值函数改进（即 <span class="arithmatex">\(|c_i|/\|A_B^{-1}A_i\|\)</span>）最大；</li>
 <li>随机选择一个入基变量。</li>
 </ul>
-<p>实践中，最陡边规则的效率最高[^steepest-edge]。通常认为，适当的转轴规则可以在大致 <span class="arithmatex">\(2m\)</span> 次转轴内得到大多数问题的最优解。但是，对于目前所有已知的转轴规则，都存在特殊构造的例子[^klee-minty]，能够将转轴次数卡到指数级。这也正是单纯形法实践中运行效率相当优秀，但是理论最差复杂度是指数级的原因。</p>
+<p>实践中，最陡边规则的效率最高<sup id="fnref:steepest-edge"><a class="footnote-ref" href="#fn:steepest-edge">2</a></sup>。通常认为，适当的转轴规则可以在大致 <span class="arithmatex">\(2m\)</span> 次转轴内得到大多数问题的最优解。但是，对于目前所有已知的转轴规则，都存在特殊构造的例子<sup id="fnref:klee-minty"><a class="footnote-ref" href="#fn:klee-minty">3</a></sup>，能够将转轴次数卡到指数级。这也正是单纯形法实践中运行效率相当优秀，但是理论最差复杂度是指数级的原因。</p>
 <p>出基变量的选择往往决定了算法是否会陷入循环。如果存在多个最优价值相同的基本可行解，那么，算法就有可能一直在这些基本可行解之间循环。这些情形并不常见，因此很多单纯形法的实现并不会指定出基变量的选择规则。常见的避免循环的规则有两种：</p>
 <ul>
 <li>Bland 规则：总是选择标号最小的入基变量和出基变量。</li>
@@ -1773,7 +1773,7 @@ x_{B_{\sim L}}= &amp; (A_B^{-1}b)_{\sim L} &amp; (A_B^{-1}A_N)_{(\sim L)} \\
 <p>注意，如果线性规划问题是松弛形式的，那么这些量都可以从前文所述形式的单纯形表 <span class="arithmatex">\(T_B\)</span> 中直接找到；否则，可以在找到一组初始基本解（未必可行）后，利用这些初始基中的基变量对应列（顺序保持固定）的系数作为 <span class="arithmatex">\(A_B^{-1}\)</span> 的系数。</p>
 </li>
 </ul>
-<p>Bland 规则效率很低，因为规则本身对入基和出基变量的选择方法是一样的，这很容易造成同一个变量反复入基再出基。相对来说，字典序规则更为实用。字典序规则相当于对线性规划问题中的参数进行微扰[^lexico]，使得不存在最优价值相同的基本可行解，也就不存在循环的可能性。</p>
+<p>Bland 规则效率很低，因为规则本身对入基和出基变量的选择方法是一样的，这很容易造成同一个变量反复入基再出基。相对来说，字典序规则更为实用。字典序规则相当于对线性规划问题中的参数进行微扰<sup id="fnref:lexico"><a class="footnote-ref" href="#fn:lexico">4</a></sup>，使得不存在最优价值相同的基本可行解，也就不存在循环的可能性。</p>
 <h2 id="参考实现">参考实现<a class="headerlink" href="#参考实现" title="Permanent link"></a></h2>
 <p>本节提供一个基于压缩单纯形表的二阶段单纯形法的参考实现。</p>
 <details class="example">
@@ -1833,10 +1833,23 @@ a_{ij} =
 <li>Inayatullah, Syed, Nasir Touheed, and Muhammad Imtiaz. "A streamlined artificial variable free version of simplex method." PloS one 10, no. 3 (2015): e0116156.</li>
 <li>Floudas, Christodoulos A., and Panos M. Pardalos, eds. Encyclopedia of optimization. Springer Science &amp; Business Media, 2008.</li>
 </ul>
-<p>[^notation]: 原则上，因为所有向量默认为列向量，<span class="arithmatex">\((x_B,x_N)\)</span> 应该写作 <span class="arithmatex">\((x_B^T,x_N^T)^T\)</span>。但是为了简化记号，本文所有类似的情形都直接写作 <span class="arithmatex">\((x_B,x_N)\)</span>，而省略转置符号。</p>
-<p>[^steepest-edge]: 测试结果参见 Forrest, John J., and Donald Goldfarb. "Steepest-edge simplex algorithms for linear programming." Mathematical programming 57, no. 1 (1992): 341-374。</p>
-<p>[^klee-minty]: 一个经典的反例可以参见 Klee, Victor, and George J. Minty. "How good is the simplex algorithm." Inequalities 3, no. 3 (1972): 159-175。</p>
-<p>[^lexico]: 详细的解释可以看 <a href="https://facultyweb.kennesaw.edu/mlavrov/courses/lp/lecture8.pdf">这份讲义</a>。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:notation">
+<p>原则上，因为所有向量默认为列向量，<span class="arithmatex">\((x_B,x_N)\)</span> 应该写作 <span class="arithmatex">\((x_B^T,x_N^T)^T\)</span>。但是为了简化记号，本文所有类似的情形都直接写作 <span class="arithmatex">\((x_B,x_N)\)</span>，而省略转置符号。&#160;<a class="footnote-backref" href="#fnref:notation" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:steepest-edge">
+<p>测试结果参见 Forrest, John J., and Donald Goldfarb. "Steepest-edge simplex algorithms for linear programming." Mathematical programming 57, no. 1 (1992): 341-374。&#160;<a class="footnote-backref" href="#fnref:steepest-edge" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:klee-minty">
+<p>一个经典的反例可以参见 Klee, Victor, and George J. Minty. "How good is the simplex algorithm." Inequalities 3, no. 3 (1972): 159-175。&#160;<a class="footnote-backref" href="#fnref:klee-minty" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:lexico">
+<p>详细的解释可以看 <a href="https://facultyweb.kennesaw.edu/mlavrov/courses/lp/lecture8.pdf">这份讲义</a>。&#160;<a class="footnote-backref" href="#fnref:lexico" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1893,7 +1906,7 @@ a_{ij} =
       
         <script src="../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

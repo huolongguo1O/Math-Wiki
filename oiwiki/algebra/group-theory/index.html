@@ -1551,7 +1551,7 @@
 <summary>元素的阶</summary>
 <p>群 <span class="arithmatex">\(G\)</span> 中元素 <span class="arithmatex">\(x\in G\)</span> 的 <strong>阶</strong>（order）是最小的正整数 <span class="arithmatex">\(n\)</span> 使得 <span class="arithmatex">\(x^n=e\)</span> 成立，记作 <span class="arithmatex">\(|x|\)</span>；如果这样的 <span class="arithmatex">\(n\)</span> 不存在，则称元素 <span class="arithmatex">\(x\)</span> 的阶是无限，记作 <span class="arithmatex">\(|x|=\infty\)</span>。</p>
 </details>
-<p>元素的阶总是不大于群的阶，事实上，下文即证明，元素的阶总是整除群的阶。但是，群的阶并非总是元素的阶的最大值，比如 <span class="arithmatex">\(D_6\)</span> 是六阶群，但是元素的阶最大是 <span class="arithmatex">\(3\)</span>。群的阶也并不是所有元素的阶的最小公倍数，比如 Klein 四元群[^klein] <span class="arithmatex">\(V_4\)</span> 的阶是 <span class="arithmatex">\(4\)</span>，但是里面只有 <span class="arithmatex">\(1\)</span> 阶元和 <span class="arithmatex">\(2\)</span> 阶元。</p>
+<p>元素的阶总是不大于群的阶，事实上，下文即证明，元素的阶总是整除群的阶。但是，群的阶并非总是元素的阶的最大值，比如 <span class="arithmatex">\(D_6\)</span> 是六阶群，但是元素的阶最大是 <span class="arithmatex">\(3\)</span>。群的阶也并不是所有元素的阶的最小公倍数，比如 Klein 四元群<sup id="fnref:klein"><a class="footnote-ref" href="#fn:klein">1</a></sup> <span class="arithmatex">\(V_4\)</span> 的阶是 <span class="arithmatex">\(4\)</span>，但是里面只有 <span class="arithmatex">\(1\)</span> 阶元和 <span class="arithmatex">\(2\)</span> 阶元。</p>
 <details class="note" open="open">
 <summary>定理</summary>
 <p>有限循环群 <span class="arithmatex">\(C_n=\langle x\rangle\)</span> 中，元素 <span class="arithmatex">\(x^k\)</span> 的阶是</p>
@@ -1620,7 +1620,7 @@ G/N = \{gN:g\in G\}.
 <div class="arithmatex">\[
 g_1N\circ g_2N=(g_1g_2)N.
 \]</div>
-<p>可以证明，运算的结果与代表元的选取无关[^quotient]。此时，<span class="arithmatex">\((G/N,\circ)\)</span> 确实具有群的结构，它称为 <span class="arithmatex">\(G\)</span> 模 <span class="arithmatex">\(N\)</span> 的 <strong>商群</strong>（quotient group）。商群 <span class="arithmatex">\(G/N\)</span> 并不是群 <span class="arithmatex">\(G\)</span> 的子群，它的每个元素都是群 <span class="arithmatex">\(G\)</span> 的一个子集。</p>
+<p>可以证明，运算的结果与代表元的选取无关<sup id="fnref:quotient"><a class="footnote-ref" href="#fn:quotient">2</a></sup>。此时，<span class="arithmatex">\((G/N,\circ)\)</span> 确实具有群的结构，它称为 <span class="arithmatex">\(G\)</span> 模 <span class="arithmatex">\(N\)</span> 的 <strong>商群</strong>（quotient group）。商群 <span class="arithmatex">\(G/N\)</span> 并不是群 <span class="arithmatex">\(G\)</span> 的子群，它的每个元素都是群 <span class="arithmatex">\(G\)</span> 的一个子集。</p>
 <details class="example" open="open">
 <summary>例子：正三角形的空间对称群 <span class="arithmatex">\(D_6\)</span>（续）</summary>
 <p>在群 <span class="arithmatex">\(D_6\)</span> 中，商群 <span class="arithmatex">\(G/\langle r\rangle\)</span> 的意义非常显然。它相当于在所有这些对称操作中，忽视操作中将三角形旋转的角度，而只关注它是否将三角形翻转。两个将三角形翻转的操作的复合相当于没有翻转原三角形；但是，如果两个操作一个翻转了三角形而另一个没有，那么复合也必然翻转了三角形。翻转与否也具有群的结构。从群 <span class="arithmatex">\(D_6\)</span> 中忽视旋转的细节而只考虑翻转的有无，在代数上就是将复杂的群 <span class="arithmatex">\(D_6\)</span> 模掉 <span class="arithmatex">\(\langle r\rangle\)</span> 而得到商群 <span class="arithmatex">\(D_6/\langle r\rangle\)</span>。这些论述对子群 <span class="arithmatex">\(\langle s\rangle\)</span> 是无效的，因为如果忽视翻转的有无，那么旋转的度数没有办法明确判断的，这也是为什么 <span class="arithmatex">\(G/\langle s\rangle\)</span> 不具有商群的结构。</p>
@@ -1747,7 +1747,7 @@ g_1N\circ g_2N=(g_1g_2)N.
 </details>
 <details class="info">
 <summary>「左作用」和「右作用」</summary>
-<p>这里采取的群作用的定义在有些地方[^group-action]会称为左作用（left action），因为在记号 <span class="arithmatex">\(g\cdot x\)</span> 中，群的元素写在了集合的元素的左侧。相应地，此时群元素的复合 <span class="arithmatex">\(g_1g_2\)</span> 作用在集合上时，需要先进行 <span class="arithmatex">\(g_2\)</span> 的作用，再进行 <span class="arithmatex">\(g_1\)</span> 的作用。当然，也可以相应地定义右作用，记作 <span class="arithmatex">\(x\cdot g\)</span>。此时，群元素的复合顺序与左作用相反，即 <span class="arithmatex">\(x\cdot (g_1g_2)=(x\cdot g_1)\cdot g_2\)</span>。两者只有记号上的区别，而无本质区别，因而本文默认采用左作用的记号。</p>
+<p>这里采取的群作用的定义在有些地方<sup id="fnref:group-action"><a class="footnote-ref" href="#fn:group-action">3</a></sup>会称为左作用（left action），因为在记号 <span class="arithmatex">\(g\cdot x\)</span> 中，群的元素写在了集合的元素的左侧。相应地，此时群元素的复合 <span class="arithmatex">\(g_1g_2\)</span> 作用在集合上时，需要先进行 <span class="arithmatex">\(g_2\)</span> 的作用，再进行 <span class="arithmatex">\(g_1\)</span> 的作用。当然，也可以相应地定义右作用，记作 <span class="arithmatex">\(x\cdot g\)</span>。此时，群元素的复合顺序与左作用相反，即 <span class="arithmatex">\(x\cdot (g_1g_2)=(x\cdot g_1)\cdot g_2\)</span>。两者只有记号上的区别，而无本质区别，因而本文默认采用左作用的记号。</p>
 </details>
 <p>对于满足上述定义的群作用，自然有如下构造</p>
 <div class="arithmatex">\[
@@ -1840,7 +1840,7 @@ g\mapsto \varphi_g&amp;: G\rightarrow G\\
 &amp;\quad x\mapsto gx
 \end{aligned}
 \]</div>
-<p>群的左乘作用必然是忠实的，因为群满足消去律。所以，由同态基本定理，<span class="arithmatex">\(G\)</span> 可以嵌入对称群 <span class="arithmatex">\(S_G\)</span> 中。这意味着，每个群都同构于某个置换群[^cayley]。</p>
+<p>群的左乘作用必然是忠实的，因为群满足消去律。所以，由同态基本定理，<span class="arithmatex">\(G\)</span> 可以嵌入对称群 <span class="arithmatex">\(S_G\)</span> 中。这意味着，每个群都同构于某个置换群<sup id="fnref:cayley"><a class="footnote-ref" href="#fn:cayley">4</a></sup>。</p>
 <details class="note" open="open">
 <summary>Cayley 定理</summary>
 <p>群 <span class="arithmatex">\(G\)</span> 同构于对称群 <span class="arithmatex">\(S_G\)</span> 的子群。</p>
@@ -1871,7 +1871,7 @@ g\mapsto \varphi_g&amp;: G\rightarrow G\\
 <p>群的中心，是与群中所有元素都交换的元素的集合；因为它是群作用的核，它必然是正规子群。群的中心的大小，表明了它和交换群之间的差距。给定元素的中心化子，是与该元素交换的所有元素的集合；也是所有中心包括它的子群中最大的，这也就是它的名字来源；同时，因为它是共轭作用下某元素的稳定化子，所以它是子群。共轭类一般不是子群。</p>
 <details class="example" open="open">
 <summary>例子：正三角形的空间对称群 <span class="arithmatex">\(D_6\)</span>（续）</summary>
-<p>回到群 <span class="arithmatex">\(D_6\)</span>，它的中心是 <span class="arithmatex">\(\{e\}\neq G\)</span>，这说明它不是交换群。元素 <span class="arithmatex">\(r\)</span> 的中心化子 <span class="arithmatex">\(C_G(r)\)</span> 是 <span class="arithmatex">\(\langle r\rangle\)</span>，元素 <span class="arithmatex">\(s\)</span> 的中心化子 <span class="arithmatex">\(C_G(s)\)</span> 为 <span class="arithmatex">\(\langle s\rangle\)</span>。一般地，对所有 <span class="arithmatex">\(g\in G\)</span>，总成立 <span class="arithmatex">\(\langle g\rangle\le C_G(g)\)</span>。群 <span class="arithmatex">\(D_6\)</span> 的共轭类共三个，即 <span class="arithmatex">\(\{e\},\{r,r^2\},\{s,sr,sr^2\}\)</span>。容易发现，共轭的元素都是同阶的[^conjugate]。</p>
+<p>回到群 <span class="arithmatex">\(D_6\)</span>，它的中心是 <span class="arithmatex">\(\{e\}\neq G\)</span>，这说明它不是交换群。元素 <span class="arithmatex">\(r\)</span> 的中心化子 <span class="arithmatex">\(C_G(r)\)</span> 是 <span class="arithmatex">\(\langle r\rangle\)</span>，元素 <span class="arithmatex">\(s\)</span> 的中心化子 <span class="arithmatex">\(C_G(s)\)</span> 为 <span class="arithmatex">\(\langle s\rangle\)</span>。一般地，对所有 <span class="arithmatex">\(g\in G\)</span>，总成立 <span class="arithmatex">\(\langle g\rangle\le C_G(g)\)</span>。群 <span class="arithmatex">\(D_6\)</span> 的共轭类共三个，即 <span class="arithmatex">\(\{e\},\{r,r^2\},\{s,sr,sr^2\}\)</span>。容易发现，共轭的元素都是同阶的<sup id="fnref:conjugate"><a class="footnote-ref" href="#fn:conjugate">5</a></sup>。</p>
 </details>
 <p>群在共轭作用下划分成若干个共轭类。所以，可以写出 <strong>类方程</strong>（class equation）。</p>
 <details class="note" open="open">
@@ -2009,7 +2009,7 @@ G\cong C_\infty^r\times C_{n_1}\times\cdots\times C_{n_s}.
 <p>定理首先断言，有限生成的 Abel 群一定是有限多个循环群的直积。</p>
 <details class="note">
 <summary>证明</summary>
-<p>这里给出一个形式简单的证明[<sup>proof-abelian]；更深刻的证明应当参考主理想整环上的有限生成模的结构定理[</sup>module-pid]。在证明中，为书写简便，将使用加法记号代替一般的群中的乘法记号，此时 <span class="arithmatex">\(0\)</span> 代表单位元，而记号 <span class="arithmatex">\(mx\)</span> 代表 <span class="arithmatex">\(x\)</span> 的 <span class="arithmatex">\(m\)</span> 次幂。</p>
+<p>这里给出一个形式简单的证明<sup id="fnref:proof-abelian"><a class="footnote-ref" href="#fn:proof-abelian">6</a></sup>；更深刻的证明应当参考主理想整环上的有限生成模的结构定理<sup id="fnref:module-pid"><a class="footnote-ref" href="#fn:module-pid">7</a></sup>。在证明中，为书写简便，将使用加法记号代替一般的群中的乘法记号，此时 <span class="arithmatex">\(0\)</span> 代表单位元，而记号 <span class="arithmatex">\(mx\)</span> 代表 <span class="arithmatex">\(x\)</span> 的 <span class="arithmatex">\(m\)</span> 次幂。</p>
 <p>设 <span class="arithmatex">\(G\)</span> 最少可以由 <span class="arithmatex">\(k\)</span> 个元素生成。定理的证明需要对 <span class="arithmatex">\(k\)</span> 进行归纳。当 <span class="arithmatex">\(k=1\)</span> 时结论是平凡的。当 <span class="arithmatex">\(k&gt;1\)</span> 时，取 <span class="arithmatex">\(G\)</span> 的全体生成元组 <span class="arithmatex">\(\langle x_1,x_2,\cdots,x_k\rangle\)</span> 中 <span class="arithmatex">\(x_1\)</span> 的阶最小的那个。下面要说明 <span class="arithmatex">\(G=\langle x_1\rangle\times\langle x_2,\cdots,x_k\rangle\)</span>，后者则根据归纳假设已经可以分解成 <span class="arithmatex">\((k-1)\)</span> 个循环群的直积，故归纳步骤得证。</p>
 <p>根据群的直积的刻画，如果直积分解不成立，必然存在关系 <span class="arithmatex">\(m_1x_1+m_2x_2+\cdots+m_kx_k=0\)</span>，且 <span class="arithmatex">\(m_1x_1\neq 0\)</span>。对于负的系数 <span class="arithmatex">\(m_i\)</span>，可以用逆元 <span class="arithmatex">\(-x_i\)</span> 代替 <span class="arithmatex">\(x_i\)</span>，则所有系数 <span class="arithmatex">\(m_i\)</span> 都可以取作非负整数。而且，此时可以取 <span class="arithmatex">\(0&lt; m_1 &lt;|x_1|\)</span>。如果再取 <span class="arithmatex">\(d=\gcd(m_1,m_2,\cdots,m_k)\)</span> 和 <span class="arithmatex">\(c_i=m_i/d\)</span>，则必然有 <span class="arithmatex">\(y_1=c_1x_1+c_2x_2+\cdots+c_kx_k\)</span> 满足 <span class="arithmatex">\(dy_1=0\)</span>，因而 <span class="arithmatex">\(|y_1|\le d\le m_1&lt; |x_1|\)</span>，即 <span class="arithmatex">\(y_1\)</span> 是比 <span class="arithmatex">\(x_1\)</span> 阶更小的元素。</p>
 <p>下面证明，<span class="arithmatex">\(y_1\)</span> 可以扩张成 <span class="arithmatex">\(G\)</span> 的一组生成元。也就是说，存在元素 <span class="arithmatex">\(y_2,\cdots,y_k\in G\)</span> 满足 <span class="arithmatex">\(G=\langle y_1,y_2,\cdots,y_k\rangle\)</span>。这里唯一的已知条件是 <span class="arithmatex">\(y_1\)</span> 本身可以写作 <span class="arithmatex">\(c_1x_1+c_2x_2+\cdots+c_kx_k\)</span>，其中，系数 <span class="arithmatex">\(c_i\)</span> 都是自然数且它们的最大公约数是一。不妨假设系数（非严格）递减排列，则 <span class="arithmatex">\(y_1\)</span> 也可以写作 <span class="arithmatex">\((c_1-c_2)x_1+c_2(x_1+x_2)+\cdots+c_kx_k\)</span>。此时，对比之前的条件，可以发现系数依然全部是自然数，且最大公约数是一，而且 <span class="arithmatex">\(G=\langle x_1,x_1+x_2,x_3,\cdots,x_k\rangle\)</span>，但是全体系数的和减少了 <span class="arithmatex">\(c_2\)</span>。如果 <span class="arithmatex">\(c_2=0\)</span>，则必然有 <span class="arithmatex">\(c_1=1\)</span>，结论是平凡的；否则，系数的和严格地减少了。这意味着，如果对系数的和进行归纳，就可以证明满足上述条件的 <span class="arithmatex">\(y_1\)</span> 总可以扩张成 <span class="arithmatex">\(G\)</span> 的一组生成元。</p>
@@ -2060,13 +2060,32 @@ G\cong C_\infty^r\times C_{n_1}\times\cdots\times C_{n_s}.
 <li><a href="https://mathworld.wolfram.com/Group.html">Group - Wolfram MathWorld</a></li>
 <li><a href="https://www.youtube.com/playlist?list=PLwV-9DG53NDxU337smpTwm6sef4x-SCLv">Visual Group Theory</a></li>
 </ul>
-<p>[^klein]: 这个群可以表示为置换群 <span class="arithmatex">\(\{(1),(12)(34),(13)(24),(14)(23)\}\)</span>，也可以写作 <span class="arithmatex">\(C_2\times C_2\)</span>。</p>
-<p>[^quotient]: 对于一般的子群 <span class="arithmatex">\(H\le G\)</span>，也可以在全体左（右）陪集上尝试定义类似的运算。但是，这样的运算是良定义的，当且仅当 <span class="arithmatex">\(H\)</span> 是 <span class="arithmatex">\(G\)</span> 的正规子群。</p>
-<p>[^group-action]: 比如 <a href="https://en.wikipedia.org/wiki/Group_action">Group action - Wikipedia</a>。</p>
-<p>[^cayley]: Cayley 定理本身没有反映太多群本身结构的信息，因为 <span class="arithmatex">\(S_G\)</span> 这个群的规模通常很庞大，很难讲它的某个大小恰为 <span class="arithmatex">\(|G|\)</span> 的子群拥有哪些确定的性质。但是，早期群论的发展主要集中在置换群上。所以，Cayley 定理其实是在说，所有可能的群结构都是这些已经充分研究过的对象。尽管在实际研究时，需要更为精细的工具。</p>
-<p>[^conjugate]: 更一般地，置换群中共轭的元素必然有着相同的 <a href="../../permutation/#置换的型">型</a>。</p>
-<p>[^proof-abelian]: 参见 Milne, J.S. (2021) Group Theory 第 25 页。</p>
-<p>[^module-pid]: 参见 <a href="https://en.wikipedia.org/wiki/Structure_theorem_for_finitely_generated_modules_over_a_principal_ideal_domain">Structure theorem for finitely generated modules over a principal ideal domain - Wikipedia</a>。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:klein">
+<p>这个群可以表示为置换群 <span class="arithmatex">\(\{(1),(12)(34),(13)(24),(14)(23)\}\)</span>，也可以写作 <span class="arithmatex">\(C_2\times C_2\)</span>。&#160;<a class="footnote-backref" href="#fnref:klein" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:quotient">
+<p>对于一般的子群 <span class="arithmatex">\(H\le G\)</span>，也可以在全体左（右）陪集上尝试定义类似的运算。但是，这样的运算是良定义的，当且仅当 <span class="arithmatex">\(H\)</span> 是 <span class="arithmatex">\(G\)</span> 的正规子群。&#160;<a class="footnote-backref" href="#fnref:quotient" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:group-action">
+<p>比如 <a href="https://en.wikipedia.org/wiki/Group_action">Group action - Wikipedia</a>。&#160;<a class="footnote-backref" href="#fnref:group-action" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:cayley">
+<p>Cayley 定理本身没有反映太多群本身结构的信息，因为 <span class="arithmatex">\(S_G\)</span> 这个群的规模通常很庞大，很难讲它的某个大小恰为 <span class="arithmatex">\(|G|\)</span> 的子群拥有哪些确定的性质。但是，早期群论的发展主要集中在置换群上。所以，Cayley 定理其实是在说，所有可能的群结构都是这些已经充分研究过的对象。尽管在实际研究时，需要更为精细的工具。&#160;<a class="footnote-backref" href="#fnref:cayley" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:conjugate">
+<p>更一般地，置换群中共轭的元素必然有着相同的 <a href="../../permutation/#置换的型">型</a>。&#160;<a class="footnote-backref" href="#fnref:conjugate" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:proof-abelian">
+<p>参见 Milne, J.S. (2021) Group Theory 第 25 页。&#160;<a class="footnote-backref" href="#fnref:proof-abelian" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:module-pid">
+<p>参见 <a href="https://en.wikipedia.org/wiki/Structure_theorem_for_finitely_generated_modules_over_a_principal_ideal_domain">Structure theorem for finitely generated modules over a principal ideal domain - Wikipedia</a>。&#160;<a class="footnote-backref" href="#fnref:module-pid" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -2126,7 +2145,7 @@ G\cong C_\infty^r\times C_{n_1}\times\cdots\times C_{n_s}.
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

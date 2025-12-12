@@ -1417,7 +1417,7 @@ R = \{ar\bmod m: r\in R\}.
 </details>
 <p>对于素数 <span class="arithmatex">\(p\)</span>，有 <span class="arithmatex">\(\varphi(p)=p-1\)</span>，因此，费马小定理是欧拉定理的一个特例。另外，欧拉定理中的指数 <span class="arithmatex">\(\varphi(m)\)</span> 在一般情形下并非使得该式成立的最小指数。它可以改进到 <span class="arithmatex">\(\lambda(m)\)</span>，其中，<span class="arithmatex">\(\lambda(\cdot)\)</span> 是 <a href="../primitive-root/#carmichael-函数">Carmichael 函数</a>。关于相关结论的代数背景，可以参考 <a href="../../algebra/ring-theory/#应用整数同余类的乘法群">整数同余类的乘法群</a> 一节。</p>
 <h2 id="扩展欧拉定理">扩展欧拉定理<a class="headerlink" href="#扩展欧拉定理" title="Permanent link"></a></h2>
-<p>扩展欧拉定理<a href="这一名字主要出现在算法竞赛圈中，而并非该结论的通用名称。">^ex-euler</a>进一步将结论推广到了底数与指数不互素的情形。由此，它彻底解决了任意模数下任意底数的幂次计算问题，将它们转化为指数小于 <span class="arithmatex">\(2\varphi(m)\)</span> 的情形，从而可以通过 <a href="../../binary-exponentiation/">快速幂</a> 在 <span class="arithmatex">\(O(\log\varphi(m))\)</span> 时间内计算。</p>
+<p>扩展欧拉定理<sup id="fnref:ex-euler"><a class="footnote-ref" href="#fn:ex-euler">1</a></sup>进一步将结论推广到了底数与指数不互素的情形。由此，它彻底解决了任意模数下任意底数的幂次计算问题，将它们转化为指数小于 <span class="arithmatex">\(2\varphi(m)\)</span> 的情形，从而可以通过 <a href="../../binary-exponentiation/">快速幂</a> 在 <span class="arithmatex">\(O(\log\varphi(m))\)</span> 时间内计算。</p>
 <details class="note" open="open">
 <summary>扩展欧拉定理</summary>
 <p>对于任意正整数 <span class="arithmatex">\(m\)</span>、整数 <span class="arithmatex">\(a\)</span> 和非负整数 <span class="arithmatex">\(k\)</span>，有</p>
@@ -1513,6 +1513,14 @@ A\uparrow(A\uparrow\uparrow(B-1)), &amp; B &gt; 0.
 <li><a href="https://en.wikipedia.org/wiki/Euler%27s_theorem">Euler's theorem - Wikipedia</a></li>
 <li>Hardy, Godfrey Harold, and Edward Maitland Wright. An introduction to the theory of numbers. Oxford university press, 1979.</li>
 </ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:ex-euler">
+<p>这一名字主要出现在算法竞赛圈中，而并非该结论的通用名称。&#160;<a class="footnote-backref" href="#fnref:ex-euler" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1572,7 +1580,7 @@ A\uparrow(A\uparrow\uparrow(B-1)), &amp; B &gt; 0.
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

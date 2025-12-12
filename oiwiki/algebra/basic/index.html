@@ -1165,7 +1165,7 @@
 
   <h1>Basic</h1>
 
-<p>本章节将简要介绍抽象代数的相关知识。现阶段算法竞赛的主要内容并不直接考察抽象代数的知识，但是在算法的描述或是问题的题解中常常会牵涉一些抽象函数的基本概念，这使得掌握了基础抽象代数概念的读者能够更快速理解一些算法。因此，这部分内容并不是任何选手的必修知识，而仅供那些感兴趣或者可能从中受益的读者参考使用。同时，本章节将避免过全过深的介绍抽象代数的知识[^oi-wiki-not-wikipedia]，而会集中在基础概念以及与 OI 其他部分知识联系最为紧密的部分。想系统学习抽象代数知识的读者，应当参考专业的抽象代数教科书学习。</p>
+<p>本章节将简要介绍抽象代数的相关知识。现阶段算法竞赛的主要内容并不直接考察抽象代数的知识，但是在算法的描述或是问题的题解中常常会牵涉一些抽象函数的基本概念，这使得掌握了基础抽象代数概念的读者能够更快速理解一些算法。因此，这部分内容并不是任何选手的必修知识，而仅供那些感兴趣或者可能从中受益的读者参考使用。同时，本章节将避免过全过深的介绍抽象代数的知识<sup id="fnref:oi-wiki-not-wikipedia"><a class="footnote-ref" href="#fn:oi-wiki-not-wikipedia">1</a></sup>，而会集中在基础概念以及与 OI 其他部分知识联系最为紧密的部分。想系统学习抽象代数知识的读者，应当参考专业的抽象代数教科书学习。</p>
 <p>为了更好帮助读者理解阅读本部分内容可能的收获，列举一些算法竞赛中可能牵涉到抽象代数知识的例子：</p>
 <ul>
 <li>数论和多项式的很多定理是抽象代数中结论的特例；</li>
@@ -1259,7 +1259,7 @@
 <p>为表述方便，这两个二元运算 <span class="arithmatex">\(+\)</span> 和 <span class="arithmatex">\(\cdot\)</span> 常称作该环的加法和乘法，相应地，加法单位元称作 <strong>零元</strong>（zero），乘法单位元（如果存在）称作 <strong>幺元</strong>（identity）。应避免和具体的数集中的加法、乘法，以及自然数零和一产生混淆。</p>
 <details class="info">
 <summary>关于定义中是否要求乘法单位元</summary>
-<p>在有的定义中，环必须存在乘法单位元；相对地，不存在乘法单位元的则被称为 <strong>伪环</strong>（rng 或 pseudo-ring）。遇到的时候需根据上下文加以判断。维基百科采用的就是这种定义[^ring-wiki]。</p>
+<p>在有的定义中，环必须存在乘法单位元；相对地，不存在乘法单位元的则被称为 <strong>伪环</strong>（rng 或 pseudo-ring）。遇到的时候需根据上下文加以判断。维基百科采用的就是这种定义<sup id="fnref:ring-wiki"><a class="footnote-ref" href="#fn:ring-wiki">2</a></sup>。</p>
 </details>
 <p>环的加法结构相当简单，但是乘法结构十分原始。因而如果类比群，在乘法上做更多要求，可以得到如下相关定义。</p>
 <details class="abstract" open="open">
@@ -1274,7 +1274,7 @@
 <summary>交换环</summary>
 <p>对于环 <span class="arithmatex">\((R,+,\cdot)\)</span>，如果它的乘法满足交换律，则称 <span class="arithmatex">\((R,+,\cdot)\)</span> 是一个 <strong>交换环</strong>（commutative ring）。</p>
 </details>
-<p>这里除环的定义中有趣的一点是，它将 <span class="arithmatex">\(0\)</span> 视为乘法结构中的特殊元素。这是因为 <span class="arithmatex">\(0 = 0\cdot a = a\cdot 0\)</span>[^zero-multiplication]。也就是说，环中加法单位元乘以任何元素都得到其自身。这样，它自然不会存在乘法逆元，除非它本身就是乘法单位元。这样的环只有零环（见下面的例子）。</p>
+<p>这里除环的定义中有趣的一点是，它将 <span class="arithmatex">\(0\)</span> 视为乘法结构中的特殊元素。这是因为 <span class="arithmatex">\(0 = 0\cdot a = a\cdot 0\)</span><sup id="fnref:zero-multiplication"><a class="footnote-ref" href="#fn:zero-multiplication">3</a></sup>。也就是说，环中加法单位元乘以任何元素都得到其自身。这样，它自然不会存在乘法逆元，除非它本身就是乘法单位元。这样的环只有零环（见下面的例子）。</p>
 <p>这里的启示是，理解一般的环的乘法结构时，要去除加法单位元的影响，考察 <span class="arithmatex">\(R\setminus\{0\}\)</span>。基于这一想法，有如下定义。</p>
 <details class="abstract" open="open">
 <summary>零因子</summary>
@@ -1381,7 +1381,7 @@ f_{i,0}&amp;=\max\{f_{i-1,1},f_{i-1,0}\}.
 (f_{i,1},f_{i,0})=g(f_{i-1,1},f_{i-1,0};w_i).
 \]</div>
 <p>这是一连串 <span class="arithmatex">\(\mathbf R^2\)</span> 到 <span class="arithmatex">\(\mathbf R^2\)</span> 的映射，它将 <span class="arithmatex">\((f_{i-1,1},f_{i-1,0})\)</span> 映射到 <span class="arithmatex">\((f_{i,1},f_{i,0})\)</span>，用群的语言描述，这些变换在映射的复合之下构成幺半群。这正是线段树可以维护的。</p>
-<p>但是，这样的含参变换 <span class="arithmatex">\(g(\cdot;w_i)\)</span> 如果没有特殊的结构，一般的 <span class="arithmatex">\(\mathbf R^2\)</span> 到 <span class="arithmatex">\(\mathbf R^2\)</span> 的映射是不可能用有限维的数据描述的。这里就需要另一项观察，即如果在 <span class="arithmatex">\(\mathbf R\cup\{-\infty\}\)</span> 上，定义 <span class="arithmatex">\(\max\)</span> 作为加法、<span class="arithmatex">\(+\)</span> 作为乘法，那么 <span class="arithmatex">\(\mathbf R\cup\{-\infty\}\)</span> 构成一种类似环的结构，这里，<span class="arithmatex">\(-\infty\)</span> 是加法单位元，<span class="arithmatex">\(0\)</span> 是乘法单位元。但是它不是环，因为其中的元素并非都有加法逆元。这样的结构叫做半环[^semiring]，这里 <span class="arithmatex">\((\mathbf R\cup\{-\infty\},\max,+)\)</span> 形成的半环叫做 <strong>热带半环</strong>（tropical semiring）。</p>
+<p>但是，这样的含参变换 <span class="arithmatex">\(g(\cdot;w_i)\)</span> 如果没有特殊的结构，一般的 <span class="arithmatex">\(\mathbf R^2\)</span> 到 <span class="arithmatex">\(\mathbf R^2\)</span> 的映射是不可能用有限维的数据描述的。这里就需要另一项观察，即如果在 <span class="arithmatex">\(\mathbf R\cup\{-\infty\}\)</span> 上，定义 <span class="arithmatex">\(\max\)</span> 作为加法、<span class="arithmatex">\(+\)</span> 作为乘法，那么 <span class="arithmatex">\(\mathbf R\cup\{-\infty\}\)</span> 构成一种类似环的结构，这里，<span class="arithmatex">\(-\infty\)</span> 是加法单位元，<span class="arithmatex">\(0\)</span> 是乘法单位元。但是它不是环，因为其中的元素并非都有加法逆元。这样的结构叫做半环<sup id="fnref:semiring"><a class="footnote-ref" href="#fn:semiring">4</a></sup>，这里 <span class="arithmatex">\((\mathbf R\cup\{-\infty\},\max,+)\)</span> 形成的半环叫做 <strong>热带半环</strong>（tropical semiring）。</p>
 <p>基于热带半环 <span class="arithmatex">\((R,\oplus,\otimes)\)</span>，可以定义它上面的矩阵乘法。即对于 <span class="arithmatex">\(m\times n\)</span> 维矩阵 <span class="arithmatex">\(A=(a_{ij})\)</span> 和 <span class="arithmatex">\(n\times p\)</span> 维矩阵 <span class="arithmatex">\(B=(b_{jk})\)</span>，可以定义其乘积 <span class="arithmatex">\(AB\)</span> 为 <span class="arithmatex">\((c_{ik})\)</span>，它的每项元素等于</p>
 <div class="arithmatex">\[
 c_{ik} = \bigoplus_{j=1}^n(b_{ij}\otimes c_{jk}) = \max_{1\le j\le n}\;(b_{ij}+c_{jk}).
@@ -1421,10 +1421,23 @@ g_{i,0}&amp;=\sum_{j\in S(i),\ j\neq h}\max\{f_{j,1},f_{j,0}\}
 <li>Dummitt, D.S. and Foote, R.M. (2004) Abstract Algebra. 3<sup>rd</sup> Edition, John Wiley &amp; Sons, Inc.</li>
 <li><a href="https://en.wikipedia.org/wiki/Tropical_semiring">Tropical semiring - Wikipedia</a></li>
 </ul>
-<p>[^oi-wiki-not-wikipedia]: 因为 <a href="https://oi-wiki.org/intro/what-oi-wiki-is-not/#oi-wiki-%E4%B8%8D%E6%98%AF%E7%99%BE%E7%A7%91%E5%85%A8%E4%B9%A6">OI Wiki 不是百科全书</a>。</p>
-<p>[^ring-wiki]: <a href="https://en.wikipedia.org/wiki/Ring_%28mathematics%29">Ring（mathematics）- Wikipedia</a></p>
-<p>[^zero-multiplication]: 该式的推导即 <span class="arithmatex">\(0\cdot a+0 = 0\cdot a = (0+0)\cdot a = 0\cdot a + 0\cdot a\)</span>，这里，第一个等号和第二个等号是加法单位元的定义，第三个等号是分配律，最后的蕴涵关系是加法的消去律。另一侧的乘法类似。</p>
-<p>[^semiring]: 半环（semiring）是在幺环的定义中放松了加法运算一定存在逆元的要求，即加法结构是交换幺半群、乘法结构是幺半群的代数结构。更多信息参见 <a href="https://en.wikipedia.org/wiki/Semiring">Wikipedia</a>。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:oi-wiki-not-wikipedia">
+<p>因为 <a href="https://oi-wiki.org/intro/what-oi-wiki-is-not/#oi-wiki-%E4%B8%8D%E6%98%AF%E7%99%BE%E7%A7%91%E5%85%A8%E4%B9%A6">OI Wiki 不是百科全书</a>。&#160;<a class="footnote-backref" href="#fnref:oi-wiki-not-wikipedia" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ring-wiki">
+<p><a href="https://en.wikipedia.org/wiki/Ring_%28mathematics%29">Ring（mathematics）- Wikipedia</a>&#160;<a class="footnote-backref" href="#fnref:ring-wiki" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:zero-multiplication">
+<p>该式的推导即 <span class="arithmatex">\(0\cdot a+0 = 0\cdot a = (0+0)\cdot a = 0\cdot a + 0\cdot a\)</span>，这里，第一个等号和第二个等号是加法单位元的定义，第三个等号是分配律，最后的蕴涵关系是加法的消去律。另一侧的乘法类似。&#160;<a class="footnote-backref" href="#fnref:zero-multiplication" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:semiring">
+<p>半环（semiring）是在幺环的定义中放松了加法运算一定存在逆元的要求，即加法结构是交换幺半群、乘法结构是幺半群的代数结构。更多信息参见 <a href="https://en.wikipedia.org/wiki/Semiring">Wikipedia</a>。&#160;<a class="footnote-backref" href="#fnref:semiring" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1484,7 +1497,7 @@ g_{i,0}&amp;=\sum_{j\in S(i),\ j\neq h}\max\{f_{j,1},f_{j,0}\}
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

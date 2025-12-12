@@ -1573,7 +1573,7 @@ R=
 <p>对于三维空间，向量旋转需要使用两个角度参量，即天顶角旋转角度与方向角旋转角度，可以利用 <a href="../../coordinate/#空间球坐标系">空间球坐标系</a> 进行旋转操作。</p>
 <h4 id="向量绕直线旋转">向量绕直线旋转<a class="headerlink" href="#向量绕直线旋转" title="Permanent link"></a></h4>
 <p>对于三维向量，更常见的的是绕某直线旋转。同样为了方便，此直线是过原点的。如果直线不过原点，我们仍可以平移坐标系进行转化。</p>
-<p>取直线的方向向量 <span class="arithmatex">\(\boldsymbol u=(u_x,u_y,u_z)\)</span>，设三维向量绕其逆时针旋转 <span class="arithmatex">\(\theta\)</span> 角。则对应的变换矩阵 <span class="arithmatex">\(R\)</span> 为[^note1]</p>
+<p>取直线的方向向量 <span class="arithmatex">\(\boldsymbol u=(u_x,u_y,u_z)\)</span>，设三维向量绕其逆时针旋转 <span class="arithmatex">\(\theta\)</span> 角。则对应的变换矩阵 <span class="arithmatex">\(R\)</span> 为<sup id="fnref:note1"><a class="footnote-ref" href="#fn:note1">1</a></sup></p>
 <div class="arithmatex">\[
 R=
 \begin{bmatrix}
@@ -1606,7 +1606,14 @@ R'=
 \]</div>
 <h2 id="向量的更严格定义">向量的更严格定义<a class="headerlink" href="#向量的更严格定义" title="Permanent link"></a></h2>
 <p>上文中，向量被定义为了空间中的有向线段。但是严格来说，向量不仅是有向线段。要作出向量的更严格定义，需要先定义 <a href="../vector-space/">线性空间</a>，具体内容参见 <a href="../vector-space/">线性空间</a> 页面的介绍。</p>
-<p>[^note1]: 参见 <a href="https://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">Rotation matrix from axis and angle - Wikipedia</a></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:note1">
+<p>参见 <a href="https://en.wikipedia.org/wiki/Rotation_matrix#Rotation_matrix_from_axis_and_angle">Rotation matrix from axis and angle - Wikipedia</a>&#160;<a class="footnote-backref" href="#fnref:note1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1663,7 +1670,7 @@ R'=
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

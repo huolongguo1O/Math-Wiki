@@ -1612,7 +1612,7 @@ F(a,b,c,n,U,R) = R^n.
 </li>
 </ul>
 <p>利用这些讨论，就可以将问题递归地解决。</p>
-<p>假设幺半群内元素单次相乘的时间复杂度是 <span class="arithmatex">\(O(1)\)</span> 的。那么，如果计算过程中这些元素的幂次计算都使用 <a href="../../binary-exponentiation/">快速幂</a> 进行，最终的算法复杂度就是 <span class="arithmatex">\(O(\log\max\{a,c\}+\log(b/c))\)</span> 的[^complexity]。</p>
+<p>假设幺半群内元素单次相乘的时间复杂度是 <span class="arithmatex">\(O(1)\)</span> 的。那么，如果计算过程中这些元素的幂次计算都使用 <a href="../../binary-exponentiation/">快速幂</a> 进行，最终的算法复杂度就是 <span class="arithmatex">\(O(\log\max\{a,c\}+\log(b/c))\)</span> 的<sup id="fnref:complexity"><a class="footnote-ref" href="#fn:complexity">1</a></sup>。</p>
 <details class="note">
 <summary>对复杂度的解释</summary>
 <p>对比（类）欧几里得算法，万能欧几里得算法只是多了求快速幂的步骤。其余的计算过程的复杂度和类欧几里得算法相仿，已经说明是 <span class="arithmatex">\(O(\log\min\{a,c,n\})\)</span> 的。现在，需要计算这些快速幂的总复杂度。</p>
@@ -1799,7 +1799,14 @@ F(k,n,U,R) = F(k^{-1},m,R,U)R^{n-\lfloor k^{-1}m\rfloor}.
 <li><a href="https://codeforces.com/problemset/problem/868/G">Codeforces 868 G. El Toll Caves</a></li>
 </ul>
 <h2 id="参考资料与注释">参考资料与注释<a class="headerlink" href="#参考资料与注释" title="Permanent link"></a></h2>
-<p>[^complexity]: 通常考虑的问题中，<span class="arithmatex">\(b\)</span> 都与 <span class="arithmatex">\(a\)</span> 同阶，<span class="arithmatex">\(O(\log(b/c))\)</span> 这一项可以忽略。而且，如果在调用万能欧几里得算法前，首先进行了一轮类欧几里得算法的取模，消除 <span class="arithmatex">\(b\)</span> 的影响，这一项的快速幂的复杂度是可以规避的。这其实是因为通常的问题中，<span class="arithmatex">\(U\)</span> 的初始形式较为特殊，它的幂次有着更简单的形式，不需要通过快速幂计算。比如正文的例子中，<span class="arithmatex">\(U^{\lfloor b/a\rfloor}\)</span> 的结果，就是将 <span class="arithmatex">\(U\)</span> 中不在对角线上的那个 <span class="arithmatex">\(1\)</span> 替换成 <span class="arithmatex">\(\lfloor b/a\rfloor\)</span>，而无需用快速幂计算。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:complexity">
+<p>通常考虑的问题中，<span class="arithmatex">\(b\)</span> 都与 <span class="arithmatex">\(a\)</span> 同阶，<span class="arithmatex">\(O(\log(b/c))\)</span> 这一项可以忽略。而且，如果在调用万能欧几里得算法前，首先进行了一轮类欧几里得算法的取模，消除 <span class="arithmatex">\(b\)</span> 的影响，这一项的快速幂的复杂度是可以规避的。这其实是因为通常的问题中，<span class="arithmatex">\(U\)</span> 的初始形式较为特殊，它的幂次有着更简单的形式，不需要通过快速幂计算。比如正文的例子中，<span class="arithmatex">\(U^{\lfloor b/a\rfloor}\)</span> 的结果，就是将 <span class="arithmatex">\(U\)</span> 中不在对角线上的那个 <span class="arithmatex">\(1\)</span> 替换成 <span class="arithmatex">\(\lfloor b/a\rfloor\)</span>，而无需用快速幂计算。&#160;<a class="footnote-backref" href="#fnref:complexity" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1859,7 +1866,7 @@ F(k,n,U,R) = F(k^{-1},m,R,U)R^{n-\lfloor k^{-1}m\rfloor}.
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

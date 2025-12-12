@@ -1427,7 +1427,7 @@
 <p>这里要求理想 <span class="arithmatex">\(I\)</span> 对环 <span class="arithmatex">\(R\)</span> 的左乘和右乘都封闭。这个条件是自然的。因为，理想中的元素在环同态中会映射到零元，而任何数左乘或右乘以零都应该等于零，这就是所要求的封闭性。除此之外，因为环的加法结构是 Abel 群，任何子群都是正规子群；而环的乘法结构又十分原始，不会对子结构施加额外的限制。这就说明，对左乘和右乘封闭这个条件也是充分的。</p>
 <details class="example" open="open">
 <summary>例子：整数环 <span class="arithmatex">\(\mathbf Z\)</span>（续）</summary>
-<p>作为例子，前面提到的子环 <span class="arithmatex">\(n\mathbf Z\)</span> 其实是 <span class="arithmatex">\(\mathbf Z\)</span> 的理想。它是所有 <span class="arithmatex">\(n\)</span> 的倍数构成的集合。一个 <span class="arithmatex">\(n\)</span> 的倍数，与任何整数相乘，都会得到 <span class="arithmatex">\(n\)</span> 的倍数。事实上，<span class="arithmatex">\(\mathbf Z\)</span> 的全部理想都是这样的形式，这样的环称为 <a href="#主理想整环">主理想整环</a>。对于一般的环，有些理想并不是某个元素的倍数的集合；这样的一般的环的存在，也正是研究理想（而不是简单地研究倍数）的最初动机<a href="https://en.wikipedia.org/wiki/Ideal_(ring_theory)#History">^ideal-history</a>。</p>
+<p>作为例子，前面提到的子环 <span class="arithmatex">\(n\mathbf Z\)</span> 其实是 <span class="arithmatex">\(\mathbf Z\)</span> 的理想。它是所有 <span class="arithmatex">\(n\)</span> 的倍数构成的集合。一个 <span class="arithmatex">\(n\)</span> 的倍数，与任何整数相乘，都会得到 <span class="arithmatex">\(n\)</span> 的倍数。事实上，<span class="arithmatex">\(\mathbf Z\)</span> 的全部理想都是这样的形式，这样的环称为 <a href="#主理想整环">主理想整环</a>。对于一般的环，有些理想并不是某个元素的倍数的集合；这样的一般的环的存在，也正是研究理想（而不是简单地研究倍数）的最初动机<sup id="fnref:ideal-history"><a class="footnote-ref" href="#fn:ideal-history">1</a></sup>。</p>
 </details>
 <h3 id="商环">商环<a class="headerlink" href="#商环" title="Permanent link"></a></h3>
 <p>和群一样，基于环的理想，可以在全体（加法群意义上的）陪集的集合上定义 <strong>商环</strong>（quotient ring）。考虑集合</p>
@@ -1498,7 +1498,7 @@ IJ\subseteq I\cap J\subseteq I,J\subseteq I+J.
 <p>利用这些定义，可以将整数的中国剩余定理推广到一般的环上。但在此之前，还需要进一步将诸如素数和互素等概念推广到一般的环上。</p>
 <h3 id="极大理想">极大理想<a class="headerlink" href="#极大理想" title="Permanent link"></a></h3>
 <p>通过环的理想的结构，可以理解环的性质。</p>
-<p>非零环 <span class="arithmatex">\(R\)</span> 总有两个平凡的理想，即 <span class="arithmatex">\(\{0\}\)</span> 和 <span class="arithmatex">\(R\)</span>。如果环 <span class="arithmatex">\(R\)</span> 还是交换的，那么只有这两个理想的环能且只能是域[^simple-ring]。</p>
+<p>非零环 <span class="arithmatex">\(R\)</span> 总有两个平凡的理想，即 <span class="arithmatex">\(\{0\}\)</span> 和 <span class="arithmatex">\(R\)</span>。如果环 <span class="arithmatex">\(R\)</span> 还是交换的，那么只有这两个理想的环能且只能是域<sup id="fnref:simple-ring"><a class="footnote-ref" href="#fn:simple-ring">2</a></sup>。</p>
 <details class="note" open="open">
 <summary>定理</summary>
 <p>设 <span class="arithmatex">\(R\)</span> 是交换的非零幺环，那么 <span class="arithmatex">\(R\)</span> 是域，当且仅当 <span class="arithmatex">\(R\)</span> 只有平凡理想 <span class="arithmatex">\(\{0\}\)</span> 和 <span class="arithmatex">\(R\)</span>。</p>
@@ -1703,10 +1703,10 @@ AR&amp;=\{a_1r_1+\cdots+a_nr_n:r_i\in R,a_i\in A,n\in\mathbf Z\}.
 <summary>定理</summary>
 <p>设唯一分解整环 <span class="arithmatex">\(R\)</span> 有非零元素 <span class="arithmatex">\(a,b\in R\)</span>，且它们可以分解成 <span class="arithmatex">\(a=up_1^{r_1}\cdots p_n^{r_n}\)</span> 和 <span class="arithmatex">\(b=vp_1^{s_1}\cdots p_n^{s_n}\)</span> 的形式，其中，<span class="arithmatex">\(u,v\)</span> 是可逆元，<span class="arithmatex">\(p_1,\cdots,p_n\)</span> 是各不相同的不可约元，<span class="arithmatex">\(r_i,s_i\)</span> 都是自然数，那么，它们的一个最大公约数是 <span class="arithmatex">\(d=p_1^{\min\{r_1,s_1\}}\cdots p_n^{\min\{r_n,s_n\}}\)</span>。</p>
 </details>
-<p>这其实说明，最大公因子存在这个性质比唯一分解定理成立还要弱[^gcd-domain]。</p>
+<p>这其实说明，最大公因子存在这个性质比唯一分解定理成立还要弱<sup id="fnref:gcd-domain"><a class="footnote-ref" href="#fn:gcd-domain">3</a></sup>。</p>
 <h3 id="例子二次整数环">例子：二次整数环<a class="headerlink" href="#例子二次整数环" title="Permanent link"></a></h3>
 <p>相关阅读：<a href="../../number-theory/quadratic/">二次域</a></p>
-<p>抽象代数的理解不能离开例子。正是因为费马大定理的研究过程需要研究一类代数整数的性质，才逐渐发展出了今天的环论[^ring-theory-history]。这里讨论最简单的代数整数，即二次整数。这部分的很多结论的证明需要用到复杂的代数数论知识，故而略去。</p>
+<p>抽象代数的理解不能离开例子。正是因为费马大定理的研究过程需要研究一类代数整数的性质，才逐渐发展出了今天的环论<sup id="fnref:ring-theory-history"><a class="footnote-ref" href="#fn:ring-theory-history">4</a></sup>。这里讨论最简单的代数整数，即二次整数。这部分的很多结论的证明需要用到复杂的代数数论知识，故而略去。</p>
 <p><strong>二次整数</strong>（quadratic integer）指的是二次项系数为一的整系数二次方程 <span class="arithmatex">\(\alpha^2+b\alpha+c=0\)</span> 的复根。所有二次整数能且仅能有形式</p>
 <div class="arithmatex">\[
 \alpha=a+b\omega,~(a,b\in\mathbf Z)
@@ -2064,9 +2064,23 @@ C_{n_1}\times\cdots\times C_{n_r}.
 <li><a href="https://en.wikipedia.org/wiki/Formal_power_series">Formal power series - Wikipedia</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n">Multiplicative group of integers modulo <span class="arithmatex">\(n\)</span>- Wikipedia</a></li>
 </ul>
-<p>[^simple-ring]: 和群的情形一致，这样的环叫做 <strong>单环</strong>（simple ring）。交换单环只能是域，非交换单环的情形则复杂得多。</p>
-<p>[^gcd-domain]: 最大公因子存在的整环叫做 <a href="https://en.wikipedia.org/wiki/GCD_domain">最大公因子整环</a>。</p>
-<p>[^ring-theory-history]: 环论的简要历史可以参看 <a href="https://mathshistory.st-andrews.ac.uk/HistTopics/Ring_theory/">这里</a>。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:ideal-history">
+<p><a href="https://en.wikipedia.org/wiki/Ideal_(ring_theory)#History">https://en.wikipedia.org/wiki/Ideal_(ring_theory)#History</a>&#160;<a class="footnote-backref" href="#fnref:ideal-history" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:simple-ring">
+<p>和群的情形一致，这样的环叫做 <strong>单环</strong>（simple ring）。交换单环只能是域，非交换单环的情形则复杂得多。&#160;<a class="footnote-backref" href="#fnref:simple-ring" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:gcd-domain">
+<p>最大公因子存在的整环叫做 <a href="https://en.wikipedia.org/wiki/GCD_domain">最大公因子整环</a>。&#160;<a class="footnote-backref" href="#fnref:gcd-domain" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ring-theory-history">
+<p>环论的简要历史可以参看 <a href="https://mathshistory.st-andrews.ac.uk/HistTopics/Ring_theory/">这里</a>。&#160;<a class="footnote-backref" href="#fnref:ring-theory-history" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -2123,7 +2137,7 @@ C_{n_1}\times\cdots\times C_{n_r}.
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

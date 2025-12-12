@@ -1419,8 +1419,8 @@ BRBR, RBRB, BRBR, RBRB.
 <p>在 Burnside 引理的叙述中，并没有用到集合 <span class="arithmatex">\(X\)</span> 是某结构上的全部染色方案这一性质。其实，Burnside 引理的应用范围并不局限于染色计数问题。对于染色计数问题，Pólya 计数原理则提供了更为准确的计算方法。它可以看作是一般性的 Burnside 引理在染色计数问题上的应用。</p>
 <p>相较于 Burnside 引理，Pólya 计数原理的改进就是提供了不动点集合大小 <span class="arithmatex">\(|X^g|\)</span> 在染色计数问题中的具体计算方法。</p>
 <p>这一点从上面的立方体染色的例子可以直观地看出来。对于正方体的各种对称操作，它的不动点集合的大小都是 <span class="arithmatex">\(m^{c(g)}\)</span> 的形式，这里 <span class="arithmatex">\(m\)</span> 是颜色的数目，<span class="arithmatex">\(c(g)\)</span> 是在操作 <span class="arithmatex">\(g\)</span> 下可以独立染色的区域数目。这个观察在一般的情形下也是成立的，不过需要进一步明晰如何对给定的 <span class="arithmatex">\(g\)</span> 计算 <span class="arithmatex">\(c(g)\)</span> 的取值。</p>
-<p>给某个结构选择一种染色方案，用数学语言表示，就是选择一个从这个结构的可以染色的对象（比如项链中的珠子、立方体的面等）的集合 <span class="arithmatex">\(X\)</span> 到颜色集合 <span class="arithmatex">\(C\)</span> 的映射 <span class="arithmatex">\(f:X\rightarrow C\)</span>。因此，染色方案的集合就是 <span class="arithmatex">\(C^X\)</span>。该结构的空间对称群 <span class="arithmatex">\(G\)</span> 作用在结构上，自然也连带着作用在集合 <span class="arithmatex">\(X\)</span> 上。这种对称操作，总对应着集合 <span class="arithmatex">\(X\)</span> 上的双射，即 <strong>置换</strong>（permutation）。[^perm-group]</p>
-<p>现在分析不动点集合 <span class="arithmatex">\((C^X)^g\)</span> 的结构。给定 <span class="arithmatex">\(g\)</span>，看作 <span class="arithmatex">\(X\)</span> 上的置换，比照例子中的分析可以知道，如果 <span class="arithmatex">\(X\)</span> 中的位置 <span class="arithmatex">\(x\)</span> 在有限次重复操作 <span class="arithmatex">\(g\)</span> 之后可以移动到位置 <span class="arithmatex">\(y\)</span>，那么，作为不动点 <span class="arithmatex">\(f\in (C^X)^g\)</span>，必然需要满足 <span class="arithmatex">\(f(x)=f(y)\)</span>。用上一节轨道的语言来说，因为位置 <span class="arithmatex">\(x\)</span> 和位置 <span class="arithmatex">\(y\)</span> 处于操作 <span class="arithmatex">\(g\)</span> 作用[^g-act]的同一个轨道上，所以它们需要染相同的颜色。用置换的语言来说，在置换 <span class="arithmatex">\(g\)</span> 的 <a href="../../permutation/#轮换表示">轮换分解</a> 中，位置 <span class="arithmatex">\(x\)</span> 和位置 <span class="arithmatex">\(y\)</span> 处于同一轮换，故而需要染相同的颜色。轮换分解中不同的轮换的染色不必相同，可以独立染色，所以此时可以独立染色的区域数目就是 <span class="arithmatex">\(c(g)\)</span>，即 <span class="arithmatex">\(g\)</span> 的轮换分解中的轮换数目。</p>
+<p>给某个结构选择一种染色方案，用数学语言表示，就是选择一个从这个结构的可以染色的对象（比如项链中的珠子、立方体的面等）的集合 <span class="arithmatex">\(X\)</span> 到颜色集合 <span class="arithmatex">\(C\)</span> 的映射 <span class="arithmatex">\(f:X\rightarrow C\)</span>。因此，染色方案的集合就是 <span class="arithmatex">\(C^X\)</span>。该结构的空间对称群 <span class="arithmatex">\(G\)</span> 作用在结构上，自然也连带着作用在集合 <span class="arithmatex">\(X\)</span> 上。这种对称操作，总对应着集合 <span class="arithmatex">\(X\)</span> 上的双射，即 <strong>置换</strong>（permutation）。<sup id="fnref:perm-group"><a class="footnote-ref" href="#fn:perm-group">1</a></sup></p>
+<p>现在分析不动点集合 <span class="arithmatex">\((C^X)^g\)</span> 的结构。给定 <span class="arithmatex">\(g\)</span>，看作 <span class="arithmatex">\(X\)</span> 上的置换，比照例子中的分析可以知道，如果 <span class="arithmatex">\(X\)</span> 中的位置 <span class="arithmatex">\(x\)</span> 在有限次重复操作 <span class="arithmatex">\(g\)</span> 之后可以移动到位置 <span class="arithmatex">\(y\)</span>，那么，作为不动点 <span class="arithmatex">\(f\in (C^X)^g\)</span>，必然需要满足 <span class="arithmatex">\(f(x)=f(y)\)</span>。用上一节轨道的语言来说，因为位置 <span class="arithmatex">\(x\)</span> 和位置 <span class="arithmatex">\(y\)</span> 处于操作 <span class="arithmatex">\(g\)</span> 作用<sup id="fnref:g-act"><a class="footnote-ref" href="#fn:g-act">2</a></sup>的同一个轨道上，所以它们需要染相同的颜色。用置换的语言来说，在置换 <span class="arithmatex">\(g\)</span> 的 <a href="../../permutation/#轮换表示">轮换分解</a> 中，位置 <span class="arithmatex">\(x\)</span> 和位置 <span class="arithmatex">\(y\)</span> 处于同一轮换，故而需要染相同的颜色。轮换分解中不同的轮换的染色不必相同，可以独立染色，所以此时可以独立染色的区域数目就是 <span class="arithmatex">\(c(g)\)</span>，即 <span class="arithmatex">\(g\)</span> 的轮换分解中的轮换数目。</p>
 <p>由此，操作 <span class="arithmatex">\(g\)</span> 的不动点的数目就是 <span class="arithmatex">\(|C|^{c(g)}\)</span>。将这个结论代入 Burnside 引理，就能得到无权重版本的 <strong>Pólya 计数原理</strong>（Pólya enumeration theorem）。</p>
 <details class="note" open="open">
 <summary>Pólya 计数原理（无权重版本）</summary>
@@ -1727,8 +1727,17 @@ Z(S_4^{(2)})=\dfrac{1}{24}(t_1^6+9t_1^2t_2^2+8t_3^2+6t_2t_4).
 <li><a href="https://www.diva-portal.org/smash/get/diva2:324594/FULLTEXT01.pdf">Notes on Pólya's Enumeration Theorem</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Cycle_index">Cycle index - Wikipedia</a></li>
 </ul>
-<p>[^perm-group]: 因此，空间对称群 <span class="arithmatex">\(G\)</span> 可以表示是集合 <span class="arithmatex">\(X\)</span> 上的置换群，即对称群 <span class="arithmatex">\(S_X\)</span> 的子群。</p>
-<p>[^g-act]: 严格来说，是子群 <span class="arithmatex">\(\langle g\rangle\le G\)</span> 的作用。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:perm-group">
+<p>因此，空间对称群 <span class="arithmatex">\(G\)</span> 可以表示是集合 <span class="arithmatex">\(X\)</span> 上的置换群，即对称群 <span class="arithmatex">\(S_X\)</span> 的子群。&#160;<a class="footnote-backref" href="#fnref:perm-group" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:g-act">
+<p>严格来说，是子群 <span class="arithmatex">\(\langle g\rangle\le G\)</span> 的作用。&#160;<a class="footnote-backref" href="#fnref:g-act" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1788,7 +1797,7 @@ Z(S_4^{(2)})=\dfrac{1}{24}(t_1^6+9t_1^2t_2^2+8t_3^2+6t_2t_4).
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

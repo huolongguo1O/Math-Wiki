@@ -1238,7 +1238,7 @@ f(x)=a_n{(x-x_1)}^{k_1}{(x-x_2)}^{k_2}\ldots{(x-x_t)}^{k_t}{(x^2+p_1x+q_1)}^{l_1
 <p>如果只在实数范围内进行分解，只能保证，当次数大于 <span class="arithmatex">\(2\)</span> 的时候，一定存在实系数二次三项式因式。</p>
 <p>这是因为，如果该多项式有虚根，直接凑出一对共轭虚根即可。如果该多项式只有实根，任取两个实根对应的一次因式乘在一起，也能得到实系数二次三项式因式。</p>
 <p>找到二次三项式因式之后，再从二次式中解实根或复根就极为容易。于是便有逐次 <strong>找出一个二次因子</strong> 来求得方程的复根的计算方法，这种方法避免了复数运算。</p>
-<p>在 1940 年 8 月、1943 年 8 月和 1947 年 7 月，林士谔先后在 MIT 出版的《数学物理》杂志上接连正式发表了 3 篇关于解算高阶方程式复根方法的论文<a href="[林士谔。论劈因法解高阶特征方程根值的应用问题。数学进展，1963(03):207-217.](https://cnki.net/kcms/detail/detail.aspx?filename=SXJZ196303000&amp;dbcode=CJFD&amp;dbname=CJFD1979)">^note1</a>，每次均有改进。</p>
+<p>在 1940 年 8 月、1943 年 8 月和 1947 年 7 月，林士谔先后在 MIT 出版的《数学物理》杂志上接连正式发表了 3 篇关于解算高阶方程式复根方法的论文<sup id="fnref:note1"><a class="footnote-ref" href="#fn:note1">1</a></sup>，每次均有改进。</p>
 <p>这个方法今天还在现代计算机中进行快速运算，计算机程序包（如 MATLAB）中的多项式求根程序依据的原理也是这个算法。</p>
 <h3 id="过程">过程<a class="headerlink" href="#过程" title="Permanent link"></a></h3>
 <p>要想找到一个二次三项式因子，就要将多项式分解为：</p>
@@ -1359,6 +1359,14 @@ g(x)=-\frac{\partial g(x)}{\partial q}(x^2+px+q)-\frac{\partial r}{\partial q}x-
 <span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="参考资料与注释">参考资料与注释<a class="headerlink" href="#参考资料与注释" title="Permanent link"></a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:note1">
+<p><a href="https://cnki.net/kcms/detail/detail.aspx?filename=SXJZ196303000&amp;dbcode=CJFD&amp;dbname=CJFD1979">林士谔。论劈因法解高阶特征方程根值的应用问题。数学进展，1963(03):207-217.</a>&#160;<a class="footnote-backref" href="#fnref:note1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1415,7 +1423,7 @@ g(x)=-\frac{\partial g(x)}{\partial q}(x^2+px+q)-\frac{\partial r}{\partial q}x-
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

@@ -1358,7 +1358,7 @@ P(A) \le \prod_{i=1}^{k-1}\exp\left({-\frac{i}{n}}\right)=\exp \left({-\frac{k(k
 \exp\left({-\dfrac{k(k-1)}{2n}}\right) \le \frac{1}{2}\implies P(A) \le \frac{1}{2}
 \]</div>
 <p>将 <span class="arithmatex">\(n=365\)</span> 代入，解得 <span class="arithmatex">\(k\geq 23\)</span>。所以一个房间中至少 <span class="arithmatex">\(23\)</span> 人，使其中两个人生日相同的概率达到 <span class="arithmatex">\(50\%\)</span>, 但这个数学事实十分反直觉，故称之为一个悖论。</p>
-<p>当 <span class="arithmatex">\(k&gt;56\)</span>，<span class="arithmatex">\(n=365\)</span> 时，出现两个人同一天生日的概率将大于 <span class="arithmatex">\(99\%\)</span><a href="https://en.wikipedia.org/wiki/Birthday_problem#Reverse_problem">^ref1</a>。那么在一年有 <span class="arithmatex">\(n\)</span> 天的情况下，当房间中有 <span class="arithmatex">\(\frac{1}{2}(\sqrt{8n\ln 2+1}+1)\approx \sqrt{2n\ln 2}\)</span> 个人时，至少有两个人的生日相同的概率约为 <span class="arithmatex">\(50\%\)</span>。</p>
+<p>当 <span class="arithmatex">\(k&gt;56\)</span>，<span class="arithmatex">\(n=365\)</span> 时，出现两个人同一天生日的概率将大于 <span class="arithmatex">\(99\%\)</span><sup id="fnref:ref1"><a class="footnote-ref" href="#fn:ref1">1</a></sup>。那么在一年有 <span class="arithmatex">\(n\)</span> 天的情况下，当房间中有 <span class="arithmatex">\(\frac{1}{2}(\sqrt{8n\ln 2+1}+1)\approx \sqrt{2n\ln 2}\)</span> 个人时，至少有两个人的生日相同的概率约为 <span class="arithmatex">\(50\%\)</span>。</p>
 <p>类似地可以计算，随机均匀地选取一列生日，首次获得重复生日需要的人数的期望也是 <span class="arithmatex">\(O(\sqrt n)\)</span>。设这一人数为 <span class="arithmatex">\(X\)</span>，则</p>
 <div class="arithmatex">\[
 E(X) = \sum_{x=1}^{n+1}P(X\ge x+1) = \sum_{x=0}^n\frac{n!}{(n-x)!n^x} = \sqrt{\frac{\pi n}{2}}-\frac13+o(1).
@@ -1379,7 +1379,7 @@ E(X) = \sum_{x=1}^{n+1}P(X\ge x+1) = \sum_{x=0}^n\frac{n!}{(n-x)!n^x} = \sqrt{\f
 </details>
 <p>作为 <span class="arithmatex">\(\mathbb Z_p\)</span> 上的伪随机自映射反复迭代得到的序列，<span class="arithmatex">\(\{x_n\bmod p\}\)</span> 在 <span class="arithmatex">\(O(\sqrt p)\)</span> 的期望时间内就会出现重复。只要我们观察到这样的重复 <span class="arithmatex">\(x_i\equiv x_j\pmod p\)</span>，就可以根据 <span class="arithmatex">\(\gcd(|x_i-x_j|,N)\)</span> 求出一个 <span class="arithmatex">\(N\)</span> 的非平凡因子。注意到，由于 <span class="arithmatex">\(p\)</span> 未知，我们并没有办法直接判断重复的发生，一个简单的判断方法正是 <span class="arithmatex">\(\gcd(|x_i-x_j|,N)\)</span> 严格大于一。</p>
 <p>这一算法并不是总能成功的，因为 <span class="arithmatex">\(\gcd(|x_i-x_j|,N)\)</span> 可能等于 <span class="arithmatex">\(N\)</span>。也就是说，<span class="arithmatex">\(x_i\equiv x_j\pmod N\)</span>。此时，<span class="arithmatex">\(\{x_n\bmod p\}\)</span> 首次发生重复时，恰好 <span class="arithmatex">\(\{x_n\}\)</span> 也发生重复了。我们没有得到一个非平凡因子。而且，<span class="arithmatex">\(\{x_n\}\)</span> 开始循环后，再继续迭代也没有意义了，因为之后只会重复这一循环。该算法应输出分解失败，需要更换 <span class="arithmatex">\(f(x)\)</span> 中选取的 <span class="arithmatex">\(c\)</span> 重新分解。</p>
-<p>根据上文分析，理论上，任何满足 <span class="arithmatex">\(\forall x \equiv y \pmod p, f(x) \equiv f(y) \pmod p\)</span>，且能够保证一定伪随机性的函数 <span class="arithmatex">\(f(x)\)</span>（例如某些多项式函数）都可以用在此处。实践中，主要使用 <span class="arithmatex">\(f(x)=x^2+c\ (c\neq 0,-2)\)</span>。[^pseudo]</p>
+<p>根据上文分析，理论上，任何满足 <span class="arithmatex">\(\forall x \equiv y \pmod p, f(x) \equiv f(y) \pmod p\)</span>，且能够保证一定伪随机性的函数 <span class="arithmatex">\(f(x)\)</span>（例如某些多项式函数）都可以用在此处。实践中，主要使用 <span class="arithmatex">\(f(x)=x^2+c\ (c\neq 0,-2)\)</span>。<sup id="fnref:pseudo"><a class="footnote-ref" href="#fn:pseudo">2</a></sup></p>
 <h3 id="实现">实现<a class="headerlink" href="#实现" title="Permanent link"></a></h3>
 <p>我们需要实现的算法，能够在迭代过程中快速判断 <span class="arithmatex">\(\{x_n\bmod p\}\)</span> 是否已经出现重复。将 <span class="arithmatex">\(f\)</span> 看成以 <span class="arithmatex">\(\mathbb Z_p\)</span> 为顶点的有向图上的边，我们实际要实现的是一个判环算法。只是将判等改为了判断 <span class="arithmatex">\(\gcd(|x_i-x_j|,N)\)</span> 是否大于一。</p>
 <h4 id="floyd-判环">Floyd 判环<a class="headerlink" href="#floyd-判环" title="Permanent link"></a></h4>
@@ -1457,7 +1457,7 @@ E(X) = \sum_{x=1}^{n+1}P(X\ge x+1) = \sum_{x=0}^n\frac{n!}{(n-x)!n^x} = \sqrt{\f
 </details>
 <h4 id="brent-判环">Brent 判环<a class="headerlink" href="#brent-判环" title="Permanent link"></a></h4>
 <p>实际上，Floyd 判环算法可以有常数上的改进。Brent 判环从 <span class="arithmatex">\(k=1\)</span> 开始递增 <span class="arithmatex">\(k\)</span>，在第 <span class="arithmatex">\(k\)</span> 轮，让 A 等在原地，B 向前移动 <span class="arithmatex">\(2^k\)</span> 步，如果在过程中 B 遇到了 A，则说明已经得到环，否则让 A 瞬移到 B 的位置，然后继续下一轮。</p>
-<p>可以证明[^brent]，这样得到环之前需要调用 <span class="arithmatex">\(f\)</span> 的次数永远不大于 Floyd 判环算法。原论文中的测试表明，Brent 判环需要的平均时间相较于 Floyd 判环减少了 <span class="arithmatex">\(24\%\)</span>。</p>
+<p>可以证明<sup id="fnref:brent"><a class="footnote-ref" href="#fn:brent">3</a></sup>，这样得到环之前需要调用 <span class="arithmatex">\(f\)</span> 的次数永远不大于 Floyd 判环算法。原论文中的测试表明，Brent 判环需要的平均时间相较于 Floyd 判环减少了 <span class="arithmatex">\(24\%\)</span>。</p>
 <h4 id="倍增优化">倍增优化<a class="headerlink" href="#倍增优化" title="Permanent link"></a></h4>
 <p>无论是 Floyd 判环还是 Brent 判环，迭代次数都是 <span class="arithmatex">\(O(\sqrt p)\)</span> 的。但是每次迭代都用 <span class="arithmatex">\(\gcd\)</span> 判断是否成环会拖慢算法运行速度。可以通过乘法累积来减少求 <span class="arithmatex">\(\gcd\)</span> 的次数。</p>
 <p>简单来说，如果 <span class="arithmatex">\(\gcd(a,N)&gt;1\)</span>，那么 <span class="arithmatex">\(\gcd(ab\bmod N,N)=\gcd(ab,N)&gt;1\)</span> 对于任意 <span class="arithmatex">\(b\in\mathbb N_+\)</span> 都成立。也就是说，如果计算得到 <span class="arithmatex">\(\gcd(\prod |x_i-x_j| \bmod N,N)&gt;1\)</span>，那么必然有其中一对 <span class="arithmatex">\((x_i,x_j)\)</span> 满足 <span class="arithmatex">\(\gcd(|x_i-x_j|,N)&gt;1\)</span>。如果该乘积在某一时刻得到零，则分解失败，退出并返回 <span class="arithmatex">\(N\)</span> 本身。</p>
@@ -1576,8 +1576,20 @@ E(X) = \sum_{x=1}^{n+1}P(X\ge x+1) = \sum_{x=0}^n\frac{n!}{(n-x)!n^x} = \sqrt{\f
 </code></pre></div></td></tr></table></div>
 </details>
 <h2 id="参考资料与链接">参考资料与链接<a class="headerlink" href="#参考资料与链接" title="Permanent link"></a></h2>
-<p>[^pseudo]: Menezes, Alfred J.; van Oorschot, Paul C.; Vanstone, Scott A. (2001). Handbook of Applied Cryptography. Section 3.11 and 3.12.</p>
-<p>[^brent]: Brent, R. P. (1980), An improved Monte Carlo factorization algorithm, BIT Numerical Mathematics, 20(2): 176–184, doi:10.1007/BF01933190</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:ref1">
+<p><a href="https://en.wikipedia.org/wiki/Birthday_problem#Reverse_problem">https://en.wikipedia.org/wiki/Birthday_problem#Reverse_problem</a>&#160;<a class="footnote-backref" href="#fnref:ref1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pseudo">
+<p>Menezes, Alfred J.; van Oorschot, Paul C.; Vanstone, Scott A. (2001). Handbook of Applied Cryptography. Section 3.11 and 3.12.&#160;<a class="footnote-backref" href="#fnref:pseudo" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:brent">
+<p>Brent, R. P. (1980), An improved Monte Carlo factorization algorithm, BIT Numerical Mathematics, 20(2): 176–184, doi:10.1007/BF01933190&#160;<a class="footnote-backref" href="#fnref:brent" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1634,7 +1646,7 @@ E(X) = \sum_{x=1}^{n+1}P(X\ge x+1) = \sum_{x=0}^n\frac{n!}{(n-x)!n^x} = \sqrt{\f
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

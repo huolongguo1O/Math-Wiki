@@ -1469,7 +1469,7 @@ g_j(x_1,x_2,\cdots,x_n)=a_{j1}x_1+a_{j2}x_2+\cdots+a_{jn}x_n \le (=,\ge) b_j
 \]</div>
 </details>
 <h3 id="可行域与问题的解">可行域与问题的解<a class="headerlink" href="#可行域与问题的解" title="Permanent link"></a></h3>
-<p>所有可行解的集合 <span class="arithmatex">\(\mathcal D\subseteq\mathbf R^n\)</span> 称为线性规划问题 <span class="arithmatex">\(P\)</span> 的 <strong>可行域</strong>（feasible region）。从几何角度看，每个不等式约束 <span class="arithmatex">\(a_j^T x \le b_j\)</span> 都描述了一个半空间 <span class="arithmatex">\(\{x\in\mathbf R^n:a_j^T x \le b_j\}\)</span>，每个等式约束 <span class="arithmatex">\(a^T_jx = b_j\)</span> 都描述了一个超平面 <span class="arithmatex">\(\{x\in\mathbf R^n:a_j^Tx=b_j\}\)</span>，所以，可行域一定是有限多个半空间和超平面的交集。在优化领域[^poly-names]，这样的几何体通常称为 <span class="arithmatex">\(\mathbf R^n\)</span> 中的 <strong>多面体</strong>（polyhedron）。多面体一定是闭凸集，但未必是有界的。有界的多面体也称为 <strong>多胞形</strong>（polytope）。多胞形可以看作是平面上的多边形在高维空间的推广，而多面体将它进一步推广到可能无界的情形。</p>
+<p>所有可行解的集合 <span class="arithmatex">\(\mathcal D\subseteq\mathbf R^n\)</span> 称为线性规划问题 <span class="arithmatex">\(P\)</span> 的 <strong>可行域</strong>（feasible region）。从几何角度看，每个不等式约束 <span class="arithmatex">\(a_j^T x \le b_j\)</span> 都描述了一个半空间 <span class="arithmatex">\(\{x\in\mathbf R^n:a_j^T x \le b_j\}\)</span>，每个等式约束 <span class="arithmatex">\(a^T_jx = b_j\)</span> 都描述了一个超平面 <span class="arithmatex">\(\{x\in\mathbf R^n:a_j^Tx=b_j\}\)</span>，所以，可行域一定是有限多个半空间和超平面的交集。在优化领域<sup id="fnref:poly-names"><a class="footnote-ref" href="#fn:poly-names">1</a></sup>，这样的几何体通常称为 <span class="arithmatex">\(\mathbf R^n\)</span> 中的 <strong>多面体</strong>（polyhedron）。多面体一定是闭凸集，但未必是有界的。有界的多面体也称为 <strong>多胞形</strong>（polytope）。多胞形可以看作是平面上的多边形在高维空间的推广，而多面体将它进一步推广到可能无界的情形。</p>
 <details class="example" open="open">
 <summary>多面体的例子</summary>
 <p>此处列举了一些常见的多面体：</p>
@@ -1507,7 +1507,7 @@ g_j(x_1,x_2,\cdots,x_n)=a_{j1}x_1+a_{j2}x_2+\cdots+a_{jn}x_n \le (=,\ge) b_j
 <p><img alt="" src="../images/lp-feasible.svg" /></p>
 </details>
 <p>这些讨论忽略了 <span class="arithmatex">\(c=0\)</span> 的情形。此时，线性规划问题显然不能是无界的，所以要么问题本身是不可行的，要么最优价值等于 <span class="arithmatex">\(0\)</span>，且最优解集就是 <span class="arithmatex">\(\mathcal D\)</span> 本身。这类特殊的线性规划也称为 <strong>可行性线性规划</strong>（feasibility linear programming）。</p>
-<p>值得指出的是，判定线性规划问题是否可行、是否有界，以及求出不等式组的可行解等问题，都和解线性规划问题本身同样困难<a href="更严格的表述是，它们之间可以在多项式时间内相互归约。">^reducible</a>。比如说，下文中强对偶定理的证明就说明，解一个有界的线性规划问题，就相当于寻找一组不等式的可行解。因此，对于判断不等式组是否有解和判断方程组是否有非负解等任务，最有效的方式就是求解相应的可行性线性规划[^other-methods]。</p>
+<p>值得指出的是，判定线性规划问题是否可行、是否有界，以及求出不等式组的可行解等问题，都和解线性规划问题本身同样困难<sup id="fnref:reducible"><a class="footnote-ref" href="#fn:reducible">2</a></sup>。比如说，下文中强对偶定理的证明就说明，解一个有界的线性规划问题，就相当于寻找一组不等式的可行解。因此，对于判断不等式组是否有解和判断方程组是否有非负解等任务，最有效的方式就是求解相应的可行性线性规划<sup id="fnref:other-methods"><a class="footnote-ref" href="#fn:other-methods">3</a></sup>。</p>
 <p>另外，如果线性规划问题的一个约束，在可行域的所有面上都不是紧的，那么这个约束就是 <strong>冗余的</strong>（redundant）。本文开头早点师傅的例子中，工作时间的约束就是一个冗余约束。在给定的不等式组中判定某个不等式 <span class="arithmatex">\(a_j^Tx\le b_j\)</span> 是否冗余这一问题，可以通过求解线性规划问题 <span class="arithmatex">\(\max\{a_j^Tx:x\in\mathcal D\}\)</span>，并将它与 <span class="arithmatex">\(b_j\)</span> 相比较来解决。</p>
 <h2 id="常见算法">常见算法<a class="headerlink" href="#常见算法" title="Permanent link"></a></h2>
 <p>算法竞赛中，很少有问题只能通过线性规划的算法解决。大多数可以用线性规划方法求解的题目，通常也可以通过网络流等更为专门也更为高效的算法来解决。</p>
@@ -1830,8 +1830,20 @@ x = \begin{pmatrix}A_1^{-1}b_J \\ 0\end{pmatrix}
 <li><a href="https://codeforces.com/blog/entry/105049">Duality in linear programming. Part 1—definition and construction. by adamant - Codeforces blog</a></li>
 <li><a href="https://codeforces.com/blog/entry/105789">Duality in linear programming. Part 2—in competitive programming. by adamant - Codeforces blog</a></li>
 </ul>
-<p>[^poly-names]: 不同文献可能对这两个名词的定义有着不同的定义：有些文献会将有界的情形称作「多面体」，而将无界的情形称作「多胞形」；有些文献不会假定它们一定是凸集；有些文献会用「多面体」称呼三维空间中的多胞形。本文采取了与 Schrijver (1998) 和 Boyd and Vandenberghe (2004) 等文献一致的定义。</p>
-<p>[^other-methods]: 其它用于解决不等式组的方法还包括 Fourier–Motzkin 消元法和 Agmon–Motzkin–Schoenberg 松弛法等。它们更为直接，但是效率往往不高。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:poly-names">
+<p>不同文献可能对这两个名词的定义有着不同的定义：有些文献会将有界的情形称作「多面体」，而将无界的情形称作「多胞形」；有些文献不会假定它们一定是凸集；有些文献会用「多面体」称呼三维空间中的多胞形。本文采取了与 Schrijver (1998) 和 Boyd and Vandenberghe (2004) 等文献一致的定义。&#160;<a class="footnote-backref" href="#fnref:poly-names" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:reducible">
+<p>更严格的表述是，它们之间可以在多项式时间内相互归约。&#160;<a class="footnote-backref" href="#fnref:reducible" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:other-methods">
+<p>其它用于解决不等式组的方法还包括 Fourier–Motzkin 消元法和 Agmon–Motzkin–Schoenberg 松弛法等。它们更为直接，但是效率往往不高。&#160;<a class="footnote-backref" href="#fnref:other-methods" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1891,7 +1903,7 @@ x = \begin{pmatrix}A_1^{-1}b_J \\ 0\end{pmatrix}
       
         <script src="../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

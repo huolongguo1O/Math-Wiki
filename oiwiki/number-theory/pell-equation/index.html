@@ -1454,14 +1454,14 @@
 <div class="arithmatex">\[
 x^2-Dy^2=N,
 \]</div>
-<p>其中，<span class="arithmatex">\(D\)</span> 是正整数且不是完全平方数[^not-square]，<span class="arithmatex">\(N\)</span> 是非零整数。狭义的 Pell 方程特指 <span class="arithmatex">\(N=1\)</span> 或 <span class="arithmatex">\(N=\pm 1\)</span> 的特殊情形，有时也包括 <span class="arithmatex">\(N=\pm 4\)</span> 的情形。广义 Pell 方程与在实二次整数环内寻找范数为 <span class="arithmatex">\(N\)</span> 的二次整数紧密相关，而常常称作（狭义）Pell 方程的这些情形可以看作是寻找实二次整数环内的单位数。</p>
-<p>当本文提及 Pell 方程时，特指 <span class="arithmatex">\(N=1\)</span> 的情形。相应地，<span class="arithmatex">\(N=-1\)</span> 的情形称为负 Pell 方程[^neg-pell]（negative Pell's equation）。</p>
+<p>其中，<span class="arithmatex">\(D\)</span> 是正整数且不是完全平方数<sup id="fnref:not-square"><a class="footnote-ref" href="#fn:not-square">1</a></sup>，<span class="arithmatex">\(N\)</span> 是非零整数。狭义的 Pell 方程特指 <span class="arithmatex">\(N=1\)</span> 或 <span class="arithmatex">\(N=\pm 1\)</span> 的特殊情形，有时也包括 <span class="arithmatex">\(N=\pm 4\)</span> 的情形。广义 Pell 方程与在实二次整数环内寻找范数为 <span class="arithmatex">\(N\)</span> 的二次整数紧密相关，而常常称作（狭义）Pell 方程的这些情形可以看作是寻找实二次整数环内的单位数。</p>
+<p>当本文提及 Pell 方程时，特指 <span class="arithmatex">\(N=1\)</span> 的情形。相应地，<span class="arithmatex">\(N=-1\)</span> 的情形称为负 Pell 方程<sup id="fnref:neg-pell"><a class="footnote-ref" href="#fn:neg-pell">2</a></sup>（negative Pell's equation）。</p>
 <h2 id="解的结构">解的结构<a class="headerlink" href="#解的结构" title="Permanent link"></a></h2>
 <p>广义 Pell 方程的整数解 <span class="arithmatex">\((x,y)\)</span> 和二次整数 <span class="arithmatex">\(x+y\sqrt{D}\)</span> 联系密切，因此文献中 Pell 方程的解常常写作 <span class="arithmatex">\(x+y\sqrt{D}\)</span> 的形式。因为二次整数的范数</p>
 <div class="arithmatex">\[
 N(x+y\sqrt{D}) = x^2-Dy^2,
 \]</div>
-<p>所以，广义 Pell 方程大致相当于在求解范数为 <span class="arithmatex">\(N\)</span> 的二次整数。但是，两者确实有细微的区别。当 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 都是整数时，<span class="arithmatex">\(x+y\sqrt{D}\)</span> 一定是二次整数；反过来，二次整数未必要求 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 都是整数——在 <span class="arithmatex">\(D\equiv 1\pmod 4\)</span> 的情形，<span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 还可以同时是半整数[^half-int]。</p>
+<p>所以，广义 Pell 方程大致相当于在求解范数为 <span class="arithmatex">\(N\)</span> 的二次整数。但是，两者确实有细微的区别。当 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 都是整数时，<span class="arithmatex">\(x+y\sqrt{D}\)</span> 一定是二次整数；反过来，二次整数未必要求 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 都是整数——在 <span class="arithmatex">\(D\equiv 1\pmod 4\)</span> 的情形，<span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(y\)</span> 还可以同时是半整数<sup id="fnref:half-int"><a class="footnote-ref" href="#fn:half-int">3</a></sup>。</p>
 <p>这个区别在求解基本单位数时格外重要。因为二次整环中的单位数是指范数为 <span class="arithmatex">\(\pm 1\)</span> 的二次整数。对于 <span class="arithmatex">\(D\equiv 2,3\pmod 4\)</span>，要找到这样的单位数，只需要求解广义 Pell 方程在 <span class="arithmatex">\(N=\pm 1\)</span> 的情形即可；但是对于 <span class="arithmatex">\(D\equiv 1\pmod 4\)</span>，还需要考虑 <span class="arithmatex">\(N=\pm 4\)</span> 的情形。<a href="#范数为-4-的情形">下文</a> 会讨论单位数的求解方法。</p>
 <p>要理解广义 Pell 方程解的结构，需要从 <a href="https://en.wikipedia.org/wiki/Brahmagupta%27s_identity">Brahmagupta 恒等式</a> 入手：</p>
 <div class="arithmatex">\[
@@ -1477,7 +1477,7 @@ N\left(x_1+y_1\sqrt{D}\right)N\left(x_2+y_2\sqrt{D}\right) &amp;= N\left((x_1+y_
 <p>利用这一恒等式，可以利用方程 <span class="arithmatex">\(x^2-Dy^2=N_1\)</span> 和方程 <span class="arithmatex">\(x^2-Dy^2=N_2\)</span> 的整数解复合出方程 <span class="arithmatex">\(x^2-Dy^2=N_1N_2\)</span> 的整数解。当然，从二次整数的角度看，解的复合就是二次整数的乘法，这就体现了将 Pell 方程的解记作二次整数形式的方便之处。特别地，取 <span class="arithmatex">\(N_1=N\)</span> 和 <span class="arithmatex">\(N_2=1\)</span> 就可以发现，如果已知 <span class="arithmatex">\(x^2-Dy^2=N\)</span> 的一组解和相应的 Pell 方程 <span class="arithmatex">\(x^2-Dy^2=1\)</span> 的全体解，就可以得到 <span class="arithmatex">\(x^2-Dy^2=N\)</span> 更多的解。当然，这种方法未必能够生成全部的解。但是，这至少说明理解 Pell 方程的解的结构对理解广义 Pell 方程的解的结构有重要作用。</p>
 <h3 id="pell-方程">Pell 方程<a class="headerlink" href="#pell-方程" title="Permanent link"></a></h3>
 <p>方程 <span class="arithmatex">\(x^2-Dy^2=1\)</span> 的几何意义是实轴在 <span class="arithmatex">\(x\)</span> 轴、虚轴在 <span class="arithmatex">\(y\)</span> 轴的双曲线。双曲线上的每个点都唯一对应了 <span class="arithmatex">\(x+y\sqrt{D}\)</span> 的一个非零取值：双曲线的左支对应着 <span class="arithmatex">\(x+y\sqrt{D}\)</span> 的负值，右支则对应正值。而且，在每一支上，双曲线自下而上对应的 <span class="arithmatex">\(x+y\sqrt{D}\)</span> 的取值是严格递增的。二次整数的取值给 Pell 方程的解赋予了自然的顺序。</p>
-<p>双曲线同时关于 <span class="arithmatex">\(x\)</span> 轴和 <span class="arithmatex">\(y\)</span> 轴对称，因此讨论 Pell 方程的解只需要考虑在第一象限内的那一段即可，其余解可以通过对称性获得。这相当于只考虑 <span class="arithmatex">\(x+y\sqrt{D}&gt;1\)</span> 的解。如果方程除了 <span class="arithmatex">\((\pm 1,0)\)</span> 之外还存在不平凡的解，那么一定在第一象限内存在 <span class="arithmatex">\(x+y\sqrt{D}\)</span> 取值最小的解 <span class="arithmatex">\((x_1,y_1)\)</span>，这也是第一象限内（不含坐标轴）横纵坐标都最小的整点，它称为 Pell 方程的基本解（fundamental solution）[^fundamental-solution]。根据前文的讨论，满足 <span class="arithmatex">\(x_k+y_k\sqrt{D}=(x_1+y_1\sqrt{D})^k\)</span> 的整数对 <span class="arithmatex">\((x_k,y_k)\)</span> 都是 Pell 方程的解，而且都在第一象限。反过来，这也的确是 Pell 方程在第一象限内的全部解。再利用对称性，就可以得到如下结论：</p>
+<p>双曲线同时关于 <span class="arithmatex">\(x\)</span> 轴和 <span class="arithmatex">\(y\)</span> 轴对称，因此讨论 Pell 方程的解只需要考虑在第一象限内的那一段即可，其余解可以通过对称性获得。这相当于只考虑 <span class="arithmatex">\(x+y\sqrt{D}&gt;1\)</span> 的解。如果方程除了 <span class="arithmatex">\((\pm 1,0)\)</span> 之外还存在不平凡的解，那么一定在第一象限内存在 <span class="arithmatex">\(x+y\sqrt{D}\)</span> 取值最小的解 <span class="arithmatex">\((x_1,y_1)\)</span>，这也是第一象限内（不含坐标轴）横纵坐标都最小的整点，它称为 Pell 方程的基本解（fundamental solution）<sup id="fnref:fundamental-solution"><a class="footnote-ref" href="#fn:fundamental-solution">4</a></sup>。根据前文的讨论，满足 <span class="arithmatex">\(x_k+y_k\sqrt{D}=(x_1+y_1\sqrt{D})^k\)</span> 的整数对 <span class="arithmatex">\((x_k,y_k)\)</span> 都是 Pell 方程的解，而且都在第一象限。反过来，这也的确是 Pell 方程在第一象限内的全部解。再利用对称性，就可以得到如下结论：</p>
 <details class="note" open="open">
 <summary>定理</summary>
 <p>设 Pell 方程 <span class="arithmatex">\(x^2-Dy^2=1\)</span> 的基本解是 <span class="arithmatex">\((x_1,y_1)\)</span>。那么，它的全部解就是</p>
@@ -1856,7 +1856,7 @@ Q_0A_{k-1}^2 +\left(\dfrac{P_0^2-D}{Q_0}B_{k-1}- 2P_0A_{k-1}\right)B_{k-1} = (-1
 (A_{\ell-1}+B_{\ell-1}\sqrt{D})^k = A_{k\ell-1}+B_{k\ell-1}\sqrt{D}.
 \]</div>
 <p>在所有这些正整数解中，<span class="arithmatex">\(k\)</span> 为奇数时就是负 Pell 方程的解，<span class="arithmatex">\(k\)</span> 为偶数时就是 Pell 方程的解，两者交替出现。</p>
-<p>判断负 Pell 方程是否有解，需要计算 <span class="arithmatex">\(\sqrt{D}\)</span> 连分数展开的循环节的长度，这并不容易计算，因此希望能够找到更简单的判断方法。但是，目前并没有条件简明、容易计算的判断方法[^solubility-neg-pell]。此处仅仅提供一个简单的结论。</p>
+<p>判断负 Pell 方程是否有解，需要计算 <span class="arithmatex">\(\sqrt{D}\)</span> 连分数展开的循环节的长度，这并不容易计算，因此希望能够找到更简单的判断方法。但是，目前并没有条件简明、容易计算的判断方法<sup id="fnref:solubility-neg-pell"><a class="footnote-ref" href="#fn:solubility-neg-pell">5</a></sup>。此处仅仅提供一个简单的结论。</p>
 <details class="note" open="open">
 <summary>定理</summary>
 <p>方程 <span class="arithmatex">\(x^2-Dy^2=-1\)</span> 有解，则 <span class="arithmatex">\(4\)</span> 不能整除 <span class="arithmatex">\(D\)</span> 且 <span class="arithmatex">\(D\)</span> 不含有 <span class="arithmatex">\(4k+3\)</span> 型的素因子。反过来，如果 <span class="arithmatex">\(D=2\)</span> 或 <span class="arithmatex">\(D\)</span> 是 <span class="arithmatex">\(4k+1\)</span> 型的素数，那么方程必然有解。</p>
@@ -2930,11 +2930,26 @@ p_k(S-q_{k-1}) = q_k(R-p_{k-1}).
 <li><a href="http://www.numbertheory.org/php/surd.html">Calculating the simple continued fraction of a quadratic irrational - Number Theory Web</a>（PQa 算法）</li>
 <li><a href="http://www.numbertheory.org/php/patz.html">Solving the diophantine equation x2–Dy2 = N, D &gt; 0 and not a perfect square, N ≠ 0 - Number Theory Web</a>（Lagrange–Matthews–Mollin 算法）</li>
 </ul>
-<p>[^not-square]: 当 <span class="arithmatex">\(D\)</span> 是完全平方数时，直接做因式分解可知，<span class="arithmatex">\((x+y\sqrt{D})(x-y\sqrt{D})=N\)</span>，因此所有解可以通过遍历 <span class="arithmatex">\(N\)</span> 的因数得知。特别地，当 <span class="arithmatex">\(N=1\)</span> 时，方程只有解 <span class="arithmatex">\((\pm 1,0)\)</span>；当 <span class="arithmatex">\(N=-1\)</span> 且 <span class="arithmatex">\(D\neq 1\)</span> 时，方程没有解。</p>
-<p>[^neg-pell]: 有些中文文献也称它为第二型 Pell 方程。</p>
-<p>[^half-int]: 即形如 <span class="arithmatex">\(n+\dfrac12\)</span> 且 <span class="arithmatex">\(n\in\mathbf Z\)</span> 的有理数。</p>
-<p>[^fundamental-solution]: 注意，Pell 方程中基本解的定义与实二次整数环中的基本单位数的定义并不一致。首先，部分实二次整数环中的基本单位数 <span class="arithmatex">\(x+y\sqrt{D}\)</span> 中的 <span class="arithmatex">\(x,y\)</span> 是半整数，因而并非 Pell 方程的解。其次，同一个实二次整数环的基本单位数有四个，但是基本解只有一个，因为基本解要求 <span class="arithmatex">\(x,y\)</span> 都是正数。</p>
-<p>[^solubility-neg-pell]: 一个较为实用的判断方法和工具在 <a href="http://www.numbertheory.org/php/hardy_williams.html">这里</a> 及其参考文献。使得方程 <span class="arithmatex">\(x^2-Dy^2=-1\)</span> 有解的正整数 <span class="arithmatex">\(D\)</span> 的列表是 <a href="https://oeis.org/A031396">OEIS A031396</a>。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:not-square">
+<p>当 <span class="arithmatex">\(D\)</span> 是完全平方数时，直接做因式分解可知，<span class="arithmatex">\((x+y\sqrt{D})(x-y\sqrt{D})=N\)</span>，因此所有解可以通过遍历 <span class="arithmatex">\(N\)</span> 的因数得知。特别地，当 <span class="arithmatex">\(N=1\)</span> 时，方程只有解 <span class="arithmatex">\((\pm 1,0)\)</span>；当 <span class="arithmatex">\(N=-1\)</span> 且 <span class="arithmatex">\(D\neq 1\)</span> 时，方程没有解。&#160;<a class="footnote-backref" href="#fnref:not-square" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:neg-pell">
+<p>有些中文文献也称它为第二型 Pell 方程。&#160;<a class="footnote-backref" href="#fnref:neg-pell" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:half-int">
+<p>即形如 <span class="arithmatex">\(n+\dfrac12\)</span> 且 <span class="arithmatex">\(n\in\mathbf Z\)</span> 的有理数。&#160;<a class="footnote-backref" href="#fnref:half-int" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:fundamental-solution">
+<p>注意，Pell 方程中基本解的定义与实二次整数环中的基本单位数的定义并不一致。首先，部分实二次整数环中的基本单位数 <span class="arithmatex">\(x+y\sqrt{D}\)</span> 中的 <span class="arithmatex">\(x,y\)</span> 是半整数，因而并非 Pell 方程的解。其次，同一个实二次整数环的基本单位数有四个，但是基本解只有一个，因为基本解要求 <span class="arithmatex">\(x,y\)</span> 都是正数。&#160;<a class="footnote-backref" href="#fnref:fundamental-solution" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:solubility-neg-pell">
+<p>一个较为实用的判断方法和工具在 <a href="http://www.numbertheory.org/php/hardy_williams.html">这里</a> 及其参考文献。使得方程 <span class="arithmatex">\(x^2-Dy^2=-1\)</span> 有解的正整数 <span class="arithmatex">\(D\)</span> 的列表是 <a href="https://oeis.org/A031396">OEIS A031396</a>。&#160;<a class="footnote-backref" href="#fnref:solubility-neg-pell" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -2991,7 +3006,7 @@ p_k(S-q_{k-1}) = q_k(R-p_{k-1}).
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

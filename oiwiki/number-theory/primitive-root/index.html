@@ -1796,12 +1796,12 @@ g^{\frac{1}{2}\varphi(m_1)\varphi(m_2)} \equiv 1 \pmod{m}.
 <p>对于任何存在原根的模数 <span class="arithmatex">\(m\)</span>，要求得它的原根 <span class="arithmatex">\(g\)</span>，只需要枚举可能的正整数，并逐个判断它是否为原根即可．枚举时，通常有两种处理方式：从小到大逐一枚举、随机生成一些正整数．这两种枚举方式的实际效率相当．</p>
 <p>从小到大逐一枚举时，得到的是模 <span class="arithmatex">\(m\)</span> 的最小原根 <span class="arithmatex">\(g_m\)</span>，因此，枚举部分的复杂度取决于 <span class="arithmatex">\(g_m\)</span> 的大小．对此，有如下估计：</p>
 <ul>
-<li>上界的估计：王元[^yuan1959note]和 Burgess[^burgess1962character]证明了素数 <span class="arithmatex">\(p\)</span> 的最小原根 <span class="arithmatex">\(g_p=O\left(p^{0.25+\epsilon}\right)\)</span>，其中 <span class="arithmatex">\(\epsilon&gt;0\)</span>．Cohen, Odoni, and Stothers[^cohen1974least]和 Elliott and Murata[^elliott1998least]分别证明了该估计对于模数 <span class="arithmatex">\(p^2\)</span> 和 <span class="arithmatex">\(2p^2\)</span> 也成立，其中，<span class="arithmatex">\(p\)</span> 是奇素数．由于对于 <span class="arithmatex">\(e&gt;2\)</span>，模 <span class="arithmatex">\(p^2\)</span>（或 <span class="arithmatex">\(2p^2\)</span>）的原根也是模 <span class="arithmatex">\(p^e\)</span>（或 <span class="arithmatex">\(2p^e\)</span>）的原根，所以，最小原根的上界 <span class="arithmatex">\(O\left(p^{0.25+\epsilon}\right)\)</span> 对于所有情形都成立．</li>
-<li>下界的估计：Fridlander[^fridlender1949least]和 Salié[^salie1949kleinsten]证明了存在 <span class="arithmatex">\(C&gt;0\)</span>，使得对于无穷多素数 <span class="arithmatex">\(p\)</span>，都有最小原根 <span class="arithmatex">\(g_p &gt; C\log p\)</span> 成立．</li>
-<li>平均情形的估计：Burgess and Elliott[^burgess1968average]证明了平均情形下素数 <span class="arithmatex">\(p\)</span> 的最小原根 <span class="arithmatex">\(g_p=O((\log p)^2(\log\log p)^4)\)</span>．Elliott and Murata[^elliott1997average]进一步猜想素数 <span class="arithmatex">\(p\)</span> 的最小原根的平均值是一个常数，且通过数值验证[^more-evidence]得到它大概为 <span class="arithmatex">\(4.926\)</span>．随后，Elliott and Murata[^elliott1998least]将这一猜想推广到模 <span class="arithmatex">\(2p^2\)</span> 的情形．</li>
+<li>上界的估计：王元<sup id="fnref:yuan1959note"><a class="footnote-ref" href="#fn:yuan1959note">1</a></sup>和 Burgess<sup id="fnref:burgess1962character"><a class="footnote-ref" href="#fn:burgess1962character">2</a></sup>证明了素数 <span class="arithmatex">\(p\)</span> 的最小原根 <span class="arithmatex">\(g_p=O\left(p^{0.25+\epsilon}\right)\)</span>，其中 <span class="arithmatex">\(\epsilon&gt;0\)</span>．Cohen, Odoni, and Stothers<sup id="fnref:cohen1974least"><a class="footnote-ref" href="#fn:cohen1974least">3</a></sup>和 Elliott and Murata<sup id="fnref:elliott1998least"><a class="footnote-ref" href="#fn:elliott1998least">4</a></sup>分别证明了该估计对于模数 <span class="arithmatex">\(p^2\)</span> 和 <span class="arithmatex">\(2p^2\)</span> 也成立，其中，<span class="arithmatex">\(p\)</span> 是奇素数．由于对于 <span class="arithmatex">\(e&gt;2\)</span>，模 <span class="arithmatex">\(p^2\)</span>（或 <span class="arithmatex">\(2p^2\)</span>）的原根也是模 <span class="arithmatex">\(p^e\)</span>（或 <span class="arithmatex">\(2p^e\)</span>）的原根，所以，最小原根的上界 <span class="arithmatex">\(O\left(p^{0.25+\epsilon}\right)\)</span> 对于所有情形都成立．</li>
+<li>下界的估计：Fridlander<sup id="fnref:fridlender1949least"><a class="footnote-ref" href="#fn:fridlender1949least">5</a></sup>和 Salié<sup id="fnref:salie1949kleinsten"><a class="footnote-ref" href="#fn:salie1949kleinsten">6</a></sup>证明了存在 <span class="arithmatex">\(C&gt;0\)</span>，使得对于无穷多素数 <span class="arithmatex">\(p\)</span>，都有最小原根 <span class="arithmatex">\(g_p &gt; C\log p\)</span> 成立．</li>
+<li>平均情形的估计：Burgess and Elliott<sup id="fnref:burgess1968average"><a class="footnote-ref" href="#fn:burgess1968average">7</a></sup>证明了平均情形下素数 <span class="arithmatex">\(p\)</span> 的最小原根 <span class="arithmatex">\(g_p=O((\log p)^2(\log\log p)^4)\)</span>．Elliott and Murata<sup id="fnref:elliott1997average"><a class="footnote-ref" href="#fn:elliott1997average">8</a></sup>进一步猜想素数 <span class="arithmatex">\(p\)</span> 的最小原根的平均值是一个常数，且通过数值验证<sup id="fnref:more-evidence"><a class="footnote-ref" href="#fn:more-evidence">9</a></sup>得到它大概为 <span class="arithmatex">\(4.926\)</span>．随后，Elliott and Murata<sup id="fnref2:elliott1998least"><a class="footnote-ref" href="#fn:elliott1998least">4</a></sup>将这一猜想推广到模 <span class="arithmatex">\(2p^2\)</span> 的情形．</li>
 </ul>
 <p>根据这些分析，暴力寻找最小原根时，枚举部分的复杂度 <span class="arithmatex">\(O(g_m(\log m)^2)\)</span> 是可以接受的．</p>
-<p>除了从小到大枚举外，还可以通过随机生成正整数并验证的方法寻找原根．原根的密度并不低：[^density-prim-root]</p>
+<p>除了从小到大枚举外，还可以通过随机生成正整数并验证的方法寻找原根．原根的密度并不低：<sup id="fnref:density-prim-root"><a class="footnote-ref" href="#fn:density-prim-root">10</a></sup></p>
 <div class="arithmatex">\[
 \dfrac{\varphi(\varphi(m))}{m} = \Omega\left(\dfrac{1}{\log\log m}\right).
 \]</div>
@@ -1909,7 +1909,7 @@ p^{e-1}(p-1) = [\delta_m(p),p^{e-1}]\mid\lambda(m) \mid \varphi(m) = p^{e-1}(p-1
 <p>最小的 Carmichael 数是 <span class="arithmatex">\(561 = 3 \times 11 \times 17\)</span>．</p>
 <p>由 Carmichael 函数的定义可知，合数 <span class="arithmatex">\(n\)</span> 是 Carmichael 数当且仅当 <span class="arithmatex">\(\lambda(n)\mid n-1\)</span>，其中 <span class="arithmatex">\(\lambda(n)\)</span> 为 Carmichael 函数．进一步地，可以得到如下判断合数 <span class="arithmatex">\(n\)</span> 是否为 Carmichael 数的方法：</p>
 <details class="note" open="open">
-<summary>Korselt 判别法[^korselt1899probleme]</summary>
+<summary>Korselt 判别法<sup id="fnref:korselt1899probleme"><a class="footnote-ref" href="#fn:korselt1899probleme">11</a></sup></summary>
 <p>合数 <span class="arithmatex">\(n\)</span> 是 Carmichael 数当且仅当 <span class="arithmatex">\(n\)</span> 无平方因子且对 <span class="arithmatex">\(n\)</span> 的任意质因子 <span class="arithmatex">\(p\)</span> 均有 <span class="arithmatex">\((p-1) \mid (n-1)\)</span>．</p>
 </details>
 <details class="note">
@@ -1930,7 +1930,7 @@ n-1=p_1p_2-1\equiv p_2-1 \pmod{p_1-1}.
 \]</div>
 <p>因此，<span class="arithmatex">\((p_1-1)\mid(p_2-1)\)</span>．同理，<span class="arithmatex">\((p_2-1)\mid(p_1-1)\)</span>．也就是说，<span class="arithmatex">\(p_1=p_2\)</span>．这与假设矛盾．因此，Carmichael 数 <span class="arithmatex">\(n\)</span> 至少有 <span class="arithmatex">\(3\)</span> 个互异素因子．</p>
 </details>
-<p>利用解析数论还可以得到 Carmichael 数分布的一些性质．设 <span class="arithmatex">\(C(n)\)</span> 为小于等于 <span class="arithmatex">\(n\)</span> 的 Carmichael 数个数．Alford, Granville, and Pomerance[^alford1994infinitely]证明，对于充分大的 <span class="arithmatex">\(n\)</span>，有 <span class="arithmatex">\(C(n)&gt;n^{2/7}\)</span>．由此，Carmichael 数有无限多个．在这之前，Erdős[^erdos1956pseudoprimes]已经证明，<span class="arithmatex">\(C(n) &lt; n\exp\left(-c\dfrac{\ln n\ln\ln\ln n}{\ln\ln n}\right)\)</span>，其中 <span class="arithmatex">\(c\)</span> 为常数．因此，Carmichael 数的分布（相对于素数来说）十分稀疏．实际上，有[^pinchcarmichael] <span class="arithmatex">\(C(10^9)=646\)</span>，<span class="arithmatex">\(C(10^{18})=1~401~644\)</span>．</p>
+<p>利用解析数论还可以得到 Carmichael 数分布的一些性质．设 <span class="arithmatex">\(C(n)\)</span> 为小于等于 <span class="arithmatex">\(n\)</span> 的 Carmichael 数个数．Alford, Granville, and Pomerance<sup id="fnref:alford1994infinitely"><a class="footnote-ref" href="#fn:alford1994infinitely">12</a></sup>证明，对于充分大的 <span class="arithmatex">\(n\)</span>，有 <span class="arithmatex">\(C(n)&gt;n^{2/7}\)</span>．由此，Carmichael 数有无限多个．在这之前，Erdős<sup id="fnref:erdos1956pseudoprimes"><a class="footnote-ref" href="#fn:erdos1956pseudoprimes">13</a></sup>已经证明，<span class="arithmatex">\(C(n) &lt; n\exp\left(-c\dfrac{\ln n\ln\ln\ln n}{\ln\ln n}\right)\)</span>，其中 <span class="arithmatex">\(c\)</span> 为常数．因此，Carmichael 数的分布（相对于素数来说）十分稀疏．实际上，有<sup id="fnref:pinchcarmichael"><a class="footnote-ref" href="#fn:pinchcarmichael">14</a></sup> <span class="arithmatex">\(C(10^9)=646\)</span>，<span class="arithmatex">\(C(10^{18})=1~401~644\)</span>．</p>
 <h2 id="参考资料与注释">参考资料与注释<a class="headerlink" href="#参考资料与注释" title="Permanent link"></a></h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Primitive_root_modulo_n">Primitive root modulo n - Wikipedia</a></li>
@@ -1941,20 +1941,53 @@ n-1=p_1p_2-1\equiv p_2-1 \pmod{p_1-1}.
 <li><a href="https://en.wikipedia.org/wiki/Carmichael_number">Carmichael number - Wikipedia</a></li>
 <li><a href="https://mathworld.wolfram.com/CarmichaelNumber.html">Carmichael Number - Wolfram MathWorld</a></li>
 </ul>
-<p>[^yuan1959note]: Wang Y. "On the least primitive root of a prime." (in Chinese). Acta Math Sinica, 1959, 4: 432–441; English transl. in<em>Sci. Sinica</em>, 1961, 10: 1–14.</p>
-<p>[^burgess1962character]: BURGESS, David A. "On character sums and primitive roots." Proceedings of the London Mathematical Society, 1962, 3.1: 179-192.</p>
-<p>[^cohen1974least]: Cohen, S. D., R. W. K. Odoni, and W. W. Stothers. "On the least primitive root modulo p 2." Bulletin of the London Mathematical Society 6, no. 1 (1974): 42-46.</p>
-<p>[^elliott1998least]: Elliott, P. D. T. A., and L. Murata. "The least primitive root mod 2p2." Mathematika 45, no. 2 (1998): 371-379.</p>
-<p>[^fridlender1949least]: FRIDLENDER, V. R. "On the least n-th power non-residue." Dokl. Akad. Nauk SSSR. 1949. p. 351-352.</p>
-<p>[^salie1949kleinsten]: SALIÉ, Hans. "Über den kleinsten positiven quadratischen Nichtrest nach einer Primzahl." Mathematische Nachrichten, 1949, 3.1: 7-8.</p>
-<p>[^burgess1968average]: Burgess, D. A., and P. D. T. A. Elliott. "The average of the least primitive root." Mathematika 15, no. 1 (1968): 39-50.</p>
-<p>[^elliott1997average]: Elliott, Peter DTA, and Leo Murata. "On the average of the least primitive root modulo p." Journal of The london Mathematical Society 56, no. 3 (1997): 435-454.</p>
-<p>[^more-evidence]: 更多结果可以参考 <a href="https://sweet.ua.pt/tos/p_roots.html">Least prime primitive root of prime numbers</a>．</p>
-<p>[^density-prim-root]: 如果模 <span class="arithmatex">\(m\)</span> 的原根存在，那么，<span class="arithmatex">\(\varphi(m)\ge\dfrac{1}{3}m\)</span>，且等号仅在 <span class="arithmatex">\(m=2\times 3^e~(e\in\mathbf N_+)\)</span> 处取得．进一步地，当 <span class="arithmatex">\(m &gt; 2\)</span> 时，对欧拉函数 <span class="arithmatex">\(\varphi(m)\)</span> 有估计：<span class="arithmatex">\(\varphi(m)&gt;\dfrac{m}{e^{\gamma}\log\log m+\frac{3}{\log\log m}}\)</span>．将这两者结合，就得到文中的表达式．关于欧拉函数的该估计，可以参考论文 Rosser, J. Barkley, and Lowell Schoenfeld. "Approximate formulas for some functions of prime numbers." Illinois Journal of Mathematics 6, no. 1 (1962): 64-94．</p>
-<p>[^korselt1899probleme]: Korselt, A. R. (1899). "Problème chinois." L'Intermédiaire des Mathématiciens. 6: 142–143.</p>
-<p>[^alford1994infinitely]: W. R. Alford; Andrew Granville; Carl Pomerance (1994). "There are Infinitely Many Carmichael Numbers." Annals of Mathematics. 140 (3): 703–722.</p>
-<p>[^erdos1956pseudoprimes]: Erdős, P. (1956). "On pseudoprimes and Carmichael numbers." Publ. Math. Debrecen. 4 (3–4): 201–206.</p>
-<p>[^pinchcarmichael]: PINCH, Richard GE. The Carmichael numbers up to <span class="arithmatex">\({10}^{20}\)</span>.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:yuan1959note">
+<p>Wang Y. "On the least primitive root of a prime." (in Chinese). Acta Math Sinica, 1959, 4: 432–441; English transl. in<em>Sci. Sinica</em>, 1961, 10: 1–14.&#160;<a class="footnote-backref" href="#fnref:yuan1959note" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:burgess1962character">
+<p>BURGESS, David A. "On character sums and primitive roots." Proceedings of the London Mathematical Society, 1962, 3.1: 179-192.&#160;<a class="footnote-backref" href="#fnref:burgess1962character" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:cohen1974least">
+<p>Cohen, S. D., R. W. K. Odoni, and W. W. Stothers. "On the least primitive root modulo p 2." Bulletin of the London Mathematical Society 6, no. 1 (1974): 42-46.&#160;<a class="footnote-backref" href="#fnref:cohen1974least" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:elliott1998least">
+<p>Elliott, P. D. T. A., and L. Murata. "The least primitive root mod 2p2." Mathematika 45, no. 2 (1998): 371-379.&#160;<a class="footnote-backref" href="#fnref:elliott1998least" title="Jump back to footnote 4 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:elliott1998least" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+<li id="fn:fridlender1949least">
+<p>FRIDLENDER, V. R. "On the least n-th power non-residue." Dokl. Akad. Nauk SSSR. 1949. p. 351-352.&#160;<a class="footnote-backref" href="#fnref:fridlender1949least" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:salie1949kleinsten">
+<p>SALIÉ, Hans. "Über den kleinsten positiven quadratischen Nichtrest nach einer Primzahl." Mathematische Nachrichten, 1949, 3.1: 7-8.&#160;<a class="footnote-backref" href="#fnref:salie1949kleinsten" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+</li>
+<li id="fn:burgess1968average">
+<p>Burgess, D. A., and P. D. T. A. Elliott. "The average of the least primitive root." Mathematika 15, no. 1 (1968): 39-50.&#160;<a class="footnote-backref" href="#fnref:burgess1968average" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:elliott1997average">
+<p>Elliott, Peter DTA, and Leo Murata. "On the average of the least primitive root modulo p." Journal of The london Mathematical Society 56, no. 3 (1997): 435-454.&#160;<a class="footnote-backref" href="#fnref:elliott1997average" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:more-evidence">
+<p>更多结果可以参考 <a href="https://sweet.ua.pt/tos/p_roots.html">Least prime primitive root of prime numbers</a>．&#160;<a class="footnote-backref" href="#fnref:more-evidence" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
+<li id="fn:density-prim-root">
+<p>如果模 <span class="arithmatex">\(m\)</span> 的原根存在，那么，<span class="arithmatex">\(\varphi(m)\ge\dfrac{1}{3}m\)</span>，且等号仅在 <span class="arithmatex">\(m=2\times 3^e~(e\in\mathbf N_+)\)</span> 处取得．进一步地，当 <span class="arithmatex">\(m &gt; 2\)</span> 时，对欧拉函数 <span class="arithmatex">\(\varphi(m)\)</span> 有估计：<span class="arithmatex">\(\varphi(m)&gt;\dfrac{m}{e^{\gamma}\log\log m+\frac{3}{\log\log m}}\)</span>．将这两者结合，就得到文中的表达式．关于欧拉函数的该估计，可以参考论文 Rosser, J. Barkley, and Lowell Schoenfeld. "Approximate formulas for some functions of prime numbers." Illinois Journal of Mathematics 6, no. 1 (1962): 64-94．&#160;<a class="footnote-backref" href="#fnref:density-prim-root" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:korselt1899probleme">
+<p>Korselt, A. R. (1899). "Problème chinois." L'Intermédiaire des Mathématiciens. 6: 142–143.&#160;<a class="footnote-backref" href="#fnref:korselt1899probleme" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
+<li id="fn:alford1994infinitely">
+<p>W. R. Alford; Andrew Granville; Carl Pomerance (1994). "There are Infinitely Many Carmichael Numbers." Annals of Mathematics. 140 (3): 703–722.&#160;<a class="footnote-backref" href="#fnref:alford1994infinitely" title="Jump back to footnote 12 in the text">&#8617;</a></p>
+</li>
+<li id="fn:erdos1956pseudoprimes">
+<p>Erdős, P. (1956). "On pseudoprimes and Carmichael numbers." Publ. Math. Debrecen. 4 (3–4): 201–206.&#160;<a class="footnote-backref" href="#fnref:erdos1956pseudoprimes" title="Jump back to footnote 13 in the text">&#8617;</a></p>
+</li>
+<li id="fn:pinchcarmichael">
+<p>PINCH, Richard GE. The Carmichael numbers up to <span class="arithmatex">\({10}^{20}\)</span>.&#160;<a class="footnote-backref" href="#fnref:pinchcarmichael" title="Jump back to footnote 14 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -2011,7 +2044,7 @@ n-1=p_1p_2-1\equiv p_2-1 \pmod{p_1-1}.
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

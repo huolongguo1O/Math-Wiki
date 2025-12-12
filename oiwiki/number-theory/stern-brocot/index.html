@@ -1430,7 +1430,7 @@
 \frac{0}{1},\ \frac{1}{0}.
 \]</div>
 <p>此处的 <span class="arithmatex">\(\dfrac{1}{0}\)</span> 严格意义上并不算是有理分数，可以理解为表示 <span class="arithmatex">\(\infty\)</span> 的最简分数。</p>
-<p>在第 <span class="arithmatex">\(k\)</span> 阶 Stern–Brocot 序列相邻的两个分数 <span class="arithmatex">\(\dfrac{a}{b}\)</span> 和 <span class="arithmatex">\(\dfrac{c}{d}\)</span> 中间插入它们的中位分数（mediant）[^mediant]<span class="arithmatex">\(\dfrac{a+c}{b+d}\)</span>，就得到第 <span class="arithmatex">\(k+1\)</span> 阶 Stern–Brocot 序列。尽管中位分数的定义本身允许分数的约分，但是在 Stern–Brocot 树的构造中，只需要直接将分子和分母分别相加即可，而不必担心约分的问题。由此，可以迭代地构造出所有阶的 Stern–Brocot 序列。前几次迭代的结果如下：</p>
+<p>在第 <span class="arithmatex">\(k\)</span> 阶 Stern–Brocot 序列相邻的两个分数 <span class="arithmatex">\(\dfrac{a}{b}\)</span> 和 <span class="arithmatex">\(\dfrac{c}{d}\)</span> 中间插入它们的中位分数（mediant）<sup id="fnref:mediant"><a class="footnote-ref" href="#fn:mediant">1</a></sup><span class="arithmatex">\(\dfrac{a+c}{b+d}\)</span>，就得到第 <span class="arithmatex">\(k+1\)</span> 阶 Stern–Brocot 序列。尽管中位分数的定义本身允许分数的约分，但是在 Stern–Brocot 树的构造中，只需要直接将分子和分母分别相加即可，而不必担心约分的问题。由此，可以迭代地构造出所有阶的 Stern–Brocot 序列。前几次迭代的结果如下：</p>
 <div class="arithmatex">\[
 \begin{array}{ccccccccc}
 &amp;&amp;&amp;\dfrac{0}{1}, &amp; \dfrac{1}{1}, &amp; \dfrac{1}{0} &amp;&amp;&amp;\\\\
@@ -1773,7 +1773,14 @@ q_k &amp;= \left\lfloor\frac{n + q_{k-2}}{q_{k-1}}\right\rfloor q_{k-1} - q_{k-2
 <li><a href="https://en.wikipedia.org/wiki/Farey_sequence">Farey sequence - Wikipedia</a></li>
 </ul>
 <p><strong>本页面部分内容译自博文 <a href="http://e-maxx.ru/algo/stern_brocot_farey">Дерево Штерна-Броко. Ряд Фарея</a> 与其英文翻译版 <a href="https://cp-algorithms.com/others/stern_brocot_tree_farey_sequences.html">The Stern-Brocot Tree and Farey Sequences</a>。其中俄文版版权协议为 Public Domain + Leave a Link；英文版版权协议为 CC-BY-SA 4.0。本页面另有部分内容译自博文 <a href="https://cp-algorithms.com/algebra/continued-fractions.html">Continued fractions</a>，版权协议为 CC-BY-SA 4.0。内容均有改动。</strong></p>
-<p>[^mediant]: 译名来自张明尧、张凡翻译的《具体数学》第 4.5 节。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:mediant">
+<p>译名来自张明尧、张凡翻译的《具体数学》第 4.5 节。&#160;<a class="footnote-backref" href="#fnref:mediant" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1830,7 +1837,7 @@ q_k &amp;= \left\lfloor\frac{n + q_{k-2}}{q_{k-1}}\right\rfloor q_{k-1} - q_{k-2
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

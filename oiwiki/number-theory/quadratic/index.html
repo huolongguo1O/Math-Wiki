@@ -1623,7 +1623,7 @@ x = \kappa(u^2-v^2),\ y = 2\kappa uv,\ z = \kappa(u^2+v^2).
 <p>根据上面的过程可以知道，本原勾股数 <span class="arithmatex">\((x,y,z)\)</span>（即 <span class="arithmatex">\(x,y,z\)</span> 公因子为一）中的 <span class="arithmatex">\(x,y\)</span> 必然一奇一偶，<span class="arithmatex">\(z\)</span> 是奇数且只含有 <span class="arithmatex">\(4k+1\)</span> 型素因子。</p>
 <p>利用类似的方法还可以得到方程 <span class="arithmatex">\(x^2+y^2=z^3\)</span> 的通解，或者证明方程 <span class="arithmatex">\(x^4+y^4=z^4\)</span> 无解。当然，利用勾股方程的通解和无穷递降法，可以证明更强的结论，即方程 <span class="arithmatex">\(x^4+y^4=z^2\)</span> 无解。</p>
 <h2 id="eisenstein-整数">Eisenstein 整数<a class="headerlink" href="#eisenstein-整数" title="Permanent link"></a></h2>
-<p>本节中，令 <span class="arithmatex">\(\omega=\dfrac{-1+\sqrt{3}\mathrm{i}}{2}=e^{2\pi\mathrm{i}/3}\)</span>。[^omega]二次域 <span class="arithmatex">\(\mathbf Q(\sqrt{3}\mathrm{i})\)</span> 是三次和六次 <a href="../../algebra/field-theory/#分圆域">分圆域</a>，其中的代数整数称为 Eisenstein 整数。全体 Eisenstein 整数构成的环 <span class="arithmatex">\(\mathbf Z[\omega]\)</span> 称为 Eisenstein 整数环。Eisenstein 整数环的单位数共六个，分别是 <span class="arithmatex">\(\pm 1\)</span>，<span class="arithmatex">\(\pm\omega\)</span> 和 <span class="arithmatex">\(\pm\omega^2\)</span>。在复平面上，所有 Eisenstein 整数构成三角形的格点。与 Gauss 整数不同，此处的格点一般不是整点。</p>
+<p>本节中，令 <span class="arithmatex">\(\omega=\dfrac{-1+\sqrt{3}\mathrm{i}}{2}=e^{2\pi\mathrm{i}/3}\)</span>。<sup id="fnref:omega"><a class="footnote-ref" href="#fn:omega">1</a></sup>二次域 <span class="arithmatex">\(\mathbf Q(\sqrt{3}\mathrm{i})\)</span> 是三次和六次 <a href="../../algebra/field-theory/#分圆域">分圆域</a>，其中的代数整数称为 Eisenstein 整数。全体 Eisenstein 整数构成的环 <span class="arithmatex">\(\mathbf Z[\omega]\)</span> 称为 Eisenstein 整数环。Eisenstein 整数环的单位数共六个，分别是 <span class="arithmatex">\(\pm 1\)</span>，<span class="arithmatex">\(\pm\omega\)</span> 和 <span class="arithmatex">\(\pm\omega^2\)</span>。在复平面上，所有 Eisenstein 整数构成三角形的格点。与 Gauss 整数不同，此处的格点一般不是整点。</p>
 <p><img alt="" src="../images/eisenstein-integer.svg" /></p>
 <p>Eisenstein 整数的范数为</p>
 <div class="arithmatex">\[
@@ -1682,7 +1682,14 @@ x^2+3y^2=z^3
 <li><a href="http://www.fen.bilkent.edu.tr/~franz/ant/ant02.pdf">Franz Lemmermeyer's Notes on Ideals in Quadratic Number Fields</a></li>
 <li><a href="https://www.jmilne.org/math/CourseNotes/ANT301.pdf">J.S. Milne - Algebraic Number Theory</a></li>
 </ul>
-<p>[^omega]: 注意，此处 <span class="arithmatex">\(\omega\)</span> 的选择与上文的选择并不相同。按照惯例，在讨论一般的二次整数环时常规定 <span class="arithmatex">\(\omega=(1+\sqrt{d})/2\)</span>（当 <span class="arithmatex">\(d\equiv 1\pmod4\)</span> 时），而对于 Eisenstein 整数环又往往规定 <span class="arithmatex">\(\omega=(-1+\sqrt{-3})/2\)</span>。这个区别没有任何实质影响，但是可能会引起部分表达式的形式改变。注意，不应将 Eisenstein 整数环写成 <span class="arithmatex">\(\mathbf Z[\sqrt{-3}]\)</span>。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:omega">
+<p>注意，此处 <span class="arithmatex">\(\omega\)</span> 的选择与上文的选择并不相同。按照惯例，在讨论一般的二次整数环时常规定 <span class="arithmatex">\(\omega=(1+\sqrt{d})/2\)</span>（当 <span class="arithmatex">\(d\equiv 1\pmod4\)</span> 时），而对于 Eisenstein 整数环又往往规定 <span class="arithmatex">\(\omega=(-1+\sqrt{-3})/2\)</span>。这个区别没有任何实质影响，但是可能会引起部分表达式的形式改变。注意，不应将 Eisenstein 整数环写成 <span class="arithmatex">\(\mathbf Z[\sqrt{-3}]\)</span>。&#160;<a class="footnote-backref" href="#fnref:omega" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1739,7 +1746,7 @@ x^2+3y^2=z^3
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

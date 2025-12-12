@@ -1724,7 +1724,7 @@
 <p>关于公约数、公倍数、最大公约数与最小公倍数，四个名词的定义，见 <a href="../gcd/">最大公约数</a>。</p>
 <details class="warning" open="open">
 <summary>Warning</summary>
-<p>一些作者认为 <span class="arithmatex">\(0\)</span> 和 <span class="arithmatex">\(0\)</span> 的最大公约数无定义，其余作者一般将其视为 <span class="arithmatex">\(0\)</span>。C++ STL 的实现中采用后者，即认为 <span class="arithmatex">\(0\)</span> 和 <span class="arithmatex">\(0\)</span> 的最大公约数为 <span class="arithmatex">\(0\)</span>[^gcdcpp]。</p>
+<p>一些作者认为 <span class="arithmatex">\(0\)</span> 和 <span class="arithmatex">\(0\)</span> 的最大公约数无定义，其余作者一般将其视为 <span class="arithmatex">\(0\)</span>。C++ STL 的实现中采用后者，即认为 <span class="arithmatex">\(0\)</span> 和 <span class="arithmatex">\(0\)</span> 的最大公约数为 <span class="arithmatex">\(0\)</span><sup id="fnref:gcdcpp"><a class="footnote-ref" href="#fn:gcdcpp">2</a></sup>。</p>
 </details>
 <p>最大公约数有如下性质：</p>
 <ul>
@@ -1790,7 +1790,7 @@
 <li>大于 <span class="arithmatex">\(1\)</span> 的整数 <span class="arithmatex">\(a\)</span> 一定可以表示为素数的乘积。</li>
 <li>对于合数 <span class="arithmatex">\(a\)</span>，一定存在素数 <span class="arithmatex">\(p\le\sqrt{a}\)</span> 使得 <span class="arithmatex">\(p\mid a\)</span>。</li>
 <li>素数有无穷多个。</li>
-<li>所有大于 <span class="arithmatex">\(3\)</span> 的素数都可以表示为 <span class="arithmatex">\(6n\pm 1\)</span> 的形式[^ref1]。</li>
+<li>所有大于 <span class="arithmatex">\(3\)</span> 的素数都可以表示为 <span class="arithmatex">\(6n\pm 1\)</span> 的形式<sup id="fnref:ref1"><a class="footnote-ref" href="#fn:ref1">1</a></sup>。</li>
 </ul>
 <h2 id="算术基本定理">算术基本定理<a class="headerlink" href="#算术基本定理" title="Permanent link"></a></h2>
 <details class="note" open="open">
@@ -2136,8 +2136,17 @@ h(x)&amp;=\sum_{d\mid x}f(d)g\left(\dfrac{x}{d}\right)
 <li><a href="https://en.wikipedia.org/wiki/Floor_and_ceiling_functions">Floor and ceiling functions - Wikipedia</a></li>
 <li>Graham, Ronald L., Donald E. Knuth, and Oren Patashnik. "Concrete mathematics: a foundation for computer science." (1989).</li>
 </ul>
-<p>[^ref1]: <a href="https://primes.utm.edu/notes/faq/six.html">Are all primes (past 2 and 3) of the forms 6n+1 and 6n-1?</a></p>
-<p>[^gcdcpp]: <a href="https://en.cppreference.com/w/cpp/numeric/gcd">std::gcd - cppreference.com</a></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:ref1">
+<p><a href="https://primes.utm.edu/notes/faq/six.html">Are all primes (past 2 and 3) of the forms 6n+1 and 6n-1?</a>&#160;<a class="footnote-backref" href="#fnref:ref1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:gcdcpp">
+<p><a href="https://en.cppreference.com/w/cpp/numeric/gcd">std::gcd - cppreference.com</a>&#160;<a class="footnote-backref" href="#fnref:gcdcpp" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -2194,7 +2203,7 @@ h(x)&amp;=\sum_{d\mid x}f(d)g\left(\dfrac{x}{d}\right)
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

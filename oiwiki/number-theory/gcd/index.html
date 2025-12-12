@@ -1853,7 +1853,7 @@
 <p>另外，对于 C++17，我们可以使用 <a href="https://en.cppreference.com/w/cpp/header/numeric"><code>&lt;numeric&gt;</code></a> 头中的 <a href="https://en.cppreference.com/w/cpp/numeric/gcd"><code>std::gcd</code></a> 与 <a href="https://en.cppreference.com/w/cpp/numeric/lcm"><code>std::lcm</code></a> 来求最大公约数和最小公倍数。</p>
 <details class="warning" open="open">
 <summary>注意</summary>
-<p>在部分编译器中，C++14 中可以用 <code>std::__gcd(a,b)</code> 函数来求最大公约数，但是其仅作为 <code>std::rotate</code> 的私有辅助函数。[^1]使用该函数可能会导致预期之外的问题，故一般情况下不推荐使用。</p>
+<p>在部分编译器中，C++14 中可以用 <code>std::__gcd(a,b)</code> 函数来求最大公约数，但是其仅作为 <code>std::rotate</code> 的私有辅助函数。<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>使用该函数可能会导致预期之外的问题，故一般情况下不推荐使用。</p>
 </details>
 <p>如果两个数 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 满足 <span class="arithmatex">\(\gcd(a, b) = 1\)</span>，我们称 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span> 互质。</p>
 <h4 id="性质">性质<a class="headerlink" href="#性质" title="Permanent link"></a></h4>
@@ -2240,7 +2240,14 @@ a\\b
 <li><a href="https://uva.onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=4628">UVa - 12775 - Gift Dilemma</a></li>
 </ul>
 <h2 id="参考资料与链接">参考资料与链接<a class="headerlink" href="#参考资料与链接" title="Permanent link"></a></h2>
-<p>[^1]: <a href="https://gcc.gnu.org/onlinedocs/libstdc++/libstdc++-html-USERS-4.4/a00978.html#a2686a128df5a576cb53a1ed5f674607">libstdc++: std Namespace Reference</a></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://gcc.gnu.org/onlinedocs/libstdc++/libstdc++-html-USERS-4.4/a00978.html#a2686a128df5a576cb53a1ed5f674607">libstdc++: std Namespace Reference</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -2297,7 +2304,7 @@ a\\b
       
         <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
-        <script src="../../../assets/vendor/mathjax/tex-mml-chtml.js?math-csr"></script>
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
