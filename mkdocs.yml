@@ -3,6 +3,7 @@ site_name: Math-wiki
 theme:
   name: material
   features:
+    - navigation.expand
     - navigation.tabs
 
 markdown_extensions:
@@ -10,14 +11,15 @@ markdown_extensions:
       generic: true
 
 extra_javascript:
-  - javascripts/mathjax.js
+  # - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
   - 简介: index.md
   - 不等式:
     - 最最最基本的不等关系: ineq/index.md
-    - 均值不等式: am-gm.md
+    - 均值不等式: ineq/am-gm.md
+    - 柯西不等式: ineq/cauchy.md
   - 数论:
     - 基础知识: oiwiki/number-theory/basic.md
     - 模运算: oiwiki/number-theory/mod-arithmetic.md
