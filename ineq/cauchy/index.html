@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../am-gm/">
       
       
-        <link rel="next" href="../cauchy/">
+        <link rel="next" href="../../oiwiki/number-theory/basic/">
       
       
         
@@ -23,7 +23,7 @@
     
     
       
-        <title>均值不等式 - Math-wiki</title>
+        <title>柯西不等式 - Math-wiki</title>
       
     
     
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              均值不等式
+              柯西不等式
             
           </span>
         </div>
@@ -393,6 +393,34 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../am-gm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    均值不等式
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -412,7 +440,7 @@
   <span class="md-ellipsis">
     
   
-    均值不等式
+    柯西不等式
   
 
     
@@ -430,7 +458,7 @@
   <span class="md-ellipsis">
     
   
-    均值不等式
+    柯西不等式
   
 
     
@@ -459,7 +487,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        一、引言
+        引言
       
     </span>
   </a>
@@ -470,42 +498,47 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        二、二元均值不等式
+        一般形式
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="二、二元均值不等式">
+    <nav class="md-nav" aria-label="一般形式">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        定理1（基本形式）
+        定理1（柯西不等式）
       
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        证明
+        证明方法
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="证明">
+    <nav class="md-nav" aria-label="证明方法">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#1_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        方法1：代数证明
+        证明1：判别式法
       
     </span>
   </a>
@@ -516,15 +549,21 @@
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        方法2：几何证明
+        证明2：拉格朗日恒等式
       
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        证明3：向量内积
+      
+    </span>
+  </a>
   
 </li>
         
@@ -534,64 +573,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#n" class="md-nav__link">
+  <a href="#t2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        三、n元均值不等式
+        T2引理
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="三、n元均值不等式">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        向量形式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="向量形式">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#2_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        定理2（一般形式）
+        定理2（向量形式）
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        证明（倒向归纳法）
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="证明（倒向归纳法）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a_n-geq-g_n" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第一步：先证明 \( A_n \geq G_n \)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#g_n-geq-h_n" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第二步：证明 \( G_n \geq H_n \)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -604,41 +615,30 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        四、幂平均不等式
+        积分形式
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="四、幂平均不等式">
+    <nav class="md-nav" aria-label="积分形式">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定理3（积分形式）
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        定义
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        定理3（幂平均不等式）
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        证明思路
+        证明
       
     </span>
   </a>
@@ -651,22 +651,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        五、加强均值不等式
+        拉格朗日恒等式
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="五、加强均值不等式">
+    <nav class="md-nav" aria-label="拉格朗日恒等式">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        定理4（加权均值不等式）
+        定理4（拉格朗日恒等式）
       
     </span>
   </a>
@@ -674,10 +674,160 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几何意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       
-        证明
+        赫尔德不等式（推广）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="赫尔德不等式（推广）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定理5（赫尔德不等式）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        证明思路
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特殊情形
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        积分形式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        闵可夫斯基不等式（进一步推广）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="闵可夫斯基不等式（进一步推广）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定理6（闵可夫斯基不等式）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几何意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用1：证明不等式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用2：极值问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用3：概率论
       
     </span>
   </a>
@@ -693,34 +843,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../cauchy/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    柯西不等式
-  
-
-    
-  </span>
-  
-  
-
-      </a>
     </li>
   
 
@@ -1385,7 +1507,7 @@
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        一、引言
+        引言
       
     </span>
   </a>
@@ -1396,42 +1518,47 @@
   <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        二、二元均值不等式
+        一般形式
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="二、二元均值不等式">
+    <nav class="md-nav" aria-label="一般形式">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        定理1（基本形式）
+        定理1（柯西不等式）
       
     </span>
   </a>
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        证明
+        证明方法
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="证明">
+    <nav class="md-nav" aria-label="证明方法">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#1_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        方法1：代数证明
+        证明1：判别式法
       
     </span>
   </a>
@@ -1442,15 +1569,21 @@
   <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        方法2：几何证明
+        证明2：拉格朗日恒等式
       
     </span>
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        证明3：向量内积
+      
+    </span>
+  </a>
   
 </li>
         
@@ -1460,64 +1593,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#n" class="md-nav__link">
+  <a href="#t2" class="md-nav__link">
     <span class="md-ellipsis">
       
-        三、n元均值不等式
+        T2引理
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="三、n元均值不等式">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        向量形式
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="向量形式">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#2_1" class="md-nav__link">
     <span class="md-ellipsis">
       
-        定理2（一般形式）
+        定理2（向量形式）
       
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        证明（倒向归纳法）
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="证明（倒向归纳法）">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#a_n-geq-g_n" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第一步：先证明 \( A_n \geq G_n \)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#g_n-geq-h_n" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        第二步：证明 \( G_n \geq H_n \)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -1530,41 +1635,30 @@
   <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
       
-        四、幂平均不等式
+        积分形式
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="四、幂平均不等式">
+    <nav class="md-nav" aria-label="积分形式">
       <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定理3（积分形式）
+      
+    </span>
+  </a>
+  
+</li>
         
           <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     <span class="md-ellipsis">
       
-        定义
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        定理3（幂平均不等式）
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        证明思路
+        证明
       
     </span>
   </a>
@@ -1577,22 +1671,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     <span class="md-ellipsis">
       
-        五、加强均值不等式
+        拉格朗日恒等式
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="五、加强均值不等式">
+    <nav class="md-nav" aria-label="拉格朗日恒等式">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#4" class="md-nav__link">
     <span class="md-ellipsis">
       
-        定理4（加权均值不等式）
+        定理4（拉格朗日恒等式）
       
     </span>
   </a>
@@ -1600,10 +1694,160 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几何意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
     <span class="md-ellipsis">
       
-        证明
+        赫尔德不等式（推广）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="赫尔德不等式（推广）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定理5（赫尔德不等式）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        证明思路
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特殊情形
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        积分形式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        闵可夫斯基不等式（进一步推广）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="闵可夫斯基不等式（进一步推广）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        定理6（闵可夫斯基不等式）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        几何意义
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="应用">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用1：证明不等式
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用2：极值问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用3：概率论
       
     </span>
   </a>
@@ -1632,91 +1876,112 @@
 
 
 
-<h1 id="_1">均值不等式</h1>
-<h2 id="_2">一、引言</h2>
-<p>均值不等式是初等数学中最基本、最重要的一组不等式，它揭示了算术平均、几何平均、调和平均以及平方平均之间的大小关系。</p>
-<h2 id="_3">二、二元均值不等式</h2>
-<h3 id="1">定理1（基本形式）</h3>
-<p>对于任意两个正实数 <span class="arithmatex">\( a, b \)</span>，有：
+<h1 id="_1">柯西不等式</h1>
+<h2 id="_2">引言</h2>
+<p>柯西不等式是数学中最重要的不等式之一，由法国数学家奥古斯丁·路易·柯西于1821年提出，在分析学、线性代数、概率论等领域有广泛应用。</p>
+<h2 id="_3">一般形式</h2>
+<h3 id="1">定理1（柯西不等式）</h3>
+<p>设 <span class="arithmatex">\( a_1, a_2, \dots, a_n \)</span> 和 <span class="arithmatex">\( b_1, b_2, \dots, b_n \)</span> 是实数，则：
 [
-\frac{a+b}{2} \geq \sqrt{ab} \geq \frac{2}{\frac{1}{a}+\frac{1}{b}}
+\left(\sum_{i=1}^n a_i^2\right)\left(\sum_{i=1}^n b_i^2\right) \geq \left(\sum_{i=1}^n a_i b_i\right)^2
 ]
-等号成立当且仅当 <span class="arithmatex">\( a = b \)</span>。</p>
-<h3 id="_4">证明</h3>
-<p>此不等式证明方法颇多，这里进列举常见的几个，详见小蓝本第四册。</p>
-<h4 id="1_1">方法1：代数证明</h4>
-<p>[
-\frac{a+b}{2} - \sqrt{ab} = \frac{(\sqrt{a}-\sqrt{b})^2}{2} \geq 0
-]
-因此 <span class="arithmatex">\(\frac{a+b}{2} \geq \sqrt{ab}\)</span>。</p>
-<p>同理，由 <span class="arithmatex">\(\sqrt{ab} \geq \frac{2}{\frac{1}{a}+\frac{1}{b}}\)</span> 等价于：
+等号成立当且仅当 <span class="arithmatex">\( a_i \)</span> 与 <span class="arithmatex">\( b_i \)</span> 成比例，即存在常数 <span class="arithmatex">\( k \)</span> 使得 <span class="arithmatex">\( a_i = k b_i \)</span> (对所有 <span class="arithmatex">\( i \)</span>)，或所有 <span class="arithmatex">\( b_i = 0 \)</span>。</p>
+<h2 id="_4">证明方法</h2>
+<h3 id="1_1">证明1：判别式法</h3>
+<p>考虑二次函数：
 [
-\sqrt{ab}(\frac{1}{a}+\frac{1}{b}) \geq 2 \Leftrightarrow \sqrt{\frac{a}{b}} + \sqrt{\frac{b}{a}} \geq 2
+f(x) = \sum_{i=1}^n (a_i x - b_i)^2 = \left(\sum_{i=1}^n a_i^2\right)x^2 - 2\left(\sum_{i=1}^n a_i b_i\right)x + \sum_{i=1}^n b_i^2 \geq 0
 ]
-令 <span class="arithmatex">\( t = \sqrt{\frac{a}{b}} &gt; 0 \)</span>，则 <span class="arithmatex">\( t + \frac{1}{t} \geq 2 \)</span>，显然成立。</p>
-<h4 id="2">方法2：几何证明</h4>
-<p>构造以 <span class="arithmatex">\( a+b \)</span> 为直径的半圆，利用相似三角形性质证明。</p>
-<h2 id="n">三、n元均值不等式</h2>
-<h3 id="2_1">定理2（一般形式）</h3>
-<p>设 <span class="arithmatex">\( a_1, a_2, \dots, a_n &gt; 0 \)</span>，定义：
-- 算术平均：<span class="arithmatex">\( A_n = \frac{a_1 + a_2 + \dots + a_n}{n} \)</span>
-- 几何平均：<span class="arithmatex">\( G_n = \sqrt[n]{a_1 a_2 \dots a_n} \)</span>
-- 调和平均：<span class="arithmatex">\( H_n = \frac{n}{\frac{1}{a_1} + \frac{1}{a_2} + \dots + \frac{1}{a_n}} \)</span></p>
-<p>则有：
+由于 <span class="arithmatex">\( f(x) \geq 0 \)</span> 对任意实数 <span class="arithmatex">\( x \)</span> 成立，故判别式：
 [
-A_n \geq G_n \geq H_n
+\Delta = 4\left(\sum_{i=1}^n a_i b_i\right)^2 - 4\left(\sum_{i=1}^n a_i^2\right)\left(\sum_{i=1}^n b_i^2\right) \leq 0
 ]
-等号成立当且仅当 <span class="arithmatex">\( a_1 = a_2 = \dots = a_n \)</span>。</p>
-<h3 id="_5">证明（倒向归纳法）</h3>
-<h4 id="a_n-geq-g_n">第一步：先证明 <span class="arithmatex">\( A_n \geq G_n \)</span></h4>
-<p><strong>引理</strong>：若不等式对 <span class="arithmatex">\( n=2 \)</span> 成立，且对某个 <span class="arithmatex">\( n \)</span> 成立，则对 <span class="arithmatex">\( 2n \)</span> 也成立。</p>
-<p>由归纳假设，对 <span class="arithmatex">\( 2n \)</span> 个数：
+即得不等式。</p>
+<h3 id="2">证明2：拉格朗日恒等式</h3>
+<p>直接计算：
 [
-\frac{a_1+\dots+a_{2n}}{2n} = \frac{1}{2}\left(\frac{a_1+\dots+a_n}{n} + \frac{a_{n+1}+\dots+a_{2n}}{n}\right)
-\geq \sqrt{\frac{a_1+\dots+a_n}{n} \cdot \frac{a_{n+1}+\dots+a_{2n}}{n}}
+\left(\sum_{i=1}^n a_i^2\right)\left(\sum_{i=1}^n b_i^2\right) - \left(\sum_{i=1}^n a_i b_i\right)^2 = \sum_{1 \leq i &lt; j \leq n} (a_i b_j - a_j b_i)^2 \geq 0
 ]
-又由 <span class="arithmatex">\( n \)</span> 元均值不等式：
+这个恒等式称为拉格朗日恒等式。</p>
+<h3 id="3">证明3：向量内积</h3>
+<p>在欧几里得空间中，由内积性质：
 [
-\frac{a_1+\dots+a_n}{n} \geq \sqrt[n]{a_1\dots a_n}, \quad \frac{a_{n+1}+\dots+a_{2n}}{n} \geq \sqrt[n]{a_{n+1}\dots a_{2n}}
+|\vec{a} \cdot \vec{b}| \leq |\vec{a}| \cdot |\vec{b}|
 ]
-故：
+即：
 [
-\frac{a_1+\dots+a_{2n}}{2n} \geq \sqrt[2n]{a_1\dots a_{2n}}
+\left|\sum_{i=1}^n a_i b_i\right| \leq \sqrt{\sum_{i=1}^n a_i^2} \cdot \sqrt{\sum_{i=1}^n b_i^2}
 ]</p>
-<p><strong>反向归纳</strong>：若对 <span class="arithmatex">\( n \)</span> 成立，则对 <span class="arithmatex">\( n-1 \)</span> 也成立。</p>
-<p>取 <span class="arithmatex">\( a_n = \frac{a_1+\dots+a_{n-1}}{n-1} \)</span>，代入 <span class="arithmatex">\( n \)</span> 元不等式即可得证。</p>
-<h4 id="g_n-geq-h_n">第二步：证明 <span class="arithmatex">\( G_n \geq H_n \)</span></h4>
-<p>对 <span class="arithmatex">\( \frac{1}{a_1}, \frac{1}{a_2}, \dots, \frac{1}{a_n} \)</span> 应用 <span class="arithmatex">\( A_n \geq G_n \)</span> 即得。</p>
-<h2 id="_6">四、幂平均不等式</h2>
-<h3 id="_7">定义</h3>
-<p>设 <span class="arithmatex">\( a_1, a_2, \dots, a_n &gt; 0 \)</span>，定义 <span class="arithmatex">\( r \)</span> 次幂平均：
+<h2 id="t2">T2引理</h2>
+<p>此引理在国内一般被称为柯西不等式的变形。</p>
+<h2 id="_5">向量形式</h2>
+<h3 id="2_1">定理2（向量形式）</h3>
+<p>设 <span class="arithmatex">\( \vec{a} = (a_1, a_2, \dots, a_n) \)</span>, <span class="arithmatex">\( \vec{b} = (b_1, b_2, \dots, b_n) \)</span> 为 <span class="arithmatex">\( n \)</span> 维实向量，则：
 [
-M_r = 
-\begin{cases}
-\left(\frac{a_1^r + a_2^r + \dots + a_n^r}{n}\right)^{1/r}, &amp; r \neq 0 \
-\sqrt[n]{a_1 a_2 \dots a_n}, &amp; r = 0
-\end{cases}
-]</p>
-<h3 id="3">定理3（幂平均不等式）</h3>
-<p>若 <span class="arithmatex">\( r &lt; s \)</span>，则 <span class="arithmatex">\( M_r \leq M_s \)</span>，等号成立当且仅当所有 <span class="arithmatex">\( a_i \)</span> 相等。</p>
-<h3 id="_8">证明思路</h3>
+|\vec{a} \cdot \vec{b}| \leq |\vec{a}| \cdot |\vec{b}|
+]
+等号成立当且仅当 <span class="arithmatex">\( \vec{a} \)</span> 与 <span class="arithmatex">\( \vec{b} \)</span> 线性相关。</p>
+<h2 id="_6">积分形式</h2>
+<h3 id="3_1">定理3（积分形式）</h3>
+<p>设 <span class="arithmatex">\( f(x), g(x) \)</span> 在区间 <span class="arithmatex">\([a,b]\)</span> 上可积，则：
+[
+\left(\int_a^b f(x)g(x)dx\right)^2 \leq \int_a^b f^2(x)dx \cdot \int_a^b g^2(x)dx
+]
+等号成立当且仅当存在常数 <span class="arithmatex">\( k \)</span> 使得 <span class="arithmatex">\( f(x) = k g(x) \)</span> 几乎处处成立。</p>
+<h3 id="_7">证明</h3>
+<p>考虑积分：
+[
+\int_a^b [f(x) - \lambda g(x)]^2 dx \geq 0
+]
+展开后得到关于 <span class="arithmatex">\( \lambda \)</span> 的二次式，判别式非正。</p>
+<h2 id="_8">拉格朗日恒等式</h2>
+<h3 id="4">定理4（拉格朗日恒等式）</h3>
+<div class="arithmatex">\[
+\left(\sum_{i=1}^n a_i^2\right)\left(\sum_{i=1}^n b_i^2\right) - \left(\sum_{i=1}^n a_i b_i\right)^2 = \sum_{1 \leq i &lt; j \leq n} (a_i b_j - a_j b_i)^2
+\]</div>
+<h3 id="_9">几何意义</h3>
+<p>在三维空间中，该恒等式等价于：
+[
+|\vec{a}|^2 |\vec{b}|^2 - (\vec{a} \cdot \vec{b})^2 = |\vec{a} \times \vec{b}|^2
+]
+即向量模的平方与夹角正弦的关系。</p>
+<h2 id="_10">赫尔德不等式（推广）</h2>
+<h3 id="5">定理5（赫尔德不等式）</h3>
+<p>设 <span class="arithmatex">\( a_i, b_i &gt; 0 \)</span> (<span class="arithmatex">\( i=1,\dots,n \)</span>)，<span class="arithmatex">\( p,q &gt; 1 \)</span> 且 <span class="arithmatex">\( \frac{1}{p} + \frac{1}{q} = 1 \)</span>，则：
+[
+\sum_{i=1}^n a_i b_i \leq \left(\sum_{i=1}^n a_i^p\right)^{\frac{1}{p}} \left(\sum_{i=1}^n b_i^q\right)^{\frac{1}{q}}
+]
+等号成立当且仅当 <span class="arithmatex">\( a_i^p \)</span> 与 <span class="arithmatex">\( b_i^q \)</span> 成比例。</p>
+<h3 id="_11">证明思路</h3>
 <ol>
-<li>先证明 <span class="arithmatex">\( M_r \)</span> 是 <span class="arithmatex">\( r \)</span> 的增函数</li>
-<li>利用凸函数性质（Jensen不等式）</li>
-<li>特殊情形：<span class="arithmatex">\( M_{-1} \leq M_0 \leq M_1 \leq M_2 \)</span> 即：
-[
-\frac{n}{\frac{1}{a_1}+\dots+\frac{1}{a_n}} \leq \sqrt[n]{a_1\dots a_n} \leq \frac{a_1+\dots+a_n}{n} \leq \sqrt{\frac{a_1^2+\dots+a_n^2}{n}}
-]</li>
+<li>利用加权均值不等式</li>
+<li>或利用凸函数性质</li>
 </ol>
-<h2 id="_9">五、加强均值不等式</h2>
-<h3 id="4">定理4（加权均值不等式）</h3>
-<p>设 <span class="arithmatex">\( a_i &gt; 0 \)</span>, <span class="arithmatex">\( w_i &gt; 0 \)</span> (<span class="arithmatex">\( i=1,\dots,n \)</span>)，且 <span class="arithmatex">\( \sum_{i=1}^n w_i = 1 \)</span>，则：
+<h3 id="_12">特殊情形</h3>
+<p>当 <span class="arithmatex">\( p = q = 2 \)</span> 时，即为柯西不等式。</p>
+<h3 id="_13">积分形式</h3>
+<div class="arithmatex">\[
+\int_a^b |f(x)g(x)|dx \leq \left(\int_a^b |f(x)|^p dx\right)^{\frac{1}{p}} \left(\int_a^b |g(x)|^q dx\right)^{\frac{1}{q}}
+\]</div>
+<h2 id="_14">闵可夫斯基不等式（进一步推广）</h2>
+<h3 id="6">定理6（闵可夫斯基不等式）</h3>
+<p>设 <span class="arithmatex">\( a_i, b_i &gt; 0 \)</span> (<span class="arithmatex">\( i=1,\dots,n \)</span>)，<span class="arithmatex">\( p \geq 1 \)</span>，则：
 [
-\prod_{i=1}^n a_i^{w_i} \leq \sum_{i=1}^n w_i a_i
+\left(\sum_{i=1}^n (a_i + b_i)^p\right)^{\frac{1}{p}} \leq \left(\sum_{i=1}^n a_i^p\right)^{\frac{1}{p}} + \left(\sum_{i=1}^n b_i^p\right)^{\frac{1}{p}}
 ]
-等号成立当且仅当所有 <span class="arithmatex">\( a_i \)</span> 相等。</p>
-<h3 id="_10">证明</h3>
-<p>取对数后利用对数函数的凹性，或使用数学归纳法。</p>
+等号成立当且仅当 <span class="arithmatex">\( a_i \)</span> 与 <span class="arithmatex">\( b_i \)</span> 成比例。</p>
+<h3 id="_15">几何意义</h3>
+<p>在 <span class="arithmatex">\( L^p \)</span> 空间中，这是三角不等式的形式。</p>
+<h2 id="_16">应用</h2>
+<h3 id="1_2">应用1：证明不等式</h3>
+<p>例：证明 <span class="arithmatex">\( (a^2 + b^2 + c^2)(x^2 + y^2 + z^2) \geq (ax + by + cz)^2 \)</span></p>
+<h3 id="2_2">应用2：极值问题</h3>
+<p>例：求 <span class="arithmatex">\( \sqrt{x^2 + y^2 + z^2} \)</span> 在约束 <span class="arithmatex">\( ax + by + cz = d \)</span> 下的最小值。</p>
+<h3 id="3_2">应用3：概率论</h3>
+<p>在概率论中，柯西不等式导出协方差与方差的关系：
+[
+|\text{Cov}(X,Y)| \leq \sqrt{\text{Var}(X) \cdot \text{Var}(Y)}
+]</p>
 
 
 
