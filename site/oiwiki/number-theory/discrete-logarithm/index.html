@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#定义" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#定义" class="md-nav__link">
     <span class="md-ellipsis">
       
         定义
@@ -1101,7 +1101,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#性质" class="md-nav__link">
     <span class="md-ellipsis">
       
         性质
@@ -1112,7 +1112,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#大步小步算法" class="md-nav__link">
     <span class="md-ellipsis">
       
         大步小步算法
@@ -1124,7 +1124,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#算法描述" class="md-nav__link">
     <span class="md-ellipsis">
       
         算法描述
@@ -1140,7 +1140,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#bsgs" class="md-nav__link">
+  <a href="#扩展-bsgs-算法" class="md-nav__link">
     <span class="md-ellipsis">
       
         扩展 BSGS 算法
@@ -1151,7 +1151,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#习题" class="md-nav__link">
     <span class="md-ellipsis">
       
         习题
@@ -1162,7 +1162,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#参考资料" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料
@@ -1191,7 +1191,7 @@
 
   <h1>Discrete logarithm</h1>
 
-<h2 id="_1">定义</h2>
+<h2 id="定义">定义<a class="headerlink" href="#定义" title="Permanent link"></a></h2>
 <p>前置知识：<a href="../primitive-root/">阶与原根</a>。</p>
 <p>离散对数的定义方式和对数类似。取有原根的正整数模数 <span class="arithmatex">\(m\)</span>，设其一个原根为 <span class="arithmatex">\(g\)</span>. 对满足 <span class="arithmatex">\((a,m)=1\)</span> 的整数 <span class="arithmatex">\(a\)</span>，我们知道必存在唯一的整数 <span class="arithmatex">\(0\leq k&lt;\varphi(m)\)</span> 使得</p>
 <div class="arithmatex">\[
@@ -1199,44 +1199,58 @@ g^k\equiv a\pmod m
 \]</div>
 <p>我们称这个 <span class="arithmatex">\(k\)</span> 为以 <span class="arithmatex">\(g\)</span> 为底，模 <span class="arithmatex">\(m\)</span> 的离散对数，记作 <span class="arithmatex">\(k=\operatorname{ind}_g a\)</span>，在不引起混淆的情况下可记作 <span class="arithmatex">\(\operatorname{ind} a\)</span>.</p>
 <p>显然 <span class="arithmatex">\(\operatorname{ind}_g 1=0\)</span>，<span class="arithmatex">\(\operatorname{ind}_g g=1\)</span>.</p>
-<h2 id="_2">性质</h2>
+<h2 id="性质">性质<a class="headerlink" href="#性质" title="Permanent link"></a></h2>
 <p>离散对数的性质也和对数有诸多类似之处。</p>
-<p>???+ note "性质"
-    设 <span class="arithmatex">\(g\)</span> 是模 <span class="arithmatex">\(m\)</span> 的原根，<span class="arithmatex">\((a,m)=(b,m)=1\)</span>，则：</p>
-<pre><code>1.  $\operatorname{ind}_g(ab)\equiv\operatorname{ind}_g a+\operatorname{ind}_g b\pmod{\varphi(m)}$
-
-    进而 $(\forall n\in\mathbf{N}),~~\operatorname{ind}_g a^n\equiv n\operatorname{ind}_g a\pmod{\varphi(m)}$
-2.  若 $g_1$ 也是模 $m$ 的原根，则 $\operatorname{ind}_g a\equiv\operatorname{ind}_{g_1}a \cdot \operatorname{ind}_g g_1\pmod{\varphi(m)}$
-3.  $a\equiv b\pmod m\iff \operatorname{ind}_g a=\operatorname{ind}_g b$
-</code></pre>
-<p>???+ note "证明"
-    1.  <span class="arithmatex">\(g^{\operatorname{ind}_g(ab)}\equiv ab\equiv g^{\operatorname{ind}_g a}g^{\operatorname{ind}_g b}\equiv g^{\operatorname{ind}_g a+\operatorname{ind}_g b}\pmod m\)</span>
-    2.  令 <span class="arithmatex">\(x=\operatorname{ind}_{g_1}a\)</span>，则 <span class="arithmatex">\(a\equiv g_1^x\pmod m\)</span>. 又令 <span class="arithmatex">\(y=\operatorname{ind}_g g_1\)</span>，则 <span class="arithmatex">\(g_1\equiv g^y\pmod m\)</span>.</p>
-<pre><code>    故 $a\equiv g^{xy}\pmod m$，即 $\operatorname{ind}_g a\equiv xy\equiv\operatorname{ind}_{g_1}a \cdot \operatorname{ind}_g g_1\pmod{\varphi(m)}$
-3.  注意到
-
-    $$
-    \begin{aligned}
-        \operatorname{ind}_g a=\operatorname{ind}_g b&amp;\iff \operatorname{ind}_g a\equiv\operatorname{ind}_g b\pmod{\varphi(m)}\\
-        &amp;\iff g^{\operatorname{ind}_g a}\equiv g^{\operatorname{ind}_g b}\pmod m\\
-        &amp;\iff a\equiv b\pmod m
-    \end{aligned}
-    $$
-</code></pre>
-<h2 id="_3">大步小步算法</h2>
+<details class="note" open="open">
+<summary>性质</summary>
+<p>设 <span class="arithmatex">\(g\)</span> 是模 <span class="arithmatex">\(m\)</span> 的原根，<span class="arithmatex">\((a,m)=(b,m)=1\)</span>，则：</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\operatorname{ind}_g(ab)\equiv\operatorname{ind}_g a+\operatorname{ind}_g b\pmod{\varphi(m)}\)</span></p>
+<p>进而 <span class="arithmatex">\((\forall n\in\mathbf{N}),~~\operatorname{ind}_g a^n\equiv n\operatorname{ind}_g a\pmod{\varphi(m)}\)</span></p>
+</li>
+<li>
+<p>若 <span class="arithmatex">\(g_1\)</span> 也是模 <span class="arithmatex">\(m\)</span> 的原根，则 <span class="arithmatex">\(\operatorname{ind}_g a\equiv\operatorname{ind}_{g_1}a \cdot \operatorname{ind}_g g_1\pmod{\varphi(m)}\)</span></p>
+</li>
+<li><span class="arithmatex">\(a\equiv b\pmod m\iff \operatorname{ind}_g a=\operatorname{ind}_g b\)</span></li>
+</ol>
+</details>
+<details class="note" open="open">
+<summary>证明</summary>
+<ol>
+<li><span class="arithmatex">\(g^{\operatorname{ind}_g(ab)}\equiv ab\equiv g^{\operatorname{ind}_g a}g^{\operatorname{ind}_g b}\equiv g^{\operatorname{ind}_g a+\operatorname{ind}_g b}\pmod m\)</span></li>
+<li>
+<p>令 <span class="arithmatex">\(x=\operatorname{ind}_{g_1}a\)</span>，则 <span class="arithmatex">\(a\equiv g_1^x\pmod m\)</span>. 又令 <span class="arithmatex">\(y=\operatorname{ind}_g g_1\)</span>，则 <span class="arithmatex">\(g_1\equiv g^y\pmod m\)</span>.</p>
+<p>故 <span class="arithmatex">\(a\equiv g^{xy}\pmod m\)</span>，即 <span class="arithmatex">\(\operatorname{ind}_g a\equiv xy\equiv\operatorname{ind}_{g_1}a \cdot \operatorname{ind}_g g_1\pmod{\varphi(m)}\)</span></p>
+</li>
+<li>
+<p>注意到</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    \operatorname{ind}_g a=\operatorname{ind}_g b&amp;\iff \operatorname{ind}_g a\equiv\operatorname{ind}_g b\pmod{\varphi(m)}\\
+    &amp;\iff g^{\operatorname{ind}_g a}\equiv g^{\operatorname{ind}_g b}\pmod m\\
+    &amp;\iff a\equiv b\pmod m
+\end{aligned}
+\]</div>
+</li>
+</ol>
+</details>
+<h2 id="大步小步算法">大步小步算法<a class="headerlink" href="#大步小步算法" title="Permanent link"></a></h2>
 <p>目前离散对数问题仍不存在多项式时间经典算法（离散对数问题的输入规模是输入数据的位数）。在密码学中，基于这一点人们设计了许多非对称加密算法，如 <a href="https://en.wikipedia.org/wiki/EdDSA#Ed25519">Ed25519</a>。</p>
 <p>在算法竞赛中，BSGS（baby-step giant-step，大步小步算法）常用于求解离散对数问题。形式化地说，对 <span class="arithmatex">\(a,b,m\in\mathbf{Z}^+\)</span>，该算法可以在 <span class="arithmatex">\(O(\sqrt{m})\)</span> 的时间内求解</p>
 <div class="arithmatex">\[
 a^x \equiv b \pmod m
 \]</div>
 <p>其中 <span class="arithmatex">\(a\perp m\)</span>。方程的解 <span class="arithmatex">\(x\)</span> 满足 <span class="arithmatex">\(0 \le x &lt; m\)</span>.（注意 <span class="arithmatex">\(m\)</span> 不一定是素数）</p>
-<h3 id="_4">算法描述</h3>
+<h3 id="算法描述">算法描述<a class="headerlink" href="#算法描述" title="Permanent link"></a></h3>
 <p>令 <span class="arithmatex">\(x = A \left \lceil \sqrt m \right \rceil - B\)</span>，其中 <span class="arithmatex">\(0\le A,B \le \left \lceil \sqrt m \right \rceil\)</span>，则有 <span class="arithmatex">\(a^{A\left \lceil \sqrt m \right \rceil -B} \equiv b \pmod m\)</span>，稍加变换，则有 <span class="arithmatex">\(a^{A\left \lceil \sqrt m \right \rceil} \equiv ba^B \pmod m\)</span>.</p>
 <p>我们已知的是 <span class="arithmatex">\(a,b\)</span>，所以我们可以先算出等式右边的 <span class="arithmatex">\(ba^B\)</span> 的所有取值，枚举 <span class="arithmatex">\(B\)</span>，用 <code>hash</code>/<code>map</code> 存下来，然后逐一计算 <span class="arithmatex">\(a^{A\left \lceil \sqrt m \right \rceil}\)</span>，枚举 <span class="arithmatex">\(A\)</span>，寻找是否有与之相等的 <span class="arithmatex">\(ba^B\)</span>，从而我们可以得到所有的 <span class="arithmatex">\(x\)</span>，<span class="arithmatex">\(x=A \left \lceil \sqrt m \right \rceil - B\)</span>.</p>
 <p>注意到 <span class="arithmatex">\(A,B\)</span> 均小于 <span class="arithmatex">\(\left \lceil \sqrt m \right \rceil\)</span>，所以时间复杂度为 <span class="arithmatex">\(\Theta\left  (\sqrt m\right )\)</span>，用 <code>map</code> 则多一个 <span class="arithmatex">\(\log\)</span>.</p>
-<p>??? note "为什么要求 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(m\)</span> 互质"
-    注意到我们求出的是 <span class="arithmatex">\(A,B\)</span>，我们需要保证从 <span class="arithmatex">\(a^{A\left \lceil \sqrt m \right \rceil} \equiv ba^B \pmod m\)</span> 可以推回 <span class="arithmatex">\(a^{A\left \lceil \sqrt m \right \rceil -B} \equiv b \pmod m\)</span>，后式是前式左右两边除以 <span class="arithmatex">\(a^B\)</span> 得到，所以必须有 <span class="arithmatex">\(a^B \perp m\)</span> 即 <span class="arithmatex">\(a\perp m\)</span>.</p>
-<h2 id="bsgs">扩展 BSGS 算法</h2>
+<details class="note">
+<summary>为什么要求 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(m\)</span> 互质</summary>
+<p>注意到我们求出的是 <span class="arithmatex">\(A,B\)</span>，我们需要保证从 <span class="arithmatex">\(a^{A\left \lceil \sqrt m \right \rceil} \equiv ba^B \pmod m\)</span> 可以推回 <span class="arithmatex">\(a^{A\left \lceil \sqrt m \right \rceil -B} \equiv b \pmod m\)</span>，后式是前式左右两边除以 <span class="arithmatex">\(a^B\)</span> 得到，所以必须有 <span class="arithmatex">\(a^B \perp m\)</span> 即 <span class="arithmatex">\(a\perp m\)</span>.</p>
+</details>
+<h2 id="扩展-bsgs-算法">扩展 BSGS 算法<a class="headerlink" href="#扩展-bsgs-算法" title="Permanent link"></a></h2>
 <p>对 <span class="arithmatex">\(a,b,m\in\mathbf{Z}^+\)</span>，求解</p>
 <div class="arithmatex">\[
 a^x\equiv b\pmod m
@@ -1258,7 +1272,7 @@ a^x\equiv b\pmod m
 \]</div>
 <p>由于 <span class="arithmatex">\(a\perp\dfrac{m}{D}\)</span>，于是推出 <span class="arithmatex">\(\dfrac{a^k}{D}\perp \dfrac{m}{D}\)</span>. 这样 <span class="arithmatex">\(\dfrac{a^k}{D}\)</span> 就有逆元了，于是把它丢到方程右边，这就是一个普通的 BSGS 问题了，于是求解 <span class="arithmatex">\(x-k\)</span> 后再加上 <span class="arithmatex">\(k\)</span> 就是原方程的解啦。</p>
 <p>注意，不排除解小于等于 <span class="arithmatex">\(k\)</span> 的情况，所以在消因子之前做一下 <span class="arithmatex">\(\Theta(k)\)</span> 枚举，直接验证 <span class="arithmatex">\(a^i\equiv b \pmod m\)</span>，这样就能避免这种情况。</p>
-<h2 id="_5">习题</h2>
+<h2 id="习题">习题<a class="headerlink" href="#习题" title="Permanent link"></a></h2>
 <ul>
 <li><a href="https://www.spoj.com/problems/MOD/">SPOJ MOD</a> 模板</li>
 <li><a href="https://www.luogu.com.cn/problem/P3306">SDOI2013 随机数生成器</a></li>
@@ -1269,7 +1283,7 @@ a^x\equiv b\pmod m
 <li><a href="https://loj.ac/problem/6542">LOJ6542 离散对数</a> index calculus 方法，非模板</li>
 </ul>
 <p><strong>本页面部分内容以及代码译自博文 <a href="http://e-maxx.ru/algo/discrete_root">Дискретное извлечение корня</a> 与其英文翻译版 <a href="https://cp-algorithms.com/algebra/discrete-root.html">Discrete Root</a>。其中俄文版版权协议为 Public Domain + Leave a Link；英文版版权协议为 CC-BY-SA 4.0。</strong></p>
-<h2 id="_6">参考资料</h2>
+<h2 id="参考资料">参考资料<a class="headerlink" href="#参考资料" title="Permanent link"></a></h2>
 <ol>
 <li><a href="https://en.wikipedia.org/wiki/Discrete_logarithm">Discrete logarithm - Wikipedia</a></li>
 <li>潘承洞，潘承彪。初等数论。</li>
@@ -1328,6 +1342,8 @@ a^x\equiv b\pmod m
     
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

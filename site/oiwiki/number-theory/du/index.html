@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#算法思想" class="md-skip">
           Skip to content
         </a>
       
@@ -1092,7 +1092,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#算法思想" class="md-nav__link">
     <span class="md-ellipsis">
       
         算法思想
@@ -1103,7 +1103,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#时间复杂度" class="md-nav__link">
     <span class="md-ellipsis">
       
         时间复杂度
@@ -1114,7 +1114,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#例题" class="md-nav__link">
     <span class="md-ellipsis">
       
         例题
@@ -1126,7 +1126,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#问题一" class="md-nav__link">
     <span class="md-ellipsis">
       
         问题一
@@ -1137,7 +1137,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#问题二" class="md-nav__link">
     <span class="md-ellipsis">
       
         问题二
@@ -1148,7 +1148,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#参考资料" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料
@@ -1183,7 +1183,7 @@
   <h1>Du</h1>
 
 <p>杜教筛被用于处理一类数论函数的前缀和问题。对于数论函数 <span class="arithmatex">\(f\)</span>，杜教筛可以在低于线性时间的复杂度内计算 <span class="arithmatex">\(S(n)=\sum_{i=1}^{n}f(i)\)</span>。</p>
-<h2 id="_1">算法思想</h2>
+<h2 id="算法思想">算法思想<a class="headerlink" href="#算法思想" title="Permanent link"></a></h2>
 <p>我们想办法构造一个 <span class="arithmatex">\(S(n)\)</span> 关于 <span class="arithmatex">\(S\left(\left\lfloor\frac{n}{i}\right\rfloor\right)\)</span> 的递推式。</p>
 <p>对于任意一个数论函数 <span class="arithmatex">\(g\)</span>，必满足：</p>
 <div class="arithmatex">\[
@@ -1193,16 +1193,17 @@
 \end{aligned}
 \]</div>
 <p>其中 <span class="arithmatex">\(f*g\)</span> 为数论函数 <span class="arithmatex">\(f\)</span> 和 <span class="arithmatex">\(g\)</span> 的 <a href="../dirichlet/#dirichlet-卷积">狄利克雷卷积</a>。</p>
-<p>???+ note "略证"
-    <span class="arithmatex">\(g(d)f\left(\frac{i}{d}\right)\)</span> 就是对所有 <span class="arithmatex">\(i\leq n\)</span> 的做贡献，因此变换枚举顺序，枚举 <span class="arithmatex">\(d\)</span>,<span class="arithmatex">\(\frac{i}{d}\)</span>（分别对应新的 <span class="arithmatex">\(i,j\)</span>）</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>略证</summary>
+<p><span class="arithmatex">\(g(d)f\left(\frac{i}{d}\right)\)</span> 就是对所有 <span class="arithmatex">\(i\leq n\)</span> 的做贡献，因此变换枚举顺序，枚举 <span class="arithmatex">\(d\)</span>,<span class="arithmatex">\(\frac{i}{d}\)</span>（分别对应新的 <span class="arithmatex">\(i,j\)</span>）</p>
+<div class="arithmatex">\[
 \begin{aligned}
     \sum_{i=1}^n\sum_{d \mid i}g(d)f\left(\frac{i}{d}\right) &amp; =\sum_{i=1}^n\sum_{j=1}^{\left\lfloor n/i \right\rfloor}g(i)f(j) \\
                                                              &amp; =\sum_{i=1}^ng(i)\sum_{j=1}^{\left\lfloor n/i \right\rfloor}f(j) \\
                                                              &amp; =\sum_{i=1}^ng(i)S\left(\left\lfloor\frac{n}{i}\right\rfloor\right)
 \end{aligned}
-$$
-</code></pre>
+\]</div>
+</details>
 <p>那么可以得到递推式：</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1216,17 +1217,16 @@ $$
 <li>可以快速计算 <span class="arithmatex">\(g\)</span> 的前缀和，以用数论分块求解 <span class="arithmatex">\(\sum_{i=2}^ng(i)S\left(\left\lfloor\dfrac{n}{i}\right\rfloor\right)\)</span>。</li>
 </ol>
 <p>则我们可以在较短时间内求得 <span class="arithmatex">\(g(1)S(n)\)</span>。</p>
-<p>???+ warning "注意"
-    无论数论函数 <span class="arithmatex">\(f\)</span> 是否为积性函数，只要可以构造出恰当的数论函数 <span class="arithmatex">\(g\)</span>, 便都可以考虑用杜教筛求 <span class="arithmatex">\(f\)</span> 的前缀和。</p>
-<pre><code>如考虑 $f(n)=\mathrm{i}\varphi(n)$, 显然 $f$ 不是积性函数，但可取 $g(n)=1$, 从而：
-
-$$
+<details class="warning" open="open">
+<summary>注意</summary>
+<p>无论数论函数 <span class="arithmatex">\(f\)</span> 是否为积性函数，只要可以构造出恰当的数论函数 <span class="arithmatex">\(g\)</span>, 便都可以考虑用杜教筛求 <span class="arithmatex">\(f\)</span> 的前缀和。</p>
+<p>如考虑 <span class="arithmatex">\(f(n)=\mathrm{i}\varphi(n)\)</span>, 显然 <span class="arithmatex">\(f\)</span> 不是积性函数，但可取 <span class="arithmatex">\(g(n)=1\)</span>, 从而：</p>
+<div class="arithmatex">\[
 \sum_{k=1}^n (f*g)(k)=\mathrm{i}\frac{n(n+1)}{2}
-$$
-
-计算 $\sum_{k\leq m} (f*g)(k)$ 和 $\sum_{k \leq m} g(k)$ 的时间复杂度均为 $O(1)$, 故可以考虑使用杜教筛。
-</code></pre>
-<h2 id="_2">时间复杂度</h2>
+\]</div>
+<p>计算 <span class="arithmatex">\(\sum_{k\leq m} (f*g)(k)\)</span> 和 <span class="arithmatex">\(\sum_{k \leq m} g(k)\)</span> 的时间复杂度均为 <span class="arithmatex">\(O(1)\)</span>, 故可以考虑使用杜教筛。</p>
+</details>
+<h2 id="时间复杂度">时间复杂度<a class="headerlink" href="#时间复杂度" title="Permanent link"></a></h2>
 <p>令 <span class="arithmatex">\(R(n)=\left\{\left\lfloor \dfrac{n}{k} \right\rfloor: k=2,3,\dots,n\right\}\)</span>。利用数论分块的 <a href="../sqrt-decomposition/#性质">性质</a> 可知，对任意的 <span class="arithmatex">\(m\in R(n)\)</span>，都有 <span class="arithmatex">\(R(m)\subseteq R(n)\)</span>。也就是说，使用记忆化之后，只需要对所有 <span class="arithmatex">\(k\in R(n)\)</span> 计算一次 <span class="arithmatex">\(S(k)\)</span> 就可以得到 <span class="arithmatex">\(R(n)\)</span> 的值。而这些点的数目 <span class="arithmatex">\(|R(n)|=O(\sqrt{n})\)</span>。</p>
 <p>设计算 <span class="arithmatex">\(\sum_{i=1}^n(f * g)(i)\)</span> 和 <span class="arithmatex">\(\sum_{i=1}^n g(i)\)</span> 的时间复杂度均为 <span class="arithmatex">\(O(1)\)</span>. 设计算 <span class="arithmatex">\(S(n)\)</span> 的时间复杂度为 <span class="arithmatex">\(T(n)\)</span>, 则：</p>
 <div class="arithmatex">\[
@@ -1247,113 +1247,113 @@ $$
 \end{aligned}
 \]</div>
 <p>若 <span class="arithmatex">\(T_0(m)=O(m)\)</span>（如线性筛），由均值不等式可知：当 <span class="arithmatex">\(m=\Theta\left(n^{2/3}\right)\)</span> 时，<span class="arithmatex">\(T(n)\)</span> 取得最小值 <span class="arithmatex">\(O\left(n^{2/3}\right)\)</span>.</p>
-<p>??? failure "伪证一例"
-    设计算 <span class="arithmatex">\(S(n)\)</span> 的复杂度为 <span class="arithmatex">\(T(n)\)</span>, 则有：</p>
-<pre><code>$$
+<details class="failure">
+<summary>伪证一例</summary>
+<p>设计算 <span class="arithmatex">\(S(n)\)</span> 的复杂度为 <span class="arithmatex">\(T(n)\)</span>, 则有：</p>
+<div class="arithmatex">\[
 T(n)=\Theta\left(\sqrt{n}\right)+O\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor} T\left(\left\lfloor\frac{n}{i}\right\rfloor\right)\right)
-$$
-
-$$
+\]</div>
+<div class="arithmatex">\[
 \begin{aligned}
     T\left(\left\lfloor\frac{n}{i}\right\rfloor\right) &amp; = \Theta\left(\sqrt{\frac{n}{i}}\right)+O\left(\sum_{j=2}^{\lfloor\sqrt{n/i}\rfloor} T\left(\left\lfloor\frac{n}{ij}\right\rfloor\right)\right) \\
                                                        &amp; = O\left(\sqrt{\frac{n}{i}}\right)
 \end{aligned}
-$$
-
-其中，$O\left(\sum_{j=2}^{\lfloor\sqrt{n/i}\rfloor} T\left(\left\lfloor\dfrac{n}{ij}\right\rfloor\right)\right)$ 视作高阶无穷小，从而可以舍去。故：
-
-$$
+\]</div>
+<p>其中，<span class="arithmatex">\(O\left(\sum_{j=2}^{\lfloor\sqrt{n/i}\rfloor} T\left(\left\lfloor\dfrac{n}{ij}\right\rfloor\right)\right)\)</span> 视作高阶无穷小，从而可以舍去。故：</p>
+<div class="arithmatex">\[
 \begin{aligned}
     T(n) &amp; = \Theta\left(\sqrt{n}\right)+O\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor} \sqrt{\frac{n}{i}}\right) \\
          &amp; = O\left(\sum_{i=1}^{\lfloor\sqrt{n}\rfloor} \sqrt{\frac{n}{i}}\right) \\
          &amp; = O\left(\int_{0}^{\sqrt{n}}\sqrt{\frac{n}{x}}\mathrm{d}x\right) \\
          &amp; = O\left(n^{3/4}\right)
 \end{aligned}
-$$
-
-??? bug "Bug"
-    问题在于「视作高阶无穷小，从而可以舍去」这一处。我们将 $T\left(\left\lfloor\dfrac{n}{i}\right\rfloor\right)$ 代入 $T(n)$ 的式子里，有：
-
-    $$
-    \begin{aligned}
-        T(n) &amp; = \Theta\left(\sqrt{n}\right)+O\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor} \sqrt{\frac{n}{i}}\right)+O\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor}\sum_{j=2}^{\lfloor\sqrt{n/i}\rfloor} T\left(\left\lfloor\frac{n}{ij}\right\rfloor\right)\right)\\
-             &amp; = O\left(\sqrt{n}+\int_{0}^{\sqrt{n}}\sqrt{\frac{n}{x}}\mathrm{d}x\right)+O\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor}\sum_{j=2}^{\lfloor\sqrt{n/i}\rfloor} T\left(\left\lfloor\frac{n}{ij}\right\rfloor\right)\right)\\
-             &amp; = O\left(n^{3/4}\right)+O\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor}\sum_{j=2}^{\lfloor\sqrt{n/i}\rfloor} T\left(\left\lfloor\frac{n}{ij}\right\rfloor\right)\right)\\
-    \end{aligned}
-    $$
-
-    我们考虑 $\displaystyle\sum_{i=2}^{\lfloor\sqrt{n}\rfloor}\sum_{j=2}^{\lfloor\sqrt{n/i}\rfloor} T\left(\left\lfloor\frac{n}{ij}\right\rfloor\right)$ 这部分，不难发现：
-
-    $$
-    \begin{aligned}
-        \sum_{i=2}^{\lfloor\sqrt{n}\rfloor}\sum_{j=2}^{\lfloor\sqrt{n/i}\rfloor} T\left(\left\lfloor\frac{n}{ij}\right\rfloor\right) &amp; = \Omega\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor} T\left(\left\lfloor\frac{n}{i}\cdot\left\lfloor\sqrt\frac{n}{i}\right\rfloor^{-1}\right\rfloor\right)\right) \\
-                                                                                                                                     &amp; = \Omega\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor} T\left(\left\lfloor\sqrt\frac{n}{i}\right\rfloor\right)\right)
-    \end{aligned}
-    $$
-
-    由于没有引入记忆化，因此上式中的 $T\left(\left\lfloor\sqrt{\dfrac{n}{i}}\right\rfloor\right)$ 仍然是 $\Omega\left(\left(\dfrac{n}{i}\right)^{1/4}\right)$ 的，进而所谓的「高阶无穷小」部分是不可以舍去的。
-
-    实际上杜教筛的亚线性时间复杂度是由记忆化保证的。只有使用了记忆化之后才能保证不会出现那个多重求和的项。
-</code></pre>
-<h2 id="_3">例题</h2>
-<h3 id="_4">问题一</h3>
-<p>???+ note "<a href="https://www.luogu.com.cn/problem/P4213">P4213【模板】杜教筛（Sum）</a>"
-    求 <span class="arithmatex">\(S_1(n)= \sum_{i=1}^{n} \mu(i)\)</span> 和 <span class="arithmatex">\(S_2(n)= \sum_{i=1}^{n} \varphi(i)\)</span> 的值，<span class="arithmatex">\(1\leq n&lt;2^{31}\)</span>.</p>
-<p>=== "莫比乌斯函数前缀和"
-    我们知道：</p>
-<pre><code>$$
+\]</div>
+<details class="bug">
+<summary>Bug</summary>
+<p>问题在于「视作高阶无穷小，从而可以舍去」这一处。我们将 <span class="arithmatex">\(T\left(\left\lfloor\dfrac{n}{i}\right\rfloor\right)\)</span> 代入 <span class="arithmatex">\(T(n)\)</span> 的式子里，有：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    T(n) &amp; = \Theta\left(\sqrt{n}\right)+O\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor} \sqrt{\frac{n}{i}}\right)+O\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor}\sum_{j=2}^{\lfloor\sqrt{n/i}\rfloor} T\left(\left\lfloor\frac{n}{ij}\right\rfloor\right)\right)\\
+         &amp; = O\left(\sqrt{n}+\int_{0}^{\sqrt{n}}\sqrt{\frac{n}{x}}\mathrm{d}x\right)+O\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor}\sum_{j=2}^{\lfloor\sqrt{n/i}\rfloor} T\left(\left\lfloor\frac{n}{ij}\right\rfloor\right)\right)\\
+         &amp; = O\left(n^{3/4}\right)+O\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor}\sum_{j=2}^{\lfloor\sqrt{n/i}\rfloor} T\left(\left\lfloor\frac{n}{ij}\right\rfloor\right)\right)\\
+\end{aligned}
+\]</div>
+<p>我们考虑 <span class="arithmatex">\(\displaystyle\sum_{i=2}^{\lfloor\sqrt{n}\rfloor}\sum_{j=2}^{\lfloor\sqrt{n/i}\rfloor} T\left(\left\lfloor\frac{n}{ij}\right\rfloor\right)\)</span> 这部分，不难发现：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+    \sum_{i=2}^{\lfloor\sqrt{n}\rfloor}\sum_{j=2}^{\lfloor\sqrt{n/i}\rfloor} T\left(\left\lfloor\frac{n}{ij}\right\rfloor\right) &amp; = \Omega\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor} T\left(\left\lfloor\frac{n}{i}\cdot\left\lfloor\sqrt\frac{n}{i}\right\rfloor^{-1}\right\rfloor\right)\right) \\
+                                                                                                                                 &amp; = \Omega\left(\sum_{i=2}^{\lfloor\sqrt{n}\rfloor} T\left(\left\lfloor\sqrt\frac{n}{i}\right\rfloor\right)\right)
+\end{aligned}
+\]</div>
+<p>由于没有引入记忆化，因此上式中的 <span class="arithmatex">\(T\left(\left\lfloor\sqrt{\dfrac{n}{i}}\right\rfloor\right)\)</span> 仍然是 <span class="arithmatex">\(\Omega\left(\left(\dfrac{n}{i}\right)^{1/4}\right)\)</span> 的，进而所谓的「高阶无穷小」部分是不可以舍去的。</p>
+<p>实际上杜教筛的亚线性时间复杂度是由记忆化保证的。只有使用了记忆化之后才能保证不会出现那个多重求和的项。</p>
+</details>
+</details>
+<h2 id="例题">例题<a class="headerlink" href="#例题" title="Permanent link"></a></h2>
+<h3 id="问题一">问题一<a class="headerlink" href="#问题一" title="Permanent link"></a></h3>
+<details class="note" open="open">
+<summary><a href="https://www.luogu.com.cn/problem/P4213">P4213【模板】杜教筛（Sum）</a></summary>
+<p>求 <span class="arithmatex">\(S_1(n)= \sum_{i=1}^{n} \mu(i)\)</span> 和 <span class="arithmatex">\(S_2(n)= \sum_{i=1}^{n} \varphi(i)\)</span> 的值，<span class="arithmatex">\(1\leq n&lt;2^{31}\)</span>.</p>
+</details>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">莫比乌斯函数前缀和</label><label for="__tabbed_1_2">欧拉函数前缀和</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>我们知道：</p>
+<div class="arithmatex">\[
 \epsilon = [n=1] = \mu * 1 = \sum_{d \mid n} \mu(d)
-$$
-
-$$
+\]</div>
+<div class="arithmatex">\[
 \begin{aligned}
     S_1(n) &amp; =\sum_{i=1}^n \epsilon (i)-\sum_{i=2}^n S_1 \left(\left\lfloor \frac n i \right\rfloor\right) \\
            &amp; = 1-\sum_{i=2}^n S_1\left(\left\lfloor \frac n i \right\rfloor\right)
 \end{aligned}
-$$
-
-时间复杂度的推导见 [时间复杂度](#时间复杂度) 一节。
-
-对于较大的值，需要用 `map`/`unordered_map` 存下其对应的值，方便以后使用时直接使用之前计算的结果。
-</code></pre>
-<p>=== "欧拉函数前缀和"
-    当然也可以用杜教筛求出 <span class="arithmatex">\(\varphi (x)\)</span> 的前缀和，但是更好的方法是应用莫比乌斯反演。</p>
-<pre><code>=== "莫比乌斯反演"
-    $$
+\]</div>
+<p>时间复杂度的推导见 <a href="#时间复杂度">时间复杂度</a> 一节。</p>
+<p>对于较大的值，需要用 <code>map</code>/<code>unordered_map</code> 存下其对应的值，方便以后使用时直接使用之前计算的结果。</p>
+</div>
+<div class="tabbed-block">
+<p>当然也可以用杜教筛求出 <span class="arithmatex">\(\varphi (x)\)</span> 的前缀和，但是更好的方法是应用莫比乌斯反演。</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">莫比乌斯反演</label><label for="__tabbed_2_2">杜教筛</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="arithmatex">\[
+\begin{aligned}
+    \sum_{i=1}^n \sum_{j=1}^n [\gcd(i,j)=1] &amp; =\sum_{i=1}^n \sum_{j=1}^n \sum_{d \mid i,d \mid j} \mu(d)    \\
+                                            &amp; =\sum_{d=1}^n \mu(d) {\left\lfloor \frac n d \right\rfloor}^2
+\end{aligned}
+\]</div>
+<p>由于题目所求的是 <span class="arithmatex">\(\sum_{i=1}^n \sum_{j=1}^i [\gcd(i,j)=1]\)</span>, 所以我们排除掉 <span class="arithmatex">\(i=1,j=1\)</span> 的情况，并将结果除以 <span class="arithmatex">\(2\)</span> 即可。</p>
+<p>观察到，只需求出莫比乌斯函数的前缀和，就可以快速计算出欧拉函数的前缀和了。时间复杂度 <span class="arithmatex">\(O\left(n^{\frac 2 3}\right)\)</span>.</p>
+</div>
+<div class="tabbed-block">
+<p>求 <span class="arithmatex">\(S(n)=\sum_{i=1}^n\varphi(i)\)</span>.</p>
+<p>同样的，<span class="arithmatex">\(\varphi * 1=\operatorname{id}\)</span>, 从而：</p>
+<div class="arithmatex">\[
     \begin{aligned}
-        \sum_{i=1}^n \sum_{j=1}^n [\gcd(i,j)=1] &amp; =\sum_{i=1}^n \sum_{j=1}^n \sum_{d \mid i,d \mid j} \mu(d)    \\
-                                                &amp; =\sum_{d=1}^n \mu(d) {\left\lfloor \frac n d \right\rfloor}^2
+        S(n) &amp; =\sum_{i=1}^n i - \sum_{i=2}^n S\left(\left\lfloor\frac{n}{i}\right\rfloor\right)    \\
+             &amp; =\frac{1}{2}n(n+1) - \sum_{i=2}^n S\left(\left\lfloor\frac{n}{i}\right\rfloor\right)
     \end{aligned}
-    $$
-
-    由于题目所求的是 $\sum_{i=1}^n \sum_{j=1}^i [\gcd(i,j)=1]$, 所以我们排除掉 $i=1,j=1$ 的情况，并将结果除以 $2$ 即可。
-
-    观察到，只需求出莫比乌斯函数的前缀和，就可以快速计算出欧拉函数的前缀和了。时间复杂度 $O\left(n^{\frac 2 3}\right)$.
-
-=== "杜教筛"
-    求 $S(n)=\sum_{i=1}^n\varphi(i)$.
-
-    同样的，$\varphi * 1=\operatorname{id}$, 从而：
-
-    $$
-        \begin{aligned}
-            S(n) &amp; =\sum_{i=1}^n i - \sum_{i=2}^n S\left(\left\lfloor\frac{n}{i}\right\rfloor\right)    \\
-                 &amp; =\frac{1}{2}n(n+1) - \sum_{i=2}^n S\left(\left\lfloor\frac{n}{i}\right\rfloor\right)
-        \end{aligned}
-    $$
-</code></pre>
-<p>??? note "代码实现"
-    <code>cpp
-    --8&lt;-- "docs/math/code/du/du_1.cpp"</code></p>
-<h3 id="_5">问题二</h3>
-<p>???+ note "<a href="https://www.luogu.com.cn/problem/P3768">「LuoguP3768」简单的数学题</a>"
-    大意：求</p>
-<pre><code>$$
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<details class="note">
+<summary>代码实现</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/du/du_1.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="问题二">问题二<a class="headerlink" href="#问题二" title="Permanent link"></a></h3>
+<details class="note" open="open">
+<summary><a href="https://www.luogu.com.cn/problem/P3768">「LuoguP3768」简单的数学题</a></summary>
+<p>大意：求</p>
+<div class="arithmatex">\[
 \sum_{i=1}^n\sum_{j=1}^ni\cdot j\cdot\gcd(i,j)\pmod p
-$$
-
-其中 $n\leq 10^{10},5\times 10^8\leq p\leq 1.1\times 10^9$,$p$ 是质数。
-</code></pre>
+\]</div>
+<p>其中 <span class="arithmatex">\(n\leq 10^{10},5\times 10^8\leq p\leq 1.1\times 10^9\)</span>,<span class="arithmatex">\(p\)</span> 是质数。</p>
+</details>
 <p>利用 <span class="arithmatex">\(\varphi * 1=\operatorname{id}\)</span> 做莫比乌斯反演化为：</p>
 <div class="arithmatex">\[
 \sum_{d=1}^nF^2\left(\left\lfloor\frac{n}{d}\right\rfloor\right)\cdot d^2\varphi(d)
@@ -1389,10 +1389,12 @@ S(n)=\sum_{i=1}^n\left(\left(\operatorname{id}^2\varphi\right) * \operatorname{i
 \end{aligned}
 \]</div>
 <p>分块求解即可。</p>
-<p>??? note "代码实现"
-    <code>cpp
-    --8&lt;-- "docs/math/code/du/du_2.cpp"</code></p>
-<h3 id="_6">参考资料</h3>
+<details class="note">
+<summary>代码实现</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/du/du_2.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="参考资料">参考资料<a class="headerlink" href="#参考资料" title="Permanent link"></a></h3>
 <ol>
 <li>任之洲，2016，《积性函数求和的几种方法》，2016 年信息学奥林匹克中国国家队候选队员论文</li>
 <li><a href="https://riteme.site/blog/2018-9-11/time-space-complexity-dyh-algo.html">杜教筛的时空复杂度分析 - riteme.site</a></li>
@@ -1453,6 +1455,8 @@ S(n)=\sum_{i=1}^n\left(\left(\operatorname{id}^2\varphi\right) * \operatorname{i
     
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

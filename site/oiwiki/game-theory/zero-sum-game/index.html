@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#序贯零和游戏" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#序贯零和游戏" class="md-nav__link">
     <span class="md-ellipsis">
       
         序贯零和游戏
@@ -1102,7 +1102,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#例题" class="md-nav__link">
     <span class="md-ellipsis">
       
         例题
@@ -1113,7 +1113,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#习题" class="md-nav__link">
     <span class="md-ellipsis">
       
         习题
@@ -1129,7 +1129,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#同时零和游戏" class="md-nav__link">
     <span class="md-ellipsis">
       
         同时零和游戏
@@ -1141,7 +1141,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#混合策略" class="md-nav__link">
     <span class="md-ellipsis">
       
         混合策略
@@ -1152,7 +1152,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#von-neumann" class="md-nav__link">
+  <a href="#von-neumann-定理" class="md-nav__link">
     <span class="md-ellipsis">
       
         von Neumann 定理
@@ -1163,7 +1163,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#转化为线性规划问题" class="md-nav__link">
     <span class="md-ellipsis">
       
         转化为线性规划问题
@@ -1174,7 +1174,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#习题_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         习题
@@ -1190,7 +1190,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#参考资料与注释" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料与注释
@@ -1223,7 +1223,7 @@
 <p>本文讨论（二人）<a href="../intro/#零和非零和博弈">零和游戏</a>．</p>
 <p>在零和游戏中，两名玩家的收益之和恒为零，一方的收益必然意味着另一方的损失．零和游戏可以视为常和游戏的特殊情形．不过，任何常和游戏都可以通过对某一方的收益整体加上或减去一个常数，等价地转化为零和游戏，所以仅需要讨论零和游戏．</p>
 <p>在算法竞赛中常见的零和游戏大致可分为两类：序贯零和游戏与同时零和游戏．</p>
-<h2 id="_1">序贯零和游戏</h2>
+<h2 id="序贯零和游戏">序贯零和游戏<a class="headerlink" href="#序贯零和游戏" title="Permanent link"></a></h2>
 <p>序贯零和游戏中，两名玩家轮流行动，直到游戏终止．</p>
 <p>序贯零和游戏中，玩家的收益函数呈现递归结构．游戏局面 <span class="arithmatex">\(S\)</span> 可以分为三类，即终止局面 <span class="arithmatex">\(S_0\)</span>、玩家 <span class="arithmatex">\(1\)</span> 行动的局面 <span class="arithmatex">\(S_1\)</span> 和玩家 <span class="arithmatex">\(2\)</span> 行动的局面 <span class="arithmatex">\(S_2\)</span>．假设终止局面 <span class="arithmatex">\(s\in S_0\)</span> 处，玩家 <span class="arithmatex">\(1\)</span> 的收益为 <span class="arithmatex">\(v(s)\)</span>，相应地，玩家 <span class="arithmatex">\(2\)</span> 的收益为 <span class="arithmatex">\(-v(s)\)</span>．因此，轮到玩家 <span class="arithmatex">\(2\)</span> 行动时，最大化它的收益就相当于最小化玩家 <span class="arithmatex">\(1\)</span> 的收益．由此，假设双方都采取最优策略，玩家 <span class="arithmatex">\(1\)</span> 在局面 <span class="arithmatex">\(s\in S\)</span> 处能够获得的最大收益 <span class="arithmatex">\(V(s)\)</span> 满足如下递推关系：</p>
 <div class="arithmatex">\[
@@ -1265,42 +1265,39 @@ v(s) = \sum_{j=1}^{k_1}w(a_j^{(1)}) - \sum_{j=1}^{k_2}w(a_j^{(2)}).
 <p>这一方法同样可以推广到一般的 <a href="../impartial-game/#有向图游戏">有向图游戏</a>．</p>
 </li>
 </ul>
-<h3 id="_2">例题</h3>
-<p>???+ example "<a href="https://codeforces.com/problemset/problem/794/E">Codeforces 794 E. Choosing Carrot</a>"
-    设有一个长度为 <span class="arithmatex">\(n\)</span> 的数列 <span class="arithmatex">\({a_i}\)</span>．两名玩家 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(2\)</span> 轮流从数列的两端取走一个数，直到数列中仅剩下最后一个数字为止．玩家 <span class="arithmatex">\(1\)</span> 的目标是最大化这个最后剩下的数字，玩家 <span class="arithmatex">\(2\)</span> 的目标是最小化它．在游戏正式开始前，玩家 <span class="arithmatex">\(1\)</span> 还可以先进行 <span class="arithmatex">\(k\)</span> 次行动．假设两名玩家在整个过程中都采取最优策略．对于每一个 <span class="arithmatex">\(k = 0,1,2,\cdots,n-1\)</span>，求出游戏结束时最后剩下的数字．其中，<span class="arithmatex">\(1 \le n \le 3\times 10^5\)</span>．</p>
-<p>??? note "解答"
-    因为无论双方怎样取走数字，数列剩余部分都是一段完整的区间．所以，游戏中的局面可以仅由区间 <span class="arithmatex">\([l,r]\)</span> 和当前行动的玩家 <span class="arithmatex">\(i=1,2\)</span> 描述，可以使用动态规划算法求解．设 <span class="arithmatex">\(f(l,r,i)\)</span> 为局面由 <span class="arithmatex">\((l,r,i)\)</span> 描述时，游戏最后剩下的数字．由前文分析可知，当 <span class="arithmatex">\(l &lt; r\)</span> 时，这一函数满足状态转移方程：</p>
-<pre><code>$$
+<h3 id="例题">例题<a class="headerlink" href="#例题" title="Permanent link"></a></h3>
+<details class="example" open="open">
+<summary><a href="https://codeforces.com/problemset/problem/794/E">Codeforces 794 E. Choosing Carrot</a></summary>
+<p>设有一个长度为 <span class="arithmatex">\(n\)</span> 的数列 <span class="arithmatex">\({a_i}\)</span>．两名玩家 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(2\)</span> 轮流从数列的两端取走一个数，直到数列中仅剩下最后一个数字为止．玩家 <span class="arithmatex">\(1\)</span> 的目标是最大化这个最后剩下的数字，玩家 <span class="arithmatex">\(2\)</span> 的目标是最小化它．在游戏正式开始前，玩家 <span class="arithmatex">\(1\)</span> 还可以先进行 <span class="arithmatex">\(k\)</span> 次行动．假设两名玩家在整个过程中都采取最优策略．对于每一个 <span class="arithmatex">\(k = 0,1,2,\cdots,n-1\)</span>，求出游戏结束时最后剩下的数字．其中，<span class="arithmatex">\(1 \le n \le 3\times 10^5\)</span>．</p>
+</details>
+<details class="note">
+<summary>解答</summary>
+<p>因为无论双方怎样取走数字，数列剩余部分都是一段完整的区间．所以，游戏中的局面可以仅由区间 <span class="arithmatex">\([l,r]\)</span> 和当前行动的玩家 <span class="arithmatex">\(i=1,2\)</span> 描述，可以使用动态规划算法求解．设 <span class="arithmatex">\(f(l,r,i)\)</span> 为局面由 <span class="arithmatex">\((l,r,i)\)</span> 描述时，游戏最后剩下的数字．由前文分析可知，当 <span class="arithmatex">\(l &lt; r\)</span> 时，这一函数满足状态转移方程：</p>
+<div class="arithmatex">\[
 \begin{aligned}
 f(l,r,1) &amp;= \max\{f(l+1,r,2),f(l,r-1,2)\},\\
 f(l,r,2) &amp;= \min\{f(l+1,r,1),f(l,r-1,1)\}.
 \end{aligned}
-$$
-
-终值条件为 $f(l,l,1)=f(l,l,2) = a_l$．据此，可以在 $\Theta(n^2)$ 时间内求出所有可能局面的函数值．对于每个 $k$，答案就是
-
-$$
+\]</div>
+<p>终值条件为 <span class="arithmatex">\(f(l,l,1)=f(l,l,2) = a_l\)</span>．据此，可以在 <span class="arithmatex">\(\Theta(n^2)\)</span> 时间内求出所有可能局面的函数值．对于每个 <span class="arithmatex">\(k\)</span>，答案就是</p>
+<div class="arithmatex">\[
 g(k) = \max f(l,r,1) \text{ subject to } r - l + 1 = k.
-$$
-
-这一算法无法通过原题所设的数据范围，因此需要考虑优化转移．此处有很多种处理方法，本文只提供其中一种．
-
-将状态转移方程看作是对数列整体的操作．两个转移方程分别表示将相邻数字取最大值和最小值得到新数列，将它们分别称为「最大化操作」和「最小化操作」．每次操作都会使得数列长度减一．所有长度为 $d$ 的区间对应结果共计 $(n-d+1)$ 个，这就相当于对序列进行 $(d-1)$ 次操作得到的序列．另外，要得到 $f(l,r,1)$ 的结果，就需要保证最后一次操作是最大化操作．因此，这些操作序列的结尾总是最大化操作．
-
-考虑连续两次操作给数列带来的变化．不妨考虑首先做最小化操作，再做最大化操作．此时，数列 $a_1,a_2,a_3$ 将变为
-
-$$
+\]</div>
+<p>这一算法无法通过原题所设的数据范围，因此需要考虑优化转移．此处有很多种处理方法，本文只提供其中一种．</p>
+<p>将状态转移方程看作是对数列整体的操作．两个转移方程分别表示将相邻数字取最大值和最小值得到新数列，将它们分别称为「最大化操作」和「最小化操作」．每次操作都会使得数列长度减一．所有长度为 <span class="arithmatex">\(d\)</span> 的区间对应结果共计 <span class="arithmatex">\((n-d+1)\)</span> 个，这就相当于对序列进行 <span class="arithmatex">\((d-1)\)</span> 次操作得到的序列．另外，要得到 <span class="arithmatex">\(f(l,r,1)\)</span> 的结果，就需要保证最后一次操作是最大化操作．因此，这些操作序列的结尾总是最大化操作．</p>
+<p>考虑连续两次操作给数列带来的变化．不妨考虑首先做最小化操作，再做最大化操作．此时，数列 <span class="arithmatex">\(a_1,a_2,a_3\)</span> 将变为</p>
+<div class="arithmatex">\[
 \max\{\min\{a_1,a_2\},\min\{a_2,a_3\}\}.
-$$
-
-枚举 $a_1,a_2,a_3$ 三个数字之间所有可能的大小关系可知，除了 $a_1 &lt; a_2$ 且 $a_2 &gt; a_3$（即 $a_2$ 是严格极大值）这种情形外，这一表达式总是等于 $a_2$．也就是说，如果一个数列不存在任何严格极大值点，那么，连续两次操作对它的唯一影响就是删去了数列首尾各一个数字．这显然大幅简化了转移．剩下唯一的问题就是：如何保证数列不存在任何严格极大值点？事实上，只要对序列做一次最大化操作，就能保证不存在严格极大值点．故而，所有偶数次操作的结果，可以通过对初始数列进行两次操作得到的序列，逐对删去首尾数字得到；所有奇数次操作的结果，可以通过对初始数列进行一次操作得到的序列，逐对删去首尾数字得到．
-
-由于对序列的完整操作至多只需要进行 $3$ 次，而后续统计答案只需要 $2$ 次遍历，所以该算法的总时间复杂度为 $\Theta(n)$．
-</code></pre>
-<p>??? note "参考代码"
-    <code>cpp
-    --8&lt;-- "docs/math/code/zero-sum-game/zero-sum-game-1.cpp"</code></p>
-<h3 id="_3">习题</h3>
+\]</div>
+<p>枚举 <span class="arithmatex">\(a_1,a_2,a_3\)</span> 三个数字之间所有可能的大小关系可知，除了 <span class="arithmatex">\(a_1 &lt; a_2\)</span> 且 <span class="arithmatex">\(a_2 &gt; a_3\)</span>（即 <span class="arithmatex">\(a_2\)</span> 是严格极大值）这种情形外，这一表达式总是等于 <span class="arithmatex">\(a_2\)</span>．也就是说，如果一个数列不存在任何严格极大值点，那么，连续两次操作对它的唯一影响就是删去了数列首尾各一个数字．这显然大幅简化了转移．剩下唯一的问题就是：如何保证数列不存在任何严格极大值点？事实上，只要对序列做一次最大化操作，就能保证不存在严格极大值点．故而，所有偶数次操作的结果，可以通过对初始数列进行两次操作得到的序列，逐对删去首尾数字得到；所有奇数次操作的结果，可以通过对初始数列进行一次操作得到的序列，逐对删去首尾数字得到．</p>
+<p>由于对序列的完整操作至多只需要进行 <span class="arithmatex">\(3\)</span> 次，而后续统计答案只需要 <span class="arithmatex">\(2\)</span> 次遍历，所以该算法的总时间复杂度为 <span class="arithmatex">\(\Theta(n)\)</span>．</p>
+</details>
+<details class="note">
+<summary>参考代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/zero-sum-game/zero-sum-game-1.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="习题">习题<a class="headerlink" href="#习题" title="Permanent link"></a></h3>
 <ul>
 <li><a href="https://www.luogu.com.cn/problem/P2734">Luogu P2734 [USACO3.3] 游戏 A Game</a></li>
 <li><a href="https://www.luogu.com.cn/problem/P4576">Luogu P4576 [CQOI2013] 棋盘游戏</a></li>
@@ -1310,31 +1307,30 @@ $$
 <li><a href="https://codeforces.com/problemset/problem/1628/D2">Codeforces 1628 D2. Game on Sum (Hard Version)</a></li>
 <li><a href="https://www.luogu.com.cn/problem/P3210">Luogu P3210 [HNOI2010] 取石头游戏</a></li>
 </ul>
-<h2 id="_4">同时零和游戏</h2>
+<h2 id="同时零和游戏">同时零和游戏<a class="headerlink" href="#同时零和游戏" title="Permanent link"></a></h2>
 <p>同时零和博弈中，两名玩家同时行动．</p>
 <p>同时零和游戏通常采用收益矩阵表示．假设玩家 <span class="arithmatex">\(i=1,2\)</span> 的行动集合为 <span class="arithmatex">\(A_i\)</span>，且当玩家 <span class="arithmatex">\(i=1,2\)</span> 分别采取行动 <span class="arithmatex">\(a_i\in A_i\)</span> 时，两人的收益分别是 <span class="arithmatex">\(v(a_1,a_2)\)</span> 和 <span class="arithmatex">\(-v(a_1,a_2)\)</span>．</p>
-<p>???+ example "例子"
-    考虑石头剪刀布游戏．假定胜利得 <span class="arithmatex">\(1\)</span> 分，失败得 <span class="arithmatex">\(-1\)</span> 分，平局得 <span class="arithmatex">\(0\)</span> 分．那么，游戏中两人的收益可以表示为</p>
-<pre><code>$$
+<details class="example" open="open">
+<summary>例子</summary>
+<p>考虑石头剪刀布游戏．假定胜利得 <span class="arithmatex">\(1\)</span> 分，失败得 <span class="arithmatex">\(-1\)</span> 分，平局得 <span class="arithmatex">\(0\)</span> 分．那么，游戏中两人的收益可以表示为</p>
+<div class="arithmatex">\[
 \begin{pmatrix}
 0,0 &amp; 1,-1 &amp; -1,1 \\
 -1,1 &amp; 0,0 &amp; 1,-1 \\
 1,-1 &amp; -1,1 &amp; 0,0
 \end{pmatrix}.
-$$
-
-一般的二人同时游戏也可以表示为类似形式，故而也称为 [双矩阵游戏](https://en.wikipedia.org/wiki/Bimatrix_game)（bimatrix game）．对于零和博弈，由于玩家 $1$ 的收益矩阵和玩家 $2$ 的收益矩阵互为相反数，所以可以只考虑玩家 $1$ 的收益矩阵：
-
-$$
+\]</div>
+<p>一般的二人同时游戏也可以表示为类似形式，故而也称为 <a href="https://en.wikipedia.org/wiki/Bimatrix_game">双矩阵游戏</a>（bimatrix game）．对于零和博弈，由于玩家 <span class="arithmatex">\(1\)</span> 的收益矩阵和玩家 <span class="arithmatex">\(2\)</span> 的收益矩阵互为相反数，所以可以只考虑玩家 <span class="arithmatex">\(1\)</span> 的收益矩阵：</p>
+<div class="arithmatex">\[
 V = (v(a_1,a_2))_{(a_1,a_2)\in A_1\times A_2} = \begin{pmatrix}
 0 &amp; 1 &amp; -1 \\
 -1 &amp; 0 &amp; 1 \\
 1 &amp; -1 &amp; 0
 \end{pmatrix}.
-$$
-</code></pre>
+\]</div>
+</details>
 <p>需要解决的问题是：给定收益矩阵 <span class="arithmatex">\(V = (v(a_1,a_2))_{(a_1,a_2)\in A_1\times A_2}\)</span>，如何求出两名玩家的最优策略和最大收益？</p>
-<h3 id="_5">混合策略</h3>
+<h3 id="混合策略">混合策略<a class="headerlink" href="#混合策略" title="Permanent link"></a></h3>
 <p>相较于序贯零和游戏，同时游戏中两名玩家的角色是对称的．但是，既然已经解决了序贯零和游戏，那么不妨考虑同时游戏的序贯版本．例如，如果假定玩家 <span class="arithmatex">\(1\)</span> 首先做出行动，玩家 <span class="arithmatex">\(2\)</span> 再做出行动，那么，根据前文讨论，游戏结束时玩家 <span class="arithmatex">\(1\)</span> 的收益将由</p>
 <div class="arithmatex">\[
 w_-=\max_{a_1\in A_1}\min_{a_2\in A_2} v(a_1,a_2)
@@ -1344,50 +1340,51 @@ w_-=\max_{a_1\in A_1}\min_{a_2\in A_2} v(a_1,a_2)
 w_+ = \min_{a_2\in A_2}\max_{a_1\in A_1} v(a_1,a_2)
 \]</div>
 <p>给出．由于玩家 <span class="arithmatex">\(2\)</span> 的行动对于玩家 <span class="arithmatex">\(1\)</span> 单向透明，这应该是玩家 <span class="arithmatex">\(1\)</span> 所能获得的最好结果．玩家 <span class="arithmatex">\(1\)</span> 应该期待实际进行游戏时，所能获得的收益 <span class="arithmatex">\(w\in[w_-,w_+]\)</span>．尽管不等式 <span class="arithmatex">\(w_-\le w_+\)</span> 总是成立（证明参见 <a href="../../linear-programming/#对偶原理">弱对偶定理</a>），但是由于等号未必成立，所以，仅采用序贯游戏的分析手段，一般情况下没有办法唯一确定游戏结果．</p>
-<p>???+ example "例子（续）"
-    石头剪刀布游戏中，如果出手有先后，那么先手必输，后手必赢．转换为数学语言，这就是下列不等式：</p>
-<pre><code>$$
+<details class="example" open="open">
+<summary>例子（续）</summary>
+<p>石头剪刀布游戏中，如果出手有先后，那么先手必输，后手必赢．转换为数学语言，这就是下列不等式：</p>
+<div class="arithmatex">\[
 w_- = -1 \le +1 = w_+.
-$$
-
-此时，$w_-\neq w_+$ 并不成立．
-</code></pre>
+\]</div>
+<p>此时，<span class="arithmatex">\(w_-\neq w_+\)</span> 并不成立．</p>
+</details>
 <p>上述分析过程遗漏了同时游戏的一个关键因素，就是玩家无法准确预测对手的行动．形式上，这意味着双方可以采取某种随机策略．这一想法在序贯博弈的语境下并不成立，因为无论先手玩家如何随机选择行动，后手玩家总能准确地观测到这一行动，并有针对性地回应．但是，对于同时游戏，随机策略引入的战略模糊将使得对手无法有效地针对己方的行动．</p>
-<p>???+ example "例子（续）"
-    石头剪刀布游戏中，如果玩家 <span class="arithmatex">\(1\)</span> 均匀随机地选择剪刀、石头、布三个行动之一，那么，根据玩家 <span class="arithmatex">\(2\)</span> 的行动不同，玩家 <span class="arithmatex">\(1\)</span> 可能获得的收益是</p>
-<pre><code>$$
+<details class="example" open="open">
+<summary>例子（续）</summary>
+<p>石头剪刀布游戏中，如果玩家 <span class="arithmatex">\(1\)</span> 均匀随机地选择剪刀、石头、布三个行动之一，那么，根据玩家 <span class="arithmatex">\(2\)</span> 的行动不同，玩家 <span class="arithmatex">\(1\)</span> 可能获得的收益是</p>
+<div class="arithmatex">\[
 \dfrac{1}{3}(0,1,-1)^T + \dfrac{1}{3}(-1,0,1)^T + \dfrac{1}{3}(1,-1,0)^T = (0,0,0)^T.
-$$
-
-此时，无论玩家 $2$ 如何选择行动，玩家 $1$ 的期望收益总是 $0$．这显然好于确定性地选择单个行动．
-</code></pre>
+\]</div>
+<p>此时，无论玩家 <span class="arithmatex">\(2\)</span> 如何选择行动，玩家 <span class="arithmatex">\(1\)</span> 的期望收益总是 <span class="arithmatex">\(0\)</span>．这显然好于确定性地选择单个行动．</p>
+</details>
 <p>由此，就引入了混合策略的概念．</p>
-<p>???+ abstract "混合策略"
-    同时游戏中，玩家 <span class="arithmatex">\(i\)</span> 的 <strong>混合策略</strong>（mixed strategy），简称 <strong>策略</strong>，是指函数 <span class="arithmatex">\(s_i:A_i\to[0,1]\)</span>，且它满足 <span class="arithmatex">\(\sum_{a_i\in A_i}s_i(a_i)=1\)</span>．也就是说，策略 <span class="arithmatex">\(s_i\)</span> 就是玩家 <span class="arithmatex">\(i\)</span> 的行动集合 <span class="arithmatex">\(A_i\)</span> 上的一个概率分布．玩家 <span class="arithmatex">\(i\)</span> 全体混合策略的集合记作 <span class="arithmatex">\(S_i=\Delta(A_i)\)</span>，其中，<span class="arithmatex">\(\Delta(A_i)\)</span> 表示 <span class="arithmatex">\(A_i\)</span> 上的全体概率分布的集合．如果 <span class="arithmatex">\(s_i\)</span> 是退化的概率分布，即存在 <span class="arithmatex">\(a\in A_i\)</span> 使得 <span class="arithmatex">\(s_i(a)=1\)</span>，那么，也称策略 <span class="arithmatex">\(s_i\)</span> 为 <strong>纯策略</strong>（pure strategy）．</p>
+<details class="abstract" open="open">
+<summary>混合策略</summary>
+<p>同时游戏中，玩家 <span class="arithmatex">\(i\)</span> 的 <strong>混合策略</strong>（mixed strategy），简称 <strong>策略</strong>，是指函数 <span class="arithmatex">\(s_i:A_i\to[0,1]\)</span>，且它满足 <span class="arithmatex">\(\sum_{a_i\in A_i}s_i(a_i)=1\)</span>．也就是说，策略 <span class="arithmatex">\(s_i\)</span> 就是玩家 <span class="arithmatex">\(i\)</span> 的行动集合 <span class="arithmatex">\(A_i\)</span> 上的一个概率分布．玩家 <span class="arithmatex">\(i\)</span> 全体混合策略的集合记作 <span class="arithmatex">\(S_i=\Delta(A_i)\)</span>，其中，<span class="arithmatex">\(\Delta(A_i)\)</span> 表示 <span class="arithmatex">\(A_i\)</span> 上的全体概率分布的集合．如果 <span class="arithmatex">\(s_i\)</span> 是退化的概率分布，即存在 <span class="arithmatex">\(a\in A_i\)</span> 使得 <span class="arithmatex">\(s_i(a)=1\)</span>，那么，也称策略 <span class="arithmatex">\(s_i\)</span> 为 <strong>纯策略</strong>（pure strategy）．</p>
+</details>
 <p>混合策略的收益就是单个行动收益的期望：</p>
 <div class="arithmatex">\[
 v(s_1,s_2) = \sum_{a_1\in A_1}\sum_{a_2\in A_2}s_1(a_1)s_2(a_2)v(a_1,a_2).
 \]</div>
 <p>将单个行动看作对应的纯策略，那么，就可以将行动集合 <span class="arithmatex">\(A_i\)</span> 嵌入（混合）策略集合 <span class="arithmatex">\(S_i\)</span> 中，且上式定义的 <span class="arithmatex">\(v(s_1,s_2)\)</span> 就可以看作是将 <span class="arithmatex">\(v(a_1,a_2)\)</span> 从 <span class="arithmatex">\(A_1\times A_2\)</span> 延拓到 <span class="arithmatex">\(S_1\times S_2\)</span> 上．</p>
-<h3 id="von-neumann">von Neumann 定理</h3>
+<h3 id="von-neumann-定理">von Neumann 定理<a class="headerlink" href="#von-neumann-定理" title="Permanent link"></a></h3>
 <p>引入混合策略后，极大化极小思想和极小化极大思想得到的结果是一致的，由此，同时零和游戏的结果也是唯一确定的．</p>
-<p>???+ note "定理（von Neumann）"
-    允许混合策略的同时零和游戏中，如果双方都采取最优策略，那么，玩家 <span class="arithmatex">\(1\)</span> 的最大收益为</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理（von Neumann）</summary>
+<p>允许混合策略的同时零和游戏中，如果双方都采取最优策略，那么，玩家 <span class="arithmatex">\(1\)</span> 的最大收益为</p>
+<div class="arithmatex">\[
 w = \max_{s_1\in S_1}\min_{s_2\in S_2} v(s_1,s_2) = \min_{s_2\in S_2}\max_{s_1\in S_1} v(s_1,s_2),
-$$
-
-玩家 $2$ 的最大收益为 $-w$．
-</code></pre>
-<p>??? note "证明"
-    设 <span class="arithmatex">\(w = \max_{s_1\in S_1}\min_{s_2\in S_2} v(s_1,s_2)\)</span>．考虑内层最小化问题，因为 <span class="arithmatex">\(v(s_1,s_2)=\sum_{a_2\in A_2}s_2(a_2)v(s_1,a_2)\)</span>，所以，<span class="arithmatex">\(\max_{s_2\in S_2}v(s_1,s_2)=\max_{a_2\in A_2}v(s_1,a_2)\)</span>，前者的最优解就是后者的最优解对应的纯策略．因此，有 <span class="arithmatex">\(w = \max_{s_1\in S_1}\min_{a_2\in A_2} v(s_1,a_2)\)</span>．进而，引入辅助变量 <span class="arithmatex">\(u\)</span>，问题就可以改写为</p>
-<pre><code>$$
+\]</div>
+<p>玩家 <span class="arithmatex">\(2\)</span> 的最大收益为 <span class="arithmatex">\(-w\)</span>．</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(w = \max_{s_1\in S_1}\min_{s_2\in S_2} v(s_1,s_2)\)</span>．考虑内层最小化问题，因为 <span class="arithmatex">\(v(s_1,s_2)=\sum_{a_2\in A_2}s_2(a_2)v(s_1,a_2)\)</span>，所以，<span class="arithmatex">\(\max_{s_2\in S_2}v(s_1,s_2)=\max_{a_2\in A_2}v(s_1,a_2)\)</span>，前者的最优解就是后者的最优解对应的纯策略．因此，有 <span class="arithmatex">\(w = \max_{s_1\in S_1}\min_{a_2\in A_2} v(s_1,a_2)\)</span>．进而，引入辅助变量 <span class="arithmatex">\(u\)</span>，问题就可以改写为</p>
+<div class="arithmatex">\[
 w = \max_{s_1\in S_1} u \text{ subject to }u \le \min_{a_2\in A_2} v(s_1,a_2).
-$$
-
-因为这个约束就等价于 $u\le v(s_1,a_2)$ 对于所有 $a_2\in A_2$ 都成立．最后，引入混合策略 $s_1$ 的定义和收益函数 $v(s_1,a_2)$ 的表达式，原问题就等价于 [线性规划问题](../linear-programming.md)
-
-$$
+\]</div>
+<p>因为这个约束就等价于 <span class="arithmatex">\(u\le v(s_1,a_2)\)</span> 对于所有 <span class="arithmatex">\(a_2\in A_2\)</span> 都成立．最后，引入混合策略 <span class="arithmatex">\(s_1\)</span> 的定义和收益函数 <span class="arithmatex">\(v(s_1,a_2)\)</span> 的表达式，原问题就等价于 <a href="../../linear-programming/">线性规划问题</a></p>
+<div class="arithmatex">\[
 (P) \qquad
 \begin{aligned}
 w = \max_{u,s_1}\; &amp; u\\
@@ -1395,11 +1392,9 @@ w = \max_{u,s_1}\; &amp; u\\
 &amp; \sum_{a_1\in A_1}s_1(a_1) = 1,\\
 &amp; s_1(a_1) \ge 0,~\forall a_1\in A_1.
 \end{aligned}
-$$
-
-这个问题显然是可行的，且最优解有解．根据 [对偶原理](../linear-programming.md#对偶原理) 可知，它的最优解就等于对偶问题的最优解：
-
-$$
+\]</div>
+<p>这个问题显然是可行的，且最优解有解．根据 <a href="../../linear-programming/#对偶原理">对偶原理</a> 可知，它的最优解就等于对偶问题的最优解：</p>
+<div class="arithmatex">\[
 (D) \qquad
 \begin{aligned}
 w = \min_{t,s_2}\; &amp; t\\
@@ -1407,12 +1402,11 @@ w = \min_{t,s_2}\; &amp; t\\
 &amp;\sum_{a_2\in A_2}s_2(a_2) = 1,\\
 &amp;s_2(a_2)\ge 0,~\forall a_2\in A_2.
 \end{aligned}
-$$
-
-重复前文的步骤，这一问题就等价于 $\min_{s_2\in A_2}\min_{s_1\in S_1}v(s_1,s_2)$．定理得证．
-</code></pre>
+\]</div>
+<p>重复前文的步骤，这一问题就等价于 <span class="arithmatex">\(\min_{s_2\in A_2}\min_{s_1\in S_1}v(s_1,s_2)\)</span>．定理得证．</p>
+</details>
 <p>这一结果正是这一游戏的 <a href="https://en.wikipedia.org/wiki/Nash_equilibrium">Nash 均衡</a>．也就是说，假定双方都选择均衡中的最优策略，那么，没有任何玩家能够从偏离均衡策略中严格获益．</p>
-<h3 id="_6">转化为线性规划问题</h3>
+<h3 id="转化为线性规划问题">转化为线性规划问题<a class="headerlink" href="#转化为线性规划问题" title="Permanent link"></a></h3>
 <p>von Neumann 定理的证明同时也指出了同时零和游戏的求解方法．设 <span class="arithmatex">\(n\)</span> 和 <span class="arithmatex">\(m\)</span> 分别是玩家 <span class="arithmatex">\(1\)</span> 和 <span class="arithmatex">\(2\)</span> 可采取的行动数目．给定玩家 <span class="arithmatex">\(1\)</span> 的收益矩阵 <span class="arithmatex">\(V\in\mathbf R^{n\times m}\)</span>，可以求解如下线性规划问题：</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1423,11 +1417,11 @@ w = \max_{(u,s)\in\mathbf R\times\mathbf R^n}\; &amp; u\\
 \end{aligned}
 \]</div>
 <p>这是一个规模为 <span class="arithmatex">\(\Theta(n+m)\)</span> 的线性规划问题，可以用 <a href="../../simplex/">单纯形法</a> 高效求解．算法得到的最优解 <span class="arithmatex">\(s\)</span> 就是玩家 <span class="arithmatex">\(1\)</span> 的最优（混合）策略．要求得玩家 <span class="arithmatex">\(2\)</span> 的最优策略，只需要从单纯形表中获得该问题最优解的对偶变量（即影子价格）即可．</p>
-<h3 id="_7">习题</h3>
+<h3 id="习题_1">习题<a class="headerlink" href="#习题_1" title="Permanent link"></a></h3>
 <ul>
 <li><a href="https://www.luogu.com.cn/problem/P4232">Luogu P4232 无意识之外的捉迷藏</a></li>
 </ul>
-<h2 id="_8">参考资料与注释</h2>
+<h2 id="参考资料与注释">参考资料与注释<a class="headerlink" href="#参考资料与注释" title="Permanent link"></a></h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Zero-sum_game">Zero-sum game - Wikipedia</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Minimax_theorem">Minimax theorem - Wikipedia</a></li>
@@ -1485,6 +1479,8 @@ w = \max_{(u,s)\in\mathbf R\times\mathbf R^n}\; &amp; u\\
     
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

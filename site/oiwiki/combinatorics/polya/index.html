@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#引入" class="md-skip">
           Skip to content
         </a>
       
@@ -1092,7 +1092,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#引入" class="md-nav__link">
     <span class="md-ellipsis">
       
         引入
@@ -1103,7 +1103,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#burnside" class="md-nav__link">
+  <a href="#burnside-引理" class="md-nav__link">
     <span class="md-ellipsis">
       
         Burnside 引理
@@ -1114,7 +1114,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#polya" class="md-nav__link">
+  <a href="#pólya-计数原理" class="md-nav__link">
     <span class="md-ellipsis">
       
         Pólya 计数原理
@@ -1125,7 +1125,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#带权重形式的推广" class="md-nav__link">
     <span class="md-ellipsis">
       
         带权重形式的推广
@@ -1137,7 +1137,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#应用" class="md-nav__link">
     <span class="md-ellipsis">
       
         应用
@@ -1153,7 +1153,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#常见空间对称群" class="md-nav__link">
     <span class="md-ellipsis">
       
         常见空间对称群
@@ -1165,7 +1165,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#循环群" class="md-nav__link">
     <span class="md-ellipsis">
       
         循环群
@@ -1176,7 +1176,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#二面体群" class="md-nav__link">
     <span class="md-ellipsis">
       
         二面体群
@@ -1187,7 +1187,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#对称群" class="md-nav__link">
     <span class="md-ellipsis">
       
         对称群
@@ -1198,7 +1198,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#多面体群" class="md-nav__link">
     <span class="md-ellipsis">
       
         多面体群
@@ -1214,7 +1214,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#习题" class="md-nav__link">
     <span class="md-ellipsis">
       
         习题
@@ -1226,7 +1226,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#染色问题" class="md-nav__link">
     <span class="md-ellipsis">
       
         染色问题
@@ -1237,7 +1237,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#图论计数" class="md-nav__link">
     <span class="md-ellipsis">
       
         图论计数
@@ -1253,7 +1253,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#参考文献与注释" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考文献与注释
@@ -1283,65 +1283,54 @@
   <h1>Polya</h1>
 
 <p>前置知识：<a href="../../permutation/">置换和排列</a></p>
-<h2 id="_1">引入</h2>
+<h2 id="引入">引入<a class="headerlink" href="#引入" title="Permanent link"></a></h2>
 <p>Pólya 计数原理通常通常用来解决一些涉及「本质不同」的计数问题。</p>
-<p>???+ info "本文可能涉及群论的相关内容"
-    本文可能涉及到群论的相关内容。本文会对涉及到的群论概念做简单的解释，以便于不熟悉相关内容的读者理解和应用 Pólya 计数原理。关于群论的内容，严格的表述和讨论请参考 <a href="../../algebra/basic/">抽象代数基本概念</a>、<a href="../../algebra/group-theory/">群论</a> 等章节。</p>
-<p>??? info "「空间对称群」、「对称群」与「置换群」"
-    本文中将不可避免地同时使用这三类群的名字。尽管可能很容易造成混淆，但它们确实代指不同的概念。给定几何结构，它上面的对称操作指的是能够使它与它自身重合的几何变换，而空间对称群（symmetry group）就是这些对称操作的集合。对称群（symmetric group）是给定集合上的全体置换的集合。置换群（permutation group）则是对称群的子群，即一些（未必是全体）置换构成的群。后文会解释如何将给定几何结构的空间对称群表示成置换群的形式，并用于计数问题。</p>
-<h2 id="burnside">Burnside 引理</h2>
+<details class="info" open="open">
+<summary>本文可能涉及群论的相关内容</summary>
+<p>本文可能涉及到群论的相关内容。本文会对涉及到的群论概念做简单的解释，以便于不熟悉相关内容的读者理解和应用 Pólya 计数原理。关于群论的内容，严格的表述和讨论请参考 <a href="../../algebra/basic/">抽象代数基本概念</a>、<a href="../../algebra/group-theory/">群论</a> 等章节。</p>
+</details>
+<details class="info">
+<summary>「空间对称群」、「对称群」与「置换群」</summary>
+<p>本文中将不可避免地同时使用这三类群的名字。尽管可能很容易造成混淆，但它们确实代指不同的概念。给定几何结构，它上面的对称操作指的是能够使它与它自身重合的几何变换，而空间对称群（symmetry group）就是这些对称操作的集合。对称群（symmetric group）是给定集合上的全体置换的集合。置换群（permutation group）则是对称群的子群，即一些（未必是全体）置换构成的群。后文会解释如何将给定几何结构的空间对称群表示成置换群的形式，并用于计数问题。</p>
+</details>
+<h2 id="burnside-引理">Burnside 引理<a class="headerlink" href="#burnside-引理" title="Permanent link"></a></h2>
 <p>相关阅读：<a href="../../algebra/group-theory/#burnside-引理">Burnside 引理</a></p>
 <p>Pólya 计数原理是 Burnside 引理的应用和推广。在介绍 Pólya 计数原理之前，需要先简单地回顾 Burnside 引理的内容。</p>
 <p>为了总结出一般的规律，首先考虑简单的例子。</p>
-<p>???+ example "项链染色"
-    现在有一串共四个珠子的项链，每个珠子可以是红色或者蓝色，计算共有几种本质不同的珠子。（如果两种染色的结果可以通过旋转项链重合，就认为是相同的。)</p>
-<p>??? example "解答和分析"
-    这个问题足够简单，可以通过枚举的方式加以解答。珠子共计 <span class="arithmatex">\(4\)</span> 个，每个珠子可以染 <span class="arithmatex">\(2\)</span> 种颜色，所以，项链所有可能的染色方案共计 <span class="arithmatex">\(2^4=16\)</span> 种。将可以通过旋转相互得到的分到一组，共计 <span class="arithmatex">\(6\)</span> 组，如下图所示。（其中，单个染色方案的编码表示了自左下角的珠子开始顺时针染的颜色，<span class="arithmatex">\(B\)</span> 表示蓝色，<span class="arithmatex">\(R\)</span> 表示红色；分到同一组的染色方案的编码有着相同的背景颜色。）</p>
-<pre><code>![项链染色](../images/necklaces.svg)
-
-从这个例子中可以看到，要计算本质不同的染色的种类数，关键其实是知道每种本质相同的染色对应几种不同的染色方案。也就是说，要搞清楚上图中每个分组的大小。
-
-能够分到同一个组中的染色方案，就是指它们之间能够通过旋转操作互相转化的染色方案。总共有 $4$ 种旋转的方式，即
-
-$$
+<details class="example" open="open">
+<summary>项链染色</summary>
+<p>现在有一串共四个珠子的项链，每个珠子可以是红色或者蓝色，计算共有几种本质不同的珠子。（如果两种染色的结果可以通过旋转项链重合，就认为是相同的。)</p>
+</details>
+<details class="example">
+<summary>解答和分析</summary>
+<p>这个问题足够简单，可以通过枚举的方式加以解答。珠子共计 <span class="arithmatex">\(4\)</span> 个，每个珠子可以染 <span class="arithmatex">\(2\)</span> 种颜色，所以，项链所有可能的染色方案共计 <span class="arithmatex">\(2^4=16\)</span> 种。将可以通过旋转相互得到的分到一组，共计 <span class="arithmatex">\(6\)</span> 组，如下图所示。（其中，单个染色方案的编码表示了自左下角的珠子开始顺时针染的颜色，<span class="arithmatex">\(B\)</span> 表示蓝色，<span class="arithmatex">\(R\)</span> 表示红色；分到同一组的染色方案的编码有着相同的背景颜色。）</p>
+<p><img alt="项链染色" src="../../images/necklaces.svg" /></p>
+<p>从这个例子中可以看到，要计算本质不同的染色的种类数，关键其实是知道每种本质相同的染色对应几种不同的染色方案。也就是说，要搞清楚上图中每个分组的大小。</p>
+<p>能够分到同一个组中的染色方案，就是指它们之间能够通过旋转操作互相转化的染色方案。总共有 <span class="arithmatex">\(4\)</span> 种旋转的方式，即</p>
+<div class="arithmatex">\[
 G=\{r_0,r_1,r_2,r_3\},
-$$
-
-分别表示旋转 $0,1,2,3$ 次。旋转 $0$ 次就是原地不动。
-
-首先看染色方案 $RRBB$ 所在的分组。对它施加这四种操作，将分别得到
-
-$$
+\]</div>
+<p>分别表示旋转 <span class="arithmatex">\(0,1,2,3\)</span> 次。旋转 <span class="arithmatex">\(0\)</span> 次就是原地不动。</p>
+<p>首先看染色方案 <span class="arithmatex">\(RRBB\)</span> 所在的分组。对它施加这四种操作，将分别得到</p>
+<div class="arithmatex">\[
 RRBB, RBBR, BBRR, BRRB.
-$$
-
-四种染色方案互不相同，因此这个组就有 $4$ 个元素。
-
-再看染色方案 $BRBR$ 所在的分组。对它同样施加这四种操作，将分别得到
-
-$$
+\]</div>
+<p>四种染色方案互不相同，因此这个组就有 <span class="arithmatex">\(4\)</span> 个元素。</p>
+<p>再看染色方案 <span class="arithmatex">\(BRBR\)</span> 所在的分组。对它同样施加这四种操作，将分别得到</p>
+<div class="arithmatex">\[
 BRBR, RBRB, BRBR, RBRB.
-$$
-
-此时，旋转两次的结果和不旋转的结果是一致的，旋转三次和旋转一次的结果是一致的。所以，这个组就有 $2$ 个元素。
-
-如果看染色方案 $BBBB$ 和 $RRRR$ 所在的分组。对它们施加四种操作得到的结果都是它们自身。因而，每个组就只有 $1$ 个元素。
-
-如果用 $x$ 表示染色方案，$Gx$ 表示对染色方案 $x$ 操作后能够得到的颜色编码的集合，那么从上面的例子可以总结出一个规律，那就是 $G$ 的操作对于 $x$ 的影响存在某种「周期性」。
-
-设 $|G|$ 表示操作的总个数，这种影响的「周期性」意味着，如果有 $m$ 个不同的 $G$ 中的操作将染色方案 $x$ 变换到它自身，那么 $x$ 在这些操作下的结果就会重复出现 $m$ 次。因而，染色方案 $x$ 在这些操作下共计有 $|G|/m$ 种不同的结果，这也就是 $x$ 所在分组的大小。
-
-这个例子中，因为只有旋转零次 $r_0$ 才能够将 $RRBB$ 变换到它自身，所以，它所在分组的大小等于 $4/1=4$；而旋转零次 $r_0$ 和两次 $r_2$ 都能将 $BRBR$ 变换到它自身，所以，它所在分组的大小等于 $4/2=2$；无论旋转几次都能将 $BBBB$ 变换到它自身，所以，它所在分组的大小就是 $4/4=1$。
-
-在下面的叙述中，用 $G_x$ 表示能够将 $x$ 变换到它自身的操作的数目，所以，$|G_x|$ 就是上面的 $m$。此时，$X$ 所在分组大小是 $|G|/|G_x|$。要计算染色方案的分组的数目，只需要穷举所有可能的染色方案 $x\in X$，对所在分组大小为 $|Gx|$ 的染色方案 $x$ 赋以权重 $1/|Gx|$，就能够将分组的数目表达为
-
-$$
+\]</div>
+<p>此时，旋转两次的结果和不旋转的结果是一致的，旋转三次和旋转一次的结果是一致的。所以，这个组就有 <span class="arithmatex">\(2\)</span> 个元素。</p>
+<p>如果看染色方案 <span class="arithmatex">\(BBBB\)</span> 和 <span class="arithmatex">\(RRRR\)</span> 所在的分组。对它们施加四种操作得到的结果都是它们自身。因而，每个组就只有 <span class="arithmatex">\(1\)</span> 个元素。</p>
+<p>如果用 <span class="arithmatex">\(x\)</span> 表示染色方案，<span class="arithmatex">\(Gx\)</span> 表示对染色方案 <span class="arithmatex">\(x\)</span> 操作后能够得到的颜色编码的集合，那么从上面的例子可以总结出一个规律，那就是 <span class="arithmatex">\(G\)</span> 的操作对于 <span class="arithmatex">\(x\)</span> 的影响存在某种「周期性」。</p>
+<p>设 <span class="arithmatex">\(|G|\)</span> 表示操作的总个数，这种影响的「周期性」意味着，如果有 <span class="arithmatex">\(m\)</span> 个不同的 <span class="arithmatex">\(G\)</span> 中的操作将染色方案 <span class="arithmatex">\(x\)</span> 变换到它自身，那么 <span class="arithmatex">\(x\)</span> 在这些操作下的结果就会重复出现 <span class="arithmatex">\(m\)</span> 次。因而，染色方案 <span class="arithmatex">\(x\)</span> 在这些操作下共计有 <span class="arithmatex">\(|G|/m\)</span> 种不同的结果，这也就是 <span class="arithmatex">\(x\)</span> 所在分组的大小。</p>
+<p>这个例子中，因为只有旋转零次 <span class="arithmatex">\(r_0\)</span> 才能够将 <span class="arithmatex">\(RRBB\)</span> 变换到它自身，所以，它所在分组的大小等于 <span class="arithmatex">\(4/1=4\)</span>；而旋转零次 <span class="arithmatex">\(r_0\)</span> 和两次 <span class="arithmatex">\(r_2\)</span> 都能将 <span class="arithmatex">\(BRBR\)</span> 变换到它自身，所以，它所在分组的大小等于 <span class="arithmatex">\(4/2=2\)</span>；无论旋转几次都能将 <span class="arithmatex">\(BBBB\)</span> 变换到它自身，所以，它所在分组的大小就是 <span class="arithmatex">\(4/4=1\)</span>。</p>
+<p>在下面的叙述中，用 <span class="arithmatex">\(G_x\)</span> 表示能够将 <span class="arithmatex">\(x\)</span> 变换到它自身的操作的数目，所以，<span class="arithmatex">\(|G_x|\)</span> 就是上面的 <span class="arithmatex">\(m\)</span>。此时，<span class="arithmatex">\(X\)</span> 所在分组大小是 <span class="arithmatex">\(|G|/|G_x|\)</span>。要计算染色方案的分组的数目，只需要穷举所有可能的染色方案 <span class="arithmatex">\(x\in X\)</span>，对所在分组大小为 <span class="arithmatex">\(|Gx|\)</span> 的染色方案 <span class="arithmatex">\(x\)</span> 赋以权重 <span class="arithmatex">\(1/|Gx|\)</span>，就能够将分组的数目表达为</p>
+<div class="arithmatex">\[
 |X/G|=\sum_{x\in X}\frac{1}{|Gx|}=\sum_{x\in X}\frac{|G_x|}{|G|}.
-$$
-
-现在这个式子的形式并不便于应用。记 $gx$ 是对染色方案 $x\in X$ 应用操作 $g\in G$ 的结果，那么上面描述的集合 $G_x$ 就是 $\{g\in G:gx=x\}$，所以交换求和顺序就有
-
-$$
+\]</div>
+<p>现在这个式子的形式并不便于应用。记 <span class="arithmatex">\(gx\)</span> 是对染色方案 <span class="arithmatex">\(x\in X\)</span> 应用操作 <span class="arithmatex">\(g\in G\)</span> 的结果，那么上面描述的集合 <span class="arithmatex">\(G_x\)</span> 就是 <span class="arithmatex">\(\{g\in G:gx=x\}\)</span>，所以交换求和顺序就有</p>
+<div class="arithmatex">\[
 \begin{aligned}
 \sum_{x\in X}|G_x| 
 &amp;=\sum_{x\in X}|\{g\in G:gx=x\}|\\
@@ -1350,120 +1339,140 @@ $$
 &amp;=\sum_{g\in G}|\{x\in X:gx=x\}|\\
 &amp;=\sum_{g\in G}|X^g|.
 \end{aligned}
-$$
-
-其中 $[\cdot]$ 为 Iverson 括号。交换求和记号的结果中，$X^g=\{x\in X:gx=x\}$ 是指在操作 $g$ 下保持不变的染色方案 $x$ 的集合。简言之，它是操作 $g$ 的不动点。
-
-在这些讨论之后，现在可以将分组的个数写作
-
-$$
+\]</div>
+<p>其中 <span class="arithmatex">\([\cdot]\)</span> 为 Iverson 括号。交换求和记号的结果中，<span class="arithmatex">\(X^g=\{x\in X:gx=x\}\)</span> 是指在操作 <span class="arithmatex">\(g\)</span> 下保持不变的染色方案 <span class="arithmatex">\(x\)</span> 的集合。简言之，它是操作 <span class="arithmatex">\(g\)</span> 的不动点。</p>
+<p>在这些讨论之后，现在可以将分组的个数写作</p>
+<div class="arithmatex">\[
 |X/G|=\frac{1}{|G|}\sum_{g\in G}|X^g|.
-$$
-
-也就是说，分组的个数是各种旋转操作的不动点的平均个数。
-
-作为这个结果的应用，再次计算项链染色的个数。这些旋转操作的不动点可以列举如下。
-
-|   操作  |            不动点            |
-| :---: | :-----------------------: |
-| $r_0$ |            $X$            |
-| $r_1$ |      $\{BBBB,RRRR\}$      |
-| $r_2$ | $\{BBBB,BRBR,RBRB,RRRR\}$ |
-| $r_3$ |      $\{BBBB,RRRR\}$      |
-
-因而，分组的个数就等于
-
-$$
+\]</div>
+<p>也就是说，分组的个数是各种旋转操作的不动点的平均个数。</p>
+<p>作为这个结果的应用，再次计算项链染色的个数。这些旋转操作的不动点可以列举如下。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">操作</th>
+<th style="text-align: center;">不动点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(r_0\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(X\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(r_1\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\{BBBB,RRRR\}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(r_2\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\{BBBB,BRBR,RBRB,RRRR\}\)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="arithmatex">\(r_3\)</span></td>
+<td style="text-align: center;"><span class="arithmatex">\(\{BBBB,RRRR\}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>因而，分组的个数就等于</p>
+<div class="arithmatex">\[
 \frac{16+2+4+2}{4} = 6.
-$$
-
-这样就得到了前面的结果。
-</code></pre>
+\]</div>
+<p>这样就得到了前面的结果。</p>
+</details>
 <p>从这个例子中，可以归纳出一般的结果，用于求解这类计数问题。为了方便讨论，本文考虑的情景是染色问题，当然也可以应用到别的情景上去，在文末会提供相应的例子。</p>
 <p>染色问题是说，给定某个结构，在它的每个顶点上染色，会得到不同的染色方案。这个结构拥有某种对称性，使得看似不同的染色方案在经过一系列对称操作后能够互相转化。这些能互相转化的染色方案就称为本质相同的。问题是要求解本质不同的染色的数目。</p>
 <p>根据例子中的分析，要求解这样的问题，首先要讨论给定的结构都有哪些对称操作。这些对称操作的集合 <span class="arithmatex">\(G\)</span> 称为给定结构的空间对称群。实际应用中，大多时候无需了解群的定义，只需要能够不重不漏地讨论所有的空间对称操作就可以了。本文后面分析了几个常见的空间对称群的结构，那里解释了群的定义。</p>
 <p>所有染色方案的集合记作 <span class="arithmatex">\(X\)</span>，其中的单个染色方案记作 <span class="arithmatex">\(x\)</span>。操作 <span class="arithmatex">\(g\in G\)</span> 作用在染色方案 <span class="arithmatex">\(x\in X\)</span> 的结果是 <span class="arithmatex">\(gx\)</span>。那么，能够通过某个操作作用在染色方案 <span class="arithmatex">\(x\)</span> 上的所有结果就是 <span class="arithmatex">\(Gx=\{gx:g\in G\}\)</span>，它称为群 <span class="arithmatex">\(G\)</span> 作用下 <span class="arithmatex">\(x\)</span> 的轨道。同一轨道中的不同染色方案就是这类问题中所谓「本质相同」的。故而，所有本质不同的染色的数目，就等价于不同轨道的数目。</p>
 <p>例子中的分析可以推广到一般的情形。</p>
-<p>???+ note "Burnside 引理"
-    给定群 <span class="arithmatex">\(G\)</span> 在集合 <span class="arithmatex">\(X\)</span> 上的作用，则所有不同的轨道的数目</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>Burnside 引理</summary>
+<p>给定群 <span class="arithmatex">\(G\)</span> 在集合 <span class="arithmatex">\(X\)</span> 上的作用，则所有不同的轨道的数目</p>
+<div class="arithmatex">\[
 |X/G|=\frac{1}{|G|}\sum_{g\in G}|X^g|.
-$$
-
-这里，$X^g=\{x\in X:gx=x\}$ 是 $g\in G$ 的作用下的不动点集合。
-</code></pre>
+\]</div>
+<p>这里，<span class="arithmatex">\(X^g=\{x\in X:gx=x\}\)</span> 是 <span class="arithmatex">\(g\in G\)</span> 的作用下的不动点集合。</p>
+</details>
 <p>它的证明几乎就是照搬上面例子中的分析。但是，例子中用到了观察，即群 <span class="arithmatex">\(G\)</span> 在单个元素 <span class="arithmatex">\(x\)</span> 上的作用结果具有某种「周期性」，所以，这种周期重复的数目就等于能将 <span class="arithmatex">\(x\)</span> 变换到它自身的操作的数目。这个观察在一般的情形是正确的，但是因为群 <span class="arithmatex">\(G\)</span> 的结构可能很复杂，它的「周期性」未必是例子中呈现的那么直接。严格地表述这个观察，需要用到群论中的 <a href="../../algebra/group-theory/#稳定化子">轨道稳定子定理（orbit-stabilizer theorem）</a>。</p>
 <p>在应用的时候，只要能够列举出所有的对称操作，并且给出每个对称操作对应的不动点数目就可以解决对应的计数问题。下面是一个稍微复杂的应用。</p>
-<p>???+ example "立方体染色"
-    用三种颜色给一个立方体染色，求本质不同的方案数（经过空间旋转后相同的两种方案视为同一种）。</p>
-<p>??? example "解答"
-    因为立方体有 <span class="arithmatex">\(6\)</span> 个面，每个面有 <span class="arithmatex">\(3\)</span> 中染色方法，所以，总共有 <span class="arithmatex">\(3^6\)</span> 种染色方案，即 <span class="arithmatex">\(|X|=3^6\)</span>。记立方体的空间对称群为 <span class="arithmatex">\(G\)</span>。</p>
-<pre><code>![](../images/cube.svg)
-
-接下来我们需要对 $G$ 中的所有操作进行分析，它们可以分为以下几类（方便起见，将立方体的六个面分别称为前、后、上、下、左、右）：
-
--   不动：即恒等变换，因为所有直接染色方案经过恒等变换都不变，因此它对应的 $|X^g|=3^6$；
--   以两个相对面的中心连线为轴的 $90^\circ$ 旋转：相对面有 $3$ 种选择，旋转的方向有 $2$ 种选择，因此这类共有 $6$ 个置换。假设选择了前、后两个面中心的连线为轴，则必须要满足上、下、左、右四个面的颜色一样，才能使旋转后不变。此时，有 $3$ 个可以独立染色的区域，因此它对应的 $|X^g|=3^3$；
--   以两个相对面的中心连线为轴的 $180^\circ$ 旋转：相对面有 $3$ 种选择，旋转方向的选择没有影响，因此这类共有 $3$ 个置换。假设选择了前、后两个面中心的连线为轴，则必须要满足上、下两个面的颜色一样，左、右两个面的颜色一样，才能使旋转后不变。此时，有 $4$ 个可以独立染色的区域，因此它对应的 $|X^g|=3^4$；
--   以两条相对棱的中点连线为轴的 $180^\circ$ 旋转：相对棱有 $6$ 种选择，旋转方向对置换依然没有影响，因此这类共有 $6$ 个置换。假设选择了前、上两个面的边界和下、后两个面的边界作为相对棱，则必须要满足前、上两个面的颜色一样，下、后两个面的颜色一样，左、右两个面的颜色一样，才能使旋转后不变。此时，有 $3$ 个可以独立染色的区域，因此它对应的 $|X^g|=3^3$；
--   以两个相对顶点的连线为轴的 $120^\circ$ 旋转：相对顶点有 $4$ 种选择，旋转的方向有 $2$ 种选择，因此这类共有 $8$ 个置换。假设选择了前面的右上角和后面的左下角作为相对顶点，则必须满足前、上、右三个面的颜色一样，后、下、左三个面的颜色一样，才能使旋转后不变。此时，有 $2$ 个可以独立染色的区域，因此它对应的 $|X^g|=3^2$。
-
-因此，所有本质不同的染色方案数为
-
-$$
+<details class="example" open="open">
+<summary>立方体染色</summary>
+<p>用三种颜色给一个立方体染色，求本质不同的方案数（经过空间旋转后相同的两种方案视为同一种）。</p>
+</details>
+<details class="example">
+<summary>解答</summary>
+<p>因为立方体有 <span class="arithmatex">\(6\)</span> 个面，每个面有 <span class="arithmatex">\(3\)</span> 中染色方法，所以，总共有 <span class="arithmatex">\(3^6\)</span> 种染色方案，即 <span class="arithmatex">\(|X|=3^6\)</span>。记立方体的空间对称群为 <span class="arithmatex">\(G\)</span>。</p>
+<p><img alt="" src="../../images/cube.svg" /></p>
+<p>接下来我们需要对 <span class="arithmatex">\(G\)</span> 中的所有操作进行分析，它们可以分为以下几类（方便起见，将立方体的六个面分别称为前、后、上、下、左、右）：</p>
+<ul>
+<li>不动：即恒等变换，因为所有直接染色方案经过恒等变换都不变，因此它对应的 <span class="arithmatex">\(|X^g|=3^6\)</span>；</li>
+<li>以两个相对面的中心连线为轴的 <span class="arithmatex">\(90^\circ\)</span> 旋转：相对面有 <span class="arithmatex">\(3\)</span> 种选择，旋转的方向有 <span class="arithmatex">\(2\)</span> 种选择，因此这类共有 <span class="arithmatex">\(6\)</span> 个置换。假设选择了前、后两个面中心的连线为轴，则必须要满足上、下、左、右四个面的颜色一样，才能使旋转后不变。此时，有 <span class="arithmatex">\(3\)</span> 个可以独立染色的区域，因此它对应的 <span class="arithmatex">\(|X^g|=3^3\)</span>；</li>
+<li>以两个相对面的中心连线为轴的 <span class="arithmatex">\(180^\circ\)</span> 旋转：相对面有 <span class="arithmatex">\(3\)</span> 种选择，旋转方向的选择没有影响，因此这类共有 <span class="arithmatex">\(3\)</span> 个置换。假设选择了前、后两个面中心的连线为轴，则必须要满足上、下两个面的颜色一样，左、右两个面的颜色一样，才能使旋转后不变。此时，有 <span class="arithmatex">\(4\)</span> 个可以独立染色的区域，因此它对应的 <span class="arithmatex">\(|X^g|=3^4\)</span>；</li>
+<li>以两条相对棱的中点连线为轴的 <span class="arithmatex">\(180^\circ\)</span> 旋转：相对棱有 <span class="arithmatex">\(6\)</span> 种选择，旋转方向对置换依然没有影响，因此这类共有 <span class="arithmatex">\(6\)</span> 个置换。假设选择了前、上两个面的边界和下、后两个面的边界作为相对棱，则必须要满足前、上两个面的颜色一样，下、后两个面的颜色一样，左、右两个面的颜色一样，才能使旋转后不变。此时，有 <span class="arithmatex">\(3\)</span> 个可以独立染色的区域，因此它对应的 <span class="arithmatex">\(|X^g|=3^3\)</span>；</li>
+<li>以两个相对顶点的连线为轴的 <span class="arithmatex">\(120^\circ\)</span> 旋转：相对顶点有 <span class="arithmatex">\(4\)</span> 种选择，旋转的方向有 <span class="arithmatex">\(2\)</span> 种选择，因此这类共有 <span class="arithmatex">\(8\)</span> 个置换。假设选择了前面的右上角和后面的左下角作为相对顶点，则必须满足前、上、右三个面的颜色一样，后、下、左三个面的颜色一样，才能使旋转后不变。此时，有 <span class="arithmatex">\(2\)</span> 个可以独立染色的区域，因此它对应的 <span class="arithmatex">\(|X^g|=3^2\)</span>。</li>
+</ul>
+<p>因此，所有本质不同的染色方案数为</p>
+<div class="arithmatex">\[
 \frac{1\times3^6+6\times3^3+3\times3^4+6\times3^3+8\times3^2}{1+6+3+6+8}=57.
-$$
-</code></pre>
-<h2 id="polya">Pólya 计数原理</h2>
+\]</div>
+</details>
+<h2 id="pólya-计数原理">Pólya 计数原理<a class="headerlink" href="#pólya-计数原理" title="Permanent link"></a></h2>
 <p>在 Burnside 引理的叙述中，并没有用到集合 <span class="arithmatex">\(X\)</span> 是某结构上的全部染色方案这一性质。其实，Burnside 引理的应用范围并不局限于染色计数问题。对于染色计数问题，Pólya 计数原理则提供了更为准确的计算方法。它可以看作是一般性的 Burnside 引理在染色计数问题上的应用。</p>
 <p>相较于 Burnside 引理，Pólya 计数原理的改进就是提供了不动点集合大小 <span class="arithmatex">\(|X^g|\)</span> 在染色计数问题中的具体计算方法。</p>
 <p>这一点从上面的立方体染色的例子可以直观地看出来。对于正方体的各种对称操作，它的不动点集合的大小都是 <span class="arithmatex">\(m^{c(g)}\)</span> 的形式，这里 <span class="arithmatex">\(m\)</span> 是颜色的数目，<span class="arithmatex">\(c(g)\)</span> 是在操作 <span class="arithmatex">\(g\)</span> 下可以独立染色的区域数目。这个观察在一般的情形下也是成立的，不过需要进一步明晰如何对给定的 <span class="arithmatex">\(g\)</span> 计算 <span class="arithmatex">\(c(g)\)</span> 的取值。</p>
-<p>给某个结构选择一种染色方案，用数学语言表示，就是选择一个从这个结构的可以染色的对象（比如项链中的珠子、立方体的面等）的集合 <span class="arithmatex">\(X\)</span> 到颜色集合 <span class="arithmatex">\(C\)</span> 的映射 <span class="arithmatex">\(f:X\rightarrow C\)</span>。因此，染色方案的集合就是 <span class="arithmatex">\(C^X\)</span>。该结构的空间对称群 <span class="arithmatex">\(G\)</span> 作用在结构上，自然也连带着作用在集合 <span class="arithmatex">\(X\)</span> 上。这种对称操作，总对应着集合 <span class="arithmatex">\(X\)</span> 上的双射，即 <strong>置换</strong>（permutation）。[^perm-group]</p>
-<p>现在分析不动点集合 <span class="arithmatex">\((C^X)^g\)</span> 的结构。给定 <span class="arithmatex">\(g\)</span>，看作 <span class="arithmatex">\(X\)</span> 上的置换，比照例子中的分析可以知道，如果 <span class="arithmatex">\(X\)</span> 中的位置 <span class="arithmatex">\(x\)</span> 在有限次重复操作 <span class="arithmatex">\(g\)</span> 之后可以移动到位置 <span class="arithmatex">\(y\)</span>，那么，作为不动点 <span class="arithmatex">\(f\in (C^X)^g\)</span>，必然需要满足 <span class="arithmatex">\(f(x)=f(y)\)</span>。用上一节轨道的语言来说，因为位置 <span class="arithmatex">\(x\)</span> 和位置 <span class="arithmatex">\(y\)</span> 处于操作 <span class="arithmatex">\(g\)</span> 作用[^g-act]的同一个轨道上，所以它们需要染相同的颜色。用置换的语言来说，在置换 <span class="arithmatex">\(g\)</span> 的 <a href="../../permutation/#轮换表示">轮换分解</a> 中，位置 <span class="arithmatex">\(x\)</span> 和位置 <span class="arithmatex">\(y\)</span> 处于同一轮换，故而需要染相同的颜色。轮换分解中不同的轮换的染色不必相同，可以独立染色，所以此时可以独立染色的区域数目就是 <span class="arithmatex">\(c(g)\)</span>，即 <span class="arithmatex">\(g\)</span> 的轮换分解中的轮换数目。</p>
+<p>给某个结构选择一种染色方案，用数学语言表示，就是选择一个从这个结构的可以染色的对象（比如项链中的珠子、立方体的面等）的集合 <span class="arithmatex">\(X\)</span> 到颜色集合 <span class="arithmatex">\(C\)</span> 的映射 <span class="arithmatex">\(f:X\rightarrow C\)</span>。因此，染色方案的集合就是 <span class="arithmatex">\(C^X\)</span>。该结构的空间对称群 <span class="arithmatex">\(G\)</span> 作用在结构上，自然也连带着作用在集合 <span class="arithmatex">\(X\)</span> 上。这种对称操作，总对应着集合 <span class="arithmatex">\(X\)</span> 上的双射，即 <strong>置换</strong>（permutation）。<sup id="fnref:perm-group"><a class="footnote-ref" href="#fn:perm-group">1</a></sup></p>
+<p>现在分析不动点集合 <span class="arithmatex">\((C^X)^g\)</span> 的结构。给定 <span class="arithmatex">\(g\)</span>，看作 <span class="arithmatex">\(X\)</span> 上的置换，比照例子中的分析可以知道，如果 <span class="arithmatex">\(X\)</span> 中的位置 <span class="arithmatex">\(x\)</span> 在有限次重复操作 <span class="arithmatex">\(g\)</span> 之后可以移动到位置 <span class="arithmatex">\(y\)</span>，那么，作为不动点 <span class="arithmatex">\(f\in (C^X)^g\)</span>，必然需要满足 <span class="arithmatex">\(f(x)=f(y)\)</span>。用上一节轨道的语言来说，因为位置 <span class="arithmatex">\(x\)</span> 和位置 <span class="arithmatex">\(y\)</span> 处于操作 <span class="arithmatex">\(g\)</span> 作用<sup id="fnref:g-act"><a class="footnote-ref" href="#fn:g-act">2</a></sup>的同一个轨道上，所以它们需要染相同的颜色。用置换的语言来说，在置换 <span class="arithmatex">\(g\)</span> 的 <a href="../../permutation/#轮换表示">轮换分解</a> 中，位置 <span class="arithmatex">\(x\)</span> 和位置 <span class="arithmatex">\(y\)</span> 处于同一轮换，故而需要染相同的颜色。轮换分解中不同的轮换的染色不必相同，可以独立染色，所以此时可以独立染色的区域数目就是 <span class="arithmatex">\(c(g)\)</span>，即 <span class="arithmatex">\(g\)</span> 的轮换分解中的轮换数目。</p>
 <p>由此，操作 <span class="arithmatex">\(g\)</span> 的不动点的数目就是 <span class="arithmatex">\(|C|^{c(g)}\)</span>。将这个结论代入 Burnside 引理，就能得到无权重版本的 <strong>Pólya 计数原理</strong>（Pólya enumeration theorem）。</p>
-<p>???+ note "Pólya 计数原理（无权重版本）"
-    给定群 <span class="arithmatex">\(G\)</span> 在集合 <span class="arithmatex">\(X\)</span> 上的作用和颜色集合 <span class="arithmatex">\(C\)</span>，则不同的染色方案的数目</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>Pólya 计数原理（无权重版本）</summary>
+<p>给定群 <span class="arithmatex">\(G\)</span> 在集合 <span class="arithmatex">\(X\)</span> 上的作用和颜色集合 <span class="arithmatex">\(C\)</span>，则不同的染色方案的数目</p>
+<div class="arithmatex">\[
 |C^X/G|=\frac{1}{|G|}\sum_{g\in G}m^{c(g)},
-$$
-
-这里，$m$ 是颜色数目，$c(g)$ 是元素 $g\in G$ 的置换表示的轮换分解中的轮换数目。
-</code></pre>
-<p>??? info "关于群 <span class="arithmatex">\(G\)</span> 的含义"
-    这里略微有些滥用记号。如果群 <span class="arithmatex">\(G\)</span> 作用在 <span class="arithmatex">\(X\)</span> 上，那么染色方案集合 <span class="arithmatex">\(C^X\)</span> 上的群作用是需要重新定义的，这里没有加以区分。</p>
+\]</div>
+<p>这里，<span class="arithmatex">\(m\)</span> 是颜色数目，<span class="arithmatex">\(c(g)\)</span> 是元素 <span class="arithmatex">\(g\in G\)</span> 的置换表示的轮换分解中的轮换数目。</p>
+</details>
+<details class="info">
+<summary>关于群 <span class="arithmatex">\(G\)</span> 的含义</summary>
+<p>这里略微有些滥用记号。如果群 <span class="arithmatex">\(G\)</span> 作用在 <span class="arithmatex">\(X\)</span> 上，那么染色方案集合 <span class="arithmatex">\(C^X\)</span> 上的群作用是需要重新定义的，这里没有加以区分。</p>
+</details>
 <p>作为 Pólya 计数原理的简单应用，下面重新用 Pólya 计数原理计算前文的例子。</p>
-<p>??? example "项链染色问题另解"
-    将四个珠子标号 <span class="arithmatex">\(1\sim 4\)</span>，则例子中的群 <span class="arithmatex">\(G\)</span> 中的元素分别有置换表示如下：（均写作轮换分解的形式）</p>
-<pre><code>-   旋转零次 $r_0=(1)$，共计 $4$ 个轮换（注意省略的 $1$‑轮换）；
--   旋转一次 $r_1=(1234)$，共计 $1$ 个轮换；
--   旋转二次 $r_2=(13)(24)$，共计 $2$ 个轮换；
--   旋转三次 $r_3=(1432)$，共计 $1$ 个轮换。
-
-因此，本质不同染色的数目是
-
-$$
+<details class="example">
+<summary>项链染色问题另解</summary>
+<p>将四个珠子标号 <span class="arithmatex">\(1\sim 4\)</span>，则例子中的群 <span class="arithmatex">\(G\)</span> 中的元素分别有置换表示如下：（均写作轮换分解的形式）</p>
+<ul>
+<li>旋转零次 <span class="arithmatex">\(r_0=(1)\)</span>，共计 <span class="arithmatex">\(4\)</span> 个轮换（注意省略的 <span class="arithmatex">\(1\)</span>‑轮换）；</li>
+<li>旋转一次 <span class="arithmatex">\(r_1=(1234)\)</span>，共计 <span class="arithmatex">\(1\)</span> 个轮换；</li>
+<li>旋转二次 <span class="arithmatex">\(r_2=(13)(24)\)</span>，共计 <span class="arithmatex">\(2\)</span> 个轮换；</li>
+<li>旋转三次 <span class="arithmatex">\(r_3=(1432)\)</span>，共计 <span class="arithmatex">\(1\)</span> 个轮换。</li>
+</ul>
+<p>因此，本质不同染色的数目是</p>
+<div class="arithmatex">\[
 \frac{2^4+2^1+2^2+2^1}{4}=6.
-$$
-</code></pre>
-<p>??? example "立方体染色问题另解"
-    由于前文的分析实质上已经给出了各类置换的轮换表示，只是没有用数字符号显式地书写出来，这里不再重复前文的分析。仅仅考虑以相对棱的中点连线为轴的 <span class="arithmatex">\(180^\circ\)</span> 旋转的情形，加以示例。将前、后、上、下、左、右六个面依次编号为 <span class="arithmatex">\(1\sim6\)</span>，此时对应的置换是 <span class="arithmatex">\((13)(24)(56)\)</span>，因此 <span class="arithmatex">\(c(g)=3\)</span>。其它类型的置换也可以类似分析，最后的计数的表达式也和上文完全一致。</p>
-<h2 id="_2">带权重形式的推广</h2>
+\]</div>
+</details>
+<details class="example">
+<summary>立方体染色问题另解</summary>
+<p>由于前文的分析实质上已经给出了各类置换的轮换表示，只是没有用数字符号显式地书写出来，这里不再重复前文的分析。仅仅考虑以相对棱的中点连线为轴的 <span class="arithmatex">\(180^\circ\)</span> 旋转的情形，加以示例。将前、后、上、下、左、右六个面依次编号为 <span class="arithmatex">\(1\sim6\)</span>，此时对应的置换是 <span class="arithmatex">\((13)(24)(56)\)</span>，因此 <span class="arithmatex">\(c(g)=3\)</span>。其它类型的置换也可以类似分析，最后的计数的表达式也和上文完全一致。</p>
+</details>
+<h2 id="带权重形式的推广">带权重形式的推广<a class="headerlink" href="#带权重形式的推广" title="Permanent link"></a></h2>
 <p>无权重版本的 Pólya 计数原理只能够给出所有的本质不同的染色问题的计数，但是在处理更为精细的问题时就无能为力了。比如说，如果在上述染色问题中，给定每种可以使用的颜色的数目，就不能套用上面的 Pólya 计数公式。在实际求解这类问题时，需要再次使用 Burnside 引理加以推导；而将这些结果总结为生成函数的形式，就是带权重版本的 Pólya 计数原理。</p>
-<p>???+ example "项链染色（带限制）"
-    现在有一串共四个珠子的项链，每个珠子可以是红色或者蓝色，恰有两个红色珠子、两个蓝色珠子可以使用，计算共有几种本质不同的珠子。（如果两种染色的结果可以通过旋转项链重合，就认为是相同的。)</p>
-<p>??? example "解答和分析"
-    考虑使用 Burnside 引理。红色、蓝色珠子各两个，共计有 <span class="arithmatex">\(\dbinom{4}{2}=6\)</span> 种染色方案。空间对称群 <span class="arithmatex">\(G=\{r_0,r_1,r_2,r_3\}\)</span> 分别对应旋转 <span class="arithmatex">\(0\sim3\)</span> 次，则它们对应的不动点集合分析如下：</p>
-<pre><code>-   旋转零次 $r_0=(1)$，全部 $6$ 个染色方案都是不动点；
--   旋转一次 $r_1=(1234)$，不动点要求所有珠子染同样的颜色，没有不动点；
--   旋转两次 $r_2=(13)(24)$，有两个可独立染色的区域，大小都是 $2$，它们要分别染成红色和蓝色，则不动点集合的大小为 $2$；
--   旋转三次 $r_3=(1432)$，与旋转一次的情形相同，没有不动点。
-
-所以，根据 Burnside 引理，本质不同的染色数目为
-
-$$
+<details class="example" open="open">
+<summary>项链染色（带限制）</summary>
+<p>现在有一串共四个珠子的项链，每个珠子可以是红色或者蓝色，恰有两个红色珠子、两个蓝色珠子可以使用，计算共有几种本质不同的珠子。（如果两种染色的结果可以通过旋转项链重合，就认为是相同的。)</p>
+</details>
+<details class="example">
+<summary>解答和分析</summary>
+<p>考虑使用 Burnside 引理。红色、蓝色珠子各两个，共计有 <span class="arithmatex">\(\dbinom{4}{2}=6\)</span> 种染色方案。空间对称群 <span class="arithmatex">\(G=\{r_0,r_1,r_2,r_3\}\)</span> 分别对应旋转 <span class="arithmatex">\(0\sim3\)</span> 次，则它们对应的不动点集合分析如下：</p>
+<ul>
+<li>旋转零次 <span class="arithmatex">\(r_0=(1)\)</span>，全部 <span class="arithmatex">\(6\)</span> 个染色方案都是不动点；</li>
+<li>旋转一次 <span class="arithmatex">\(r_1=(1234)\)</span>，不动点要求所有珠子染同样的颜色，没有不动点；</li>
+<li>旋转两次 <span class="arithmatex">\(r_2=(13)(24)\)</span>，有两个可独立染色的区域，大小都是 <span class="arithmatex">\(2\)</span>，它们要分别染成红色和蓝色，则不动点集合的大小为 <span class="arithmatex">\(2\)</span>；</li>
+<li>旋转三次 <span class="arithmatex">\(r_3=(1432)\)</span>，与旋转一次的情形相同，没有不动点。</li>
+</ul>
+<p>所以，根据 Burnside 引理，本质不同的染色数目为</p>
+<div class="arithmatex">\[
 \frac{6+0+2+0}{4}=2.
-$$
-</code></pre>
+\]</div>
+</details>
 <p>从这个例子中可以总结出如下计算方法。对于限制不同颜色个数的问题，同样是要把空间对称群中各个置换的轮换分别染色，但是需要让染色用到的颜色数目恰好等于给定的颜色个数。这样的组合问题通常没有显式解，除了可以通过 <a href="../combination/">排列组合方法</a> 计算的特殊情形外，需要看做 <a href="../../dp/knapsack.md">背包问题</a> 进行求解。</p>
 <p>通过生成函数可以给出这类计数问题的答案。给定置换 <span class="arithmatex">\(g\)</span>，如果它的 <a href="../../permutation/#置换的型">型</a> 是 <span class="arithmatex">\(1^{\alpha_1}2^{\alpha_2}\cdots n^{\alpha_n}\)</span>，即它有 <span class="arithmatex">\(\alpha_k\)</span> 个长度为 <span class="arithmatex">\(k\)</span> 的轮换，且对于每个轮换可以染成 <span class="arithmatex">\(m\)</span> 种颜色中的一种，那么生成函数</p>
 <div class="arithmatex">\[
@@ -1476,67 +1485,67 @@ $$
 \]</div>
 <p>展开这个式子，每个单项式的系数就给出了给定颜色组合下的本质不同染色的计数。</p>
 <p>在上述过程中，对每个轮换进行染色的生成函数 <span class="arithmatex">\(\sum_{i=1}^mx_i^k\)</span> 并无特殊之处，可以替换成其它的生成函数。因而，有如下的一般版本的 Pólya 计数原理。</p>
-<p>???+ note "置换群的轮换指标"
-    给定置换群 <span class="arithmatex">\(G\)</span>，则群 <span class="arithmatex">\(G\)</span> 的 <strong>轮换指标</strong>（cycle index），定义为</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>置换群的轮换指标</summary>
+<p>给定置换群 <span class="arithmatex">\(G\)</span>，则群 <span class="arithmatex">\(G\)</span> 的 <strong>轮换指标</strong>（cycle index），定义为</p>
+<div class="arithmatex">\[
 Z_G(t_1,t_2,\cdots,t_n)=\frac{1}{|G|}\sum_{g\in G}t_1^{c_1(g)}t_2^{c_2(g)}\cdots t_n^{c_n(g)},
-$$
-
-其中，$c_k(g)$ 是置换 $g$ 的轮换分解中长度为 $k$ 的轮换的个数，即 $1^{c_1(g)}2^{c_2(g)}\cdots n^{c_n(g)}$ 是置换 $g$ 的型。
-</code></pre>
-<p>???+ note "Pólya 计数原理（带权重版本）"
-    给定群 <span class="arithmatex">\(G\)</span> 在集合 <span class="arithmatex">\(X\)</span> 上的作用，对每个点的染色方法由它的染色方案的计数的生成函数 <span class="arithmatex">\(f(x_1,x_2,\cdots,x_m)\)</span> 给出，那么集合 <span class="arithmatex">\(X\)</span> 的本质不同染色方案的计数的生成函数是</p>
-<pre><code>$$
+\]</div>
+<p>其中，<span class="arithmatex">\(c_k(g)\)</span> 是置换 <span class="arithmatex">\(g\)</span> 的轮换分解中长度为 <span class="arithmatex">\(k\)</span> 的轮换的个数，即 <span class="arithmatex">\(1^{c_1(g)}2^{c_2(g)}\cdots n^{c_n(g)}\)</span> 是置换 <span class="arithmatex">\(g\)</span> 的型。</p>
+</details>
+<details class="note" open="open">
+<summary>Pólya 计数原理（带权重版本）</summary>
+<p>给定群 <span class="arithmatex">\(G\)</span> 在集合 <span class="arithmatex">\(X\)</span> 上的作用，对每个点的染色方法由它的染色方案的计数的生成函数 <span class="arithmatex">\(f(x_1,x_2,\cdots,x_m)\)</span> 给出，那么集合 <span class="arithmatex">\(X\)</span> 的本质不同染色方案的计数的生成函数是</p>
+<div class="arithmatex">\[
 Z_G(f(x_1^1,x_2^1,\cdots,x_m^1),f(x_1^2,x_2^2,\cdots,x_m^2),\cdots,f(x_1^n,x_2^n,\cdots,x_m^n)),
-$$
-
-这里，$Z_G(t_1,t_2,\cdots,t_n)$ 是群 $G$ 的轮换指标。
-</code></pre>
+\]</div>
+<p>这里，<span class="arithmatex">\(Z_G(t_1,t_2,\cdots,t_n)\)</span> 是群 <span class="arithmatex">\(G\)</span> 的轮换指标。</p>
+</details>
 <p>这里，如果单个位置的染色的生成函数是 <span class="arithmatex">\(f(x_1,x_2,\cdots,x_m)\)</span>，那么长度为 <span class="arithmatex">\(k\)</span> 的轮换的染色的生成函数就是 <span class="arithmatex">\(f(x_1^k,x_2^k,\cdots,x_m^k)\)</span>。这反映了如果某一染色方案是给定置换的不动点，那么同一轮换中的所有位置必须染相同的颜色。如果将生成函数在 <span class="arithmatex">\(x_i=1\)</span> 处取值，就得到上文的无权重版本的 Pólya 计数原理。</p>
 <p>定理的叙述用到了置换群的轮换指标的概念。它和具体的染色问题无关。它描述了置换群的结构。</p>
-<p>??? example "带限制的项链染色问题另解"
-    旋转对称群的轮换指标是 <span class="arithmatex">\(\dfrac14\left(t_1^4+t_2^2+2t_4\right)\)</span>，单点染色的生成函数是 <span class="arithmatex">\(r+b\)</span>，故而全体染色方案的生成函数是</p>
-<pre><code>$$
+<details class="example">
+<summary>带限制的项链染色问题另解</summary>
+<p>旋转对称群的轮换指标是 <span class="arithmatex">\(\dfrac14\left(t_1^4+t_2^2+2t_4\right)\)</span>，单点染色的生成函数是 <span class="arithmatex">\(r+b\)</span>，故而全体染色方案的生成函数是</p>
+<div class="arithmatex">\[
 \begin{aligned}
 F(r,b)&amp;=\frac14\left((r+b)^4+(r^2+b^2)^2+2(r^4+b^4)\right)\\
 &amp;=r^4+r^3b+2r^2b^2+rb^3+b^4.
 \end{aligned}
-$$
-
-所求计数就是 $r^2b^2$ 的系数，即共 $2$ 种本质不同染色。顺便，这个式子也给出了其他限制下的计数。
-</code></pre>
-<h3 id="_3">应用</h3>
+\]</div>
+<p>所求计数就是 <span class="arithmatex">\(r^2b^2\)</span> 的系数，即共 <span class="arithmatex">\(2\)</span> 种本质不同染色。顺便，这个式子也给出了其他限制下的计数。</p>
+</details>
+<h3 id="应用">应用<a class="headerlink" href="#应用" title="Permanent link"></a></h3>
 <p>带权重版本的 Pólya 计数原理在组合计数问题中起到重要的作用。这里简单讨论它的应用，而更一般的讨论可以参考 <a href="../../poly/symbolic-method/#有限制的构造">组合问题的形式化方法</a>。</p>
-<p>???+ example "钻石项链"
-    现在有一串共四个相同珠子的项链，每个珠子上可以镶若干颗钻石。如果有四枚钻石，总共有多少本质不同的镶钻方式。（如果两种镶钻的结果可以通过旋转项链重合，就认为是相同的。)</p>
-<p>??? example "解答和分析"
-    项链的空间对称群仍与前文所述相同。不考虑钻石总数的限制，则单个位置的镶钻方案的生成函数是</p>
-<pre><code>$$
+<details class="example" open="open">
+<summary>钻石项链</summary>
+<p>现在有一串共四个相同珠子的项链，每个珠子上可以镶若干颗钻石。如果有四枚钻石，总共有多少本质不同的镶钻方式。（如果两种镶钻的结果可以通过旋转项链重合，就认为是相同的。)</p>
+</details>
+<details class="example">
+<summary>解答和分析</summary>
+<p>项链的空间对称群仍与前文所述相同。不考虑钻石总数的限制，则单个位置的镶钻方案的生成函数是</p>
+<div class="arithmatex">\[
 f(x)=1+x+x^2+\cdots=\sum_{i=1}^\infty x^i=\frac{1}{1-x}.
-$$
-
-应用带权重版本的 Pólya 计数原理可知，所有镶钻方案的生成函数为
-
-$$
+\]</div>
+<p>应用带权重版本的 Pólya 计数原理可知，所有镶钻方案的生成函数为</p>
+<div class="arithmatex">\[
 \begin{aligned}
 F(x)&amp;=\frac14\left(f(x)^4+f(x^2)^2+2f(x^4)\right)\\
 &amp;=1+x+3x^2+5x^3+10x^4+\cdots.
 \end{aligned}
-$$
-
-故而，所求镶钻方案的数目就是 $x^4$ 的系数，即共计 $10$ 种方案。作为验证，通过枚举可知，它们分别是
-
-$$
+\]</div>
+<p>故而，所求镶钻方案的数目就是 <span class="arithmatex">\(x^4\)</span> 的系数，即共计 <span class="arithmatex">\(10\)</span> 种方案。作为验证，通过枚举可知，它们分别是</p>
+<div class="arithmatex">\[
 4000,3100,3010,3001,2200,2020,2110,2101,2011,1111.
-$$
-
-这里，每组四个数字分别表示每个珠子上的镶钻数目。
-</code></pre>
+\]</div>
+<p>这里，每组四个数字分别表示每个珠子上的镶钻数目。</p>
+</details>
 <p>这个例子说明，带权重版本的 Pólya 计数原理能够解决的问题远比染色计数问题要广泛。它提供了一种将单点的计数扩展到整个结构上本质不同的计数的方法。染色问题只是这类问题的特例。</p>
-<h2 id="_4">常见空间对称群</h2>
+<h2 id="常见空间对称群">常见空间对称群<a class="headerlink" href="#常见空间对称群" title="Permanent link"></a></h2>
 <p>Pólya 计数相关问题的难点之一在于分析置换群的结构。这里，简单讨论常见的空间对称群的结构，并用它们的轮换指标加以描述。应当注意，对于同一个结构的空间对称群，如果考虑的作用对象的集合不同，相应的 <a href="../../algebra/group-theory/#群作用">群作用</a> 也就不同，因而它们的置换表示也就不同。比如说，正方体的空间对称群对于它的顶点、棱、面的作用就分别对应着正方体的顶点置换群、棱置换群和面置换群，顶点、棱、面的个数互不相同，故而这些置换群以及对应的轮换指标当然也各不相同。所以，在具体问题的求解中，不能忽视群作用的对象的指定。</p>
-<p>??? info "空间对称群和置换群的关系"
-    虽然两者概念上十分相似，但是它们绝不是同一个对象。用群论的语言说，给定空间对称群 <span class="arithmatex">\(G\)</span> 和它在集合 <span class="arithmatex">\(X\)</span> 上的群作用，群作用的置换表示实则提供了一个从群 <span class="arithmatex">\(G\)</span> 到对称群 <span class="arithmatex">\(S_X\)</span> 的同态 <span class="arithmatex">\(\varphi\)</span>，而且这个置换表示在组合计数的语境下往往是忠实的，即 <span class="arithmatex">\(\ker\varphi=\{e\}\)</span>，故而同态 <span class="arithmatex">\(\varphi\)</span> 实则是群 <span class="arithmatex">\(G\)</span> 到群 <span class="arithmatex">\(S_X\)</span> 内的一个嵌入。文中的置换群则是这个嵌入的像，即 <span class="arithmatex">\(\varphi(G)\)</span>，它与本身的空间对称群 <span class="arithmatex">\(G\)</span> 同构。因此，对于同样的结构上的空间对称群 <span class="arithmatex">\(G\)</span>，如果群作用的选取不一致，就会同构于不同的置换群 <span class="arithmatex">\(\varphi(G)\)</span>，进而具有不同的轮换指标（同构的置换群的轮换指标未必相同）。</p>
+<details class="info">
+<summary>空间对称群和置换群的关系</summary>
+<p>虽然两者概念上十分相似，但是它们绝不是同一个对象。用群论的语言说，给定空间对称群 <span class="arithmatex">\(G\)</span> 和它在集合 <span class="arithmatex">\(X\)</span> 上的群作用，群作用的置换表示实则提供了一个从群 <span class="arithmatex">\(G\)</span> 到对称群 <span class="arithmatex">\(S_X\)</span> 的同态 <span class="arithmatex">\(\varphi\)</span>，而且这个置换表示在组合计数的语境下往往是忠实的，即 <span class="arithmatex">\(\ker\varphi=\{e\}\)</span>，故而同态 <span class="arithmatex">\(\varphi\)</span> 实则是群 <span class="arithmatex">\(G\)</span> 到群 <span class="arithmatex">\(S_X\)</span> 内的一个嵌入。文中的置换群则是这个嵌入的像，即 <span class="arithmatex">\(\varphi(G)\)</span>，它与本身的空间对称群 <span class="arithmatex">\(G\)</span> 同构。因此，对于同样的结构上的空间对称群 <span class="arithmatex">\(G\)</span>，如果群作用的选取不一致，就会同构于不同的置换群 <span class="arithmatex">\(\varphi(G)\)</span>，进而具有不同的轮换指标（同构的置换群的轮换指标未必相同）。</p>
+</details>
 <p>给定一个结构，它的空间对称群是所有能够将它变换到它自身的操作的集合。它必然满足如下条件：</p>
 <ul>
 <li>对给定结构连续应用两个对称操作，可以视作应用另一个对称操作，即对称操作的集合对于复合是满足封闭性的；</li>
@@ -1545,7 +1554,7 @@ $$
 <li>任何操作都存在它的逆操作，可以抵消给定操作的效果。</li>
 </ul>
 <p><a href="../../algebra/basic/#群">群</a> 是对所有满足这些条件的概念的抽象。对于群的结构的讨论，就是 <a href="../../algebra/group-theory/">群论</a> 的主要研究内容。这里的分析主要集中在空间对称群，对它的结构的讨论也主要应用几何观点。这里给出了常见的例子，读者应当从中获得分析这类问题的常见思路。</p>
-<h3 id="_5">循环群</h3>
+<h3 id="循环群">循环群<a class="headerlink" href="#循环群" title="Permanent link"></a></h3>
 <p>给定正 <span class="arithmatex">\(n\)</span> 边形，它的全体旋转操作构成的空间对称群称为循环群（cyclic group），记作 <span class="arithmatex">\(C_n\)</span>。将逆时针旋转 <span class="arithmatex">\((360/n)^\circ\)</span> 的操作记作 <span class="arithmatex">\(r\)</span>，则群 <span class="arithmatex">\(C_n\)</span> 的元素可以写作</p>
 <div class="arithmatex">\[
 C_n=\{e,r,r^2,\cdots,r^{n-1}\}.
@@ -1557,21 +1566,19 @@ Z(C_n)=\frac1n\sum_{d\mid n}\varphi(d)t_{d}^{n/d}.
 \]</div>
 <p>这里，<span class="arithmatex">\(\varphi(\cdot)\)</span> 是数论中的 <a href="../../number-theory/euler-totient/">欧拉函数</a>。</p>
 <p>只计旋转操作，长度为 <span class="arithmatex">\(n\)</span> 的项链的空间对称群就是 <span class="arithmatex">\(C_n\)</span>。</p>
-<p>??? note "分析"
-    设顶点的集合按照逆时针顺序记为 <span class="arithmatex">\(\{0,1,\cdots,n-1\}\)</span>，则 <span class="arithmatex">\(r^k(i)=i+k\bmod n\)</span>。顶点 <span class="arithmatex">\(i\)</span> 所在的轮换中的顶点集合就是</p>
-<pre><code>$$
+<details class="note">
+<summary>分析</summary>
+<p>设顶点的集合按照逆时针顺序记为 <span class="arithmatex">\(\{0,1,\cdots,n-1\}\)</span>，则 <span class="arithmatex">\(r^k(i)=i+k\bmod n\)</span>。顶点 <span class="arithmatex">\(i\)</span> 所在的轮换中的顶点集合就是</p>
+<div class="arithmatex">\[
 \{i+\ell k\bmod n:\ell\in\mathbf Z\}.
-$$
-
-显然，$i\equiv i+\ell k\pmod n$ 当且仅当
-
-$$
+\]</div>
+<p>显然，<span class="arithmatex">\(i\equiv i+\ell k\pmod n\)</span> 当且仅当</p>
+<div class="arithmatex">\[
 \frac{n}{\gcd(k,n)}\mid\ell.
-$$
-
-这意味着，任何顶点 $i$ 所在的轮换长度都是 $\dfrac{n}{\gcd(k,n)}$。因此，置换 $r^k$ 有 $\gcd(k,n)$ 个等长的轮换。考虑在轮换指标的表达式中合并同类项，给定 $d\mid n$，则满足 $\gcd(k,n)=n/d$ 的 $k$ 共计 $\varphi(d)$ 个，它们对应的单项式都是 $t_d^{n/d}$ 的形式，所以可以得到上面的轮换指标表达式。
-</code></pre>
-<h3 id="_6">二面体群</h3>
+\]</div>
+<p>这意味着，任何顶点 <span class="arithmatex">\(i\)</span> 所在的轮换长度都是 <span class="arithmatex">\(\dfrac{n}{\gcd(k,n)}\)</span>。因此，置换 <span class="arithmatex">\(r^k\)</span> 有 <span class="arithmatex">\(\gcd(k,n)\)</span> 个等长的轮换。考虑在轮换指标的表达式中合并同类项，给定 <span class="arithmatex">\(d\mid n\)</span>，则满足 <span class="arithmatex">\(\gcd(k,n)=n/d\)</span> 的 <span class="arithmatex">\(k\)</span> 共计 <span class="arithmatex">\(\varphi(d)\)</span> 个，它们对应的单项式都是 <span class="arithmatex">\(t_d^{n/d}\)</span> 的形式，所以可以得到上面的轮换指标表达式。</p>
+</details>
+<h3 id="二面体群">二面体群<a class="headerlink" href="#二面体群" title="Permanent link"></a></h3>
 <p>给定正 <span class="arithmatex">\(n\)</span> 边形，它的全体旋转和关于对称轴翻转的操作也构成空间对称群，它称为二面体群（dihedral group），记作 <span class="arithmatex">\(D_{2n}\)</span>。将逆时针旋转 <span class="arithmatex">\((360/n)^\circ\)</span> 的操作记作 <span class="arithmatex">\(r\)</span>，并将沿某个给定对称轴（比如中心与某个顶点的连线）翻转的操作记作 <span class="arithmatex">\(s\)</span>，则群 <span class="arithmatex">\(D_{2n}\)</span> 的操作可以写作</p>
 <div class="arithmatex">\[
 D_{2n}=\{e,r,\cdots,r^{n-1},s,sr,\cdots,sr^{n-1}\}.
@@ -1584,15 +1591,14 @@ Z(D_{2n})=\frac12Z(C_n)+
 \dfrac14\left(t_1^2t_2^{k-1}+t_2^k\right),&amp;n=2k.
 \end{cases}
 \]</div>
-<p>??? note "分析"
-    群 <span class="arithmatex">\(D_{2n}\)</span> 中的旋转操作 <span class="arithmatex">\(r^k\)</span> 的集合（包括恒等变换）的分析和循环群 <span class="arithmatex">\(C_n\)</span> 如出一辙，关键在于剩下的翻转操作的分析。此时需要对顶点个数 <span class="arithmatex">\(n\)</span> 的奇偶性分类讨论。</p>
-<pre><code>当 $n=2k+1$ 时，所有的翻转操作的对称轴都是连结顶点和它对面的边的中点的，共计 $n$ 条这样的对称轴。每个翻转操作后，对称轴上的顶点保持不动，而其它顶点成对地交换，因此有 $1$ 个不动点（$1$‑轮换）和 $k$ 个 $2$‑轮换。
-
-当 $n=2k$ 时，有两种对称轴。其中，一半的对称轴是连接相对的顶点的；沿着这样的对称轴翻转，将保持对称轴上的两个顶点不动，而将其余的顶点成对地交换，因此有 $2$ 个不动点（$1$‑轮换）和 $(k-1)$ 个 $2$‑轮换。另一半的对称轴是连接相对的边的中点的；沿着这样的对称轴翻转，将所有顶点都成对地交换，因此有 $k$ 个 $2$‑轮换。
-
-根据这一分析，可以写出上面的轮换指标表达式。
-</code></pre>
-<h3 id="_7">对称群</h3>
+<details class="note">
+<summary>分析</summary>
+<p>群 <span class="arithmatex">\(D_{2n}\)</span> 中的旋转操作 <span class="arithmatex">\(r^k\)</span> 的集合（包括恒等变换）的分析和循环群 <span class="arithmatex">\(C_n\)</span> 如出一辙，关键在于剩下的翻转操作的分析。此时需要对顶点个数 <span class="arithmatex">\(n\)</span> 的奇偶性分类讨论。</p>
+<p>当 <span class="arithmatex">\(n=2k+1\)</span> 时，所有的翻转操作的对称轴都是连结顶点和它对面的边的中点的，共计 <span class="arithmatex">\(n\)</span> 条这样的对称轴。每个翻转操作后，对称轴上的顶点保持不动，而其它顶点成对地交换，因此有 <span class="arithmatex">\(1\)</span> 个不动点（<span class="arithmatex">\(1\)</span>‑轮换）和 <span class="arithmatex">\(k\)</span> 个 <span class="arithmatex">\(2\)</span>‑轮换。</p>
+<p>当 <span class="arithmatex">\(n=2k\)</span> 时，有两种对称轴。其中，一半的对称轴是连接相对的顶点的；沿着这样的对称轴翻转，将保持对称轴上的两个顶点不动，而将其余的顶点成对地交换，因此有 <span class="arithmatex">\(2\)</span> 个不动点（<span class="arithmatex">\(1\)</span>‑轮换）和 <span class="arithmatex">\((k-1)\)</span> 个 <span class="arithmatex">\(2\)</span>‑轮换。另一半的对称轴是连接相对的边的中点的；沿着这样的对称轴翻转，将所有顶点都成对地交换，因此有 <span class="arithmatex">\(k\)</span> 个 <span class="arithmatex">\(2\)</span>‑轮换。</p>
+<p>根据这一分析，可以写出上面的轮换指标表达式。</p>
+</details>
+<h3 id="对称群">对称群<a class="headerlink" href="#对称群" title="Permanent link"></a></h3>
 <p>给定 <span class="arithmatex">\(n\)</span> 个元素，它上面的全体置换构成群，称为 <span class="arithmatex">\(n\)</span> 次对称群（symmetric group），记作 <span class="arithmatex">\(S_n\)</span>。它描述了这 <span class="arithmatex">\(n\)</span> 个顶点能拥有的全部对称性。它也是这些对称操作对顶点集合的作用的置换表示。</p>
 <p>根据 <a href="../../permutation/#置换的型">置换与排列</a> 一文的分析，它的轮换指标是</p>
 <div class="arithmatex">\[
@@ -1608,29 +1614,30 @@ Z(S_n)=\frac1n\sum_{k=1}^nt_kZ(S_{n-k}),
 \]</div>
 <p>而递推起点是 <span class="arithmatex">\(Z(S_0)=1\)</span>。这一递推关系的组合意义是，要构造长度为 <span class="arithmatex">\(n\)</span> 的置换，可以首先选取点 <span class="arithmatex">\(n\)</span> 所在轮换的长度 <span class="arithmatex">\(k\)</span>，再对剩下的 <span class="arithmatex">\((n-k)\)</span> 个顶点的集合构造。</p>
 <p>给定 <span class="arithmatex">\(n\)</span> 个顶点的完全图，则它的空间对称群正是 <span class="arithmatex">\(S_n\)</span>。它对全体顶点的集合的作用的轮换指标就由上文的 <span class="arithmatex">\(Z(S_n)\)</span> 给出。但是，它对全体边的集合的作用的置换表示并不相同。比如说，集合的大小就不相同，全体边的数目是 <span class="arithmatex">\(n(n-1)/2\)</span>。对于边的情形，需要额外的分析。这里给出简单的例子，一般的情形可参考习题。</p>
-<p>???+ example "无向简单图计数"
-    计算同构意义下有 <span class="arithmatex">\(4\)</span> 个顶点的无向简单图的数目。</p>
-<p>??? example "解答"
-    这相当于在有 <span class="arithmatex">\(4\)</span> 个顶点的完全图上染两种颜色，要求本质不同的染色数目。空间对称群是 <span class="arithmatex">\(S_4\)</span>，现在分析它的边置换群 <span class="arithmatex">\(S_4^{(2)}\)</span> 的轮换指标。</p>
-<pre><code>-   恒等变换（$1$ 种）：边也保持不动，故对应单项式为 $t_1^6$；
--   交换两顶点（$6$ 种）：假设交换 $a$ 和 $b$，则边 $1$ 和边 $3$ 保持不动，同时，边 $2$ 和边 $5$ 对换，边 $4$ 和边 $6$ 对换，故对应单项式为 $6t_1^2t_2^2$；
--   轮换三顶点（$8$ 种）：假设轮换是 $(abc)$，则它们之间的连边 $1,2,5$ 也相应轮换，它们和第四点 $d$ 的连边 $4,6,3$ 也相应轮换，故对应单项式为 $8t_3^2$；
--   交换两对顶点（$3$ 种）：假设点 $a$ 和点 $b$ 对换，点 $c$ 和点 $d$ 对换，则边 $1$ 和边 $3$ 保持不动，同时，边 $2$ 和边 $4$ 对换，边 $5$ 和边 $6$ 对换，故对应单项式为 $3t_1^2t_2^2$；
--   轮换四顶点（$6$ 种）：假设轮换是 $(abcd)$，则其中相邻顶点的连边 $1,2,3,4$ 也相应轮换，相对顶点的连边 $5,6$ 同时对换，故对应的单项式为 $6t_2t_4$。
-
-所以，边置换群的轮换指标是
-
-$$
+<details class="example" open="open">
+<summary>无向简单图计数</summary>
+<p>计算同构意义下有 <span class="arithmatex">\(4\)</span> 个顶点的无向简单图的数目。</p>
+</details>
+<details class="example">
+<summary>解答</summary>
+<p>这相当于在有 <span class="arithmatex">\(4\)</span> 个顶点的完全图上染两种颜色，要求本质不同的染色数目。空间对称群是 <span class="arithmatex">\(S_4\)</span>，现在分析它的边置换群 <span class="arithmatex">\(S_4^{(2)}\)</span> 的轮换指标。</p>
+<ul>
+<li>恒等变换（<span class="arithmatex">\(1\)</span> 种）：边也保持不动，故对应单项式为 <span class="arithmatex">\(t_1^6\)</span>；</li>
+<li>交换两顶点（<span class="arithmatex">\(6\)</span> 种）：假设交换 <span class="arithmatex">\(a\)</span> 和 <span class="arithmatex">\(b\)</span>，则边 <span class="arithmatex">\(1\)</span> 和边 <span class="arithmatex">\(3\)</span> 保持不动，同时，边 <span class="arithmatex">\(2\)</span> 和边 <span class="arithmatex">\(5\)</span> 对换，边 <span class="arithmatex">\(4\)</span> 和边 <span class="arithmatex">\(6\)</span> 对换，故对应单项式为 <span class="arithmatex">\(6t_1^2t_2^2\)</span>；</li>
+<li>轮换三顶点（<span class="arithmatex">\(8\)</span> 种）：假设轮换是 <span class="arithmatex">\((abc)\)</span>，则它们之间的连边 <span class="arithmatex">\(1,2,5\)</span> 也相应轮换，它们和第四点 <span class="arithmatex">\(d\)</span> 的连边 <span class="arithmatex">\(4,6,3\)</span> 也相应轮换，故对应单项式为 <span class="arithmatex">\(8t_3^2\)</span>；</li>
+<li>交换两对顶点（<span class="arithmatex">\(3\)</span> 种）：假设点 <span class="arithmatex">\(a\)</span> 和点 <span class="arithmatex">\(b\)</span> 对换，点 <span class="arithmatex">\(c\)</span> 和点 <span class="arithmatex">\(d\)</span> 对换，则边 <span class="arithmatex">\(1\)</span> 和边 <span class="arithmatex">\(3\)</span> 保持不动，同时，边 <span class="arithmatex">\(2\)</span> 和边 <span class="arithmatex">\(4\)</span> 对换，边 <span class="arithmatex">\(5\)</span> 和边 <span class="arithmatex">\(6\)</span> 对换，故对应单项式为 <span class="arithmatex">\(3t_1^2t_2^2\)</span>；</li>
+<li>轮换四顶点（<span class="arithmatex">\(6\)</span> 种）：假设轮换是 <span class="arithmatex">\((abcd)\)</span>，则其中相邻顶点的连边 <span class="arithmatex">\(1,2,3,4\)</span> 也相应轮换，相对顶点的连边 <span class="arithmatex">\(5,6\)</span> 同时对换，故对应的单项式为 <span class="arithmatex">\(6t_2t_4\)</span>。</li>
+</ul>
+<p>所以，边置换群的轮换指标是</p>
+<div class="arithmatex">\[
 Z(S_4^{(2)})=\dfrac{1}{24}(t_1^6+9t_1^2t_2^2+8t_3^2+6t_2t_4).
-$$
-
-根据 Pólya 计数原理，同构意义下有 $4$ 个顶点的无向简单图的数目是
-
-$$
+\]</div>
+<p>根据 Pólya 计数原理，同构意义下有 <span class="arithmatex">\(4\)</span> 个顶点的无向简单图的数目是</p>
+<div class="arithmatex">\[
 \frac{2^6+9\times 2^4+8\times 2^2+6\times 2^2}{24} = 11.
-$$
-</code></pre>
-<h3 id="_8">多面体群</h3>
+\]</div>
+</details>
+<h3 id="多面体群">多面体群<a class="headerlink" href="#多面体群" title="Permanent link"></a></h3>
 <p>多面体群（polyhedral group）是正多面体的空间对称群。正多面体只有五种：正四面体、正方体、正八面体、正十二面体和正二十面体。如果保持点、棱、面之间的邻接关系，交换点和面，可以得到对偶的正多面体。其中，正四面体和它自身对偶，正方体和正八面体对偶，正十二面体和正二十面体对偶。利用对偶关系，可以简化它们的空间对称群的讨论。</p>
 <p>只计三维空间中可以进行的旋转操作，它们的空间对称群只有三种。</p>
 <ul>
@@ -1684,8 +1691,8 @@ $$
 </li>
 </ul>
 <p>这里给出的都是对顶点、棱、面等单独的对象作用的置换群的轮换指标。如果要对不同的对象同时染色，需要写出联合的轮换指标。</p>
-<h2 id="_9">习题</h2>
-<h3 id="_10">染色问题</h3>
+<h2 id="习题">习题<a class="headerlink" href="#习题" title="Permanent link"></a></h2>
+<h3 id="染色问题">染色问题<a class="headerlink" href="#染色问题" title="Permanent link"></a></h3>
 <p>这些题目只需要分析置换群的结构，并应用 Pólya 计数原理。</p>
 <ul>
 <li><a href="https://www.luogu.com.cn/problem/P4980">Luogu P4980【模板】Polya 定理</a></li>
@@ -1700,7 +1707,7 @@ $$
 <li><a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1542">UVA10601 Cubes</a></li>
 <li><a href="https://www.luogu.com.cn/problem/P4916">Luogu P4916 [MtOI2018] 魔力环</a></li>
 </ul>
-<h3 id="_11">图论计数</h3>
+<h3 id="图论计数">图论计数<a class="headerlink" href="#图论计数" title="Permanent link"></a></h3>
 <p>Pólya 计数原理可以用于 <a href="../graph-enumeration/">图论计数</a> 问题，这类问题难点在于图的边置换群的枚举。</p>
 <ul>
 <li><a href="https://codeforces.com/problemsets/acmsguru/problem/99999/282">SGU 282. Isomorphism</a></li>
@@ -1714,14 +1721,23 @@ $$
 <li><a href="https://www.luogu.com.cn/problem/P6597">Luogu P6597 烯烃计数</a></li>
 <li><a href="https://www.luogu.com.cn/problem/P5818">Luogu P5818 [JSOI2011] 同分异构体计数</a></li>
 </ul>
-<h2 id="_12">参考文献与注释</h2>
+<h2 id="参考文献与注释">参考文献与注释<a class="headerlink" href="#参考文献与注释" title="Permanent link"></a></h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/P%C3%B3lya_enumeration_theorem">Pólya enumeration theorem - Wikipedia</a></li>
 <li><a href="https://www.diva-portal.org/smash/get/diva2:324594/FULLTEXT01.pdf">Notes on Pólya's Enumeration Theorem</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Cycle_index">Cycle index - Wikipedia</a></li>
 </ul>
-<p>[^perm-group]: 因此，空间对称群 <span class="arithmatex">\(G\)</span> 可以表示是集合 <span class="arithmatex">\(X\)</span> 上的置换群，即对称群 <span class="arithmatex">\(S_X\)</span> 的子群。</p>
-<p>[^g-act]: 严格来说，是子群 <span class="arithmatex">\(\langle g\rangle\le G\)</span> 的作用。</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:perm-group">
+<p>因此，空间对称群 <span class="arithmatex">\(G\)</span> 可以表示是集合 <span class="arithmatex">\(X\)</span> 上的置换群，即对称群 <span class="arithmatex">\(S_X\)</span> 的子群。&#160;<a class="footnote-backref" href="#fnref:perm-group" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:g-act">
+<p>严格来说，是子群 <span class="arithmatex">\(\langle g\rangle\le G\)</span> 的作用。&#160;<a class="footnote-backref" href="#fnref:g-act" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1778,6 +1794,8 @@ $$
     
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

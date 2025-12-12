@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#高次剩余" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#高次剩余" class="md-nav__link">
     <span class="md-ellipsis">
       
         高次剩余
@@ -1102,7 +1102,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#性质" class="md-nav__link">
     <span class="md-ellipsis">
       
         性质
@@ -1118,7 +1118,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#单位根" class="md-nav__link">
     <span class="md-ellipsis">
       
         单位根
@@ -1130,7 +1130,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#性质_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         性质
@@ -1146,7 +1146,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#模意义下开方" class="md-nav__link">
     <span class="md-ellipsis">
       
         模意义下开方
@@ -1158,7 +1158,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#朴素算法" class="md-nav__link">
     <span class="md-ellipsis">
       
         朴素算法
@@ -1169,7 +1169,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#tonellishanks" class="md-nav__link">
+  <a href="#改良-tonellishanks-算法" class="md-nav__link">
     <span class="md-ellipsis">
       
         改良 Tonelli–Shanks 算法
@@ -1181,7 +1181,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#过程" class="md-nav__link">
     <span class="md-ellipsis">
       
         过程
@@ -1192,7 +1192,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#时间复杂度" class="md-nav__link">
     <span class="md-ellipsis">
       
         时间复杂度
@@ -1208,7 +1208,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#一般情形的处理" class="md-nav__link">
     <span class="md-ellipsis">
       
         一般情形的处理
@@ -1224,7 +1224,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#参考资料与注释" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料与注释
@@ -1255,195 +1255,198 @@
 
 <p>前置知识：<a href="../discrete-logarithm/">离散对数</a></p>
 <p>本文讨论模意义下的高次剩余和单位根，并介绍模意义下开方运算的算法．</p>
-<h2 id="_1">高次剩余</h2>
+<h2 id="高次剩余">高次剩余<a class="headerlink" href="#高次剩余" title="Permanent link"></a></h2>
 <p>模运算下的高次剩余，可以认为是在讨论模意义下开高次方的可行性．它是 <a href="../quad-residue/">二次剩余</a> 的推广．</p>
-<p>???+ abstract "<span class="arithmatex">\(k\)</span> 次剩余"
-    令整数 <span class="arithmatex">\(k\geq 2\)</span>，整数 <span class="arithmatex">\(a\)</span> 和正整数 <span class="arithmatex">\(m\)</span> 互素．若存在整数 <span class="arithmatex">\(x\)</span> 使得</p>
-<pre><code>$$
+<details class="abstract" open="open">
+<summary><span class="arithmatex">\(k\)</span> 次剩余</summary>
+<p>令整数 <span class="arithmatex">\(k\geq 2\)</span>，整数 <span class="arithmatex">\(a\)</span> 和正整数 <span class="arithmatex">\(m\)</span> 互素．若存在整数 <span class="arithmatex">\(x\)</span> 使得</p>
+<div class="arithmatex">\[
 x^k\equiv a\pmod m,
-$$
-
-则称 $a$ 为模 $m$ 的 **$k$ 次剩余**（$k$-th residue），$x$ 为 $a$ 模 $m$ 的 **$k$ 次方根**（$k$-th root）；否则称 $a$ 为模 $m$ 的 **$k$ 次非剩余**（$k$-th nonresidue）．
-</code></pre>
+\]</div>
+<p>则称 <span class="arithmatex">\(a\)</span> 为模 <span class="arithmatex">\(m\)</span> 的 <strong><span class="arithmatex">\(k\)</span> 次剩余</strong>（<span class="arithmatex">\(k\)</span>-th residue），<span class="arithmatex">\(x\)</span> 为 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的 <strong><span class="arithmatex">\(k\)</span> 次方根</strong>（<span class="arithmatex">\(k\)</span>-th root）；否则称 <span class="arithmatex">\(a\)</span> 为模 <span class="arithmatex">\(m\)</span> 的 <strong><span class="arithmatex">\(k\)</span> 次非剩余</strong>（<span class="arithmatex">\(k\)</span>-th nonresidue）．</p>
+</details>
 <p>也就是说，<span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次方根存在，当且仅当 <span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次剩余．</p>
-<h3 id="_2">性质</h3>
+<h3 id="性质">性质<a class="headerlink" href="#性质" title="Permanent link"></a></h3>
 <p>类似二次剩余，可以讨论 <span class="arithmatex">\(k\)</span> 次剩余的判定、个数以及 <span class="arithmatex">\(k\)</span> 次剩余类的个数问题．和其他 <a href="../congruence-equation/">同余方程</a> 问题一样，可以通过 <a href="../crt/">中国剩余定理</a> 将它们转化为素数幂模的情形．根据原根的有无，这进一步区分为奇素数幂模和模数为 <span class="arithmatex">\(2\)</span> 的幂次的情形．</p>
 <p>奇数幂模的情形较为简单．事实上，对于所有原根存在的情形，都有如下结论：</p>
-<p>???+ note "定理"
-    设整数 <span class="arithmatex">\(k\geq 2\)</span>，整数 <span class="arithmatex">\(a\)</span> 和正整数 <span class="arithmatex">\(m\)</span> 互素．设模 <span class="arithmatex">\(m\)</span> 的原根存在，且 <span class="arithmatex">\(g\)</span> 是模 <span class="arithmatex">\(m\)</span> 的一个原根．记 <span class="arithmatex">\(d=\gcd(k,\varphi(m))\)</span> 且 <span class="arithmatex">\(d'=\dfrac{\varphi(m)}{d}\)</span>，其中，<span class="arithmatex">\(\varphi(m)\)</span> 是 <a href="../euler-totient/">欧拉函数</a>．那么，有：</p>
-<pre><code>1.  $a$ 为模 $m$ 的 $k$ 次剩余，当且仅当
-
-    $$
-    a^{d'} \equiv 1 \pmod m.
-    $$
-2.  当 $a$ 为模 $m$ 的 $k$ 次剩余时，同余意义下，$a$ 模 $m$ 恰有 $d$ 个互不相同的 $k$ 次方根，且它们具有形式
-
-    $$
-    x \equiv g^{y_0+id'}\pmod{\varphi(m)},~0\le y_0 &lt; d',~i=0,1,\cdots,d-1.
-    $$
-3.  模 $m$ 的 $k$ 次剩余类的个数为 $d'$，且它们的全体就是
-
-    $$
-    \{g^{di}\bmod m : 0 \le i &lt; d'\}.
-    $$
-</code></pre>
-<p>??? note "证明"
-    因为 <span class="arithmatex">\(a\perp m\)</span>，所以 <span class="arithmatex">\(x\perp m\)</span>．因为 <span class="arithmatex">\(g\)</span> 是模 <span class="arithmatex">\(m\)</span> 的原根，所以，<span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(a\)</span> 均与某个 <span class="arithmatex">\(g\)</span> 的幂次同余．设 <span class="arithmatex">\(x\equiv g^y\pmod m\)</span>，方程 <span class="arithmatex">\(x^k\equiv a\pmod m\)</span> 就等价于</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理</summary>
+<p>设整数 <span class="arithmatex">\(k\geq 2\)</span>，整数 <span class="arithmatex">\(a\)</span> 和正整数 <span class="arithmatex">\(m\)</span> 互素．设模 <span class="arithmatex">\(m\)</span> 的原根存在，且 <span class="arithmatex">\(g\)</span> 是模 <span class="arithmatex">\(m\)</span> 的一个原根．记 <span class="arithmatex">\(d=\gcd(k,\varphi(m))\)</span> 且 <span class="arithmatex">\(d'=\dfrac{\varphi(m)}{d}\)</span>，其中，<span class="arithmatex">\(\varphi(m)\)</span> 是 <a href="../euler-totient/">欧拉函数</a>．那么，有：</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(a\)</span> 为模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次剩余，当且仅当</p>
+<div class="arithmatex">\[
+a^{d'} \equiv 1 \pmod m.
+\]</div>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(a\)</span> 为模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次剩余时，同余意义下，<span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 恰有 <span class="arithmatex">\(d\)</span> 个互不相同的 <span class="arithmatex">\(k\)</span> 次方根，且它们具有形式</p>
+<div class="arithmatex">\[
+x \equiv g^{y_0+id'}\pmod{\varphi(m)},~0\le y_0 &lt; d',~i=0,1,\cdots,d-1.
+\]</div>
+</li>
+<li>
+<p>模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次剩余类的个数为 <span class="arithmatex">\(d'\)</span>，且它们的全体就是</p>
+<div class="arithmatex">\[
+\{g^{di}\bmod m : 0 \le i &lt; d'\}.
+\]</div>
+</li>
+</ol>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>因为 <span class="arithmatex">\(a\perp m\)</span>，所以 <span class="arithmatex">\(x\perp m\)</span>．因为 <span class="arithmatex">\(g\)</span> 是模 <span class="arithmatex">\(m\)</span> 的原根，所以，<span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(a\)</span> 均与某个 <span class="arithmatex">\(g\)</span> 的幂次同余．设 <span class="arithmatex">\(x\equiv g^y\pmod m\)</span>，方程 <span class="arithmatex">\(x^k\equiv a\pmod m\)</span> 就等价于</p>
+<div class="arithmatex">\[
 g^{ky} \equiv g^{\operatorname{ind}_g a}\pmod m.
-$$
-
-其中，$\operatorname{ind}_g a$ 是离散对数．根据 [阶的性质](./primitive-root.md#幂的循环结构) 和 $\delta_m(g)=\varphi(m)$，这等价于同余方程
-
-$$
+\]</div>
+<p>其中，<span class="arithmatex">\(\operatorname{ind}_g a\)</span> 是离散对数．根据 <a href="../primitive-root/#幂的循环结构">阶的性质</a> 和 <span class="arithmatex">\(\delta_m(g)=\varphi(m)\)</span>，这等价于同余方程</p>
+<div class="arithmatex">\[
 ky \equiv \operatorname{ind}_g a \pmod{\varphi(m)}.
-$$
-
-这是关于 $y$ 的 [线性同余方程](./linear-equation.md)．应用该页面对其解结构的分析，就可以知道方程有解当且仅当 $d\mid\operatorname{ind}_g a$，且通解形式为
-
-$$
+\]</div>
+<p>这是关于 <span class="arithmatex">\(y\)</span> 的 <a href="../linear-equation/">线性同余方程</a>．应用该页面对其解结构的分析，就可以知道方程有解当且仅当 <span class="arithmatex">\(d\mid\operatorname{ind}_g a\)</span>，且通解形式为</p>
+<div class="arithmatex">\[
 y = y_0 + id' \pmod{\varphi(m)},~0\le y_0 &lt; d',~i=0,1,\cdots,d-1.
-$$
-
-由此，就几乎可以得到本定理的全部内容；唯一需要额外说明的是判别式 $a^{d'} \equiv 1 \pmod m$．由 [阶的性质 3](./primitive-root.md#ord-prop-3) 可知
-
-$$
+\]</div>
+<p>由此，就几乎可以得到本定理的全部内容；唯一需要额外说明的是判别式 <span class="arithmatex">\(a^{d'} \equiv 1 \pmod m\)</span>．由 <a href="../primitive-root/#ord-prop-3">阶的性质 3</a> 可知</p>
+<div class="arithmatex">\[
 \delta_m(a) = \delta_m(g^{\operatorname{ind}_g a}) = \dfrac{\varphi(m)}{\gcd(\varphi(m),\operatorname{ind}_g a)} = \dfrac{\varphi(m)}{\operatorname{ind}_g a}.
-$$
-
-又已知方程有解当且仅当 $d\mid \operatorname{ind}_g a$，亦即 $\delta_m(a)\mid d'$．由 [阶的性质 2](./primitive-root.md#ord-prop-2) 可知，这就等价于该判别式．
-</code></pre>
+\]</div>
+<p>又已知方程有解当且仅当 <span class="arithmatex">\(d\mid \operatorname{ind}_g a\)</span>，亦即 <span class="arithmatex">\(\delta_m(a)\mid d'\)</span>．由 <a href="../primitive-root/#ord-prop-2">阶的性质 2</a> 可知，这就等价于该判别式．</p>
+</details>
 <p>模数为 <span class="arithmatex">\(2\)</span> 的幂次的情形较为特殊．为处理这种情形，需要用到关于模 <span class="arithmatex">\(2^e\)</span> 既约剩余系结构的一个 <a href="../primitive-root/#mod-pow-2">结论</a>：所有奇数 <span class="arithmatex">\(a\)</span> 都唯一地同余于某个 <span class="arithmatex">\((-1)^s5^r\bmod 2^e\)</span> 形式的整数，其中，<span class="arithmatex">\(s\in\{0,1\}\)</span> 且 <span class="arithmatex">\(0\le r &lt; 2^{e-2}\)</span>．借助这一结果，可以得到如下结论：</p>
-<p>???+ note "定理"
-    设整数 <span class="arithmatex">\(k\ge 2\)</span>，奇数 <span class="arithmatex">\(a\)</span> 和正整数 <span class="arithmatex">\(m=2^e\)</span> 且 <span class="arithmatex">\(e \ge 2\)</span>．那么，当 <span class="arithmatex">\(k\)</span> 是奇数时，有：</p>
-<pre><code>1.  $a$ 恒为模 $m$ 的 $k$ 次剩余．
-2.  $a$ 模 $m$ 的 $k$ 次方根有且仅有一个．
-3.  模 $m$ 的 $k$ 次剩余类个数为 $2^{e-1}$，且它们就是全体既约剩余类．
-
-当 $k$ 是偶数时，记 $d=\gcd(k,2^{e-2})$ 且 $d'=\dfrac{2^{e-2}}{d}$，有：
-
-1.  $a$ 为模 $m$ 的 $k$ 次剩余，当且仅当 $a\equiv 1\pmod 4$ 且 $a^{d'}\equiv 1\pmod m$．
-2.  当 $a$ 为模 $m$ 的 $k$ 次剩余时，同余意义下，$a$ 模 $m$ 恰有 $2d$ 个互不相同的 $k$ 次方根，且它们具有形式
-
-    $$
-    x \equiv \pm 5^{y_0 + id'} \pmod{2^{e-1}},~ 0 \le y_0 &lt; d',~i = 0, 1,\cdots,d-1. 
-    $$
-3.  模 $m$ 的 $k$ 次剩余类的个数为 $d'$，且它们的全体就是
-
-    $$
-    \{5^{di}\bmod m : 0 \le i &lt; d'\}.
-    $$
-</code></pre>
-<p>??? note "证明"
-    因为 <span class="arithmatex">\(a\perp m\)</span>，所以 <span class="arithmatex">\(x\perp m\)</span>．因为 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(a\)</span> 都是奇数，由前述结论可知，可以设 <span class="arithmatex">\(a\equiv (-1)^s5^r\pmod{2^e}\)</span> 且 <span class="arithmatex">\(x=(-1)^z5^{y}\pmod{2^e}\)</span>．因为表示是唯一的，所以同余方程 <span class="arithmatex">\(x^k\equiv a\pmod{2^e}\)</span> 等价于 <a href="../linear-equation/">线性同余方程</a> 组</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理</summary>
+<p>设整数 <span class="arithmatex">\(k\ge 2\)</span>，奇数 <span class="arithmatex">\(a\)</span> 和正整数 <span class="arithmatex">\(m=2^e\)</span> 且 <span class="arithmatex">\(e \ge 2\)</span>．那么，当 <span class="arithmatex">\(k\)</span> 是奇数时，有：</p>
+<ol>
+<li><span class="arithmatex">\(a\)</span> 恒为模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次剩余．</li>
+<li><span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次方根有且仅有一个．</li>
+<li>模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次剩余类个数为 <span class="arithmatex">\(2^{e-1}\)</span>，且它们就是全体既约剩余类．</li>
+</ol>
+<p>当 <span class="arithmatex">\(k\)</span> 是偶数时，记 <span class="arithmatex">\(d=\gcd(k,2^{e-2})\)</span> 且 <span class="arithmatex">\(d'=\dfrac{2^{e-2}}{d}\)</span>，有：</p>
+<ol>
+<li><span class="arithmatex">\(a\)</span> 为模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次剩余，当且仅当 <span class="arithmatex">\(a\equiv 1\pmod 4\)</span> 且 <span class="arithmatex">\(a^{d'}\equiv 1\pmod m\)</span>．</li>
+<li>
+<p>当 <span class="arithmatex">\(a\)</span> 为模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次剩余时，同余意义下，<span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 恰有 <span class="arithmatex">\(2d\)</span> 个互不相同的 <span class="arithmatex">\(k\)</span> 次方根，且它们具有形式</p>
+<div class="arithmatex">\[
+x \equiv \pm 5^{y_0 + id'} \pmod{2^{e-1}},~ 0 \le y_0 &lt; d',~i = 0, 1,\cdots,d-1. 
+\]</div>
+</li>
+<li>
+<p>模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次剩余类的个数为 <span class="arithmatex">\(d'\)</span>，且它们的全体就是</p>
+<div class="arithmatex">\[
+\{5^{di}\bmod m : 0 \le i &lt; d'\}.
+\]</div>
+</li>
+</ol>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>因为 <span class="arithmatex">\(a\perp m\)</span>，所以 <span class="arithmatex">\(x\perp m\)</span>．因为 <span class="arithmatex">\(x\)</span> 和 <span class="arithmatex">\(a\)</span> 都是奇数，由前述结论可知，可以设 <span class="arithmatex">\(a\equiv (-1)^s5^r\pmod{2^e}\)</span> 且 <span class="arithmatex">\(x=(-1)^z5^{y}\pmod{2^e}\)</span>．因为表示是唯一的，所以同余方程 <span class="arithmatex">\(x^k\equiv a\pmod{2^e}\)</span> 等价于 <a href="../linear-equation/">线性同余方程</a> 组</p>
+<div class="arithmatex">\[
 \begin{aligned}
 kz &amp;\equiv s \pmod{2},\\
 ky &amp;\equiv r \pmod{2^{e-2}}.
 \end{aligned}
-$$
-
-结合该页面对于线性同余方程解的分析，就可以得到同余方程 $x^k\equiv a\pmod{2^e}$ 解的结构．根据 $k$ 的奇偶性不同，可以分为两种情形：
-
--   当 $k$ 是奇数时，因为 $\gcd(k,2)=\gcd(k,2^{e-2})=1$，所以两个线性同余方程对于所有 $s,r$ 都有解，故而原同余方程对于所有奇数 $a$ 总是有解．
--   当 $k$ 是偶数时，第一个方程有解当且仅当 $2\mid s$，第二个方程有解当且仅当 $d=\gcd(k,2^{e-2})\mid r$．将两者结合就得到 $k$ 次剩余类的全体形式．直接计算可知，第一个条件等价于 $a\equiv 1\pmod 4$；重复奇素数幂情形的分析可知，第二个条件等价于 $a^{d'}=1$．将两点结合起来就得到定理中的判定方法．两个线性同余方程的通解也是已知的：
-
-    $$
-    \begin{aligned}
-    z &amp;\equiv0,1\pmod 2, \\
-    y &amp;\equiv y_0 + id' \pmod{2^{e-2}},~ 0\le y_0 &lt; 2^{e-2}.
-    \end{aligned}
-    $$
-
-    将两者结合就得到原方程的通解．
-</code></pre>
+\]</div>
+<p>结合该页面对于线性同余方程解的分析，就可以得到同余方程 <span class="arithmatex">\(x^k\equiv a\pmod{2^e}\)</span> 解的结构．根据 <span class="arithmatex">\(k\)</span> 的奇偶性不同，可以分为两种情形：</p>
+<ul>
+<li>当 <span class="arithmatex">\(k\)</span> 是奇数时，因为 <span class="arithmatex">\(\gcd(k,2)=\gcd(k,2^{e-2})=1\)</span>，所以两个线性同余方程对于所有 <span class="arithmatex">\(s,r\)</span> 都有解，故而原同余方程对于所有奇数 <span class="arithmatex">\(a\)</span> 总是有解．</li>
+<li>
+<p>当 <span class="arithmatex">\(k\)</span> 是偶数时，第一个方程有解当且仅当 <span class="arithmatex">\(2\mid s\)</span>，第二个方程有解当且仅当 <span class="arithmatex">\(d=\gcd(k,2^{e-2})\mid r\)</span>．将两者结合就得到 <span class="arithmatex">\(k\)</span> 次剩余类的全体形式．直接计算可知，第一个条件等价于 <span class="arithmatex">\(a\equiv 1\pmod 4\)</span>；重复奇素数幂情形的分析可知，第二个条件等价于 <span class="arithmatex">\(a^{d'}=1\)</span>．将两点结合起来就得到定理中的判定方法．两个线性同余方程的通解也是已知的：</p>
+<div class="arithmatex">\[
+\begin{aligned}
+z &amp;\equiv0,1\pmod 2, \\
+y &amp;\equiv y_0 + id' \pmod{2^{e-2}},~ 0\le y_0 &lt; 2^{e-2}.
+\end{aligned}
+\]</div>
+<p>将两者结合就得到原方程的通解．</p>
+</li>
+</ul>
+</details>
 <p>这就完全解决了不同模数下 <span class="arithmatex">\(k\)</span> 次剩余的判定问题．二次剩余中的 Legendre 记号和二次互反律等内容也可以推广到高次剩余的情形，但这并不容易，需要用到 <a href="../../algebra/field-theory/#分圆域">分圆域</a> 等概念．在代数数论中，二次互反律最终可以推广到 <a href="https://en.wikipedia.org/wiki/Artin_reciprocity">Artin 互反律</a>．</p>
-<h2 id="_3">单位根</h2>
+<h2 id="单位根">单位根<a class="headerlink" href="#单位根" title="Permanent link"></a></h2>
 <p>作为 <span class="arithmatex">\(k\)</span> 次方根的特殊情形，本节讨论 <span class="arithmatex">\(k\)</span> 次（本原）单位根的概念．它可以看作是复数域 <span class="arithmatex">\(\mathbf C\)</span> 中 <span class="arithmatex">\(k\)</span> 次 <a href="../../complex/#单位根">单位根</a> 的概念在模 <span class="arithmatex">\(m\)</span> 既约剩余系 <span class="arithmatex">\(\mathbf Z_m^*\)</span> 中的对应．当模数 <span class="arithmatex">\(m\)</span> 合适时，用模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次本原单位根代替复数根 <span class="arithmatex">\(\omega_k\)</span> 可以加速计算．</p>
 <p>类似于复数域的情形，有如下定义：</p>
-<p>???+ abstract "模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根"
-    对于模数 <span class="arithmatex">\(m\)</span>，元素 <span class="arithmatex">\(1\)</span> 的 <span class="arithmatex">\(k\)</span> 次方根称为 <strong>模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根</strong>（<span class="arithmatex">\(k\)</span>-th root of unity modulo <span class="arithmatex">\(m\)</span>）．特别地，如果 <span class="arithmatex">\(x\)</span> 是模 <span class="arithmatex">\(m\)</span> 的一个 <span class="arithmatex">\(k\)</span> 次单位根，且它不是模 <span class="arithmatex">\(m\)</span> 的任何 <span class="arithmatex">\(k' &lt; k\)</span> 次单位根，那么，也称 <span class="arithmatex">\(x\)</span> 为 <strong>模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次本原单位根</strong>（<span class="arithmatex">\(k\)</span>-th primitive root of unity modulo <span class="arithmatex">\(m\)</span>）．</p>
+<details class="abstract" open="open">
+<summary>模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根</summary>
+<p>对于模数 <span class="arithmatex">\(m\)</span>，元素 <span class="arithmatex">\(1\)</span> 的 <span class="arithmatex">\(k\)</span> 次方根称为 <strong>模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根</strong>（<span class="arithmatex">\(k\)</span>-th root of unity modulo <span class="arithmatex">\(m\)</span>）．特别地，如果 <span class="arithmatex">\(x\)</span> 是模 <span class="arithmatex">\(m\)</span> 的一个 <span class="arithmatex">\(k\)</span> 次单位根，且它不是模 <span class="arithmatex">\(m\)</span> 的任何 <span class="arithmatex">\(k' &lt; k\)</span> 次单位根，那么，也称 <span class="arithmatex">\(x\)</span> 为 <strong>模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次本原单位根</strong>（<span class="arithmatex">\(k\)</span>-th primitive root of unity modulo <span class="arithmatex">\(m\)</span>）．</p>
+</details>
 <p>比较 <a href="../primitive-root/#原根">原根的定义</a> 可知，原根 <span class="arithmatex">\(g\)</span> 就是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(\varphi(m)\)</span> 次本原单位根，其中，<span class="arithmatex">\(\varphi(m)\)</span> 是 <a href="../euler-totient/">欧拉函数</a>．</p>
-<p>当模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次本原单位根存在时，它的代数性质和 <span class="arithmatex">\(k\)</span> 次本原单位复根 <span class="arithmatex">\(\omega_k\)</span> 一致，可以代替 <span class="arithmatex">\(\omega_k\)</span> 进行各种计算．例如，将它应用于 <a href="../../poly/fft/">快速傅里叶变换</a> 中，就得到有限域[^fnnt]上的 <a href="../../poly/ntt/">快速数论变换</a>．</p>
-<h3 id="_4">性质</h3>
+<p>当模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次本原单位根存在时，它的代数性质和 <span class="arithmatex">\(k\)</span> 次本原单位复根 <span class="arithmatex">\(\omega_k\)</span> 一致，可以代替 <span class="arithmatex">\(\omega_k\)</span> 进行各种计算．例如，将它应用于 <a href="../../poly/fft/">快速傅里叶变换</a> 中，就得到有限域<sup id="fnref:fnnt"><a class="footnote-ref" href="#fn:fnnt">1</a></sup>上的 <a href="../../poly/ntt/">快速数论变换</a>．</p>
+<h3 id="性质_1">性质<a class="headerlink" href="#性质_1" title="Permanent link"></a></h3>
 <p>复数域中，任意次（本原）单位根都存在．但是，数论中的（本原）单位根并非如此．</p>
-<p>???+ note "性质"
-    对于模数 <span class="arithmatex">\(m\)</span>，设 <span class="arithmatex">\(\lambda(m)\)</span> 为它的 <a href="../primitive-root/#carmichael-函数">Carmichael 函数</a>，有：</p>
-<pre><code>1.  所有与 $m$ 互素的整数 $a$ 都是模 $m$ 的 $\delta_m(a)$ 次本原单位根，其中，$\delta_m(a)$ 是 $a$ 模 $m$ 的 [阶](./primitive-root.md#阶)．
-2.  元素 $a$ 是模 $m$ 的 $k$ 次单位根，且 $k'$ 是 $k$ 的任意倍数，那么 $a$ 也是模 $m$ 的 $k'$ 次单位根．
-3.  元素 $a$ 是模 $m$ 的 $k$ 次（本原）单位根，那么元素 $a^{\ell}$ 是模 $m$ 的 $\dfrac{k}{\gcd(k,\ell)}$ 次（本原，相应地）单位根．
-4.  当 $k'$ 遍历 $k$ 的因数，所有模 $m$ 的 $k'$ 次本原单位根恰构成模 $m$ 的 $k$ 次单位根的一个划分．而且，对于 $\ell\perp k$，映射 $x\mapsto x^\ell$ 给出 $k$ 次单位根之间的双射，且保持上述划分不变：它将 $k'\mid k$ 次本原单位根仍然映射到 $k'$ 次本原单位根．
-5.  模 $m$ 的 $k$ 次本原单位根存在，当且仅当 $k\mid\lambda(m)$．特别地，模 $m$ 的 $\lambda(m)$ 次本原单位根存在，称为 **模 $m$ 的 $\lambda$‑原根**．
-6.  元素 $a$ 是模 $m$ 的 $k$ 次单位根，当且仅当 $a^k\equiv 1\pmod{m}$ 且对于任意素因子 $p\mid k$ 都有 $a^{k/p}\not\equiv 1\pmod{m}$．
-</code></pre>
-<p>??? note "证明"
-    根据阶的定义，所有与 <span class="arithmatex">\(m\)</span> 互素的整数 <span class="arithmatex">\(a\)</span> 都是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(\delta_m(a)\)</span> 次本原单位根，其中，<span class="arithmatex">\(\delta_m(a)\)</span> 是 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的阶．反过来，如果 <span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根，那么 <span class="arithmatex">\(\gcd(a^k,m)=1\)</span>，所以 <span class="arithmatex">\(\gcd(a,m)=1\)</span>．因此，<span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的（本原）单位根，当且仅当 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(m\)</span> 互素．这就是性质 1．</p>
-<pre><code>直接验证定义可知，只要 $k\mid k'$，就可以从 $a^k\equiv 1\pmod m$ 推出 $a^{k'}\equiv 1\pmod m$，这就是性质 2．根据 [阶的性质](./primitive-root.md#ord-prop-3) 可知
-
-$$
+<details class="note" open="open">
+<summary>性质</summary>
+<p>对于模数 <span class="arithmatex">\(m\)</span>，设 <span class="arithmatex">\(\lambda(m)\)</span> 为它的 <a href="../primitive-root/#carmichael-函数">Carmichael 函数</a>，有：</p>
+<ol>
+<li>所有与 <span class="arithmatex">\(m\)</span> 互素的整数 <span class="arithmatex">\(a\)</span> 都是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(\delta_m(a)\)</span> 次本原单位根，其中，<span class="arithmatex">\(\delta_m(a)\)</span> 是 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的 <a href="../primitive-root/#阶">阶</a>．</li>
+<li>元素 <span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根，且 <span class="arithmatex">\(k'\)</span> 是 <span class="arithmatex">\(k\)</span> 的任意倍数，那么 <span class="arithmatex">\(a\)</span> 也是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k'\)</span> 次单位根．</li>
+<li>元素 <span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次（本原）单位根，那么元素 <span class="arithmatex">\(a^{\ell}\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(\dfrac{k}{\gcd(k,\ell)}\)</span> 次（本原，相应地）单位根．</li>
+<li>当 <span class="arithmatex">\(k'\)</span> 遍历 <span class="arithmatex">\(k\)</span> 的因数，所有模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k'\)</span> 次本原单位根恰构成模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根的一个划分．而且，对于 <span class="arithmatex">\(\ell\perp k\)</span>，映射 <span class="arithmatex">\(x\mapsto x^\ell\)</span> 给出 <span class="arithmatex">\(k\)</span> 次单位根之间的双射，且保持上述划分不变：它将 <span class="arithmatex">\(k'\mid k\)</span> 次本原单位根仍然映射到 <span class="arithmatex">\(k'\)</span> 次本原单位根．</li>
+<li>模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次本原单位根存在，当且仅当 <span class="arithmatex">\(k\mid\lambda(m)\)</span>．特别地，模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(\lambda(m)\)</span> 次本原单位根存在，称为 <strong>模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(\lambda\)</span>‑原根</strong>．</li>
+<li>元素 <span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根，当且仅当 <span class="arithmatex">\(a^k\equiv 1\pmod{m}\)</span> 且对于任意素因子 <span class="arithmatex">\(p\mid k\)</span> 都有 <span class="arithmatex">\(a^{k/p}\not\equiv 1\pmod{m}\)</span>．</li>
+</ol>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>根据阶的定义，所有与 <span class="arithmatex">\(m\)</span> 互素的整数 <span class="arithmatex">\(a\)</span> 都是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(\delta_m(a)\)</span> 次本原单位根，其中，<span class="arithmatex">\(\delta_m(a)\)</span> 是 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的阶．反过来，如果 <span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根，那么 <span class="arithmatex">\(\gcd(a^k,m)=1\)</span>，所以 <span class="arithmatex">\(\gcd(a,m)=1\)</span>．因此，<span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的（本原）单位根，当且仅当 <span class="arithmatex">\(a\)</span> 与 <span class="arithmatex">\(m\)</span> 互素．这就是性质 1．</p>
+<p>直接验证定义可知，只要 <span class="arithmatex">\(k\mid k'\)</span>，就可以从 <span class="arithmatex">\(a^k\equiv 1\pmod m\)</span> 推出 <span class="arithmatex">\(a^{k'}\equiv 1\pmod m\)</span>，这就是性质 2．根据 <a href="../primitive-root/#ord-prop-3">阶的性质</a> 可知</p>
+<div class="arithmatex">\[
 \delta(a^\ell) = \dfrac{\delta_m(a)}{\gcd(\delta_m(a),\ell)}.
-$$
-
-如果 $a$ 是模 $m$ 的 $k$ 次本原单位根，那么，$\delta_m(a)=k$，直接代入上式就得到 $a^\ell$ 是模 $m$ 的 $\dfrac{k}{\gcd(k,\ell)}$ 次本原单位根．如果 $a$ 只是模 $m$ 的 $k$ 次单位根，设它是 $k'\mid k$ 次本原单位根，故而 $a^\ell$ 是模 $m$ 的 $\dfrac{k'}{\gcd(k',\ell)}$ 次本原单位根．由于 $k'\mid k$，有
-
-$$
+\]</div>
+<p>如果 <span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次本原单位根，那么，<span class="arithmatex">\(\delta_m(a)=k\)</span>，直接代入上式就得到 <span class="arithmatex">\(a^\ell\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(\dfrac{k}{\gcd(k,\ell)}\)</span> 次本原单位根．如果 <span class="arithmatex">\(a\)</span> 只是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根，设它是 <span class="arithmatex">\(k'\mid k\)</span> 次本原单位根，故而 <span class="arithmatex">\(a^\ell\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(\dfrac{k'}{\gcd(k',\ell)}\)</span> 次本原单位根．由于 <span class="arithmatex">\(k'\mid k\)</span>，有</p>
+<div class="arithmatex">\[
 \dfrac{k'}{\gcd(k',\ell)} \mid \dfrac{k}{\gcd(k,\ell)},
-$$
-
-再由性质 2，就得到 $a^\ell$ 是模 $m$ 的 $\dfrac{k}{\gcd(k,\ell)}$ 次单位根．这就是性质 3．
-
-对于 $k'\mid k$，由性质 2，模 $m$ 的 $k'$ 次本原单位根必然是模 $m$ 的 $k$ 次单位根．它们两两不交，故而构成划分．而对于 $\ell\perp k$，总有 $\ell\perp k'$，因此对于模 $m$ 的 $k'$ 次本原单位根 $a$，总有 $a^\ell$ 是模 $m$ 的 $k'$ 次本原单位根．取 $\ell'=\ell^{-1}\bmod k$，可以验证 $x\mapsto x^\ell$ 和 $x\mapsto x^{\ell'}$ 互为逆映射，因此，$x\mapsto x^\ell$ 是双射．这就是性质 4．
-
-根据 Carmichael 函数的性质可知，模 $m$ 的 $\lambda(m)$ 次本原单位根总是存在的，设它为 $a$，且 $\delta_m(a)=\lambda(m)$．对于 $k\mid\lambda(m)$，设 $k'=\dfrac{\lambda(m)}{k}$，总有
-
-$$
+\]</div>
+<p>再由性质 2，就得到 <span class="arithmatex">\(a^\ell\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(\dfrac{k}{\gcd(k,\ell)}\)</span> 次单位根．这就是性质 3．</p>
+<p>对于 <span class="arithmatex">\(k'\mid k\)</span>，由性质 2，模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k'\)</span> 次本原单位根必然是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根．它们两两不交，故而构成划分．而对于 <span class="arithmatex">\(\ell\perp k\)</span>，总有 <span class="arithmatex">\(\ell\perp k'\)</span>，因此对于模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k'\)</span> 次本原单位根 <span class="arithmatex">\(a\)</span>，总有 <span class="arithmatex">\(a^\ell\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k'\)</span> 次本原单位根．取 <span class="arithmatex">\(\ell'=\ell^{-1}\bmod k\)</span>，可以验证 <span class="arithmatex">\(x\mapsto x^\ell\)</span> 和 <span class="arithmatex">\(x\mapsto x^{\ell'}\)</span> 互为逆映射，因此，<span class="arithmatex">\(x\mapsto x^\ell\)</span> 是双射．这就是性质 4．</p>
+<p>根据 Carmichael 函数的性质可知，模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(\lambda(m)\)</span> 次本原单位根总是存在的，设它为 <span class="arithmatex">\(a\)</span>，且 <span class="arithmatex">\(\delta_m(a)=\lambda(m)\)</span>．对于 <span class="arithmatex">\(k\mid\lambda(m)\)</span>，设 <span class="arithmatex">\(k'=\dfrac{\lambda(m)}{k}\)</span>，总有</p>
+<div class="arithmatex">\[
 \delta_m(a^{k'}) = \dfrac{\lambda(m)}{(\lambda(m),k')} = \dfrac{\lambda(m)}{k'} = k.
-$$
-
-因此，$a^{k'}$ 是 $k$ 次本原单位根．而根据 Carmichael 函数的定义，所有 $x\perp m$ 的阶都是 $\lambda(m)$ 的因子．这就得到性质 5．
-
-几乎重复 [原根判定定理](./primitive-root.md#原根判定定理) 的证明，就可以得到性质 6．这一判别方法实际上在验证 $\delta_m(a)=k$．
-</code></pre>
-<p>从这些性质可以看出，相对于原根存在的情形，模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(\lambda\)</span>‑原根起到了类似的基础作用．与原根不同的是，<span class="arithmatex">\(\lambda\)</span>‑原根的幂次并不能用于生成模 <span class="arithmatex">\(m\)</span> 的全体单位根．尽管如此，由于 <span class="arithmatex">\(\lambda\)</span>‑原根的密度并不低[^lambda-density]，如果确实需要找到 <span class="arithmatex">\(k\)</span> 次本原单位根，可以首先通过随机方法找到一个 <span class="arithmatex">\(\lambda\)</span>‑原根，再通过求幂次得到一个 <span class="arithmatex">\(k\)</span> 次本原单位根．</p>
+\]</div>
+<p>因此，<span class="arithmatex">\(a^{k'}\)</span> 是 <span class="arithmatex">\(k\)</span> 次本原单位根．而根据 Carmichael 函数的定义，所有 <span class="arithmatex">\(x\perp m\)</span> 的阶都是 <span class="arithmatex">\(\lambda(m)\)</span> 的因子．这就得到性质 5．</p>
+<p>几乎重复 <a href="../primitive-root/#原根判定定理">原根判定定理</a> 的证明，就可以得到性质 6．这一判别方法实际上在验证 <span class="arithmatex">\(\delta_m(a)=k\)</span>．</p>
+</details>
+<p>从这些性质可以看出，相对于原根存在的情形，模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(\lambda\)</span>‑原根起到了类似的基础作用．与原根不同的是，<span class="arithmatex">\(\lambda\)</span>‑原根的幂次并不能用于生成模 <span class="arithmatex">\(m\)</span> 的全体单位根．尽管如此，由于 <span class="arithmatex">\(\lambda\)</span>‑原根的密度并不低<sup id="fnref:lambda-density"><a class="footnote-ref" href="#fn:lambda-density">2</a></sup>，如果确实需要找到 <span class="arithmatex">\(k\)</span> 次本原单位根，可以首先通过随机方法找到一个 <span class="arithmatex">\(\lambda\)</span>‑原根，再通过求幂次得到一个 <span class="arithmatex">\(k\)</span> 次本原单位根．</p>
 <p>如果已知 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的一个 <span class="arithmatex">\(k\)</span> 次方根，可以通过模 <span class="arithmatex">\(m\)</span> 的全体 <span class="arithmatex">\(k\)</span> 次单位根生成 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的全体 <span class="arithmatex">\(k\)</span> 次方根．</p>
-<p>???+ note "定理"
-    设 <span class="arithmatex">\(x\)</span> 是 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的一个 <span class="arithmatex">\(k\)</span> 次方根，当 <span class="arithmatex">\(r\)</span> 遍历模 <span class="arithmatex">\(m\)</span> 的全体 <span class="arithmatex">\(k\)</span> 次单位根时，<span class="arithmatex">\(xr\)</span> 遍历 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的全体 <span class="arithmatex">\(k\)</span> 次方根．</p>
-<p>??? note "证明"
-    对于 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的两个 <span class="arithmatex">\(k\)</span> 次方根 <span class="arithmatex">\(x,y\)</span>，设 <span class="arithmatex">\(r=x^{-1}y\bmod m\)</span>，那么 <span class="arithmatex">\(r\)</span> 满足 <span class="arithmatex">\(r^k\equiv 1\pmod m\)</span>，是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次方根．反过来，只要 <span class="arithmatex">\(r\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根，那么，<span class="arithmatex">\((xr)^{k}= x^kr^k\equiv a\pmod m\)</span>，也就是说，<span class="arithmatex">\(xr\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次方根．</p>
+<details class="note" open="open">
+<summary>定理</summary>
+<p>设 <span class="arithmatex">\(x\)</span> 是 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的一个 <span class="arithmatex">\(k\)</span> 次方根，当 <span class="arithmatex">\(r\)</span> 遍历模 <span class="arithmatex">\(m\)</span> 的全体 <span class="arithmatex">\(k\)</span> 次单位根时，<span class="arithmatex">\(xr\)</span> 遍历 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的全体 <span class="arithmatex">\(k\)</span> 次方根．</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>对于 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的两个 <span class="arithmatex">\(k\)</span> 次方根 <span class="arithmatex">\(x,y\)</span>，设 <span class="arithmatex">\(r=x^{-1}y\bmod m\)</span>，那么 <span class="arithmatex">\(r\)</span> 满足 <span class="arithmatex">\(r^k\equiv 1\pmod m\)</span>，是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次方根．反过来，只要 <span class="arithmatex">\(r\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根，那么，<span class="arithmatex">\((xr)^{k}= x^kr^k\equiv a\pmod m\)</span>，也就是说，<span class="arithmatex">\(xr\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次方根．</p>
+</details>
 <p>利用 <span class="arithmatex">\(k\)</span> 次单位根生成全体 <span class="arithmatex">\(k\)</span> 次方根，就类似于利用齐次线性方程组的解生成非齐次线性方程组的通解一样．</p>
 <p>前面讨论的是一般情形．仅对于原根存在的情形，单位根的结构更为简单：</p>
-<p>???+ note "定理"
-    对于模数 <span class="arithmatex">\(m\)</span>，设模 <span class="arithmatex">\(m\)</span> 的原根存在，且 <span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次本原单位根．那么，<span class="arithmatex">\(b\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根，当且仅当它可以表示为 <span class="arithmatex">\(a\)</span> 的幂次．</p>
-<p>??? note "证明"
-    设 <span class="arithmatex">\(g\)</span> 是模 <span class="arithmatex">\(m\)</span> 的原根，那么，所有与 <span class="arithmatex">\(m\)</span> 互素的元素都可以表示为 <span class="arithmatex">\(g\)</span> 的幂次．那么，<span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次本原单位根，当且仅当</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理</summary>
+<p>对于模数 <span class="arithmatex">\(m\)</span>，设模 <span class="arithmatex">\(m\)</span> 的原根存在，且 <span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次本原单位根．那么，<span class="arithmatex">\(b\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根，当且仅当它可以表示为 <span class="arithmatex">\(a\)</span> 的幂次．</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>设 <span class="arithmatex">\(g\)</span> 是模 <span class="arithmatex">\(m\)</span> 的原根，那么，所有与 <span class="arithmatex">\(m\)</span> 互素的元素都可以表示为 <span class="arithmatex">\(g\)</span> 的幂次．那么，<span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次本原单位根，当且仅当</p>
+<div class="arithmatex">\[
 \delta_m(a) = \delta_m(g^{\operatorname{ind}_ga}) = \dfrac{\varphi(m)}{\gcd(\varphi(m),\operatorname{ind}_ga)} = k.
-$$
-
-类似地，$b$ 是模 $m$ 的 $k$ 次单位根，当且仅当
-
-$$
+\]</div>
+<p>类似地，<span class="arithmatex">\(b\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k\)</span> 次单位根，当且仅当</p>
+<div class="arithmatex">\[
 \delta_m(b) = \delta_m(g^{\operatorname{ind}_gb}) = \dfrac{\varphi(m)}{\gcd(\varphi(m),\operatorname{ind}_gb)} = k' \mid k.
-$$
-
-所以，有
-
-$$
+\]</div>
+<p>所以，有</p>
+<div class="arithmatex">\[
 \gcd(\varphi(m),\operatorname{ind}_ga) \mid \gcd(\varphi(m),\operatorname{ind}_gb)\mid \operatorname{ind}_gb.
-$$
-
-根据对线性同余方程的 [分析](./linear-equation.md) 可知，这一条件就等价于方程
-
-$$
+\]</div>
+<p>根据对线性同余方程的 <a href="../linear-equation/">分析</a> 可知，这一条件就等价于方程</p>
+<div class="arithmatex">\[
 (\operatorname{ind}_ga) x \equiv \operatorname{ind}_gb \pmod{\varphi(m)}
-$$
-
-有解．将这一条件对 $g$ 取幂，就得到 $a^x\equiv b\pmod{m}$，亦即 $b$ 可以表示为 $a$ 的幂次．
-</code></pre>
+\]</div>
+<p>有解．将这一条件对 <span class="arithmatex">\(g\)</span> 取幂，就得到 <span class="arithmatex">\(a^x\equiv b\pmod{m}\)</span>，亦即 <span class="arithmatex">\(b\)</span> 可以表示为 <span class="arithmatex">\(a\)</span> 的幂次．</p>
+</details>
 <p>这一定理说明，原根存在时，全体 <span class="arithmatex">\(k\)</span> 次单位根呈现 <a href="../../algebra/group-theory/#循环群">循环群</a> 的结构，而 <span class="arithmatex">\(k\)</span> 次本原单位根则是该循环群的生成元．稍后将会看到，Tonelli–Shanks 算法正是利用这一点，加速了开方运算中离散对数部分的计算．</p>
-<h2 id="_5">模意义下开方</h2>
+<h2 id="模意义下开方">模意义下开方<a class="headerlink" href="#模意义下开方" title="Permanent link"></a></h2>
 <p>最后，本文讨论 <span class="arithmatex">\(k\)</span> 次方根的求法．对于 <span class="arithmatex">\(k=2\)</span> 的情形，有 <a href="../quad-residue/#模意义下开平方">很多高效算法</a> 可以用于模意义下开平方运算．但是，对于一般的 <span class="arithmatex">\(k\)</span>，并没有已知的多项式时间算法．本节将介绍两种常见算法，分别可以在 <span class="arithmatex">\(O(m^{1/2})\)</span> 和 <span class="arithmatex">\(O(m^{1/4+\varepsilon})\)</span> 时间内求出一个 <span class="arithmatex">\(k\)</span> 次方根．利用中国剩余定理总是可以将问题转换为素数幂模的情形，因此，本节主要讨论素数幂模情形的解法．</p>
-<h3 id="_6">朴素算法</h3>
+<h3 id="朴素算法">朴素算法<a class="headerlink" href="#朴素算法" title="Permanent link"></a></h3>
 <p>前文对于 <span class="arithmatex">\(k\)</span> 次剩余性质的 <a href="#性质">分析</a> 实际上已经指出了一种求解素数幂模下 <span class="arithmatex">\(k\)</span> 次方根的方法．严格来说，前文解决的情形是被开方数 <span class="arithmatex">\(a\)</span> 与模数 <span class="arithmatex">\(m\)</span> 互素的情形．算法过程总结如下：</p>
 <ul>
 <li>
@@ -1476,13 +1479,15 @@ ky &amp;\equiv r \pmod{2^{e-2}}.
 </ul>
 <p>当然，对于无解的情形，其实可以通过前文叙述的判别方法在 <span class="arithmatex">\(O(\log m)\)</span> 时间内快速判断，而无需在求解过程中判断．</p>
 <p>求素数模 <span class="arithmatex">\(k\)</span> 次方根的参考实现如下：（代码仅作示意，由于时间复杂度过高，无法通过本题）</p>
-<p>??? example "模板题 <a href="https://judge.yosupo.jp/problem/kth_root_mod">Library Checker - Kth Root (Mod)</a> 参考实现"
-    <code>cpp
-    --8&lt;-- "docs/math/code/residue/bsgs-mod-p.cpp"</code></p>
-<h3 id="tonellishanks">改良 Tonelli–Shanks 算法</h3>
-<p>将用于模意义下开平方的 <a href="../quad-residue/#tonellishanks-算法">Tonelli–Shanks 算法</a> 做适当推广，就可以解决素数幂模下开方运算．一种较为直接的推广方式是 Adleman–Manders–Miller 算法[^amm]，但是它的复杂度仍然不够优秀[^amm-comp]．本节介绍由 sugarknri、Min_25、37zigen 等人提出的改良 Tonelli–Shanks 算法．它可以在 <span class="arithmatex">\(O(m^{1/4+\varepsilon})\)</span> 时间内求出一个 <span class="arithmatex">\(k\)</span> 次方根．</p>
+<details class="example">
+<summary>模板题 <a href="https://judge.yosupo.jp/problem/kth_root_mod">Library Checker - Kth Root (Mod)</a> 参考实现</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/residue/bsgs-mod-p.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="改良-tonellishanks-算法">改良 Tonelli–Shanks 算法<a class="headerlink" href="#改良-tonellishanks-算法" title="Permanent link"></a></h3>
+<p>将用于模意义下开平方的 <a href="../quad-residue/#tonellishanks-算法">Tonelli–Shanks 算法</a> 做适当推广，就可以解决素数幂模下开方运算．一种较为直接的推广方式是 Adleman–Manders–Miller 算法<sup id="fnref:amm"><a class="footnote-ref" href="#fn:amm">3</a></sup>，但是它的复杂度仍然不够优秀<sup id="fnref:amm-comp"><a class="footnote-ref" href="#fn:amm-comp">4</a></sup>．本节介绍由 sugarknri、Min_25、37zigen 等人提出的改良 Tonelli–Shanks 算法．它可以在 <span class="arithmatex">\(O(m^{1/4+\varepsilon})\)</span> 时间内求出一个 <span class="arithmatex">\(k\)</span> 次方根．</p>
 <p>Tonelli–Shanks 算法的核心想法是，将离散对数的求解放到阶为 <span class="arithmatex">\(2^e\)</span> 的群里，进而降低时间复杂度．类似地，对于任意素数幂 <span class="arithmatex">\(p^e\)</span> 阶群内的离散对数，同样可以较为高效地求解，但是算法的复杂度为 <span class="arithmatex">\(\Omega\left(\sqrt{p}\right)\)</span>．Adleman–Manders–Miller 算法将 <span class="arithmatex">\(k\)</span> 次方根的求解分拆为多个素数幂阶群内离散对数的计算，但是受限于 <span class="arithmatex">\(k\)</span> 的最大素因子 <span class="arithmatex">\(p_\text{max}(k)\)</span> 的大小，算法复杂度仍然为 <span class="arithmatex">\(\Omega\left(\sqrt{p_\text{max}(k)}\right)\)</span>．本节算法进一步改良了这一过程，避免了对较大的素因子计算离散对数，进而将整体复杂度控制到 <span class="arithmatex">\(O(m^{1/4+\varepsilon})\)</span>．</p>
-<h4 id="_7">过程</h4>
+<h4 id="过程">过程<a class="headerlink" href="#过程" title="Permanent link"></a></h4>
 <p>考虑素数幂模 <span class="arithmatex">\(m\)</span> 下 <span class="arithmatex">\(a\)</span> 的 <span class="arithmatex">\(k\)</span> 次方根的计算，即求解同余方程：</p>
 <div class="arithmatex">\[
 x^k \equiv a \pmod m.
@@ -1532,7 +1537,7 @@ h = \sum_{j=0}^{s-e-1}h_jp^j = h_0 + h_1p + h_2p^2 +\cdots.
 O\left(B+(s-e)\dfrac{p}{B}\right).
 \]</div>
 <p>当 <span class="arithmatex">\(B=\sqrt{(s-e)p}\)</span> 时，总的时间复杂度最低，为 <span class="arithmatex">\(O\left(\sqrt{(s-e)p}\right)\)</span>．得到 <span class="arithmatex">\(h\)</span> 之后，代入前文 <span class="arithmatex">\(x\)</span> 的表达式，就可以找到一个特解．</p>
-<h4 id="_8">时间复杂度</h4>
+<h4 id="时间复杂度">时间复杂度<a class="headerlink" href="#时间复杂度" title="Permanent link"></a></h4>
 <p>这一算法的时间复杂度为 <span class="arithmatex">\(O(m^{1/4+\varepsilon})\)</span>．本节讨论复杂度时，总是假设单次乘法需要 <span class="arithmatex">\(O(1)\)</span> 时间，且计算幂次时，总是应用欧拉定理降幂，则涉及的单个幂的计算总是可以在 <span class="arithmatex">\(O(\log m)\)</span> 时间内完成．</p>
 <p>先考虑单个 <span class="arithmatex">\(p^e\)</span> 次方根的计算．找到 <span class="arithmatex">\(p\)</span> 次非剩余只需要验证期望 <span class="arithmatex">\(O(1)\)</span> 个数，总时间复杂度为 <span class="arithmatex">\(O(\log m)\)</span>．计算 <span class="arithmatex">\(s,r,\zeta,\eta,b^{qr}\)</span> 各只需要 <span class="arithmatex">\(O(\log m)\)</span> 时间．计算 <span class="arithmatex">\(h\)</span> 时，单个数位需要通过 <span class="arithmatex">\(O(\log m)\)</span> 时间计算幂次，总共 <span class="arithmatex">\((s-e)\)</span> 位，故而总的时间复杂度为 <span class="arithmatex">\(O((s-e)\log m)\)</span>．前文已经说明，计算离散对数的部分预处理和 <span class="arithmatex">\((s-e)\)</span> 次查询的总时间为 <span class="arithmatex">\(O\left(\sqrt{(s-e)p}\right)\)</span>．因为 <span class="arithmatex">\(s-e\in O(\log m)\)</span>，所以单个 <span class="arithmatex">\(p^e\)</span> 次方根的计算的时间复杂度为 <span class="arithmatex">\(O(p^{1/2+\varepsilon})\)</span>．特别地，当 <span class="arithmatex">\(s=e\)</span> 时，时间复杂度可以进一步减少为 <span class="arithmatex">\(O(\log m)\)</span>．</p>
 <p>进而，可以考虑算法总的时间复杂度．计算 <span class="arithmatex">\(\varphi(m),d,\ell\)</span> 的时间复杂度均为 <span class="arithmatex">\(O(\log m)\)</span>．紧接着需要做素因数分解 <span class="arithmatex">\(d=\prod_p{p^e}\)</span>，这一步利用 <a href="../pollard-rho/#pollard-rho-算法">Pollard Rho 算法</a> 可以在 <span class="arithmatex">\(O(m^{1/4})\)</span> 时间内完成．最后，依次求 <span class="arithmatex">\(p^e\)</span> 次方根的总时间复杂度为</p>
@@ -1550,10 +1555,12 @@ p^\star=\gcd\left(z,\dfrac{\varphi(m)}{z}\right) = \prod_{p : \nu_p(d) &lt; \nu_
 \]</div>
 <p>枚举 <span class="arithmatex">\(\nu_p(d),\nu_p(\varphi(m))\)</span> 的所有可能性可知，乘积中 <span class="arithmatex">\(p\)</span> 的次数一定是 <span class="arithmatex">\(1\)</span>，因此这样算出来的就是唯一的大素因子 <span class="arithmatex">\(p^\star\)</span>（如果存在的话）．至于剩余的部分 <span class="arithmatex">\(z/p^\star\)</span>，因为其中只能包含若干满足 <span class="arithmatex">\(e=s\)</span> 的素因子，所以无需继续分解．</p>
 <p>求素数模 <span class="arithmatex">\(k\)</span> 次方根的参考实现如下：</p>
-<p>??? example "模板题 <a href="https://judge.yosupo.jp/problem/kth_root_mod">Library Checker - Kth Root (Mod)</a> 参考实现"
-    <code>cpp
-    --8&lt;-- "docs/math/code/residue/tonelli-shanks-mod-p.cpp"</code></p>
-<h3 id="_9">一般情形的处理</h3>
+<details class="example">
+<summary>模板题 <a href="https://judge.yosupo.jp/problem/kth_root_mod">Library Checker - Kth Root (Mod)</a> 参考实现</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/residue/tonelli-shanks-mod-p.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h3 id="一般情形的处理">一般情形的处理<a class="headerlink" href="#一般情形的处理" title="Permanent link"></a></h3>
 <p>考虑一般的情形，仍然设模数 <span class="arithmatex">\(m\)</span> 是素数幂 <span class="arithmatex">\(p^e\)</span>，但是 <span class="arithmatex">\(\gcd(a,m)&gt;1\)</span>．如果 <span class="arithmatex">\(a\equiv 0\pmod{m}\)</span>，那么</p>
 <div class="arithmatex">\[
 x = p^{\lceil e/k \rceil}\ell\pmod{p^e},~\ell=0,1,\cdots,p^{e-\lceil e/k\rceil}-1
@@ -1567,25 +1574,44 @@ x^k = p^{kz}(x')^k\equiv p^sa'\pmod{p^e}.
 x \equiv p^{s/k}(x' + \ell p^{e-s})\pmod{p^e},~\ell = 0,1,\cdots, p^{s-s/k}-1.
 \]</div>
 <p>求解任一模数下全体 <span class="arithmatex">\(k\)</span> 次方根的参考实现如下：</p>
-<p>??? example "模板题 <a href="https://www.luogu.com.cn/problem/P5668">Luogu P5668【模板】N 次剩余</a> 参考代码"
-    === "朴素算法"
-        <code>cpp
-        --8&lt;-- "docs/math/code/residue/bsgs.cpp"</code></p>
-<pre><code>=== "改良 Tonelli–Shanks 算法"
-    ```cpp
-    --8&lt;-- "docs/math/code/residue/tonelli-shanks.cpp"
-    ```
-</code></pre>
-<h2 id="_10">参考资料与注释</h2>
+<details class="example">
+<summary>模板题 <a href="https://www.luogu.com.cn/problem/P5668">Luogu P5668【模板】N 次剩余</a> 参考代码</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">朴素算法</label><label for="__tabbed_1_2">改良 Tonelli–Shanks 算法</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/residue/bsgs.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/residue/tonelli-shanks.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
+<h2 id="参考资料与注释">参考资料与注释<a class="headerlink" href="#参考资料与注释" title="Permanent link"></a></h2>
 <ul>
 <li>冯克勤．初等数论及其应用．</li>
 <li><a href="https://en.wikipedia.org/wiki/Root_of_unity_modulo_n">Root of unity modulo n - Wikipedia</a></li>
 <li><a href="https://yukicoder.me/problems/no/981/editorial">No.981 一般冪乗根 解説 by 37zigen</a></li>
 </ul>
-<p>[^fnnt]: 实际上，模数 <span class="arithmatex">\(m\)</span> 未必是素数．只要 <span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k=2^e\)</span> 次本原单位根，就可以用于模 <span class="arithmatex">\(m\)</span> 的快速数论变换．但是，由于通常需要处理的 <span class="arithmatex">\(2^e\)</span> 比较大，这意味着模数 <span class="arithmatex">\(m\)</span> 中的每个素因子都是 <span class="arithmatex">\(c2^e+1\)</span> 形式．因此，单个素因子就很大，而模数 <span class="arithmatex">\(m\)</span> 通常会更大，因而一般模数的情形并没有素数模的情形常用．</p>
-<p>[^lambda-density]: 根据 <a href="../primitive-root/#原根个数">原根个数相关结论</a> 可知，<span class="arithmatex">\(\lambda\)</span>‑原根的数量恰为 <span class="arithmatex">\(\varphi(\lambda(m))\)</span>，其中，<span class="arithmatex">\(\varphi(\cdot)\)</span> 和 <span class="arithmatex">\(\lambda(\cdot)\)</span> 分别是欧拉函数和 Carmichael 函数。因为对于几乎所有整数 <span class="arithmatex">\(m\)</span>，都有 <span class="arithmatex">\(\lambda(m)/m = \exp(-(1+o(1))\log\log m\log\log\log m)\)</span>，而存在 <span class="arithmatex">\(C &gt; 0\)</span>，使得对于整数 <span class="arithmatex">\(m &gt; 2\)</span>，都有 <span class="arithmatex">\(\varphi(m)/m = C / \log\log m\)</span>，所以，对于几乎所有整数 <span class="arithmatex">\(m\)</span>，都有 <span class="arithmatex">\(\varphi(\lambda(m))/m = \exp(-(1+o(1))\log\log m\log\log\log m)\)</span>。其中，指数部分系数中的 <span class="arithmatex">\(o(1)\)</span> 吸收了因子 <span class="arithmatex">\(\varphi(\lambda(m))/\lambda(m)\)</span> 的贡献。故而，<span class="arithmatex">\(\lambda\)</span>‑原根可以在期望 <span class="arithmatex">\(\exp((1+o(1))\log\log m\log\log\log m)\)</span> 次内找到。关于欧拉函数的估计，可以参考论文 Rosser, J. Barkley, and Lowell Schoenfeld. "Approximate formulas for some functions of prime numbers." Illinois Journal of Mathematics 6, no. 1 (1962): 64-94．关于 Carmichael 函数的估计，可以参考论文 Erdos, Paul, Carl Pomerance, and Eric Schmutz. "Carmichael’s lambda function." Acta Arith 58, no. 4 (1991): 363-385．</p>
-<p>[^amm]: 原始论文参见 Adleman, Leonard, Kenneth Manders, and Gary Miller. "On taking roots in finite fields." In 18th Annual Symposium on Foundations of Computer Science (sfcs 1977), pp. 175-178. IEEE Computer Society, 1977．一个更易读的介绍可见于 Cao, Zhengjun, Qian Sha, and Xiao Fan. "Adleman-Manders-Miller root extraction method revisited." In International Conference on Information Security and Cryptology, pp. 77-85. Berlin, Heidelberg: Springer Berlin Heidelberg, 2011．</p>
-<p>[^amm-comp]: 由于这一算法要求 <span class="arithmatex">\(k\)</span> 是素数，所以最差情形中，它需要对 <span class="arithmatex">\(\varphi(m)\)</span> 的最大素因子 <span class="arithmatex">\(p\)</span> 求 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(p\)</span> 次方根．这一过程中，需要对 <span class="arithmatex">\(p\)</span> 次本原单位根求 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的离散对数．即使应用 BSGS 算法，这一过程也需要 <span class="arithmatex">\(O(\sqrt{p})\)</span> 时间．但是，论文 Fouvry, Étienne. "Theoreme de Brun-Titchmarsh; application au theoreme de Fermat." Inventiones mathematicae 79, no. 2 (1985): 383-407 指出，存在正密度的素数 <span class="arithmatex">\(m\)</span>，使得 <span class="arithmatex">\(\varphi(m)=m-1\)</span> 的最大素因子 <span class="arithmatex">\(p=\Omega(m^{2/3})\)</span>．这意味着这一算法的复杂度至少为 <span class="arithmatex">\(\Omega(m^{1/3})\)</span>，劣于文中介绍的改良 Tonelli–Shanks 算法．</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:fnnt">
+<p>实际上，模数 <span class="arithmatex">\(m\)</span> 未必是素数．只要 <span class="arithmatex">\(a\)</span> 是模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(k=2^e\)</span> 次本原单位根，就可以用于模 <span class="arithmatex">\(m\)</span> 的快速数论变换．但是，由于通常需要处理的 <span class="arithmatex">\(2^e\)</span> 比较大，这意味着模数 <span class="arithmatex">\(m\)</span> 中的每个素因子都是 <span class="arithmatex">\(c2^e+1\)</span> 形式．因此，单个素因子就很大，而模数 <span class="arithmatex">\(m\)</span> 通常会更大，因而一般模数的情形并没有素数模的情形常用．&#160;<a class="footnote-backref" href="#fnref:fnnt" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:lambda-density">
+<p>根据 <a href="../primitive-root/#原根个数">原根个数相关结论</a> 可知，<span class="arithmatex">\(\lambda\)</span>‑原根的数量恰为 <span class="arithmatex">\(\varphi(\lambda(m))\)</span>，其中，<span class="arithmatex">\(\varphi(\cdot)\)</span> 和 <span class="arithmatex">\(\lambda(\cdot)\)</span> 分别是欧拉函数和 Carmichael 函数。因为对于几乎所有整数 <span class="arithmatex">\(m\)</span>，都有 <span class="arithmatex">\(\lambda(m)/m = \exp(-(1+o(1))\log\log m\log\log\log m)\)</span>，而存在 <span class="arithmatex">\(C &gt; 0\)</span>，使得对于整数 <span class="arithmatex">\(m &gt; 2\)</span>，都有 <span class="arithmatex">\(\varphi(m)/m = C / \log\log m\)</span>，所以，对于几乎所有整数 <span class="arithmatex">\(m\)</span>，都有 <span class="arithmatex">\(\varphi(\lambda(m))/m = \exp(-(1+o(1))\log\log m\log\log\log m)\)</span>。其中，指数部分系数中的 <span class="arithmatex">\(o(1)\)</span> 吸收了因子 <span class="arithmatex">\(\varphi(\lambda(m))/\lambda(m)\)</span> 的贡献。故而，<span class="arithmatex">\(\lambda\)</span>‑原根可以在期望 <span class="arithmatex">\(\exp((1+o(1))\log\log m\log\log\log m)\)</span> 次内找到。关于欧拉函数的估计，可以参考论文 Rosser, J. Barkley, and Lowell Schoenfeld. "Approximate formulas for some functions of prime numbers." Illinois Journal of Mathematics 6, no. 1 (1962): 64-94．关于 Carmichael 函数的估计，可以参考论文 Erdos, Paul, Carl Pomerance, and Eric Schmutz. "Carmichael’s lambda function." Acta Arith 58, no. 4 (1991): 363-385．&#160;<a class="footnote-backref" href="#fnref:lambda-density" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:amm">
+<p>原始论文参见 Adleman, Leonard, Kenneth Manders, and Gary Miller. "On taking roots in finite fields." In 18<sup>th</sup> Annual Symposium on Foundations of Computer Science (sfcs 1977), pp. 175-178. IEEE Computer Society, 1977．一个更易读的介绍可见于 Cao, Zhengjun, Qian Sha, and Xiao Fan. "Adleman-Manders-Miller root extraction method revisited." In International Conference on Information Security and Cryptology, pp. 77-85. Berlin, Heidelberg: Springer Berlin Heidelberg, 2011．&#160;<a class="footnote-backref" href="#fnref:amm" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:amm-comp">
+<p>由于这一算法要求 <span class="arithmatex">\(k\)</span> 是素数，所以最差情形中，它需要对 <span class="arithmatex">\(\varphi(m)\)</span> 的最大素因子 <span class="arithmatex">\(p\)</span> 求 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的 <span class="arithmatex">\(p\)</span> 次方根．这一过程中，需要对 <span class="arithmatex">\(p\)</span> 次本原单位根求 <span class="arithmatex">\(a\)</span> 模 <span class="arithmatex">\(m\)</span> 的离散对数．即使应用 BSGS 算法，这一过程也需要 <span class="arithmatex">\(O(\sqrt{p})\)</span> 时间．但是，论文 Fouvry, Étienne. "Theoreme de Brun-Titchmarsh; application au theoreme de Fermat." Inventiones mathematicae 79, no. 2 (1985): 383-407 指出，存在正密度的素数 <span class="arithmatex">\(m\)</span>，使得 <span class="arithmatex">\(\varphi(m)=m-1\)</span> 的最大素因子 <span class="arithmatex">\(p=\Omega(m^{2/3})\)</span>．这意味着这一算法的复杂度至少为 <span class="arithmatex">\(\Omega(m^{1/3})\)</span>，劣于文中介绍的改良 Tonelli–Shanks 算法．&#160;<a class="footnote-backref" href="#fnref:amm-comp" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
 
 
@@ -1639,6 +1665,8 @@ x \equiv p^{s/k}(x' + \ell p^{e-s})\pmod{p^e},~\ell = 0,1,\cdots, p^{s-s/k}-1.
     
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

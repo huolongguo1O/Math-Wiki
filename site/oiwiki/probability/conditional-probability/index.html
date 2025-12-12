@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#概述" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#概述" class="md-nav__link">
     <span class="md-ellipsis">
       
         概述
@@ -1101,7 +1101,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#条件概率" class="md-nav__link">
     <span class="md-ellipsis">
       
         条件概率
@@ -1113,7 +1113,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#定义" class="md-nav__link">
     <span class="md-ellipsis">
       
         定义
@@ -1124,7 +1124,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bayes" class="md-nav__link">
+  <a href="#bayes-公式" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bayes 公式
@@ -1140,7 +1140,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#事件的独立性" class="md-nav__link">
     <span class="md-ellipsis">
       
         事件的独立性
@@ -1152,7 +1152,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#定义_1" class="md-nav__link">
     <span class="md-ellipsis">
       
         定义
@@ -1163,7 +1163,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#多个事件的独立性" class="md-nav__link">
     <span class="md-ellipsis">
       
         多个事件的独立性
@@ -1197,11 +1197,11 @@
 
   <h1>Conditional probability</h1>
 
-<h2 id="_1">概述</h2>
+<h2 id="概述">概述<a class="headerlink" href="#概述" title="Permanent link"></a></h2>
 <p>当某事件已经发生时，一些随机事件的概率会因为已知信息的增加发生变化。例如在手游抽卡时，我们可能会认为单次抽卡出六星与不出六星是等概率的，但随着我们连抽 <span class="arithmatex">\(50\)</span> 发一个六星都没有，再固执地认为「出六星与不出六星等概率」就显得不是那么明智。</p>
 <p>总之，研究在某些已知条件下事件发生的概率是必要的。</p>
-<h2 id="_2">条件概率</h2>
-<h3 id="_3">定义</h3>
+<h2 id="条件概率">条件概率<a class="headerlink" href="#条件概率" title="Permanent link"></a></h2>
+<h3 id="定义">定义<a class="headerlink" href="#定义" title="Permanent link"></a></h3>
 <p>若已知事件 <span class="arithmatex">\(A\)</span> 发生，在此条件下事件 <span class="arithmatex">\(B\)</span> 发生的概率称为 <strong>条件概率</strong>，记作 <span class="arithmatex">\(P(B|A)\)</span>。</p>
 <p>在概率空间 <span class="arithmatex">\((\Omega, \mathcal{F}, P)\)</span> 中，若事件 <span class="arithmatex">\(A \in \mathcal{F}\)</span> 满足 <span class="arithmatex">\(P(A) &gt; 0\)</span>，则条件概率 <span class="arithmatex">\(P(\cdot|A)\)</span> 定义为</p>
 <div class="arithmatex">\[
@@ -1221,15 +1221,15 @@ P(AB) = P(A)P(B|A)
 <div class="arithmatex">\[
 P(B) = \sum_{i=1}^{n} P(A_i)P(B|A_i)
 \]</div>
-<h3 id="bayes">Bayes 公式</h3>
+<h3 id="bayes-公式">Bayes 公式<a class="headerlink" href="#bayes-公式" title="Permanent link"></a></h3>
 <p>一般来说，设可能导致事件 <span class="arithmatex">\(B\)</span> 发生的原因为 <span class="arithmatex">\(A_1, A_2, \cdots, A_n\)</span>，则在 <span class="arithmatex">\(P(A_i)\)</span> 和 <span class="arithmatex">\(P(B|A_i)\)</span> 已知时可以通过全概率公式计算事件 <span class="arithmatex">\(B\)</span> 发生的概率。但在很多情况下，我们需要根据「事件 <span class="arithmatex">\(B\)</span> 发生」这一结果反推其各个原因事件的发生概率。于是有</p>
 <div class="arithmatex">\[
 P(A_i|B) = \frac{P(A_iB)}{P(B)} = \frac{P(A_i)P(B|A_i)}{\sum_{j=1}^{n} P(A_j)P(B|A_j)}
 \]</div>
 <p>上式即 Bayes 公式。</p>
-<h2 id="_4">事件的独立性</h2>
+<h2 id="事件的独立性">事件的独立性<a class="headerlink" href="#事件的独立性" title="Permanent link"></a></h2>
 <p>在研究条件概率的过程中，可能会出现 <span class="arithmatex">\(P(B|A) = P(B)\)</span> 的情况。从直观上讲就是事件 <span class="arithmatex">\(B\)</span> 是否发生并不会告诉我们关于事件 <span class="arithmatex">\(A\)</span> 的任何信息，即事件 <span class="arithmatex">\(B\)</span> 与事件 <span class="arithmatex">\(A\)</span>「无关」。于是我们就有了下面的定义</p>
-<h3 id="_5">定义</h3>
+<h3 id="定义_1">定义<a class="headerlink" href="#定义_1" title="Permanent link"></a></h3>
 <p>若同一概率空间中的事件 <span class="arithmatex">\(A\)</span>,<span class="arithmatex">\(B\)</span> 满足</p>
 <div class="arithmatex">\[
 P(AB) = P(A)P(B)
@@ -1238,7 +1238,7 @@ P(AB) = P(A)P(B)
 <div class="arithmatex">\[
 P( A_{i_1}A_{i_2} \cdots A_{i_r} ) = \prod_{k=1}^{r} P(A_{i_k})
 \]</div>
-<h3 id="_6">多个事件的独立性</h3>
+<h3 id="多个事件的独立性">多个事件的独立性<a class="headerlink" href="#多个事件的独立性" title="Permanent link"></a></h3>
 <p>对于多个事件，一般不能从两两独立推出这些事件独立。考虑以下反例：</p>
 <p>有一个正四面体骰子，其中三面被分别涂成红色、绿色、蓝色，另一面则三色皆有。现在扔一次该骰子，令事件 <span class="arithmatex">\(A\)</span>,<span class="arithmatex">\(B\)</span>,<span class="arithmatex">\(C\)</span> 分别表示与桌面接触的一面包含红色、绿色、蓝色。</p>
 <p>不难计算 <span class="arithmatex">\(P(A) = P(B) = P(C) = \frac{1}{2}\)</span>，而 <span class="arithmatex">\(P(AB) = P(BC) = P(CA) = P(ABC) = \frac{1}{4}\)</span>。</p>
@@ -1296,6 +1296,8 @@ P( A_{i_1}A_{i_2} \cdots A_{i_r} ) = \prod_{k=1}^{r} P(A_{i_k})
     
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

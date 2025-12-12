@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#二进制" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#二进制" class="md-nav__link">
     <span class="md-ellipsis">
       
         二进制
@@ -1101,7 +1101,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#八进制" class="md-nav__link">
     <span class="md-ellipsis">
       
         八进制
@@ -1112,7 +1112,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#十六进制" class="md-nav__link">
     <span class="md-ellipsis">
       
         十六进制
@@ -1123,7 +1123,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#进制间的相互转化" class="md-nav__link">
     <span class="md-ellipsis">
       
         进制间的相互转化
@@ -1135,7 +1135,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#十进制转二进制八进制十六进制" class="md-nav__link">
     <span class="md-ellipsis">
       
         十进制转二进制/八进制/十六进制
@@ -1146,7 +1146,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#二进制八进制十六进制转十进制" class="md-nav__link">
     <span class="md-ellipsis">
       
         二进制/八进制/十六进制转十进制
@@ -1157,7 +1157,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#二进制八进制十六进制间的相互转换" class="md-nav__link">
     <span class="md-ellipsis">
       
         二进制/八进制/十六进制间的相互转换
@@ -1192,21 +1192,31 @@
   <h1>Base</h1>
 
 <p>在计算机中，除了二进制，比较常用的还有八进制和十六进制。</p>
-<h2 id="_1">二进制</h2>
+<h2 id="二进制">二进制<a class="headerlink" href="#二进制" title="Permanent link"></a></h2>
 <p>二进制是计算机内部运算中采用的进制，在这样的进制系统下，只有 <span class="arithmatex">\(0,1\)</span> 两个数字，计算机内部的所有运算（包括位运算）都是在二进制的基础上进行的。</p>
 <p>但用二进制表示数字会让数字过长，因此为了方便表示的需要，通常会把二进制数转换为八进制或十六进制表示。</p>
-<h2 id="_2">八进制</h2>
+<h2 id="八进制">八进制<a class="headerlink" href="#八进制" title="Permanent link"></a></h2>
 <p>在八进制下，有 <span class="arithmatex">\(0,1,2,3,4,5,6,7\)</span> 八个数字。</p>
 <p>一般情况下，八进制数以 <code>oxx</code>（其中 <code>o</code> 为八进制的前缀，<code>xx</code> 代表八进制数）的形式来表示。</p>
-<h2 id="_3">十六进制</h2>
+<h2 id="十六进制">十六进制<a class="headerlink" href="#十六进制" title="Permanent link"></a></h2>
 <p>在十六进制下，有 <span class="arithmatex">\(0,1,2,3,4,5,6,7,8,9,A(10),B(11),C(12),D(13),E(14),F(15)\)</span> 十六个数字。</p>
 <p>十六进制与二进制相比，最大的优点就是表示的数字长度较短，一位十六进制数可以表示 4 位二进制数。</p>
 <p>一般情况下，十六进制数以 <code>0xdbf</code>（其中 <code>0x</code> 为十六进制数的前缀）的形式来表示。</p>
-<h2 id="_4">进制间的相互转化</h2>
-<h3 id="_5">十进制转二进制/八进制/十六进制</h3>
+<h2 id="进制间的相互转化">进制间的相互转化<a class="headerlink" href="#进制间的相互转化" title="Permanent link"></a></h2>
+<h3 id="十进制转二进制八进制十六进制">十进制转二进制/八进制/十六进制<a class="headerlink" href="#十进制转二进制八进制十六进制" title="Permanent link"></a></h3>
 <p>这里以二进制为例来演示，其他进制的原理与其类似。</p>
 <p>整数部分，把十进制数不断执行除 2 操作，直至商数为 0，之后从下到上，取所有余数的数字，即为二进制的整数部分数字。小数部分，则用其乘 2，取其整数部分的结果，再用计算后的小数部分依此重复计算，算到小数部分全为 0 为止，之后从上到下，取所有计算后整数部分的数字，即为二进制的小数部分数字。</p>
-<pre><code class="language-text">将35.25转化为二进制数
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code>将35.25转化为二进制数
 整数部分：
 35/2=17  ......1
 17/2=8   ......1
@@ -1217,17 +1227,19 @@
 小数部分：
 0.25*2=0.5     0
 0.5*2=1        1
-</code></pre>
+</code></pre></div></td></tr></table></div>
 <p>即 <span class="arithmatex">\(35.25 = (100011.01)_2\)</span></p>
-<h3 id="_6">二进制/八进制/十六进制转十进制</h3>
+<h3 id="二进制八进制十六进制转十进制">二进制/八进制/十六进制转十进制<a class="headerlink" href="#二进制八进制十六进制转十进制" title="Permanent link"></a></h3>
 <p>还是以二进制为例。</p>
 <p>二进制数转换为十进制数，只需将每个位的值，乘以 <span class="arithmatex">\(2^i\)</span> 次即可，其中 <span class="arithmatex">\(i\)</span> 为当前位的位数，个位的位数为 0。</p>
-<pre><code class="language-text">将11010.01(2)转换为十进制数
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>将11010.01(2)转换为十进制数
 11010.01(2)=1*2^4+1*2^3+0*2^2+1*2^1+0*2^0+0*2^(-1)+1*2(-2)
         =26.25
-</code></pre>
+</code></pre></div></td></tr></table></div>
 <p>即 <span class="arithmatex">\((11010.01)_2 = (26.25)_{10}\)</span></p>
-<h3 id="_7">二进制/八进制/十六进制间的相互转换</h3>
+<h3 id="二进制八进制十六进制间的相互转换">二进制/八进制/十六进制间的相互转换<a class="headerlink" href="#二进制八进制十六进制间的相互转换" title="Permanent link"></a></h3>
 <p>一个八进制位可以用 3 个二进制位来表示（因为 <span class="arithmatex">\(2^3 =8\)</span>），一个十六进制位可以用 4 个二进制位来表示（<span class="arithmatex">\(2^4 = 16\)</span>），反之同理。</p>
 
 
@@ -1282,6 +1294,8 @@
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

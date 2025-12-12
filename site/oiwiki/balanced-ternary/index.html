@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#定义" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#定义" class="md-nav__link">
     <span class="md-ellipsis">
       
         定义
@@ -1101,7 +1101,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#解释" class="md-nav__link">
     <span class="md-ellipsis">
       
         解释
@@ -1112,7 +1112,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#过程" class="md-nav__link">
     <span class="md-ellipsis">
       
         过程
@@ -1124,7 +1124,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#应用一" class="md-nav__link">
     <span class="md-ellipsis">
       
         应用一
@@ -1135,7 +1135,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#应用二" class="md-nav__link">
     <span class="md-ellipsis">
       
         应用二
@@ -1151,7 +1151,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#性质" class="md-nav__link">
     <span class="md-ellipsis">
       
         性质
@@ -1162,7 +1162,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#练习题" class="md-nav__link">
     <span class="md-ellipsis">
       
         练习题
@@ -1191,10 +1191,10 @@
 
   <h1>Balanced ternary</h1>
 
-<h2 id="_1">定义</h2>
+<h2 id="定义">定义<a class="headerlink" href="#定义" title="Permanent link"></a></h2>
 <p>平衡三进制，也称为对称三进制。这是一个不太标准的 <strong>计数体系</strong>。</p>
 <p>正规的三进制的数字都是由 <code>0</code>,<code>1</code>,<code>2</code> 构成的，而平衡三进制的数字是由 <code>-1</code>,<code>0</code>,<code>1</code> 构成的。它的基数也是 <code>3</code>（因为有三个可能的值）。由于将 <code>-1</code> 写成数字不方便，我们将使用字母 <code>Z</code> 来代替 <code>-1</code>。</p>
-<h2 id="_2">解释</h2>
+<h2 id="解释">解释<a class="headerlink" href="#解释" title="Permanent link"></a></h2>
 <p>这里有几个例子：</p>
 <table>
 <thead>
@@ -1270,9 +1270,9 @@
 </tbody>
 </table>
 <p>很容易就可以看到，负数最高位是 <code>Z</code>，正数最高位是 <code>1</code>。</p>
-<h2 id="_3">过程</h2>
+<h2 id="过程">过程<a class="headerlink" href="#过程" title="Permanent link"></a></h2>
 <p>在平衡三进制的转转换法中，需要先写出一个给定的数 <code>x</code> 在标准三进制中的表示。当 <code>x</code> 是用标准三进制表示时，其数字的每一位都是 <code>0</code>、<code>1</code> 或 <code>2</code>。从最低的数字开始迭代，我们可以先跳过任何的 <code>0</code> 和 <code>1</code>，但是如果遇到 <code>2</code> 就应该先将其变成 <code>Z</code>，下一位数字再加上 <code>1</code>。而遇到数字 <code>3</code> 则应该转换为 <code>0</code> 下一位数字再加上 <code>1</code>。</p>
-<h3 id="_4">应用一</h3>
+<h3 id="应用一">应用一<a class="headerlink" href="#应用一" title="Permanent link"></a></h3>
 <p>把 <code>64</code> 转换成平衡三进制。</p>
 <p>首先，我们用标准三进制数来重写这个数：</p>
 <div class="arithmatex">\[
@@ -1289,7 +1289,7 @@
 <div class="arithmatex">\[
 \texttt {1Z101}=81 \times 1 +27 \times (-1) + 9 \times 1 + 3 \times 0 + 1 \times 1 = 64_{10}
 \]</div>
-<h3 id="_5">应用二</h3>
+<h3 id="应用二">应用二<a class="headerlink" href="#应用二" title="Permanent link"></a></h3>
 <p>把 <code>237</code> 转换成平衡三进制。</p>
 <p>首先，我们用标准三进制数来重写这个数：</p>
 <div class="arithmatex">\[
@@ -1307,24 +1307,30 @@
 <div class="arithmatex">\[
 \texttt{100Z10} = 243 \cdot 1 + 81 \cdot 0 + 27 \cdot 0 + 9 \cdot (-1) + 3 \cdot 1 + 1 \cdot 0 = 237_{10}
 \]</div>
-<h2 id="_6">性质</h2>
+<h2 id="性质">性质<a class="headerlink" href="#性质" title="Permanent link"></a></h2>
 <p>对于一个平衡三进制数 <span class="arithmatex">\(X_3\)</span> 来说，其可以按照每一位 <span class="arithmatex">\(x_i\)</span> 乘上对应的权值 <span class="arithmatex">\(3^i\)</span> 来唯一得到一个十进制数 <span class="arithmatex">\(Y_{10}\)</span>。</p>
 <p>那对于一个十进制数 <span class="arithmatex">\(Y_{10}\)</span>，是否 <strong>唯一对应一个平衡三进制数</strong> 呢？</p>
 <p>答案是肯定的，这种性质被叫做平衡三进制的唯一性。</p>
-<p>???+ note "证明"
-    我们利用 <strong>反证法</strong> 来求证：</p>
-<pre><code>假设一个十进制数 $Y_{10}$，存在两个 **不同的平衡三进制数**  $A_3,B_3$ 转化成十进制时等于 $Y_{10}$，即证 $A_3 = B_3$。分情况讨论：
-
-1.  当 $Y_{10}=0$，显然 $A_3 = B_3 = 0_3$，与假设矛盾。
-2.  当 $Y_{10}&gt;0$：
-
-    -   将 $A_3$，$B_3$ 的数位按低位到高位编号，记 $a_i$ 为 $A_3$ 的第 $i$ 位，$b_i$ 为 $B$ 的第 $i$ 位。在 $A_3,B_3$ 中，必存在 $i$ 使得 $a_i\neq b_i$。可以发现第 $i-1,i-2,\dots,0$ 位均与证明无关。因此，将 $A_3,B_3$ 按位右移 $i$ 位，得到 $A_3',B_3'$，原问题等价于证明 $A_3'=B_3'$。
-    -   对于 $A_3',B_3'$ 第 $0$ 位，$a_0 \neq b_0$。假设 $b_0 &gt; a_0$（$a_0&gt;b_0$ 时结果相同），易知 $b_0 - a_0 \in \{1,2\}$。$A_3'$ 的位 $i=1,2,3,\dots$ 对于 $A_3'$ 的值的贡献为 $S_1 = a_1 \times 3^1 + a_2 \times 3^2+ \dots$，$B_3'$ 的位 $i=1,2,3,\dots$ 对于 $B_3'$ 的值的贡献为 $S_2 = b_1 \times 3^1 + b_2 \times 3^2 + \dots$。由于 $A_3' = B_3'$，得 $S_1 - S_2 = b_0 - a_0$。$S_1,S_2$ 有公因子 $3$，而 $b_0 - a_0$ 不能被 $3$ 整除，与假设矛盾，因此 $A_3'\neq B_3'$
-3.  当 $Y_{10}&lt;0$，证法与 $Y_{10}&gt;0$ 相同。
-
-故对于任意十进制 $Y_{10}$，均有唯一对应的平衡三进制 $X_3$。
-</code></pre>
-<h2 id="_7">练习题</h2>
+<details class="note" open="open">
+<summary>证明</summary>
+<p>我们利用 <strong>反证法</strong> 来求证：</p>
+<p>假设一个十进制数 <span class="arithmatex">\(Y_{10}\)</span>，存在两个 <strong>不同的平衡三进制数</strong>  <span class="arithmatex">\(A_3,B_3\)</span> 转化成十进制时等于 <span class="arithmatex">\(Y_{10}\)</span>，即证 <span class="arithmatex">\(A_3 = B_3\)</span>。分情况讨论：</p>
+<ol>
+<li>当 <span class="arithmatex">\(Y_{10}=0\)</span>，显然 <span class="arithmatex">\(A_3 = B_3 = 0_3\)</span>，与假设矛盾。</li>
+<li>
+<p>当 <span class="arithmatex">\(Y_{10}&gt;0\)</span>：</p>
+<ul>
+<li>将 <span class="arithmatex">\(A_3\)</span>，<span class="arithmatex">\(B_3\)</span> 的数位按低位到高位编号，记 <span class="arithmatex">\(a_i\)</span> 为 <span class="arithmatex">\(A_3\)</span> 的第 <span class="arithmatex">\(i\)</span> 位，<span class="arithmatex">\(b_i\)</span> 为 <span class="arithmatex">\(B\)</span> 的第 <span class="arithmatex">\(i\)</span> 位。在 <span class="arithmatex">\(A_3,B_3\)</span> 中，必存在 <span class="arithmatex">\(i\)</span> 使得 <span class="arithmatex">\(a_i\neq b_i\)</span>。可以发现第 <span class="arithmatex">\(i-1,i-2,\dots,0\)</span> 位均与证明无关。因此，将 <span class="arithmatex">\(A_3,B_3\)</span> 按位右移 <span class="arithmatex">\(i\)</span> 位，得到 <span class="arithmatex">\(A_3',B_3'\)</span>，原问题等价于证明 <span class="arithmatex">\(A_3'=B_3'\)</span>。</li>
+<li>对于 <span class="arithmatex">\(A_3',B_3'\)</span> 第 <span class="arithmatex">\(0\)</span> 位，<span class="arithmatex">\(a_0 \neq b_0\)</span>。假设 <span class="arithmatex">\(b_0 &gt; a_0\)</span>（<span class="arithmatex">\(a_0&gt;b_0\)</span> 时结果相同），易知 <span class="arithmatex">\(b_0 - a_0 \in \{1,2\}\)</span>。<span class="arithmatex">\(A_3'\)</span> 的位 <span class="arithmatex">\(i=1,2,3,\dots\)</span> 对于 <span class="arithmatex">\(A_3'\)</span> 的值的贡献为 <span class="arithmatex">\(S_1 = a_1 \times 3^1 + a_2 \times 3^2+ \dots\)</span>，<span class="arithmatex">\(B_3'\)</span> 的位 <span class="arithmatex">\(i=1,2,3,\dots\)</span> 对于 <span class="arithmatex">\(B_3'\)</span> 的值的贡献为 <span class="arithmatex">\(S_2 = b_1 \times 3^1 + b_2 \times 3^2 + \dots\)</span>。由于 <span class="arithmatex">\(A_3' = B_3'\)</span>，得 <span class="arithmatex">\(S_1 - S_2 = b_0 - a_0\)</span>。<span class="arithmatex">\(S_1,S_2\)</span> 有公因子 <span class="arithmatex">\(3\)</span>，而 <span class="arithmatex">\(b_0 - a_0\)</span> 不能被 <span class="arithmatex">\(3\)</span> 整除，与假设矛盾，因此 <span class="arithmatex">\(A_3'\neq B_3'\)</span></li>
+</ul>
+</li>
+<li>
+<p>当 <span class="arithmatex">\(Y_{10}&lt;0\)</span>，证法与 <span class="arithmatex">\(Y_{10}&gt;0\)</span> 相同。</p>
+</li>
+</ol>
+<p>故对于任意十进制 <span class="arithmatex">\(Y_{10}\)</span>，均有唯一对应的平衡三进制 <span class="arithmatex">\(X_3\)</span>。</p>
+</details>
+<h2 id="练习题">练习题<a class="headerlink" href="#练习题" title="Permanent link"></a></h2>
 <p><a href="https://archive.topcoder.com/ProblemStatement/pm/12917">Topcoder SRM 604 PowerOfThree</a></p>
 <p><strong>本页面部分内容译自博文 <a href="http://e-maxx.ru/algo/balanced_ternary">Троичная сбалансированная система счисления</a> 与其英文翻译版 <a href="https://cp-algorithms.com/algebra/balanced-ternary.html">Balanced Ternary</a>。其中俄文版版权协议为 Public Domain + Leave a Link；英文版版权协议为 CC-BY-SA 4.0。</strong></p>
 
@@ -1380,6 +1386,8 @@
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

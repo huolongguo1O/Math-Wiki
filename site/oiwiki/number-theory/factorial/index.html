@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#引入" class="md-skip">
           Skip to content
         </a>
       
@@ -1092,7 +1092,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#引入" class="md-nav__link">
     <span class="md-ellipsis">
       
         引入
@@ -1103,7 +1103,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#wilson" class="md-nav__link">
+  <a href="#wilson-定理" class="md-nav__link">
     <span class="md-ellipsis">
       
         Wilson 定理
@@ -1115,7 +1115,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#推广" class="md-nav__link">
     <span class="md-ellipsis">
       
         推广
@@ -1131,7 +1131,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#阶乘余数的计算" class="md-nav__link">
     <span class="md-ellipsis">
       
         阶乘余数的计算
@@ -1143,7 +1143,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#素数模的情形" class="md-nav__link">
     <span class="md-ellipsis">
       
         素数模的情形
@@ -1154,7 +1154,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#素数幂模的情形" class="md-nav__link">
     <span class="md-ellipsis">
       
         素数幂模的情形
@@ -1170,7 +1170,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#幂次的计算" class="md-nav__link">
     <span class="md-ellipsis">
       
         幂次的计算
@@ -1182,7 +1182,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#legendre" class="md-nav__link">
+  <a href="#legendre-公式" class="md-nav__link">
     <span class="md-ellipsis">
       
         Legendre 公式
@@ -1193,7 +1193,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#kummer" class="md-nav__link">
+  <a href="#kummer-定理" class="md-nav__link">
     <span class="md-ellipsis">
       
         Kummer 定理
@@ -1209,7 +1209,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#例题" class="md-nav__link">
     <span class="md-ellipsis">
       
         例题
@@ -1220,7 +1220,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#参考资料" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考资料
@@ -1249,7 +1249,7 @@
 
   <h1>Factorial</h1>
 
-<h2 id="_1">引入</h2>
+<h2 id="引入">引入<a class="headerlink" href="#引入" title="Permanent link"></a></h2>
 <p>本文讨论了某一模数下阶乘计算的相关结论，并提供一种时间复杂度线性相关于模数大小的计算方法，因而该方法主要适用于模数不太大（<span class="arithmatex">\(\sim 10^6\)</span>）的情形。除了本文介绍的方法外，根据场景不同，还可以应用 <a href="../../poly/shift/#模素数意义下阶乘">多项式技术</a> 进行快速计算。</p>
 <p>根据 <a href="../crt/">中国剩余定理</a>，阶乘取模问题可以转化为模数为素数幂 <span class="arithmatex">\(p^\alpha\)</span> 的情形。在处理这类问题时，常常需要对于素数 <span class="arithmatex">\(p\)</span> 和正整数 <span class="arithmatex">\(n\)</span>，将阶乘 <span class="arithmatex">\(n!\)</span> 中的所有因子 <span class="arithmatex">\(p\)</span> 都提取出来，进而得到分解：</p>
 <div class="arithmatex">\[
@@ -1258,89 +1258,81 @@ n! = p^{\nu_p(n!)}(n!)_p.
 <p>其中，<span class="arithmatex">\(\nu_p(n!)\)</span> 表示阶乘 <span class="arithmatex">\(n!\)</span> 的素因数分解中 <span class="arithmatex">\(p\)</span> 的幂次，<span class="arithmatex">\((n!)_p\)</span> 表示在阶乘 <span class="arithmatex">\(n!\)</span> 的结果中去除所有 <span class="arithmatex">\(p\)</span> 的幂次得到的整数。本文将讨论 <span class="arithmatex">\((n!)_p\)</span> 在素数（幂）模下的余数以及幂次 <span class="arithmatex">\(\nu_p(n!)\)</span> 的具体计算方法。</p>
 <p>这种分解在解决阶乘同时出现在所求表达式的分子和分母的问题时尤为有用，比如 <a href="../lucas/">计算某一模数下的二项式系数</a>。对于这类问题，分子和分母中 <span class="arithmatex">\(p\)</span> 的幂次可以直接相减，而与 <span class="arithmatex">\(p\)</span> 互素的部分 <span class="arithmatex">\((n!)_p\)</span> 则可以利用 <a href="../inverse/">乘法逆元</a> 计算。</p>
 <p>本文还介绍了与上述问题相关的 Wilson 定理及其推广、Legendre 公式和 Kummer 定理等内容。</p>
-<h2 id="wilson">Wilson 定理</h2>
+<h2 id="wilson-定理">Wilson 定理<a class="headerlink" href="#wilson-定理" title="Permanent link"></a></h2>
 <p>Wilson 定理给出了判断某个自然数是素数的一个充分必要条件。</p>
-<p>???+ note "Wilson 定理"
-    对于自然数 <span class="arithmatex">\(n&gt;1\)</span>，当且仅当 <span class="arithmatex">\(n\)</span> 是素数时，<span class="arithmatex">\((n-1)!\equiv -1\pmod n\)</span>。</p>
-<p>??? note "证明"
-    首先，证明对于素数 <span class="arithmatex">\(p\)</span> 有 <span class="arithmatex">\((p-1)!\equiv -1\pmod{p}\)</span>。对于这一点，可以利用 <a href="../congruence-equation/#推论-2">同余方程</a> 或 <a href="../primitive-root/">原根</a> 得到两种简洁的证明，此处略去不表。下面提供前置知识较少的一种证明方法：</p>
-<pre><code>当 $p=2$ 时，命题显然成立。下面设 $p\geq 3$，继而要证明 $\mathbf{Z}_p$ 中所有非零元素（即同余类）的积为 $\overline{-1}$。因为 $\mathbf{Z}_p$ 中所有非零元素 $\overline{a}$ 都有逆元 $\overline{a}^{-1}$，于是 $\mathbf{Z}_p$ 中彼此互逆的元素乘积为 $\overline{1}$。但是要注意 $\overline{a}$ 和 $\overline{a}^{-1}$ 可能相等：$\overline{a}=\overline{a}^{-1}$，当且仅当 $a^2\equiv 1\pmod p$，即
-
-$$
+<details class="note" open="open">
+<summary>Wilson 定理</summary>
+<p>对于自然数 <span class="arithmatex">\(n&gt;1\)</span>，当且仅当 <span class="arithmatex">\(n\)</span> 是素数时，<span class="arithmatex">\((n-1)!\equiv -1\pmod n\)</span>。</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>首先，证明对于素数 <span class="arithmatex">\(p\)</span> 有 <span class="arithmatex">\((p-1)!\equiv -1\pmod{p}\)</span>。对于这一点，可以利用 <a href="../congruence-equation/#推论-2">同余方程</a> 或 <a href="../primitive-root/">原根</a> 得到两种简洁的证明，此处略去不表。下面提供前置知识较少的一种证明方法：</p>
+<p>当 <span class="arithmatex">\(p=2\)</span> 时，命题显然成立。下面设 <span class="arithmatex">\(p\geq 3\)</span>，继而要证明 <span class="arithmatex">\(\mathbf{Z}_p\)</span> 中所有非零元素（即同余类）的积为 <span class="arithmatex">\(\overline{-1}\)</span>。因为 <span class="arithmatex">\(\mathbf{Z}_p\)</span> 中所有非零元素 <span class="arithmatex">\(\overline{a}\)</span> 都有逆元 <span class="arithmatex">\(\overline{a}^{-1}\)</span>，于是 <span class="arithmatex">\(\mathbf{Z}_p\)</span> 中彼此互逆的元素乘积为 <span class="arithmatex">\(\overline{1}\)</span>。但是要注意 <span class="arithmatex">\(\overline{a}\)</span> 和 <span class="arithmatex">\(\overline{a}^{-1}\)</span> 可能相等：<span class="arithmatex">\(\overline{a}=\overline{a}^{-1}\)</span>，当且仅当 <span class="arithmatex">\(a^2\equiv 1\pmod p\)</span>，即</p>
+<div class="arithmatex">\[
 0\equiv a^2-1\equiv (a+1)(a-1),\pmod p
-$$
-
-从而，$a\equiv 1\pmod p$ 或 $a\equiv -1\pmod p$。这说明 $\mathbf{Z}_p\setminus\{\overline{0},\overline{1},\overline{-1}\}$ 中所有元素的乘积为 $\overline{1}$，进而 $\mathbf{Z}_p$ 中所有非零元素的积为 $\overline{-1}$。
-
-反过来，对于合数 $n$ 的情形，要证明 $(n-1)!\not\equiv-1\pmod{n}$。利用反证法，不妨设 $(n-1)!\equiv -1\pmod{n}$，亦即存在整数 $k$ 使得 $(n-1)!=kn-1$ 成立。因为 $n$ 是合数，必然存在素数 $p&lt;n$ 使得 $n=pm$，所以 $(n-1)!=kpm-1\equiv -1\pmod{p}$。但是，乘积 $(n-1)!$ 中必然已经出现 $p$，故而一定有 $(n-1)!\equiv 0\pmod{p}$。这一矛盾就说明了 $(n-1)!\not\equiv-1\pmod{n}$。
-</code></pre>
+\]</div>
+<p>从而，<span class="arithmatex">\(a\equiv 1\pmod p\)</span> 或 <span class="arithmatex">\(a\equiv -1\pmod p\)</span>。这说明 <span class="arithmatex">\(\mathbf{Z}_p\setminus\{\overline{0},\overline{1},\overline{-1}\}\)</span> 中所有元素的乘积为 <span class="arithmatex">\(\overline{1}\)</span>，进而 <span class="arithmatex">\(\mathbf{Z}_p\)</span> 中所有非零元素的积为 <span class="arithmatex">\(\overline{-1}\)</span>。</p>
+<p>反过来，对于合数 <span class="arithmatex">\(n\)</span> 的情形，要证明 <span class="arithmatex">\((n-1)!\not\equiv-1\pmod{n}\)</span>。利用反证法，不妨设 <span class="arithmatex">\((n-1)!\equiv -1\pmod{n}\)</span>，亦即存在整数 <span class="arithmatex">\(k\)</span> 使得 <span class="arithmatex">\((n-1)!=kn-1\)</span> 成立。因为 <span class="arithmatex">\(n\)</span> 是合数，必然存在素数 <span class="arithmatex">\(p&lt;n\)</span> 使得 <span class="arithmatex">\(n=pm\)</span>，所以 <span class="arithmatex">\((n-1)!=kpm-1\equiv -1\pmod{p}\)</span>。但是，乘积 <span class="arithmatex">\((n-1)!\)</span> 中必然已经出现 <span class="arithmatex">\(p\)</span>，故而一定有 <span class="arithmatex">\((n-1)!\equiv 0\pmod{p}\)</span>。这一矛盾就说明了 <span class="arithmatex">\((n-1)!\not\equiv-1\pmod{n}\)</span>。</p>
+</details>
 <p>利用本文的记号，Wilson 定理可以写作 <span class="arithmatex">\((p!)_p\equiv -1\pmod{p}\)</span>。</p>
-<h3 id="_2">推广</h3>
+<h3 id="推广">推广<a class="headerlink" href="#推广" title="Permanent link"></a></h3>
 <p>Wilson 定理可以推广到一般模数的情形。</p>
-<p>???+ note "定理（Gauss）"
-    对于自然数 <span class="arithmatex">\(m&gt;1\)</span>，有</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>定理（Gauss）</summary>
+<p>对于自然数 <span class="arithmatex">\(m&gt;1\)</span>，有</p>
+<div class="arithmatex">\[
 \prod_{1\le k&lt;m,\ k\perp m} k \equiv \pm 1 \pmod{m}.
-$$
-
-而且，余数中的 $\pm 1$ 取值为 $-1$ 当且仅当模 $m$ 的 [原根存在](./primitive-root.md#原根存在定理)，即 $m=2,4,p^\alpha,2p^\alpha$ 时，其中 $p$ 是奇素数且 $\alpha$ 是正整数。
-</code></pre>
-<p>??? note "证明"
-    这个定理可以通过 <a href="../../algebra/ring-theory/#应用整数同余类的乘法群">模 <span class="arithmatex">\(n\)</span> 整数乘法群</a> 的结构简单地证明。此处给出思路相仿，但是较为初等的证明。</p>
-<pre><code>对于 $m=2$ 的情形，有 $1!=1\equiv -1\pmod{2}$。对于其他存在原根的情形，设原根为 $g$，则所有满足小于 $m$ 且与它互素的正整数 $k$ 都可以唯一地表示为 $g^i\bmod m$ 的形式，其中 $0\le i&lt;\varphi(m)$ 且 $\varphi(m)$ 是 [Euler 函数](./euler-totient.md)。直接验证可知，$\varphi(m)$ 一定是偶数。因为 $g^i$ 和 $g^{\varphi(m)-i}$ 互为乘法逆元，所以在乘积中将它们两两配对，就有
-
-$$
+\]</div>
+<p>而且，余数中的 <span class="arithmatex">\(\pm 1\)</span> 取值为 <span class="arithmatex">\(-1\)</span> 当且仅当模 <span class="arithmatex">\(m\)</span> 的 <a href="../primitive-root/#原根存在定理">原根存在</a>，即 <span class="arithmatex">\(m=2,4,p^\alpha,2p^\alpha\)</span> 时，其中 <span class="arithmatex">\(p\)</span> 是奇素数且 <span class="arithmatex">\(\alpha\)</span> 是正整数。</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>这个定理可以通过 <a href="../../algebra/ring-theory/#应用整数同余类的乘法群">模 <span class="arithmatex">\(n\)</span> 整数乘法群</a> 的结构简单地证明。此处给出思路相仿，但是较为初等的证明。</p>
+<p>对于 <span class="arithmatex">\(m=2\)</span> 的情形，有 <span class="arithmatex">\(1!=1\equiv -1\pmod{2}\)</span>。对于其他存在原根的情形，设原根为 <span class="arithmatex">\(g\)</span>，则所有满足小于 <span class="arithmatex">\(m\)</span> 且与它互素的正整数 <span class="arithmatex">\(k\)</span> 都可以唯一地表示为 <span class="arithmatex">\(g^i\bmod m\)</span> 的形式，其中 <span class="arithmatex">\(0\le i&lt;\varphi(m)\)</span> 且 <span class="arithmatex">\(\varphi(m)\)</span> 是 <a href="../euler-totient/">Euler 函数</a>。直接验证可知，<span class="arithmatex">\(\varphi(m)\)</span> 一定是偶数。因为 <span class="arithmatex">\(g^i\)</span> 和 <span class="arithmatex">\(g^{\varphi(m)-i}\)</span> 互为乘法逆元，所以在乘积中将它们两两配对，就有</p>
+<div class="arithmatex">\[
 \prod_{1\le k&lt;m,\ k\perp m} k \equiv \prod_{i=0}^{\varphi(m)-1}g^i = g^{\varphi(m)/2}\prod_{i=1}^{\varphi(m)/2-1}g^{i}g^{\varphi(m)-i} \equiv g^{\varphi(m)/2} \pmod{m}.
-$$
-
-因为 $g^{\varphi(m)/2}\bmod m$ 是唯一的不等于 $1\bmod{m}$ 且乘法逆元就是它自身的元素，所以它就等于 $-1\bmod{m}$。这就说明了此时的余数等于 $-1$。
-
-对于模 $m$ 的原根不存在的情形，要证明余数等于 $1$。为此，可以首先做质因数分解 $m=p_1^{e_1}p_2^{e_2}\cdots p_s^{e_s}$，然后应用 [中国剩余定理](./crt.md) 可知，只需要证明
-
-$$
+\]</div>
+<p>因为 <span class="arithmatex">\(g^{\varphi(m)/2}\bmod m\)</span> 是唯一的不等于 <span class="arithmatex">\(1\bmod{m}\)</span> 且乘法逆元就是它自身的元素，所以它就等于 <span class="arithmatex">\(-1\bmod{m}\)</span>。这就说明了此时的余数等于 <span class="arithmatex">\(-1\)</span>。</p>
+<p>对于模 <span class="arithmatex">\(m\)</span> 的原根不存在的情形，要证明余数等于 <span class="arithmatex">\(1\)</span>。为此，可以首先做质因数分解 <span class="arithmatex">\(m=p_1^{e_1}p_2^{e_2}\cdots p_s^{e_s}\)</span>，然后应用 <a href="../crt/">中国剩余定理</a> 可知，只需要证明</p>
+<div class="arithmatex">\[
 \prod_{1\le k&lt;m,\ k\perp m} k\equiv 1\pmod{p_j^{e_j}}
-$$
-
-对所有因子 $p_j^{e_j}$ 都成立。中国剩余定理说明，每一个可能的余数组合 $(r_1,r_2,\cdots,r_s)$，其中，$1\le r_j&lt;p_j^{e_j}$ 且 $p_j\perp r_j$，都唯一地对应着一个 $1\le k&lt;m$ 且 $k\perp m$ 使得 $k\equiv r_j\pmod{p_j^{e_j}}$ 成立。所以，对于某个余数 $r_j$，都恰好有 ${\varphi(m)}/{\varphi(p_j^{e_j})}$ 个 $k$ 使得 $k\equiv r_j\pmod{p_j^{e_j}}$ 成立。利用这一点，可以对乘积进行分组，就有
-
-$$
+\]</div>
+<p>对所有因子 <span class="arithmatex">\(p_j^{e_j}\)</span> 都成立。中国剩余定理说明，每一个可能的余数组合 <span class="arithmatex">\((r_1,r_2,\cdots,r_s)\)</span>，其中，<span class="arithmatex">\(1\le r_j&lt;p_j^{e_j}\)</span> 且 <span class="arithmatex">\(p_j\perp r_j\)</span>，都唯一地对应着一个 <span class="arithmatex">\(1\le k&lt;m\)</span> 且 <span class="arithmatex">\(k\perp m\)</span> 使得 <span class="arithmatex">\(k\equiv r_j\pmod{p_j^{e_j}}\)</span> 成立。所以，对于某个余数 <span class="arithmatex">\(r_j\)</span>，都恰好有 <span class="arithmatex">\({\varphi(m)}/{\varphi(p_j^{e_j})}\)</span> 个 <span class="arithmatex">\(k\)</span> 使得 <span class="arithmatex">\(k\equiv r_j\pmod{p_j^{e_j}}\)</span> 成立。利用这一点，可以对乘积进行分组，就有</p>
+<div class="arithmatex">\[
 \prod_{1\le k&lt;m,\ k\perp m} k\equiv\left(\prod_{1\le r_j&lt;p_j^{e_j},\ r_j\perp p_j} r_j\right)^{{\varphi(m)}/{\varphi(p_j^{e_j})}}\pmod{p_j^{e_j}}.
-$$
-
-此处的指数 ${\varphi(m)}/{\varphi(p_j^{e_j})}=\varphi(m/p_j^{e_j})$ 要成为奇数，必然要求 $m/p_j^{e_j}=1,2$，因为欧拉函数 $\varphi(n)$ 对于 $n\ge 3$ 都是偶数。如果 $p_j$ 是奇素数，因为模 $m$ 的原根不存在，必然有 $m/p_j^{e_j}\neq 1,2$；如果 $p_j^{e_j}=2,4$，因为模 $m$ 的原根不存在，必然有 $m/p_j^{e_j}$ 含有某个奇素因子，故而大于 $2$：这两种情形指数 ${\varphi(m)}/{\varphi(p_j^{e_j})}$ 都是偶数。而上式中括号里的项已经证明是模 $p_j^{e_j}$ 余 $-1$ 的，所以这个幂模 $p_j^{e_j}$ 的余数一定是 $1$。剩余的情形只有 $p_j=2$ 且 $e_j&gt;2$ 时，对于这个情形，可以直接证明 \`
-
-$$
+\]</div>
+<p>此处的指数 <span class="arithmatex">\({\varphi(m)}/{\varphi(p_j^{e_j})}=\varphi(m/p_j^{e_j})\)</span> 要成为奇数，必然要求 <span class="arithmatex">\(m/p_j^{e_j}=1,2\)</span>，因为欧拉函数 <span class="arithmatex">\(\varphi(n)\)</span> 对于 <span class="arithmatex">\(n\ge 3\)</span> 都是偶数。如果 <span class="arithmatex">\(p_j\)</span> 是奇素数，因为模 <span class="arithmatex">\(m\)</span> 的原根不存在，必然有 <span class="arithmatex">\(m/p_j^{e_j}\neq 1,2\)</span>；如果 <span class="arithmatex">\(p_j^{e_j}=2,4\)</span>，因为模 <span class="arithmatex">\(m\)</span> 的原根不存在，必然有 <span class="arithmatex">\(m/p_j^{e_j}\)</span> 含有某个奇素因子，故而大于 <span class="arithmatex">\(2\)</span>：这两种情形指数 <span class="arithmatex">\({\varphi(m)}/{\varphi(p_j^{e_j})}\)</span> 都是偶数。而上式中括号里的项已经证明是模 <span class="arithmatex">\(p_j^{e_j}\)</span> 余 <span class="arithmatex">\(-1\)</span> 的，所以这个幂模 <span class="arithmatex">\(p_j^{e_j}\)</span> 的余数一定是 <span class="arithmatex">\(1\)</span>。剩余的情形只有 <span class="arithmatex">\(p_j=2\)</span> 且 <span class="arithmatex">\(e_j&gt;2\)</span> 时，对于这个情形，可以直接证明 `</p>
+<div class="arithmatex">\[
 \prod_{1\le r_j&lt;2^{e_j},\ r_j\perp 2}r_j \equiv 1\pmod{2^{e_j}}.
-$$
-
-仿照前文的证明思路，可以将所有 $1\le r_j&lt;2^{e_j}$ 的奇数 $r_j$ 两两配对而消去，那些无法配对的必然是方程 $x^2\equiv 1\pmod{2^{e_j}}$ 的解。该方程意味着 $2^{e_j}\mid (x-1)(x+1)$。令 $x=2y+1$，就必然有 $2^{e_j-2}\mid y(y+1)$，而 $y$ 和 $y+1$ 必然一奇一偶，所以 $y=t2^{e_j-2}$ 或 $y=t2^{e_j-2}-1$。故而，有 $x=t2^{e_j-1}\pm 1$ 且 $t$ 是整数。模 $2^{e_j}$ 的余数中，只有 $\pm 1$ 和 $2^{e_j-1}\pm 1$ 四个。因此，有
-
-$$
+\]</div>
+<p>仿照前文的证明思路，可以将所有 <span class="arithmatex">\(1\le r_j&lt;2^{e_j}\)</span> 的奇数 <span class="arithmatex">\(r_j\)</span> 两两配对而消去，那些无法配对的必然是方程 <span class="arithmatex">\(x^2\equiv 1\pmod{2^{e_j}}\)</span> 的解。该方程意味着 <span class="arithmatex">\(2^{e_j}\mid (x-1)(x+1)\)</span>。令 <span class="arithmatex">\(x=2y+1\)</span>，就必然有 <span class="arithmatex">\(2^{e_j-2}\mid y(y+1)\)</span>，而 <span class="arithmatex">\(y\)</span> 和 <span class="arithmatex">\(y+1\)</span> 必然一奇一偶，所以 <span class="arithmatex">\(y=t2^{e_j-2}\)</span> 或 <span class="arithmatex">\(y=t2^{e_j-2}-1\)</span>。故而，有 <span class="arithmatex">\(x=t2^{e_j-1}\pm 1\)</span> 且 <span class="arithmatex">\(t\)</span> 是整数。模 <span class="arithmatex">\(2^{e_j}\)</span> 的余数中，只有 <span class="arithmatex">\(\pm 1\)</span> 和 <span class="arithmatex">\(2^{e_j-1}\pm 1\)</span> 四个。因此，有</p>
+<div class="arithmatex">\[
 \prod_{1\le r_j&lt;2^{e_j},\ r_j\perp 2}r_j \equiv (-1)(2^{e_j-1}-1)(2^{e_j-1}+1) \equiv 1\pmod{2^{e_j}}.
-$$
-
-这就完成了所有情形的证明。
-</code></pre>
+\]</div>
+<p>这就完成了所有情形的证明。</p>
+</details>
 <p>在计算中，尤为重要的是模数为素数幂的情形：</p>
-<p>???+ note "推论"
-    对于素数 <span class="arithmatex">\(p\)</span> 和正整数 <span class="arithmatex">\(\alpha\)</span>，有</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>推论</summary>
+<p>对于素数 <span class="arithmatex">\(p\)</span> 和正整数 <span class="arithmatex">\(\alpha\)</span>，有</p>
+<div class="arithmatex">\[
 \prod_{1\le k&lt;p^\alpha,\ k\perp p}k \equiv 
 \begin{cases}
 1, &amp; p=2\text{ and }\alpha\ge3,\\
 -1, &amp;\text{otherwise}
 \end{cases}
 \pmod{p^\alpha}.
-$$
-</code></pre>
+\]</div>
+</details>
 <p>注意，左侧并非 <span class="arithmatex">\((p^\alpha!)_p\)</span>，因为后者还需要统计 <span class="arithmatex">\(p\)</span> 的倍数的贡献。</p>
-<h2 id="_3">阶乘余数的计算</h2>
+<h2 id="阶乘余数的计算">阶乘余数的计算<a class="headerlink" href="#阶乘余数的计算" title="Permanent link"></a></h2>
 <p>本节讨论余数 <span class="arithmatex">\((n!)_p\bmod p^{\alpha}\)</span> 的计算。</p>
-<h3 id="_4">素数模的情形</h3>
+<h3 id="素数模的情形">素数模的情形<a class="headerlink" href="#素数模的情形" title="Permanent link"></a></h3>
 <p>算式 <span class="arithmatex">\((n!)_p\)</span> 有明显的递归结构。为注意到这一点，首先考察一个具体的例子：</p>
-<p>???+ example "例子"
-    要计算 <span class="arithmatex">\((32!)_5 \bmod{5}\)</span>，可以做如下递归计算：</p>
-<pre><code>$$
+<details class="example" open="open">
+<summary>例子</summary>
+<p>要计算 <span class="arithmatex">\((32!)_5 \bmod{5}\)</span>，可以做如下递归计算：</p>
+<div class="arithmatex">\[
 \begin{aligned}
 (32!)_5 &amp;= 1\times 2\times 3 \times 4\times \underbrace{1}_{5}\times 6 \times 7 \times 8\times 9 \times \underbrace{2}_{10} \\
 &amp;\quad\times 11 \times 12 \times 13 \times 14\times \underbrace{3}_{15}\times 16 \times 17\times 18\times 19\times \underbrace{4}_{20} \\
@@ -1350,93 +1342,83 @@ $$
 &amp;\quad\times 1 \times 2 \times 3 \times 4\times \underbrace{1}_{25}\times 1 \times 2\times 3\times 4\times \underbrace{1}_{30}\times 1\times 2\\
 &amp;= (1\times 2\times 3\times 4)^{6}\times(1\times 2)\times(\underbrace{1}_{5}\times \underbrace{2}_{10}\times \underbrace{3}_{15} \times \underbrace{4}_{20}\times \underbrace{1}_{25}\times \underbrace{1}_{30}) \pmod{5}
 \end{aligned}
-$$
-
-可以看出，利用模 $5$ 余数的周期性，可以将这一乘积划分为若干个长度为 $5$ 的块，每一块的唯一差异就是最后一个元素的余数。因为 $32$ 除以 $5$ 得到的商是 $6$ 且余数是 $2$，所以，该乘积可以划分为 $6$ 个完整的块和最后一段长度为 $2$ 的不完整的块。因此，可以将前 $6$ 个块除了最后一个元素之外的部分提取出来（这一部分恰好是 Wilson 定理能够解决的），再乘上最后一个不完整的块的乘积，最后乘上前 $6$ 个块的最后一个元素的连乘积。每个块的最后一个元素都是 $5$ 的倍数，去掉 $5$ 的幂次后，它们的连乘积恰好是 $(6!)_{5}\pmod{5}$。这就将原来的问题转化为了规模更小的问题。
-</code></pre>
+\]</div>
+<p>可以看出，利用模 <span class="arithmatex">\(5\)</span> 余数的周期性，可以将这一乘积划分为若干个长度为 <span class="arithmatex">\(5\)</span> 的块，每一块的唯一差异就是最后一个元素的余数。因为 <span class="arithmatex">\(32\)</span> 除以 <span class="arithmatex">\(5\)</span> 得到的商是 <span class="arithmatex">\(6\)</span> 且余数是 <span class="arithmatex">\(2\)</span>，所以，该乘积可以划分为 <span class="arithmatex">\(6\)</span> 个完整的块和最后一段长度为 <span class="arithmatex">\(2\)</span> 的不完整的块。因此，可以将前 <span class="arithmatex">\(6\)</span> 个块除了最后一个元素之外的部分提取出来（这一部分恰好是 Wilson 定理能够解决的），再乘上最后一个不完整的块的乘积，最后乘上前 <span class="arithmatex">\(6\)</span> 个块的最后一个元素的连乘积。每个块的最后一个元素都是 <span class="arithmatex">\(5\)</span> 的倍数，去掉 <span class="arithmatex">\(5\)</span> 的幂次后，它们的连乘积恰好是 <span class="arithmatex">\((6!)_{5}\pmod{5}\)</span>。这就将原来的问题转化为了规模更小的问题。</p>
+</details>
 <p>将该例子中的递归的结构一般化，就得到如下递推公式：</p>
-<p>???+ note "递推公式"
-    对于素数 <span class="arithmatex">\(p\)</span> 和正整数 <span class="arithmatex">\(n\)</span>，有</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>递推公式</summary>
+<p>对于素数 <span class="arithmatex">\(p\)</span> 和正整数 <span class="arithmatex">\(n\)</span>，有</p>
+<div class="arithmatex">\[
 (n!)_p \equiv (-1)^{\left\lfloor n/p\right\rfloor}\cdot (n\bmod p)!\cdot\left(\left\lfloor n/p\right\rfloor!\right)_p\pmod{p}.
-$$
-</code></pre>
-<p>??? note "证明"
-    记 <span class="arithmatex">\((n)_p\)</span> 为 <span class="arithmatex">\(n\)</span> 的素因数分解中去除所有 <span class="arithmatex">\(p\)</span> 的幂次的结果。于是，有</p>
-<pre><code>$$
+\]</div>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>记 <span class="arithmatex">\((n)_p\)</span> 为 <span class="arithmatex">\(n\)</span> 的素因数分解中去除所有 <span class="arithmatex">\(p\)</span> 的幂次的结果。于是，有</p>
+<div class="arithmatex">\[
 \begin{aligned}
 (n!)_p &amp;= \prod_{k=1}^n(k)_p = \left(\prod_{1\le k\le n,\ k\perp p}(k)_p\right)\left(\prod_{1\le k\le\lfloor n/p\rfloor}(pk)_p\right) \\
 &amp;= \left(\prod_{i=0}^{\lfloor n/p\rfloor-1}\prod_{j=1}^{p-1}(ip+j)\right)\left(\prod_{j=1}^{n\bmod p}(\lfloor n/k\rfloor k+j)\right)\left(\prod_{1\le k\le\lfloor n/p\rfloor}(k)_p\right) \\
 &amp;\equiv\left(\prod_{j=1}^{p-1}j\right)^{\lfloor n/p\rfloor}\left(\prod_{j=1}^{n\bmod p}j\right)(\lfloor n/p\rfloor!)_p \\
 &amp;\equiv (-1)^{\lfloor n/p\rfloor}\cdot(n\bmod p)!\cdot(\lfloor n/p\rfloor!)_p \pmod p.
 \end{aligned}
-$$
-
-这就完成了证明。下面对于该形式证明提供具体的解释。
-
-要计算 $(n!)_p\bmod p$ 的值。仿照上面的例子，有
-
-$$
+\]</div>
+<p>这就完成了证明。下面对于该形式证明提供具体的解释。</p>
+<p>要计算 <span class="arithmatex">\((n!)_p\bmod p\)</span> 的值。仿照上面的例子，有</p>
+<div class="arithmatex">\[
 \begin{aligned}
 (n!)_p &amp;= 1 \cdot 2 \cdot 3 \cdot \ldots \cdot (p-2) \cdot (p-1) \cdot \underbrace{1}_{p} \cdot (p+1) \cdot (p+2) \cdot \ldots \cdot (2p-1) \cdot \underbrace{2}_{2p} \\
 &amp;\quad \cdot (2p+1) \cdot \ldots \cdot (p^2-1) \cdot \underbrace{1}_{p^2} \cdot (p^2 +1) \cdot \ldots \cdot n \pmod{p} \\
 &amp;= 1 \cdot 2 \cdot 3 \cdot \ldots \cdot (p-2) \cdot (p-1) \cdot \underbrace{1}_{p} \cdot 1 \cdot 2 \cdot \ldots \cdot (p-1) \cdot \underbrace{2}_{2p} \cdot 1 \cdot 2 \\
 &amp;\quad \cdot \ldots \cdot (p-1) \cdot \underbrace{1}_{p^2} \cdot 1 \cdot 2 \cdot \ldots \cdot (n \bmod p) \pmod{p}.
 \end{aligned}
-$$
-
-可以清楚地看到，除了最后一个块外，阶乘被划分为几个长度相同的完整的块。
-
-$$
+\]</div>
+<p>可以清楚地看到，除了最后一个块外，阶乘被划分为几个长度相同的完整的块。</p>
+<div class="arithmatex">\[
 \begin{aligned}
 (n!)_p&amp;= \underbrace{1 \cdot 2 \cdot 3 \cdot \ldots \cdot (p-2) \cdot (p-1) \cdot 1}_{1\text{st}} \cdot \underbrace{1 \cdot 2 \cdot 3 \cdot \ldots \cdot (p-2) \cdot (p-1) \cdot 2}_{2\text{nd}} \cdot \ldots \\
 &amp;\quad \cdot \underbrace{1 \cdot 2 \cdot 3 \cdot \ldots \cdot (p-2) \cdot (p-1) \cdot 1}_{p\text{th}} \cdot \ldots \cdot \quad \underbrace{1 \cdot 2 \cdot \cdot \ldots \cdot (n \bmod p)}_{\text{tail}} \pmod{p}.
 \end{aligned}
-$$
-
-除了块的最后一个元素外，完整的块的主要部分 $(p-1)!\ \mathrm{mod}\ p$ 很容易计算，可以应用 Wilson 定理：
-
-$$
+\]</div>
+<p>除了块的最后一个元素外，完整的块的主要部分 <span class="arithmatex">\((p-1)!\ \mathrm{mod}\ p\)</span> 很容易计算，可以应用 Wilson 定理：</p>
+<div class="arithmatex">\[
 (p-1)!\equiv -1\pmod p.
-$$
-
-总共有 $\left\lfloor \dfrac{n}{p} \right\rfloor$ 个完整的块，因此需要将 $\left\lfloor \dfrac{n}{p} \right\rfloor$ 写到 $-1$ 的指数上。
-
-最后一个部分块的值就是 $(n\bmod p)!\bmod p$，可以单独计算。
-
-剩下的就是每个块的最后一个元素。如果隐藏已处理的元素，可以看到以下模式：
-
-$$
+\]</div>
+<p>总共有 <span class="arithmatex">\(\left\lfloor \dfrac{n}{p} \right\rfloor\)</span> 个完整的块，因此需要将 <span class="arithmatex">\(\left\lfloor \dfrac{n}{p} \right\rfloor\)</span> 写到 <span class="arithmatex">\(-1\)</span> 的指数上。</p>
+<p>最后一个部分块的值就是 <span class="arithmatex">\((n\bmod p)!\bmod p\)</span>，可以单独计算。</p>
+<p>剩下的就是每个块的最后一个元素。如果隐藏已处理的元素，可以看到以下模式：</p>
+<div class="arithmatex">\[
 (n!)_p = \underbrace{ \ldots \cdot 1 } \cdot \underbrace{ \ldots \cdot 2} \cdot \ldots \cdot \underbrace{ \ldots \cdot (p-1)} \cdot \underbrace{ \ldots \cdot 1 } \cdot \underbrace{ \ldots \cdot 1} \cdot \underbrace{ \ldots \cdot 2} \cdots
-$$
-
-这也是一个修正的阶乘，只是长度短得多。它是：
-
-$$
+\]</div>
+<p>这也是一个修正的阶乘，只是长度短得多。它是：</p>
+<div class="arithmatex">\[
 \left(\left\lfloor \frac{n}{p} \right\rfloor !\right)_p.
-$$
-
-将各部分乘起来，就得到上面的递推公式。
-</code></pre>
+\]</div>
+<p>将各部分乘起来，就得到上面的递推公式。</p>
+</details>
 <p>利用该递推式做计算，递归深度为 <span class="arithmatex">\(O(\log_p n)\)</span>。如果每次都重新计算中间那一项，那么每层计算的复杂度都是 <span class="arithmatex">\(O(p)\)</span> 的，总的时间复杂度是 <span class="arithmatex">\(O(p\log_p n)\)</span>；如果对所有 <span class="arithmatex">\(n=1,2,\cdots,p-1\)</span> 都预先处理了 <span class="arithmatex">\(n!\bmod p\)</span>，那么预处理的复杂度是 <span class="arithmatex">\(O(p)\)</span> 的，每层计算的复杂度都是 <span class="arithmatex">\(O(1)\)</span> 的，总的时间复杂度是 <span class="arithmatex">\(O(p+\log_p n)\)</span> 的。</p>
 <p>在实现时，因为是尾递归，可以用迭代实现。下面的实现对前 <span class="arithmatex">\(p-1\)</span> 个阶乘做了预计算，如果需要多次调用，可以将预计算放到函数外进行。</p>
-<p>??? example "参考实现"
-    <code>cpp
-    --8&lt;-- "docs/math/code/factorial/fact-mod-p.cpp:core"</code></p>
+<details class="example">
+<summary>参考实现</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/factorial/fact-mod-p.cpp:core&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p>如果空间有限，无法存储所有阶乘，也可以将函数调用中实际用到的阶乘 <span class="arithmatex">\(n!\bmod p\)</span> 中的 <span class="arithmatex">\(n\)</span> 都计算出来，然后对它们进行排序，从而可以在最后一次性计算出来这些阶乘的值，汇总到最终结果中，而避免存储所有阶乘的值。</p>
-<h3 id="_5">素数幂模的情形</h3>
+<h3 id="素数幂模的情形">素数幂模的情形<a class="headerlink" href="#素数幂模的情形" title="Permanent link"></a></h3>
 <p>对于素数幂模的情形，可以仿照素数模的情形解决，只需要将 Wilson 定理替换成它的推广形式。本节两个结论中的 <span class="arithmatex">\(\pm 1\)</span>，均特指这样的定义：当模数 <span class="arithmatex">\(p=2\)</span> 且 <span class="arithmatex">\(\alpha\ge 3\)</span> 时取 <span class="arithmatex">\(1\)</span>，其余情形取 <span class="arithmatex">\(-1\)</span>。</p>
-<p>???+ note "递推公式"
-    对于素数 <span class="arithmatex">\(p\)</span> 和正整数 <span class="arithmatex">\(\alpha,n\)</span>，有</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>递推公式</summary>
+<p>对于素数 <span class="arithmatex">\(p\)</span> 和正整数 <span class="arithmatex">\(\alpha,n\)</span>，有</p>
+<div class="arithmatex">\[
 (n!)_{p} \equiv (\pm 1)^{\lfloor n/p^\alpha\rfloor}\cdot\left(\prod_{1\le j\le (n\bmod p^\alpha),\ j\perp p}j\right)\cdot(\lfloor n/p\rfloor!)_p\pmod{p^\alpha}.
-$$
-
-其中，$\pm 1$ 的取值如同 [Wilson 定理的推广](#推广) 中规定的那样。
-</code></pre>
-<p>??? note "证明"
-    证明思路和素数模的情形完全一致。记 <span class="arithmatex">\((k)_p\)</span> 为去除 <span class="arithmatex">\(k\)</span> 的素因数分解中 <span class="arithmatex">\(p\)</span> 的全部幂次的结果，则</p>
-<pre><code>$$
+\]</div>
+<p>其中，<span class="arithmatex">\(\pm 1\)</span> 的取值如同 <a href="#推广">Wilson 定理的推广</a> 中规定的那样。</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>证明思路和素数模的情形完全一致。记 <span class="arithmatex">\((k)_p\)</span> 为去除 <span class="arithmatex">\(k\)</span> 的素因数分解中 <span class="arithmatex">\(p\)</span> 的全部幂次的结果，则</p>
+<div class="arithmatex">\[
 \begin{aligned}
 (n!)_p
 &amp;= \prod_{1\le k\le n}(k)_p = \left(\prod_{1\le k\le n,\ k\perp p}(k)_p\right)\left(\prod_{1\le k\le\lfloor n/p\rfloor}(pk)_p\right) \\
@@ -1444,17 +1426,18 @@ $$
 &amp;\equiv \left(\prod_{1\le j\le p^\alpha,\ j\perp p}j\right)^{\lfloor n/p^\alpha\rfloor}\cdot\left(\prod_{1\le j\le (n\bmod p^\alpha),\ j\perp p}j\right)\cdot(\lfloor n/p\rfloor!)_p\\
 &amp;\equiv (\pm 1)^{\lfloor n/p^\alpha\rfloor}\cdot\left(\prod_{1\le j\le (n\bmod p^\alpha),\ j\perp p}j\right)\cdot(\lfloor n/p\rfloor!)_p \pmod{p^\alpha}.
 \end{aligned}
-$$
-</code></pre>
+\]</div>
+</details>
 <p>与素数模的情形不同之处，除了 <span class="arithmatex">\(-1\)</span> 可能需要替换为 <span class="arithmatex">\(\pm 1\)</span> 之外，还需要注意预处理的数据的不同。对于素数幂模的情形，需要对所有不超过 <span class="arithmatex">\(p^\alpha\)</span> 的正整数 <span class="arithmatex">\(n\)</span> 预处理自 <span class="arithmatex">\(1\)</span> 至 <span class="arithmatex">\(n\)</span> 但并非 <span class="arithmatex">\(p\)</span> 的倍数的所有整数的乘积，即</p>
 <div class="arithmatex">\[
 \prod_{1\le k\le n,\ k\perp p} k\bmod{p^\alpha}.
 \]</div>
 <p>在素数模的情形，它退化为 <span class="arithmatex">\(n!\bmod p\)</span>，但是该表达式在一般的素数幂的情形不再适用。</p>
 <p>下面提供了在素数幂模的情形下计算阶乘余数的例子，以便理解上述方法：</p>
-<p>???+ example "例子"
-    要计算 <span class="arithmatex">\((32!)_3\bmod 9\)</span>，可以做如下递归计算：</p>
-<pre><code>$$
+<details class="example" open="open">
+<summary>例子</summary>
+<p>要计算 <span class="arithmatex">\((32!)_3\bmod 9\)</span>，可以做如下递归计算：</p>
+<div class="arithmatex">\[
 \begin{aligned}
 (32!)_3 
 &amp;= 1\times 2\times \underbrace{1}_{3} \times 4\times 5\times \underbrace{2}_{6}\times 7\times 8\times\underbrace{1}_{9}\\
@@ -1468,65 +1451,60 @@ $$
 &amp;=(1\times 2\times 4\times 5\times 7\times 8)^{3}\times (1\times 2\times 4\times 5)\\
 &amp;\quad\times\begin{pmatrix}\underbrace{1}_{3}\times\underbrace{2}_{6}\times\underbrace{1}_{9}\times\underbrace{4}_{12}\times\underbrace{5}_{15}\times\underbrace{2}_{18}\\\times\underbrace{7}_{21}\times\underbrace{8}_{24}\times\underbrace{1}_{27}\times\underbrace{1}_{30}\end{pmatrix}\pmod{9}.
 \end{aligned}
-$$
-
-将 $(32!)_3\bmod 9$ 的算式分解的结果同样可以分为三部分：
-
--   完整的块：由 $1\sim 9$ 之间所有不被 $3$ 整除的整数的乘积，共 $\lfloor 32/9\rfloor=3$ 块；
--   尾部不完整的块：所有不被 $3$ 整除的整数从 $1$ 一直乘到 $32\bmod 9$；
--   所有被 $3$ 整除的整数的乘积，对比倒数第二个等号的结果可知，这就是它的前 $\lfloor 32/3\rfloor=10$ 项，亦即 $(\lfloor 32/3\rfloor!)_3\bmod 9$。
-
-最后一个括号里的递归求解即可，这样就将原问题转化为了更小的问题。
-</code></pre>
+\]</div>
+<p>将 <span class="arithmatex">\((32!)_3\bmod 9\)</span> 的算式分解的结果同样可以分为三部分：</p>
+<ul>
+<li>完整的块：由 <span class="arithmatex">\(1\sim 9\)</span> 之间所有不被 <span class="arithmatex">\(3\)</span> 整除的整数的乘积，共 <span class="arithmatex">\(\lfloor 32/9\rfloor=3\)</span> 块；</li>
+<li>尾部不完整的块：所有不被 <span class="arithmatex">\(3\)</span> 整除的整数从 <span class="arithmatex">\(1\)</span> 一直乘到 <span class="arithmatex">\(32\bmod 9\)</span>；</li>
+<li>所有被 <span class="arithmatex">\(3\)</span> 整除的整数的乘积，对比倒数第二个等号的结果可知，这就是它的前 <span class="arithmatex">\(\lfloor 32/3\rfloor=10\)</span> 项，亦即 <span class="arithmatex">\((\lfloor 32/3\rfloor!)_3\bmod 9\)</span>。</li>
+</ul>
+<p>最后一个括号里的递归求解即可，这样就将原问题转化为了更小的问题。</p>
+</details>
 <p>由此，就可以得到如下递推结果：</p>
-<p>???+ note "递推结果"
-    对于素数 <span class="arithmatex">\(p\)</span> 和正整数 <span class="arithmatex">\(\alpha,n\)</span>，有</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>递推结果</summary>
+<p>对于素数 <span class="arithmatex">\(p\)</span> 和正整数 <span class="arithmatex">\(\alpha,n\)</span>，有</p>
+<div class="arithmatex">\[
 (n!)_p \equiv (\pm 1)^{\sum_{j\ge\alpha}\lfloor{n}/{p^j}\rfloor}\prod_{j\ge 0}F(\lfloor n/p^j\rfloor\bmod p^\alpha),
-$$
-
-其中，$F(m) = \prod_{1\le k\le m,\ k\perp p} k\bmod{p^\alpha}$ 且 $\pm 1$ 的取值与上文所述相同。
-</code></pre>
+\]</div>
+<p>其中，<span class="arithmatex">\(F(m) = \prod_{1\le k\le m,\ k\perp p} k\bmod{p^\alpha}\)</span> 且 <span class="arithmatex">\(\pm 1\)</span> 的取值与上文所述相同。</p>
+</details>
 <p>素数幂模的情形的实现和素数模的情形类似，只有一些细节上的区别。与上文类似，同样可以将预处理放到函数外进行。</p>
-<p>??? example "参考实现"
-    <code>cpp
-    --8&lt;-- "docs/math/code/factorial/fact-mod-pa.cpp:core"</code></p>
+<details class="example">
+<summary>参考实现</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/factorial/fact-mod-pa.cpp:core&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p>预处理的时间复杂度为 <span class="arithmatex">\(O(p^\alpha)\)</span>，单次询问的时间复杂度为 <span class="arithmatex">\(O(\log_p n)\)</span>。</p>
-<h2 id="_6">幂次的计算</h2>
+<h2 id="幂次的计算">幂次的计算<a class="headerlink" href="#幂次的计算" title="Permanent link"></a></h2>
 <p>本节讨论阶乘 <span class="arithmatex">\(n!\)</span> 中 <span class="arithmatex">\(p\)</span> 的幂次 <span class="arithmatex">\(\nu_p(n!)\)</span> 的计算，它可以用于计算二项式系数的余数。因为二项式系数中，分子和分母都会出现阶乘，而分子和分母中素数 <span class="arithmatex">\(p\)</span> 能否互相抵消，就成为了决定最后的余数的重要因素。</p>
-<h3 id="legendre">Legendre 公式</h3>
+<h3 id="legendre-公式">Legendre 公式<a class="headerlink" href="#legendre-公式" title="Permanent link"></a></h3>
 <p>阶乘 <span class="arithmatex">\(n!\)</span> 中素数 <span class="arithmatex">\(p\)</span> 的幂次可以通过 Legendre 公式计算，而且与 <span class="arithmatex">\(n\)</span> 在 <span class="arithmatex">\(p\)</span> 进制下的表示有关。</p>
-<p>???+ note "Legendre 公式"
-    对于正整数 <span class="arithmatex">\(n\)</span>，阶乘 <span class="arithmatex">\(n!\)</span> 中含有的素数 <span class="arithmatex">\(p\)</span> 的幂次 <span class="arithmatex">\(\nu_p(n!)\)</span> 为</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>Legendre 公式</summary>
+<p>对于正整数 <span class="arithmatex">\(n\)</span>，阶乘 <span class="arithmatex">\(n!\)</span> 中含有的素数 <span class="arithmatex">\(p\)</span> 的幂次 <span class="arithmatex">\(\nu_p(n!)\)</span> 为</p>
+<div class="arithmatex">\[
 \nu_p(n!) = \sum_{i=1}^{\infty} \left\lfloor \dfrac{n}{p^i} \right\rfloor = \dfrac{n-S_p(n)}{p-1},
-$$
-
-其中，$S_p(n)$ 为 $p$ 进制下 $n$ 的各个数位的和。特别地，阶乘中 $2$ 的幂次是 $\nu_2(n!)=n-S_2(n)$。
-</code></pre>
-<p>??? note "证明"
-    因为</p>
-<pre><code>$$
+\]</div>
+<p>其中，<span class="arithmatex">\(S_p(n)\)</span> 为 <span class="arithmatex">\(p\)</span> 进制下 <span class="arithmatex">\(n\)</span> 的各个数位的和。特别地，阶乘中 <span class="arithmatex">\(2\)</span> 的幂次是 <span class="arithmatex">\(\nu_2(n!)=n-S_2(n)\)</span>。</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>因为</p>
+<div class="arithmatex">\[
 n! = 1\times 2\times \cdots \times p\times \cdots \times 2p\times \cdots \times \lfloor n/p\rfloor p\times \cdots \times n.
-$$
-
-其中，$p$ 的倍数的乘积为 $p\times 2p\times \cdots \times \lfloor n/p\rfloor p=p^{\lfloor n/p\rfloor }\lfloor n/p\rfloor !$，而 $\lfloor n/p\rfloor !$ 可能继续出现 $p$ 的倍数。所以，对于幂次，有递推关系：
-
-$$
+\]</div>
+<p>其中，<span class="arithmatex">\(p\)</span> 的倍数的乘积为 <span class="arithmatex">\(p\times 2p\times \cdots \times \lfloor n/p\rfloor p=p^{\lfloor n/p\rfloor }\lfloor n/p\rfloor !\)</span>，而 <span class="arithmatex">\(\lfloor n/p\rfloor !\)</span> 可能继续出现 <span class="arithmatex">\(p\)</span> 的倍数。所以，对于幂次，有递推关系：</p>
+<div class="arithmatex">\[
 \nu_p(n!) = \lfloor n/p\rfloor + \nu_p(\lfloor n/p\rfloor!).
-$$
-
-将它展开就得到 Legendre 公式。
-
-要证明第二个等号，首先将 $n$ 展开为 $p$ 进制，这相当于将它写作如下和式：
-
-$$
+\]</div>
+<p>将它展开就得到 Legendre 公式。</p>
+<p>要证明第二个等号，首先将 <span class="arithmatex">\(n\)</span> 展开为 <span class="arithmatex">\(p\)</span> 进制，这相当于将它写作如下和式：</p>
+<div class="arithmatex">\[
 n = n_\ell p^{\ell} + \cdots + n_1 p + n_0 = \sum_{k=0}^\ell n_kp^k.
-$$
-
-因此，有
-
-$$
+\]</div>
+<p>因此，有</p>
+<div class="arithmatex">\[
 \begin{aligned}
 \nu_p(n!)
 &amp;= \sum_{i=1}^{\ell}\left\lfloor\dfrac{n}{p^i}\right\rfloor 
@@ -1536,86 +1514,81 @@ $$
 = \dfrac{\sum_{k=0}^\ell n_kp^k - \sum_{k=0}^\ell n_k}{p-1} 
 = \dfrac{n - S_p(n)}{p-1}.
 \end{aligned}
-$$
-</code></pre>
+\]</div>
+</details>
 <p>求阶乘中素数幂次的参考实现如下：</p>
-<p>??? example "参考实现"
-    <code>cpp
-    --8&lt;-- "docs/math/code/factorial/multiplicity.cpp:core"</code></p>
+<details class="example">
+<summary>参考实现</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/factorial/multiplicity.cpp:core&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
 <p>它的时间复杂度为 <span class="arithmatex">\(O(\log n)\)</span>。</p>
-<h3 id="kummer">Kummer 定理</h3>
+<h3 id="kummer-定理">Kummer 定理<a class="headerlink" href="#kummer-定理" title="Permanent link"></a></h3>
 <p>组合数对一个数取模的结果，往往构成分形结构，例如谢尔宾斯基三角形就可以通过组合数模 <span class="arithmatex">\(2\)</span> 得到。</p>
 <p>如果仔细分析，<span class="arithmatex">\(p\)</span> 是否整除组合数其实和上下标在 <span class="arithmatex">\(p\)</span> 进制下减法是否需要借位有关。这就有了 <strong>Kummer 定理</strong>。</p>
-<p>???+ note "Kummer 定理"
-    素数 <span class="arithmatex">\(p\)</span> 在组合数 <span class="arithmatex">\(\dbinom{m}{n}\)</span> 中的幂次，恰好是 <span class="arithmatex">\(p\)</span> 进制下 <span class="arithmatex">\(m\)</span> 减掉 <span class="arithmatex">\(n\)</span> 需要借位的次数，亦即</p>
-<pre><code>$$
+<details class="note" open="open">
+<summary>Kummer 定理</summary>
+<p>素数 <span class="arithmatex">\(p\)</span> 在组合数 <span class="arithmatex">\(\dbinom{m}{n}\)</span> 中的幂次，恰好是 <span class="arithmatex">\(p\)</span> 进制下 <span class="arithmatex">\(m\)</span> 减掉 <span class="arithmatex">\(n\)</span> 需要借位的次数，亦即</p>
+<div class="arithmatex">\[
 \nu_p\left(\dbinom{m}{n}\right)=\frac{S_p(n)+S_p(m-n)-S_p(m)}{p-1}.
-$$
-
-特别地，组合数中 $2$ 的幂次是 $\nu_2\left(\dbinom{m}{n}\right)=S_2(n)+S_2(m-n)-S_2(m)$.
-</code></pre>
-<p>??? note "证明"
-    首先证明下面的表达式。为此，利用 Legendre 公式，有</p>
-<pre><code>$$
+\]</div>
+<p>特别地，组合数中 <span class="arithmatex">\(2\)</span> 的幂次是 <span class="arithmatex">\(\nu_2\left(\dbinom{m}{n}\right)=S_2(n)+S_2(m-n)-S_2(m)\)</span>.</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>首先证明下面的表达式。为此，利用 Legendre 公式，有</p>
+<div class="arithmatex">\[
 \begin{aligned}
 \nu_p\left(\dbinom{m}{n}\right)
 &amp;=\nu_p(m!)-\nu_p(n!)-\nu_p((m-n)!)\\
 &amp;=\sum_{i=1}^\infty\left(\left\lfloor\dfrac{m}{p^i}\right\rfloor-\left\lfloor\dfrac{n}{p^i}\right\rfloor-\left\lfloor\dfrac{m-n}{p^i}\right\rfloor\right)\\
 &amp;=\frac{S_p(n)+S_p(m-n)-S_p(m)}{p-1}.
 \end{aligned}
-$$
-
-该表达式可以理解为 $p$ 进制下 $m$ 减掉 $n$ 需要借位的次数。因为如果在计算第 $i$ 位（最低位下标是 $1$）时存在不够减需要借位的情况，那么相减的结果中第 $i$ 位之前的数字 $\left\lfloor\dfrac{m-n}{p^i}\right\rfloor$，其实是 $m$ 中第 $i$ 位之前的数字 $\left\lfloor\dfrac{m}{p^i}\right\rfloor$，减去一（即借掉的一），再减去 $n$ 中第 $i$ 位之前的数字得到的差值 $\left\lfloor\dfrac{n}{p^i}\right\rfloor$，所以，差值
-
-$$
+\]</div>
+<p>该表达式可以理解为 <span class="arithmatex">\(p\)</span> 进制下 <span class="arithmatex">\(m\)</span> 减掉 <span class="arithmatex">\(n\)</span> 需要借位的次数。因为如果在计算第 <span class="arithmatex">\(i\)</span> 位（最低位下标是 <span class="arithmatex">\(1\)</span>）时存在不够减需要借位的情况，那么相减的结果中第 <span class="arithmatex">\(i\)</span> 位之前的数字 <span class="arithmatex">\(\left\lfloor\dfrac{m-n}{p^i}\right\rfloor\)</span>，其实是 <span class="arithmatex">\(m\)</span> 中第 <span class="arithmatex">\(i\)</span> 位之前的数字 <span class="arithmatex">\(\left\lfloor\dfrac{m}{p^i}\right\rfloor\)</span>，减去一（即借掉的一），再减去 <span class="arithmatex">\(n\)</span> 中第 <span class="arithmatex">\(i\)</span> 位之前的数字得到的差值 <span class="arithmatex">\(\left\lfloor\dfrac{n}{p^i}\right\rfloor\)</span>，所以，差值</p>
+<div class="arithmatex">\[
 \left\lfloor\dfrac{m}{p^i}\right\rfloor-\left\lfloor\dfrac{n}{p^i}\right\rfloor-\left\lfloor\dfrac{m-n}{p^i}\right\rfloor = 1
-$$
-
-当且仅当发生了一次借位；否则，该差值为 $0$。因此，上述表达式中的求和式就可以理解为借位发生的次数。这就得到了 Kummer 定理的文字表述。
-</code></pre>
-<h2 id="_7">例题</h2>
-<p>???+ example "例题 <a href="https://acm.hdu.edu.cn/showproblem.php?pid=2973">HDU 2973 - YAPTCHA</a>"
-    给定 <span class="arithmatex">\(n\)</span>, 计算</p>
-<pre><code>$$
+\]</div>
+<p>当且仅当发生了一次借位；否则，该差值为 <span class="arithmatex">\(0\)</span>。因此，上述表达式中的求和式就可以理解为借位发生的次数。这就得到了 Kummer 定理的文字表述。</p>
+</details>
+<h2 id="例题">例题<a class="headerlink" href="#例题" title="Permanent link"></a></h2>
+<details class="example" open="open">
+<summary>例题 <a href="https://acm.hdu.edu.cn/showproblem.php?pid=2973">HDU 2973 - YAPTCHA</a></summary>
+<p>给定 <span class="arithmatex">\(n\)</span>, 计算</p>
+<div class="arithmatex">\[
 \sum_{k=1}^n\left\lfloor\frac{(3k+6)!+1}{3k+7}-\left\lfloor\frac{(3k+6)!}{3k+7}\right\rfloor\right\rfloor
-$$
-</code></pre>
-<p>??? note "解题思路"
-    若 <span class="arithmatex">\(3k+7\)</span> 是质数，则</p>
-<pre><code>$$
+\]</div>
+</details>
+<details class="note">
+<summary>解题思路</summary>
+<p>若 <span class="arithmatex">\(3k+7\)</span> 是质数，则</p>
+<div class="arithmatex">\[
 (3k+6)!\equiv-1\pmod{3k+7}
-$$
-
-设 $(3k+6)!+1=k(3k+7)$
-
-则
-
-$$
+\]</div>
+<p>设 <span class="arithmatex">\((3k+6)!+1=k(3k+7)\)</span></p>
+<p>则</p>
+<div class="arithmatex">\[
 \left\lfloor\frac{(3k+6)!+1}{3k+7}-\left\lfloor\frac{(3k+6)!}{3k+7}\right\rfloor\right\rfloor=\left\lfloor k-\left\lfloor k-\frac{1}{3k+7}\right\rfloor\right\rfloor=1
-$$
-
-若 $3k+7$ 不是质数，则有 $(3k+7)\mid(3k+6)!$，即
-
-$$
+\]</div>
+<p>若 <span class="arithmatex">\(3k+7\)</span> 不是质数，则有 <span class="arithmatex">\((3k+7)\mid(3k+6)!\)</span>，即</p>
+<div class="arithmatex">\[
 (3k+6)!\equiv 0\pmod{3k+7}
-$$
-
-设 $(3k+6)!=k(3k+7)$，则
-
-$$
+\]</div>
+<p>设 <span class="arithmatex">\((3k+6)!=k(3k+7)\)</span>，则</p>
+<div class="arithmatex">\[
 \left\lfloor\frac{(3k+6)!+1}{3k+7}-\left\lfloor\frac{(3k+6)!}{3k+7}\right\rfloor\right\rfloor=\left\lfloor k+\frac{1}{3k+7}-k\right\rfloor=0
-$$
-
-因此
-
-$$
+\]</div>
+<p>因此</p>
+<div class="arithmatex">\[
 \sum_{k=1}^n\left\lfloor\frac{(3k+6)!+1}{3k+7}-\left\lfloor\frac{(3k+6)!}{3k+7}\right\rfloor\right\rfloor=\sum_{k=1}^n[3k+7\text{ is prime}]
-$$
-</code></pre>
-<p>??? example "参考代码"
-    <code>cpp
-    --8&lt;-- "docs/math/code/factorial/wilson_1.cpp"</code></p>
-<h2 id="_8">参考资料</h2>
+\]</div>
+</details>
+<details class="example">
+<summary>参考代码</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/factorial/wilson_1.cpp&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="参考资料">参考资料<a class="headerlink" href="#参考资料" title="Permanent link"></a></h2>
 <ul>
 <li>冯克勤。《初等数论及其应用》。</li>
 <li><a href="https://en.wikipedia.org/wiki/Wilson%27s_theorem">Wilson's theorem - Wikipedia</a></li>
@@ -1678,6 +1651,8 @@ $$
     
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

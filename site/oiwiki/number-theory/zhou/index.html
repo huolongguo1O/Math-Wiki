@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#前置知识" class="md-skip">
           Skip to content
         </a>
       
@@ -1092,7 +1092,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#前置知识" class="md-nav__link">
     <span class="md-ellipsis">
       
         前置知识
@@ -1103,7 +1103,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#定义" class="md-nav__link">
     <span class="md-ellipsis">
       
         定义
@@ -1114,7 +1114,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#约定" class="md-nav__link">
     <span class="md-ellipsis">
       
         约定
@@ -1125,7 +1125,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#要求" class="md-nav__link">
     <span class="md-ellipsis">
       
         要求
@@ -1136,7 +1136,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#思想" class="md-nav__link">
     <span class="md-ellipsis">
       
         思想
@@ -1147,7 +1147,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#过程" class="md-nav__link">
     <span class="md-ellipsis">
       
         过程
@@ -1181,7 +1181,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#求和" class="md-nav__link">
     <span class="md-ellipsis">
       
         求和
@@ -1197,7 +1197,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#参考" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考
@@ -1226,26 +1226,26 @@
 
   <h1>Zhou</h1>
 
-<h2 id="_1">前置知识</h2>
+<h2 id="前置知识">前置知识<a class="headerlink" href="#前置知识" title="Permanent link"></a></h2>
 <ul>
 <li><a href="../basic/#积性函数">积性函数</a></li>
 </ul>
-<h2 id="_2">定义</h2>
+<h2 id="定义">定义<a class="headerlink" href="#定义" title="Permanent link"></a></h2>
 <p>洲阁筛是一种能在亚线性时间复杂度内求出大多数积性函数前缀和的筛法。</p>
 <p>下面将以求解 <span class="arithmatex">\(\displaystyle\sum_{i=1}^nf(i)\)</span> 为例，具体阐述洲阁筛的原理。</p>
-<h2 id="_3">约定</h2>
+<h2 id="约定">约定<a class="headerlink" href="#约定" title="Permanent link"></a></h2>
 <ul>
 <li><span class="arithmatex">\(\mathbb P\)</span> 表示质数集，<span class="arithmatex">\(p_i\)</span> 表示第 <span class="arithmatex">\(i\)</span> 个质数。</li>
 <li><span class="arithmatex">\(m\)</span> 表示 <span class="arithmatex">\(\sqrt n\)</span> 内的质数个数。</li>
 </ul>
-<h2 id="_4">要求</h2>
+<h2 id="要求">要求<a class="headerlink" href="#要求" title="Permanent link"></a></h2>
 <p>当 <span class="arithmatex">\(p\in\mathbb P,c\in\mathbb N\)</span> 时，<span class="arithmatex">\(f(p^c)\)</span> 为一个关于 <span class="arithmatex">\(p\)</span> 的低阶多项式。</p>
-<h2 id="_5">思想</h2>
+<h2 id="思想">思想<a class="headerlink" href="#思想" title="Permanent link"></a></h2>
 <ul>
 <li>对于任意 <span class="arithmatex">\([1,n]\)</span> 内的整数，其至多只有一个 <span class="arithmatex">\(&gt;\sqrt n\)</span> 的质因子。</li>
 <li>利用 <span class="arithmatex">\(\left\lfloor\dfrac ni\right\rfloor(i\in[1,n]\cap\mathbb N)\)</span> 只有 <span class="arithmatex">\(\sqrt n\)</span> 级别个取值的性质来降低时间复杂度。</li>
 </ul>
-<h2 id="_6">过程</h2>
+<h2 id="过程">过程<a class="headerlink" href="#过程" title="Permanent link"></a></h2>
 <p>将 <span class="arithmatex">\([1,n]\)</span> 内的所有整数按是否有 <span class="arithmatex">\(&gt;\sqrt n\)</span> 的质因子分为两类：</p>
 <div class="arithmatex">\[
 \sum_{i=1}^nf(i)=\sum_{i=1}^n\left[\exists d\in(\sqrt n,n]\cap\mathbb P,d\mid i\right]f(i)+\sum_{i=1}^n\left[\forall d\in(\sqrt n,n]\cap\mathbb P,d\nmid i\right]f(i)
@@ -1255,7 +1255,7 @@
 \sum_{i=1}^nf(i)=\sum_{i=1}^{\sqrt n}f(i)\cdot\left(\sum_{d=\lfloor\sqrt n\rfloor+1}^{\lfloor\frac ni\rfloor}[d\in\mathbb P]f(d)\right)+\sum_{i=1}^n\left[\forall d\in(\sqrt n,n]\cap\mathbb P,d\nmid i\right]f(i)
 \]</div>
 <p>前后部分可以分别计算。</p>
-<h3 id="part-1">Part 1</h3>
+<h3 id="part-1">Part 1<a class="headerlink" href="#part-1" title="Permanent link"></a></h3>
 <blockquote>
 <p>计算 <span class="arithmatex">\(\displaystyle\sum_{i=1}^{\sqrt n}f(i)\cdot\left(\sum_{d=\lfloor\sqrt n\rfloor+1}^{\lfloor\frac ni\rfloor}[d\in\mathbb P]f(d)\right)\)</span>。</p>
 </blockquote>
@@ -1268,7 +1268,7 @@
 <p>代入递推式可得：当 <span class="arithmatex">\(p_t^2&gt;l\)</span> 时，<span class="arithmatex">\(g(t,l)=g(t-1,l)-f(p_t)\)</span>。</p>
 <p>所以一旦发现 <span class="arithmatex">\(p_t^2&gt;l\)</span> 就停止转移，记此时的 <span class="arithmatex">\(t\)</span> 为 <span class="arithmatex">\(t_l\)</span>，则 <span class="arithmatex">\(\forall t&gt;t_l,g(t,l)=g(t_l,l)-\sum_{i=t_l}^{t-1}f(p_i)\)</span>。</p>
 <p>预处理质数的 <span class="arithmatex">\(f\)</span> 值前缀和即可快速求出 <span class="arithmatex">\(g\)</span>，时间复杂度被优化至 <span class="arithmatex">\(O\left(\dfrac{n^{\frac34}}{\log n}\right)\)</span>。</p>
-<h3 id="part-2">Part 2</h3>
+<h3 id="part-2">Part 2<a class="headerlink" href="#part-2" title="Permanent link"></a></h3>
 <blockquote>
 <p>计算 <span class="arithmatex">\(\displaystyle\sum_{i=1}^n\left[\forall d\in(\sqrt n,n]\cap\mathbb P,d\nmid i\right]f(i)\)</span>。</p>
 </blockquote>
@@ -1280,9 +1280,9 @@
 <p>类似的，推出 <span class="arithmatex">\(\forall p_t^2&gt;l,h(t,l)=h(t+1,l)+f(p_t)\)</span>。</p>
 <p>所以一旦发现 <span class="arithmatex">\(p_t^2&gt;l\)</span> 就停止转移，记此时的 <span class="arithmatex">\(t\)</span> 为 <span class="arithmatex">\(t_l\)</span>，之后用到 <span class="arithmatex">\(h\)</span> 时，把此时的 <span class="arithmatex">\(h\)</span> 值加上 <span class="arithmatex">\(\displaystyle\sum_{i=p_{t_l}}^{\min(l,\sqrt n)}[i\in\mathbb P]f(i)\)</span> 即可。</p>
 <p>时间复杂度被优化至 <span class="arithmatex">\(O\left(\dfrac{n^{\frac34}}{\log n}\right)\)</span>。</p>
-<h3 id="_7">求和</h3>
+<h3 id="求和">求和<a class="headerlink" href="#求和" title="Permanent link"></a></h3>
 <p>算出了 Part 1 和 Part 2 的答案，将其相加即为 <span class="arithmatex">\(\displaystyle\sum_{i=1}^nf(i)\)</span>。</p>
-<h2 id="_8">参考</h2>
+<h2 id="参考">参考<a class="headerlink" href="#参考" title="Permanent link"></a></h2>
 <p><a href="https://blog.bill.moe/multiplicative-function-sieves-notes">积性函数线性筛/杜教筛/洲阁筛学习笔记 | Bill Yang's Blog</a></p>
 
 
@@ -1340,6 +1340,8 @@
     
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#描述" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#描述" class="md-nav__link">
     <span class="md-ellipsis">
       
         描述
@@ -1112,7 +1112,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#例题" class="md-nav__link">
     <span class="md-ellipsis">
       
         例题
@@ -1124,7 +1124,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#多项式求逆" class="md-nav__link">
     <span class="md-ellipsis">
       
         多项式求逆
@@ -1135,7 +1135,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#多项式开方" class="md-nav__link">
     <span class="md-ellipsis">
       
         多项式开方
@@ -1146,7 +1146,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#多项式指数函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         多项式指数函数
@@ -1162,7 +1162,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#手算演示" class="md-nav__link">
     <span class="md-ellipsis">
       
         手算演示
@@ -1174,7 +1174,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#复数多项式模多项式的平方根" class="md-nav__link">
     <span class="md-ellipsis">
       
         复数多项式模多项式的平方根
@@ -1185,7 +1185,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#整数模素数幂的平方根" class="md-nav__link">
     <span class="md-ellipsis">
       
         整数模素数幂的平方根
@@ -1201,7 +1201,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#代数证明" class="md-nav__link">
     <span class="md-ellipsis">
       
         代数证明
@@ -1213,7 +1213,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#有解的证明" class="md-nav__link">
     <span class="md-ellipsis">
       
         有解的证明
@@ -1224,7 +1224,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#得到全部解的证明" class="md-nav__link">
     <span class="md-ellipsis">
       
         得到全部解的证明
@@ -1258,7 +1258,7 @@
 
   <h1>Newton</h1>
 
-<h2 id="_1">描述</h2>
+<h2 id="描述">描述<a class="headerlink" href="#描述" title="Permanent link"></a></h2>
 <p>给定多项式 <span class="arithmatex">\(G\left(x, y\right)\)</span>，已知多项式 <span class="arithmatex">\(f\left(x\right)\)</span> 满足：</p>
 <div class="arithmatex">\[
 G\left(x, f\left(x\right)\right)\equiv 0\pmod{x^{n}}
@@ -1269,7 +1269,7 @@ G\left(x, f\left(x\right)\right)\equiv 0\pmod{x^{n}}
 <li><span class="arithmatex">\(\dfrac{\partial G}{\partial y}(0, f_1) \neq 0\)</span>。</li>
 </ul>
 <p>求出模 <span class="arithmatex">\(x^{n}\)</span> 意义下的 <span class="arithmatex">\(f\left(x\right)\)</span>。</p>
-<h2 id="newtons-method">Newton's Method</h2>
+<h2 id="newtons-method">Newton's Method<a class="headerlink" href="#newtons-method" title="Permanent link"></a></h2>
 <p>考虑倍增。</p>
 <p>首先当 <span class="arithmatex">\(n=1\)</span> 时，<span class="arithmatex">\(\left[x^{0}\right]G\left(x, f\left(x\right)\right)=0\)</span> 的解需要单独求出，假设中的 <span class="arithmatex">\(f_1\)</span> 即为一个解。</p>
 <p>假设现在已经得到了模 <span class="arithmatex">\(x^{\left\lceil\frac{n}{2}\right\rceil}\)</span> 意义下的解 <span class="arithmatex">\(f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)\)</span>，要求模 <span class="arithmatex">\(x^{n}\)</span> 意义下的解 <span class="arithmatex">\(f\left(x\right) = f_n\left(x\right)\)</span>。</p>
@@ -1295,8 +1295,8 @@ f_n\left(x\right)\equiv f_{\left\lceil\frac{n}{2}\right\rceil}\left(x\right)-\fr
 <div class="arithmatex">\[
 f_{2n}\left(x\right)\equiv f_n\left(x\right)-\frac{G\left(x, f_n\left(x\right)\right)}{\frac{\partial G}{\partial y}\left(x, f_n\left(x\right)\right)}\pmod{x^{2n}}
 \]</div>
-<h2 id="_2">例题</h2>
-<h3 id="_3"><a href="../elementary-func/#多项式求逆">多项式求逆</a></h3>
+<h2 id="例题">例题<a class="headerlink" href="#例题" title="Permanent link"></a></h2>
+<h3 id="多项式求逆"><a href="../elementary-func/#多项式求逆">多项式求逆</a><a class="headerlink" href="#多项式求逆" title="Permanent link"></a></h3>
 <p>设给定函数为 <span class="arithmatex">\(h\left(x\right)\)</span>，有：</p>
 <div class="arithmatex">\[
 G\left(x, y\right)=\frac{1}{y}-h\left(x\right)
@@ -1312,7 +1312,7 @@ G\left(x, y\right)=\frac{1}{y}-h\left(x\right)
 <div class="arithmatex">\[
 T\left(n\right)=T\left(\frac{n}{2}\right)+O\left(n\log{n}\right)=O\left(n\log{n}\right)
 \]</div>
-<h3 id="_4"><a href="../elementary-func/#多项式开方">多项式开方</a></h3>
+<h3 id="多项式开方"><a href="../elementary-func/#多项式开方">多项式开方</a><a class="headerlink" href="#多项式开方" title="Permanent link"></a></h3>
 <p>设给定函数为 <span class="arithmatex">\(h\left(x\right)\)</span>，有：</p>
 <div class="arithmatex">\[
 G\left(x, y\right)=y^{2}-h\left(x\right)\equiv 0
@@ -1328,7 +1328,7 @@ G\left(x, y\right)=y^{2}-h\left(x\right)\equiv 0
 <div class="arithmatex">\[
 T\left(n\right)=T\left(\frac{n}{2}\right)+O\left(n\log{n}\right)=O\left(n\log{n}\right)
 \]</div>
-<h3 id="_5"><a href="../elementary-func/#多项式对数函数--指数函数">多项式指数函数</a></h3>
+<h3 id="多项式指数函数"><a href="../elementary-func/#多项式对数函数--指数函数">多项式指数函数</a><a class="headerlink" href="#多项式指数函数" title="Permanent link"></a></h3>
 <p>设给定函数为 <span class="arithmatex">\(h\left(x\right)\)</span>，有：</p>
 <div class="arithmatex">\[
 G\left(x, y\right)=\ln{y}-h\left(x\right)
@@ -1344,9 +1344,9 @@ G\left(x, y\right)=\ln{y}-h\left(x\right)
 <div class="arithmatex">\[
 T\left(n\right)=T\left(\frac{n}{2}\right)+O\left(n\log{n}\right)=O\left(n\log{n}\right)
 \]</div>
-<h2 id="_6">手算演示</h2>
+<h2 id="手算演示">手算演示<a class="headerlink" href="#手算演示" title="Permanent link"></a></h2>
 <p>为了方便理解，这里举几个例子演示一下算法流程。</p>
-<h3 id="_7">复数多项式模多项式的平方根</h3>
+<h3 id="复数多项式模多项式的平方根">复数多项式模多项式的平方根<a class="headerlink" href="#复数多项式模多项式的平方根" title="Permanent link"></a></h3>
 <p>假设 <span class="arithmatex">\(h\)</span> 是一个不被 <span class="arithmatex">\(x\)</span> 整除（有常数项）的复数多项式，求它对模 <span class="arithmatex">\(x^n\)</span> 的平方根。</p>
 <p>我们有方程：</p>
 <div class="arithmatex">\[
@@ -1377,7 +1377,7 @@ f_{j+1}(x) \equiv f_j(x) - \frac{f_j^2(x)-h(x)}{2f_j(x)} \equiv \frac{f_j(x)^2 +
 <li><span class="arithmatex">\(f_0(x)=-1\)</span>,<span class="arithmatex">\(f_1(x)=\dfrac{(-1)^2+x+1}{2\times (-1)}\mod x^2 = -\dfrac{1}{2}x-1\)</span>,<span class="arithmatex">\(\ldots\)</span>（等于前一个取负）</li>
 </ul>
 <p>可以验证两个都是正确的模平方根多项式列。</p>
-<h3 id="_8">整数模素数幂的平方根</h3>
+<h3 id="整数模素数幂的平方根">整数模素数幂的平方根<a class="headerlink" href="#整数模素数幂的平方根" title="Permanent link"></a></h3>
 <p>牛顿迭代算法还可以迁移到整数模素数的幂的情况。
 假设 <span class="arithmatex">\(h\)</span> 是一个不被 3 整除的「方便的」整数。（「方便」指「必然有解」，具体条件后文再言）假设要算 <span class="arithmatex">\(h\)</span> 在模 <span class="arithmatex">\(3^n\)</span> 意义下的平方根 <span class="arithmatex">\(f\)</span>。有方程：</p>
 <div class="arithmatex">\[
@@ -1408,54 +1408,59 @@ f_{j+1} \equiv f_j - \frac{f_j^2-h}{2f_j} \equiv \frac{f_j^2 + h}{2f_j} \pmod{3^
 <li><span class="arithmatex">\(f_0=2\)</span>,<span class="arithmatex">\(f_1=\dfrac{2^2+46}{2\times 2}\mod 9 = 8\)</span>,<span class="arithmatex">\(f_2=\dfrac{8^2+46}{2\times 8}\mod 81 = 17\)</span>,<span class="arithmatex">\(f_3=\dfrac{17^2+46}{2\times 17}\mod 6561 = 5606\)</span>,<span class="arithmatex">\(\ldots\)</span>（等于前一个取负）</li>
 </ul>
 <p>可以验证一下两个都是正确的模平方根数列。</p>
-<h2 id="_9">代数证明</h2>
+<h2 id="代数证明">代数证明<a class="headerlink" href="#代数证明" title="Permanent link"></a></h2>
 <p>这一节对前文进行引申，用抽象代数的语言证明只要 <span class="arithmatex">\(f\)</span> 满足初始解条件，牛顿法对所有的 <span class="arithmatex">\(n\)</span> 都能给出解，并且可以得到全部的解。</p>
-<h3 id="_10">有解的证明</h3>
-<p>???+ note "引理 1"
-    设 <a href="../../algebra/ring-theory/#整环">整环</a>  <span class="arithmatex">\(R\)</span> 有多项式或 <a href="../../algebra/ring-theory/#形式幂级数环">形式幂级数</a>  <span class="arithmatex">\(f(X) = \sum_{i\geq 0}a_iX^i\)</span> 和 <span class="arithmatex">\(r,p\in R\)</span> 使得 <span class="arithmatex">\(f(r)\in Rp\)</span>（亦即 <span class="arithmatex">\(r\)</span> 是 <span class="arithmatex">\(f(X)\)</span> 在模 <span class="arithmatex">\(p\)</span> 意义下的根）且 <span class="arithmatex">\(f'(r)\in R\)</span> 在模 <span class="arithmatex">\(p\)</span> 意义下是可逆的。这里 <span class="arithmatex">\(f'(X) := \sum_{i\geq 0}(i+1)a_{i+1}X^i\)</span> 是 <span class="arithmatex">\(f(X)\)</span> 的 <strong>形式导数</strong>。那么 <span class="arithmatex">\(f\left(r-\dfrac{f(r)}{f'(r)}\right) \equiv 0\pmod {p^2}\)</span>。</p>
-<p>??? note "证明"
-    对所有 <span class="arithmatex">\(s\in R\)</span>，</p>
-<pre><code>$$
+<h3 id="有解的证明">有解的证明<a class="headerlink" href="#有解的证明" title="Permanent link"></a></h3>
+<details class="note" open="open">
+<summary>引理 1</summary>
+<p>设 <a href="../../algebra/ring-theory/#整环">整环</a>  <span class="arithmatex">\(R\)</span> 有多项式或 <a href="../../algebra/ring-theory/#形式幂级数环">形式幂级数</a>  <span class="arithmatex">\(f(X) = \sum_{i\geq 0}a_iX^i\)</span> 和 <span class="arithmatex">\(r,p\in R\)</span> 使得 <span class="arithmatex">\(f(r)\in Rp\)</span>（亦即 <span class="arithmatex">\(r\)</span> 是 <span class="arithmatex">\(f(X)\)</span> 在模 <span class="arithmatex">\(p\)</span> 意义下的根）且 <span class="arithmatex">\(f'(r)\in R\)</span> 在模 <span class="arithmatex">\(p\)</span> 意义下是可逆的。这里 <span class="arithmatex">\(f'(X) := \sum_{i\geq 0}(i+1)a_{i+1}X^i\)</span> 是 <span class="arithmatex">\(f(X)\)</span> 的 <strong>形式导数</strong>。那么 <span class="arithmatex">\(f\left(r-\dfrac{f(r)}{f'(r)}\right) \equiv 0\pmod {p^2}\)</span>。</p>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>对所有 <span class="arithmatex">\(s\in R\)</span>，</p>
+<div class="arithmatex">\[
 \begin{aligned}
 f(r+sp) &amp;= \sum_{i\geq 0}a_i(r+sp)^i \\
 &amp;= \sum_{i\geq 0}a_ir^i + sp\sum_{i\geq 1}ia_ir^{i-1} + s^2p^2\left(\ldots\right) \\
 &amp;= f(r) + spf'(r) + s^2p^2\left(\frac{f''(r)}{2!} + \cdots\right),
 \end{aligned}
-$$
-
-所以
-
-$$
+\]</div>
+<p>所以</p>
+<div class="arithmatex">\[
 f(r+sp) \in Rp^2 \iff f(r)+f'(r)sp \in Rp^2
-$$
-
-因为 $f(r)\in Rp$，且 $f'(r)$ 可逆，所以取 $sp = -\dfrac{f(r)}{f'(r)}$ 即可，这里 $\dfrac{1}{f'(r)}$ 是模 $p^2$ 意义下的逆元。因为 $f'(r)$ 在模 $p$ 意义下可逆，所以它在模 $p^2$ 意义下也必定存在逆元：设有 $a,b,c\in R$ 使 $af'(r) = bp+1$ 和 $f(r)=cp$，那么 $\left(a^2f'(r)-2\right)f'(r) = b^2p^2+1$，故可以取 $s=c(2-a^2f'(r))$。
-</code></pre>
+\]</div>
+<p>因为 <span class="arithmatex">\(f(r)\in Rp\)</span>，且 <span class="arithmatex">\(f'(r)\)</span> 可逆，所以取 <span class="arithmatex">\(sp = -\dfrac{f(r)}{f'(r)}\)</span> 即可，这里 <span class="arithmatex">\(\dfrac{1}{f'(r)}\)</span> 是模 <span class="arithmatex">\(p^2\)</span> 意义下的逆元。因为 <span class="arithmatex">\(f'(r)\)</span> 在模 <span class="arithmatex">\(p\)</span> 意义下可逆，所以它在模 <span class="arithmatex">\(p^2\)</span> 意义下也必定存在逆元：设有 <span class="arithmatex">\(a,b,c\in R\)</span> 使 <span class="arithmatex">\(af'(r) = bp+1\)</span> 和 <span class="arithmatex">\(f(r)=cp\)</span>，那么 <span class="arithmatex">\(\left(a^2f'(r)-2\right)f'(r) = b^2p^2+1\)</span>，故可以取 <span class="arithmatex">\(s=c(2-a^2f'(r))\)</span>。</p>
+</details>
 <p>对于域 <span class="arithmatex">\(k\)</span> 上的多项式环 <span class="arithmatex">\(k[X]\)</span>，设有 <span class="arithmatex">\(G(X, Y)\in k[X, Y]\)</span> 和 <span class="arithmatex">\(f_n\in k[X]\)</span> 使 <span class="arithmatex">\(G(X, f_n(X))\in k[X]X^n\)</span>，那么应用引理 1 就可得到</p>
 <div class="arithmatex">\[
 G\left(X, f_n(X) - \frac{G(X, f_n(X))}{\frac{\partial G}{\partial Y}(X, f_n(X))} \right)\equiv 0 \pmod {X^{2n}}
 \]</div>
 <p>而倍增的初始条件只要有 <span class="arithmatex">\(f_1\in k\)</span> 使得 <span class="arithmatex">\(G(X, f_1)\equiv 0\pmod X\)</span> 和 <span class="arithmatex">\(\dfrac{\partial G}{\partial Y}(X, f_1)\not\equiv 0\pmod X\)</span>。后一个条件保证了 <span class="arithmatex">\(\dfrac{\partial G}{\partial Y}\)</span> 有非零常数项，同时因为 <span class="arithmatex">\(X\left| \dfrac{G(X, f_n(X))}{\frac{\partial G}{\partial Y}(X, f_n(X))} \right.\)</span>，故而对所有的 <span class="arithmatex">\(n\)</span>，<span class="arithmatex">\(\dfrac{\partial G}{\partial Y}(X, f_n)\)</span> 总是模 <span class="arithmatex">\(X^n\)</span> 意义下可逆的，也就满足了下一次迭代的条件。</p>
-<h3 id="_11">得到全部解的证明</h3>
-<p>???+ note "引理 2"
-    若 <span class="arithmatex">\(R\)</span> 为 <a href="../../algebra/ring-theory/#唯一分解整环">UFD</a>，<span class="arithmatex">\(f,r,p\)</span> 定义同引理 1。则引理 1 给出的 <span class="arithmatex">\(r-\dfrac{f(r)}{f'(r)}\)</span> 是模 <span class="arithmatex">\(p^{2}\)</span> 意义下唯一满足以下两条件的 <span class="arithmatex">\(x\)</span> 的值：</p>
-<pre><code>-   $f(x)\in Rp^{2}$
--   $x-r\in Rp$
-
-亦即
-
-$$
+<h3 id="得到全部解的证明">得到全部解的证明<a class="headerlink" href="#得到全部解的证明" title="Permanent link"></a></h3>
+<details class="note" open="open">
+<summary>引理 2</summary>
+<p>若 <span class="arithmatex">\(R\)</span> 为 <a href="../../algebra/ring-theory/#唯一分解整环">UFD</a>，<span class="arithmatex">\(f,r,p\)</span> 定义同引理 1。则引理 1 给出的 <span class="arithmatex">\(r-\dfrac{f(r)}{f'(r)}\)</span> 是模 <span class="arithmatex">\(p^{2}\)</span> 意义下唯一满足以下两条件的 <span class="arithmatex">\(x\)</span> 的值：</p>
+<ul>
+<li><span class="arithmatex">\(f(x)\in Rp^{2}\)</span></li>
+<li><span class="arithmatex">\(x-r\in Rp\)</span></li>
+</ul>
+<p>亦即</p>
+<div class="arithmatex">\[
 \forall x\in R,\qquad p^2\mid f(x)\wedge p\mid (x-r) \implies x\equiv r-\dfrac{f(r)}{f'(r)} \pmod {p^2}
-$$
-</code></pre>
-<p>??? note "证明"
-    令 <span class="arithmatex">\(s = -\dfrac{f(r)}{f'(r)p}\)</span> 和 <span class="arithmatex">\(u = r+sp\)</span>，引理 1 保证 <span class="arithmatex">\(u\)</span> 满足两个条件，且 <span class="arithmatex">\(f(r) + f'(r)sp \in Rp^{2}\)</span>。
-    设 <span class="arithmatex">\(v\)</span> 是满足上述条件的值，则有 <span class="arithmatex">\(v = r+tp\)</span> 和 <span class="arithmatex">\(f(r) + f'(r)tp \in Rp^{2}\)</span>。
-    于是有 <span class="arithmatex">\(f'(r)(t-s)p\in Rp^{2}\)</span> 和 <span class="arithmatex">\(v-u\in Rp^{2}\)</span>。</p>
+\]</div>
+</details>
+<details class="note">
+<summary>证明</summary>
+<p>令 <span class="arithmatex">\(s = -\dfrac{f(r)}{f'(r)p}\)</span> 和 <span class="arithmatex">\(u = r+sp\)</span>，引理 1 保证 <span class="arithmatex">\(u\)</span> 满足两个条件，且 <span class="arithmatex">\(f(r) + f'(r)sp \in Rp^{2}\)</span>。
+设 <span class="arithmatex">\(v\)</span> 是满足上述条件的值，则有 <span class="arithmatex">\(v = r+tp\)</span> 和 <span class="arithmatex">\(f(r) + f'(r)tp \in Rp^{2}\)</span>。
+于是有 <span class="arithmatex">\(f'(r)(t-s)p\in Rp^{2}\)</span> 和 <span class="arithmatex">\(v-u\in Rp^{2}\)</span>。</p>
+</details>
 <p>牛顿法可以保证得到模 <span class="arithmatex">\(X^{2^n}\)</span> 的全部解。假设 <span class="arithmatex">\(G(X, h)\equiv 0\pmod {X^{2^n}}\)</span>，那么令 <span class="arithmatex">\(h_{2^i} := h\pmod {X^{2^i}}\)</span>，然后取 <span class="arithmatex">\(f_1 = h_1\)</span> 并用牛顿法，根据引理 2 可得 <span class="arithmatex">\(f_{2^i} \equiv h_{2^i}\pmod {X^{2^i}}\)</span>，所以一定有 <span class="arithmatex">\(f_{2^n} = h\)</span>。</p>
 <p>上面的论证也说明了，在 <span class="arithmatex">\(\dfrac{\partial G}{\partial y}(0, y)\)</span> 永远可逆时，<span class="arithmatex">\(G(X, f)\equiv 0\pmod {X^n}\)</span> 的解的个数等于 <span class="arithmatex">\(G(0, f)\equiv 0\pmod X\)</span> 的解的个数。这个结论并非平凡。请看下面的例子。</p>
-<p>??? example "牛顿法无效时解的个数随次数而变多的例子"
-    模 <span class="arithmatex">\(X\)</span> 意义下 <span class="arithmatex">\(X^2\)</span> 的平方根只有 <span class="arithmatex">\(0\)</span>，但是模 <span class="arithmatex">\(X^4\)</span> 意义下 <span class="arithmatex">\(X^2\)</span> 的平方根有 <span class="arithmatex">\(X, -X, X^3+X, \ldots\)</span>。</p>
+<details class="example">
+<summary>牛顿法无效时解的个数随次数而变多的例子</summary>
+<p>模 <span class="arithmatex">\(X\)</span> 意义下 <span class="arithmatex">\(X^2\)</span> 的平方根只有 <span class="arithmatex">\(0\)</span>，但是模 <span class="arithmatex">\(X^4\)</span> 意义下 <span class="arithmatex">\(X^2\)</span> 的平方根有 <span class="arithmatex">\(X, -X, X^3+X, \ldots\)</span>。</p>
+</details>
 
 
 
@@ -1509,6 +1514,8 @@ $$
     
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

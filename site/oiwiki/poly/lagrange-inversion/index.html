@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#laurent" class="md-skip">
+        <a href="#形式-laurent-级数" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#laurent" class="md-nav__link">
+  <a href="#形式-laurent-级数" class="md-nav__link">
     <span class="md-ellipsis">
       
         形式 Laurent 级数
@@ -1101,7 +1101,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#形式留数" class="md-nav__link">
     <span class="md-ellipsis">
       
         形式留数
@@ -1112,7 +1112,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#复合逆" class="md-nav__link">
     <span class="md-ellipsis">
       
         复合逆
@@ -1123,7 +1123,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#lagrange" class="md-nav__link">
+  <a href="#lagrange-反演公式" class="md-nav__link">
     <span class="md-ellipsis">
       
         Lagrange 反演公式
@@ -1134,7 +1134,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#参考文献" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考文献
@@ -1163,7 +1163,7 @@
 
   <h1>Lagrange inversion</h1>
 
-<h2 id="laurent">形式 Laurent 级数</h2>
+<h2 id="形式-laurent-级数">形式 Laurent 级数<a class="headerlink" href="#形式-laurent-级数" title="Permanent link"></a></h2>
 <p>我们已经知道形式幂级数环 <span class="arithmatex">\(\mathbb{C}\lbrack\lbrack x\rbrack\rbrack\)</span> 了，定义形式 Laurent 级数环：</p>
 <div class="arithmatex">\[
 \mathbb{C}\left(\left(x\right)\right):=\left\lbrace \sum_{k\geq N}a_kx^k : N\in\mathbb{Z},a_k\in \mathbb{C}\right\rbrace
@@ -1185,7 +1185,7 @@ f_N^{-1}, &amp;\text{ if }k=-N\text{,} \\
 <div class="arithmatex">\[
 \operatorname{ord} (fg)=\operatorname{ord}(f)+\operatorname{ord}(g)
 \]</div>
-<h2 id="_1">形式留数</h2>
+<h2 id="形式留数">形式留数<a class="headerlink" href="#形式留数" title="Permanent link"></a></h2>
 <p>形式留数是形式 Laurent 级数中 <span class="arithmatex">\(x^{-1}\)</span> 项的系数。记 <span class="arithmatex">\(\operatorname{res} f:=\lbrack x^{-1}\rbrack f\)</span>。</p>
 <p><strong>引理</strong>：对于任何形式 Laurent 级数 <span class="arithmatex">\(f\)</span> 有 <span class="arithmatex">\(\operatorname{res} f'=0\)</span>。</p>
 <p><strong>证明</strong>：考虑形式导数的定义 <span class="arithmatex">\(\left(x^k\right)'=kx^{k-1}\)</span>。</p>
@@ -1219,7 +1219,7 @@ f_N^{-1}, &amp;\text{ if }k=-N\text{,} \\
 &amp;=\operatorname{res}(f)\operatorname{ord}(g)
 \end{aligned}
 \]</div>
-<h2 id="_2">复合逆</h2>
+<h2 id="复合逆">复合逆<a class="headerlink" href="#复合逆" title="Permanent link"></a></h2>
 <p>记 <span class="arithmatex">\(A(x)\circ B(x):=A(B(x))\)</span>。</p>
 <p><strong>命题</strong>：<span class="arithmatex">\(f(x):=\sum_{k\geq 1}f_kx^k\)</span> 存在复合逆 <span class="arithmatex">\(f^{\langle -1\rangle}(x)\)</span> 当且仅当 <span class="arithmatex">\(f(0)=0\neq f'(0)\)</span>，此时 <span class="arithmatex">\(f^{\langle -1\rangle}(x)\)</span> 是唯一的。进一步说：若 <span class="arithmatex">\(g(x)=\sum_{k\geq 1}g_kx^k\)</span> 满足 <span class="arithmatex">\(f(g(x))=x\)</span> 或 <span class="arithmatex">\(g(f(x))=x\)</span> 那么 <span class="arithmatex">\(g(x)=f^{\langle -1\rangle}(x)\)</span>。</p>
 <p><strong>证明</strong>：考虑</p>
@@ -1243,7 +1243,7 @@ g_1f_3+2g_2f_1f_2+g_3f_1^3&amp;=0 \\
 \]</div>
 <p>我们只能在 <span class="arithmatex">\(f_1\neq 0\)</span> 时才能解出第一个等式，然后依次可以解出 <span class="arithmatex">\(g_2,\dots\)</span>。</p>
 <p>特别的，考虑 <span class="arithmatex">\(f(h(x))=x\)</span> 那么 <span class="arithmatex">\(g(f(h(x)))=g(x)\)</span>，进而 <span class="arithmatex">\(g(x)=g\circ f\circ h(x)=x\circ h(x)=h(x)\)</span>。</p>
-<h2 id="lagrange">Lagrange 反演公式</h2>
+<h2 id="lagrange-反演公式">Lagrange 反演公式<a class="headerlink" href="#lagrange-反演公式" title="Permanent link"></a></h2>
 <p>令 <span class="arithmatex">\(f(x),g(x)\in\mathbb{C}\lbrack\lbrack x\rbrack\rbrack\)</span> 满足 <span class="arithmatex">\(f(g(x))=g(f(x))=x\)</span>。取 <span class="arithmatex">\(\Phi(x)\in\mathbb{C}\lbrack\lbrack x\rbrack\rbrack\)</span>（或 <span class="arithmatex">\(\Phi(x)\in\mathbb{C}\left(\left(x\right)\right)\)</span>），那么</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1278,7 +1278,7 @@ g_1f_3+2g_2f_1f_2+g_3f_1^3&amp;=0 \\
 \end{aligned}
 \]</div>
 <p>可以通过我们已经证明的部分导出。</p>
-<h2 id="_3">参考文献</h2>
+<h2 id="参考文献">参考文献<a class="headerlink" href="#参考文献" title="Permanent link"></a></h2>
 <ol>
 <li>Richard P. Stanley and Sergey P. Fomin. Enumerative Combinatorics Volume 2 (Edition 1).</li>
 <li>Ira M. Gessel. Lagrange Inversion.</li>
@@ -1336,6 +1336,8 @@ g_1f_3+2g_2f_1f_2+g_3f_1^3&amp;=0 \\
     
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

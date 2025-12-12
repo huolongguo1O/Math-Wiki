@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#递推公式" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#递推公式" class="md-nav__link">
     <span class="md-ellipsis">
       
         递推公式
@@ -1101,7 +1101,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#贝尔三角形" class="md-nav__link">
     <span class="md-ellipsis">
       
         贝尔三角形
@@ -1112,7 +1112,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#指数生成函数" class="md-nav__link">
     <span class="md-ellipsis">
       
         指数生成函数
@@ -1123,7 +1123,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#参考文献" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考文献
@@ -1167,7 +1167,7 @@ B_0 = 1,B_1 = 1,B_2=2,B_3=5,B_4=15,B_5=52,B_6=203,\dots
 \end{aligned}
 \]</div>
 <p><span class="arithmatex">\(B_0\)</span> 是 1 因为空集正好有 1 种划分方法。</p>
-<h2 id="_1">递推公式</h2>
+<h2 id="递推公式">递推公式<a class="headerlink" href="#递推公式" title="Permanent link"></a></h2>
 <p>贝尔数适合递推公式：</p>
 <div class="arithmatex">\[
 B_{n+1}=\sum_{k=0}^n\binom{n}{k}B_{k}
@@ -1194,7 +1194,7 @@ B_{n+1}=\sum_{k=0}^n\binom{n}{k}B_{k}
 <div class="arithmatex">\[
 B_{n} = \sum_{k=0}^n{n\brace k}
 \]</div>
-<h2 id="_2">贝尔三角形</h2>
+<h2 id="贝尔三角形">贝尔三角形<a class="headerlink" href="#贝尔三角形" title="Permanent link"></a></h2>
 <p>用以下方法构造一个三角矩阵（形式类似杨辉三角形）：</p>
 <ul>
 <li><span class="arithmatex">\(a_{0,0} = 1\)</span>；</li>
@@ -1214,36 +1214,60 @@ B_{n} = \sum_{k=0}^n{n\brace k}
 \end{aligned}
 \]</div>
 <p>每行的首项是贝尔数。可以利用这个三角形来递推求出贝尔数。</p>
-<p>??? note "参考实现"
-    === "C++"
-        ```cpp
-        constexpr int MAXN = 2000 + 5;
-        int bell[MAXN][MAXN];</p>
-<pre><code>    void f(int n) {
-      bell[0][0] = 1;
-      for (int i = 1; i &lt;= n; i++) {
-        bell[i][0] = bell[i - 1][i - 1];
-        for (int j = 1; j &lt;= i; j++)
-          bell[i][j] = bell[i - 1][j - 1] + bell[i][j - 1];
-      }
-    }
-    ```
+<details class="note">
+<summary>参考实现</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">C++</label><label for="__tabbed_1_2">Python</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">constexpr</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAXN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2000</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">bell</span><span class="p">[</span><span class="n">MAXN</span><span class="p">][</span><span class="n">MAXN</span><span class="p">];</span>
 
-=== "Python"
-    ```python
-    MAXN = 2000 + 5
-    bell = [[0 for i in range(MAXN + 1)] for j in range(MAXN + 1)]
+<span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">bell</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">bell</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bell</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"> </span><span class="n">j</span><span class="o">++</span><span class="p">)</span>
+<span class="w">      </span><span class="n">bell</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bell</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">][</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">bell</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">];</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">MAXN</span> <span class="o">=</span> <span class="mi">2000</span> <span class="o">+</span> <span class="mi">5</span>
+<span class="n">bell</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">MAXN</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">MAXN</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span>
 
 
-    def f(n):
-        bell[0][0] = 1
-        for i in range(1, n + 1):
-            bell[i][0] = bell[i - 1][i - 1]
-            for j in range(1, i + 1):
-                bell[i][j] = bell[i - 1][j - 1] + bell[i][j - 1]
-    ```
-</code></pre>
-<h2 id="_3">指数生成函数</h2>
+<span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">bell</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">bell</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">bell</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">bell</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">bell</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">bell</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+</div>
+</div>
+</div>
+</details>
+<h2 id="指数生成函数">指数生成函数<a class="headerlink" href="#指数生成函数" title="Permanent link"></a></h2>
 <p>考虑贝尔数的指数生成函数及其导函数：</p>
 <div class="arithmatex">\[
 \begin{aligned}
@@ -1269,7 +1293,7 @@ B_{n} = \sum_{k=0}^n{n\brace k}
 \hat B(x) = \exp\left(\mathrm{e}^x - 1\right)
 \]</div>
 <p>预处理出 <span class="arithmatex">\(\mathrm{e}^x - 1\)</span> 的前 <span class="arithmatex">\(n\)</span> 项后做一次 <a href="../../poly/elementary-func/#多项式对数函数--指数函数">多项式 exp</a> 即可得出贝尔数前 <span class="arithmatex">\(n\)</span> 项，时间复杂度瓶颈在多项式 exp，可做到 <span class="arithmatex">\(O(n \log n)\)</span> 的时间复杂度。</p>
-<h2 id="_4">参考文献</h2>
+<h2 id="参考文献">参考文献<a class="headerlink" href="#参考文献" title="Permanent link"></a></h2>
 <p><a href="https://en.wikipedia.org/wiki/Bell_number">https://en.wikipedia.org/wiki/Bell_number</a></p>
 
 
@@ -1324,6 +1348,8 @@ B_{n} = \sum_{k=0}^n{n\brace k}
     
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       

@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chirp-z" class="md-skip">
+        <a href="#chirp-z-变换" class="md-skip">
           Skip to content
         </a>
       
@@ -1090,7 +1090,7 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#chirp-z" class="md-nav__link">
+  <a href="#chirp-z-变换" class="md-nav__link">
     <span class="md-ellipsis">
       
         Chirp Z 变换
@@ -1102,7 +1102,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bluestein" class="md-nav__link">
+  <a href="#bluestein-算法" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bluestein 算法
@@ -1118,7 +1118,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#chirp-z_1" class="md-nav__link">
+  <a href="#逆-chirp-z-变换" class="md-nav__link">
     <span class="md-ellipsis">
       
         逆 Chirp Z 变换
@@ -1130,7 +1130,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#bostanschost" class="md-nav__link">
+  <a href="#bostanschost-算法" class="md-nav__link">
     <span class="md-ellipsis">
       
         Bostan–Schost 算法
@@ -1146,7 +1146,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#参考文献" class="md-nav__link">
     <span class="md-ellipsis">
       
         参考文献
@@ -1176,7 +1176,7 @@
   <h1>Czt</h1>
 
 <p>与离散傅里叶变换类似，Chirp Z 变换是给出多项式 <span class="arithmatex">\(f(x) = \sum_{i = 0}^{m - 1} f_i x^i \in \mathbb{C}\lbrack x\rbrack\)</span> 和 <span class="arithmatex">\(q \in \mathbb{C} \setminus \{0\}\)</span> 求出 <span class="arithmatex">\(f(1), f(q), \dots, f(q^{n - 1})\)</span> 的一种算法，不要求 <span class="arithmatex">\(q\)</span> 为单位根。也可用于数论变换。后文将介绍 Chirp Z 变换与其逆变换。</p>
-<h2 id="chirp-z">Chirp Z 变换</h2>
+<h2 id="chirp-z-变换">Chirp Z 变换<a class="headerlink" href="#chirp-z-变换" title="Permanent link"></a></h2>
 <p>根据定义，Chirp Z 变换可以写作</p>
 <div class="arithmatex">\[
 \operatorname{\mathsf{CZT}}_n : \left(f(x), q\right) \mapsto
@@ -1185,7 +1185,7 @@ f(1) &amp; f(q) &amp; \cdots &amp; f\left(q^{n - 1}\right)
 \end{bmatrix}
 \]</div>
 <p>其中 <span class="arithmatex">\(f(x) := \sum_{i = 0}^{m - 1} f_i x^i \in \mathbb{C}\lbrack x\rbrack\)</span> 且 <span class="arithmatex">\(q \in \mathbb{C} \setminus \{0\}\)</span>。</p>
-<h3 id="bluestein">Bluestein 算法</h3>
+<h3 id="bluestein-算法">Bluestein 算法<a class="headerlink" href="#bluestein-算法" title="Permanent link"></a></h3>
 <p>考虑</p>
 <div class="arithmatex">\[
 ij = \binom{i}{2} + \binom{-j}{2} - \binom{i - j}{2}
@@ -1207,10 +1207,12 @@ F(x) &amp; := \sum_{i = 0}^{m - 1} f_i q^{\binom{-i}{2}}x^i.
 \end{aligned}
 \]</div>
 <p>且 <span class="arithmatex">\(q^{\binom{i + 1}{2}} = q^{\binom{i}{2}}\cdot q^i\)</span>，<span class="arithmatex">\(\binom{-i}{2} = \binom{i + 1}{2}\)</span>。可以由一次多项式乘法完成求算，该算法被称为 Bluestein 算法。</p>
-<p>??? note "模板（<a href="https://www.luogu.com.cn/problem/P6800">P6800【模板】Chirp Z-Transform</a>）"
-    <code>cpp
-    --8&lt;-- "docs/math/code/poly/czt/czt_1.cpp:core"</code></p>
-<h2 id="chirp-z_1">逆 Chirp Z 变换</h2>
+<details class="note">
+<summary>模板（<a href="https://www.luogu.com.cn/problem/P6800">P6800【模板】Chirp Z-Transform</a>）</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/poly/czt/czt_1.cpp:core&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="逆-chirp-z-变换">逆 Chirp Z 变换<a class="headerlink" href="#逆-chirp-z-变换" title="Permanent link"></a></h2>
 <p>逆 Chirp Z 变换可以写作</p>
 <div class="arithmatex">\[
 \operatorname{\mathsf{ICZT}}_n :
@@ -1221,7 +1223,7 @@ F(x) &amp; := \sum_{i = 0}^{m - 1} f_i q^{\binom{-i}{2}}x^i.
 \mapsto f(x)
 \]</div>
 <p>其中 <span class="arithmatex">\(f(x) \in \mathbb{C}\left\lbrack x\right\rbrack_{&lt; n}\)</span> 且 <span class="arithmatex">\(q \in \mathbb{C} \setminus \{0\}\)</span>，并且 <span class="arithmatex">\(q^i \neq q^j\)</span> 对于所有 <span class="arithmatex">\(i \neq j\)</span> 成立，这是多项式插值的条件。</p>
-<h3 id="bostanschost">Bostan–Schost 算法</h3>
+<h3 id="bostanschost-算法">Bostan–Schost 算法<a class="headerlink" href="#bostanschost-算法" title="Permanent link"></a></h3>
 <p>回顾 <a href="../../numerical/interp/#lagrange-插值法">Lagrange 插值公式</a> 为</p>
 <div class="arithmatex">\[
 f(x) = \sum_{i = 0}^{n - 1}\left(f\left(x_i\right)\prod_{0 \leq j &lt; n \atop j \neq i} \frac{x - x_j}{x_i - x_j}\right)
@@ -1263,10 +1265,12 @@ f(x) = M(x)\left(\sum_{i = 0}^{n - 1}\frac{c_i}{x - q^i}\right)
 <li>用一次多项式乘法计算 <span class="arithmatex">\(f(x)\)</span>。</li>
 </ol>
 <p>其中每一步的时间复杂度都等于两个次数小于等于 <span class="arithmatex">\(n\)</span> 的多项式相乘的时间复杂度。</p>
-<p>??? note "模板实现"
-    <code>cpp
-    --8&lt;-- "docs/math/code/poly/czt/inv_czt_1.cpp:core"</code></p>
-<h2 id="_1">参考文献</h2>
+<details class="note">
+<summary>模板实现</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="o">-</span><span class="mi">-8</span><span class="o">&lt;--</span><span class="w"> </span><span class="s">&quot;docs/math/code/poly/czt/inv_czt_1.cpp:core&quot;</span>
+</code></pre></div></td></tr></table></div>
+</details>
+<h2 id="参考文献">参考文献<a class="headerlink" href="#参考文献" title="Permanent link"></a></h2>
 <ol>
 <li><a href="https://specfun.inria.fr/bostan/publications/exposeJNCF.pdf">Bostan, A. (2010). Fast algorithms for polynomials and matrices. JNCF 2010. Algorithms Project, INRIA.</a></li>
 </ol>
@@ -1323,6 +1327,8 @@ f(x) = M(x)\left(\sum_{i = 0}^{n - 1}\frac{c_i}{x - q^i}\right)
     
     
       <script src="../../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+        <script src="../../../_static/js/math-csr.js?math-csr"></script>
       
         <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
