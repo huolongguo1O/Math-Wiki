@@ -34,7 +34,7 @@ $$
     3.  计算 $c_i=m_im_i^{-1}$（**不要对 $n_i$ 取模**）。
 3.  方程组在模 $n$ 意义下的唯一解为：$x=\sum_{i=1}^k a_ic_i \pmod n$。
 
-## 实现
+## 代码实现
 
 === "C++"
     ```cpp
@@ -151,31 +151,7 @@ $$
 x_k=(\dots((a_k-x_1)r_{1,k}-x_2)r_{2,k})-\dots)r_{k-1,k} \bmod p_k
 $$
 
-??? note "实现"
-    === "C++"
-        ```cpp
-        for (int i = 0; i < k; ++i) {
-          x[i] = a[i];
-          for (int j = 0; j < i; ++j) {
-            x[i] = r[j][i] * (x[i] - x[j]);
-            x[i] = x[i] % p[i];
-            if (x[i] < 0) x[i] += p[i];
-          }
-        }
-        ```
-    
-    === "Python"
-        ```python
-        for i in range(0, k):
-            x[i] = a[i]
-            for j in range(0, i):
-                x[i] = r[j][i] * (x[i] - x[j])
-                x[i] = x[i] % p[i]
-                if x[i] < 0:
-                    x[i] = x[i] + p[i]
-        ```
-
-该算法的时间复杂度为 $O(k^2)$。实际上 Garner 算法并不要求模数为质数，只要求模数两两互质，我们有如下伪代码：
+实际上 Garner 算法并不要求模数为质数，只要求模数两两互质，我们有如下伪代码：
 
 $$
 \begin{array}{ll}
@@ -195,53 +171,6 @@ $$
 
 可以发现在第六行中的计算过程对应上述混合基数的表示。
 
-## 应用
-
-某些计数问题或数论问题出于加长代码、增加难度、或者是一些其他原因，给出的模数：**不是质数**！
-
-但是对其质因数分解会发现它没有平方因子，也就是该模数是由一些不重复的质数相乘得到。
-
-那么我们可以分别对这些模数进行计算，最后用 CRT 合并答案。
-
-下面这道题就是一个不错的例子。
-
-???+ note "[洛谷 P2480 \[SDOI2010\] 古代猪文](https://www.luogu.com.cn/problem/P2480)"
-    给出 $G,n$（$1 \leq G,n \leq 10^9$），求：
-    
-    $$
-    G^{\sum_{k\mid n}\binom{n}{k}} \bmod 999~911~659
-    $$
-
-首先，当 $G=999~911~659$ 时，所求显然为 $0$。
-
-否则，根据 [欧拉定理](./fermat.md)，可知所求为：
-
-$$
-G^{\sum_{k\mid n}\binom{n}{k} \bmod 999~911~658} \bmod 999~911~659
-$$
-
-现在考虑如何计算：
-
-$$
-\sum_{k\mid n}\binom{n}{k} \bmod 999~911~658
-$$
-
-因为 $999~911~658$ 不是质数，无法保证 $\forall x \in [1,999~911~657]$，$x$ 都有逆元存在，上面这个式子我们无法直接计算。
-
-注意到 $999~911~658=2 \times 3 \times 4679 \times 35617$，其中每个质因子的最高次数均为一，我们可以考虑分别求出 $\sum_{k\mid n}\binom{n}{k}$ 在模 $2$，$3$，$4679$，$35617$ 这几个质数下的结果，最后用中国剩余定理来合并答案。
-
-也就是说，我们实际上要求下面一个线性方程组的解：
-
-$$
-\begin{cases}
-x \equiv a_1 \pmod 2\\
-x \equiv a_2 \pmod 3\\
-x \equiv a_3 \pmod {4679}\\
-x \equiv a_4 \pmod {35617}
-\end{cases}
-$$
-
-而计算一个组合数对较小的质数取模后的结果，可以利用 [卢卡斯定理](./lucas.md)。
 
 ## 扩展：模数不互质的情况
 
@@ -253,7 +182,7 @@ $$
 
 由 [裴蜀定理](./bezouts.md)，当 $a_2-a_1$ 不能被 $\gcd(m_1,m_2)$ 整除时，无解；
 
-其他情况下，可以通过 [扩展欧几里得算法](./gcd.md) 解出来一组可行解 $(p, q)$；
+其他情况下，可以通过 [扩展欧几里得算法](https://oi.wiki/math/number-theory/gcd/) 解出来一组可行解 $(p, q)$；
 
 则原来的两方程组成的模方程组的解为 $x\equiv b\pmod M$，其中 $b=m_1p+a_1$，$M=\text{lcm}(m_1, m_2)$。
 
@@ -261,11 +190,5 @@ $$
 
 用上面的方法两两合并即可。
 
-## 习题
-
--   [【模板】中国剩余定理（CRT）/曹冲养猪](https://www.luogu.com.cn/problem/P1495)
--   [【模板】扩展中国剩余定理](https://www.luogu.com.cn/problem/P4777)
--   [「NOI2018」屠龙勇士](https://uoj.ac/problem/396)
--   [「TJOI2009」猜数字](https://www.luogu.com.cn/problem/P3868)
 
     **本页面部分内容译自博文 [Китайская теорема об остатках](http://e-maxx.ru/algo/chinese_theorem) 与其英文翻译版 [Chinese Remainder Theorem](https://cp-algorithms.com/algebra/chinese-remainder-theorem.html)。其中俄文版版权协议为 Public Domain + Leave a Link；英文版版权协议为 CC-BY-SA 4.0。**

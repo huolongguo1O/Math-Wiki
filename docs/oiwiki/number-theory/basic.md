@@ -58,8 +58,6 @@ $0$ 是所有非 $0$ 整数的倍数。对于整数 $b\ne0$，$b$ 的约数只�
 
 关于公约数、公倍数、最大公约数与最小公倍数，四个名词的定义，见 [最大公约数](./gcd.md)。
 
-???+ warning "Warning"
-    一些作者认为 $0$ 和 $0$ 的最大公约数无定义，其余作者一般将其视为 $0$。C++ STL 的实现中采用后者，即认为 $0$ 和 $0$ 的最大公约数为 $0$[^gcdcpp]。
 
 最大公约数有如下性质：
 
@@ -532,4 +530,3 @@ $$
 
 [^ref1]: [Are all primes (past 2 and 3) of the forms 6n+1 and 6n-1?](https://primes.utm.edu/notes/faq/six.html)
 
-[^gcdcpp]: [std::gcd - cppreference.com](https://en.cppreference.com/w/cpp/numeric/gcd)

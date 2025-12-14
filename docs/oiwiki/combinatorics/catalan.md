@@ -250,31 +250,6 @@ Catalan 数的这些形式都可以高效计算：前两个形式将它转换为
     
     稍作整理，并结合 $C_0=1$，就得到 Catalan 数的表达式 $(4)$。
 
-## 例题
-
-???+ example "[洛谷 P1044 栈](https://www.luogu.com.cn/problem/P1044)"
-    入栈顺序为 $1,2,\ldots ,n$，求所有可能的出栈顺序的总数。
-
-??? note "参考代码"
-    === "C++"
-        ```cpp
-        --8<-- "docs/math/code/combinatorics/catalan/catalan_1.cpp"
-        ```
-    
-    === "Python"
-        ```python
-        --8<-- "docs/math/code/combinatorics/catalan/catalan_1.py"
-        ```
-
-## 习题
-
--   [Luogu P2532 \[AHOI2012\] 树屋阶梯](https://www.luogu.com.cn/problem/P2532)
--   [Luogu P1641 \[SCOI2010\] 生成字符串](https://www.luogu.com.cn/problem/P1641)
--   [Luogu P3200 \[HNOI2009\] 有趣的数列](https://www.luogu.com.cn/problem/P3200)
--   [AtCoder Beginner Contest 205 E - White and Black Balls](https://atcoder.jp/contests/abc205/tasks/abc205_e)
--   [AtCoder Regular Contest 145 C - Split and Maximize](https://www.luogu.com.cn/problem/AT_arc145_c)
--   [Luogu P5014 水の三角（修改版）](https://www.luogu.com.cn/problem/P5014)
--   [Luogu P3978 \[TJOI2015\] 概率论](https://www.luogu.com.cn/problem/P3978)
 
 ## 参考资料与注释
 

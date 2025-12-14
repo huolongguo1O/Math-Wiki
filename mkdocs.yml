@@ -57,24 +57,40 @@ nav:
     - 最最最基本的不等关系: ineq/index.md
     - 均值不等式: ineq/am-gm.md
     - 柯西不等式: ineq/cauchy.md
+    - 求导法: ineq/derivative.md
+    - 琴生不等式: ineq/jensen.md
+    - Karamata不等式: ineq/karamata.md
+    - 调整法: ineq/smoothing.md
+    - 排列不等式与切比雪夫不等式: ineq/rearrangement.md
+    - schur不等式: ineq/schur.md
+    - 闵可夫斯基不等式: ineq/minkowski.md
+    - 恒等变形:
+      - abel变换: ineq/abel.md
   - 数论:
     - 基础知识: oiwiki/number-theory/basic.md
-    - 模运算: oiwiki/number-theory/mod-arithmetic.md
-    - 质数: oiwiki/number-theory/prime.md
-    - 最大公约数: oiwiki/number-theory/gcd.md
     - Bezout定理: oiwiki/number-theory/bezouts.md
     - 逆元: oiwiki/number-theory/inverse.md
     - 中国剩余定理（CRT）: oiwiki/number-theory/crt.md
-    - 欧拉函数: oiwiki/number-theory/euler-function.md
+    - 欧拉函数: oiwiki/number-theory/euler-totient.md
     - 费马小定理与欧拉定理: oiwiki/number-theory/fermat.md
     - 阶与原根: oiwiki/number-theory/primitive-root.md
     - 同余方程: oiwiki/number-theory/congruence-equation.md
-    - 线性同余方程: oiwiki/number-theory/linear-congruence-equation.md
-    - 二次剩余: oiwiki/number-theory/quadratic-residue.md
+    - 有关素数的更深入的研究: oiwiki/number-theory/prime.md
+    - 二次剩余: oiwiki/number-theory/quad-residue.md
     - pell方程: oiwiki/number-theory/pell-equation.md
     - 莫比乌斯反演: oiwiki/number-theory/mobius.md
-    - LTE引理: oiwiki/number-theory/lifting-the-exponent.md
+    - LTE引理: oiwiki/number-theory/lift-the-exponent.md
     - 二次域: oiwiki/number-theory/quadratic.md
+  - 组合数学:
+    - 排列组合: oiwiki/combinatorics/combination.md
+    - 抽屉原理: oiwiki/combinatorics/drawer-principle.md
+    - 容斥原理: oiwiki/combinatorics/inclusion-exclusion-principle.md
+    - 斐波那契数列: oiwiki/combinatorics/fibonacci.md
+    - 卡特兰数: oiwiki/combinatorics/catalan.md
+    - 伯努利数: oiwiki/combinatorics/bernoulli.md
+    - Stirling数: oiwiki/combinatorics/stirling.md
+    - 普通生成函数: oiwiki/poly/ogf.md
+    - 指数生成函数: oiwiki/poly/egf.md
   - 杂项:
     - 复数: oiwiki/complex.md
   

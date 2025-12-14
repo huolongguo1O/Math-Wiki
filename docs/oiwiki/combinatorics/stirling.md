@@ -735,32 +735,7 @@ $F_n(x)=\prod\limits_{i=0}^{n-1}(x+i)=\dfrac{(x+n-1)!}{(x-1)!}$
 
 这其实是 $x$ 的 $n$ 次上升阶乘幂，记做 $x^{\overline n}$。这个东西自然是可以暴力分治乘 $O(n\log^2n)$ 求出的，但用上升幂相关做法可以 $O(n\log n)$ 求出，详情见 [多项式平移 | 连续点值平移](../poly/shift.md#同一行第一类无符号-stirling-数)。
 
-### 同一列第一类斯特林数的计算
 
-仿照第二类斯特林数的计算，我们可以用指数型生成函数解决该问题。注意，由于递推公式和行有关，我们不能利用递推公式计算同列的第一类斯特林数。
-
-显然，单个轮换的指数型生成函数为
-
-$F(x)=\sum\limits_{i=1}^n\dfrac{(i-1)!x^i}{i!}=\sum\limits_{i=1}^n\dfrac{x^i}{i}$
-
-它的 $k$ 次幂就是 $\begin{bmatrix}i\\k\end{bmatrix}$ 的指数型生成函数，$O(n\log n)$ 计算即可。
-
-???+ note "实现"
-    ```cpp
-    int main() {
-      scanf("%d%d", &n, &k);
-      fact[0] = 1;
-      for (int i = 1; i <= n; ++i) fact[i] = (ll)fact[i - 1] * i % mod;
-      ifact[n] = qpow(fact[n], mod - 2);
-      for (int i = n - 1; i >= 0; --i) ifact[i] = (ll)ifact[i + 1] * (i + 1) % mod;
-      poly f(n + 1);
-      for (int i = 1; i <= n; ++i) f[i] = (ll)fact[i - 1] * ifact[i] % mod;
-      f = exp(log(f >> 1) * k) << k, f.resize(n + 1);
-      for (int i = 0; i <= n; ++i)
-        printf("%lld ", (ll)f[i] * fact[i] % mod * ifact[k] % mod);
-      return 0;
-    }
-    ```
 
 ## 应用
 
@@ -827,12 +802,6 @@ a_k&=\sum\limits_{i=0}^{n}\dfrac{b_ik!}{(k-i)!}\\\dfrac{a_k}{k!}&=\sum\limits_{i
 $$
 
 这是一个卷积形式的式子，我们可以在 $O(n\log n)$ 的时间复杂度内完成点值和下降阶乘幂的互相转化。
-
-## 习题
-
--   [HDU3625 Examining the Rooms](https://acm.hdu.edu.cn/showproblem.php?pid=3625)
--   [UOJ540 联合省选 2020 组合数问题](https://uoj.ac/problem/540)
--   [UOJ269 清华集训 2016 如何优雅地求和](https://uoj.ac/problem/269)
 
 ## 参考资料与注释
 

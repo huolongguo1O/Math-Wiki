@@ -88,8 +88,7 @@ author: PeterlitsZo, Tiphereth-A
 
 ## 扩展欧拉定理
 
-扩展欧拉定理[^ex-euler]进一步将结论推广到了底数与指数不互素的情形。由此，它彻底解决了任意模数下任意底数的幂次计算问题，将它们转化为指数小于 $2\varphi(m)$ 的情形，从而可以通过 [快速幂](../binary-exponentiation.md) 在 $O(\log\varphi(m))$ 时间内计算。
-
+扩展欧拉定理[^ex-euler]进一步将结论推广到了底数与指数不互素的情形。
 ???+ note "扩展欧拉定理"
     对于任意正整数 $m$、整数 $a$ 和非负整数 $k$，有
     
@@ -101,7 +100,6 @@ author: PeterlitsZo, Tiphereth-A
     \end{cases} \pmod m
     $$
 
-第二种情形是在说，如果 $k < \varphi(m)$，那么，就无需继续降幂，直接应用快速幂即可；而第三种和第一种情形的最大区别是，通过取余降幂之后，是否需要加上一项 $\varphi(m)$。当然，将第一种情形合并进入第二、三种情形也是正确的。
 
 ### 直观理解
 
@@ -170,39 +168,6 @@ author: PeterlitsZo, Tiphereth-A
     
     这就完全证明了所述结论。
 
-## 例题
-
-本节通过一道例题展示扩展欧拉定理的一个经典应用——计算任意模数下的幂塔。**幂塔**（power tower）指形如 $A\uparrow(B\uparrow(C\uparrow(D\uparrow\cdots)))$ 的式子，其中，$\uparrow$ 是 Knuth 箭头记号，而 $A,B,C,D,\cdots$ 是一系列非负整数。
-
-???+ example "[Library Checker - Tetration Mod](https://judge.yosupo.jp/problem/tetration_mod)"
-    $T$ 组测试。每组测试中，给定 $A,B,M$，求 $(A\uparrow\uparrow B)\bmod M$。其中，$A\uparrow\uparrow B$ 表示由 $B$ 个 $A$ 组成的幂塔。或者，形式化地，定义
-    
-    $$
-    A \uparrow\uparrow B =
-    \begin{cases}
-    1 , & B = 0,\\
-    A\uparrow(A\uparrow\uparrow(B-1)), & B > 0.
-    \end{cases}
-    $$
-    
-    规定 $0^0=1$。
-
-??? note "解答"
-    利用 $A\uparrow\uparrow B$ 的定义，递归计算即可。要计算 $(A\uparrow\uparrow B)\bmod M$，只需要应用扩展欧拉定理，计算 $(A\uparrow\uparrow(B-1))\bmod\varphi(M)$。由于 $\varphi(\varphi(n)) \le n/2$ 对所有 $n\ge 2$ 都成立，所以，递归过程一定在 $O(\log M)$ 步内完成。由于需要应用扩展欧拉定理，所以需要区分当前的计算结果是否严格小于当前模数。为此，只需要在取余的时候多判断一步即可。另外，需要注意边界情况的处理。
-
-??? note "参考代码"
-    ```cpp
-    --8<-- "docs/math/code/fermat/tetration.cpp"
-    ```
-
-## 习题
-
--   [Luogu P5091【模板】扩展欧拉定理](https://www.luogu.com.cn/problem/P5091)
--   [Codeforces 906 D. Power Tower](https://codeforces.com/problemset/problem/906/D)
--   [Luogu P3747 \[六省联考 2017\] 相逢是问候](https://www.luogu.com.cn/problem/P3747)
--   [Luogu P4139 上帝与集合的正确用法](https://www.luogu.com.cn/problem/P4139)
--   [Luogu P3934 \[Ynoi Easy Round 2016\] 炸脖龙 I](https://www.luogu.com.cn/problem/P3934)
--   [Luogu P6736「Wdsr-2」白泽教育](https://www.luogu.com.cn/problem/P6736)
 
 ## 参考资料与注释
 

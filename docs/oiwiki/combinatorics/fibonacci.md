@@ -98,31 +98,6 @@ $$
 
 于是我们可以用矩阵乘法在 $\Theta(\log n)$ 的时间内计算斐波那契数列。此外，前一节讲述的公式也可通过矩阵对角化的技巧来得到。
 
-### 快速倍增法
-
-使用上面的方法我们可以得到以下等式：
-
-$$
-\begin{aligned}
-F_{2k} &= F_k (2 F_{k+1} - F_{k}) \\
-F_{2k+1} &= F_{k+1}^2 + F_{k}^2
-\end{aligned}
-$$
-
-于是可以通过这样的方法快速计算两个相邻的斐波那契数（常数比矩乘小）。代码如下，返回值是一个二元组 $(F_n,F_{n+1})$。
-
-```cpp
-pair<int, int> fib(int n) {
-  if (n == 0) return {0, 1};
-  auto p = fib(n >> 1);
-  int c = p.first * (2 * p.second - p.first);
-  int d = p.first * p.first + p.second * p.second;
-  if (n & 1)
-    return {d, c + d};
-  else
-    return {c, d};
-}
-```
 
 ## 性质
 
@@ -346,57 +321,6 @@ $$
 
 因为周期等价，所以最小正周期也等价。
 
-三个结论证完。据此可以写出代码：
 
-```cpp
-struct prime {
-  unsigned long long p;
-  int times;
-};
-
-struct prime pp[2048];
-int pptop;
-
-unsigned long long get_cycle_from_mod(
-    unsigned long long mod)  // 这里求解的只是周期，不一定是最小正周期
-{
-  pptop = 0;
-  srand(time(nullptr));
-  while (n != 1) {
-    __int128_t factor = (__int128_t)10000000000 * 10000000000;
-    min_factor(mod, &factor);  // 计算最小素因数
-    struct prime temp;
-    temp.p = factor;
-    for (temp.times = 0; mod % factor == 0; temp.times++) {
-      mod /= factor;
-    }
-    pp[pptop] = temp;
-    pptop++;
-  }
-  unsigned long long m = 1;
-  for (int i = 0; i < pptop; ++i) {
-    int g;
-    if (pp[i].p == 2) {
-      g = 3;
-    } else if (pp[i].p == 5) {
-      g = 20;
-    } else if (pp[i].p % 5 == 1 || pp[i].p % 5 == 4) {
-      g = pp[i].p - 1;
-    } else {
-      g = (pp[i].p + 1) << 1;
-    }
-    m = lcm(m, g * qpow(pp[i].p, pp[i].times - 1));
-  }
-  return m;
-}
-```
-
-## 习题
-
--   [SPOJ - Euclid Algorithm Revisited](http://www.spoj.com/problems/MAIN74/)
--   [SPOJ - Fibonacci Sum](http://www.spoj.com/problems/FIBOSUM/)
--   [HackerRank - Is Fibo](https://www.hackerrank.com/challenges/is-fibo/problem)
--   [Project Euler - Even Fibonacci numbers](https://www.hackerrank.com/contests/projecteuler/challenges/euler002/problem)
--   [洛谷 P4000 斐波那契数列](https://www.luogu.com.cn/problem/P4000)
 
     **本页面主要译自博文 [Числа Фибоначчи](http://e-maxx.ru/algo/fibonacci_numbers) 与其英文翻译版 [Fibonacci Numbers](https://cp-algorithms.com/algebra/fibonacci-numbers.html)。其中俄文版版权协议为 Public Domain + Leave a Link；英文版版权协议为 CC-BY-SA 4.0。**

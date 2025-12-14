@@ -422,10 +422,7 @@ Cipolla 算法用于求解同余方程 $y^2\equiv a\pmod p$，其中 $p$ 为奇�
     
     由于 $a$ 和 $a_1^{-2}$ 都是二次剩余，由 Legendre 符号的积性可知 $aa_1^{-2}$ 也是二次剩余，这与 $r^2-a$ 是二次非剩余矛盾。于是原式不存在一个解使得 $x$ 的系数非 $0$，我们求出的解的 $x$ 的系数也必定为 $0$。
 
-??? example "模板题 [洛谷 P5491【模板】二次剩余](https://www.luogu.com.cn/problem/P5491)"
-    ```cpp
-    --8<-- "docs/math/code/quad-residue/quad-residue_1.cpp"
-    ```
+
 
 ### Bostan–Mori 算法
 
@@ -525,10 +522,6 @@ $$
 
 其中，$g^e\equiv ab^2\pmod p$ 已知，而 $e\bmod 2^k$ 的取值可以由之前的数位 $e_0,e_1,\cdots,e_{k-1}$ 计算得到。当然，实现算法时，只需要直接维护乘积 $g^eg^{-(e\bmod 2^k)}\bmod p$ 即可。
 
-## 习题
-
--   [洛谷 P5491【模板】二次剩余](https://www.luogu.com.cn/problem/P5491)
--   [「Timus 1132」Square Root](https://acm.timus.ru/problem.aspx?space=1&num=1132)
 
 ## 参考资料与注释
 

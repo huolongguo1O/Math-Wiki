@@ -726,14 +726,6 @@ $$
     
         循环节长度 $\ell=6$ 为偶数。直到一个循环节结束，都不存在 $Q_k=\pm 1$，因而，该情形无解。相应地，对于 $(P_0,Q_0,D)=(-33,101,79)$ 运行 PQa 算法也可以观察到类似的情况。因此，该方程无解。
 
-## 习题
-
--   [LOJ 6687.「Project Euler 66」解方程](https://loj.ac/p/6687)
--   [SPOJ EQU2 - Yet Another Equation](https://www.spoj.com/problems/EQU2/)
--   [SPOJ PELL2 - Pell (Mid pelling)](https://www.spoj.com/problems/PELL2/)
--   [UVa 12909. Numeric Center](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=862&page=show_problem&problem=4774)
--   [UVa 10241. Semi-triangular and also Square](https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=14&page=show_problem&problem=1182)
-
 ## 参考文献与注释
 
 -   [Pell's equation - Wikipedia](https://en.wikipedia.org/wiki/Pell%27s_equation)
