@@ -1,0 +1,1 @@
+# Zsigmondy定理

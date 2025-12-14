@@ -75,6 +75,7 @@ nav:
     - 费马小定理与欧拉定理: oiwiki/number-theory/fermat.md
     - 阶与原根: oiwiki/number-theory/primitive-root.md
     - 同余方程: oiwiki/number-theory/congruence-equation.md
+    - 阶乘: oiwiki/number-theory/factorial.md
     - 有关素数的更深入的研究: oiwiki/number-theory/prime.md
     - 二次剩余: oiwiki/number-theory/quad-residue.md
     - pell方程: oiwiki/number-theory/pell-equation.md

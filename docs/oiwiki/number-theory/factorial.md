@@ -200,10 +200,7 @@ Wilson 定理可以推广到一般模数的情形。
 
 在实现时，因为是尾递归，可以用迭代实现。下面的实现对前 $p-1$ 个阶乘做了预计算，如果需要多次调用，可以将预计算放到函数外进行。
 
-??? example "参考实现"
-    ```cpp
-    --8<-- "docs/math/code/factorial/fact-mod-p.cpp:core"
-    ```
+
 
 如果空间有限，无法存储所有阶乘，也可以将函数调用中实际用到的阶乘 $n!\bmod p$ 中的 $n$ 都计算出来，然后对它们进行排序，从而可以在最后一次性计算出来这些阶乘的值，汇总到最终结果中，而避免存储所有阶乘的值。
 
@@ -283,10 +280,7 @@ $$
 
 素数幂模的情形的实现和素数模的情形类似，只有一些细节上的区别。与上文类似，同样可以将预处理放到函数外进行。
 
-??? example "参考实现"
-    ```cpp
-    --8<-- "docs/math/code/factorial/fact-mod-pa.cpp:core"
-    ```
+
 
 预处理的时间复杂度为 $O(p^\alpha)$，单次询问的时间复杂度为 $O(\log_p n)$。
 
@@ -344,10 +338,7 @@ $$
 
 求阶乘中素数幂次的参考实现如下：
 
-??? example "参考实现"
-    ```cpp
-    --8<-- "docs/math/code/factorial/multiplicity.cpp:core"
-    ```
+
 
 它的时间复杂度为 $O(\log n)$。
 
@@ -386,52 +377,7 @@ $$
     
     当且仅当发生了一次借位；否则，该差值为 $0$。因此，上述表达式中的求和式就可以理解为借位发生的次数。这就得到了 Kummer 定理的文字表述。
 
-## 例题
 
-???+ example "例题 [HDU 2973 - YAPTCHA](https://acm.hdu.edu.cn/showproblem.php?pid=2973)"
-    给定 $n$, 计算
-    
-    $$
-    \sum_{k=1}^n\left\lfloor\frac{(3k+6)!+1}{3k+7}-\left\lfloor\frac{(3k+6)!}{3k+7}\right\rfloor\right\rfloor
-    $$
-
-??? note "解题思路"
-    若 $3k+7$ 是质数，则
-    
-    $$
-    (3k+6)!\equiv-1\pmod{3k+7}
-    $$
-    
-    设 $(3k+6)!+1=k(3k+7)$
-    
-    则
-    
-    $$
-    \left\lfloor\frac{(3k+6)!+1}{3k+7}-\left\lfloor\frac{(3k+6)!}{3k+7}\right\rfloor\right\rfloor=\left\lfloor k-\left\lfloor k-\frac{1}{3k+7}\right\rfloor\right\rfloor=1
-    $$
-    
-    若 $3k+7$ 不是质数，则有 $(3k+7)\mid(3k+6)!$，即
-    
-    $$
-    (3k+6)!\equiv 0\pmod{3k+7}
-    $$
-    
-    设 $(3k+6)!=k(3k+7)$，则
-    
-    $$
-    \left\lfloor\frac{(3k+6)!+1}{3k+7}-\left\lfloor\frac{(3k+6)!}{3k+7}\right\rfloor\right\rfloor=\left\lfloor k+\frac{1}{3k+7}-k\right\rfloor=0
-    $$
-    
-    因此
-    
-    $$
-    \sum_{k=1}^n\left\lfloor\frac{(3k+6)!+1}{3k+7}-\left\lfloor\frac{(3k+6)!}{3k+7}\right\rfloor\right\rfloor=\sum_{k=1}^n[3k+7\text{ is prime}]
-    $$
-
-??? example "参考代码"
-    ```cpp
-    --8<-- "docs/math/code/factorial/wilson_1.cpp"
-    ```
 
 ## 参考资料
 

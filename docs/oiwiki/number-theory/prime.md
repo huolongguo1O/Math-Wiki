@@ -4,6 +4,19 @@ author: Ir1d, Tiphereth-A, c-forrest, Xeonacid, Enter-tainer, StudyingFather, ia
 
 素数计数函数：小于或等于 $x$ 的素数的个数，用 $\pi(x)$ 表示。随着 $x$ 的增大，有这样的近似结果：$\pi(x) \sim \dfrac{x}{\ln(x)}$。
 
+## 素数密度
+
+???+ note "素数定理"
+    $$\pi(x) \sim \dfrac{x}{\ln(x)}$$
+该定理的证明过于复杂，不在本文的讨论范围内。但我们可以通过估计中心组合数来证明$\pi(x) O(\dfrac{x}{\ln(x)})$
+
+### 切比雪夫不等式
+???+ note "引理"
+    $$\frac{4^n}{n+1} \le \dbinom{n}{2n} \le \frac{4^n}$$
+
+???+ note "证明"
+    注意到$$\displaystyle \sum_{i=0}{2n} \dbinom{i}{2n} = 2^{2n} = 4^n$$
+    结合平均值原理即证。
 ## 素性测试
 
 **素性测试**（Primality test）可以用于判定所给自然数是否为素数。
