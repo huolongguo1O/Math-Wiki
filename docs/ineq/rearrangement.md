@@ -64,6 +64,7 @@ $$
 1. 设 $a, b, c > 0$，证明：$\frac{a}{b+c} + \frac{b}{c+a} + \frac{c}{a+b} \ge \frac{3}{2}$。
 2. 设 $x_1 \le x_2 \le \dots \le x_n$，$y_1 \le y_2 \le \dots \le y_n$，证明切比雪夫不等式。
 3. 利用切比雪夫不等式证明：若 $a, b, c > 0$，则
+
    $$
    \frac{a^3}{b^2} + \frac{b^3}{c^2} + \frac{c^3}{a^2} \ge \frac{a^2}{b} + \frac{b^2}{c} + \frac{c^2}{a}.
    $$
